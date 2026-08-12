@@ -1,0 +1,455 @@
+{
+  "version": 1,
+  "title": "Your ego is a game where you are the toy",
+  "slug": "ego-as-game",
+  "source": "content/human-condition/2026-05-01-ego-as-game/index.md",
+  "deck": {
+    "displayFont": "Playfair Display",
+    "bodyFont": "Source Sans 3",
+    "palette": {
+      "background": "#1a1e26",
+      "text": "#faf8f4",
+      "muted": "#d8d0c6",
+      "accent1": "#f0a830",
+      "accent2": "#ff8c42"
+    },
+    "backgroundGradient": "solid",
+    "marginHorizontal": "10%",
+    "marginVertical": "12%",
+    "size": 1080,
+    "contentMaxWidth": "100%",
+    "previewMaxPx": 300,
+    "fontSizes": {
+      "header": 56,
+      "body": 78,
+      "footer": 50
+    },
+    "lineHeights": {
+      "header": 1.3,
+      "normal": 1.3,
+      "punch": 1.2,
+      "footer": 1.35
+    },
+    "emphasisGap": 0.25,
+    "emphasisScale": {
+      "normal": 1,
+      "punch": 1.22
+    },
+    "cta": {
+      "background": "#1a1e26",
+      "backgroundGradient": "solid",
+      "featuredImage": "bear.jpg",
+      "brandImage": "/images/og-logo.webp",
+      "qrDark": "#ff8c42",
+      "qrLayout": "split",
+      "shortUrl": "https://behaviorengineering.ai/ego-game/",
+      "postUrl": "https://behaviorengineering.ai/human-condition/2026-05-01-ego-as-game/"
+    }
+  },
+  "slides": [
+    {
+      "number": 1,
+      "role": "hook",
+      "variants": [
+        {
+          "archetype": "hero_punch",
+          "verticalAlign": "center",
+          "alignment": {
+            "body": "center"
+          },
+          "blocks": [
+            {
+              "section": "body",
+              "emphasis": "punch",
+              "text": "Your <accent2>ego</accent2>"
+            },
+            {
+              "section": "body",
+              "emphasis": "punch",
+              "text": "is a <accent2>game</accent2>"
+            },
+            {
+              "section": "body",
+              "text": "and <accent1>you are the toy</accent1>"
+            }
+          ]
+        },
+        {
+          "archetype": "hero_punch",
+          "verticalAlign": "center",
+          "alignment": {
+            "body": "center"
+          },
+          "blocks": [
+            {
+              "section": "body",
+              "emphasis": "punch",
+              "color": "body",
+              "text": "Your <accent1>ego</accent1>"
+            },
+            {
+              "section": "body",
+              "emphasis": "punch",
+              "color": "body",
+
+              "text": "is a <accent1>game</accent1>"
+            },
+            {
+              "section": "body",
+              "text": "and <accent2>you are the toy</accent2>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "role": "thesis",
+      "variants": [
+        {
+          "archetype": "stacked_rhythm",
+          "verticalAlign": "center",
+          "alignment": {
+            "body": "center"
+          },
+          "blocks": [
+            {
+              "section": "body",
+              "emphasis": "normal",
+              "text": "You are the main character."
+            },
+            {
+              "section": "body",
+              "emphasis": "punch",
+              "text": "Your brain\nprovides the world"
+            },
+            {
+              "section": "body",
+              "emphasis": "normal",
+              "text": "Culture installs the rules."
+            }
+          ]
+        },
+        {
+          "archetype": "stacked_rhythm",
+          "verticalAlign": "center",
+          "alignment": {
+            "body": "center"
+          },
+          "blocks": [
+            {
+              "section": "body",
+              "emphasis": "normal",
+              "text": "A simulation in the background."
+            },
+            {
+              "section": "body",
+              "emphasis": "punch",
+              "text": "Your brain\nprovides the world"
+            },
+            {
+              "section": "body",
+              "emphasis": "normal",
+              "text": "Culture installs the rules."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "role": "mechanism",
+      "variants": [
+        {
+          "archetype": "stacked_rhythm",
+          "verticalAlign": "center",
+          "alignment": {
+            "body": "center"
+          },
+          "blocks": [
+            {
+              "section": "body",
+              "emphasis": "normal",
+              "text": "What are the\ngame mechanics?"
+            },
+            {
+              "section": "body",
+              "emphasis": "punch",
+              "text": "<accent1 brightness=\"+20\">Avatar</accent1>, <accent1 brightness=\"0\">score,</accent1>\n<accent1 brightness=\"-20\">predicted moves</accent1>"
+            },
+            {
+              "section": "body",
+              "emphasis": "normal",
+              "text": "Shame and pride enforce the rules."
+            }
+          ]
+        },
+        {
+          "archetype": "stacked_rhythm",
+          "verticalAlign": "center",
+          "alignment": {
+            "body": "center"
+          },
+          "blocks": [
+            {
+              "section": "body",
+              "emphasis": "normal",
+              "text": "What are the\ngame mechanics?"
+            },
+            {
+              "section": "body",
+              "emphasis": "punch",
+              "text": "Brain builds <accent2 brightness=\"+12\">**me**</accent2>"
+            },
+            {
+              "section": "body",
+              "emphasis": "normal",
+              "text": "Tracks approval, predicts the next move."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "role": "implication",
+      "variants": [
+        {
+          "archetype": "stacked_rhythm",
+          "verticalAlign": "center",
+          "alignment": {
+            "body": "center"
+          },
+          "blocks": [
+            {
+              "section": "body",
+              "emphasis": "punch",
+              "text": "The game is virtual.\n<accent2 brightness=\"+8\">The emotion is not.</accent2>"
+            }
+          ]
+        },
+        {
+          "archetype": "stacked_rhythm",
+          "verticalAlign": "center",
+          "alignment": {
+            "body": "center"
+          },
+          "blocks": [
+            {
+              "section": "body",
+              "emphasis": "punch",
+              "color": "accent2",
+              "text": "Every round feels\nlike life or death"
+            },
+            {
+              "section": "body",
+              "emphasis": "normal",
+              "text": "Social loss borrows pain circuitry."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "role": "trade-off",
+      "variants": [
+        {
+          "archetype": "stacked_rhythm",
+          "verticalAlign": "center",
+          "alignment": {
+            "body": "center"
+          },
+          "blocks": [
+            {
+              "section": "body",
+              "emphasis": "normal",
+              "text": "You must win,"
+            },
+            {
+              "section": "body",
+              "emphasis": "punch",
+              "text": "or you are nothing."
+            },
+            {
+              "section": "body",
+              "emphasis": "normal",
+              "text": "It guards a story, not survival."
+            }
+          ]
+        },
+        {
+          "archetype": "stacked_rhythm",
+          "verticalAlign": "center",
+          "alignment": {
+            "body": "center"
+          },
+          "blocks": [
+            {
+              "section": "body",
+              "emphasis": "punch",
+              "text": "It guards a story,\nnot your survival"
+            },
+            {
+              "section": "body",
+              "emphasis": "normal",
+              "text": "Win, or you are nothing."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "role": "scene",
+      "variants": [
+        {
+          "archetype": "stacked_rhythm",
+          "verticalAlign": "center",
+          "alignment": {
+            "body": "center"
+          },
+          "blocks": [
+            {
+              "section": "body",
+              "emphasis": "normal",
+              "text": "Even when you\ncare no more,"
+            },
+            {
+              "section": "body",
+              "emphasis": "punch",
+              "text": "you keep playing"
+            },
+            {
+              "section": "body",
+              "emphasis": "normal",
+              "color": "muted",
+              "text": "just to avoid the pain."
+            }
+          ]
+        },
+        {
+          "archetype": "stacked_rhythm",
+          "verticalAlign": "center",
+          "alignment": {
+            "body": "center"
+          },
+          "blocks": [
+            {
+              "section": "body",
+              "emphasis": "normal",
+              "text": "Even when you\ncare no more,"
+            },
+            {
+              "section": "body",
+              "emphasis": "punch",
+              "text": "you chase praise"
+            },
+            {
+              "section": "body",
+              "emphasis": "normal",
+              "text": "from people you\ndo not respect."
+            },
+            {
+              "section": "body",
+              "emphasis": "normal",
+              "color": "muted",
+              "text": "just to avoid the pain."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "role": "closing thesis",
+      "variants": [
+        {
+          "archetype": "closing_thesis",
+          "verticalAlign": "center",
+          "alignment": {
+            "body": "center"
+          },
+          "blocks": [
+            {
+              "section": "body",
+              "emphasis": "normal",
+              "text": "Your brain is playing you."
+            },
+            {
+              "section": "body",
+              "emphasis": "punch",
+              "color": "accent2",
+              "text": "Try not answering."
+            },
+            {
+              "section": "body",
+              "emphasis": "normal",
+              "text": "It might set you free."
+            }
+          ]
+        },
+        {
+          "archetype": "closing_thesis",
+          "verticalAlign": "center",
+          "alignment": {
+            "body": "center"
+          },
+          "blocks": [
+            {
+              "section": "body",
+              "emphasis": "normal",
+              "text": "Your brain is playing you."
+            },
+            {
+              "section": "body",
+              "emphasis": "punch",
+              "color": "accent2",
+              "text": "Try not answering."
+            },
+            {
+              "section": "body",
+              "emphasis": "normal",
+              "text": "It might set you free."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "role": "cta",
+      "variants": [
+        {
+          "archetype": "post_cta",
+          "featuredMaxHeight": 400,
+          "qrSize": "85%",
+          "qrLayout": "split",
+          "alignment": {
+            "body": "right",
+            "footer": "left"
+          },
+          "blocks": [
+            {
+              "section": "body",
+              "text": "Your ego is a game where **you are the toy**",
+              "color": "accent1",
+              "fontSize": 54
+            },
+            {
+              "section": "body",
+              "emphasis": "normal",
+              "text": "behaviorengineering.ai/ego-game",
+              "fontSize": 44
+            },
+            {
+              "section": "footer",
+              "text": "Scan to read essay",
+              "fontSize": 34
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

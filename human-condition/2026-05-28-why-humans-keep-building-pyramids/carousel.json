@@ -1,0 +1,372 @@
+{
+  "version": 1,
+  "title": "Why does every group organize into a pyramid?",
+  "slug": "why-humans-keep-building-pyramids",
+  "source": "content/human-condition/2026-05-28-why-humans-keep-building-pyramids/index.md",
+  "deck": {
+    "displayFont": "Playfair Display",
+    "bodyFont": "Source Sans 3",
+    "palette": {
+      "background": "#1a1e26",
+      "text": "#f5f5f0",
+      "muted": "#9aa3ad",
+      "accent1": "#d69a80",
+      "accent2": "#e4b896"
+    },
+    "backgroundGradient": "solid",
+    "backgroundWave": {
+      "style": "mesh-corners",
+      "lobes": 35,
+      "intensity": 0.50,
+      "blur": 5.92
+    },
+    "marginHorizontal": "10%",
+    "marginVertical": "12%",
+    "size": 600,
+    "contentMaxWidth": "100%",
+    "previewMaxPx": 300,
+    "fontSizes": {
+      "header": 60,
+      "body": 80,
+      "footer": 52
+    },
+    "lineHeights": {
+      "header": 1.3,
+      "normal": 1.3,
+      "punch": 1.3,
+      "footer": 1.35
+    },
+    "emphasisGap": 0.4,
+    "emphasisScale": {
+      "normal": 1,
+      "punch": 1.25
+    },
+    "motifStrip": {
+      "enabled": true,
+      "src": "motifs/pyramids-scribble.webp",
+      "keyColor": "#013231",
+      "keyTolerance": 32, 
+      "bandWidth": "100%",
+      "marginBottom": "3%"
+    }
+  },
+  "slides": [
+    {
+      "number": 1,
+      "role": "hook",
+      "variants": [
+        {
+          "archetype": "stacked_rhythm",
+          "verticalAlign": "center",
+          "blocks": [
+            {
+              "section": "body",
+              "emphasis": "normal",
+              "text": "Every group"
+            },
+            {
+              "section": "body",
+              "emphasis": "punch",
+              "text": "grows a <accent2>ladder</accent2>."
+            }
+          ]
+        },
+        {
+          "archetype": "hero_punch",
+          "verticalAlign": "center",
+          "blocks": [
+            {
+              "section": "body",
+              "emphasis": "punch",
+              "text": "Every group grows\na ladder."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "role": "examples",
+      "variants": [
+        {
+          "archetype": "stacked_rhythm",
+          "blocks": [
+            {
+              "section": "header",
+              "text": "Every scale",
+              "color": "muted",
+              "font": "body",
+              "weight": "600"
+            },
+            {
+              "section": "body",
+              "emphasis": "normal",
+              "text": "Families get **elders**."
+            },
+            {
+              "section": "body",
+              "emphasis": "normal",
+              "text": "Teams get **managers**."
+            },
+            {
+              "section": "body",
+              "emphasis": "normal",
+              "text": "Forums get **mods**."
+            }
+          ]
+        },
+        {
+          "archetype": "keyword_anchor",
+          "verticalAlign": "center",
+          "blocks": [
+            {
+              "section": "header",
+              "text": "Every scale",
+              "color": "muted",
+              "font": "body",
+              "weight": "600"
+            },
+            {
+              "section": "body",
+              "emphasis": "punch",
+              "text": "Families get elders.\nTeams get managers.\nForums get mods."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "role": "mechanism",
+      "variants": [
+        {
+          "archetype": "claim_proof",
+          "blocks": [
+            {
+              "section": "header",
+              "text": "At scale",
+              "color": "muted",
+              "font": "body",
+              "weight": "600"
+            },
+            {
+              "section": "body",
+              "emphasis": "punch",
+              "text": "Big groups can't run on trust and memory forever."
+            }
+          ]
+        },
+        {
+          "archetype": "stacked_rhythm",
+          "verticalAlign": "center",
+          "blocks": [
+            {
+              "section": "header",
+              "text": "At scale",
+              "color": "muted",
+              "font": "body",
+              "weight": "600"
+            },
+            {
+              "section": "body",
+              "emphasis": "normal",
+              "text": "Big groups can't run on"
+            },
+            {
+              "section": "body",
+              "emphasis": "punch",
+              "text": "trust and memory forever."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "role": "mechanism",
+      "variants": [
+        {
+          "archetype": "hero_punch",
+          "blocks": [
+            {
+              "section": "header",
+              "text": "Compression",
+              "color": "muted",
+              "font": "body",
+              "weight": "600"
+            },
+            {
+              "section": "body",
+              "emphasis": "punch",
+              "text": "So many voices get compressed into fewer decision points."
+            }
+          ]
+        },
+        {
+          "archetype": "keyword_anchor",
+          "verticalAlign": "center",
+          "blocks": [
+            {
+              "section": "header",
+              "text": "Compression",
+              "color": "muted",
+              "font": "body",
+              "weight": "600"
+            },
+            {
+              "section": "body",
+              "emphasis": "normal",
+              "text": "So many voices get"
+            },
+            {
+              "section": "body",
+              "emphasis": "punch",
+              "text": "compressed into fewer decision points."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "role": "trade-off",
+      "variants": [
+        {
+          "archetype": "claim_proof",
+          "blocks": [
+            {
+              "section": "header",
+              "text": "Trade-off",
+              "color": "muted",
+              "font": "body",
+              "weight": "600"
+            },
+            {
+              "section": "body",
+              "emphasis": "punch",
+              "text": "That makes decisions faster,"
+            },
+            {
+              "section": "footer",
+              "text": "but drops detail on the way up.",
+              "color": "muted",
+              "font": "body"
+            }
+          ]
+        },
+        {
+          "archetype": "stacked_rhythm",
+          "verticalAlign": "center",
+          "blocks": [
+            {
+              "section": "header",
+              "text": "Trade-off",
+              "color": "muted",
+              "font": "body",
+              "weight": "600"
+            },
+            {
+              "section": "body",
+              "emphasis": "normal",
+              "text": "That makes decisions faster,"
+            },
+            {
+              "section": "body",
+              "emphasis": "punch",
+              "text": "but drops detail on the way up."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "role": "evidence",
+      "variants": [
+        {
+          "archetype": "claim_proof",
+          "blocks": [
+            {
+              "section": "header",
+              "text": "In the skull",
+              "color": "muted",
+              "font": "body",
+              "weight": "600"
+            },
+            {
+              "section": "body",
+              "emphasis": "normal",
+              "text": "Your brain already thinks this way:"
+            },
+            {
+              "section": "body",
+              "emphasis": "punch",
+              "text": "layers, signals, rank."
+            }
+          ]
+        },
+        {
+          "archetype": "hero_punch",
+          "verticalAlign": "center",
+          "blocks": [
+            {
+              "section": "header",
+              "text": "In the skull",
+              "color": "muted",
+              "font": "body",
+              "weight": "600"
+            },
+            {
+              "section": "body",
+              "emphasis": "punch",
+              "text": "Your brain already thinks this way:\nlayers, signals, rank."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "role": "closing thesis",
+      "variants": [
+        {
+          "archetype": "closing_thesis",
+          "verticalAlign": "center",
+          "blocks": [
+            {
+              "section": "body",
+              "emphasis": "normal",
+              "text": "That's why hierarchy keeps coming back."
+            },
+            {
+              "section": "body",
+              "emphasis": "punch",
+              "text": "Flat systems need rules to stay flat."
+            }
+          ]
+        },
+        {
+          "archetype": "closing_thesis",
+          "alignment": {
+            "body": "center",
+            "footer": "center"
+          },
+          "verticalAlign": "center",
+          "blocks": [
+            {
+              "section": "body",
+              "emphasis": "punch",
+              "text": "That's why hierarchy keeps coming back."
+            },
+            {
+              "section": "footer",
+              "text": "Flat systems need rules to stay flat.",
+              "color": "muted",
+              "font": "body"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
