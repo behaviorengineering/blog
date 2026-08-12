@@ -1,0 +1,28 @@
+---
+alwaysApply: true
+---
+
+# Go module workflow (this repo)
+
+**Scope:** Only when this repository uses Go. If there is no `go.mod`, ignore this file.
+
+## Forbidden
+
+- MUST NOT run `go mod init` or delete `go.mod` / `go.sum`.
+- MUST NOT recreate module layout or duplicate Makefile targets that already exist.
+- MUST NOT change import paths to "fix" tests without a stated reason.
+
+## Required
+
+- MUST use existing `go.mod`, `go.sum`, and Makefile targets (`make build`, `make test`, `make lint` when present).
+- MUST run `go mod tidy` after adding or removing dependencies, then `go mod verify` when checking integrity.
+
+## Commands
+
+- Correct: `go mod tidy`, `make test`, `go build ./...`, `golangci-lint run` (if configured).
+- Wrong: `go mod init new_module`, `rm go.mod go.sum`.
+
+## On failure
+
+- MUST fix test logic or application code, not the module skeleton.
+- MUST add missing dependencies via `go.mod` and `go mod tidy`, not workarounds.

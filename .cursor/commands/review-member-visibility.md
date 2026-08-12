@@ -1,0 +1,1 @@
+Run the **review-member-visibility** skill (`.cursor/skills/review-member-visibility/SKILL.md`). **Ask the user for the target** (path or package to audit, e.g. `internal/pipelines/youtube`, `internal/cli`, or a single package). If they don't specify, suggest `internal/pipelines/` as default. Say "and fix" if they want violations fixed.

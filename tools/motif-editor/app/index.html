@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Motif editor</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="header-brand">
+      <h1>Motif editor</h1>
+      <p id="source-info" class="source-info">No image loaded</p>
+    </div>
+
+    <nav class="header-toolbar" aria-label="Quick actions">
+      <div class="toolbar-group">
+        <label class="file-btn btn-toolbar">
+          Upload
+          <input type="file" id="file-input" accept="image/png,image/jpeg,image/webp,image/gif" />
+        </label>
+      </div>
+
+      <span class="toolbar-divider" aria-hidden="true"></span>
+
+      <div class="toolbar-group" aria-label="Paint tools">
+        <button type="button" id="btn-brush" class="btn-toolbar active" title="Brush (B)">Brush</button>
+        <button type="button" id="btn-eraser" class="btn-toolbar" title="Eraser (E)">Eraser</button>
+        <button type="button" id="btn-wand" class="btn-toolbar" title="Wand (W)">Wand</button>
+      </div>
+
+      <span class="toolbar-divider" aria-hidden="true"></span>
+
+      <div class="toolbar-group" aria-label="History">
+        <button type="button" id="btn-undo" class="btn-toolbar" title="Undo (Ctrl+Z)">Undo</button>
+        <button type="button" id="btn-redo" class="btn-toolbar" title="Redo (Ctrl+Shift+Z)">Redo</button>
+      </div>
+
+      <span class="toolbar-divider" aria-hidden="true"></span>
+
+      <div class="toolbar-group" aria-label="Zoom">
+        <button type="button" id="btn-zoom-in" class="btn-toolbar" title="Zoom in">+</button>
+        <button type="button" id="btn-zoom-out" class="btn-toolbar" title="Zoom out">−</button>
+        <button type="button" id="btn-zoom-fit" class="btn-toolbar" title="Fit to view">Fit</button>
+      </div>
+
+      <span class="toolbar-divider" aria-hidden="true"></span>
+
+      <div class="toolbar-group" aria-label="Upscale">
+        <button type="button" id="btn-upscale-carousel" class="btn-toolbar btn-emphasis">Upscale</button>
+      </div>
+    </nav>
+
+    <p id="status" class="header-status status" role="status"></p>
+  </header>
+
+  <main class="layout">
+    <aside class="panel panel-controls" aria-label="Controls">
+      <section>
+        <h2>Brush</h2>
+        <label class="slider-label">
+          Size <span id="brush-size-label">75</span>px
+          <input type="range" id="brush-size" min="4" max="120" value="75" />
+        </label>
+        <label class="slider-label">
+          Hardness
+          <input type="range" id="brush-hardness" min="0" max="100" value="100" />
+        </label>
+        <label class="slider-label">
+          Feather
+          <input type="range" id="feather" min="0" max="8" value="0" />
+        </label>
+      </section>
+
+      <section>
+        <h2>View</h2>
+        <label class="select-label">
+          Overlay
+          <select id="overlay-mode">
+            <option value="both">Image + mask</option>
+            <option value="image">Image only</option>
+            <option value="mask">Mask only</option>
+          </select>
+        </label>
+        <label class="slider-label">
+          Mask overlay opacity
+          <input type="range" id="mask-opacity" min="10" max="80" value="40" />
+        </label>
+      </section>
+
+      <section>
+        <h2>Upscale</h2>
+        <div class="key-color-field">
+          <span class="field-label">Key color (optional)</span>
+          <div class="key-color-row">
+            <button type="button" id="btn-key-color-open" class="key-color-swatch-btn" title="Pick backdrop color to remove" aria-label="Pick key color">
+              <span id="key-color-swatch" class="key-color-swatch is-empty" aria-hidden="true"></span>
+            </button>
+            <input type="color" id="upscale-key-color-picker" class="key-color-input-hidden" value="#013231" tabindex="-1" aria-hidden="true" />
+            <span id="key-color-hex" class="key-color-hex">None</span>
+            <button type="button" id="btn-key-color-clear" class="btn-key-color-clear">Clear</button>
+          </div>
+        </div>
+        <p class="meta">Only if the backdrop (not your art) should become transparent after upscale. Leave empty to upscale Preview as-is. Do not use if the band fill is that color.</p>
+        <label class="slider-label">
+          Deck slides
+          <input type="number" id="slide-count" min="1" max="24" value="7" />
+        </label>
+        <p id="target-width-label" class="meta"></p>
+      </section>
+    </aside>
+
+    <div class="workspace">
+      <section class="panel panel-strip panel-edit" aria-label="Edit canvas">
+        <h2>Original</h2>
+        <div class="canvas-wrap checkerboard" id="edit-wrap">
+          <canvas id="edit-canvas"></canvas>
+        </div>
+        <p class="hint">Pan: scroll or Space+drag. Zoom: pinch / Ctrl+scroll. B/E/W.</p>
+      </section>
+
+      <section class="panel panel-strip panel-preview" aria-label="Preview">
+        <h2>Preview</h2>
+        <div class="canvas-wrap checkerboard preview-wrap" id="preview-wrap">
+          <canvas id="preview-canvas"></canvas>
+        </div>
+        <p id="preview-info" class="meta">Live upscale preview</p>
+      </section>
+    </div>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

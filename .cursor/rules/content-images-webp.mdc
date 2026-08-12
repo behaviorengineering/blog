@@ -1,0 +1,32 @@
+---
+description: >-
+  Requires converting PNG page-bundle assets under content/ to WebP with cwebp,
+  updating Hugo front matter and markdown paths, and removing duplicate PNGs.
+  Apply when creating or editing content under content/ with bundled PNG
+  rasters (trigger terms: featuredImage, page bundle, PNG, webp, cwebp).
+globs: content/**/*.md,content/**/*.png
+alwaysApply: false
+---
+
+# Content raster images (PNG to WebP)
+
+## Scope
+
+- MUST apply this rule to **page bundles** under **`content/`** (assets next to **`index.md`**, **`*.es.md`**, or other locale siblings).
+- MUST NOT treat **`themes/`**, **`static/`**, **`assets/`** (unless the user points at a **`content/`** bundle), or **`tmp/`** as in scope for automatic PNG removal.
+
+## When PNG appears in a `content/` bundle
+
+- If a bundle under **`content/`** contains **`.png`** files used as **`featuredImage`**, **`featuredImagePreview`**, **`images`**, **`resources` → `src`**, or body image paths, MUST convert them to **`.webp`** before finishing the task (do not leave new or updated shipping PNGs in **`content/`** page bundles without an explicit author exception).
+- MUST use the **`cwebp`** CLI from **libwebp**, for example **`cwebp -q 85 in.png -o out.webp`**. If **`cwebp`** is not installed, MUST report that and stop or ask the user for an approved alternative, MUST NOT silently skip conversion.
+- MUST update every Hugo and markdown reference to the new extension in all sibling **`content/`** files for that bundle (including **`*.es.md`** when present).
+- SHOULD **`rm`** the original **`.png`** after a successful conversion and reference update so the bundle does not carry duplicate rasters, unless the user asks to keep the PNG.
+- MAY leave **`.jpg`**, **`.jpeg`**, and existing **`.webp`** unchanged unless the user asks to recompress or convert.
+
+## Verify
+
+- MUST run **`hugo`** (or the repo’s documented site build, for example **`make build`**) after changing image paths or bundle resources so broken references surface immediately.
+
+## Related
+
+- **`.cursor/rules/content-markdown-writing.mdc`** for front matter and prose constraints alongside this workflow.
