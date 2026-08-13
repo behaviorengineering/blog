@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-11T14:34:30Z",
+  "generatedAt": "2026-08-13T15:30:05Z",
   "channels": [
     "site-en",
     "site-es",
@@ -4337,7 +4337,7 @@
     {
       "bundle": "social-protocols/2026-08-14-everyone-knows-nobody-acts",
       "section": "social-protocols",
-      "title": "Everyone knows, nobody acts: common knowledge as the enforcement trigger",
+      "title": "Everyone knows, nobody acts",
       "type": "claims",
       "categories": [
         "Social-Protocols"
@@ -4349,13 +4349,13 @@
           "status": "missing"
         },
         "linkedin": {
-          "status": "missing"
+          "status": "present"
         },
         "site-en": {
           "status": "present"
         },
         "site-es": {
-          "status": "missing"
+          "status": "present"
         },
         "substack-en": {
           "status": "missing"
