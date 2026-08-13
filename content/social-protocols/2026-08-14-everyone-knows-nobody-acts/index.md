@@ -1,12 +1,12 @@
 ---
 translationKey: "2026-08-14-everyone-knows-nobody-acts"
 date: '2026-08-14T01:00:00+11:00'
-title: "Everyone knows, nobody acts: common knowledge as the enforcement trigger"
+title: "Everyone knows, nobody acts"
 type: claims
 description: |
-  Private doubt rarely starts enforcement. Groups punish norm-breakers only when a fact becomes **common knowledge**: everyone knows, and everyone knows that everyone knows. The **deniability hood** (the shared story that keeps suspicion private) works by stopping private doubt from crossing that threshold.
+  Private doubt rarely starts **punishment**. Groups punish a cheat only when the cheat becomes **common knowledge**: everyone knows, and everyone knows that everyone knows. **Pyramids** and thin sideways talk keep that from forming: each person can see the **cheat** and still stay quiet, because nobody has heard the others say it out loud.
 grounding: |
-  Michael Chwe (*Rational Ritual*) argues that coordination, including collective punishment, requires **common knowledge**. Timur Kuran's **preference falsification** explains why private truths stay hidden until a public signal flips the threshold. Source: [Rational Ritual: Culture, Coordination, and Common Knowledge](https://muse.jhu.edu/pub/267/monograph/book/30978)
+  Michael Chwe (*Rational Ritual*) argues that coordination, including collective punishment, requires **common knowledge**. Timur Kuran's **preference falsification** explains why private truths stay hidden until a public signal flips the threshold. Source: [Rational Ritual: Culture, Coordination, and Common Knowledge](https://muse.jhu.edu/pub/267/monograph/book/30978); [Private Truths, Public Lies](https://www.hup.harvard.edu/books/9780674707580)
 draft: false
 
 categories: ["Social-Protocols"]
@@ -15,78 +15,50 @@ tags:
   - "EveryoneKnowsNobodyActs"
   - "SharedIllusionsRunTheWorld"
   - "RealityCheck"
-  - "DeniabilityHood"
+  - "SeeTheGame"
 
 aliases:
   - "/reality-protocols/2026-07-28-everyone-knows-nobody-acts/"
   - "/social-protocols/2026-07-28-everyone-knows-nobody-acts/"
   - "/reality-protocols/2026-08-04-everyone-knows-nobody-acts/"
 
+featuredImage: "everyone-knows-nobody-acts.webp"
+featuredImagePreview: "everyone-knows-nobody-acts.webp"
+
+# Hugo embedded Open Graph / Twitter Cards read `images`, not `featuredImage`.
+images:
+  - everyone-knows-nobody-acts.webp
+
+resources:
+  - src: everyone-knows-nobody-acts.webp
+    name: featured-image
+
 ---
 
-Groups maintain clean public stories that block punishment: "safety," "tradition," "helping people." In a trust-game lab study, Gillies and Rigdon found that when plausible deniability broke the common-knowledge chain, defection jumped sharply.
+You can see the cheat from your desk and still do nothing. Your counterpart on another team saw it too. Neither of you has heard the other say it out loud, so moving first looks paranoid, rude, or like a career error.
 
-### Groups punish only when everyone knows they know
+### Punishment waits for everyone to know they know
 
-Game theorist Michael Chwe, in *Rational Ritual*, shows that coordination, including the coordination needed to collectively punish a norm violator, requires *common knowledge*. Private suspicion of cheating still leaves people stuck. Each person needs to know that others also know, and that those others know that they know. Only then can people confidently join a coalition to punish, because each person can trust that others will also join. Source: [*Rational Ritual: Culture, Coordination, and Common Knowledge*](https://muse.jhu.edu/pub/267/monograph/book/30978).
+That stuck feeling has a name. Michael Chwe, in *Rational Ritual*, calls the missing piece **common knowledge**: everyone knows, and everyone knows that everyone knows. Collective punishment needs that nested knowing: each person has to trust that others will join, and that those others know they will join. 
 
-This is why public ceremonies matter: they create common knowledge. A king's coronation, a Super Bowl ad, a public trial: each works by making sure everyone knows that everyone else got the same message. Related: [Chwe on common knowledge and coordination (PDF)](http://chwe.net/michael/heifetz.pdf).
+Public ceremonies create that **common knowledge**. A coronation, a Super Bowl ad, a public trial: each works because the audience can see that the rest of the audience got the same message. Hallway gossip leaves you unsure your version matches theirs. 
 
-**If a norm violation never becomes common knowledge, groups cannot punish it effectively.** You can privately suspect someone is lying, cheating, or self-dealing. But unless you know that others share your suspicion, and know that they know that you know, you risk looking paranoid, rude, or disruptive if you act alone.
+### The public line still looks like consensus
 
-### Why private doubt stays inert
+Timur Kuran calls this **preference falsification**: misrepresenting your true view under social pressure. When enough people do it, private reality goes dark and the public line looks like consensus. That silence conceals **social possibilities**: the coalition never shows up as an option.
 
-Timur Kuran calls this *preference falsification*, the act of misrepresenting your true preferences under perceived social pressure. When enough people falsify their preferences publicly, the private reality becomes invisible, and the public fiction hardens into what looks like consensus. Kuran argues that preference falsification "generates inefficiencies, breeds ignorance and confusion, and conceals social possibilities." Source: [*Private Truths, Public Lies*](https://www.hup.harvard.edu/books/9780674707580).
+### A cheat lives between the layers
 
-People wait for public signals before acting. A **deniability hood** works here: as long as the public narrative holds, it is hard to turn private suspicion into common knowledge. Critics sound impolite, paranoid, or political.
+[Why groups keep building pyramids]({{< ref "human-condition/2026-05-28-why-humans-keep-building-pyramids" >}}): a team of ten can run on memory, trust, and **direct talk**. At company scale, signals outrun that. Information climbs and detail dies, so **thinking stops at your layer.**
 
-### Transparency held; deniability broke trust
+That architecture makes a **con artist**'s job easier. They only need each person to think, "Maybe I am the only one who sees this." Sideways talk is thin. Naming the cheat to your manager can make you "not a team player." Naming it to a peer on another team rarely happens, because the org never built that channel.
 
-Gillies and Rigdon ran a trust game (one player sends money; the other can return or keep it). They kept payoffs and rules fixed. They changed whether player B's information was **common knowledge**. Under full transparency, nearly half still cooperated. Under plausible deniability, cooperation collapsed. The hood's real target is the "otherwise trustworthy types": people who cooperate when everyone knows, then defect when deniability appears. The hood converts otherwise trustworthy people into defectors.
+Ten people saw the problem in a cross-team meeting. The VP got one skip-level bullet (one level above your manager), trimmed by a director. The cheat, if there is one, sits in what got cut. A skip-level bullet splits the audience: each layer gets a thinner copy.
 
-### The loop that hardens the fiction
+### The child speaks to the whole room
 
-The hood, common-knowledge gaps, and preference falsification reinforce each other in a feedback loop:
+Everyone can see the emperor is naked. Nobody says so, because nobody has common knowledge that others also see it. Each person privately doubts and publicly conforms.
 
-- People falsify preferences publicly (Kuran)
-- This prevents common knowledge of the real motives from forming (Chwe)
-- Without common knowledge, no coalition forms to punish (Simler and Hanson)
-- The public narrative hardens, making further falsification feel safer
-- Over time, "structures held in place by preference falsification may achieve increasingly genuine acceptance" (Kuran)
+A child speaks aloud. Private knowledge becomes common knowledge in one stroke: everyone knows that everyone knows, and the fiction collapses. The child is a ceremony. The room hears the room hear it.
 
-Simler and Hanson (*The Elephant in the Brain*) echo it: "Wear a mask long enough and it becomes your face. Play a role long enough and it becomes who you are. Spend enough time pretending something is true and you might as well believe it." The hood doesn't just hide reality; it *reshapes* it. People who start out knowing the truth gradually forget it, because the social environment rewards not knowing and punishes noticing. The ignorance becomes real.
-
-### The emperor's new clothes, inverted
-
-The classic fairy tale of the Emperor's New Clothes illustrates the mechanism in miniature. Everyone can see the emperor is naked. But no one says so, because no one has common knowledge that others also see it. Each person privately doubts, but publicly conforms.
-
-The twist in the fairy tale is that a single child breaks the spell by speaking aloud. Suddenly the private knowledge becomes common knowledge: everyone knows that everyone knows, and the fiction collapses.
-
-In real life, there is usually no child. The social costs of breaking the hood are higher than the costs of wearing it. The person who speaks up risks their reputation, their standing, their relationships. The hood is not just a shield for the individual wearing it; it is a shared investment. Everyone has skin in the game of maintaining the fiction.
-
-### The enforcement side of the paradox
-
-On the enforcement side:
-
-1. **Collective deniability blocks punishment.** Without common knowledge, there is no coalition for punishment. Norm violators operate freely under cover of the shared story.
-2. **The cover self-perpetuates.** The longer the public fiction holds, the more it reshapes private belief. Eventually the ignorance turns genuine. The hood has fused to the face.
-
-### Corporate, political, and polite hoods
-
-The strongest forms of social control leave information *publicly available but collectively unactionable*. Everyone knows. No one can act on what they know, because acting requires common knowledge, and the hood prevents common knowledge from forming.
-
-You see the pattern in familiar places:
-
-- **Corporate culture:** "We value transparency" is the hood. Everyone knows decisions are made in closed rooms. But saying so makes you "not a team player." Leadership knows the real reasons; staff only know their own information; and leadership knows staff can't be sure leadership knows.
-- **Political discourse:** "We support freedom" is the hood. Everyone knows the policy serves particular interests. But challenging the framing makes you "partisan."
-- **Social norms:** "We're just being polite" is the hood. Everyone knows the politeness masks hierarchy or exclusion. But naming it makes you "difficult."
-
-In each case, public ignorance is a *feature of the system*. The ignorance is useful, to those who benefit from the arrangement, precisely because it is public, shared, and therefore unchallengeable without risking social cost.
-
-### Who benefits from a public lie?
-
-If the hood is maintained by mutual investment, then ask who benefits from the lie being public. The answer, usually, is: those who are already powerful, plus those who fear the social cost of noticing.
-
-The hood's power depends on the population containing enough "otherwise cooperative types" who *would* cooperate under full transparency but defect under plausible deniability. If everyone were purely self-interested, the hood would be unnecessary: they'd defect regardless. The hood exists *because* people have social preferences. It exploits our capacity for guilt, fairness, and reciprocity by giving us just enough cover to silence those motivations.
-
-The hood is not worn by individuals. It is woven by groups. And the thread it is made of is the gap between what everyone knows and what everyone knows everyone knows.
+In a pyramid, that speech often dies at the next layer. Going first can cost your reputation, your standing, and your relationships.
