@@ -29,6 +29,11 @@ A paragraph can sound smooth and still fail **anti_calque** / **native_naturalne
 | *Ahí es donde entra el razonamiento emocional* | *Ahí entra el razonamiento emocional* |
 | *El sentimiento cuenta como prueba y la realidad se tuerce…; entonces tu tono…, ignorando…* | Short clauses: *El sentimiento vale como prueba; la realidad se acomoda… Tu tono… y tu intención desaparece.* |
 | *se les cae el piso* (*floor drops out*) | *se les viene abajo el suelo* / *se les desmorona el piso* |
+| *The X who Y carries Z* | Native hypotaxis: *El cómplice que calla te allana el terreno y carga más culpa que el que da el golpe.* Split **only** if the nest still copies English. |
+| *thus* / *making X possible* | *quita las trabas y deja el delito servido, mientras el otro solo ejecuta* (not *y así … se hace posible*, and not two English punches) |
+| *You hear it when…* as opener | *Se ve en…* / *Pasa cuando…* (not *La oyes cuando…*) |
+| *in a vacuum* | *El delito no viene solo* (not *nace en el vacío*) |
+| *You reach for it when* (orphan *it*) | *Te sale el dicho cuando…* |
 
 **Test:** if you can put the Spanish clauses back into English almost word-for-word and recover the original EN sentence, rewrite the Spanish syntax. Do not only swap synonyms.
 

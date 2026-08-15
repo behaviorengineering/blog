@@ -3,19 +3,16 @@ name: spanish-translation-content
 description: >-
   Adds or edits Spanish Hugo pages as siblings of English posts (`*.es.md`), sets
   `translationKey`, mirrors front matter per content `type`, keeps taxonomies aligned,
-  and applies type skills (claims, video, cognitive-memetics) in Spanish. Documents
-  Spanish permalinks (`hugo.toml` language segments, title-derived slugs), internal
-  links, `aliases` for `social-protocols`, and alignment of `facebook-es.txt` /
-  `linkedin.es.txt` with `hugo list all`.   Prefers idiomatic Spanish over cognate
-  calques; keeps metaphors only where Spanish supports them (e.g. steer empathy vs
-  literal "aim"); includes org/hierarchy calque tables (on paper, proved, in action,
-  someone to blame), the five-directive native opinion-editor audit (calques, anti-staccato,
-  collocations, tone), hybrid cadence for manifesto body (anti-telegram stats, verb flow, frase de
-  remate), hard native-Spanish constraints (conceptual anglicisms, **English skeleton under
-  Spanish words**, reverse-translation test, active syntax, technical loanwords, colloquial
-  `###` hooks), and **index-first / sidecars-as-reflections** sync. Use when translating to Spanish,
-  adding `.es.md`, español locale, bilingual posts, Spanish routes, idiomatic Spanish (not
-  English-shaped prose), or social copy URLs.
+  and applies type skills (claims, video, cognitive-memetics) in Spanish. After the first
+  `index.es.md` draft, MUST run local Gemma 4 (`evaluate_spanish.py`) for native-Spanish /
+  calque check. Documents Spanish permalinks, internal links, `aliases` for
+  `social-protocols`, and `facebook-es.txt` / `linkedin.es.txt` alignment with
+  `hugo list all`. Prefers idiomatic Spanish over cognate calques; five-directive native
+  opinion-editor audit; hybrid cadence; hard native-Spanish constraints (conceptual
+  anglicisms, English skeleton under Spanish words, **clause rebuild** not word-swap,
+  reverse-translation test). Use when translating to Spanish, adding `.es.md`, gemma4 /
+  Gemma 4 Spanish gate, bilingual posts, Spanish routes, or idiomatic Spanish (not
+  English-shaped prose or EN clause order with ES words).
 ---
 
 # Spanish translation content (Hugo `es`)
@@ -30,11 +27,31 @@ description: >-
 1. **Locate the English source** in `content/<section>/...`. Do not move the section; translation is a **sibling file** in the same folder.
 2. **Create** `index.es.md` (or `*.es.md`) with the same `type`, **`date`** (identical string to English; site default **`date: 'YYYY-MM-DDT01:00:00+11:00'`** per **`.cursor/rules/content-markdown-writing.mdc`** → **Publish `date`**), `slug` (if set on EN), images paths, and structural front matter as the English file.
 3. **Set `translationKey`** to the same stable string on **both** files (for example `translationKey: "2026-04-07-yt-history-of-intelligence"`). Use one identifier per logical article, not per language.
-4. **Translate** user-visible fields into **natural Spanish** (register: informal-standard, same tone as English skill guidance). Keep **proper nouns**, paper titles, and product names as in the source unless a standard Spanish name exists.
+4. **Adapt, do not gloss:** From the English **meaning** (who does what, when, stakes), write Spanish a native editor would say. MUST rebuild clause order per **Clause rebuild** below. MUST NOT substitute Spanish words into the English sentence (same relatives, *thus/making*, *You hear it when*). Keep **proper nouns**, paper titles, and product names as in the source unless a standard Spanish name exists.
 5. **Apply the right type skill** for structure and field roles (Claim vs Grounding, video `description`, sayings `tldr`/`fluff`, etc.): **`.cursor/skills/claims-content/SKILL.md`**, **video-content**, **cognitive-memetics-content**—and for Markdown **`**bold**`** density in any translated field, **`.cursor/skills/revise-emphasis/SKILL.md`**—but **Spanish prose** inside those roles.
-6. **Forced Self-Correction Loop (Crucial):** Before finalizing the text, critique your own draft against **Hard constraints (native Spanish, not translation-shaped)**. Does it sound like translated English? (e.g. passive voice, conceptual anglicisms, "Esto significa que...", abstract nouns instead of verbs with *sabor*, **or fluent Spanish words on an English clause order**). If yes, **run a second pass** through the **Native opinion-editor audit (five directives)** and rewrite until the Spanish sounds unapologetically native, direct, and authoritative.
-7. **Index first, sidecars later:** Finish and validate **`index.es.md`** before touching `facebook-es.txt` / `substack.es.md` / `linkedin.es.txt`. Sidecars are **reflections** of the index, not independent sources.
-8. **Line-by-line author edits:** If the user pastes a replacement line, apply **only that patch**. Do not rewrite the whole paragraph “for coherence.” Author wording binds even when it looks like a calque.
+6. **Gemma 4 native-Spanish gate (MUST):** After the first **`index.es.md`** draft, run local **Gemma 4** (see **Gemma 4 native-Spanish gate** below). Apply calque / English-skeleton / meaning-load fixes from the report, then re-check **Hard constraints**. Skip this call for **line-by-line author edits** (step 8).
+7. **Index first, sidecars later:** Finish and validate **`index.es.md`** (including the Gemma 4 gate) before touching `facebook-es.txt` / `substack.es.md` / `linkedin.es.txt`. Sidecars are **reflections** of the index, not independent sources.
+8. **Line-by-line author edits:** If the user pastes a replacement line, apply **only that patch**. Do not rewrite the whole paragraph “for coherence.” Author wording binds even when it looks like a calque. MUST NOT call Gemma 4 to “fix” an intentional author calque.
+
+### Gemma 4 native-Spanish gate
+
+MUST run after the first **`index.es.md`** draft, **before** ES sidecars. Same local gateway and script as **`.cursor/skills/revise-spanish/SKILL.md`**.
+
+```bash
+python3 .cursor/skills/revise-spanish/scripts/evaluate_spanish.py \
+  content/<section>/<slug>/index.es.md \
+  --scope site
+```
+
+Default model: `LOCAL_LLM_MODEL` or `@cf/google/gemma-4-26b-a4b-it` at `LOCAL_LLM_BASE_URL` or `http://127.0.0.1:1320/v1`.
+
+**While drafting with this skill:** apply report fixes that fail native-Spanish, reverse-translation, or meaning-load. Do **not** wait for a separate apply confirmation (that wait is for `/revise-spanish` on already-shipped copy). MUST NOT apply fluency-only rewrites that drop contrasts or verb objects (same **Apply / "mejora" guardrails** as **revise-spanish**).
+
+**After Gemma, still own reverse-translation:** a **Ready** score does **not** waive an English clause-map. If `tldr` / `fluff` / `description` / body still remounts as the EN sentence, rewrite syntax and re-check **Clause rebuild**.
+
+**Skip Gemma 4:** user pasted a one-line author patch (workflow step 8).
+
+**Gateway down:** MUST say so, then run the internal **Forced Self-Correction Loop** (Hard constraints + **Native opinion-editor audit**) and still ship only after that audit. MUST NOT skip the native check.
 
 ### Index is source; sidecars are reflections
 
@@ -89,7 +106,7 @@ When the user (or `index.es.md` after their edits) chooses a phrase that “soun
 | **Paragraph flow** | Transitions must follow **Spanish logic** (cause → consequence in prose order readers expect). | Translate connective words only (*Now stretch that pattern…* → literal *Ahora estira ese patrón…*). |
 | **`###` hooks (claims / long posts)** | MAY use **colloquial Spanish** hooks that differ from English `###` titles; each hook **MUST** fit the paragraph below. | Empty labels, hooks that repeat the Claim verbatim, or hooks that describe a different beat than the section body. |
 
-**Before shipping `index.es.md`:** Read the draft aloud. Run the **reverse-translation test**: if you can put the Spanish back into English almost word-for-word and recover the EN sentence shape, **fail and rewrite syntax** (not only vocabulary). If it still sounds like "robot translating English," run the **Forced Self-Correction Loop** and the **five-directive audit** again.
+**Before shipping `index.es.md`:** The **Gemma 4 native-Spanish gate** MUST have run (or a documented gateway-down fallback). Read the draft aloud. Run **Clause rebuild** and the **reverse-translation test** on every user-facing sentence: if you can put the Spanish back into English almost word-for-word and recover the EN sentence shape, **fail and rewrite syntax** (not only vocabulary). A Gemma **Ready** does not skip this. If it still sounds like dubbed English, apply Gemma 4 findings again and run the **five-directive audit**.
 
 #### English skeleton under Spanish words (MUST check)
 
@@ -101,6 +118,30 @@ When the user (or `index.es.md` after their edits) chooses a phrase that “soun
 | *su versión se quede arriba* | *su versión mande* / *prevalezca* |
 | *se les cae el piso* (*floor drops out*) | *se les viene abajo el suelo* / *se les desmorona el suelo* |
 | Long EN chain: *Feeling counts as proof and reality bends…; then your tone…, ignoring…* | Short ES clauses with remate; do not mirror the semicolon stack |
+
+#### Clause rebuild (MUST, before typing)
+
+Do **not** draft by swapping Spanish words into the English sentence. Close the English clause. Write the Spanish thought. Then reverse-translate.
+
+**Spanish default is hypotaxis, not telegram.** Native Spanish often finishes the thought in **one** sentence with *y*, *que*, *cuando*, *mientras*, *porque*. MUST NOT split a native clause into English-style punches (*El otro solo ejecuta.*) just to “sound punchy.”
+
+**MUST NOT** keep these frames (EN clause-map). Prefer **elaborated Spanish**, not a remate stack:
+
+| EN frame | Fail (ES calco) | Prefer |
+|----------|-----------------|--------|
+| *The X who Y carries Z* (long relative doing two EN jobs) | *El cómplice callado que te allana el terreno carga más culpa que…* (same nest as EN) | Native *y*: *El cómplice que calla te allana el terreno y carga más culpa que el que da el golpe.* Split into two sentences **only** if the nest still copies English. |
+| *thus* / *making X possible* / *and so* | *y así el delito se hace posible*; *haciendo que* | *quita las trabas y deja el delito servido, mientras el otro solo ejecuta* |
+| *You hear it when* (scene open) | *La oyes cuando…*; *La escuchas cuando…* as the first clause | *Se ve en…*; *Pasa cuando…*; scene first, then the saying |
+| *in a vacuum* | *nace en el vacío*; *ocurre en el vacío* | *El delito no viene solo*; *Nadie delinque solo* |
+| *You reach for it when* (orphan *it*) | *La sueltas cuando…*; *La alcanzas cuando…* with no noun | *Te sale el dicho cuando…*; *Ahí sueltas la frase…* |
+| Stacked *The one who…* | Three *El que…* in a row because EN stacked them | Vary: *el que…* / *al que cubres…* / *el que escala…* |
+
+**MUST**
+
+- Rebuild EN relatives in Spanish. Default: **one elaborated sentence** (author gold: *El cómplice que calla te allana el terreno y carga más culpa que el que da el golpe.*). Split **only** when reverse-translation still recovers the English nest.
+- Put cause in a verb (*permite*, *abre paso*, *deja servido*), then keep the contrast in the **same** sentence when Spanish would (*mientras el otro solo ejecuta*).
+- Count whether the **nest** matches English, not whether the sentence is “long enough” or “short enough.”
+- Sayings use-line **`La usas cuando`** is allowed (series convention, gold: `saying-19`). Name the dicho if *la* has no antecedent.
 
 #### Conceptual anglicisms (MUST check)
 
@@ -120,7 +161,7 @@ Repo example (validated): `content/human-condition/2026-06-11-deception-truth-bi
 
 English manifesto copy often uses **telegram beats** (bare stats, `Label: value` lines). In Spanish those usually read like PowerPoint or dubbed English unless they are **intentional rhetorical parallels** (see **Anti-staccato guardrail** below).
 
-**Default for `type: claims` / `type: video` body** (not sayings `tldr`/`fluff`): **hybrid cadence** — a slightly longer setup with connectors, then a **short closing punch** (*frase de remate*). Keep urgency; change the *shape*, not the thesis.
+**Default for `type: claims` / `type: video` body** (not a license to telegram **sayings** `tldr`/`fluff`): **hybrid cadence** for essays. For **sayings** `tldr`/`fluff`, default to **elaborated Spanish** (see **Clause rebuild**). A short remate is allowed after a built-up clause, not as the whole block.
 
 | # | Rule | MUST | MUST NOT |
 |---|------|------|----------|
@@ -170,7 +211,7 @@ English manifesto copy often uses **telegram beats** (bare stats, `Label: value`
 
 ### Native opinion-editor audit (five directives)
 
-After the first draft (and again after the **Forced Self-Correction Loop**), act as a **native Spanish opinion editor**: punchy, direct, manifesto-grade prose. Goal: remove **syntactic anglicisms** and **calques** without softening the source.
+After the first draft (and again after the **Gemma 4 native-Spanish gate**, or the gateway-down fallback), act as a **native Spanish opinion editor**: punchy, direct, manifesto-grade prose. Goal: remove **syntactic anglicisms** and **calques** without softening the source.
 
 | # | Directive | MUST do | MUST NOT |
 |---|-----------|---------|----------|
@@ -196,7 +237,7 @@ Short sentences are **not** automatically wrong in Spanish. Opinion and manifest
 2. Several beats share **identical syntax** with **no parallel purpose** (generic S+V+O five times in a row).
 3. A sentence only **restates** the previous one (echo), not when it **lands** the hook.
 
-**MUST NOT** merge parallel hooks into semicolon chains to "sound more Spanish." **MUST NOT** delete closers (*para poder entenderlo*) unless they are empty filler or a calque. **When in doubt, keep short beats**; fix calques and true redundancy first.
+**MUST NOT** merge parallel hooks into semicolon chains to "sound more Spanish." **MUST NOT** delete closers (*para poder entenderlo*) unless they are empty filler or a calque. **When in doubt on intentional manifesto parallels, keep short beats.** For sayings `tldr`/`fluff` and most ES prose, default to **elaborated hypotaxis** (**Clause rebuild**); do not telegram-split a native *y* / *porque* clause.
 
 **Changelog discipline:** In idiom audits, list **only** changes that fix calques or objective redundancy. Do **not** report staccato "fixes" that removed intentional rhythm unless the author asked for a compression pass.
 
@@ -210,6 +251,8 @@ Short sentences are **not** automatically wrong in Spanish. Opinion and manifest
 **Eliminar muletillas de traducción:**
 - NOT "Literalmente significa...", "Esta frase se refiere a...", "La imagen del X marca...".
 - NOT "Refleja una visión de..." (calco del inglés académico); USE "Es el suspiro de...", "Aquí ves cómo...".
+- NOT fluff that opens like a subtitle: *La oyes cuando…*, *La escuchas cuando…* (*You hear it when*). USE *Se ve en…*, *Pasa cuando…*, or a human beat first (*Es el suspiro de…*).
+- NOT *y así X se hace posible* / *nace en el vacío* (EN glue). Rebuild per **Clause rebuild**.
 - USE entradas directas: "Cuando alguien se pierde en...", "El oportunista no pide, acecha", "Un ruego para sobrevivir a...".
 
 **Narrativa con voz humana (Sayings):**
@@ -255,7 +298,7 @@ Short sentences are **not** automatically wrong in Spanish. Opinion and manifest
 
 ### Organizational, hierarchy, and workplace English (MUST check)
 
-Editorial passes on **human-condition**, **claims**, and org-design posts surfaced **English skeletons** that pass grammar checks but fail the **read-aloud** test. Run this table in the **Forced Self-Correction Loop** (step 7) whenever the source discusses startups, meetings, rank, flat teams, or bureaucracy.
+Editorial passes on **human-condition**, **claims**, and org-design posts surfaced **English skeletons** that pass grammar checks but fail the **read-aloud** test. Run this table during the **Gemma 4 native-Spanish gate** (or the gateway-down fallback) whenever the source discusses startups, meetings, rank, flat teams, or bureaucracy.
 
 | English pattern | Avoid (calque) | Prefer (idiomatic ES) | Notes |
 |-----------------|----------------|-------------------------|-------|
@@ -324,6 +367,7 @@ Editorial passes on **human-condition**, **claims**, and org-design posts surfac
 - MUST NOT replace the English file or duplicate content under a different section path for "Spanish only."
 - MUST NOT drop `translationKey` when both languages exist; it powers correct language switching and translation links.
 - MUST not translate **identifier-like** tags into Spanish if that would fork the taxonomy (e.g. `StreetWisdom` → keep as-is unless the whole site migrates terms).
+- MUST NOT clause-map: Spanish words in English sentence order (same relatives, *thus/making*, *You hear it when*). Rewrite syntax per **Clause rebuild**.
 
 ## After editing
 
@@ -335,5 +379,5 @@ Editorial passes on **human-condition**, **claims**, and org-design posts surfac
 - **English default prose rules**: `.cursor/rules/content-markdown-writing.mdc` (English); Spanish files follow this skill for language choice.
 - **Hooks / titles**: `.cursor/skills/revise-hooks/SKILL.md` after the type skill, adapted for Spanish.
 - **Facebook (ES/EN) and LinkedIn (ES) permalinks**: `.cursor/skills/facebook-post/SKILL.md`, `.cursor/skills/linkedin-post/SKILL.md` (site link blocks; always align with **`hugo list all`**).
-- **Quick native-naturalness audit (translation smell)**: `.cursor/skills/revise-spanish/SKILL.md` (after draft or when copy "sounds translated").
+- **Gemma 4 evaluate script / standalone audit**: `.cursor/skills/revise-spanish/SKILL.md` (this skill runs the same script while drafting; `/revise-spanish` is evaluate-only until the user confirms).
 - **Step-by-step Spanish revision workflow**: `.cursor/skills/revise-post-es/SKILL.md` (use this when doing a full translation or fixing a poor translation).

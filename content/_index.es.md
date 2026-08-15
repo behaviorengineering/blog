@@ -1,7 +1,7 @@
 ---
 title: "behaviorengineering.ai"
 translationKey: "home"
-description: "Mentes, sistemas y cultura. Ensayos sobre comportamiento, **realidad compartida** y **sátira de oficina** en la era de la IA."
+description: "Mentes, sistemas y cultura. Ensayos sobre comportamiento, **realidad compartida** y **sátira corporativa** en la era de la IA."
 images:
   - /images/og-default.png
 ---

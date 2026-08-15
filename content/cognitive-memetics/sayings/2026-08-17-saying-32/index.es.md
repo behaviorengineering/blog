@@ -3,23 +3,23 @@ translationKey: "2026-08-17-saying-32"
 date: '2026-08-17T01:00:00+11:00'
 heading_code: W32
 project: Street-Wisdom 💬🇻🇪
-title: Caimán no come caimán.
+title: El alcahuete es peor que el autor.
 type: sayings
-description: "No te haces nombre **quemando la casa del competidor**. Un colega mayor te aparta en el pasillo con una **advertencia en voz baja** después de una **reunión tensa**."
+description: "Siempre hay quien **pavimenta el camino**, y el colega que **asiente** en la reunión, o el amigo que cubre una mentira, ya está en el **encubrimiento**."
 tldr: |
-  El mundo es duro, pero **no atacas a los tuyos**. Es un **pacto de no agresión** entre iguales: cortesía profesional. No entregas a un colega por un punto fácil. La usas cuando le avisas a un rival que se retire porque comparten el mismo terreno, o cuando un fundador de startup elige no destrozar en público el producto de un competidor.
+  El **cómplice que calla** te allana el terreno y carga **más culpa** que el que da el golpe. **El que facilita quita las trabas** y deja el delito servido, mientras el otro solo ejecuta. La usas cuando un político defiende a un colega corrupto, o cuando alguien en la rueda anima el bullying en vez de meterse.
 fluff: |
-  Fundadores de agencias rivales se toman un trago en una feria y respetan las **reglas no escritas**. Lo mismo cuando un igual podría hundir tu propuesta frente al cliente y elige callar.
+  El delito no viene solo, porque siempre hay alguien que **pavimenta el camino**: se ve en el colega que **asiente** al desahogo de un jefe tóxico en la reunión, solo para quedar bien, y lo mismo cuando un amigo cubre la mentira de su pareja y ya forma parte del **encubrimiento**.
 draft: false
 
-featuredImage: "caiman-no-come-caiman.webp"
-featuredImagePreview: "caiman-no-come-caiman.webp"
+featuredImage: "el-alcahuete-es-peor-que-el-autor.webp"
+featuredImagePreview: "el-alcahuete-es-peor-que-el-autor.webp"
 
 images:
-  - caiman-no-come-caiman.webp
+  - el-alcahuete-es-peor-que-el-autor.webp
 
 resources:
-  - src: caiman-no-come-caiman.webp
+  - src: el-alcahuete-es-peor-que-el-autor.webp
     name: featured-image
 
 tags:
@@ -28,7 +28,8 @@ tags:
   - "TakeBackYourMcDonaldsCulture"
   - "ArepaContigo"
   - "VenezuelanSayings"
-  - "MutualNonAggression"
+  - "NodAlongChangeNothing"
+  - "Accountability"
 categories: ["Cognitive-Memetics", "Por-Estas-Calles"]
 aliases:
   - "/cognitive-memetics/2026-08-17-saying-32/"
@@ -40,11 +41,12 @@ aliases:
 
 > Equivalentes más cercanos en inglés incluyen:
 >
-> - *There's honor among thieves*
-> - *We protect our own*
-> - *You don't mess with your own kind*
-> - *Never throw your own under the bus*
+> - *The one who holds the ladder is worse than the thief*
+> - *An accessory to the crime is as guilty as the perpetrator*
+> - *Enabling is worse than doing*
 
-### El precio del golpe barato
+### El precio de hacerte el loco
 
-Cuando rompes el código del patio por un punto fácil, te enemistas con un igual y le avisas a toda la sala de que no eres de fiar. La confianza se deshilacha, y la próxima vez que necesites que te cubran, te quedas solo.
+Cuando cubres al que hace daño para mantener la paz, te quedas con el muerto: el que escala se queda con el premio y a ti te caen las consecuencias.
+
+Te sale el dicho cuando cae la ficha, porque callar no es neutral: es meter el hombro.
