@@ -7,11 +7,11 @@
 Leadership	81
 RealityCheck	74
 CubeCows	72
-ArepaContigo	67
-CulturalStopwatch	67
-StreetWisdom	67
-TakeBackYourMcDonaldsCulture	67
-VenezuelanSayings	67
+ArepaContigo	69
+CulturalStopwatch	69
+StreetWisdom	69
+TakeBackYourMcDonaldsCulture	69
+VenezuelanSayings	69
 PsychFitness	58
 EN9806	56
 MentalFitness	56
@@ -121,6 +121,7 @@ EmpathyExtraction	2
 EveryoneKnowsNobodyActs	2
 EvolutionOfCooperation	2
 FairPlay	2
+FeignedInnocence	2
 FixedEnergyBudget	2
 FlimsyExcuse	2
 FragilityHidden	2
@@ -224,4 +225,4 @@ HandsOff	1
 ## Deprecated tags
 # Source: data/tag-deprecations.toml. Prefer "to" for new content instead of "from".
 # Columns: from<TAB>to<TAB>files_still_using_from
-ArepaContigo	ArepaContigo	67
+ArepaContigo	ArepaContigo	69

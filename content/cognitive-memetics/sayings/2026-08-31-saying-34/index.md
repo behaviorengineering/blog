@@ -3,23 +3,23 @@ translationKey: "2026-08-31-saying-34"
 date: '2026-08-31T01:00:00+11:00'
 heading_code: W34
 project: Street-Wisdom 💬🇻🇪
-title: El alcahuete es peor que el autor.
+title: Caimán no come caimán.
 type: sayings
-description: "Someone always **paves the road**. A **nod in the meeting**, or covering a lie, already puts you in the **cover-up**."
+description: "You don't build a name by **burning the competitor's house**. An older peer pulls you aside in the hallway with a **quiet warning** after a **tense meeting**."
 tldr: |
-  The **silent enabler** who provides the infrastructure **carries more blame** than the active wrongdoer. **The facilitator removes friction**, making the infraction possible, not the actor who commits the deed. You use it when a politician defends a corrupt colleague, or when a bystander encourages bullying instead of intervening.
+  You operate in a tough world, but **you don't attack your own kind**. This is **mutual non-aggression** among peers, a code of professional courtesy. You do not throw a colleague under the bus to score a quick point. You use it when you warn a rival to back off because you share common turf, or when a startup founder chooses not to publicly trash a competitor's product.
 fluff: |
-  No crime happens in a vacuum; someone always **paves the road**. You hear it when a colleague **nods along** to a toxic manager's rant in a meeting, just to stay on their good side. It also comes up when a friend agrees to cover for a partner's lie, and they become part of the **cover-up**.
+  Rival agency founders share a drink at a trade show and still keep the **unspoken rules**. Same instinct when a peer could sink your pitch in front of a client and chooses silence instead.
 draft: false
 
-featuredImage: "el-alcahuete-es-peor-que-el-autor.webp"
-featuredImagePreview: "el-alcahuete-es-peor-que-el-autor.webp"
+featuredImage: "caiman-no-come-caiman.webp"
+featuredImagePreview: "caiman-no-come-caiman.webp"
 
 images:
-  - el-alcahuete-es-peor-que-el-autor.webp
+  - caiman-no-come-caiman.webp
 
 resources:
-  - src: el-alcahuete-es-peor-que-el-autor.webp
+  - src: caiman-no-come-caiman.webp
     name: featured-image
 
 tags:
@@ -28,8 +28,7 @@ tags:
   - "TakeBackYourMcDonaldsCulture"
   - "ArepaContigo"
   - "VenezuelanSayings"
-  - "NodAlongChangeNothing"
-  - "Accountability"
+  - "MutualNonAggression"
 categories: ["Cognitive-Memetics", "Por-Estas-Calles"]
 aliases:
   - "/cognitive-memetics/2026-08-31-saying-34/"
@@ -41,12 +40,11 @@ aliases:
 
 > Closest English equivalents include:
 >
-> - *The one who holds the ladder is worse than the thief*
-> - *An accessory to the crime is as guilty as the perpetrator*
-> - *Enabling is worse than doing*
+> - *There's honor among thieves*
+> - *We protect our own*
+> - *You don't mess with your own kind*
+> - *Never throw your own under the bus*
 
-### The Cost of Quiet Consent
+### The Price of the Cheap Shot
 
-When you protect a bad actor to keep the peace, you are left holding the bag for their actions. The climber gets the prize, but you are the one left with the consequences.
-
-You reach for it when you realize that silence isn't neutral: it's active support.
+When you break the unspoken code to win a quick point, you alienate one peer and signal to the entire room that you're unsafe. Trust frays, and next time you need someone to cover you, you're on your own.

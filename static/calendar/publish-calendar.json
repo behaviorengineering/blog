@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-15T15:50:34Z",
+  "generatedAt": "2026-08-15T16:01:45Z",
   "channels": [
     "site-en",
     "site-es",
@@ -4394,7 +4394,7 @@
     {
       "bundle": "cognitive-memetics/sayings/2026-08-17-saying-32",
       "section": "cognitive-memetics",
-      "title": "Caimán no come caimán.",
+      "title": "El alcahuete es peor que el autor.",
       "type": "sayings",
       "categories": [
         "Cognitive-Memetics",
@@ -4568,7 +4568,7 @@
     {
       "bundle": "cognitive-memetics/sayings/2026-08-31-saying-34",
       "section": "cognitive-memetics",
-      "title": "El alcahuete es peor que el autor.",
+      "title": "Caimán no come caimán.",
       "type": "sayings",
       "categories": [
         "Cognitive-Memetics",
@@ -4604,6 +4604,35 @@
         "Cube-Cows"
       ],
       "planned": "2026-09-02",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/sayings/2026-09-07-saying-35",
+      "section": "cognitive-memetics",
+      "title": "Tiene cara de yo no fui.",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-09-07",
       "draft": false,
       "channels": {
         "facebook": {
