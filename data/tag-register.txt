@@ -7,23 +7,23 @@
 Leadership	81
 RealityCheck	74
 CubeCows	72
-ArepaContigo	65
-CulturalStopwatch	65
-StreetWisdom	65
-TakeBackYourMcDonaldsCulture	65
-VenezuelanSayings	65
+ArepaContigo	67
+CulturalStopwatch	67
+StreetWisdom	67
+TakeBackYourMcDonaldsCulture	67
+VenezuelanSayings	67
+PsychFitness	58
 EN9806	56
 MentalFitness	56
-PsychFitness	56
 OfficeCulture	54
 Petition	52
-Reptilocracy	36
-NarrativeControl	30
+Reptilocracy	40
+NarrativeControl	34
 KnowledgeWork	29
 Stress	19
+Accountability	17
 AGIHype	16
 TShirtArt	16
-Accountability	15
 SeeTheGame	14
 SystemsCanHijackYou	14
 TribeBeforeTruth	14
@@ -35,6 +35,7 @@ FearChain	10
 FutureOfWork	10
 SharedIllusionsRunTheWorld	10
 StillYourChoice	9
+AccountabilityGap	8
 Automation	8
 PerformanceReview	8
 IdeasBecomeIdentity	7
@@ -48,6 +49,7 @@ GoBackToOfficeFad	6
 LetsDefineBad	6
 MetricsShapeMinds	6
 Moderation	6
+NodAlongChangeNothing	6
 NotEveryoneFeelsTheSame	6
 ObviousIsTrained	6
 OfficeSatire	6
@@ -55,7 +57,6 @@ Resilience	6
 RewriteTheRules	6
 WeekNote	6
 WorldModels	6
-AccountabilityGap	4
 AlgorithmicDecay	4
 BlameDeflection	4
 CalendarManagement	4
@@ -66,9 +67,11 @@ EmbodiedCognition	4
 EmpathyGap	4
 EmpathyIsAGreyArea	4
 Escalation	4
+FalseChoice	4
 FreeEnergyPrinciple	4
+HiddenCosts	4
 IndustrialMindset	4
-NodAlongChangeNothing	4
+MisalignedIncentives	4
 PatternsNotWorldModels	4
 PromiseManagement	4
 PublicMandate	4
@@ -118,7 +121,6 @@ EmpathyExtraction	2
 EveryoneKnowsNobodyActs	2
 EvolutionOfCooperation	2
 FairPlay	2
-FalseChoice	2
 FixedEnergyBudget	2
 FlimsyExcuse	2
 FragilityHidden	2
@@ -131,7 +133,6 @@ GoodGuysDontPlayFair	2
 Gotcha	2
 GroundHogCenturies	2
 HardTimesStrongMen	2
-HiddenCosts	2
 HumanAIFlippedClassroom	2
 HumanInTheLoop	2
 Hunger	2
@@ -152,7 +153,6 @@ ManySourcesGame	2
 MeaningAsControl	2
 MentalInfrastructure	2
 MiddleOfNowhere	2
-MisalignedIncentives	2
 MitochondrialSymbiosis	2
 MutualNonAggression	2
 NarcissismFactory	2
@@ -224,4 +224,4 @@ HandsOff	1
 ## Deprecated tags
 # Source: data/tag-deprecations.toml. Prefer "to" for new content instead of "from".
 # Columns: from<TAB>to<TAB>files_still_using_from
-ArepaContigo	ArepaContigo	65
+ArepaContigo	ArepaContigo	67

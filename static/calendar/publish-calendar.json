@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-13T15:30:05Z",
+  "generatedAt": "2026-08-15T15:50:34Z",
   "channels": [
     "site-en",
     "site-es",
@@ -4363,6 +4363,35 @@
       }
     },
     {
+      "bundle": "cognitive-memetics/reptilocracy/2026-08-16-insert-vote-receive-same",
+      "section": "cognitive-memetics",
+      "title": "Insert Vote, Receive Same",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Reptilocracy"
+      ],
+      "planned": "2026-08-16",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
       "bundle": "cognitive-memetics/sayings/2026-08-17-saying-32",
       "section": "cognitive-memetics",
       "title": "Caimán no come caimán.",
@@ -4450,6 +4479,35 @@
       }
     },
     {
+      "bundle": "cognitive-memetics/reptilocracy/2026-08-23-public-money-private-leverage",
+      "section": "cognitive-memetics",
+      "title": "Public Money, Private Leverage",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Reptilocracy"
+      ],
+      "planned": "2026-08-23",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
       "bundle": "cognitive-memetics/sayings/2026-08-24-saying-33",
       "section": "cognitive-memetics",
       "title": "El que busca, encuentra.",
@@ -4488,6 +4546,35 @@
         "Cube-Cows"
       ],
       "planned": "2026-08-26",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/sayings/2026-08-31-saying-34",
+      "section": "cognitive-memetics",
+      "title": "El alcahuete es peor que el autor.",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-08-31",
       "draft": false,
       "channels": {
         "facebook": {

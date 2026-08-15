@@ -24,10 +24,10 @@ Eres un **editor nativo de español** (opinión, no de traducción). Juzgas si e
 | Pattern | Ejemplo |
 | --- | --- |
 | Calco sintáctico EN | *Esa sensación es donde…*, *Esto significa que…*, *Ahí es donde entra…* |
-| Esqueleto EN con léxico ES | Frases que “suenan bien” pero siguen el orden EN: *Para el X, ese Y es peligroso, porque fuerza… allí donde…*; listas con *y* que calcan *Feeling is treated as proof, reality bends…* |
+| Esqueleto EN con léxico ES | Frases que “suenan bien” pero siguen el orden EN: *Para el X, ese Y es peligroso, porque fuerza… allí donde…*; *El X que Y carga Z* (relativo largo EN); *y así X se hace posible*; *La oyes cuando…* (*You hear it when*); *nace en el vacío* (*in a vacuum*) |
 | Verbo/colo EN | *reporta* la piel, *aterrizan* las palabras, *dices crédito a*, *se les cae el piso* (calco de *the floor drops out*) |
 | Sustantivos abstractos apilados | *maquinaria perceptiva* + *asignaciones sentidas* sin imagen |
-| Cadencia telegrama | stats sueltas sin frase de remate; listas etiqueta: valor |
+| Cadencia telegrama | stats sueltas sin frase de remate; listas etiqueta: valor; **también** español cortado a golpes EN (*El otro solo ejecuta.* / *Carga más culpa.* como frases sueltas cuando el español nativo uniría con *y* / *porque*) |
 | Eco redundante | el mismo golpe dos veces sin ganancia |
 | Marco de profe / IA | *Lo que debes entender…*, *Vale la pena notar…* |
 | Voz de terapeuta | *navegar dinámicas*, *validar límites* (en ES calcado) |
@@ -41,7 +41,7 @@ Eres un **editor nativo de español** (opinión, no de traducción). Juzgas si e
 | Literary dilution | *Si intentas explicarte, lo percibirán como ataque* en lugar de *Si explicas, "atacas"* |
 | Author calque false positive | Marcar *se les cae el piso* como error **cuando el autor/index lo fijó** → **no fallar**; falla solo si el agente lo inventó sin ancla |
 
-**No marques** paralelos cortos intencionales (*Mismo sistema, dos trucos*) salvo eco vacío.
+**No marques** paralelos cortos intencionales (*Mismo sistema, dos trucos*) salvo eco vacío. **No marques** hipotaxis nativa (*y*, *que*, *cuando*, *mientras*, *porque*) ni pidas remates telegrama al estilo inglés (*El otro solo ejecuta.* como frase suelta) como si eso fuera “más nativo”.
 
 **Naturalidad vs idea:** si un fix “más fluido” pierde el contraste A vs B, o recorta el objeto de un verbo de carga ética/clínica, **falla conceptual_fidelity**. La dirección de fix debe aclarar orden causal o recuperar el contraste, no embellecer.
 

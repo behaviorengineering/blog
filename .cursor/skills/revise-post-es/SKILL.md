@@ -83,7 +83,7 @@ For each section of the Spanish text (front matter and body), perform this menta
 
 **Hard constraints + calque tables (run first in Step 2):**
 
-1. **`.cursor/skills/spanish-translation-content/SKILL.md`** → **Hard constraints (native Spanish, not translation-shaped)** (adaptation vs gloss, active voice, tone, technical loanwords, `###` hooks).
+1. **`.cursor/skills/spanish-translation-content/SKILL.md`** → **Hard constraints (native Spanish, not translation-shaped)** and **Clause rebuild** (no EN relatives, *thus/making*, *You hear it when*, *in a vacuum*).
 2. Same skill → **Conceptual anglicisms (MUST check)** (e.g. *viajar gratis* → *salir gratis*; *dispara límites* → *activa límites*; **sesgo a la verdad**; *defecto de diseño*).
 3. Same skill → **Calcos frecuentes en contenido de ciencia e IA**.
 4. Same skill → **Organizational, hierarchy, and workplace English (MUST check)** (e.g. *Sobre el papel*, *demostró*, *en estado puro*, *a conciencia*, *El precio que pagas son*, *a quién echarle la culpa*).
@@ -107,7 +107,7 @@ For each section of the Spanish text (front matter and body), perform this menta
 | Incomplete sentence openers | "En este, comparan..." | "En este" has no noun; reader stumbles |
 | Staccato echo (objective) | *Diez personas… Diez personas debaten…* (same number twice) | Accidental English echo; re-point (*de ese tamaño*) without merging the whole paragraph |
 | Staccato translation rhythm | Five generic S+V+O beats with **no** parallel job | Robotic; group or vary syntax |
-| Dubbed metaphor | "alguien a quien culpar" | Sounds like subtitle dub; use *a quién echarle la culpa* or equivalent |
+| English skeleton / clause-map | *El X que Y carga Z*; *y así se hace posible*; *La oyes cuando*; *nace en el vacío* | Same relatives and glue as the English sentence; rebuild per **Clause rebuild** |
 | Conceptual anglicism | "deja de viajar gratis", "dispara límites" | English idiom pasted into Spanish; use **Conceptual anglicisms** table |
 | `###` hook mismatch | Rótulo que no describe el párrafo debajo | Hook must match the section beat (read paragraph, then fix or drop the heading) |
 | Tone softening | "Es importante señalar que la jerarquía puede resultar problemática" | Corporate/AI smoothing; restore sharp manifesto voice |

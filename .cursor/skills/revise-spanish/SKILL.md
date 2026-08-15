@@ -28,7 +28,7 @@ Answer two questions:
 
 | Use **revise-spanish** | Use another skill |
 |------------------------|-------------------|
-| After new or edited `index.es.md` | **spanish-translation-content** to draft the sibling |
+| After new or edited `index.es.md` | **spanish-translation-content** to draft the sibling (that skill already runs Gemma 4 on the first draft) |
 | "Sounds translated", "revisa la naturalidad" | **revise-post-es** for full 5-step Hugo + format + URLs |
 | ES sidecars idiom pass | **revise-flow** on English only |
 | Quick calque audit before publish | **`/revise-prose`** for English human feel |
