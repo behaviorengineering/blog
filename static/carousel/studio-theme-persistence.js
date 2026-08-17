@@ -1,4 +1,5 @@
 import { parseBackgroundWaveConfig } from './background-panorama.js';
+import { parseQrSizePercent } from './qr.js';
 import { deckPaletteFromTheme, normalizeWavePalette, panoramaPaletteFromTextPalette } from './theme.js';
 
 const STORAGE_PREFIX = 'carousel-studio-theme';
@@ -19,7 +20,7 @@ export function themeStorageKey(slug) {
  * @property {string} [marginVertical]
  * @property {Record<string, number>} [lineHeights]
  * @property {{ featuredMaxHeight?: number, qrSize?: number, brandMaxHeight?: number }} [cta]
- * @property {{ enabled?: boolean, offsetX?: number, offsetY?: number }} [motifStrip]
+ * @property {{ enabled?: boolean, offsetX?: number, offsetY?: number, bandWidth?: string }} [motifStrip]
  * @property {boolean} [showLineBoxes]
  */
 
@@ -110,10 +111,18 @@ export function applyStudioThemeState(slug, deck, theme) {
   }
 
   if (saved.cta && typeof saved.cta === 'object') {
-    deck.deck.cta = {
-      ...(deck.deck.cta && typeof deck.deck.cta === 'object' ? deck.deck.cta : {}),
-      ...saved.cta,
-    };
+    const existing = deck.deck.cta && typeof deck.deck.cta === 'object' ? deck.deck.cta : {};
+    const { qrSize, ...ctaRest } = /** @type {Record<string, unknown>} */ (saved.cta);
+    deck.deck.cta = { ...existing, ...ctaRest };
+    if (qrSize != null && Number.isFinite(Number(qrSize))) {
+      const formatted = `${Math.round(Number(qrSize))}%`;
+      const existingQr = deck.deck.cta.qr && typeof deck.deck.cta.qr === 'object' && !Array.isArray(deck.deck.cta.qr)
+        ? { .../** @type {Record<string, unknown>} */ (deck.deck.cta.qr) }
+        : {};
+      existingQr.size = formatted;
+      deck.deck.cta.qr = existingQr;
+      delete deck.deck.cta.qrSize;
+    }
   }
 
   if (saved.motifStrip && typeof saved.motifStrip === 'object') {
@@ -134,6 +143,12 @@ export function applyStudioThemeState(slug, deck, theme) {
         motif.offsetY = offsetY;
       } else {
         delete motif.offsetY;
+      }
+      const bandWidth = typeof saved.motifStrip.bandWidth === 'string'
+        ? saved.motifStrip.bandWidth.trim()
+        : '';
+      if (bandWidth) {
+        motif.bandWidth = bandWidth;
       }
     }
   }
@@ -189,8 +204,11 @@ export function writeStudioThemeState(slug, deck, theme, paletteId, showLineBoxe
     if (Number.isFinite(Number(cta.featuredMaxHeight))) {
       savedCta.featuredMaxHeight = Number(cta.featuredMaxHeight);
     }
-    if (Number.isFinite(Number(cta.qrSize))) {
-      savedCta.qrSize = Number(cta.qrSize);
+    const qrSizeRaw = (cta.qr && typeof cta.qr === 'object' && !Array.isArray(cta.qr)
+      ? /** @type {Record<string, unknown>} */ (cta.qr).size
+      : undefined);
+    if (qrSizeRaw != null && qrSizeRaw !== '') {
+      savedCta.qrSize = parseQrSizePercent(qrSizeRaw);
     }
     if (Number.isFinite(Number(cta.brandMaxHeight))) {
       savedCta.brandMaxHeight = Number(cta.brandMaxHeight);
@@ -216,6 +234,10 @@ export function writeStudioThemeState(slug, deck, theme, paletteId, showLineBoxe
       const offsetY = Number(motifSpec.offsetY);
       if (Number.isFinite(offsetY) && offsetY !== 0) {
         savedMotif.offsetY = offsetY;
+      }
+      const bandWidth = typeof motifSpec.bandWidth === 'string' ? motifSpec.bandWidth.trim() : '';
+      if (bandWidth) {
+        savedMotif.bandWidth = bandWidth;
       }
       payload.motifStrip = savedMotif;
     }

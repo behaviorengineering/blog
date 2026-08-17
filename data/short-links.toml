@@ -20,3 +20,9 @@ path = "/ego-game/"
 bundle = "content/human-condition/2026-05-01-ego-as-game"
 carousel = "ego-as-game"
 note = "Ego as game essay; carousel slide 8 CTA"
+
+[[link]]
+path = "/pyramids/"
+bundle = "content/human-condition/2026-05-28-why-humans-keep-building-pyramids"
+carousel = "why-humans-keep-building-pyramids"
+note = "Why groups organize into pyramids essay; carousel slide 9 CTA"

@@ -1,5 +1,6 @@
 import { parseBackgroundWaveConfig } from './background-panorama.js';
 import { variantIdFromIndex } from './export.js';
+import { parseQrSizePercent } from './qr.js';
 import { paletteById, matchPaletteId } from './palettes.js';
 import {
   defaultIncludedSlideNumbers,
@@ -31,6 +32,7 @@ import { mergeTheme, deckPaletteFromTheme, deckWavePaletteFromTheme, isWavePalet
  * @property {() => boolean} getShowLineBoxes
  * @property {() => Set<number>} getIncludedSlideNumbers
  * @property {() => Map<number, number>} getStripVariantIndices
+ * @property {() => Promise<void>} [onSave]
  */
 
 /** @param {{ deck?: Record<string, unknown>, slides?: Array<{ number: number, variants?: unknown[] }> }} deckRef */
@@ -137,8 +139,11 @@ function formatCtaLayout(cta) {
   if (Number.isFinite(Number(src.featuredMaxHeight))) {
     parts.push(`img ${Number(src.featuredMaxHeight)}`);
   }
-  if (Number.isFinite(Number(src.qrSize))) {
-    parts.push(`qr ${Number(src.qrSize)}%`);
+  const qrSizeRaw = (src.qr && typeof src.qr === 'object' && !Array.isArray(src.qr)
+    ? /** @type {Record<string, unknown>} */ (src.qr).size
+    : undefined);
+  if (qrSizeRaw != null && qrSizeRaw !== '') {
+    parts.push(`qr ${parseQrSizePercent(qrSizeRaw)}%`);
   }
   if (Number.isFinite(Number(src.brandMaxHeight))) {
     parts.push(`logo ${Number(src.brandMaxHeight)}`);
@@ -175,6 +180,14 @@ function formatMotifStrip(spec) {
   const offsetY = Number(motif.offsetY);
   if (Number.isFinite(offsetX) && offsetX !== 0) parts.push(`X ${offsetX}`);
   if (Number.isFinite(offsetY) && offsetY !== 0) parts.push(`Y ${offsetY}`);
+  const bandWidth = typeof motif.bandWidth === 'string' ? motif.bandWidth.trim() : '';
+  const bandPct = /^(\d+(?:\.\d+)?)\s*%$/.exec(bandWidth);
+  if (bandPct) {
+    const delta = Math.round(Number(bandPct[1]) - 100);
+    if (delta !== 0) parts.push(delta > 0 ? `+${delta}%` : `${delta}%`);
+  } else if (bandWidth && bandWidth !== '100%') {
+    parts.push(bandWidth);
+  }
   return parts.join(', ');
 }
 
@@ -282,9 +295,44 @@ export function renderStudioStatePanel(context) {
 
   const hint = document.createElement('p');
   hint.className = 'carousel-studio-state-hint';
-  hint.textContent = 'Highlighted rows differ from carousel.json. Browser values persist in localStorage for this deck.';
+  hint.textContent = 'Highlighted rows differ from carousel.json. Save writes browser settings back to the source file.';
 
-  head.append(title, hint);
+  const headText = document.createElement('div');
+  headText.className = 'carousel-studio-state-head-text';
+  headText.append(title, hint);
+
+  head.appendChild(headText);
+
+  if (typeof context.onSave === 'function') {
+    const saveBtn = document.createElement('button');
+    saveBtn.type = 'button';
+    saveBtn.className = 'carousel-button carousel-button--compact carousel-studio-save';
+    saveBtn.textContent = 'Save';
+    saveBtn.title = 'Write browser settings to carousel.json';
+    saveBtn.addEventListener('click', async () => {
+      if (saveBtn.disabled) return;
+      saveBtn.disabled = true;
+      saveBtn.setAttribute('aria-busy', 'true');
+      const previous = saveBtn.textContent;
+      saveBtn.textContent = 'Saving…';
+      try {
+        await context.onSave();
+        saveBtn.textContent = 'Saved';
+        window.setTimeout(() => {
+          saveBtn.textContent = previous;
+        }, 1600);
+      } catch (error) {
+        if (!(error instanceof Error && error.name === 'AbortError')) {
+          console.error('[carousel] save failed:', error);
+          window.alert(error instanceof Error ? error.message : String(error));
+        }
+        saveBtn.textContent = previous;
+      }
+      saveBtn.disabled = false;
+      saveBtn.removeAttribute('aria-busy');
+    });
+    head.appendChild(saveBtn);
+  }
 
   const grid = document.createElement('div');
   grid.className = 'carousel-studio-state-grid';

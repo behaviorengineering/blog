@@ -29,7 +29,7 @@ Diagnose readability and human voice for a Hugo post using a **local LLM**. **Mu
 | **This skill** | Local evaluate-only: voice, bar test, AI feel |
 | `.cursor/skills/site-perplexity-research/` + `packs/prose-review.md` | Same diagnostic intent via Perplexity |
 | `.cursor/skills/revise-score/SKILL.md` | Editorial mechanics / composite scorecard |
-| `.cursor/skills/revise-post/SKILL.md` + `revise-flow` | Apply fixes after critique |
+| `.cursor/skills/revise-post/SKILL.md` + `revise-flow` | Apply fixes after critique. **revise-post** Phase 0 uses **`--scope list`** (not full-body progressive); user can `skip gemma` |
 
 ## Rubrics
 

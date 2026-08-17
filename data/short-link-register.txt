@@ -7,3 +7,4 @@
 /war-game/	content/social-protocols/2026-04-28-candor-zero-sum-politics	candor-zero-sum-politics	Candor zero-sum politics essay; carousel slide 8 CTA
 /factory-score/	content/social-protocols/2026-05-26-developed-countries-are-factories	developed-countries-are-factories	Developed countries as factories essay; carousel slide 8 CTA
 /ego-game/	content/human-condition/2026-05-01-ego-as-game	ego-as-game	Ego as game essay; carousel slide 8 CTA
+/pyramids/	content/human-condition/2026-05-28-why-humans-keep-building-pyramids	why-humans-keep-building-pyramids	Why groups organize into pyramids essay; carousel slide 9 CTA

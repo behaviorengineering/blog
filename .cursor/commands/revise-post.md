@@ -17,17 +17,23 @@ Full skill: **`.cursor/skills/revise-post/SKILL.md`**.
 
 | Token | Mode |
 |-------|------|
-| (none) / `rough` | Heavy flow → hooks → Steps 1–3, 5 → fine flow → format last |
-| `standard` | Heavy flow → hooks → Steps 1–5 → format last |
-| `polish` | Hooks → Steps 1–3, 5 → fine flow → format last |
-| `format-only` | Format only |
-| `checklist` | Steps 1–5 only (no heavy/fine flow) |
+| (none) / `rough` | Lot plan → heavy flow → hooks → Steps 1–3, 5 → fine flow → format last |
+| `standard` | Lot plan → heavy flow → hooks → Steps 1–5 → format last |
+| `polish` | Lot plan → hooks → Steps 1–3, 5 → fine flow → format last |
+| `format-only` | Format only (no Gemma) |
+| `checklist` | Lot plan → Steps 1–5 only (no heavy/fine flow) |
 
-3. Read the page **`type`** skill, then follow **revise-post** phase order for the chosen mode. Collect a **merged apply list**; do not write yet.
+3. **Onion:** write a lot plan first (agent skim). Default Gemma is **`--scope list`** only, not one call per body paragraph. Unless the user already said `with gemma` / `skip gemma` / `format-only` / `plan only`, **stop and ask**:
 
-4. Present the report (mode, phases, Before/After, merged apply list). Ask: apply all / apply Phase N only / cancel.
+`Local Gemma 4 list eval is on by default (title and card fields only). Reply y / with gemma to include it, or skip gemma for an agent-only plan.`
 
-5. Only after confirmation, write in phase order, then **`hugo build`** (or `make build`) when `content/` changed.
+If AskQuestion is available, offer: Gemma 4 list (Recommended), Skip local eval.
+
+4. Read the page **`type`** skill. Write the lot plan, then iterate remaining phases. `plan only` stops after the plan. Collect a **merged apply list**; do not write yet.
+
+5. Present the report (mode, Gemma on/skipped, phases, Before/After, merged apply list). Ask: apply all / apply Phase N only / cancel.
+
+6. Only after confirmation, write in phase order, then **`hugo build`** (or `make build`) when `content/` changed.
 
 Optional: user says `with score` → add **revise-score** after format.
 

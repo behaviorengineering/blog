@@ -273,7 +273,7 @@ themes/LoveIt/exampleSite/content/posts/
 **Hooks, list cold-read, body ## headings?** → `.cursor/skills/revise-hooks/SKILL.md` 
 **Voice while drafting (active, direct, no AI rhetoric)?** → **`.cursor/rules/content-markdown-writing.mdc`** → **Voice while drafting** + **Explanatory prose** for claims / video / Substack (full audit: **revise-post** Step 2)
 **Prose cadence loop (clarity → compression → flow → voice → purpose)?** → `.cursor/skills/revise-flow/SKILL.md`
-**Full editorial lot (heavy flow → hooks → post filters → fine flow → format last)?** → `.cursor/skills/revise-post/SKILL.md` (default mode `rough`)
+**Full editorial lot (lot plan → heavy flow → hooks → post filters → fine flow → format last)?** → `.cursor/skills/revise-post/SKILL.md` (default mode `rough`; list-scope Gemma in the plan, prompt to skip)
 **Em dashes + emphasis/bold (ship-time mechanics)?** → `.cursor/skills/revise-format/SKILL.md` (authoring bold rules: `revise-emphasis`)
 **Curiosity title (gap question, legitimate tension, not bait)?** → `.cursor/skills/curiosity-title/SKILL.md` (audit: `revise-hooks`)
 **Claim cold-read / abstract list copy (Claim fog)?** → `.cursor/skills/revise-hooks/SKILL.md` → **Claim fog**; gate in **revise-post** Step 1

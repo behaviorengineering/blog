@@ -2,11 +2,12 @@
 name: revise-post
 description: >-
   Default Hugo revise conductor: modes rough, standard, polish, format-only,
-  checklist. Runs heavy revise-flow, revise-hooks, post Steps 1–5, optional fine
-  flow, then revise-format last (one apply ask). Use for "revise this post",
-  full publish pass, or step-only cold read / accessibility. Step 2 covers AI
-  voice plus explanatory prose; Step 4 runs revise-format. Focused cadence /
-  hooks / format alone: use revise-flow, revise-hooks, or revise-format.
+  checklist. Onion workflow: write a lot plan first (optional list-scope Gemma
+  4), then iterate phases until the merged apply list. Prompt to skip Gemma.
+  Use for "revise this post", full publish pass, or step-only cold read. Tokens:
+  with gemma, skip gemma, gemma4, plan only. Step 2 covers AI voice; Step 4
+  runs revise-format. Focused cadence / hooks / format: revise-flow, revise-hooks,
+  or revise-format.
 ---
 
 # Revise post (conductor + filters)
@@ -34,30 +35,75 @@ This skill **orchestrates** phases and owns **Steps 1–5** (post filters). MUST
 
 | Mode | Phases | When |
 |------|--------|------|
-| **`rough`** (default) | Heavy flow → Hooks → Steps 1–3, 5 → Fine flow → **Format last** | New or messy drafts; `/revise-post` without a mode |
-| **`standard`** | Heavy flow → Hooks → Steps 1–5 → **Format last** | Draft already fairly tight; skip fine flow |
-| **`polish`** | Hooks → Steps 1–3, 5 → Fine flow → **Format last** | Prose already cut; title/body mostly frozen |
-| **`format-only`** | **Format only** | Last sweep before ship |
-| **`checklist`** | Steps 1–5 only | Site filters without heavy/fine flow; Step 1 still reads revise-hooks |
+| **`rough`** (default) | Lot plan → Heavy flow → Hooks → Steps 1–3, 5 → Fine flow → **Format last** | New or messy drafts; `/revise-post` without a mode |
+| **`standard`** | Lot plan → Heavy flow → Hooks → Steps 1–5 → **Format last** | Draft already fairly tight; skip fine flow |
+| **`polish`** | Lot plan → Hooks → Steps 1–3, 5 → Fine flow → **Format last** | Prose already cut; title/body mostly frozen |
+| **`format-only`** | **Format only** (no plan Gemma) | Last sweep before ship |
+| **`checklist`** | Lot plan → Steps 1–5 only | Site filters without heavy/fine flow; Step 1 still reads revise-hooks |
 
 User MAY say: `rough`, `standard`, `polish`, `format-only`, or `checklist`.
+
+## Onion: plan first, then iterate
+
+Do **not** dump the whole body into Gemma before any editorial work. Peel layers:
+
+1. **Big picture** (cheap): agent cold-read of title, list fields, headings, and body spine. If Gemma is on, run **`--scope list` only** (title, Claim/`description`, `grounding`, `sowhat` when present). A few units, not one call per body paragraph.
+2. **Write the lot plan** in chat (ranked issues, which phases will fire, which body lines look risky). MUST NOT treat Gemma wording as apply-ready text.
+3. **Iterate the plan** through the mode's remaining phases. Fold plan items into flow, hooks, and Steps 1–3, 5. One apply ask at the end.
+
+**`plan only`:** stop after the written plan; do not run later phases until the user says continue.
+
+**Body Gemma (optional, never blocking):** MAY eval a **flagged** paragraph with `--scope body` (or a temp excerpt) after the plan names it. If the gateway 500s or times out, note it and keep iterating. MUST NOT run full-post progressive (17+ units) as Phase 0.
+
+This is **not** Cursor Plan mode. Do not switch modes for a normal `/revise-post`.
+
+## Gemma 4 (default, list-scope)
+
+Default: include list-scope Gemma in the lot plan, via **`.cursor/skills/revise-prose/SKILL.md`**.
+
+```bash
+python3 .cursor/skills/revise-prose/scripts/evaluate_prose.py \
+  content/<section>/<slug>/index.md \
+  --scope list
+```
+
+**Skip without asking:** `format-only`.
+
+**Prompt (MUST unless already chosen):** At setup, stop and ask. Do **not** start the lot until they answer.
+
+| Token already in the invoke | Behavior |
+|-----------------------------|----------|
+| `with gemma` / `gemma4` / `gemma` | List-scope Gemma in the plan; do not re-ask |
+| `skip gemma` / `no gemma` / `without gemma` | Agent-only lot plan; do not re-ask |
+| `plan only` | Write the plan, then stop |
+| (none) | Ask, then wait. Default: Gemma 4 (list) |
+
+Ask text: `Local Gemma 4 list eval is on by default (title and card fields only). Reply y / with gemma to include it, or skip gemma for an agent-only plan.`
+
+If **AskQuestion** is available: Gemma 4 list (Recommended), Skip local eval.
+
+Gateway 500 / timeout: say so; continue the lot plan **without** Gemma unless the user asks to retry. MUST NOT silently pretend Gemma ran.
+
+Optional later: user says `with score` → **revise-score** after format (unchanged).
 
 ## Fixed phase order (MUST NOT reorder within a mode)
 
 ### `rough` and `polish` (format always last)
 
 ```text
+Phase 0   Lot plan                agent skim + list Gemma (default); write the plan
 Phase 1   revise-flow (heavy)     cuts, compression, standalone worth, full passes
 Phase 2   revise-hooks            title, list fields, ## / ### headings
 Phase 3   post filters            Steps 1–3 and 5 (Step 4 deferred; see below)
 Phase 4   revise-flow (fine)      rhythm + voice only
 Phase 5   revise-format           em dash search + emphasis audit (MANDATORY)
-Phase 6   revise-score            OPTIONAL — user asks "with score"
+Phase 6   revise-score            OPTIONAL: user asks "with score"
 ```
 
 ### `standard`
 
 ```text
+Phase 0   Lot plan                skip Gemma if user opts out
 Phase 1   revise-flow (heavy)
 Phase 2   revise-hooks
 Phase 3   post filters            Steps 1–5 (Step 4 uses revise-format searches)
@@ -68,6 +114,7 @@ Phase 5   revise-score            OPTIONAL
 ### `checklist`
 
 ```text
+Phase 0   Lot plan                skip Gemma if user opts out
 Phase 1   post filters            Steps 1–5 in order
 ```
 
@@ -133,12 +180,14 @@ Each step MUST be evaluated against these strict definitions:
 
 - Read target(s). Save **`original`** snapshot.
 - Pick **mode** (`rough` unless user names another; cold-read-only → Step 3 only).
+- Resolve **Gemma 4** per **Gemma 4 (default, list-scope)** above. If unset, **stop and ask**; do not start Phase 0.
 - Open matching **type** skill.
 
 ### 2. Run phases in mode order
 
 For each phase, collect proposed edits; **do not write to disk** until final apply.
 
+- **Lot plan (Phase 0):** write ranked issues + phase intent. List-scope Gemma when on. If `plan only`, stop here.
 - **Heavy / fine flow:** **revise-flow** output format (condensed in merged report for fine).
 - **Hooks:** **revise-hooks** cold-read + tables. For **`type: claims`**, MUST run **Claim fog** on **`description`** (sentence-by-sentence).
 - **Post filters:** step tables below (Step 4 deferred per mode).
@@ -150,8 +199,15 @@ For each phase, collect proposed edits; **do not write to disk** until final app
 ## Revise post: [path]
 
 **Mode:** rough | standard | polish | format-only | checklist
+**Gemma 4:** list | skipped (reason) | failed (continued)
 **Phases run:** …
 **Write policy:** Analysis only until you confirm apply.
+
+### Lot plan
+Ranked issues; phases that will fire; body lines to watch.
+
+### Phase — Gemma 4 (list)
+… or Skipped / failed, continued without it
 
 ### Phase — Flow (heavy)
 …
@@ -459,6 +515,7 @@ Any **label the reader did not bring** fails cold-read unless decoded in the **s
 - `.cursor/skills/revise-flow/SKILL.md`
 - `.cursor/skills/revise-hooks/SKILL.md`
 - `.cursor/skills/revise-format/SKILL.md`
+- `.cursor/skills/revise-prose/SKILL.md` (Gemma 4 default eval)
 - `.cursor/skills/revise-score/SKILL.md`
 - `.cursor/skills/revise-post-es/SKILL.md`
 - `.cursor/skills/revise-post/reference.md` (Step 2 detail)

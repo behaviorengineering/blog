@@ -209,7 +209,7 @@ When the last slide funnels to the Hugo post:
    - **`postUrl`**: canonical long permalink (traceability; not printed on-slide when QR is used)
 4. On-slide stack (top to bottom): post title (`body` punch), short URL (`body` line directly under title), QR, scan label (`footer`, e.g. "Scan to read essay"). MUST NOT print the long essay URL.
 5. Renderer draws a QR from **`shortUrl`** (falls back to `postUrl` if `shortUrl` is omitted).
-6. In carousel studio, tune **`featuredMaxHeight`**, **`qrSize`**, and **`brandMaxHeight`** in the floating **CTA slide (1080px)** panel (writes `deck.cta`; copy JSON into `carousel.json`).
+6. In carousel studio, tune **`featuredMaxHeight`**, **`qr.size`**, and **`brandMaxHeight`** in the floating **CTA slide (1080px)** panel (writes `deck.cta`; copy JSON into `carousel.json`).
 
 ## JSON authoring
 
@@ -269,11 +269,13 @@ Use `\n` in `text` for intentional line breaks.
 
 ## Preview and export
 
-1. Run **`make serve`**
+1. Run **`make serve`** (also starts the local save API so studio **Save** can write `carousel.json`)
 2. Open **`http://localhost:1313/<section>/<bundle>/carousel.preview`**
-3. Export WebP per variant or **Export all variants** (1080×1080)
+3. Tune layout in studio, then click **Save** in **Settings: file vs browser**
+4. Set slide size to **1080**, pick winning variants with **In strip**, then click **PDF** (one `{slug}-linkedin.pdf` from this Chrome session)
+5. Optional WebPs: click **Slides**, then **`make carousel-pdf DIR=$$HOME/Downloads SLUG=<deck-slug>`** if you already have those files. Optional **`OUT=`**, **`VARIANT=a`**.
 
-Optional: save chosen WebPs to `carousel-slides/` in the bundle.
+Optional: save chosen WebPs to `carousel-slides/` in the bundle. MUST NOT commit exported WebPs or PDFs unless the author asks.
 
 ## Typo layout guardrails (renderer)
 
@@ -294,12 +296,14 @@ When editing `static/carousel/renderer.js`, `inline-text.js`, or line-box debug:
 - Schema: **`reference.md`**
 - HTML stub: **`.cursor/skills/carousel-post/templates/carousel.preview`**
 - Short URLs: **`.cursor/skills/short-link-register/SKILL.md`**, `data/short-links.toml`
+- LinkedIn **document caption** (Gemma 4 → `linkedin-carousel.txt`): **`.cursor/skills/carousel-linkedin-caption/SKILL.md`**
+- Full LinkedIn essay (`linkedin.txt`): **`.cursor/skills/linkedin-post/SKILL.md`**
 - Example deck (arc + layout): `content/social-protocols/2026-05-26-developed-countries-are-factories/carousel.json`
 - Example deck (arc rewrite): `content/human-condition/2026-05-01-ego-as-game/carousel.json`
 
 ## Do not
 
-- MUST NOT commit exported WebPs unless the user asks
+- MUST NOT commit exported WebPs or LinkedIn PDFs unless the user asks
 - MUST NOT duplicate renderer code into post bundles
 - MUST NOT use em dashes (U+2014) in slide copy
 - MUST NOT publish carousel files as Hugo pages; they are bundle sidecars only

@@ -1,3 +1,5 @@
+import { coerceBrightness, parseThemedColorSpec } from './theme.js';
+
 /** @type {Map<string, HTMLImageElement>} */
 const imageCache = new Map();
 
@@ -105,6 +107,21 @@ export async function loadTintedSvgImage(url, fillHex) {
 }
 
 /**
+ * Palette token, `#hex`, `transparent`, or `{ color, brightness }` (-100..100).
+ * @typedef {string|{color?: string, brightness?: number}} QrColorSpec
+ */
+
+/**
+ * @typedef {Object} PostCtaQr
+ * @property {number|string} [size] Percent of URL–footer slot (`100` or `"100%"`)
+ * @property {'split'|'stack'|'stacked'} [layout]
+ * @property {number} [columnRatio] Left column width fraction for `split`
+ * @property {QrColorSpec} [color] Module color (default `accent2`)
+ * @property {number|string} [brightness] Sibling lighten/darken for string `color` (`"+55"` or `55`)
+ * @property {QrColorSpec} [light] Tile color (default `transparent`)
+ */
+
+/**
  * @typedef {Object} PostCtaAssets
  * @property {string} [logo]
  * @property {string} [logoColor] Theme color token or `#hex` (for SVG tint)
@@ -115,11 +132,7 @@ export async function loadTintedSvgImage(url, fillHex) {
  * @property {string} [postUrl] Canonical post URL (may be long)
  * @property {string} [shortUrl] Short human URL for printing + QR (recommended)
  * @property {number} [featuredMaxHeight] Featured image max height in px at 1080 canvas (`post_cta`)
- * @property {number|string} [qrSize] QR square as percent of URL–footer slot (`100` or `"100%"`; 100 = largest square that fits)
- * @property {string} [qrDark] QR module color: palette token (`accent2`) or `#hex` (default `accent2`)
- * @property {string} [qrLight] QR background: `transparent` (default), palette token (`muted`), or `#hex`
- * @property {string} [qrLayout] `split` (QR left, scan + brand right) or `stack` (centered QR, full-width brand)
- * @property {number} [qrColumnRatio] Left column width as fraction of content width for `split` (default 0.44)
+ * @property {PostCtaQr} [qr] Nested QR section (`size`, `layout`, `color`, `brightness`, `light`, `columnRatio`)
  * @property {string} [scanLabel] Default scan CTA copy when no `footer` block is present
  * @property {number} [brandMaxHeight] Bottom brand lockup max height in px at 1080 canvas (`post_cta`)
  */
@@ -263,12 +276,56 @@ export function resolveBundleBaseUrl(deck, deckUrl) {
   return new URL('.', window.location.href).href;
 }
 
+/** @param {unknown} source @returns {PostCtaQr} */
+function qrSectionFrom(source) {
+  if (!source || typeof source !== 'object' || Array.isArray(source)) return {};
+  const qr = /** @type {{ qr?: unknown }} */ (source).qr;
+  if (!qr || typeof qr !== 'object' || Array.isArray(qr)) return {};
+  return /** @type {PostCtaQr} */ (qr);
+}
+
+/** @param {...unknown} vals */
+function firstDefined(...vals) {
+  for (const value of vals) {
+    if (value !== undefined && value !== null) return value;
+  }
+  return undefined;
+}
+
+/**
+ * Module-color spec from nested `qr` plus sibling `brightness`.
+ * `color` may be a token, `#hex`, `{ color, brightness }`, or `<accent2 brightness='+55'>`.
+ * @param {PostCtaQr|Record<string, unknown>|null|undefined} qr
+ * @param {string} [fallback]
+ * @returns {{ color: string, brightness?: number }}
+ */
+export function qrModuleColorSpec(qr, fallback = 'accent2') {
+  const source = qr && typeof qr === 'object' && !Array.isArray(qr) ? qr : {};
+  const parsed = parseThemedColorSpec(source.color ?? fallback) ?? { color: fallback };
+  const sibling = coerceBrightness(source.brightness);
+  const brightness = sibling !== undefined ? sibling : parsed.brightness;
+  return {
+    color: parsed.color ?? fallback,
+    ...(brightness !== undefined ? { brightness } : {}),
+  };
+}
+
 /**
  * @param {PostCtaAssets} variant
  * @param {PostCtaAssets} [deckCta]
  */
 export function mergePostCtaConfig(variant, deckCta) {
   const deck = deckCta && typeof deckCta === 'object' ? deckCta : {};
+  const variantQr = qrSectionFrom(variant);
+  const deckQr = qrSectionFrom(deck);
+  const size = firstDefined(variantQr.size, deckQr.size) ?? null;
+  const layout = firstDefined(variantQr.layout, deckQr.layout) ?? null;
+  const columnRatio = firstDefined(variantQr.columnRatio, deckQr.columnRatio) ?? null;
+  const color = firstDefined(variantQr.color, deckQr.color) ?? null;
+  const brightness = firstDefined(variantQr.brightness, deckQr.brightness) ?? null;
+  const light = firstDefined(variantQr.light, deckQr.light) ?? null;
+  /** @type {PostCtaQr} */
+  const qr = { size, layout, columnRatio, color, brightness, light };
   return {
     logo: variant.logo ?? deck.logo ?? '/images/head.svg',
     logoColor: variant.logoColor ?? deck.logoColor ?? 'text',
@@ -279,11 +336,7 @@ export function mergePostCtaConfig(variant, deckCta) {
     postUrl: variant.postUrl ?? deck.postUrl ?? '',
     shortUrl: variant.shortUrl ?? deck.shortUrl ?? '',
     featuredMaxHeight: variant.featuredMaxHeight ?? deck.featuredMaxHeight ?? null,
-    qrSize: variant.qrSize ?? deck.qrSize ?? null,
-    qrDark: variant.qrDark ?? deck.qrDark ?? null,
-    qrLight: variant.qrLight ?? deck.qrLight ?? null,
-    qrLayout: variant.qrLayout ?? deck.qrLayout ?? null,
-    qrColumnRatio: variant.qrColumnRatio ?? deck.qrColumnRatio ?? null,
+    qr,
     scanLabel: variant.scanLabel ?? deck.scanLabel ?? null,
     brandMaxHeight: variant.brandMaxHeight ?? deck.brandMaxHeight ?? null,
   };

@@ -105,7 +105,14 @@ Optional defaults for **`post_cta`** slides (funnel to the Hugo post):
   "featuredImage": "cowboys.jpg",
   "brandImage": "/images/og-logo.webp",
   "shortUrl": "https://behaviorengineering.ai/war-game/",
-  "postUrl": "https://behaviorengineering.ai/social-protocols/your-post-slug/"
+  "postUrl": "https://behaviorengineering.ai/social-protocols/your-post-slug/",
+  "qr": {
+    "size": "85%",
+    "layout": "split",
+    "color": "accent2",
+    "brightness": "+55",
+    "light": "transparent"
+  }
 }
 ```
 
@@ -120,10 +127,12 @@ Optional defaults for **`post_cta`** slides (funnel to the Hugo post):
 | `shortUrl` | **QR target** and printed short link; register path in `data/short-links.toml` + Hugo `aliases` (see **short-link-register** skill) |
 | `postUrl` | Canonical long permalink; not printed on-slide when QR is used; keep for traceability |
 | `featuredMaxHeight` | Max featured image height in px at 1080 canvas (default ~200 when QR + brand lockup). Tunable in studio **CTA slide (1080px)** panel. |
-| `qrSize` | QR square as **percent** of the vertical slot between the URL cluster and scan footer (`"100%"` or `100`; **100%** = largest square that fits, bounded by column width). Tunable in studio **CTA slide (1080px)** panel. Legacy values above 100 (old px at 1080) are treated as 100%. |
-| `qrDark` / `qrLight` | QR module and background colors (palette tokens, `#hex`, or **`transparent`**). Defaults: **`accent2`** modules on a **transparent** background (slide shows through). Use `qrLight: "muted"` for a solid cream tile. |
-| `qrLayout` | **`split`**: QR on the left; `footer` scan line + `brandImage` lockup stacked on the right (default when QR + brand). **`stack`**: centered QR, full-width brand at bottom. |
-| `qrColumnRatio` | Left column width fraction for `split` (default `0.5`). |
+| `qr` | Nested QR section. Variant `qr` keys override `deck.cta.qr` for that slide only. |
+| `qr.size` | QR square as **percent** of the vertical slot between the URL cluster and scan footer (`"100%"` or `100`; **100%** = largest square that fits, bounded by column width). Tunable in studio **CTA slide (1080px)** panel. Legacy values above 100 (old px at 1080) are treated as 100%. |
+| `qr.color` | Module color. Same tokens as slide text (`accent1`, `accent2`, `muted`, `text`) or `#hex`. To lighten or darken, add sibling **`qr.brightness`** (`"+55"` or `55`, range **-100** to **+100**), or write the color as a text tag: `"<accent2 brightness='+55'>"`. Defaults to **`accent2`**. |
+| `qr.light` | Tile behind the modules (`transparent` default so the slide shows through, or a token / `#hex`). Use `"light": "muted"` for a solid cream tile. |
+| `qr.layout` | **`split`**: QR on the left; `footer` scan line + `brandImage` lockup stacked on the right (default when QR + brand). **`stack`**: centered QR, full-width brand at bottom. |
+| `qr.columnRatio` | Left column width fraction for `split` (default `0.5`). |
 | `brandMaxHeight` | Bottom brand lockup max height in px at 1080 canvas (default ~180). Tunable in studio **Logo max H**. |
 
 Variant fields with the same keys override `deck.cta` for that slide only.
@@ -194,7 +203,7 @@ The preview toolbar has two panels:
 - **Background wave:** optional **Separate wave palette** toggle + wash chips (Base, Muted, Accents). When linked, wash follows text palette base and accents. Copy wave JSON → `backgroundGradient`, `backgroundWave`, and `wavePalette` when unlinked.
 - **Wave style:** `none`, `drift`, or `mesh-corners` tiles; modifiers (`hue`, `intensity`, `color`, `variety`, `blur`, `radius`, `phase`, optional `lobes`). Modifiers hide when style is `none`.
 
-The fixed **Line boxes** panel (top right) toggles metric overlays and holds **Line heights** fields (`normal`, `punch`, `header`, `footer`) plus **Copy lineHeights JSON**. Session-only until pasted into `carousel.json`.
+The fixed **Line boxes** panel (top right) toggles metric overlays and holds **Line heights** fields (`normal`, `punch`, `header`, `footer`) plus **Copy lineHeights JSON**. Use **Save** in **Settings: file vs browser** to write live studio settings back to `carousel.json`.
 
 Studio presets (`static/carousel/palettes.js`): `factory-warm`, `editorial-trio`, `ember-peach`, `slate-cool`, `ocean-depth`, `paper-light`, `sage-light`, `warm-linen` (light bases), `wine-depth` (burgundy base), `forest-green` (dark green base). Wave style is chosen separately.
 
@@ -215,18 +224,18 @@ Optional **panoramic artwork** sliced across slides: one wide SVG/PNG/WebP in th
 |-------|---------|-------|
 | `enabled` | `true` when `src` is set | Set `false` to skip load/draw |
 | `src` | required | Bundle-relative strip asset (one slide width per deck slide) |
-| `bandWidth` | `100%` | Drawn band width on slide; height follows slice aspect ratio |
+| `bandWidth` | `100%` | Uniform size of the panoramic motif (width and height locked). Scales from the **bottom-left**. Studio **Size** writes this as a percent of native. The strip stays continuous across slides (not inset per slide). |
 | `marginBottom` | `3%` | Gap above slide bottom when `anchor` is `bottom` |
 | `marginTop` | `3%` | Gap below slide top when `anchor` is `top` |
-| `offsetX` | `0` | Horizontal nudge in px at 1080 (positive = right) |
-| `offsetY` | `0` | Vertical nudge in px at 1080 (positive = down) |
+| `offsetX` | `0` | Horizontal pan in px at 1080 (positive = right). Studio range is ±12 slide widths. |
+| `offsetY` | `0` | Vertical nudge in px at 1080 (positive = down). Studio range is ± one slide. |
 | `anchor` | `bottom` | `bottom` or `top` |
 | `color` | `accent1` | SVG tint (palette token or `#hex`) |
 | `keyColor` / `keyTolerance` | off | Raster chroma-key for black-backdrop exports |
 | `opacity` | `1` | 0–1 |
 | `excludeRoles` | `[]` | Skip motif on slides with matching `role` |
 
-Export art at **N × 1080** width (N = slide count) so each slice aligns to one slide. The studio strip panel (`#carousel-vision-strip`) previews the deck; use **Panorama** or **Slides** to export WebPs.
+Export art at **N × 1080** width (N = slide count) so each slice aligns to one slide. The studio strip panel (`#carousel-vision-strip`) previews the deck; use **PDF** for a LinkedIn document, or **Panorama** / **Slides** for WebPs.
 
 Drawn after background, before type. Avoid long footers on the same band if they collide visually.
 
@@ -291,7 +300,7 @@ Inside any block `text` string:
 | `*phrase*` | Italic (loads italic font face) |
 | `***phrase***` | Bold + italic |
 | `<accent1>phrase</accent1>` | Palette color on that span (same size as the block; does not switch to punch scale) |
-| `<accent1 brightness="+10">phrase</accent1>` | Lighten that token's base hex by 10% (toward white) |
+| `<accent1 brightness="+10">phrase</accent1>` | Lighten that token's base hex by 10% (toward white). Single or double quotes both work. |
 | `<accent2 brightness="-20">phrase</accent2>` | Darken by 20% (toward black); range **-100** to **+100** |
 | `<color accent2>phrase</color>` | Same as `<accent2>phrase</accent2>` |
 
@@ -449,8 +458,8 @@ The preview toolbar **Palette** grid sets base colors; the **Gradient** grid bel
 
 ### Studio placement controls
 
-Each variant card toolbar: **Top** / **Center** / **Bottom** on the left; **Copy placement** (`verticalAlign` when not top, plus compact `alignment` object) and **Export** on the right. Section **L** / **C** / **R** controls sit in the side rail. Changes are preview-only until you paste into `carousel.json`.
+Each variant card toolbar: **Top** / **Center** / **Bottom** on the left; **Copy placement** (`verticalAlign` when not top, plus compact `alignment` object) and **Export** on the right. Section **L** / **C** / **R** controls sit in the side rail. Click **Save** to write placement and theme settings to `carousel.json`.
 
 ### Studio floating panel (debug)
 
-Fixed top-right panel: **Line boxes** toggle; optional **CTA slide** sizes when the deck has `post_cta`; **Margins** (`marginHorizontal` / `marginVertical` as % of the 1080 design canvas, 0–16%); **Line heights**; each section has **Copy … JSON** for paste into `carousel.json`.
+Fixed top-right panel: **Line boxes** toggle; optional **CTA slide** sizes when the deck has `post_cta`; **Margins** (`marginHorizontal` / `marginVertical` as % of the 1080 design canvas, 0–16%); **Line heights**; each section has **Copy … JSON**. **Save** writes the live browser settings back to `carousel.json`.

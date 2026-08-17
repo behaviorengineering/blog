@@ -1,39 +1,39 @@
-## ¿Por qué todo grupo se arma en pirámide?
+## ¿Por qué cualquier grupo acaba en pirámide?
 
-En familia mandan los mayores. En el aula, el profesor. En el ejército, el grado. En la empresa, el jefe. En la comunidad online, moderadores, influencers y círculos internos, aunque arranquen con **ideales planos**.
+En tu familia mandan los mayores. En clase manda el profesor. En el ejército mandan los rangos. En la empresa manda tu jefe. Las comunidades online acaban igual: siempre surgen moderadores, influencers y círculos VIP, aunque empiecen con **ideales planos**.
 
-La cultura y la codicia pesan, pero la raíz está **en el cuerpo**: nuestro cerebro ya **apila el mundo por capas**.
+La cultura y la codicia pesan, pero el motivo de fondo empieza **en el cuerpo**: el cerebro ya **apila el mundo en capas**.
 
-**Percepción, acción, lenguaje y lo social corren en capas.** Señales simples se agrupan en patrones, los patrones en conceptos, y los conceptos pasan por circuitos que deciden qué cuenta después. El cerebro **comprime** el mundo en **capas y rango**, manda la atención hacia arriba y resume el ruido de abajo antes de decidir. Por eso los grupos en escalones se sienten **obvios**: pocas señales arriba, muchos peldaños abajo, una escalera que todos leen al vuelo.
+Las señales sueltas se agrupan en patrones, los patrones en conceptos, y los conceptos viajan por las redes que deciden qué importa ahora.
 
-## Tu corteza apila jefes antes que Recursos Humanos
+## Tu corteza apila jefes antes que el organigrama
 
-La **corteza** (la capa arrugada de afuera) **apila el trabajo por capas**. Los sentidos van de rasgos simples a abstracciones más ricas. El movimiento encadena gestos locales bajo planes más amplios. Las **redes ejecutivas** (las que fijan y sostienen metas) ponen objetivos por encima del impulso inmediato.
+La **corteza** (la capa arrugada que cubre el cerebro) trabaja por capas. Los sentidos van de rasgos simples a abstracciones más ricas. El movimiento apila el gesto local bajo un plan más amplio. Los sistemas ejecutivos (las redes que fijan y sostienen metas) colocan esas metas por encima del impulso inmediato.
 
-El cerebro resuelve la complejidad con **control anidado**: lo local hace lo local; lo superior comprime, compara y redirige. **No hay un rey diminuto arriba**; el mando se reparte entre capas.
+El cerebro resuelve lo complejo con **control anidado**: lo local se resuelve en lo local, y arriba se comprime, se compara y se redirige. La autoridad vive en esas capas, una pila de jefes chicos, no un *rey diminuto* en la cúspide.
 
-Si sigues qué sonido importa, qué movimiento importa y qué meta pisa a qué impulso, también sigues el **rango en la sala**: de quién te importa el enojo, de quién te abre o cierra puertas la aprobación, y de quién reordena todo con una señal.
+Si distingues qué sonido importa, qué movimiento importa y qué meta gana al impulso, también lees el **rango de la sala**: de quién te importa el enojo, quién te abre puertas y quién reordena la habitación con un gesto.
 
-## Rango en el cráneo antes del organigrama
+## El rango vive en el cráneo
 
-**Zink y su equipo** armaron un juego de laboratorio: los voluntarios aprendieron quién mandaba sobre quién solo con las caras de los demás. Al subir o bajar de rango, el escáner encendía **las mismas redes de recompensa y control que responden al dinero**. Diez personas pueden vivir de memoria, confianza y charla directa. A escala de empresa, las señales y los pleitos se les adelantan. El grupo **cambia detalle por velocidad** con **menos caminos hacia arriba**: una línea de reporte, un consolidado, una respuesta de arriba.
+**Zink et al.** lo demostraron en el laboratorio: con solo mirar caras, los voluntarios aprendían quién mandaba. Subir o bajar de puesto encendía **las mismas redes de recompensa y control que responden al dinero**.
 
-En una reunión entre equipos, diez hablaron; el vicepresidente recibió una viñeta de un informe que saltó un nivel (un escalón por encima de tu jefe), recortada por un director, moldeada por quien podía tumbar la hoja de ruta.
+Diez personas se coordinan con memoria, confianza y cara a cara. En una empresa, las señales y las peleas desbordan eso. El grupo **cambia detalle por velocidad** y deja **menos caminos hacia arriba**: un informe, un resumen, una respuesta en el piso de arriba.
 
-> Tu atención trepó el organigrama antes de que existiera el organigrama.
+En una reunión de planificación entre equipos, diez personas hablaron; al vicepresidente le llegó una viñeta de un informe que saltaba un nivel (el jefe de tu jefe), recortada por un director, moldeada por quien podía bloquear el plan.
 
-Las pirámides meten muchas realidades locales en pocos puntos de mando (más fácil dirigir, culpar y obedecer), pero dejan cuellos de botella, juegos de estatus y un hueco entre **quien decide** y **quien paga la cuenta**. La escalera que coordina puede enseñarte que **pensar se frena en tu nivel**.
+![Embudo piramidal de una empresa: muchas voces en la base se reducen a través de gerentes hasta llegar a una sola viñeta para los directivos](org.jpg)
 
-## Sesgo de fábrica, no sentencia
+Ese embudo es la pirámide *en estado puro*. Agiliza la coordinación y te da a quién echarle la culpa. El precio que pagas son cuellos de botella, peleas de ego y un abismo entre **el que toma la decisión** y **el que lava los platos rotos**. La escalera también te enseña a dejar de pensar en el momento en que llegas a tu piso.
 
-El cerebro puede con redes, roles rotativos y **heterarquías** (el mando salta según el tema: finanzas frente a producto, no una cadena fija de jefes en cada llamada). Podemos diseñar consejos, jurados, cooperativas y otras formas que resisten el mando vertical simple.
+## El rango vuelve sin contrapeso
 
-Lo plano exige **contradiseño explícito**: reglas, mapas compartidos, decisiones a la vista y normas que corten el rango cuando quiere colarse en silencio. Lo ves en cooperativas y proyectos open source que duran: procesos escritos, decisiones visibles, rotar quién puede fusionar cambios.
+El cerebro aguanta redes, roles que rotan y **heterarquías**: el mando cambia según el tema (finanzas o producto), un jefe distinto según de qué se trate. Se pueden armar consejos, jurados, cooperativas y otras formas que resisten el mando de arriba hacia abajo.
 
-En el papel, una startup puede ser plana. En la práctica, **la sala gira en torno al fundador**. Un foro puede prohibir rangos visibles y aun así **girar en torno al mod con el botón de borrar**. Sin ese contradiseño, la jerarquía vuelve porque es fácil de leer, de copiar y de justificar cuando ya está puesta.
+Las cooperativas y los proyectos de código abierto que duran usan un **contrapeso diseñado a conciencia**: procesos escritos, decisiones a la vista y rotación de quién aprueba los cambios.
 
-> **La jerarquía tira como un imán, no es destino.** Seguimos armando pirámides porque la atención ya sube por capas.
+Sobre el papel, una startup nace plana. En la sala, **todos giran en torno al fundador**. Un foro puede prohibir los rangos visibles y seguir **girando en torno al moderador con el botón de borrar**. Sin ese contrapeso, la jerarquía vuelve porque es fácil de leer, de copiar y de justificar en cuanto existe.
 
-¿Dónde viste por última vez el rango reordenar la sala antes de que existiera un organigrama?
+> **La jerarquía es un atractor.** Los grupos se deslizan hacia una pirámide porque la atención ya sube por capas.
 
 [Know Your Place: Neural Processing of Social Hierarchy in Humans](https://pmc.ncbi.nlm.nih.gov/articles/PMC2430590/) (Zink et al., 2008, PubMed Central)

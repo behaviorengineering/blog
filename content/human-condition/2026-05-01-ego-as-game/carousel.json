@@ -40,8 +40,10 @@
       "backgroundGradient": "solid",
       "featuredImage": "bear.jpg",
       "brandImage": "/images/og-logo.webp",
-      "qrDark": "#ff8c42",
-      "qrLayout": "split",
+      "qr": {
+        "layout": "split",
+        "color": "#ff8c42"
+      },
       "shortUrl": "https://behaviorengineering.ai/ego-game/",
       "postUrl": "https://behaviorengineering.ai/human-condition/2026-05-01-ego-as-game/"
     }
@@ -423,8 +425,10 @@
         {
           "archetype": "post_cta",
           "featuredMaxHeight": 400,
-          "qrSize": "85%",
-          "qrLayout": "split",
+          "qr": {
+            "size": "85%",
+            "layout": "split"
+          },
           "alignment": {
             "body": "right",
             "footer": "left"

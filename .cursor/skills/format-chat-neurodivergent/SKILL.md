@@ -1,8 +1,8 @@
 ---
 name: format-chat-neurodivergent
 description: >-
-  Rewrites a prior chat reply (or user-pasted text) into neurodivergent-friendly
-  structure per always-rules-01-chat-style-neurodivergent.mdc. Preserves every
+  Rewrites a prior chat reply (or user-pasted text) into the skim-first chat
+  template in .cursor/personas/chat-neurodivergent.persona.md. Preserves every
   fact; does not re-debug or re-run tools. Use when the user asks to format for
   neurodivergent, reformat neurodivergent, format chat, make readable, or after
   a dense incident dump.
@@ -13,7 +13,7 @@ disable-model-invocation: true
 
 ## Purpose
 
-Turn a dense or wall-of-text **chat** reply into the tiered layout in **`.cursor/rules/always-rules-01-chat-style-neurodivergent.mdc`**. This is a **presentation** pass only.
+Turn a dense or wall-of-text **chat** reply into the tiered layout in **`.cursor/personas/chat-neurodivergent.persona.md`**. This is a **presentation** pass only. The always-on file **`.cursor/rules/always-rules-01-chat-style-neurodivergent.mdc`** is a loader only.
 
 ## MUST NOT
 
@@ -24,7 +24,7 @@ Turn a dense or wall-of-text **chat** reply into the tiered layout in **`.cursor
 
 ## MUST
 
-1. Read **`.cursor/rules/always-rules-01-chat-style-neurodivergent.mdc`** and follow its section order and voice rules.
+1. Read **`.cursor/personas/chat-neurodivergent.persona.md`** and follow its reply gate, section order, and voice rules.
 2. Use the **immediately prior assistant message** as the source unless the user pasted replacement text.
 3. Put a plain-English **outcome** in **Direct answer** (one line; two only if a caveat is essential).
 4. Use **Most likely cause** for a single mechanism when the source states one.

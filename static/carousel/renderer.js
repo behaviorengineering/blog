@@ -4,6 +4,7 @@ import {
   fitImageBox,
   loadPostCtaAssets,
   mergePostCtaConfig,
+  qrModuleColorSpec,
 } from './assets.js';
 import {
   baselineYFromSymmetricOrange,
@@ -30,10 +31,17 @@ import {
   prepareGridSection,
   refreshPreparedGridMetrics,
 } from './text-grid.js';
-import { drawQrCodeInBox, ensureQrCodegenLoaded, isQrBackgroundTransparent, makeQrCode } from './qr.js';
+import {
+  drawQrCodeInBox,
+  ensureQrCodegenLoaded,
+  isQrBackgroundTransparent,
+  makeQrCode,
+  parseQrSizePercent,
+} from './qr.js';
 import { rotateHexHue } from './background.js';
 import { paintPanoramicWaveSlice, shouldPaintPanoramicWave } from './background-panorama.js';
 import { wavePaletteFromTheme } from './theme.js';
+import { isCarouselCtaRole } from './slide-constants.js';
 import {
   loadMotifStripImage,
   motifStripEnabledForSlide,
@@ -53,6 +61,7 @@ import {
   canvasHeightForWidth,
   resolveColor,
   resolveInlineRunColor,
+  resolveThemedColor,
   resolveDesignFontSize,
   resolveFontSizePx,
   resolveLineHeightMult,
@@ -60,6 +69,8 @@ import {
   scaleCanvasPx,
   scaleFontSize,
 } from './theme.js';
+
+export { parseQrSizePercent } from './qr.js';
 
 /**
  * @typedef {import('./theme.js').Section} Section
@@ -165,8 +176,18 @@ let activeFontMetricsCache = null;
 function drawBackground(ctx, theme, options = {}) {
   if (options.skipBackground) return;
   const applyGrain = options.grain !== false && options.studioPreview !== true;
-  const { size, sizeHeight, backgroundGradient } = theme;
+  const { size, sizeHeight } = theme;
   const canvasHeight = sizeHeight ?? size;
+
+  if (isCarouselCtaRole(options.slideRole)) {
+    ctx.fillStyle = resolveColor(theme, theme.background);
+    ctx.fillRect(0, 0, size, canvasHeight);
+    if (applyGrain) {
+      drawGrainOverlay(ctx, size, canvasHeight, 0.22);
+    }
+    return;
+  }
+
   const waveColors = wavePaletteFromTheme(theme);
   const panorama = options.backgroundPanoramaContext;
   const waveConfig = theme.backgroundWave ?? {
@@ -752,31 +773,6 @@ function measureBlocksStackHeight(blocks, gapBetween, gapAfterLast = 0) {
   return h;
 }
 
-/**
- * QR size as percent of the vertical slot between URL and scan footer (1–100).
- * Accepts `100`, `"100%"`, or legacy px values above 100 at 1080.
- * @param {number|string|null|undefined} raw
- */
-export function parseQrSizePercent(raw) {
-  if (typeof raw === 'string') {
-    const trimmed = raw.trim();
-    const withPct = trimmed.match(/^(\d+(?:\.\d+)?)\s*%$/);
-    if (withPct) {
-      return Math.min(100, Math.max(1, Number(withPct[1])));
-    }
-    const bare = Number(trimmed);
-    if (Number.isFinite(bare)) {
-      if (bare > 100) return 100;
-      if (bare <= 0) return 100;
-      return bare;
-    }
-    return 100;
-  }
-  if (!Number.isFinite(raw) || raw <= 0) return 100;
-  if (raw > 100) return 100;
-  return raw;
-}
-
 /** Pixels from last line descender to em slot bottom (padding below footer glyphs). */
 function measureBlockTrailingEmPad(block) {
   const lineCount = block.inlineLines.length;
@@ -1360,6 +1356,22 @@ function variantWithFooterLeft(variant) {
 }
 
 /**
+ * @param {import('./theme.js').DeckTheme} theme
+ * @param {import('./assets.js').PostCtaAssets} ctaConfig
+ */
+function qrPaintColors(theme, ctaConfig) {
+  const qr = ctaConfig.qr && typeof ctaConfig.qr === 'object' ? ctaConfig.qr : {};
+  const colorSpec = qrModuleColorSpec(qr);
+  const lightSpec = qr.light ?? 'transparent';
+  return {
+    dark: resolveThemedColor(theme, colorSpec, 'accent2'),
+    light: isQrBackgroundTransparent(lightSpec)
+      ? 'transparent'
+      : resolveThemedColor(theme, lightSpec, 'muted'),
+  };
+}
+
+/**
  * QR left; scan CTA + brand lockup stacked on the right.
  * @returns {boolean} Whether the brand image was drawn here
  */
@@ -1385,7 +1397,7 @@ function layoutPostCtaQrSplit(ctx, theme, variant, options, layout) {
   const splitGap = scaleCanvasPx(16, theme.size);
   const scanLineGap = scaleCanvasPx(8, theme.size);
   const scanBrandGap = scaleCanvasPx(4, theme.size);
-  const rawRatio = Number(ctaConfig.qrColumnRatio);
+  const rawRatio = Number(ctaConfig.qr?.columnRatio);
   const columnRatio = Number.isFinite(rawRatio) && rawRatio > 0.2 && rawRatio <= 0.55
     ? rawRatio
     : 0.5;
@@ -1417,7 +1429,7 @@ function layoutPostCtaQrSplit(ctx, theme, variant, options, layout) {
 
   let rightStackH = scanInkH + (scanLines.length && rightBrandBoxH > 0 ? scanBrandGap : 0) + rightBrandBoxH;
 
-  const qrPercent = parseQrSizePercent(ctaConfig.qrSize);
+  const qrPercent = parseQrSizePercent(ctaConfig.qr?.size);
   const qrMin = scaleCanvasPx(96, theme.size);
   const maxSquare = Math.min(bandHeight, leftMaxW);
   let qrBox = (maxSquare * qrPercent) / 100;
@@ -1469,13 +1481,9 @@ function layoutPostCtaQrSplit(ctx, theme, variant, options, layout) {
     qrBox = Math.max(1, bandBottom - bandTop);
     qrY = bandBottom - qrBox;
   }
-  const qrLightToken = /** @type {string} */ (ctaConfig.qrLight ?? 'transparent');
   drawQrCodeInBox(ctx, options.qrCode, qrX, qrY, qrBox, {
     marginModules: 2,
-    dark: resolveColor(theme, /** @type {string} */ (ctaConfig.qrDark || 'accent2')),
-    light: isQrBackgroundTransparent(qrLightToken)
-      ? 'transparent'
-      : resolveColor(theme, qrLightToken),
+    ...qrPaintColors(theme, ctaConfig),
   });
   if (Boolean(activeRenderOptions?.showLineBoxes) && qrBox > 0) {
     drawImageSlotDebug(ctx, qrX, qrY, qrBox, qrBox, theme.size);
@@ -1529,7 +1537,7 @@ function layoutPostCta(ctx, theme, prepared, variant, options) {
     }
   }
 
-  const qrLayoutRaw = ctaConfig.qrLayout;
+  const qrLayoutRaw = ctaConfig.qr?.layout;
   const useSplitQr = showQr && hasBrand
     && (qrLayoutRaw === 'split' || (qrLayoutRaw !== 'stack' && qrLayoutRaw !== 'stacked'));
   const brandY = hasBrand && !useSplitQr
@@ -1636,7 +1644,7 @@ function layoutPostCta(ctx, theme, prepared, variant, options) {
       stackBottom -= qrGapAfter;
     }
 
-    const qrPercent = parseQrSizePercent(ctaConfig.qrSize);
+    const qrPercent = parseQrSizePercent(ctaConfig.qr?.size);
     const availableH = Math.max(0, stackBottom - cursorY);
     const qrMin = scaleCanvasPx(96, theme.size);
     const maxSquare = Math.min(availableH, column.contentWidth);
@@ -1653,13 +1661,9 @@ function layoutPostCta(ctx, theme, prepared, variant, options) {
     }
 
     const qrX = column.columnLeft + (column.contentWidth - qrBox) / 2;
-    const qrLightToken = /** @type {string} */ (ctaConfig.qrLight ?? 'transparent');
     drawQrCodeInBox(ctx, options.qrCode, qrX, qrY, qrBox, {
       marginModules: 2,
-      dark: resolveColor(theme, /** @type {string} */ (ctaConfig.qrDark || 'accent2')),
-      light: isQrBackgroundTransparent(qrLightToken)
-        ? 'transparent'
-        : resolveColor(theme, qrLightToken),
+      ...qrPaintColors(theme, ctaConfig),
     });
     if (Boolean(activeRenderOptions?.showLineBoxes) && qrBox > 0) {
       drawImageSlotDebug(ctx, qrX, qrY, qrBox, qrBox, theme.size);
@@ -1833,6 +1837,9 @@ export async function renderSlideToCanvas(variant, themeOverrides = {}, renderOp
 
   if (variant.archetype === 'post_cta') {
     const ctaConfig = mergePostCtaConfig(variant, renderOpts.deckCta);
+    if (!renderOpts.slideRole) {
+      renderOpts.slideRole = 'cta';
+    }
     theme = mergeTheme(
       {
         ...spec,
@@ -1840,6 +1847,7 @@ export async function renderSlideToCanvas(variant, themeOverrides = {}, renderOp
         background: ctaConfig.background,
         backgroundGradient: 'solid',
         backgroundGradientPreset: null,
+        backgroundWave: { style: 'none' },
       },
       { canvasSizeMax: renderWidth },
     );
