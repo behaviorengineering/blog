@@ -2,6 +2,22 @@
 export const EXPORT_WEBP_QUALITY = 0.92;
 
 /**
+ * Trigger a browser download from an in-memory blob.
+ * @param {Blob} blob
+ * @param {string} filename
+ */
+export function downloadBlob(blob, filename) {
+  const url = URL.createObjectURL(blob);
+  const anchor = document.createElement('a');
+  anchor.href = url;
+  anchor.download = filename;
+  anchor.click();
+  window.setTimeout(() => {
+    URL.revokeObjectURL(url);
+  }, 100);
+}
+
+/**
  * @param {HTMLCanvasElement} canvas
  * @param {string} filename Must end in `.webp` (or any name; MIME is WebP).
  */
@@ -13,13 +29,8 @@ export function downloadCanvasWebp(canvas, filename) {
           reject(new Error('Canvas export produced empty blob'));
           return;
         }
-        const url = URL.createObjectURL(blob);
-        const anchor = document.createElement('a');
-        anchor.href = url;
-        anchor.download = filename;
-        anchor.click();
-        setTimeout(() => {
-          URL.revokeObjectURL(url);
+        downloadBlob(blob, filename);
+        window.setTimeout(() => {
           resolve(undefined);
         }, 100);
       },
@@ -56,4 +67,11 @@ export function exportFilename(slug, slideNumber, variantIndex) {
  */
 export function exportStripFilename(slug) {
   return `${slug}-panorama.webp`;
+}
+
+/**
+ * @param {string} slug
+ */
+export function exportPdfFilename(slug) {
+  return `${slug}-linkedin.pdf`;
 }

@@ -176,6 +176,11 @@ body {
   gap: 8px 12px;
 }
 
+.carousel-float .carousel-debug-motif .carousel-lineheight-field:first-of-type {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
 .carousel-float .carousel-lineheight-field {
   display: flex;
   align-items: center;
@@ -201,6 +206,38 @@ body {
 
 .carousel-float .carousel-lineheight-input-wrap .carousel-lineheight-input {
   width: 2.75rem;
+}
+
+.carousel-float .carousel-motif-scale-wrap {
+  gap: 4px;
+}
+
+.carousel-float .carousel-motif-scale-wrap .carousel-motif-scale-input {
+  width: 2.6rem;
+  text-align: center;
+}
+
+.carousel-float .carousel-motif-scale-btn {
+  width: 1.55rem;
+  height: 1.55rem;
+  padding: 0;
+  border: 1px solid #d0d5dc;
+  border-radius: 6px;
+  background: #ffffff;
+  font: inherit;
+  font-size: 0.95rem;
+  line-height: 1;
+  color: #1a1e26;
+  cursor: pointer;
+}
+
+.carousel-float .carousel-motif-scale-btn:hover {
+  background: #f3f5f8;
+}
+
+.carousel-float .carousel-motif-scale-btn:focus {
+  outline: 2px solid #5c9fd6;
+  outline-offset: 1px;
 }
 
 .carousel-float .carousel-lineheight-input {
@@ -1147,7 +1184,21 @@ body {
 }
 
 .carousel-studio-state-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
   margin-bottom: 10px;
+}
+
+.carousel-studio-state-head-text {
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.carousel-studio-save {
+  flex-shrink: 0;
+  margin-top: 2px;
 }
 
 .carousel-studio-state-head h2 {

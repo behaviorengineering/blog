@@ -26,7 +26,7 @@ SOCIAL_ASK_FLAG := $(if $(filter 1 true yes,$(SOCIAL_AUTOPOST_ASK)),-ask,) $(if 
 
 .DEFAULT_GOAL := help
 
-.PHONY: help all deps tidy build tag-register calendar publish-calendar facebook-autopost linkedin-autopost social-autopost serve server test lint clean list verify check-links substack-html-sample substack-draft sb-html sb-en sb-en-pick sb-en-pick-publish sb-es sb-es-pick-publish sb-list-unpublished sb-mark-published sb-config-init sb-login sb-cc mermaid-render mermaid-render-en mermaid-render-es mermaid motif-editor
+.PHONY: help all deps tidy build tag-register calendar publish-calendar facebook-autopost linkedin-autopost social-autopost serve server test lint clean list verify check-links substack-html-sample substack-draft sb-html sb-en sb-en-pick sb-en-pick-publish sb-es sb-es-pick-publish sb-list-unpublished sb-mark-published sb-config-init sb-login sb-cc mermaid-render mermaid-render-en mermaid-render-es mermaid motif-editor carousel-pdf carousel-save
 
 all: build
 
@@ -40,8 +40,10 @@ help:
 	@echo "  make social-autopost    Run both facebook-autopost and linkedin-autopost"
 	@echo "  make build        Regenerate tag register, then production-like build -> public/ (hugo --minify --gc)"
 	@echo "                    Optional: BASE_URL=https://... HUGO_PREVIEW=1 make build (PR previews: future posts in lists)"
-	@echo "  make serve        Local dev: drafts + future-dated content (alias: server)"
+	@echo "  make serve        Local dev: drafts + future-dated content (alias: server). Also starts carousel-save for studio Save."
 	@echo "  make motif-editor Local motif mask editor (tools/motif-editor; http://localhost:3847)"
+	@echo "  make carousel-pdf  LinkedIn PDF from studio WebPs (DIR= folder; SLUG=; optional OUT= VARIANT=)"
+	@echo "  make carousel-save Local API so studio Save can write carousel.json (http://127.0.0.1:3848)"
 	@echo "  make server       Same as serve"
 	@echo "  make test         Smoke build (same as build)"
 	@echo "  make lint         go mod verify + build"
@@ -111,8 +113,24 @@ else
 endif
 	@$(MAKE) carousel-preview-html
 
+# LinkedIn document PDF from studio slide exports (`{slug}-slide-NN-a.webp`).
+# Example: make carousel-pdf DIR=$$HOME/Downloads SLUG=why-humans-keep-building-pyramids
+DIR ?=
+SLUG ?=
+OUT ?=
+VARIANT ?=
+carousel-pdf:
+	@test -n "$(DIR)" || (echo "DIR= is required (folder of studio WebP exports)"; exit 1)
+	go run ./cmd/carousel-pdf -dir "$(DIR)" $(if $(SLUG),-slug "$(SLUG)",) $(if $(VARIANT),-variant "$(VARIANT)",) $(if $(OUT),-o "$(OUT)",)
+
+carousel-save:
+	go run ./cmd/carousel-save -addr "127.0.0.1:3848" -root .
+
 serve server:
-	$(HUGO) server --buildDrafts --buildFuture
+	@go run ./cmd/carousel-save -addr "127.0.0.1:3848" -root . & save_pid=$$!; \
+	trap 'kill $$save_pid 2>/dev/null' EXIT INT TERM; \
+	$(HUGO) server --buildDrafts --buildFuture; \
+	kill $$save_pid 2>/dev/null || true
 
 test: build
 
@@ -147,7 +165,7 @@ substack-html-sample:
 # _SB_KNOWN_TARGETS so it is not mistaken for a post path. Paths must include '/' so plain words like "help" are not
 # picked up. Folder forms: section/slug, content/section/slug, optional trailing slash; index.md / index.es.md are
 # stripped later via _POST_NORM. Mark published also accepts: make sb-mark-published POST=section/slug.
-_SB_KNOWN_TARGETS := help all deps tidy build tag-register calendar publish-calendar facebook-autopost linkedin-autopost social-autopost serve server test lint clean list verify check-links substack-html-sample substack-draft sb-html sb-en sb-en-pick sb-en-pick-publish sb-es sb-es-pick-publish sb-list-unpublished sb-mark-published sb-config-init sb-login sb-cc mermaid-render mermaid-render-en mermaid-render-es mermaid
+_SB_KNOWN_TARGETS := help all deps tidy build tag-register calendar publish-calendar facebook-autopost linkedin-autopost social-autopost serve server test lint clean list verify check-links substack-html-sample substack-draft sb-html sb-en sb-en-pick sb-en-pick-publish sb-es sb-es-pick-publish sb-list-unpublished sb-mark-published sb-config-init sb-login sb-cc mermaid-render mermaid-render-en mermaid-render-es mermaid carousel-pdf carousel-save
 _SB_FIRST_GOAL := $(firstword $(MAKECMDGOALS))
 _SB_SECOND_GOAL := $(word 2,$(MAKECMDGOALS))
 ifneq ($(filter $(_SB_FIRST_GOAL),sb-en sb-es sb-en-pick sb-en-pick-publish sb-es-pick-publish substack-draft sb-mark-published),)

@@ -496,6 +496,10 @@ Petition (Change.org) →
   asks for long form.
 - **Do NOT:** write a teaser that withholds the point and ends with "read more
   on my site". The post must stand alone.
+- **Carousel document caption:** that short "Tap to explore" text lives in
+  **`linkedin-carousel.txt`**, not here. Use
+  **`.cursor/skills/carousel-linkedin-caption/SKILL.md`**. Do not replace
+  **`linkedin.txt`** with a teaser.
 
 ## Length
 

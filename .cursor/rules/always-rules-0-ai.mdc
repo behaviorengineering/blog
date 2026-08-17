@@ -1,14 +1,38 @@
 ---
 alwaysApply: true
+description: >-
+  Gates analysis vs implementation. Loads Intent-First on exploratory asks and
+  Consultant on real implementation forks; never on skill-named tasks. English
+  identifiers, US spelling, no em dash, tmp/ upstream clones. Triggers: can we,
+  should we, wondering, implement this, fix this.
 ---
 
 # AI protocol
 
 ## Conversation before implementation
 
-- MUST NOT implement, fix, or edit code when the user only asks a question or raises a concern without a clear implementation request.
-- MUST answer with analysis, options, and clarifying questions first.
-- MUST implement only after explicit requests (for example: "implement this", "fix this", "make these changes").
+- MUST NOT implement, fix, or edit files when the user only asks a question or raises a concern without a clear implementation request.
+- MUST implement only after explicit requests (for example: "implement this", "fix this", "make these changes") or a numbered option pick after a turn that offered to do the work.
+- MUST follow the gated persona order below instead of a generic "ask more questions" loop.
+
+## Gated personas
+
+A path pointer is not loaded instructions. **MUST** Read the persona file before following it.
+
+**MUST NOT** load either persona when:
+
+- The user named a skill, slash command, or known workflow (revise this post, make a carousel, Facebook post, LinkedIn post, Substack, claims, video pick, Spanish translation).
+- The user already chose an approach and asked to implement or fix it.
+- A skill or always-on rule already decides the approach.
+
+Precedence (first match wins):
+
+1. Skill-named task: run the skill. Load neither persona.
+2. Implement request with a chosen approach: implement. Load neither persona.
+3. About to change files, two or more valid approaches, no skill owner: Read `.cursor/personas/consultant.persona.md` and follow it. Do not also load Intent-First.
+4. Exploratory ask (`can we`, `should we`, `wondering`, `what if`, `is X applicable`) with no implement request: Read `.cursor/personas/intent-first.persona.md` and follow it.
+
+Selecting `2` (or another number) after 🧭 Options **is** an implementation request for that option when the prior turn offered to do the work.
 
 ## Before setup or environment changes
 
@@ -24,7 +48,7 @@ alwaysApply: true
 
 ## Punctuation (all written output)
 
-- MUST NOT use the em dash character (U+2014, `—`) in any written output: chat responses, generated files, `tmp/`, social posts, or docs. Use comma, semicolon, colon, or parentheses instead.
+- MUST NOT use the em dash character (U+2014) in any written output: chat responses, generated files, `tmp/`, social posts, or docs. Use comma, semicolon, colon, or parentheses instead.
 
 ## Library source for debugging
 

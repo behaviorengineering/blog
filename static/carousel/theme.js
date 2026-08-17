@@ -633,19 +633,83 @@ export function resolveColor(theme, token) {
 }
 
 /**
+ * Brightness offset **-100** to **+100** (`"+55"`, `55`, or `undefined`).
+ * @param {unknown} raw
+ * @returns {number|undefined}
+ */
+export function coerceBrightness(raw) {
+  if (raw == null || raw === '') return undefined;
+  if (typeof raw === 'number') {
+    if (!Number.isFinite(raw)) return undefined;
+    return Math.max(-100, Math.min(100, raw));
+  }
+  const value = Number.parseInt(String(raw), 10);
+  if (!Number.isFinite(value)) return undefined;
+  return Math.max(-100, Math.min(100, value));
+}
+
+const COLOR_TAG_RE =
+  /^<(?:color\s+)?(accent1|accent2|text|muted)(?:\s+brightness=["']([+-]?\d{1,3})["'])?\s*>/i;
+
+/**
+ * Palette token, `#hex`, `{ color, brightness }`, or the same tag as slide text
+ * (`<accent2 brightness='+55'>`).
+ * @param {unknown} spec
+ * @returns {{ color?: string, brightness?: number }|null}
+ */
+export function parseThemedColorSpec(spec) {
+  if (spec == null || spec === '') return null;
+  if (typeof spec === 'object' && !Array.isArray(spec)) {
+    const record = /** @type {{ color?: unknown, brightness?: unknown }} */ (spec);
+    return {
+      color: typeof record.color === 'string' ? record.color : undefined,
+      brightness: coerceBrightness(record.brightness),
+    };
+  }
+  if (typeof spec !== 'string') return null;
+  const trimmed = spec.trim();
+  const tag = COLOR_TAG_RE.exec(trimmed);
+  if (tag) {
+    return {
+      color: tag[1].toLowerCase(),
+      brightness: coerceBrightness(tag[2]),
+    };
+  }
+  return { color: trimmed };
+}
+
+/**
  * Palette token (or `#hex`) for an inline run, with optional brightness offset.
  * @param {DeckTheme} theme
- * @param {{ color?: string, brightness?: number }} run
+ * @param {{ color?: string, brightness?: number|string }} run
  * @param {ColorToken|string} [blockColor]
  */
 export function resolveInlineRunColor(theme, run, blockColor = 'text') {
   const base = resolveColor(theme, run.color ?? blockColor);
-  const brightness = run.brightness;
+  const brightness = coerceBrightness(run.brightness);
   if (brightness === undefined || brightness === 0) {
     return base;
   }
-  const amount = Math.max(-100, Math.min(100, brightness)) / 100;
+  const amount = brightness / 100;
   return shiftHex(base, amount);
+}
+
+/**
+ * Palette token, `#hex`, `{ color, brightness }`, or `<accent2 brightness='+55'>`.
+ * @param {DeckTheme} theme
+ * @param {string|{color?: string, brightness?: number|string}|null|undefined} spec
+ * @param {ColorToken|string} [fallbackToken]
+ */
+export function resolveThemedColor(theme, spec, fallbackToken = 'text') {
+  const parsed = parseThemedColorSpec(spec);
+  if (!parsed) {
+    return resolveColor(theme, fallbackToken);
+  }
+  return resolveInlineRunColor(
+    theme,
+    { color: parsed.color ?? fallbackToken, brightness: parsed.brightness },
+    fallbackToken,
+  );
 }
 
 /** Scale a distance measured on the 1080 design canvas to the render/export canvas. */

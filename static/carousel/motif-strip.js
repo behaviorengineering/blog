@@ -1,6 +1,5 @@
 import { loadImage, resolveAssetUrl } from './assets.js';
-import { buildBackgroundPanoramaContext } from './background-panorama.js';
-import { CAROUSEL_SLIDE_WIDTH_PX } from './slide-constants.js';
+import { CAROUSEL_SLIDE_WIDTH_PX, isCarouselCtaRole } from './slide-constants.js';
 import { resolveColor, resolveWidth, scaleCanvasPx } from './theme.js';
 
 /**
@@ -19,8 +18,8 @@ import { resolveColor, resolveWidth, scaleCanvasPx } from './theme.js';
  * @property {number} [offsetX] Horizontal nudge in design px at 1080 (positive = right), applied once on the seamless band.
  * @property {number} [offsetY] Vertical nudge in design px at 1080 (positive = down).
  * @property {string|number} [inset] Deprecated alias for `marginBottom` (or `marginTop` when anchored top).
- * @property {string|number} [bandWidth] Drawn band width on slide (`100%` or px at 1080); height follows slice aspect ratio.
- * @property {string|number} [bandHeight] Optional override; when omitted, height is proportional to `bandWidth`.
+ * @property {string|number} [bandWidth] Uniform size of the panoramic motif (`100%` default). Percent scales width and height together from the bottom-left; the strip stays continuous across slides.
+ * @property {string|number} [bandHeight] Optional height override; when omitted, height follows `bandWidth` (locked aspect).
  * @property {string} [color] Palette token or `#hex` for SVG tint (default `accent1`).
  * @property {string} [keyColor] Raster only: knock out this color (e.g. `#000000` export backdrop).
  * @property {number} [keyTolerance] Per-channel tolerance for `keyColor` (default 32).
@@ -33,9 +32,9 @@ import { resolveColor, resolveWidth, scaleCanvasPx } from './theme.js';
  * @property {HTMLCanvasElement} band
  * @property {number} pad Horizontal padding baked into the band for negative offsetX
  * @property {number} destHeight
- * @property {number} destWidth
+ * @property {number} destWidth Output width of one slide crop (full canvas width)
  * @property {number} destY
- * @property {number} slideCanvasWidth Output slide width (for centering on canvas)
+ * @property {number} slideCanvasWidth Output slide width
  * @property {number} bandSlideWidth Width of one slide slice inside the seamless band
  */
 
@@ -78,7 +77,20 @@ export function parseMotifStripConfig(raw) {
   };
 }
 
-export const buildMotifStripContext = buildBackgroundPanoramaContext;
+/**
+ * Motif panorama context: CTA slides are omitted so adding a QR frame does not stretch the strip.
+ * @param {{ slides?: { number: number, role?: string }[], deck?: Record<string, unknown> }|null|undefined} deck
+ * @param {number} slideNumber
+ * @returns {import('./background-panorama.js').BackgroundPanoramaContext|null}
+ */
+export function buildMotifStripContext(deck, slideNumber) {
+  if (!deck?.slides?.length) return null;
+  const config = parseMotifStripConfig(deck.deck?.motifStrip);
+  const eligible = deck.slides.filter((slide) => motifStripEnabledForSlide(config, slide.role));
+  const index = eligible.findIndex((slide) => slide.number === slideNumber);
+  if (index < 0) return null;
+  return { slideIndex: index, slideCount: Math.max(1, eligible.length) };
+}
 
 /**
  * @param {string} svg
@@ -221,7 +233,29 @@ function motifBandCacheKey(image, config, slideCount, canvasWidth, canvasHeight)
 }
 
 /**
- * Build one continuous motif band for the full deck; offsetX shifts the band once so slide seams stay aligned.
+ * Size percent from `bandWidth` (`80%` → 0.8). Applied to width and height together.
+ * @param {string|number|null|undefined} bandWidth
+ */
+function motifBandScale(bandWidth) {
+  if (bandWidth == null || bandWidth === '') return 1;
+  if (typeof bandWidth === 'string') {
+    const trimmed = bandWidth.trim();
+    const pct = /^(\d+(?:\.\d+)?)\s*%$/.exec(trimmed);
+    if (pct) {
+      return Math.max(0.2, Math.min(2, Number(pct[1]) / 100));
+    }
+  }
+  const asNum = Number(bandWidth);
+  if (Number.isFinite(asNum) && asNum > 0 && asNum <= 200) {
+    return Math.max(0.2, Math.min(2, asNum / 100));
+  }
+  const px = resolveWidth(bandWidth, CAROUSEL_SLIDE_WIDTH_PX, 1);
+  return Math.max(0.2, Math.min(2, px / CAROUSEL_SLIDE_WIDTH_PX));
+}
+
+/**
+ * Build one continuous motif band for the full deck. Size scales from the bottom-left
+ * (left edge + bottom anchor); offsetX pans the band so slide seams stay aligned.
  *
  * @param {HTMLImageElement|ImageBitmap|HTMLCanvasElement} image
  * @param {MotifStripConfig} config
@@ -247,14 +281,12 @@ function buildMotifSeamlessBand(image, config, slideCount, canvasWidth, canvasHe
   const sw = sliceWidth * scaleX;
   const scaleY = stripHeight > 0 ? naturalH / stripHeight : 1;
   const sh = stripHeight * scaleY;
+  const scale = motifBandScale(config.bandWidth);
 
-  const destWidth = Math.max(
-    1,
-    Math.round(resolveWidth(config.bandWidth ?? '100%', canvasWidth, 1)),
-  );
+  const destWidth = canvasWidth;
   const destHeight = config.bandHeight != null && config.bandHeight !== ''
     ? Math.max(8, Math.round(resolveWidth(config.bandHeight, canvasHeight, 0.22)))
-    : Math.max(1, Math.round(destWidth * (sh / Math.max(1, sw))));
+    : Math.max(1, Math.round(destWidth * (sh / Math.max(1, sw)) * scale));
 
   const anchor = config.anchor === 'top' ? 'top' : 'bottom';
   const marginSpec = anchor === 'bottom'
@@ -267,12 +299,15 @@ function buildMotifSeamlessBand(image, config, slideCount, canvasWidth, canvasHe
   const destY = baseY + scaleCanvasPx(config.offsetY ?? 0, canvasWidth);
 
   const bandSlideWidth = destWidth;
-  const seamlessDrawWidth = slices * bandSlideWidth;
+  const deckWidth = slices * bandSlideWidth;
+  const contentWidth = Math.max(1, Math.round(deckWidth * scale));
   const nudgeX = scaleCanvasPx(config.offsetX ?? 0, canvasWidth);
-  const pad = Math.max(0, Math.abs(nudgeX));
+  const contentX = nudgeX;
+  const pad = Math.max(0, Math.ceil(-contentX));
+  const padRight = Math.max(0, Math.ceil(contentX + contentWidth - deckWidth));
 
   const band = document.createElement('canvas');
-  band.width = seamlessDrawWidth + pad * 2;
+  band.width = pad + deckWidth + padRight;
   band.height = destHeight;
   const bctx = band.getContext('2d');
   if (!bctx) throw new Error('Canvas 2D context unavailable');
@@ -285,9 +320,9 @@ function buildMotifSeamlessBand(image, config, slideCount, canvasWidth, canvasHe
     0,
     naturalW,
     naturalH,
-    pad + nudgeX,
+    pad + contentX,
     0,
-    seamlessDrawWidth,
+    contentWidth,
     destHeight,
   );
 
@@ -314,16 +349,15 @@ function buildMotifSeamlessBand(image, config, slideCount, canvasWidth, canvasHe
  * @param {number} slideIndex
  */
 function bandSliceRect(seamless, slideIndex) {
-  const destX = Math.round((seamless.slideCanvasWidth - seamless.destWidth) / 2);
   const bandStride = seamless.bandSlideWidth ?? seamless.destWidth;
   return {
     sx: seamless.pad + slideIndex * bandStride,
     sy: 0,
-    sw: seamless.destWidth,
+    sw: bandStride,
     sh: seamless.destHeight,
-    dx: destX,
+    dx: 0,
     dy: seamless.destY,
-    dw: seamless.destWidth,
+    dw: bandStride,
     dh: seamless.destHeight,
   };
 }
@@ -355,17 +389,17 @@ export function paintPanoramicMotifStrip(
   const slotSlideIndices = layout.slotSlideIndices;
   const slideRoles = layout.slideRoles ?? [];
   const slotCount = slotSlideIndices?.length ?? deckSlideCount;
-  const seamless = buildMotifSeamlessBand(image, config, deckSlideCount, slideWidth, height);
+  const seamless = buildMotifSeamlessBand(image, config, Math.max(1, deckSlideCount), slideWidth, height);
 
   ctx.save();
   ctx.globalAlpha = Math.max(0, Math.min(1, config.opacity ?? 1));
-  ctx.imageSmoothingEnabled = true;
+  ctx.imageSmoothingEnabled = false;
   ctx.imageSmoothingQuality = 'high';
 
   for (let slot = 0; slot < slotCount; slot += 1) {
     const slideIndex = slotSlideIndices?.[slot] ?? slot;
     const role = slideRoles[slot] ?? '';
-    if (!motifStripEnabledForSlide(config, role)) continue;
+    if (slideIndex < 0 || !motifStripEnabledForSlide(config, role)) continue;
 
     const slotX = startX + slot * (slideWidth + gap);
     const slice = bandSliceRect(seamless, slideIndex);
@@ -380,6 +414,26 @@ export function paintPanoramicMotifStrip(
       slice.dw,
       slice.dh,
     );
+    const nextRole = slideRoles[slot + 1] ?? '';
+    const nextIndex = slotSlideIndices?.[slot + 1] ?? slot + 1;
+    if (
+      gap > 0
+      && slot + 1 < slotCount
+      && nextIndex >= 0
+      && motifStripEnabledForSlide(config, nextRole)
+    ) {
+      ctx.drawImage(
+        seamless.band,
+        slice.sx + slice.sw - 1,
+        slice.sy,
+        1,
+        slice.sh,
+        slotX + slice.dx + slice.dw,
+        slice.dy,
+        gap,
+        slice.dh,
+      );
+    }
   }
 
   ctx.restore();
@@ -410,7 +464,7 @@ export function paintMotifStripSlice(
 
   ctx.save();
   ctx.globalAlpha = Math.max(0, Math.min(1, config.opacity ?? 1));
-  ctx.imageSmoothingEnabled = true;
+  ctx.imageSmoothingEnabled = false;
   ctx.imageSmoothingQuality = 'high';
   ctx.drawImage(
     seamless.band,
@@ -433,6 +487,7 @@ export function paintMotifStripSlice(
 export function motifStripEnabledForSlide(config, role) {
   if (!config?.src) return false;
   const normalized = (role || '').trim().toLowerCase();
+  if (isCarouselCtaRole(normalized)) return false;
   if (!normalized) return true;
   return !(config.excludeRoles ?? []).includes(normalized);
 }

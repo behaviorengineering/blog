@@ -12,6 +12,7 @@ require (
 	github.com/chromedp/chromedp v0.14.2
 	github.com/mattn/go-isatty v0.0.20
 	github.com/yuin/goldmark v1.7.13
+	golang.org/x/image v0.45.0
 	golang.org/x/net v0.47.0
 	gopkg.in/yaml.v3 v3.0.1
 )
@@ -57,7 +58,7 @@ require (
 	github.com/xo/terminfo v0.0.0-20220910002029-abceb7e1c41e // indirect
 	github.com/yhat/scrape v0.0.0-20161128144610-24b7890b0945 // indirect
 	go.uber.org/ratelimit v0.3.1 // indirect
-	golang.org/x/sync v0.18.0 // indirect
-	golang.org/x/sys v0.42.0 // indirect
-	golang.org/x/text v0.31.0 // indirect
+	golang.org/x/sync v0.22.0 // indirect
+	golang.org/x/sys v0.47.0 // indirect
+	golang.org/x/text v0.41.0 // indirect
 )

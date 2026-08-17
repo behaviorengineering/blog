@@ -3,10 +3,12 @@ import { wavePaletteFromTheme, resolveColor } from './theme.js';
 import {
   buildMotifStripContext,
   loadMotifStripImage,
+  motifStripEnabledForSlide,
   paintPanoramicMotifStrip,
   parseMotifStripConfig,
 } from './motif-strip.js';
-import { downloadCanvasWebp, exportFilename, exportStripFilename } from './export.js';
+import { downloadBlob, downloadCanvasWebp, exportFilename, exportPdfFilename, exportStripFilename } from './export.js';
+import { assembleLinkedInPdfFromCanvases } from './linkedin-pdf.js';
 import { renderSlideToCanvas } from './renderer.js';
 
 /** Playwright / vision LLM target for strip screenshots. */
@@ -14,8 +16,10 @@ export const VISION_STRIP_CANVAS_ID = 'carousel-vision-strip';
 export const VISION_STRIP_PANEL_ID = 'carousel-vision-strip-panel';
 
 import {
+  CAROUSEL_SLIDE_WIDTH_PX,
   PANORAMA_GAP_PX,
   PANORAMA_SLIDE_WIDTH_PX,
+  isCarouselCtaRole,
   stripSlideGapPx,
 } from './slide-constants.js';
 
@@ -75,14 +79,14 @@ export async function buildVisionStripCanvas(
       slideRole: role,
       supersample: 2,
       outputSize: slideWidth,
-      backgroundPanoramaContext: role === 'post_cta'
+      backgroundPanoramaContext: isCarouselCtaRole(role)
         ? undefined
         : buildBackgroundPanoramaContext(deck, slide.number) ?? undefined,
-      motifStripContext: role === 'post_cta'
+      motifStripContext: isCarouselCtaRole(role)
         ? undefined
         : buildMotifStripContext(deck, slide.number) ?? undefined,
-      skipBackground: role !== 'post_cta',
-      skipMotifStrip: role !== 'post_cta',
+      skipBackground: !isCarouselCtaRole(role),
+      skipMotifStrip: true,
       grain: false,
       studioPreview: true,
     });
@@ -146,15 +150,22 @@ export async function buildVisionStripCanvas(
         const slide = slides.find((entry) => entry.number === slideNumber);
         return (slide?.role || '').trim().toLowerCase();
       });
+      const motifEligible = slides.filter((slide) =>
+        motifStripEnabledForSlide(motifConfig, slide.role),
+      );
+      const motifCount = Math.max(1, motifEligible.length);
+      const slotMotifIndices = slideNumbers.map((slideNumber) =>
+        motifEligible.findIndex((slide) => slide.number === slideNumber),
+      );
       paintPanoramicMotifStrip(
         ctx,
         frameWidth,
         frameHeight,
-        deckSlideCount,
+        motifCount,
         motifConfig,
         motifImage,
         mergedTheme,
-        { gap, slotSlideIndices, slideRoles },
+        { gap, slotSlideIndices: slotMotifIndices, slideRoles },
       );
     } catch (error) {
       console.warn('[carousel] Panoramic motif strip failed:', error);
@@ -374,6 +385,85 @@ export async function exportConnectorVisionStrip(
 const SEPARATED_DOWNLOAD_GAP_MS = 200;
 
 /**
+ * @typedef {Object} RenderedSlide
+ * @property {HTMLCanvasElement} canvas
+ * @property {number} slideNumber
+ * @property {number} variantIndex
+ */
+
+/**
+ * @param {{ includedSlideNumbers?: Set<number>|number[] }} options
+ * @returns {Set<number>|null}
+ */
+function includedSlideSet(options) {
+  if (options.includedSlideNumbers instanceof Set) return options.includedSlideNumbers;
+  if (Array.isArray(options.includedSlideNumbers)) return new Set(options.includedSlideNumbers);
+  return null;
+}
+
+/**
+ * Render In-strip slides at export size (1080, supersample 2). Does not download.
+ * @param {VisionStripDeck} deck
+ * @param {import('./theme.js').DeckTheme} theme
+ * @param {(live: import('./theme.js').DeckTheme) => Partial<import('./theme.js').DeckTheme> & Record<string, unknown>} renderOverrides
+ * @param {import('./renderer.js').RenderOptions} renderContext
+ * @param {{ includedSlideNumbers?: Set<number>|number[], variantIndexFor?: (slideNumber: number) => number, outputSize?: number, supersample?: number }} [options]
+ * @returns {Promise<RenderedSlide[]>}
+ */
+export async function renderSeparatedSlideCanvases(
+  deck,
+  theme,
+  renderOverrides,
+  renderContext,
+  options = {},
+) {
+  const includedSet = includedSlideSet(options);
+  const slides = Array.isArray(deck.slides) ? deck.slides : [];
+  if (slides.length === 0) throw new Error('Deck has no slides');
+
+  const mergedTheme = renderOverrides(theme);
+  const outputSize = Number.isFinite(options.outputSize) && options.outputSize > 0
+    ? Math.round(options.outputSize)
+    : undefined;
+  const supersample = Number.isFinite(options.supersample) && options.supersample >= 1
+    ? options.supersample
+    : 2;
+  /** @type {RenderedSlide[]} */
+  const rendered = [];
+
+  for (const slide of slides) {
+    if (includedSet && !includedSet.has(slide.number)) continue;
+    const variantIndex = typeof options.variantIndexFor === 'function'
+      ? options.variantIndexFor(slide.number)
+      : 0;
+    const variant = slide.variants?.[variantIndex] ?? slide.variants?.[0];
+    if (!variant) continue;
+
+    const role = (slide.role || '').trim().toLowerCase();
+    const canvas = await renderSlideToCanvas(variant, mergedTheme, {
+      ...renderContext,
+      slideRole: role,
+      supersample,
+      ...(outputSize ? { outputSize } : {}),
+      backgroundPanoramaContext: isCarouselCtaRole(role)
+        ? undefined
+        : buildBackgroundPanoramaContext(deck, slide.number) ?? undefined,
+      motifStripContext: isCarouselCtaRole(role)
+        ? undefined
+        : buildMotifStripContext(deck, slide.number) ?? undefined,
+      grain: false,
+    });
+    rendered.push({ canvas, slideNumber: slide.number, variantIndex });
+  }
+
+  if (rendered.length === 0) {
+    throw new Error('No slides selected for export. Enable In strip on at least one slide.');
+  }
+
+  return rendered;
+}
+
+/**
  * @param {VisionStripDeck} deck
  * @param {import('./theme.js').DeckTheme} theme
  * @param {(live: import('./theme.js').DeckTheme) => Partial<import('./theme.js').DeckTheme> & Record<string, unknown>} renderOverrides
@@ -388,55 +478,62 @@ export async function exportSeparatedSlides(
   renderContext,
   options = {},
 ) {
-  const includedSet = options.includedSlideNumbers instanceof Set
-    ? options.includedSlideNumbers
-    : Array.isArray(options.includedSlideNumbers)
-      ? new Set(options.includedSlideNumbers)
-      : null;
-  const slides = Array.isArray(deck.slides) ? deck.slides : [];
-  if (slides.length === 0) throw new Error('Deck has no slides');
-
+  const rendered = await renderSeparatedSlideCanvases(
+    deck,
+    theme,
+    renderOverrides,
+    renderContext,
+    options,
+  );
   const slug = deck.slug || 'carousel';
-  const mergedTheme = renderOverrides(theme);
   const downloadGapMs = Number.isFinite(options.downloadGapMs)
     ? Math.max(0, options.downloadGapMs)
     : SEPARATED_DOWNLOAD_GAP_MS;
-  let count = 0;
 
-  for (const slide of slides) {
-    if (includedSet && !includedSet.has(slide.number)) continue;
-    const variantIndex = typeof options.variantIndexFor === 'function'
-      ? options.variantIndexFor(slide.number)
-      : 0;
-    const variant = slide.variants?.[variantIndex] ?? slide.variants?.[0];
-    if (!variant) continue;
-
-    const role = (slide.role || '').trim().toLowerCase();
-    const canvas = await renderSlideToCanvas(variant, mergedTheme, {
-      ...renderContext,
-      slideRole: role,
-      supersample: 2,
-      backgroundPanoramaContext: role === 'post_cta'
-        ? undefined
-        : buildBackgroundPanoramaContext(deck, slide.number) ?? undefined,
-      motifStripContext: role === 'post_cta'
-        ? undefined
-        : buildMotifStripContext(deck, slide.number) ?? undefined,
-      skipBackground: role !== 'post_cta',
-      grain: false,
-    });
-    await downloadCanvasWebp(canvas, exportFilename(slug, slide.number, variantIndex));
-    count += 1;
-    if (downloadGapMs > 0) {
+  for (let i = 0; i < rendered.length; i += 1) {
+    const { canvas, slideNumber, variantIndex } = rendered[i];
+    await downloadCanvasWebp(canvas, exportFilename(slug, slideNumber, variantIndex));
+    if (downloadGapMs > 0 && i < rendered.length - 1) {
       await new Promise((resolve) => window.setTimeout(resolve, downloadGapMs));
     }
   }
 
-  if (count === 0) {
-    throw new Error('No slides selected for export. Enable In strip on at least one slide.');
-  }
+  return rendered.length;
+}
 
-  return count;
+/**
+ * Render In-strip slides and download one full-bleed LinkedIn PDF.
+ * @param {VisionStripDeck} deck
+ * @param {import('./theme.js').DeckTheme} theme
+ * @param {(live: import('./theme.js').DeckTheme) => Partial<import('./theme.js').DeckTheme> & Record<string, unknown>} renderOverrides
+ * @param {import('./renderer.js').RenderOptions} renderContext
+ * @param {{ includedSlideNumbers?: Set<number>|number[], variantIndexFor?: (slideNumber: number) => number, filename?: string }} [options]
+ * @returns {Promise<number>} Number of PDF pages
+ */
+export async function exportLinkedInPdf(
+  deck,
+  theme,
+  renderOverrides,
+  renderContext,
+  options = {},
+) {
+  const rendered = await renderSeparatedSlideCanvases(
+    deck,
+    theme,
+    renderOverrides,
+    renderContext,
+    {
+      ...options,
+      outputSize: CAROUSEL_SLIDE_WIDTH_PX,
+      supersample: 1,
+    },
+  );
+  const slug = deck.slug || 'carousel';
+  const bytes = await assembleLinkedInPdfFromCanvases(rendered.map((entry) => entry.canvas));
+  const copy = new Uint8Array(bytes.byteLength);
+  copy.set(bytes);
+  downloadBlob(new Blob([copy], { type: 'application/pdf' }), options.filename ?? exportPdfFilename(slug));
+  return rendered.length;
 }
 
 /**
@@ -537,6 +634,25 @@ export function installVisionStripController(
         variantIndexFor: studioOptions.variantIndexFor,
       };
       return exportSeparatedSlides(
+        deck,
+        theme,
+        renderOverrides,
+        renderContext,
+        mergedOptions,
+      );
+    },
+    /**
+     * @param {{ filename?: string }} [options]
+     * @returns {Promise<number>}
+     */
+    async downloadPdf(options = {}) {
+      const studioOptions = getStudioOptions();
+      const mergedOptions = {
+        ...options,
+        includedSlideNumbers: studioOptions.includedSlideNumbers,
+        variantIndexFor: studioOptions.variantIndexFor,
+      };
+      return exportLinkedInPdf(
         deck,
         theme,
         renderOverrides,

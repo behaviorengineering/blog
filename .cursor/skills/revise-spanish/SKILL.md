@@ -127,18 +127,14 @@ When the user pastes line fixes (or has already locked wording in `index.es.md`)
 
 **Progressive rewrite bans:** no body bleed into `title`/`subtitle`; no duplicated sections; no meta labels (*UNIDAD ACTUAL*); no softening for “professional” tone.
 
-## Offline / agent-only fallback
+## Gateway down (no fallback)
 
-If the gateway is down, run the manual audit in the old steps (read-aloud, calque, grammar, cross-file) using **reference.md** and **spanish-translation-content**, same required output shape. Still no silent full rewrites.
+MUST report that Gemma did not run, name the error, and stop. There is **no** agent-only substitute audit.
 
-Manual fall back outline:
-
-1. Snapshot originals; note `type`.
-2. Read-aloud gate: stumbles, EN-only sense, abstract noun stacks.
-3. Calque pass: **spanish-translation-content** hard constraints + conceptual anglicisms + hybrid cadence.
-4. Objective grammar/collocations.
-5. Cross-file sync (thesis, refrains, *Mismo sistema* vs *Misma máquina*, Facebook *tú*).
-6. No em dash; tags/categories match EN.
+- MUST NOT run a manual read-aloud, calque, grammar, or cross-file pass in place of the model report.
+- MUST NOT edit `index.es.md` or ES sidecars on your own judgment after a gateway failure.
+- MAY retry the same command once when the failure looks transient, then report either way.
+- The user decides next: retry later, ship unaudited, or hand-review.
 
 ## Required output (after apply decision)
 
