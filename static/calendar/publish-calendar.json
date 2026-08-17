@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-15T16:10:06Z",
+  "generatedAt": "2026-08-17T17:43:04Z",
   "channels": [
     "site-en",
     "site-es",
@@ -4682,6 +4682,35 @@
       }
     },
     {
+      "bundle": "cognitive-memetics/sayings/2026-09-14-saying-36",
+      "section": "cognitive-memetics",
+      "title": "La mentira tiene patas cortas.",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-09-14",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
       "bundle": "cognitive-memetics/cows/2026-09-16-cow-w30",
       "section": "cognitive-memetics",
       "title": "Mutual performance improvement",
@@ -4704,6 +4733,35 @@
         },
         "site-es": {
           "status": "missing"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/sayings/2026-09-21-saying-37",
+      "section": "cognitive-memetics",
+      "title": "Tapa el sol con un dedo.",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-09-21",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
         },
         "substack-en": {
           "status": "missing"

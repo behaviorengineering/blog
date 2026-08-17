@@ -51,7 +51,7 @@ Default model: `LOCAL_LLM_MODEL` or `@cf/google/gemma-4-26b-a4b-it` at `LOCAL_LL
 
 **Skip Gemma 4:** user pasted a one-line author patch (workflow step 8).
 
-**Gateway down:** MUST say so, then run the internal **Forced Self-Correction Loop** (Hard constraints + **Native opinion-editor audit**) and still ship only after that audit. MUST NOT skip the native check.
+**Gateway down (no fallback):** MUST report that Gemma 4 did not run and MUST stop the Spanish review there. Ship the draft as written. MUST NOT substitute an agent-run audit, "Forced Self-Correction Loop", or **Native opinion-editor audit** for the gate. MUST NOT apply idiom, calque, or fluency edits the author did not request. The user decides whether to retry the gateway or accept the draft unaudited.
 
 ### Index is source; sidecars are reflections
 
@@ -106,7 +106,7 @@ When the user (or `index.es.md` after their edits) chooses a phrase that “soun
 | **Paragraph flow** | Transitions must follow **Spanish logic** (cause → consequence in prose order readers expect). | Translate connective words only (*Now stretch that pattern…* → literal *Ahora estira ese patrón…*). |
 | **`###` hooks (claims / long posts)** | MAY use **colloquial Spanish** hooks that differ from English `###` titles; each hook **MUST** fit the paragraph below. | Empty labels, hooks that repeat the Claim verbatim, or hooks that describe a different beat than the section body. |
 
-**Before shipping `index.es.md`:** The **Gemma 4 native-Spanish gate** MUST have run (or a documented gateway-down fallback). Read the draft aloud. Run **Clause rebuild** and the **reverse-translation test** on every user-facing sentence: if you can put the Spanish back into English almost word-for-word and recover the EN sentence shape, **fail and rewrite syntax** (not only vocabulary). A Gemma **Ready** does not skip this. If it still sounds like dubbed English, apply Gemma 4 findings again and run the **five-directive audit**.
+**Before shipping `index.es.md`:** The **Gemma 4 native-Spanish gate** MUST have run, or its failure MUST be reported per **Gateway down (no fallback)** above. Read the draft aloud. Run **Clause rebuild** and the **reverse-translation test** on every user-facing sentence: if you can put the Spanish back into English almost word-for-word and recover the EN sentence shape, **fail and rewrite syntax** (not only vocabulary). A Gemma **Ready** does not skip this. If it still sounds like dubbed English, apply Gemma 4 findings again and run the **five-directive audit**.
 
 #### English skeleton under Spanish words (MUST check)
 
@@ -211,7 +211,7 @@ English manifesto copy often uses **telegram beats** (bare stats, `Label: value`
 
 ### Native opinion-editor audit (five directives)
 
-After the first draft (and again after the **Gemma 4 native-Spanish gate**, or the gateway-down fallback), act as a **native Spanish opinion editor**: punchy, direct, manifesto-grade prose. Goal: remove **syntactic anglicisms** and **calques** without softening the source.
+After the first draft, and again after the **Gemma 4 native-Spanish gate** returns a report, act as a **native Spanish opinion editor**: punchy, direct, manifesto-grade prose. Goal: remove **syntactic anglicisms** and **calques** without softening the source.
 
 | # | Directive | MUST do | MUST NOT |
 |---|-----------|---------|----------|
@@ -298,7 +298,7 @@ Short sentences are **not** automatically wrong in Spanish. Opinion and manifest
 
 ### Organizational, hierarchy, and workplace English (MUST check)
 
-Editorial passes on **human-condition**, **claims**, and org-design posts surfaced **English skeletons** that pass grammar checks but fail the **read-aloud** test. Run this table during the **Gemma 4 native-Spanish gate** (or the gateway-down fallback) whenever the source discusses startups, meetings, rank, flat teams, or bureaucracy.
+Editorial passes on **human-condition**, **claims**, and org-design posts surfaced **English skeletons** that pass grammar checks but fail the **read-aloud** test. Run this table while drafting and when the **Gemma 4 native-Spanish gate** returns a report, whenever the source discusses startups, meetings, rank, flat teams, or bureaucracy.
 
 | English pattern | Avoid (calque) | Prefer (idiomatic ES) | Notes |
 |-----------------|----------------|-------------------------|-------|
