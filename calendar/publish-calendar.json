@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-17T17:43:04Z",
+  "generatedAt": "2026-08-18T04:49:43Z",
   "channels": [
     "site-en",
     "site-es",
@@ -4452,7 +4452,7 @@
     {
       "bundle": "human-condition/2026-08-21-why-identity-keeps-rewriting",
       "section": "human-condition",
-      "title": "🪞 Why does your identity keep rewriting itself?",
+      "title": "🪞 Why does the brain keep selling you a new \"me\"?",
       "type": "video",
       "categories": [
         "Human-Condition",
@@ -4462,19 +4462,19 @@
       "draft": false,
       "channels": {
         "facebook": {
-          "status": "missing"
+          "status": "present"
         },
         "linkedin": {
-          "status": "missing"
+          "status": "present"
         },
         "site-en": {
           "status": "present"
         },
         "site-es": {
-          "status": "missing"
+          "status": "present"
         },
         "substack-en": {
-          "status": "missing"
+          "status": "present"
         }
       }
     },
@@ -4566,6 +4566,34 @@
       }
     },
     {
+      "bundle": "social-protocols/2026-08-28-conquest-starts-with-partnership",
+      "section": "social-protocols",
+      "title": "🤝 Why does conquest start with a partnership?",
+      "type": "video",
+      "categories": [
+        "Social-Protocols"
+      ],
+      "planned": "2026-08-28",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "present"
+        }
+      }
+    },
+    {
       "bundle": "cognitive-memetics/sayings/2026-08-31-saying-34",
       "section": "cognitive-memetics",
       "title": "Caimán no come caimán.",
@@ -4620,6 +4648,34 @@
         },
         "substack-en": {
           "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "mind-infrastructure/2026-09-04-why-healthy-brains-forget",
+      "section": "mind-infrastructure",
+      "title": "🧠 Why does a healthy brain forget your keys?",
+      "type": "video",
+      "categories": [
+        "Mind-Infrastructure"
+      ],
+      "planned": "2026-09-04",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "present"
         }
       }
     },
