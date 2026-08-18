@@ -5,13 +5,13 @@
 ## Active tags
 # Columns: tag<TAB>file_count (each file counts at most once per distinct tag)
 Leadership	81
-RealityCheck	74
+RealityCheck	76
+ArepaContigo	73
+CulturalStopwatch	73
+StreetWisdom	73
+TakeBackYourMcDonaldsCulture	73
+VenezuelanSayings	73
 CubeCows	72
-ArepaContigo	69
-CulturalStopwatch	69
-StreetWisdom	69
-TakeBackYourMcDonaldsCulture	69
-VenezuelanSayings	69
 PsychFitness	58
 EN9806	56
 MentalFitness	56
@@ -20,27 +20,28 @@ Petition	52
 Reptilocracy	40
 NarrativeControl	34
 KnowledgeWork	29
-Stress	19
+Stress	21
 Accountability	17
 AGIHype	16
+SeeTheGame	16
 TShirtArt	16
-SeeTheGame	14
+Agency	14
+CheapNarratives	14
+Denial	14
 SystemsCanHijackYou	14
 TribeBeforeTruth	14
-Agency	13
-CheapNarratives	12
-Denial	12
+StillYourChoice	12
 CultureRunsOnLanguage	10
 FearChain	10
 FutureOfWork	10
 SharedIllusionsRunTheWorld	10
-StillYourChoice	9
 AccountabilityGap	8
 Automation	8
+IdeasBecomeIdentity	8
 PerformanceReview	8
-IdeasBecomeIdentity	7
-PredictiveProcessing	7
+PredictiveProcessing	8
 BodyAsThinkingTool	6
+CognitiveCapacity	6
 CorporateJargon	6
 Democracy	6
 EpistemicFog	6
@@ -60,7 +61,7 @@ WorldModels	6
 AlgorithmicDecay	4
 BlameDeflection	4
 CalendarManagement	4
-CognitiveCapacity	4
+ControlledHallucination	4
 DeniabilityHood	4
 DoYouHaveATribe	4
 EmbodiedCognition	4
@@ -73,8 +74,10 @@ HiddenCosts	4
 IndustrialMindset	4
 MisalignedIncentives	4
 PatternsNotWorldModels	4
+PowerAndControl	4
 PromiseManagement	4
 PublicMandate	4
+RiskExport	4
 RitualAndRules	4
 SameButDifferentWorlds	4
 SocialBrainSelection	4
@@ -86,7 +89,6 @@ WhenChoiceBitesBack	4
 WhoCarriesTheWork	4
 BadNews	3
 BellCurve	3
-ControlledHallucination	3
 AgenticNervousness	2
 AhaMoment	2
 AuthorizedBeneficiaries	2
@@ -101,6 +103,7 @@ CollateralDamage	2
 CommentaryNotConstraint	2
 ComplianceTheatre	2
 ContextMismatch	2
+CoverUpCost	2
 CowbellJoke	2
 CrampedSpaces	2
 CrisisManagement	2
@@ -173,7 +176,6 @@ PlasticityWindow	2
 PointOfNoReturn	2
 PoliticalCycles	2
 PoliticalRitual	2
-PowerAndControl	2
 PredictThenUpdate	2
 PredictiveControl	2
 Preparedness	2
@@ -183,7 +185,6 @@ PromptEngineering	2
 RatRace	2
 ReciprocalAltruism	2
 ResourceAllocation	2
-RiskExport	2
 RiskMetrics	2
 RubberDuckDebugging	2
 RulesForTheRest	2
@@ -193,6 +194,7 @@ SayTheQuietPart	2
 SeekAndFind	2
 SelfCensorship	2
 SenseOfPurpose	2
+ShortLegs	2
 ShortTermism	2
 SkewedIncentives	2
 SkinInTheGame	2
@@ -211,6 +213,7 @@ SynchronyIsNotWisdom	2
 SystemAbstraction	2
 ThinCulture	2
 TimeThatCounts	2
+TinyBandAid	2
 TitForTat	2
 ToEachTheirOwn	2
 TruthAsContent	2
@@ -225,4 +228,4 @@ HandsOff	1
 ## Deprecated tags
 # Source: data/tag-deprecations.toml. Prefer "to" for new content instead of "from".
 # Columns: from<TAB>to<TAB>files_still_using_from
-ArepaContigo	ArepaContigo	69
+ArepaContigo	ArepaContigo	73
