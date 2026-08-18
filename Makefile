@@ -40,7 +40,7 @@ help:
 	@echo "  make social-autopost    Run both facebook-autopost and linkedin-autopost"
 	@echo "  make build        Regenerate tag register, then production-like build -> public/ (hugo --minify --gc)"
 	@echo "                    Optional: BASE_URL=https://... HUGO_PREVIEW=1 make build (PR previews: future posts in lists)"
-	@echo "  make serve        Local dev: drafts + future-dated content (alias: server). Also starts carousel-save for studio Save."
+	@echo "  make serve        process-compose: hugo (drafts + future), sitekit-mcp, carousel-save; Go cmds rebuild on .go save (alias: server)"
 	@echo "  make motif-editor Local motif mask editor (tools/motif-editor; http://localhost:3847)"
 	@echo "  make carousel-pdf  LinkedIn PDF from studio WebPs (DIR= folder; SLUG=; optional OUT= VARIANT=)"
 	@echo "  make carousel-save Local API so studio Save can write carousel.json (http://127.0.0.1:3848)"
@@ -127,10 +127,7 @@ carousel-save:
 	go run ./cmd/carousel-save -addr "127.0.0.1:3848" -root .
 
 serve server:
-	@go run ./cmd/carousel-save -addr "127.0.0.1:3848" -root . & save_pid=$$!; \
-	trap 'kill $$save_pid 2>/dev/null' EXIT INT TERM; \
-	$(HUGO) server --buildDrafts --buildFuture; \
-	kill $$save_pid 2>/dev/null || true
+	process-compose up
 
 test: build
 

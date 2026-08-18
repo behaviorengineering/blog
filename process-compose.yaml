@@ -1,0 +1,40 @@
+# Hugo drafts+future, sitekit MCP, carousel-save.
+# Start: make serve
+# Requires process-compose, hugo, and go on PATH. pipelines must be on PATH (or PIPELINES_BIN).
+# Go processes use `go tool wgo` so they rebuild when .go files change (sitekit-mcp also watches ../sitekit).
+
+version: "0.5"
+
+log_level: info
+log_length: 200
+
+environment:
+  - "HUGO=${HUGO:-hugo}"
+
+processes:
+  hugo:
+    command: "${HUGO} server --buildDrafts --buildFuture"
+    availability:
+      restart: on_failure
+      backoff_seconds: 2
+    shutdown:
+      signal: 15
+      timeout_seconds: 10
+
+  carousel-save:
+    command: go tool wgo run ./cmd/carousel-save -addr 127.0.0.1:3848 -root .
+    availability:
+      restart: on_failure
+      backoff_seconds: 2
+    shutdown:
+      signal: 15
+      timeout_seconds: 10
+
+  sitekit-mcp:
+    command: go tool wgo run -root ../sitekit ./cmd/sitekit-mcp --config sitekit.yaml
+    availability:
+      restart: on_failure
+      backoff_seconds: 2
+    shutdown:
+      signal: 15
+      timeout_seconds: 10

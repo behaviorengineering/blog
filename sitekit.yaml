@@ -1,0 +1,4 @@
+site_root: .
+checkout_dir: tmp/pipelines-review
+pipelines_bin: pipelines
+mcp_listen: 127.0.0.1:3849
