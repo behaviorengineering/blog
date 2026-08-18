@@ -58,6 +58,43 @@ export function makeQrCode(text, ecc = 'MEDIUM') {
 }
 
 /**
+ * QR size as percent of the vertical slot between URL and scan footer (1–100).
+ * Accepts `100`, `"100%"`, or legacy px values above 100 at 1080.
+ * @param {number|string|null|undefined} raw
+ */
+export function parseQrSizePercent(raw) {
+  if (typeof raw === 'string') {
+    const trimmed = raw.trim();
+    const withPct = trimmed.match(/^(\d+(?:\.\d+)?)\s*%$/);
+    if (withPct) {
+      return Math.min(100, Math.max(1, Number(withPct[1])));
+    }
+    const bare = Number(trimmed);
+    if (Number.isFinite(bare)) {
+      if (bare > 100) return 100;
+      if (bare <= 0) return 100;
+      return bare;
+    }
+    return 100;
+  }
+  if (!Number.isFinite(raw) || raw <= 0) return 100;
+  if (raw > 100) return 100;
+  return raw;
+}
+
+/**
+ * @param {string|{color?: string}|null|undefined} light
+ */
+export function isQrBackgroundTransparent(light) {
+  if (light == null || light === '') return false;
+  if (typeof light === 'object') {
+    return isQrBackgroundTransparent(light.color);
+  }
+  const t = String(light).trim().toLowerCase();
+  return t === 'transparent' || t === 'none';
+}
+
+/**
  * Draw a QR code onto a canvas.
  * Scales modules to fill the target box edge to edge (quiet zone included).
  *
@@ -68,13 +105,6 @@ export function makeQrCode(text, ecc = 'MEDIUM') {
  * @param {number} boxSize Target square size (px)
  * @param {{ marginModules?: number, dark?: string, light?: string, radius?: number }} [opts]
  */
-/** @param {string|undefined} light */
-export function isQrBackgroundTransparent(light) {
-  if (light == null || light === '') return false;
-  const t = String(light).trim().toLowerCase();
-  return t === 'transparent' || t === 'none';
-}
-
 export function drawQrCodeInBox(ctx, qr, x, y, boxSize, opts = {}) {
   const marginModules = Number.isFinite(opts.marginModules) ? opts.marginModules : 2;
   const dark = opts.dark || '#000000';

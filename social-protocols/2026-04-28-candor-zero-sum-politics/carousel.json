@@ -39,8 +39,10 @@
       "background": "#20111c",
       "backgroundGradient": "solid",
       "brandImage": "/images/og-logo.webp",
-      "qrDark": "#964e94",
-      "qrLayout": "split",
+      "qr": {
+        "layout": "split",
+        "color": "#964e94"
+      },
       "shortUrl": "https://behaviorengineering.ai/war-game/",
       "postUrl": "https://behaviorengineering.ai/social-protocols/2026-04-28-candor-zero-sum-politics/"
     }
@@ -502,8 +504,10 @@
           "archetype": "post_cta",
           "featuredImage": "/social-protocols/2026-04-28-candor-zero-sum-politics/cowboys.jpg",
           "featuredMaxHeight": 500,
-          "qrSize": "85%",
-          "qrLayout": "split",
+          "qr": {
+            "size": "85%",
+            "layout": "split"
+          },
           "alignment": {
             "body": "right",
             "footer": "left"

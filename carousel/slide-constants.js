@@ -70,6 +70,15 @@ export function motifStripWidthPx(slideCount) {
 }
 
 /**
+ * CTA / QR end frames (`role: cta` or `post_cta`) skip panoramic motif and wave.
+ * @param {string} [role]
+ */
+export function isCarouselCtaRole(role) {
+  const normalized = (role || '').trim().toLowerCase();
+  return normalized === 'cta' || normalized === 'post_cta';
+}
+
+/**
  * Remove studio panorama inter-slide gaps when width matches {@link panoramaWidthWithGapsPx}.
  *
  * @param {number} slideCount

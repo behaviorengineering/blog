@@ -58,15 +58,21 @@ import {
   writeStudioThemeState,
 } from './studio-theme-persistence.js';
 import {
+  applyStudioScrollState,
+  bindStudioScrollPersistence,
+  readStudioScrollState,
+} from './studio-scroll-persistence.js';
+import {
   captureFileDeckSnapshot,
   captureFileStripSnapshot,
   renderStudioStatePanel,
 } from './studio-state-panel.js';
 import { copyText, createCopyButton } from './copy-button.js';
 import { createDownloadButton } from './download-button.js';
-import { PANORAMA_SLIDE_WIDTH_PX } from './slide-constants.js';
+import { saveCarouselDeckToSource } from './studio-save.js';
+import { CAROUSEL_SLIDE_WIDTH_PX, PANORAMA_SLIDE_WIDTH_PX, isCarouselCtaRole } from './slide-constants.js';
 
-/** @type {{ paletteCards?: HTMLButtonElement[], gradientCards?: HTMLButtonElement[], waveModifierPanel?: HTMLElement, waveGeometryFields?: HTMLElement, waveInputs?: HTMLInputElement[], hueInputs?: HTMLInputElement[], colorPickers?: HTMLInputElement[], waveColorPickers?: HTMLInputElement[], wavePaletteSection?: HTMLElement, wavePaletteLinkToggle?: HTMLInputElement, lineHeightInputs?: HTMLInputElement[], marginInputs?: HTMLInputElement[], ctaInputs?: HTMLInputElement[] }} */
+/** @type {{ paletteCards?: HTMLButtonElement[], gradientCards?: HTMLButtonElement[], waveModifierPanel?: HTMLElement, waveGeometryFields?: HTMLElement, waveInputs?: HTMLInputElement[], hueInputs?: HTMLInputElement[], colorPickers?: HTMLInputElement[], waveColorPickers?: HTMLInputElement[], wavePaletteSection?: HTMLElement, wavePaletteLinkToggle?: HTMLInputElement, lineHeightInputs?: HTMLInputElement[], marginInputs?: HTMLInputElement[], ctaInputs?: HTMLInputElement[], motifOffsetInputs?: HTMLInputElement[] }} */
 const colorControlRefs = {};
 
 /** @type {readonly { key: 'intensity' | 'color' | 'variety' | 'blur' | 'radius' | 'phase', label: string }[]} */
@@ -210,10 +216,10 @@ function slideRenderOptions(deck, slide, renderContext) {
   return {
     ...renderContext,
     slideRole: role,
-    backgroundPanoramaContext: role === 'post_cta'
+    backgroundPanoramaContext: isCarouselCtaRole(role)
       ? undefined
       : buildBackgroundPanoramaContext(deck, slide.number) ?? undefined,
-    motifStripContext: role === 'post_cta' || !motifStripEnabledInDeck(deck)
+    motifStripContext: isCarouselCtaRole(role) || !motifStripEnabledInDeck(deck)
       ? undefined
       : buildMotifStripContext(deck, slide.number) ?? undefined,
   };
@@ -235,6 +241,10 @@ function slideRenderOptions(deck, slide, renderContext) {
 export async function mountCarouselStudio(options = {}) {
   const root = options.root || document.getElementById('carousel-app');
   if (!root) throw new Error('Missing carousel root element');
+
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
 
   root.classList.add('carousel-app');
   root.innerHTML = '<p class="carousel-status">Loading deck…</p>';
@@ -260,6 +270,9 @@ export async function mountCarouselStudio(options = {}) {
     if (!deck.deck) deck.deck = {};
     studioDeckRef = deck;
     const slug = deck.slug || slugify(deck.title || 'carousel');
+    const savedScroll = readStudioScrollState(slug);
+    let pendingStripScrollLeft = savedScroll?.stripLeft;
+    let studioScrollBound = false;
     const fileDeckSnapshot = captureFileDeckSnapshot(deck.deck);
     const fileStripSnapshot = captureFileStripSnapshot(deck);
     const theme = mergeTheme(deck.deck);
@@ -367,6 +380,9 @@ export async function mountCarouselStudio(options = {}) {
         let savedScrollLeft = 0;
         if (mount instanceof HTMLElement) {
           savedScrollLeft = mount.scrollLeft;
+          if (focusSlideNumber == null && pendingStripScrollLeft != null) {
+            savedScrollLeft = pendingStripScrollLeft;
+          }
           showVisionStripPlaceholder(mount);
         }
         try {
@@ -377,6 +393,9 @@ export async function mountCarouselStudio(options = {}) {
               focusSlideNumber,
               scrollLeft: focusSlideNumber == null ? savedScrollLeft : undefined,
             });
+            if (focusSlideNumber == null) {
+              pendingStripScrollLeft = undefined;
+            }
           }
         } catch (error) {
           console.error('[carousel] vision strip rebuild failed:', error);
@@ -385,6 +404,17 @@ export async function mountCarouselStudio(options = {}) {
               mount,
               error instanceof Error ? error.message : String(error),
             );
+          }
+        } finally {
+          if (!studioScrollBound) {
+            applyStudioScrollState(root, savedScroll, {
+              window: false,
+              leftFloat: false,
+              rightFloat: true,
+              strip: false,
+            });
+            bindStudioScrollPersistence(slug, root);
+            studioScrollBound = true;
           }
         }
       }, 120);
@@ -437,6 +467,23 @@ export async function mountCarouselStudio(options = {}) {
       getShowLineBoxes: () => studioShowLineBoxes,
       getIncludedSlideNumbers: () => includedSlideNumbers,
       getStripVariantIndices: () => stripVariantIndices,
+      onSave: async () => {
+        writeStudioThemeState(slug, deck, theme, studioPaletteId, studioShowLineBoxes);
+        if (deck.deck && theme.backgroundWave) {
+          deck.deck.backgroundWave = compactBackgroundWaveForExport(theme.backgroundWave);
+          deck.deck.palette = deckPaletteFromTheme(theme);
+        }
+        const mode = await saveCarouselDeckToSource(deck, { deckUrl: options.deckUrl });
+        const next = captureFileDeckSnapshot(deck.deck);
+        for (const key of Object.keys(fileDeckSnapshot)) {
+          delete fileDeckSnapshot[key];
+        }
+        Object.assign(fileDeckSnapshot, next);
+        refreshStatePanel?.();
+        if (mode === 'download') {
+          window.alert('Saved a copy to Downloads. Replace the bundle carousel.json with that file, or restart with make serve so Save can write the source file.');
+        }
+      },
     });
     refreshStatePanel = statePanel.refresh;
     studioStatePanelRefresh = statePanel.refresh;
@@ -471,6 +518,20 @@ export async function mountCarouselStudio(options = {}) {
     attachPreviewResizeObservers(previewSlots);
     syncStripVariantUi();
     studioVisionStripReschedule = scheduleVisionStripRebuild;
+    applyStudioScrollState(root, savedScroll, {
+      window: true,
+      leftFloat: true,
+      rightFloat: false,
+      strip: false,
+    });
+    requestAnimationFrame(() => {
+      applyStudioScrollState(root, savedScroll, {
+        window: true,
+        leftFloat: true,
+        rightFloat: false,
+        strip: false,
+      });
+    });
     scheduleVisionStripRebuild();
   } catch (error) {
     root.innerHTML = '';
@@ -549,6 +610,12 @@ function renderRightFloatPanel() {
       title: 'Export each slide in the strip as its own WebP file at full resolution',
       text: 'Slides',
     }),
+    createLabeledDownloadButton({
+      id: 'carousel-vision-strip-download-pdf',
+      label: 'Download LinkedIn PDF',
+      title: 'Export In-strip slides as one full-bleed LinkedIn PDF',
+      text: 'PDF',
+    }),
   );
 
   actions.append(downloadActions);
@@ -626,9 +693,74 @@ function renderMotifStripPanel(deck, previewSlots) {
   panel.appendChild(label);
 
   if (src) {
+    colorControlRefs.motifOffsetInputs = [];
+
+    const scaleField = document.createElement('div');
+    scaleField.className = 'carousel-lineheight-field';
+    const scaleLabel = document.createElement('span');
+    scaleLabel.className = 'carousel-lineheight-label';
+    scaleLabel.textContent = 'Size';
+    const scaleWrap = document.createElement('span');
+    scaleWrap.className = 'carousel-lineheight-input-wrap carousel-motif-scale-wrap';
+    const minusBtn = document.createElement('button');
+    minusBtn.type = 'button';
+    minusBtn.className = 'carousel-motif-scale-btn';
+    minusBtn.textContent = '−';
+    minusBtn.setAttribute('aria-label', 'Decrease motif size by 1 percent');
+    const scaleInput = document.createElement('input');
+    scaleInput.type = 'text';
+    scaleInput.inputMode = 'decimal';
+    scaleInput.autocomplete = 'off';
+    scaleInput.spellcheck = false;
+    scaleInput.className = 'carousel-lineheight-input carousel-motif-scale-input';
+    scaleInput.value = formatMotifScaleDelta(motifScaleDelta(deck));
+    scaleInput.setAttribute('aria-label', 'Motif size change from native, as a signed percent');
+    const scaleSuffix = document.createElement('span');
+    scaleSuffix.className = 'carousel-lineheight-suffix';
+    scaleSuffix.textContent = '%';
+    scaleSuffix.setAttribute('aria-hidden', 'true');
+    const plusBtn = document.createElement('button');
+    plusBtn.type = 'button';
+    plusBtn.className = 'carousel-motif-scale-btn';
+    plusBtn.textContent = '+';
+    plusBtn.setAttribute('aria-label', 'Increase motif size by 1 percent');
+
+    const applyScaleDelta = (raw) => {
+      const parsed = parseMotifScaleDelta(raw);
+      if (parsed == null) return;
+      setMotifStripScaleDelta(deck, parsed);
+      scaleInput.value = formatMotifScaleDelta(motifScaleDelta(deck));
+      refreshAllPreviews(previewSlots);
+      studioStatePersistHandler?.();
+      studioStatePanelRefresh?.();
+    };
+
+    const nudgeScale = (step) => {
+      applyScaleDelta(motifScaleDelta(deck) + step);
+    };
+
+    scaleInput.addEventListener('change', () => {
+      const parsed = parseMotifScaleDelta(scaleInput.value);
+      applyScaleDelta(parsed == null ? motifScaleDelta(deck) : parsed);
+    });
+    scaleInput.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter') {
+        event.preventDefault();
+        scaleInput.blur();
+      }
+    });
+    minusBtn.addEventListener('click', () => nudgeScale(-1));
+    plusBtn.addEventListener('click', () => nudgeScale(1));
+    scaleInput._refreshMotifOffset = () => {
+      scaleInput.value = formatMotifScaleDelta(motifScaleDelta(deck));
+    };
+    scaleWrap.append(minusBtn, scaleInput, scaleSuffix, plusBtn);
+    scaleField.append(scaleLabel, scaleWrap);
+    panel.appendChild(scaleField);
+    colorControlRefs.motifOffsetInputs.push(scaleInput);
+
     const fields = document.createElement('div');
     fields.className = 'carousel-lineheight-fields';
-    colorControlRefs.motifOffsetInputs = [];
 
     /** @type {readonly { key: 'offsetX' | 'offsetY', label: string }[]} */
     const entries = [
@@ -647,12 +779,13 @@ function renderMotifStripPanel(deck, previewSlots) {
       const input = document.createElement('input');
       input.type = 'number';
       input.className = 'carousel-lineheight-input';
-      input.min = String(MOTIF_OFFSET_MIN);
-      input.max = String(MOTIF_OFFSET_MAX);
+      const offsetMax = motifOffsetMax(entry.key);
+      input.min = String(-offsetMax);
+      input.max = String(offsetMax);
       input.step = '1';
       input.dataset.motifOffsetKey = entry.key;
       input.value = String(motifOffsetValue(deck, entry.key));
-      input.setAttribute('aria-label', `${entry.label} motif offset at 1080 canvas`);
+      input.setAttribute('aria-label', `${entry.label} motif offset in design pixels at 1080`);
 
       input.addEventListener('input', () => {
         const parsed = Number(input.value);
@@ -686,7 +819,7 @@ function renderMotifStripPanel(deck, previewSlots) {
 
     const offsetHint = document.createElement('p');
     offsetHint.className = 'carousel-debug-lineheights-hint';
-    offsetHint.textContent = 'Nudge motif at 1080px. Positive horizontal moves right. Writes offsetX / offsetY in carousel.json.';
+    offsetHint.textContent = 'Size scales width and height together from the bottom-left (0 is unchanged, -10 is 10% smaller, +10 is 10% larger). The strip stays one continuous line across slides. Writes bandWidth, offsetX, offsetY.';
     panel.appendChild(offsetHint);
   }
 
@@ -728,6 +861,9 @@ function wireVisionStripPanel(panel, visionStripApi, theme) {
   });
   wireStripDownloadButton(panel, '#carousel-vision-strip-download-all', async () => {
     await visionStripApi.downloadAll();
+  });
+  wireStripDownloadButton(panel, '#carousel-vision-strip-download-pdf', async () => {
+    await visionStripApi.downloadPdf();
   });
 }
 
@@ -1603,13 +1739,79 @@ function setMotifStripEnabled(deck, enabled) {
   /** @type {Record<string, unknown>} */ (spec).enabled = enabled;
 }
 
-const MOTIF_OFFSET_MIN = -400;
-const MOTIF_OFFSET_MAX = 400;
+/** Horizontal pan: ±12 slide widths so a panorama can be shifted by whole slides. */
+const MOTIF_OFFSET_X_MAX = CAROUSEL_SLIDE_WIDTH_PX * 12;
+/** Vertical nudge: ± one slide (the strip is a short band). */
+const MOTIF_OFFSET_Y_MAX = CAROUSEL_SLIDE_WIDTH_PX;
+const MOTIF_SCALE_PERCENT_MIN = 20;
+const MOTIF_SCALE_PERCENT_MAX = 200;
+const MOTIF_SCALE_DELTA_MIN = MOTIF_SCALE_PERCENT_MIN - 100;
+const MOTIF_SCALE_DELTA_MAX = MOTIF_SCALE_PERCENT_MAX - 100;
 
 /** @param {CarouselDeck} deck */
 function motifStripSpec(deck) {
   if (!deckHasMotifStrip(deck)) return null;
   return /** @type {Record<string, unknown>} */ (deck.deck.motifStrip);
+}
+
+/** @param {CarouselDeck} deck */
+function motifScalePercent(deck) {
+  const spec = motifStripSpec(deck);
+  const raw = spec?.bandWidth;
+  if (raw == null || raw === '') return 100;
+  const str = String(raw).trim();
+  const pct = /^(\d+(?:\.\d+)?)\s*%$/.exec(str);
+  if (pct) {
+    return Math.max(
+      MOTIF_SCALE_PERCENT_MIN,
+      Math.min(MOTIF_SCALE_PERCENT_MAX, Math.round(Number(pct[1]))),
+    );
+  }
+  const num = Number(str);
+  if (Number.isFinite(num) && num > 0 && num <= MOTIF_SCALE_PERCENT_MAX) {
+    return Math.max(MOTIF_SCALE_PERCENT_MIN, Math.round(num));
+  }
+  return 100;
+}
+
+/** @param {CarouselDeck} deck */
+function motifScaleDelta(deck) {
+  return motifScalePercent(deck) - 100;
+}
+
+/** @param {number} delta */
+function formatMotifScaleDelta(delta) {
+  const n = Math.round(delta);
+  return n > 0 ? `+${n}` : String(n);
+}
+
+/** @param {unknown} raw */
+function parseMotifScaleDelta(raw) {
+  const str = String(raw ?? '').trim().replace(/%/g, '');
+  if (str === '' || str === '+' || str === '-' || str === '−') return null;
+  const parsed = Number(str.replace('−', '-'));
+  if (!Number.isFinite(parsed)) return null;
+  return parsed;
+}
+
+/** @param {CarouselDeck} deck @param {number} percent */
+function setMotifStripScale(deck, percent) {
+  const spec = motifStripSpec(deck);
+  if (!spec) return;
+  const clamped = Math.round(Math.max(
+    MOTIF_SCALE_PERCENT_MIN,
+    Math.min(MOTIF_SCALE_PERCENT_MAX, percent),
+  ));
+  spec.bandWidth = `${clamped}%`;
+}
+
+/** @param {CarouselDeck} deck @param {number} delta */
+function setMotifStripScaleDelta(deck, delta) {
+  const clamped = Math.round(Math.max(
+    MOTIF_SCALE_DELTA_MIN,
+    Math.min(MOTIF_SCALE_DELTA_MAX, delta),
+  ));
+  setMotifStripScale(deck, 100 + clamped);
 }
 
 /** @param {CarouselDeck} deck @param {'offsetX' | 'offsetY'} key */
@@ -1620,11 +1822,17 @@ function motifOffsetValue(deck, key) {
   return Number.isFinite(Number(raw)) ? Number(raw) : 0;
 }
 
+/** @param {'offsetX' | 'offsetY'} key */
+function motifOffsetMax(key) {
+  return key === 'offsetX' ? MOTIF_OFFSET_X_MAX : MOTIF_OFFSET_Y_MAX;
+}
+
 /** @param {CarouselDeck} deck @param {'offsetX' | 'offsetY'} key @param {number} value */
 function setMotifStripOffset(deck, key, value) {
   const spec = motifStripSpec(deck);
   if (!spec) return;
-  const clamped = Math.round(Math.max(MOTIF_OFFSET_MIN, Math.min(MOTIF_OFFSET_MAX, value)));
+  const max = motifOffsetMax(key);
+  const clamped = Math.round(Math.max(-max, Math.min(max, value)));
   if (clamped === 0) {
     delete spec[key];
   } else {
@@ -1652,14 +1860,30 @@ function ensureDeckCta(deck) {
   return deck.deck.cta;
 }
 
+function ctaQrSizeRaw(cta) {
+  const nested = cta.qr && typeof cta.qr === 'object' && !Array.isArray(cta.qr)
+    ? /** @type {Record<string, unknown>} */ (cta.qr).size
+    : undefined;
+  return nested;
+}
+
+/** @param {Record<string, unknown>} cta */
+function ctaQrObject(cta) {
+  /** @type {Record<string, unknown>} */
+  const qr = (cta.qr && typeof cta.qr === 'object' && !Array.isArray(cta.qr))
+    ? { .../** @type {Record<string, unknown>} */ (cta.qr) }
+    : {};
+  return qr;
+}
+
 /**
  * @param {Record<string, unknown>} cta
  * @param {keyof typeof CTA_LAYOUT_DEFAULTS} key
  */
 function ctaLayoutValue(cta, key) {
-  const raw = cta[key];
   const fallback = CTA_LAYOUT_DEFAULTS[key];
-  if (key === 'qrSize') return parseQrSizePercent(raw);
+  if (key === 'qrSize') return parseQrSizePercent(ctaQrSizeRaw(cta));
+  const raw = cta[key];
   if (!Number.isFinite(raw)) return fallback;
   return /** @type {number} */ (raw);
 }
@@ -1678,7 +1902,14 @@ function setCtaLayoutValue(deck, key, value) {
   const cta = ensureDeckCta(deck);
   const { min, max } = CTA_LAYOUT_LIMITS[key];
   const clamped = Math.round(Math.max(min, Math.min(max, value)));
-  cta[key] = key === 'qrSize' ? formatQrSizePercent(clamped) : clamped;
+  if (key === 'qrSize') {
+    const qr = ctaQrObject(cta);
+    qr.size = formatQrSizePercent(clamped);
+    cta.qr = qr;
+    delete cta.qrSize;
+    return;
+  }
+  cta[key] = clamped;
 }
 
 /**
@@ -1774,15 +2005,17 @@ function ctaLayoutJsonSnippet(deck) {
     return JSON.stringify({
       cta: {
         featuredMaxHeight: CTA_LAYOUT_DEFAULTS.featuredMaxHeight,
-        qrSize: formatQrSizePercent(CTA_LAYOUT_DEFAULTS.qrSize),
+        qr: { size: formatQrSizePercent(CTA_LAYOUT_DEFAULTS.qrSize) },
         brandMaxHeight: CTA_LAYOUT_DEFAULTS.brandMaxHeight,
       },
     }, null, 2);
   }
+  const qr = ctaQrObject(cta);
+  qr.size = formatQrSizePercent(ctaLayoutValue(cta, 'qrSize'));
   return JSON.stringify({
     cta: {
       featuredMaxHeight: ctaLayoutValue(cta, 'featuredMaxHeight'),
-      qrSize: formatQrSizePercent(ctaLayoutValue(cta, 'qrSize')),
+      qr,
       brandMaxHeight: ctaLayoutValue(cta, 'brandMaxHeight'),
     },
   }, null, 2);

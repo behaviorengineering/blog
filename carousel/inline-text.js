@@ -38,7 +38,7 @@ export {
 /**
  * Minimal inline Markdown in block `text`: `**bold**`, `*italic*`, `***both***`.
  * Optional palette tokens: `<accent1>…</accent1>`, `<color accent1>…</color>`, optional
- * `brightness="+10"` or `brightness="-20"` (percent lighten/darken vs that token's base hex).
+ * `brightness="+10"` or `brightness='-20'` (percent lighten/darken vs that token's base hex).
  * Unclosed markers stay literal. No links, code, or nested spans.
  *
  * @typedef {Object} InlineRun
@@ -51,7 +51,7 @@ export {
 
 /** @type {RegExp} */
 const INLINE_COLOR_SEGMENT_RE =
-  /<(?:color\s+)?(accent1|accent2|text|muted)(?:\s+brightness="([+-]?\d{1,3})")?\s*>([\s\S]*?)<\/(?:\1|color)>/gi;
+  /<(?:color\s+)?(accent1|accent2|text|muted)(?:\s+brightness=["']([+-]?\d{1,3})["'])?\s*>([\s\S]*?)<\/(?:\1|color)>/gi;
 
 const INLINE_COLOR_TAG_PROBE_RE = /<(?:color\s+)?(?:accent1|accent2|text|muted)\b/i;
 

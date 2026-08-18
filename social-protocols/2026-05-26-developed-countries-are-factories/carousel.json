@@ -40,8 +40,10 @@
       "backgroundGradient": "solid",
       "featuredImage": "busy-going-nowhere.webp",
       "brandImage": "/images/og-logo.webp",
-      "qrDark": "#4a8fa3",
-      "qrLayout": "split",
+      "qr": {
+        "layout": "split",
+        "color": "#4a8fa3"
+      },
       "shortUrl": "https://behaviorengineering.ai/factory-score/",
       "postUrl": "https://behaviorengineering.ai/social-protocols/2026-05-26-developed-countries-are-factories/"
     }
@@ -391,8 +393,10 @@
         {
           "archetype": "post_cta",
           "featuredMaxHeight": 420,
-          "qrSize": "85%",
-          "qrLayout": "split",
+          "qr": {
+            "size": "85%",
+            "layout": "split"
+          },
           "alignment": {
             "body": "right",
             "footer": "left"

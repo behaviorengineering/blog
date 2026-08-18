@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-11T14:34:30Z",
+  "generatedAt": "2026-08-17T17:43:04Z",
   "channels": [
     "site-en",
     "site-es",
@@ -4337,7 +4337,7 @@
     {
       "bundle": "social-protocols/2026-08-14-everyone-knows-nobody-acts",
       "section": "social-protocols",
-      "title": "Everyone knows, nobody acts: common knowledge as the enforcement trigger",
+      "title": "Everyone knows, nobody acts",
       "type": "claims",
       "categories": [
         "Social-Protocols"
@@ -4349,13 +4349,42 @@
           "status": "missing"
         },
         "linkedin": {
-          "status": "missing"
+          "status": "present"
         },
         "site-en": {
           "status": "present"
         },
         "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
           "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/reptilocracy/2026-08-16-insert-vote-receive-same",
+      "section": "cognitive-memetics",
+      "title": "Insert Vote, Receive Same",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Reptilocracy"
+      ],
+      "planned": "2026-08-16",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
         },
         "substack-en": {
           "status": "missing"
@@ -4365,7 +4394,7 @@
     {
       "bundle": "cognitive-memetics/sayings/2026-08-17-saying-32",
       "section": "cognitive-memetics",
-      "title": "Caimán no come caimán.",
+      "title": "El alcahuete es peor que el autor.",
       "type": "sayings",
       "categories": [
         "Cognitive-Memetics",
@@ -4450,6 +4479,35 @@
       }
     },
     {
+      "bundle": "cognitive-memetics/reptilocracy/2026-08-23-public-money-private-leverage",
+      "section": "cognitive-memetics",
+      "title": "Public Money, Private Leverage",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Reptilocracy"
+      ],
+      "planned": "2026-08-23",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
       "bundle": "cognitive-memetics/sayings/2026-08-24-saying-33",
       "section": "cognitive-memetics",
       "title": "El que busca, encuentra.",
@@ -4508,6 +4566,35 @@
       }
     },
     {
+      "bundle": "cognitive-memetics/sayings/2026-08-31-saying-34",
+      "section": "cognitive-memetics",
+      "title": "Caimán no come caimán.",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-08-31",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
       "bundle": "cognitive-memetics/cows/2026-09-02-cow-w28",
       "section": "cognitive-memetics",
       "title": "We stand up so the status doesn't",
@@ -4517,6 +4604,35 @@
         "Cube-Cows"
       ],
       "planned": "2026-09-02",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/sayings/2026-09-07-saying-35",
+      "section": "cognitive-memetics",
+      "title": "Tiene cara de yo no fui.",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-09-07",
       "draft": false,
       "channels": {
         "facebook": {
@@ -4566,6 +4682,35 @@
       }
     },
     {
+      "bundle": "cognitive-memetics/sayings/2026-09-14-saying-36",
+      "section": "cognitive-memetics",
+      "title": "La mentira tiene patas cortas.",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-09-14",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
       "bundle": "cognitive-memetics/cows/2026-09-16-cow-w30",
       "section": "cognitive-memetics",
       "title": "Mutual performance improvement",
@@ -4588,6 +4733,35 @@
         },
         "site-es": {
           "status": "missing"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/sayings/2026-09-21-saying-37",
+      "section": "cognitive-memetics",
+      "title": "Tapa el sol con un dedo.",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-09-21",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
         },
         "substack-en": {
           "status": "missing"
