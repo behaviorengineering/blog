@@ -8,12 +8,9 @@ version: "0.5"
 log_level: info
 log_length: 200
 
-environment:
-  - "HUGO=${HUGO:-hugo}"
-
 processes:
   hugo:
-    command: "${HUGO} server --buildDrafts --buildFuture"
+    command: hugo server --buildDrafts --buildFuture
     availability:
       restart: on_failure
       backoff_seconds: 2
