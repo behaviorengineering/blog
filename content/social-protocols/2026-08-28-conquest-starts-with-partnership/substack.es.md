@@ -1,36 +1,40 @@
 ## ¿Por qué la conquista empieza con una alianza?
 
-La charla de Johnathan Bi sobre Maquiavelo (unos **50 minutos**) trata el **fraude** como el modo en que crece el **poder**, no como un desperfecto en un sistema «sano». **Roma**, en esta lectura, no abre con ocupación. Abre con una **invitación**.
+La charla de Johnathan Bi sobre Maquiavelo (unos **50 minutos**) trata la conquista romana como una **invitación**. Las ciudades vecinas conservaban **leyes** y gobernantes, entraban como **socios menores** y peleaban las siguientes guerras como **proxies**.
 
 > Force alone is never enough, but fraud alone will be found to be quite enough.
 
-## Quédate con tus leyes. Manda a tu ejército.
+## Quédate con tus leyes, manda a tu ejército
 
-Las ciudades vecinas conservaban **leyes** y gobernantes. Entraban como **socios menores**. El cuento público era alianza. El hecho militar era **subordinación**: mandaban tropas a la siguiente guerra de Roma.
+El cuento público era alianza; el hecho militar era guerra por **proxy**: mandaban tropas a la siguiente campaña de Roma.
 
-Lo que se traslada es el **riesgo**. Roma usa a esos socios para tomar el siguiente anillo de ciudades; la sangre y la factura recaen en los «aliados» mientras Roma se queda con la expansión. Eso es **exportar el riesgo**. La invitación tiene que parecer mutua el tiempo suficiente para terminar la siguiente campaña.
+Roma usa a esos socios para el siguiente anillo de ciudades; la sangre y la factura recaen en los «aliados» mientras Roma se queda con la expansión. Esa **exportación de riesgo** es el punto: los aliados pagan la siguiente guerra de Roma, y la invitación tiene que parecer mutua el tiempo suficiente para terminar la campaña.
 
-## La fuerza sale cara para escalar
+## La fuerza sale cara
 
-Maquiavelo nombra tres modos de expandirse. Una liga **toscana** de iguales es fácil de firmar y difícil de empujar: los comités defienden lo que ya tienen. Una ocupación **espartana** de súbditos puros quema tesoro y cría rebelión, sobre todo en ciudades acostumbradas a vivir libres.
+Una liga **toscana** de iguales es fácil de firmar y difícil de empujar: los comités defienden lo que ya tienen. La ONU sigue cerrando titulares con «restricción» por la misma razón. Una ocupación **espartana** de súbditos puros quema tesoro y cría rebelión, sobre todo en ciudades acostumbradas a vivir libres.
 
-El tercer camino, el romano, usa el **fraude**: guarda el disfraz de alianza y le pasa el costo a otro. Entrar de socio te deja cerrar el cerco después. Ocupar una ciudad libre el primer día es el camino caro.
+El tercer camino, el romano, usa el **fraude**: guarda el disfraz de alianza mientras los **proxies** reciben los golpes. Ocupar una ciudad libre el primer día quema tesoro temprano; entrar de socio te deja cerrar el cerco después.
 
-## Luego la invitación es rango
+## Luego el socio pasa a ser súbdito
 
-Cuando los socios menores ya han juntado bastantes súbditos, Roma convierte a esos socios en **súbditos**. El centro sigue pareciendo amable y se queda con el anillo.
+Cuando los socios menores ya han juntado bastantes súbditos, Roma convierte a esos socios en **súbditos** y sigue pareciendo amiga en el centro.
 
 > The key art of Roman conquest is not force, but fraud.
 
-Bi habla de repúblicas y ciudades-estado. La misma **invitación** se lee a escala humana. Una red piramidal de ventas (**Herbalife** es la marca que todos reconocen) te mete de socio: conserva tu nombre, conserva tu discurso, recluta el siguiente anillo. El **de arriba** vive de la expansión que tú pagas. Así que esa «alianza» era rango desde el principio.
+**Esparta** muestra el otro fallo. Después de ganar la guerra del Peloponeso, se derrumbó bajo un imperio que sus instituciones cerradas no podían gobernar, porque la victoria forzó un trabajo expansivo que el diseño estable no aguantaba.
 
-El **truco**: te dejan leyes, logo o cargo, le pasan el costo al recién llegado, y la jerarquía aparece después.
+## La misma invitación recluta el siguiente anillo
 
-Conservar leyes, logo o cargo mientras otro marca la siguiente campaña y se come el botín: eso es ser el **socio menor** de la conquista de otro. El fraude es el **sistema operativo**.
+Bi habla de repúblicas y ciudades-estado, pero un **esquema piramidal de ventas** igual te invita de socio: conservas tu nombre y tu discurso, y luego reclutas el siguiente anillo. Los de arriba viven de la expansión que tú pagas, y tus reclutas pasan a ser los siguientes **proxies**.
+
+Las nucleares vuelven suicidas las conquistas territoriales clásicas, así que la expansión se desplaza: comprar empresas, empujar los límites de la naturaleza con tecnología, mantener el Estado en movimiento sin una guerra clásica. En su versión de broma del viejo fraude, engañas a **inversores** en vez de a socios menores.
+
+Si conservas leyes, logo o cargo mientras otro marca la siguiente campaña y tu gente carga el costo, eres el **socio menor** de la conquista ajena: un **proxy** con contrato amable.
 
 ## Mira la charla
 
-Esta nota es un bosquejo. El video recorre la **necesidad**, la **competencia** y por qué se atascan las **ligas** y la **ocupación**, y luego aterriza en el **fraude**, los colonos y cómo la expansión se mueve a la **tecnología** y al **comercio** cuando las conquistas clásicas de tierra se vuelven inviables ante las armas nucleares.
+Esta nota es un bosquejo. El video recorre la **necesidad**, la **competencia** y por qué se atascan las **ligas** y la **ocupación**, y luego aterriza en el **fraude**, los colonos y cómo la expansión se mueve a la **tecnología** y al **comercio** cuando las conquistas territoriales clásicas se vuelven inviables ante las armas nucleares.
 
 ## Guía de capítulos
 

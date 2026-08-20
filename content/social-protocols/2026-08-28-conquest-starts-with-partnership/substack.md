@@ -1,30 +1,36 @@
 ## Why does conquest start with a partnership?
 
-Johnathan Bi's lecture on Machiavelli (about **50 minutes**) treats **fraud** as how **power** scales, not as a glitch in an otherwise clean system. **Rome**, in this reading, did not open with occupation. It opened with an **invite**.
+Johnathan Bi's lecture on Machiavelli (about **50 minutes**) treats Roman conquest as an **invite**. Nearby cities kept their **laws** and rulers, joined as **junior partners**, and fought the next wars as **proxies**.
 
 > Force alone is never enough, but fraud alone will be found to be quite enough.
 
-## You keep your laws. You send the army.
+## Keep your laws, send your army
 
-Nearby cities kept their **laws** and their rulers. They joined as **junior partners**. The public story was partnership. The military fact was **subservience**: they supplied troops for Rome's next war.
+The public story was alliance; the military fact was **proxy** war: they supplied troops for Rome's next campaign.
 
-What moves is the **risk**. Rome uses those partners to take the next ring of cities, so the blood and the bill sit on the "allies" while Rome collects the expansion. That is **risk export**. The invite has to look mutual long enough for the next campaign to finish.
+Rome uses those partners for the next ring of cities, so the blood and the bill sit on the "allies" while Rome collects the expansion. That **risk export** is the point: allies pay for Rome's next war, and the invite has to look mutual long enough for the campaign to finish.
 
 ## Force costs too much to scale
 
-Machiavelli names three ways to expand. A **Tuscan** league of equals is easy to join and hard to drive: committees protect what they have. A **Spartan** occupation of pure subjects burns treasure and breeds rebellion, especially in cities used to living free.
+A **Tuscan** league of equals is easy to join and hard to drive: committees protect what they have. The UN still ends most headlines with "restraint" for the same reason. A **Spartan** occupation of pure subjects burns treasure and breeds rebellion, especially in cities used to living free.
 
-Rome's third path uses **fraud**: keep the costume of alliance while you shift the costs. Walking in as a partner lets you close the ring later. Occupying a free city on day one is the expensive path.
+Rome's third path uses **fraud**: keep the costume of alliance while **proxies** take the hits. Occupying a free city on day one burns treasure early; walking in as a partner lets you close the ring later.
 
-## Then the invite is rank
+## Then the partner becomes the subject
 
-When the junior partners have gathered enough subjects, Rome turns those partners into **subjects**. The center that still looks kind keeps the ring.
+When the junior partners have gathered enough subjects, Rome turns those partners into **subjects** while still looking like a friend at the center.
 
 > The key art of Roman conquest is not force, but fraud.
 
-Bi is talking about republics and city-states. The same **invite** still reads at human scale. A pyramid-style sales org (**Herbalife** is the familiar brand) brings you in as a partner: keep your name, keep your pitch, recruit the next ring. The **upline** lives off the expansion you pay for.
+**Sparta** shows the other failure mode. After it won the Peloponnesian War, it collapsed under an empire its closed institutions could not run, because victory forced an expansionary job the stable design could not hold.
 
-If you keep your laws, logo, or title while someone else sets the next campaign and eats the spoils, you are the **junior partner** in someone else's conquest. The fraud is the **operating system**.
+## The same invite recruits the next ring
+
+Bi is talking about republics and city-states, but a **pyramid sales scheme** still invites you as a partner: you keep your name and pitch, then recruit the next ring. The people above you live off the expansion you pay for, and your recruits become the next **proxies**.
+
+Nukes make classic land-grabs suicidal, so expansion shifts: buy companies, push nature's limits in tech, keep the state moving without a classic war. In Bi's joke version of the old fraud, you cheat **investors** instead of junior partners.
+
+If you keep your laws, logo, or title while someone else sets the next campaign and your people carry the cost, you are the **junior partner** in someone else's conquest: a **proxy** with a friendly contract.
 
 ## Watch the lecture
 

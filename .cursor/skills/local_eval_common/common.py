@@ -125,7 +125,9 @@ Rules for each step:
 - Judge **CURRENT only** for scores, quotes, and fixes.
 - Use PRIOR only as continuity context: setup/payoff, voice drift, echo redundancy, bridges that depend on earlier beats.
 - If CURRENT is fine alone but harms flow against PRIOR, say so under **Continuity**.
-- Do **not** re-audit PRIOR in full; at most one short continuity note per step.
+- Exception: if CURRENT only relabels PRIOR, restates it as a tautology, or restates its implication with a new metaphor pair (**Metaphor-shell restack**), that is a **CURRENT Failures-table row**, not a Continuity footnote. Do not Keep that quote.
+- Exception: if CURRENT's only payload is a sales, factory, driving, or hardening verb, a fake scene (`the same room`), or "name the box… and the box" (**Industry-verb shells**), that is a **CURRENT Failures-table row**. Do not Keep `"identity feels solid because the brain keeps assembling it."`
+- Do **not** re-audit PRIOR in full; at most one short continuity note per step unless the exception above applies.
 - Diagnos only; no full rewrite of the unit.
 """
 

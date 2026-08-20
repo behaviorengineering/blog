@@ -4,12 +4,12 @@ date: '2026-09-04T01:00:00+11:00'
 title: "🧠 Why does a healthy brain forget your keys?"
 type: video
 description: |
-  - Everyday **forgetting** (lost keys, a blank name) is the brain dropping what it never **encoded** (never paid enough attention to store). It keeps what is meaningful, emotional, surprising, or repeated.
-  - Most everyday lapses come from **distraction** at **encoding** (the moment attention becomes a memory): you cannot retrieve a parking spot you never looked at.
-  - **Alzheimer's** starts in the **hippocampus** (the region that weaves new memories) and can run silently for years. The early picture is failing to form new memories and not knowing how you arrived.
-  - For most people, **sleep**, aerobic exercise, diet, and new learning change whether amyloid plaques (sticky protein clumps) reach a tipping point over 15 to 20 years.
+  - Lost keys and blank names usually mean you never paid enough attention for the brain to **encode** the moment into a stored memory.
+  - Most everyday lapses are **distraction** at that moment. You cannot retrieve a parking spot you never looked at.
+  - **Alzheimer's** can run silently for years in the **hippocampus**, the region that binds sensory pieces into new memories. Early signs are failing to form new memories and not knowing how you arrived.
+  - For most people, **sleep**, exercise, diet, and new learning change whether **amyloid plaques**, sticky protein clumps that build over 15 to 20 years, ever reach a tipping point.
 sowhat: |
-  Everyday forgetting tracks **attention** and how memory is built. Alzheimer's tracks a slow **plaque clock**: years of sticky protein buildup that starts in the hippocampus. Sleep, movement, new learning, and unmanaged **chronic stress** are the levers most people actually have.
+  Everyday encoding failures and Alzheimer's look alike from the outside and run on different mechanisms. While **amyloid plaques** build for 15 to 20 years in the hippocampus, most people can still change the odds with **sleep**, movement, diet, and cutting unmanaged **chronic stress**.
 draft: false
 
 aliases:
@@ -35,13 +35,15 @@ People over 40 often treat a blank name or a lost key as a first warning of Alzh
 
 Memory is a pattern of neural activity you reactivate, distributed across the brain. When you recall a scene, visual and auditory areas light up in a pattern close to the original experience. The **hippocampus** acts as a memory weaver: it binds those pieces into one circuit so you can retrieve it later.
 
-Formation has four steps: **encoding** (attention becomes the brain's signaling language), **consolidation** (sleep locks the circuit), **storage** (lasting changes in architecture and chemistry), and **retrieval** (you fire the circuit again). Long-term memory splits into **episodic** (what happened to you), **semantic** (facts, including your own name and birthdate), and **muscle memory** (procedures living in the brain's motor cortex).
+Memory forms in four steps. **Encoding** turns attention into the brain's signaling language. Consolidation locks the circuit during sleep, storage leaves lasting architectural and chemical changes, and retrieval fires the circuit again.
 
-Episodic memory is unstable. Each time you recall an event you can change it, often without noticing. The revised version can overwrite the last one.
+Long-term memory splits into **episodic** (what happened to you), **semantic** (facts, including your own name and birthdate), and **muscle memory** (procedures living in the brain's motor cortex).
+
+Episodic memory is unstable. Each recall can change the event, often without noticing, and the new version can overwrite the last one.
 
 ### Names vanish; later tasks need a checklist
 
-The brain is excellent at what is meaningful, emotional, surprising, new, repeated, visual, or spatial. Names, movie titles, and cities are abstract proper nouns. They sit in what Genova calls neurological cul-de-sacs: few routes in. A baker's job (apron, oven, smell) has thousands of routes. That is the baker/Baker paradox: the occupation sticks; the surname does not.
+The brain sticks to what is emotional, surprising, repeated, visual, or spatial: a wedding sticks; a name at a party often does not. Names, movie titles, and cities are abstract proper nouns. They sit in what Genova calls neurological cul-de-sacs: few routes in. A baker's job (apron, oven, smell) has thousands of routes. That is the baker/Baker paradox: the occupation sticks; the surname does not.
 
 **Prospective memory**, remembering to do something later, fails by design. Airline pilots outsource lowering the wheels to a checklist, and surgeons do the same.
 
@@ -51,9 +53,9 @@ Bizarre visual associations help because they add routes. Picturing Dwayne Johns
 
 ### Distraction blocks the memory before it starts
 
-Phones, alerts, and feeds fragment attention, so encoding never starts. Googling a missing word leaves your memory store intact. **Digital amnesia** (the idea that search tools weaken memory) is a separate fear. Genova treats search as an open-book test: you retrieve the word and keep thinking. Social media can also work as a visual diary that reactivates old circuits. The leak is the stolen second of attention.
+Phones, alerts, and feeds fragment attention, so encoding never starts. Googling a missing word leaves your memory store intact. **Digital amnesia** (the idea that search tools weaken memory) is a separate fear. Genova treats search as an open-book test: you retrieve the word and keep thinking. Social media can also work as a visual diary that reactivates old circuits.
 
-### Alzheimer's fails new memories, not lost keys
+### Alzheimer's fails new memories first
 
 Alzheimer's pathology begins with **amyloid beta** protein forming sticky plaques. Enough plaques hit a tipping point, then **neurofibrillary tangles** (twisted fibers inside neurons) and cell death follow. The disease starts in the hippocampus, so new memories fail first, then spreads into problem-solving, navigation, language, and emotion.
 

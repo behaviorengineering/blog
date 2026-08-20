@@ -19,7 +19,8 @@ alwaysApply: false
 - MUST use **US English** spelling and vocabulary on default-language pages (largest global audience). Examples: **generalize**, **behavior**, **center**, **organize**. MUST NOT mix UK variants (**generalise**, **behaviour**, **centre**) in the same post unless quoting a source or title.
 - For **Spanish** sibling pages (`*.es.md` next to the English source), MUST write those fields in Spanish and MUST follow **`.cursor/skills/spanish-translation-content/SKILL.md`** (translationKey, taxonomies, type-specific fields).
 - MUST keep register informal-standard: plain vocabulary; use technical or academic terms only for named constructs, citations, or definitions.
-- MUST default to short declarative sentences. Use one longer sentence only for setup; do not chain many subclauses.
+- MUST default to short declarative sentences in **titles**, **`###` headings**, and **list bullets**. Use one longer sentence only for setup; do not chain many subclauses.
+- For **claims / video / Substack body** (and matching sidecars): default is **2–4 sentence mechanism paragraphs** (see **Explanatory prose**). MUST NOT meet the short-sentence rule by stacking two punch lines that restack one thesis.
 - MUST use repetition only for rhetorical emphasis, not padding.
 
 ## Publish `date`
@@ -82,11 +83,11 @@ alwaysApply: false
 Draft to **`.cursor/skills/revise-post/SKILL.md`** → **Step 2** (voice scrub) and **Step 5** (negation-first) on the **first pass**, on **all prose** (body, `description`, `sowhat`, `grounding`, sidecars). MUST NOT write slack prose expecting a later revision pass to fix voice.
 
 - MUST use **active voice**: named subjects perform actions. MUST NOT use passive piles ("It was determined that...", "it was found that...") when the actor is known.
-- MUST state ideas **directly**. MUST NOT use teacher/editor framing, bridge verbs, semicolon aphorisms, watch/read CTAs, **clever filler metaphors** ("not a label on your calendar", "the meter is running", "bodies buffer and compensates"), **caption pivots** ("Picard is careful here", "The pattern matters"), **telegraphic compression** (staccato same-length punch sentences), **parallel contrast stacks** ("Some people… Others…"), **construct-labeling meta** ("**X** names that move"), **academic accessibility jargon** ("partly available to reflection"), **mechanism jargon without a scene** ("cold two-track story"), filler hedges, meta-commentary, vague intensifiers, adverb stacks, or **AI rhetoric**. Full banned-pattern table: **revise-post** → **Step 2**.
+- MUST state ideas **directly**. MUST NOT use teacher/editor framing, bridge verbs, semicolon aphorisms, watch/read CTAs, **clever filler metaphors**, **Industry-verb shells** (`sells the blend`, `steer the rewrite`, `assembling it`, `next assembly`, `template can harden`, "name the box… and the box"), **caption pivots**, **telegraphic compression**, **parallel contrast stacks**, **construct-labeling meta**, **academic accessibility jargon**, **mechanism jargon without a scene**, filler hedges, meta-commentary, vague intensifiers, adverb stacks, or **AI rhetoric**. Full banned-pattern table: **revise-post** → **Step 2**.
 - MUST prefer spoken verbs and room-level scenes over packaged thesis pairs. Prefer "lie to the room / buy your own story" over "Some people… Others… **Self-deception** names that move."
 - MUST NOT use **negation-first** or **negation fluff** ("It is not X; it is Y", "Not A but B", "as X, not Y", trailing ", not a fuel shortage"). State the positive claim instead. **Exception:** evidence-scope qualifiers that narrow overclaim ("This does not mean every criticism is projection") are allowed; see **revise-post** → **Step 5**.
 - MUST gloss **named constructs and coined labels** in the **same sentence** on first use (`fixed energy budget: a limited daily pool…`). Cold-read rule: **revise-post** → **Step 3**.
-- Every sentence and paragraph MUST pass **standalone worth**: if it stood alone, would it be worth saying? It must add a new fact, example, mechanism, stakes, or turn not already in the title, list copy, or previous paragraph. MUST NOT keep throat-clearing, spine restatements, bridge-only lines, or wise summaries with no concrete detail. CUT/MERGE rules: **revise-post** → **Step 2**.
+- Every sentence and paragraph MUST pass **standalone worth**: if it stood alone, would it be worth saying? It must add a new fact, example, mechanism, stakes, or turn not already in the title, list copy, or previous paragraph. A new metaphor or coined label for the same claim is not a turn. CUT/MERGE rules: **revise-post** → **Step 2**.
 - For AI, neuroscience, or cognitive science topics, MAY read **`.cursor/skills/ai-for-general-audience/SKILL.md`** while drafting plain-language glosses.
 - Before publish, MUST still run **`.cursor/skills/revise-post/SKILL.md`** (default mode **`rough`**) even when the draft followed this section.
 
@@ -101,6 +102,8 @@ For **long prose** in **`type: claims`** (Thoughts body), **`type: video`** (bod
 - MUST treat readers as intelligent: explain the mechanism or evidence, then let it carry the point.
 - MUST NOT use rhetorical noun fragments ("The mirror.", "The wound.", "The truth.").
 - MUST NOT restack the same claim in altered poetic language.
+- MUST NOT ship **Metaphor-shell restack**: after sentence N, N+1 fails if it only relabels N, restates it as a tautology, or restates its implication with a new metaphor pair. Full test: **`.cursor/skills/revise-post/reference.md`** → **Metaphor-shell restack**.
+- MUST NOT ship **Industry-verb shells**: a clause fails even alone if its payload is `sells`, `steer`, `assembling` / `assembly`, `harden`, a fake scene (`the same room`), or "name the box… and the box." Full row: **`.cursor/skills/revise-post/reference.md`** → **Industry-verb shells**.
 - MUST use metaphors **rarely**, and only when they clarify.
 - Aim for psychologically careful, evidence-led, morally restrained tone: no accusing the reader, no promising hidden insight.
 - Full banned patterns, do/don't, and checks: **revise-post** → **Step 2** → **Explanatory prose**.

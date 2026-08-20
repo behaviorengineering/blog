@@ -42,12 +42,17 @@ This score measures editorial mechanics **without altering the author's voice**.
   | Vague intensifiers | "very", "really", "truly", "fundamentally", "categorically" |
   | Adverb stacks | "precisely exactly", "quite fundamentally", "very significantly" |
   | Corporate jargon | "unlock", "elevate", "drive outcomes", "synergize" |
+  | Metaphor-shell restack | After a mechanism sentence: "The blend is your experienced reality…" then "If the self were a sealed file, you would have no steering wheel." Deduct **2 points** per shell sentence (cap with other No Fluff hits inside this 10). Sequence test: **`.cursor/skills/revise-post/reference.md`**. |
+  | Industry-verb shells | "sells the blend as 'me'"; "steer the rewrite"; "keeps assembling it"; "next assembly"; "the same room"; "template can harden"; "name the box… and the box." Deduct **2 points** per shell clause. Clause test: **`.cursor/skills/revise-post/reference.md`**. |
 
   **Do/Don't Examples:**
   - Do: "Place cells track location."
   - Don't: "One live possibility is that place cells track location." (-2 points for hedge)
   - Do: "The model predicts behavior."
   - Don't: "This framework fundamentally maps the predictive architecture." (-2 points for intensifier + jargon)
+  - Do: "The brain mixes past expectations with what the senses pick up now."
+  - Don't: "The blend is your experienced reality, including the sense of who you are." (-2 points for Metaphor-shell restack)
+  - Don't: "Identity feels solid because the brain keeps assembling it." / "then sells the blend as 'me.'" (-2 points for Industry-verb shells)
 - **No Condescension (5):** Does it state ideas directly without teacher-like framing? Deduct 1 point per instance.
 
   **Teacher Framing Patterns:**
@@ -83,7 +88,7 @@ This score measures editorial mechanics **without altering the author's voice**.
 
 ### 5. Structural Integrity (15 points)
 
-- **Standalone Worth (5):** Does every sentence and paragraph earn its place alone (new fact, example, mechanism, stakes, or turn)? Deduct **1 point** per sentence or **2 points** per paragraph that fails (restates spine/H2, throat-clearing, wise summary with no concrete detail, bridge-only, or deleting it changes almost nothing). Cap this block at 5 points deducted. Quote the **full** failed sentence or paragraph in violations.
+- **Standalone Worth (5):** Does every sentence and paragraph earn its place alone (new fact, example, mechanism, stakes, or turn)? A new metaphor or coined label for the same claim is not a turn. Deduct **1 point** per sentence or **2 points** per paragraph that fails (restates spine/H2, throat-clearing, wise summary with no concrete detail, bridge-only, **Metaphor-shell restack**, or deleting it changes almost nothing). Cap this block at 5 points deducted. Quote the **full** failed sentence or paragraph in violations. Do not double-deduct the same sentence in both **No Fluff** and this block; prefer **No Fluff** for the shell, this block for other decoration.
 
 - **No Negation-First (8):** Are there ZERO "negation-first" constructions? Deduct 2 points for each instance (cap this block at 8 points deducted).
 
@@ -106,7 +111,7 @@ This score measures editorial mechanics **without altering the author's voice**.
 1. **Read the post** fully before scoring.
 2. **Cold-read** list-facing fields and each body **`##`** / **`###`** heading alone before scoring hooks (per **`.cursor/skills/revise-hooks/SKILL.md`**).
 3. **Evaluate each criterion block** against the specific banned patterns listed. Note the exact line or phrase that triggered a deduction.
-4. **For banned patterns:** When you find a filler hedge, teacher framing pattern, adverb stack, negation-first construction, seminar-label heading, or standalone-worth failure, quote the exact phrase (full sentence or paragraph for decoration) and cite which banned pattern it matches.
+4. **For banned patterns:** When you find a filler hedge, teacher framing pattern, adverb stack, negation-first construction, seminar-label heading, standalone-worth failure, **Metaphor-shell restack**, or **Industry-verb shells**, quote the exact phrase (full sentence or paragraph for decoration) and cite which banned pattern it matches.
 5. **Cut candidates:** In **Violations**, group standalone-worth failures under a **Cut candidates** subheading (CUT vs MERGE). Do not propose rewrites for lines marked CUT unless the user asks.
 6. **Report** in this exact structure:
 
