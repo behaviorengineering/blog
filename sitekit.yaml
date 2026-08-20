@@ -1,4 +1,5 @@
 site_root: .
 checkout_dir: tmp/pipelines-review
-pipelines_bin: pipelines
+pipelines_bin: /Users/hector/Xynova/ai/n8n/bin/pipelines
+pipelines_dir: /Users/hector/Xynova/ai/n8n
 mcp_listen: 127.0.0.1:3849

@@ -129,7 +129,7 @@ Do **not** set **`youtube_id`** **and** repeat the same id in a body shortcode (
 |------|------|
 | **`description`** | **Hooks** for list and card views: stakes, surprise, or tension, written so **pressing play feels worthwhile**. Bullets are fine. MUST read well **above** the player and in **feeds**; it is **not** the full article (that lives in the body). **MUST pass the cold-read gate** (below). |
 | **`sowhat`** | Optional **one-paragraph** umbrella payoff (list + single). Use when you want a tight line under the hooks; the **body** still does the real TLDR work. **MUST pass the cold-read gate** when present. |
-| **Body** | **So-what article / TLDR** after the embed: structured prose (**`###`** hook sections), main claims, mechanisms, examples, and your angle. A reader who never presses play should leave with the gist. Use **active, plain** explanations; name constructs when they matter. Short **speaker quotes** MAY punctuate a section. |
+| **Body** | **So-what article / TLDR** after the embed: structured prose (**`###`** hook sections), main claims, mechanisms, examples, and your angle. A reader who never presses play should leave with the gist. Use **active, plain** explanations; name constructs when they matter. Short **speaker quotes** MAY punctuate a section. **`###` headings MAY stay punchy.** Body paragraphs MUST NOT restack the section hook in metaphor shells or industry verbs (fail: "sells the blend as 'me'", "steer the rewrite", "keeps assembling it"). Patterns: **Metaphor-shell restack** and **Industry-verb shells** in **`.cursor/skills/revise-post/reference.md`**. |
 | **Chapter Guide** | Optional **end** table: timestamps for people who want to dip into the video after reading your summary. |
 
 ## Cold-read gate (`description` + `sowhat`) (MUST)
@@ -180,7 +180,7 @@ See **`.cursor/skills/revise-post/SKILL.md`** Step 1 and Step 3 for the revision
 - Write the **body** so it **stands alone** for text-first visitors, without implying “you failed if you did not watch.”
 - Keep **`description`** as **hooks**, not a duplicate of the whole body.
 - Run the **cold-read gate** on **`description`** and **`sowhat`** on every new or updated video post (not optional).
-- Use **educational, active voice**. Explain terms in plain language when you introduce them. Body, `description`, and `sowhat` MUST follow **Explanatory prose** in **`.cursor/rules/content-markdown-writing.mdc`** (claim before interpretation; 2–4 sentence paragraphs; no rhetorical fragment stacks).
+- Use **educational, active voice**. Explain terms in plain language when you introduce them. Body, `description`, and `sowhat` MUST follow **Explanatory prose** in **`.cursor/rules/content-markdown-writing.mdc`** (claim before interpretation; 2–4 sentence paragraphs; no rhetorical fragment stacks; no **Metaphor-shell restack**; no **Industry-verb shells**).
 
 **MUST NOT**
 

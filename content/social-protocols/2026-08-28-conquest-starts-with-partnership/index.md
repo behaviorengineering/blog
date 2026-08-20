@@ -4,11 +4,11 @@ date: '2026-08-28T01:00:00+11:00'
 title: "🤝 Why does conquest start with a partnership?"
 type: video
 description: |
-  - **Rome**, in Johnathan Bi's reading of Machiavelli, conquered by inviting neighbors as **junior partners**: they kept their laws and rulers, and they supplied troops.
+  - **Rome**, in Johnathan Bi's reading of Machiavelli, conquered by inviting neighbors as **junior partners**: they kept their laws and rulers, and they fought the next wars as **proxies**.
   - **Fraud** did the scaling: Rome used those partners to take the next cities, then turned the partners into subjects once the work was done.
-  - A sales pyramid runs the same **junior-partner** invite: you keep your name and pitch, then the upline lives off the recruits you pay to find.
+  - A **pyramid sales scheme** runs the same invite at human scale: you keep your name and pitch, recruit the next ring, and the people above you live off that expansion.
 sowhat: |
-  Keep your laws, logo, or title while someone else bills you for the next expansion. After the work is done, the invite is rank. City-states did this. Sales orgs still do.
+  Keep your laws, logo, or title while your people fight someone else's next campaign. After the work is done, the partner becomes the subject: city-states ran that play, and pyramid sales schemes still do.
 draft: false
 
 subtitle: "Johnathan Bi on Machiavelli, Rome, and fraud"
@@ -27,41 +27,39 @@ tags: ["SeeTheGame", "PowerAndControl", "RiskExport", "CheapNarratives"]
 
 ### They invited you as a partner
 
-People treat **fraud** as a glitch: a bad actor, a compliance miss, a bug in an otherwise clean system. Johnathan Bi's lecture on Machiavelli puts the move in the center of how power scales. The Roman art of conquest, in this reading, is an invitation.
-
-Nearby cities kept their laws and their rulers. They joined as **junior partners**. The public story was partnership. The military fact was subservience: they supplied troops for Rome's next war.
+In Johnathan Bi's reading of Machiavelli, Roman conquest opens with an invitation. Nearby cities kept their laws and rulers, joined as **junior partners**, and supplied troops for Rome's next campaign. The public story was alliance; the military fact was **proxy** war.
 
 ### Force is the expensive option
 
-Machiavelli names three ways to expand. A **Tuscan** league of equal partners is easy to join and hard to drive: committees protect what they have, and no one ruler wants to risk his men for a thin share of spoils. A **Spartan** occupation of pure subjects burns treasure and breeds rebellion, especially in cities used to living free.
+A **Tuscan** league of equal partners is easy to join and hard to drive: committees protect what they have, and no one ruler wants to risk his men for a thin share of spoils. The UN still ends most headlines with "restraint" for the same reason: a room of equals rarely risks a singular offensive. A **Spartan** occupation of pure subjects burns treasure and breeds rebellion, especially in cities used to living free.
 
-Rome's third path uses **fraud**: keep the costume of alliance while you shift the costs. Force alone rarely finishes the job. Fraud often does.
+Rome's third path uses **fraud**: keep the costume of alliance while **proxies** take the hits.
 
 > Force alone is never enough, but fraud alone will be found to be quite enough.
 
-In Machiavelli's frame, walking in as a partner lets you close the ring later. Occupying and wrecking a free city on day one is the costly path already named.
+Occupying and wrecking a free city on day one burns treasure early; walking in as a partner lets you close the ring later.
 
-### Keep your laws. Send your army.
+### Keep your laws, send your army
 
-The junior partner keeps local form: courts, customs, a familiar face in charge. What moves is the **risk**. Rome uses those partners to conquer the next ring of cities, so the blood and the bill sit on the "allies" while Rome collects the expansion. That is **risk export**. The invite has to look mutual long enough for the next campaign to finish. After that, the partnership has already done its work.
+The junior partner keeps local form: courts, customs, a familiar face in charge. Rome uses those partners as **proxies** for the next ring of cities, so the blood and the bill sit on the "allies" while Rome collects the expansion. That **risk export** is the point: allies pay for Rome's next war, and the invite has to look mutual long enough for the campaign to finish.
 
-### Then the invite becomes rank
+### Then the partner becomes the subject
 
-When the junior partners have gathered enough subjects, Rome turns those partners into subjects. The center that still looks benevolent keeps the ring.
+When the junior partners have gathered enough subjects, Rome turns those partners into subjects while still looking like a friend at the center.
 
 > The key art of Roman conquest is not force, but fraud.
 
-### The same invite wears a sales smile
+**Sparta** shows the other failure mode. After it won the Peloponnesian War, it collapsed under an empire its closed institutions could not run, because victory forced an expansionary job the stable design could not hold.
 
-Bi is talking about republics and city-states. The protocol still reads at human scale. A pyramid-style sales org (Herbalife is the familiar brand) invites you in as a partner: keep your name, keep your pitch, recruit the next ring. The upline lives off the expansion you pay for. Then the "partnership" was rank all along.
+### The same invite recruits the next ring
 
-You need an invite that preserves local form (your laws, logo, or title), ships the next costs onto the newcomer, and only later makes the hierarchy obvious.
+Bi is talking about republics and city-states, but a **pyramid sales scheme** still invites you as a partner: you keep your name and pitch, then recruit the next ring. The people above you live off the expansion you pay for, and your recruits become the next **proxies**.
 
 ### Who still looks invisible?
 
-Look at who holds the ring while appearing to serve the circle. In Bi's closing stretch, classic land-grabs run into nuclear weapons, so the expansion hunt moves into technology and commerce: buy companies, push nature's limits, keep the state in motion without a classic war.
+Bi asks who holds the outer ring of power while looking like they serve the inner circle. Nukes make classic land-grabs suicidal, so expansion shifts: buy companies, push nature's limits in tech, and keep the state moving without a classic war. In his joke version of the old fraud, you cheat investors instead of junior partners.
 
-If you keep your laws (or your logo, or your title) while someone else sets the next campaign and eats the spoils, you are the junior partner in someone else's conquest. The fraud is the operating system.
+If you keep your laws (or your logo, or your title) while someone else sets the next campaign and your people carry the cost, you are the junior partner in someone else's conquest: a **proxy** with a friendly contract.
 
 ### Chapter Guide
 

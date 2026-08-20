@@ -26,7 +26,7 @@ Note: this is communication clarity, not grammar police.
 
 **What:** Avoids abstract, preachy, flowery filler.
 
-**Forbidden shapes:** abstract verbs (*demonstrates*, *illustrates*, *serves as*, *embodies*); abstract nouns (*power of*, *essence of*); meta (*What this teaches…*, *The lesson here is…*).
+**Forbidden shapes:** abstract verbs (*demonstrates*, *illustrates*, *serves as*, *embodies*); abstract nouns (*power of*, *essence of*); meta (*What this teaches…*, *The lesson here is…*); **Metaphor-shell restack**; **Industry-verb shells** (`sells`, `steer`, `assembling`, `harden`, fake scene `the same room`).
 
 | Score | Meaning |
 |-------|---------|
@@ -91,8 +91,14 @@ Aligns with `.cursor/skills/site-perplexity-research/packs/prose-review.md` and 
 | Hedge piles | *One possibility is…*, *It is important to note…* |
 | Staccato thesis stacks | Same-length punch lines every sentence |
 | Compression smell | Cuts that kill cadence or voice for tightness alone |
+| Metaphor-shell restack | After a mechanism sentence: "The blend is your experienced reality…" then "If the self were a sealed file, you would have no steering wheel." Do not Keep the tautology as punchy. |
+| Industry-verb shells | "sells the blend as 'me'"; "steer the rewrite"; "keeps assembling it"; "next assembly"; "the same room"; "template can harden"; "name the box… and the box." Fail even as a single clause. |
 
-**Standalone worth:** For each flagged sentence: *If this stood alone, would it be worth saying?* Flag restatements and decoration.
+**Standalone worth:** For each flagged sentence: *If this stood alone, would it be worth saying?* Flag restatements and decoration. A new metaphor or coined label for the same claim is not a fact, mechanism, or turn.
+
+**Sequence test:** After sentence N, N+1 fails if it only relabels N, tautologizes N, or restates N's implication with a new metaphor pair. Do not Keep those quotes. Owner: **`.cursor/skills/revise-post/reference.md`** → **Metaphor-shell restack**.
+
+**Clause test:** A clause fails even alone if its payload is a sales, factory, driving, or hardening verb, or a fake scene. Owner: **`.cursor/skills/revise-post/reference.md`** → **Industry-verb shells**.
 
 ---
 

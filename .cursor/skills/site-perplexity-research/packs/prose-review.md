@@ -69,6 +69,8 @@ How well does this prose read for **humans**? Where does it **lose trust, rhythm
 | Staccato thesis stacks | Same-length punch lines every sentence |
 | Rhetorical noun fragments | "The mirror." / "The wound." as standalone beats |
 | Revelation stacks | Several one-line poetic restatements of one idea, no mechanism |
+| Metaphor-shell restack | After a mechanism sentence: "The blend is your experienced reality…" then "sealed file / steering wheel." Complete sentences that only relabel. Full test: **`.cursor/skills/revise-post/reference.md`**. |
+| Industry-verb shells | "sells the blend"; "steer the rewrite"; "keeps assembling it"; "next assembly"; "the same room"; "template can harden"; "name the box… and the box." Fail even as a single clause. Full row: **`.cursor/skills/revise-post/reference.md`**. |
 | Throat-clearing | Restates the heading in softer words; wise summary with no new detail |
 | Hedge piles | "One possibility is...", "It is important to note..." |
 | Watch/read homework | "Watch if you want the mechanism..." in standalone copy |

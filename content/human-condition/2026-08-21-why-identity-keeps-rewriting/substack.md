@@ -1,34 +1,28 @@
 ## Why does the brain keep selling you a new "me"?
 
-Your sense of **self** feels like a sealed file. Heather Berlin, Ethan Kross, and Nicole Vignola (Big Think) argue that identity feels solid because the brain keeps assembling it. Perception mixes **internal expectations** (what past experience taught you to expect) with **external sensory input** (what your senses pick up now). The blend is your experienced reality, including the sense of who you are.
-
-> If the self were a sealed file, you would have **no steering wheel**.
-
-Because it is built in real time, you can change trajectory: thoughts, attention, and the story you tell about yourself.
+Heather Berlin, Ethan Kross, and Nicole Vignola (Big Think) argue that a stable "me" is a live mix. Perception mixes **internal expectations** (what past experience taught you to expect) with **external sensory input** (what your senses pick up now). Because that mix runs in real time, thoughts, attention, and the story you tell about yourself can change what you feel as "me" tomorrow.
 
 ## You pull the evidence your mood already wants
 
-Prior experience wires the mind. The brain strengthens the connections that matter and lets others wither (**neural pruning**). **Mindset** steers what you notice and what you remember from the same room. In a negative headspace you pull more negative evidence; in a positive headspace you pull more positive evidence.
+Prior experience wires the mind. The brain strengthens the connections that matter and lets others wither (**neural pruning**). **Mood** then decides what you notice, and later recall, even when the kitchen has not changed. In a negative headspace you pull more negative evidence; in a positive headspace you pull more positive evidence.
 
-Mindfulness here means the brain controls what it attends to, what it takes in, and how it reacts. You live inside a **perception box**: a bounded window on the world. Once you notice your own box, empathy for other people living inside theirs comes easier.
+When you catch what you are attending to, you can change what you take in and how you react. You live inside a **perception box**: a bounded window on the world. Once you notice your own box, empathy for other people living inside theirs comes easier.
 
 ## The voice in your head is writing the plot
 
 The **inner voice** is part of **verbal working memory** (the scratchpad you use to hold and replay words in your head). It lets you simulate futures, plan moves, exercise self-control, and *storify* experience: turn what happened into a story of who you are.
 
-## When the inner voice turns into chatter
-
-**Chatter** is the dark side of that voice: rumination, worry, catastrophizing. The same system that solves problems can trap you in a loop that solves nothing. A science-based toolkit helps you regain control. **Rituals** (consistent behaviors) restore a sense of order when chatter takes over. The hard part is matching tool combinations to *your* flavor of loop.
+**Chatter** is the dark side of that voice: rumination, worry, catastrophizing. The same system that solves problems can trap you in a loop that solves nothing. **Rituals** (consistent behaviors) restore a sense of order when chatter takes over.
 
 ## Self-criticism starts as copying
 
-Environment and upbringing write the stories you tell about yourself. **Observational learning** (copying what you see in parents and peers, not only what you are told) teaches self-criticism early; that template can harden into a **fixed mindset** in adulthood.
+Environment and upbringing write the stories you tell about yourself. **Observational learning** (copying what you see in parents and peers, not only what you are told) teaches self-criticism early; as an adult you still use that same self-criticism.
 
-Humans also carry a **negativity bias**: negative information lands harder than positive. Left unchecked, that bias becomes a template for how you see the world. The brain repeats ingrained patterns to save energy, so change needs **conscious attention**. Small wins and deliberate focus pull out the positive narratives you want to live inside.
+Humans also carry a **negativity bias**: negative information lands harder than positive. Left unchecked, bad news keeps deciding how you see the world. The brain repeats ingrained patterns to save energy, so change needs **conscious attention**. Small wins and deliberate focus surface the positive narratives you want to live by.
 
 ## Grab the steering wheel and drive
 
-You can name the box parents or peers put you in, and the box you put yourself in, then rewrite it. The rewrite changes how you see yourself, and how others read you.
+You can say the story your parents or friends taught you about yourself, and the story you now tell yourself. Change what you attend to and which stories you repeat, and people who know you start meeting a different version of you.
 
 This note is a sketch. The clip is short; watch it for the toolkit, the upbringing beat, and how **attention** can break automatic patterns.
 

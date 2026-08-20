@@ -342,13 +342,15 @@ MUST run this step on **every prose field** under `content/`, not only the body:
 
 For **every** sentence and paragraph, ask: **If this stood alone, would it be worth saying?**
 
-It must add at least one of: a new fact, example, named mechanism, higher stakes, or a turn the reader did not already have from the title, list copy, or previous paragraph.
+It must add at least one of: a new fact, example, named mechanism, higher stakes, or a turn the reader did not already have from the title, list copy, or previous paragraph. A **new metaphor or coined label for the same claim** is not a fact, mechanism, stakes, or turn.
 
 **CUT** (quote the full sentence or paragraph) when:
 - It restates the section H2 or spine line in softer words.
 - It is throat-clearing before the real point ("The way out is...", "This is where it gets interesting...").
 - It is a wise-sounding summary with no new concrete detail.
 - It only bridges ideas already stated above and below.
+- It only relabels the previous claim (`the blend`) or restates its implication with a new metaphor pair (`sealed file` / `steering wheel`). See **Metaphor-shell restack** in **`reference.md`**.
+- Its only job is a sales, factory, driving, or hardening verb (`sells the blend`, `steer the rewrite`, `assembling it`, `next assembly`, `template can harden`) or a parallel "name the box… and the box." See **Industry-verb shells** in **`reference.md`**.
 - Deleting it changes almost nothing.
 
 **MERGE** when it repeats a nearby beat but has one usable detail; fold that detail into the stronger sentence, then cut the rest.
@@ -359,7 +361,7 @@ Apply across body, **`sowhat`**, **`description`**, **`grounding`**, section ope
 
 - [ ] Every sentence and paragraph passes the **standalone worth** test
 - [ ] Every paragraph uses active voice (subjects perform actions)
-- [ ] Zero banned patterns from **`reference.md`** (including revelation stacks / rhetorical fragments)
+- [ ] Zero banned patterns from **`reference.md`** (including revelation stacks / rhetorical fragments / **Metaphor-shell restack** / **Industry-verb shells**)
 - [ ] Claims, video, and Substack prose also passes **Explanatory prose** in **`reference.md`**
 - [ ] No new hedges or intensifiers introduced that were not in the original
 - [ ] No stacks of abstract nouns where a concrete verb would do
