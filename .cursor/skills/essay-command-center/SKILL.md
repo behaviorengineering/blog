@@ -1,15 +1,15 @@
 ---
 name: essay-command-center
 description: >-
-  Operates the essays pipeline through sitekit MCP and the browser command
+  Operates the essays pipeline through content-pipelines MCP and the browser command
   center: human-driven WIP, essay_create, essay_board, verb tools (arc/composition
   generate/regenerate/pick), then checkout/review/submit. Use when the user
   starts an essay, runs the essays pipeline, asks about piece_id, command center,
-  essay board, arc proposal, composition review, or sitekit essays tools. Do not
+  essay board, arc proposal, composition review, or content-pipelines MCP essay tools. Do not
   auto-chain the full pipeline unless the user explicitly asks for one-shot run.
 ---
 
-# Essay command center (sitekit MCP)
+# Essay command center (content-pipelines MCP)
 
 ## Role
 
@@ -17,8 +17,9 @@ You are the **operator's assistant**, not the pipeline autopilot. Postgres holds
 
 ## Prerequisites
 
-- `make serve` running (sitekit on `http://127.0.0.1:3849/mcp` per `.cursor/mcp.json`)
-- `sitekit.yaml`: `review_pipeline: essays`, `pipelines_bin` / `pipelines_dir` point at content-pipelines
+- `make serve` running (content-pipelines MCP on `http://127.0.0.1:3849/mcp` per `.cursor/mcp.json`)
+- `providers/content-pipelines-mcp` symlink (run `./scripts/link-providers.sh` or `make serve`; gitignored)
+- `content-pipelines-mcp.yaml`: `review_pipeline: essays`, `pipelines_bin` / `pipelines_dir` point at content-pipelines
 - Postgres + Meilisearch up for `pipelines essays` (see n8n README)
 - Rebuild `bin/pipelines` after content-pipelines CLI changes
 

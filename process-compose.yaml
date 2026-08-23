@@ -1,8 +1,8 @@
-# Hugo drafts+future, sitekit MCP, carousel-save.
+# Hugo drafts+future, content-pipelines MCP, carousel-save.
 # Start: make serve
 # Requires process-compose, hugo, and go on PATH.
-# sitekit.yaml sets pipelines_bin + pipelines_dir (n8n repo root with config.yaml).
-# Go processes use `go tool wgo` so they rebuild when .go files change (sitekit-mcp also watches ../sitekit).
+# content-pipelines-mcp.yaml sets pipelines_bin + pipelines_dir (n8n repo root with config.yaml).
+# Go processes use `go tool wgo` so they rebuild when .go files change (content-pipelines-mcp watches providers/content-pipelines-mcp).
 
 version: "0.5"
 
@@ -28,8 +28,8 @@ processes:
       signal: 15
       timeout_seconds: 5
 
-  sitekit-mcp:
-    command: ./scripts/serve-process.sh go tool wgo run -root ../sitekit ./cmd/sitekit-mcp --config sitekit.yaml
+  content-pipelines-mcp:
+    command: ./scripts/serve-process.sh go tool wgo run -root ./providers/content-pipelines-mcp ./cmd/content-pipelines-mcp --config content-pipelines-mcp.yaml
     environment:
       - "PIPELINES_BIN=/Users/hector/Xynova/ai/n8n/bin/pipelines"
       - "PIPELINES_DIR=/Users/hector/Xynova/ai/n8n"

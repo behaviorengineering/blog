@@ -40,7 +40,7 @@ help:
 	@echo "  make social-autopost    Run both facebook-autopost and linkedin-autopost"
 	@echo "  make build        Regenerate tag register, then production-like build -> public/ (hugo --minify --gc)"
 	@echo "                    Optional: BASE_URL=https://... HUGO_PREVIEW=1 make build (PR previews: future posts in lists)"
-	@echo "  make serve        process-compose: hugo (drafts + future), sitekit-mcp, carousel-save; Go cmds rebuild on .go save (alias: server)"
+	@echo "  make serve        process-compose: hugo (drafts + future), content-pipelines-mcp, carousel-save; Go cmds rebuild on .go save (alias: server)"
 	@echo "  make serve-down   stop process-compose and free ports 3848/3849 (alias: down)"
 	@echo "  make motif-editor Local motif mask editor (tools/motif-editor; http://localhost:3847)"
 	@echo "  make carousel-pdf  LinkedIn PDF from studio WebPs (DIR= folder; SLUG=; optional OUT= VARIANT=)"
@@ -134,7 +134,8 @@ serve-down down:
 	@./scripts/serve-cleanup.sh
 
 serve server:
-	@chmod +x scripts/serve-process.sh scripts/serve-cleanup.sh
+	@chmod +x scripts/serve-process.sh scripts/serve-cleanup.sh scripts/link-providers.sh
+	@./scripts/link-providers.sh
 	@./scripts/serve-cleanup.sh --preflight
 	@trap './scripts/serve-cleanup.sh' EXIT INT TERM; process-compose up -f process-compose.yaml
 

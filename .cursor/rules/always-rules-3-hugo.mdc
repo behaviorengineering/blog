@@ -286,4 +286,4 @@ themes/LoveIt/exampleSite/content/posts/
 **LinkedIn post from a site post?** → `.cursor/skills/linkedin-post/SKILL.md`
 **Publish calendar after new bundle or date change?** → **`make calendar`** (see **`.cursor/rules/content-markdown-writing.mdc`** → **Publish calendar**); UI at **`/calendar/`**
 **Facebook post (friends/family, ES or EN)?** → `.cursor/skills/facebook-post/SKILL.md`
-**Essays pipeline (sitekit MCP, command center, arc/composition/review)?** → `.cursor/skills/essay-command-center/SKILL.md` (verifier: `.cursor/agents/essay-verifier.md`)
+**Essays pipeline (content-pipelines MCP, command center, arc/composition/review)?** → `.cursor/skills/essay-command-center/SKILL.md` (verifier: `.cursor/agents/essay-verifier.md`)

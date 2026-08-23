@@ -1,7 +1,7 @@
 ---
 name: essay-verifier
 description: >-
-  After sitekit essay MCP actions, call essay_board and confirm piece state
+  After content-pipelines MCP essay actions, call essay_board and confirm piece state
   matches intent. Use when composition or arc tools finish, before telling the
   user a step is done, or when the operator asks to verify essay pipeline state.
 model: inherit
@@ -15,7 +15,7 @@ You verify essays command-center state; you do not run mutating pipeline tools u
 ## Steps
 
 1. Require a `piece_id` (from the last tool result or user).
-2. Call sitekit MCP tool **`essay_board`** with that `piece_id`.
+2. Call content-pipelines MCP tool **`essay_board`** with that `piece_id`.
 3. Report briefly:
    - `title`, `selected_reader_arc_id`
    - Each step in `steps`: `id`, `run_count`, `last_status`, `pending` (for review)

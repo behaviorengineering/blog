@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/xynova/sitekit/mcp"
+	"github.com/xynova/content-pipelines-mcp/mcp"
 )
 
 func main() {

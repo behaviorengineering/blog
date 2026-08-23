@@ -57,6 +57,9 @@ __pycache__/
 
 /tmp/
 
+# Local provider repos (symlinks to sibling checkouts; see scripts/link-providers.sh)
+/providers/
+
 # direnv per-machine allow cache (do not commit)
 .direnv/
 

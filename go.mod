@@ -14,14 +14,14 @@ require (
 	github.com/chromedp/cdproto v0.0.0-20250724212937-08a3db8b4327
 	github.com/chromedp/chromedp v0.14.2
 	github.com/mattn/go-isatty v0.0.20
-	github.com/xynova/sitekit v0.0.0
+	github.com/xynova/content-pipelines-mcp v0.0.0
 	github.com/yuin/goldmark v1.7.13
 	golang.org/x/image v0.45.0
 	golang.org/x/net v0.47.0
 	gopkg.in/yaml.v3 v3.0.1
 )
 
-replace github.com/xynova/sitekit => ../sitekit
+replace github.com/xynova/content-pipelines-mcp => ./providers/content-pipelines-mcp
 
 require (
 	github.com/andybalholm/brotli v1.2.0 // indirect
