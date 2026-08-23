@@ -26,7 +26,7 @@ SOCIAL_ASK_FLAG := $(if $(filter 1 true yes,$(SOCIAL_AUTOPOST_ASK)),-ask,) $(if 
 
 .DEFAULT_GOAL := help
 
-.PHONY: help all deps tidy build tag-register calendar publish-calendar facebook-autopost linkedin-autopost social-autopost serve server test lint clean list verify check-links substack-html-sample substack-draft sb-html sb-en sb-en-pick sb-en-pick-publish sb-es sb-es-pick-publish sb-list-unpublished sb-mark-published sb-config-init sb-login sb-cc mermaid-render mermaid-render-en mermaid-render-es mermaid motif-editor carousel-pdf carousel-save
+.PHONY: help all deps tidy build tag-register calendar publish-calendar facebook-autopost linkedin-autopost social-autopost serve server serve-down serve-cleanup down test lint clean list verify check-links substack-html-sample substack-draft sb-html sb-en sb-en-pick sb-en-pick-publish sb-es sb-es-pick-publish sb-list-unpublished sb-mark-published sb-config-init sb-login sb-cc mermaid-render mermaid-render-en mermaid-render-es mermaid motif-editor carousel-pdf carousel-save
 
 all: build
 
@@ -41,6 +41,7 @@ help:
 	@echo "  make build        Regenerate tag register, then production-like build -> public/ (hugo --minify --gc)"
 	@echo "                    Optional: BASE_URL=https://... HUGO_PREVIEW=1 make build (PR previews: future posts in lists)"
 	@echo "  make serve        process-compose: hugo (drafts + future), sitekit-mcp, carousel-save; Go cmds rebuild on .go save (alias: server)"
+	@echo "  make serve-down   stop process-compose and free ports 3848/3849 (alias: down)"
 	@echo "  make motif-editor Local motif mask editor (tools/motif-editor; http://localhost:3847)"
 	@echo "  make carousel-pdf  LinkedIn PDF from studio WebPs (DIR= folder; SLUG=; optional OUT= VARIANT=)"
 	@echo "  make carousel-save Local API so studio Save can write carousel.json (http://127.0.0.1:3848)"
@@ -126,8 +127,16 @@ carousel-pdf:
 carousel-save:
 	go run ./cmd/carousel-save -addr "127.0.0.1:3848" -root .
 
+serve-cleanup:
+	@./scripts/serve-cleanup.sh
+
+serve-down down:
+	@./scripts/serve-cleanup.sh
+
 serve server:
-	process-compose up
+	@chmod +x scripts/serve-process.sh scripts/serve-cleanup.sh
+	@./scripts/serve-cleanup.sh --preflight
+	@trap './scripts/serve-cleanup.sh' EXIT INT TERM; process-compose up -f process-compose.yaml
 
 test: build
 
@@ -162,7 +171,7 @@ substack-html-sample:
 # _SB_KNOWN_TARGETS so it is not mistaken for a post path. Paths must include '/' so plain words like "help" are not
 # picked up. Folder forms: section/slug, content/section/slug, optional trailing slash; index.md / index.es.md are
 # stripped later via _POST_NORM. Mark published also accepts: make sb-mark-published POST=section/slug.
-_SB_KNOWN_TARGETS := help all deps tidy build tag-register calendar publish-calendar facebook-autopost linkedin-autopost social-autopost serve server test lint clean list verify check-links substack-html-sample substack-draft sb-html sb-en sb-en-pick sb-en-pick-publish sb-es sb-es-pick-publish sb-list-unpublished sb-mark-published sb-config-init sb-login sb-cc mermaid-render mermaid-render-en mermaid-render-es mermaid carousel-pdf carousel-save
+_SB_KNOWN_TARGETS := help all deps tidy build tag-register calendar publish-calendar facebook-autopost linkedin-autopost social-autopost serve server serve-down serve-cleanup down test lint clean list verify check-links substack-html-sample substack-draft sb-html sb-en sb-en-pick sb-en-pick-publish sb-es sb-es-pick-publish sb-list-unpublished sb-mark-published sb-config-init sb-login sb-cc mermaid-render mermaid-render-en mermaid-render-es mermaid carousel-pdf carousel-save
 _SB_FIRST_GOAL := $(firstword $(MAKECMDGOALS))
 _SB_SECOND_GOAL := $(word 2,$(MAKECMDGOALS))
 ifneq ($(filter $(_SB_FIRST_GOAL),sb-en sb-es sb-en-pick sb-en-pick-publish sb-es-pick-publish substack-draft sb-mark-published),)

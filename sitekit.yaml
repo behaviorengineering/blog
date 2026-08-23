@@ -1,5 +1,7 @@
 site_root: .
 checkout_dir: tmp/pipelines-review
+essay_workspace_dir: tmp/essay-workspaces
 pipelines_bin: /Users/hector/Xynova/ai/n8n/bin/pipelines
 pipelines_dir: /Users/hector/Xynova/ai/n8n
+review_pipeline: essays
 mcp_listen: 127.0.0.1:3849
