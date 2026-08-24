@@ -3,23 +3,23 @@ translationKey: "2026-08-31-saying-34"
 date: '2026-08-31T01:00:00+11:00'
 heading_code: W34
 project: Street-Wisdom 💬🇻🇪
-title: Caimán no come caimán.
+title: El que se va sin que lo boten, regresa sin que lo llamen.
 type: sayings
-description: "No te haces nombre **quemando la casa del competidor**. Un colega mayor te aparta en el pasillo con una **advertencia en voz baja** después de una **reunión tensa**."
+description: "Dar un portazo se siente increíblemente poderoso en el momento, hasta que te das cuenta de que no tienes otro lugar adonde ir."
 tldr: |
-  El mundo es duro, pero **no atacas a los tuyos**. Es un **pacto de no agresión** entre iguales: cortesía profesional. No entregas a un colega por un punto fácil. La usas cuando le avisas a un rival que se retire porque comparten el mismo terreno, o cuando un fundador de startup elige no destrozar en público el producto de un competidor.
+  Pierdes tu **posición** cuando te vas por voluntad propia. Luego pierdes tu **ventaja** si intentas volver sin que te inviten. Una salida voluntaria te quita poder para cualquier reingreso futuro. Imagina a un empleado que renuncia y luego busca ser recontratado. O a una pareja que deja la relación y luego intenta reconciliarse sin que la llamen. Vuelven **ahora bajo sus condiciones, no las tuyas**.
 fluff: |
-  Fundadores de agencias rivales se toman un trago en una feria y respetan las **reglas no escritas**. Lo mismo cuando un igual podría hundir tu propuesta frente al cliente y elige callar.
+  Esto es como ese **mensaje privado silencioso** meses después, o la **advertencia clásica** que susurra la familia. Se nota con el excompañero que **renunció enfadado** y te escribe preguntando si el puesto sigue libre. Pasa igual cuando la familia susurra una advertencia después de que un pariente **rompe lazos por una disputa menor**, y luego aparece en la cena de Navidad como si nada hubiera pasado.
 draft: false
 
-featuredImage: "caiman-no-come-caiman.webp"
-featuredImagePreview: "caiman-no-come-caiman.webp"
+featuredImage: "el-que-se-va-sin-que-lo-boten.webp"
+featuredImagePreview: "el-que-se-va-sin-que-lo-boten.webp"
 
 images:
-  - caiman-no-come-caiman.webp
+  - el-que-se-va-sin-que-lo-boten.webp
 
 resources:
-  - src: caiman-no-come-caiman.webp
+  - src: el-que-se-va-sin-que-lo-boten.webp
     name: featured-image
 
 tags:
@@ -28,7 +28,7 @@ tags:
   - "TakeBackYourMcDonaldsCulture"
   - "ArepaContigo"
   - "VenezuelanSayings"
-  - "MutualNonAggression"
+  - "LeverageDeficit"
 categories: ["Cognitive-Memetics", "Por-Estas-Calles"]
 aliases:
   - "/cognitive-memetics/2026-08-31-saying-34/"
@@ -38,13 +38,14 @@ aliases:
 
 ### En inglés
 
-> Equivalentes más cercanos en inglés incluyen:
+> Las equivalencias más cercanas en inglés incluyen:
 >
-> - *There's honor among thieves*
-> - *We protect our own*
-> - *You don't mess with your own kind*
-> - *Never throw your own under the bus*
+> - *You will come crawling back.*
+> - *They always come back.*
+> - *The grass is not always greener.*
 
-### El precio del golpe barato
+### El déficit de influencia
 
-Cuando rompes el código del patio por un punto fácil, te enemistas con un igual y le avisas a toda la sala de que no eres de fiar. La confianza se deshilacha, y la próxima vez que necesites que te cubran, te quedas solo.
+Cuando te vas de un lugar por tu cuenta, pierdes tu influencia al salir. Intentar volver sin invitación significa aceptar las condiciones que te impongan y aguantar el resentimiento silencioso de quienes se quedaron y mantuvieron el trabajo. Esa pérdida de estatus vuelve incómodo cualquier regreso, y a menudo te deja peor que la posición que abandonaste.
+
+Usas esta frase cuando alguien que dejó el equipo con orgullo intenta regresar sin pedir disculpas.
