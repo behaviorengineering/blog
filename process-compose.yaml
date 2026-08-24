@@ -2,7 +2,7 @@
 # Start: make serve
 # Requires process-compose, hugo, and go on PATH.
 # content-pipelines-mcp.yaml sets pipelines_bin + pipelines_dir (n8n repo root with config.yaml).
-# Go processes use `go tool wgo` so they rebuild when .go files change (content-pipelines-mcp watches providers/content-pipelines-mcp).
+# Go processes use `go tool wgo` so they rebuild when .go files change (MCP via scripts/serve-content-pipelines-mcp.sh).
 
 version: "0.5"
 
@@ -29,7 +29,7 @@ processes:
       timeout_seconds: 5
 
   content-pipelines-mcp:
-    command: ./scripts/serve-process.sh go tool wgo run -root ./providers/content-pipelines-mcp ./cmd/content-pipelines-mcp --config content-pipelines-mcp.yaml
+    command: ./scripts/serve-process.sh ./scripts/serve-content-pipelines-mcp.sh
     environment:
       - "PIPELINES_BIN=/Users/hector/Xynova/ai/n8n/bin/pipelines"
       - "PIPELINES_DIR=/Users/hector/Xynova/ai/n8n"

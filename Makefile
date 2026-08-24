@@ -134,7 +134,7 @@ serve-down down:
 	@./scripts/serve-cleanup.sh
 
 serve server:
-	@chmod +x scripts/serve-process.sh scripts/serve-cleanup.sh scripts/link-providers.sh
+	@chmod +x scripts/serve-process.sh scripts/serve-cleanup.sh scripts/link-providers.sh scripts/serve-content-pipelines-mcp.sh
 	@./scripts/link-providers.sh
 	@./scripts/serve-cleanup.sh --preflight
 	@trap './scripts/serve-cleanup.sh' EXIT INT TERM; process-compose up -f process-compose.yaml
