@@ -17,8 +17,8 @@ EN9806	56
 MentalFitness	56
 OfficeCulture	54
 Petition	52
-Reptilocracy	40
-NarrativeControl	34
+Reptilocracy	42
+NarrativeControl	36
 KnowledgeWork	29
 Stress	21
 Accountability	17
@@ -31,11 +31,11 @@ Denial	14
 SystemsCanHijackYou	14
 TribeBeforeTruth	14
 StillYourChoice	12
+AccountabilityGap	10
 CultureRunsOnLanguage	10
 FearChain	10
 FutureOfWork	10
 SharedIllusionsRunTheWorld	10
-AccountabilityGap	8
 Automation	8
 IdeasBecomeIdentity	8
 PerformanceReview	8
@@ -82,6 +82,7 @@ RitualAndRules	4
 SameButDifferentWorlds	4
 SocialBrainSelection	4
 SpectacleEconomy	4
+StoryOverSignal	4
 Surveillance	4
 ThreeLetterAcronyms	4
 TransparencyTheatre	4
@@ -135,6 +136,7 @@ Geopolitics	2
 GestureAndThought	2
 GoodGuysDontPlayFair	2
 Gotcha	2
+GrandiosityGauges	2
 GroundHogCenturies	2
 HardTimesStrongMen	2
 HumanAIFlippedClassroom	2
@@ -204,7 +206,6 @@ StatusDrivenDeception	2
 StatusIsNotSurvival	2
 StickyLoops	2
 Stinginess	2
-StoryOverSignal	2
 StreetSmarts	2
 StructuralFixes	2
 SubscriptionEconomy	2
