@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-18T04:49:43Z",
+  "generatedAt": "2026-08-23T03:14:44Z",
   "channels": [
     "site-en",
     "site-es",
@@ -4590,6 +4590,35 @@
         },
         "substack-en": {
           "status": "present"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/reptilocracy/2026-08-30-stability-is-a-setting",
+      "section": "cognitive-memetics",
+      "title": "Stability Is a Setting",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Reptilocracy"
+      ],
+      "planned": "2026-08-30",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
         }
       }
     },
