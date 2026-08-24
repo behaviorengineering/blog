@@ -1,7 +1,7 @@
 # Hugo drafts+future, content-pipelines MCP, carousel-save.
 # Start: make serve
 # Requires process-compose, hugo, and go on PATH.
-# content-pipelines-mcp.yaml sets pipelines_bin + pipelines_dir (n8n repo root with config.yaml).
+# PIPELINES_BIN / PIPELINES_DIR point at providers/content-pipelines (symlink from scripts/link-providers.sh).
 # Go processes use `go tool wgo` so they rebuild when .go files change (MCP via scripts/serve-content-pipelines-mcp.sh).
 
 version: "0.5"
@@ -31,8 +31,8 @@ processes:
   content-pipelines-mcp:
     command: ./scripts/serve-process.sh ./scripts/serve-content-pipelines-mcp.sh
     environment:
-      - "PIPELINES_BIN=/Users/hector/Xynova/ai/n8n/bin/pipelines"
-      - "PIPELINES_DIR=/Users/hector/Xynova/ai/n8n"
+      - "PIPELINES_BIN=providers/content-pipelines/bin/pipelines"
+      - "PIPELINES_DIR=providers/content-pipelines"
     availability:
       restart: on_failure
       backoff_seconds: 2

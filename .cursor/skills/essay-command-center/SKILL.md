@@ -19,7 +19,8 @@ You are the **operator's assistant**, not the pipeline autopilot. Postgres holds
 
 - `make serve` running (content-pipelines MCP on `http://127.0.0.1:3849/mcp` per `.cursor/mcp.json`)
 - `providers/content-pipelines-mcp` symlink (run `./scripts/link-providers.sh` or `make serve`; gitignored)
-- `content-pipelines-mcp.yaml`: `review_pipeline: essays`, `pipelines_bin` / `pipelines_dir` point at content-pipelines
+- `content-pipelines-mcp.yaml`: `review_pipeline: essays`
+- `process-compose.yaml`: `PIPELINES_BIN` / `PIPELINES_DIR` point at `providers/content-pipelines`
 - Postgres + Meilisearch up for `pipelines essays` (see n8n README)
 - Rebuild `bin/pipelines` after content-pipelines CLI changes
 

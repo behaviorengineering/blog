@@ -23,4 +23,6 @@ link() {
 }
 
 # From site/providers/: up to ai/, then into the repo checkout.
+# content-pipelines lives on disk as n8n/ (module github.com/xynova/content-pipelines).
+link content-pipelines ../../../n8n
 link content-pipelines-mcp ../../../content-pipelines-mcp
