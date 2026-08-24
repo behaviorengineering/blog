@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-18T04:49:43Z",
+  "generatedAt": "2026-08-24T03:17:46Z",
   "channels": [
     "site-en",
     "site-es",
@@ -4594,9 +4594,38 @@
       }
     },
     {
+      "bundle": "cognitive-memetics/reptilocracy/2026-08-30-stability-is-a-setting",
+      "section": "cognitive-memetics",
+      "title": "Stability Is a Setting",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Reptilocracy"
+      ],
+      "planned": "2026-08-30",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
       "bundle": "cognitive-memetics/sayings/2026-08-31-saying-34",
       "section": "cognitive-memetics",
-      "title": "Caimán no come caimán.",
+      "title": "El que se va sin que lo boten, regresa sin que lo llamen.",
       "type": "sayings",
       "categories": [
         "Cognitive-Memetics",
@@ -4609,7 +4638,7 @@
           "status": "missing"
         },
         "linkedin": {
-          "status": "present"
+          "status": "missing"
         },
         "site-en": {
           "status": "present"
@@ -4847,6 +4876,35 @@
         },
         "site-es": {
           "status": "missing"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/sayings/2026-09-28-saying-38",
+      "section": "cognitive-memetics",
+      "title": "Caimán no come caimán.",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-09-28",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
         },
         "substack-en": {
           "status": "missing"

@@ -3,23 +3,23 @@ translationKey: "2026-08-31-saying-34"
 date: '2026-08-31T01:00:00+11:00'
 heading_code: W34
 project: Street-Wisdom 💬🇻🇪
-title: Caimán no come caimán.
+title: El que se va sin que lo boten, regresa sin que lo llamen.
 type: sayings
-description: "You don't build a name by **burning the competitor's house**. An older peer pulls you aside in the hallway with a **quiet warning** after a **tense meeting**."
+description: "Slamming the door feels incredibly powerful in the moment, until you realize you have nowhere else to go."
 tldr: |
-  You operate in a tough world, but **you don't attack your own kind**. This is **mutual non-aggression** among peers, a code of professional courtesy. You do not throw a colleague under the bus to score a quick point. You use it when you warn a rival to back off because you share common turf, or when a startup founder chooses not to publicly trash a competitor's product.
+  You **give up your standing** when you walk out by choice. Then you **lose your leverage** if you try to return uninvited. A voluntary exit predictably costs you power for any future re-entry. Imagine an employee who resigns, then seeks re-employment. Or a partner who leaves a relationship, then tries to reconcile uninvited. They come back **now on their terms, not yours**.
 fluff: |
-  Rival agency founders share a drink at a trade show and still keep the **unspoken rules**. Same instinct when a peer could sink your pitch in front of a client and chooses silence instead.
+  This is the **quiet DM months later**, or the **classic warning** whispered by family. You hear it when a former colleague who **quit in a huff** quietly slides into your DMs, asking if the old role is still open. You also hear it when family members whisper a warning after a relative **cuts ties over a minor dispute**, only to show up at Thanksgiving dinner as if nothing happened.
 draft: false
 
-featuredImage: "caiman-no-come-caiman.webp"
-featuredImagePreview: "caiman-no-come-caiman.webp"
+featuredImage: "el-que-se-va-sin-que-lo-boten.webp"
+featuredImagePreview: "el-que-se-va-sin-que-lo-boten.webp"
 
 images:
-  - caiman-no-come-caiman.webp
+  - el-que-se-va-sin-que-lo-boten.webp
 
 resources:
-  - src: caiman-no-come-caiman.webp
+  - src: el-que-se-va-sin-que-lo-boten.webp
     name: featured-image
 
 tags:
@@ -28,7 +28,7 @@ tags:
   - "TakeBackYourMcDonaldsCulture"
   - "ArepaContigo"
   - "VenezuelanSayings"
-  - "MutualNonAggression"
+  - "LeverageDeficit"
 categories: ["Cognitive-Memetics", "Por-Estas-Calles"]
 aliases:
   - "/cognitive-memetics/2026-08-31-saying-34/"
@@ -40,11 +40,12 @@ aliases:
 
 > Closest English equivalents include:
 >
-> - *There's honor among thieves*
-> - *We protect our own*
-> - *You don't mess with your own kind*
-> - *Never throw your own under the bus*
+> - *You will come crawling back.*
+> - *They always come back.*
+> - *The grass is not always greener.*
 
-### The Price of the Cheap Shot
+### The Leverage Deficit
 
-When you break the unspoken code to win a quick point, you alienate one peer and signal to the entire room that you're unsafe. Trust frays, and next time you need someone to cover you, you're on your own.
+When you walk out of a room voluntarily, you burn your leverage on the way out. Trying to return uninvited means accepting whatever terms are handed to you, and absorbing the quiet resentment of those who stayed behind and kept the lights on. This loss of standing makes any return awkward and often less favorable than the position you abandoned.
+
+You reach for it when someone who proudly abandoned the team tries to slip back into the lineup without an apology.

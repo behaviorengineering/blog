@@ -7,7 +7,7 @@ description: >-
   without meta openers; sayings card **`description`** derived from **`title`** + **`tldr`** +
   **`fluff`** when applying this skill; sayings **`**bold**`** per **`.cursor/skills/revise-emphasis/SKILL.md`**).
   Footer "But why" explainers share one gradient card in **`assets/css/_custom.scss`** (Cube-Cows hub, Street Wisdom, Reptilocracy, Pawtropolis); extend that block instead of duplicating styles.
-  **Hybrid prose:** keep street/cartoon emotion, ban empty punch closers and poetic thesis remixes (see **Hybrid prose**).
+  **Hybrid prose:** keep street/cartoon emotion, ban empty punch closers and poetic thesis remixes (see **Hybrid prose**). **Reptilocracy** episodes use **clinical institutional analysis** (see **Reptilocracy voice**), not rebel heat or dashboard poetry.
   **Title** stays plain (no leading emoji; this section opts out of optional title emoji used in other site sections). **heading_code**, **categories**, featured images. Use when editing content/cognitive-memetics/,
   when the user mentions Cognitive-Memetics, cube-cows, Tales from the Cube Farm,
   T-Shirt Art, Por-Estas-Calles, Street Wisdom, Cultural Stopwatch, cartoon stopwatch,
@@ -84,13 +84,13 @@ Essays / video / Substack use **Explanatory prose** in **`.cursor/rules/content-
 | Sayings `tldr` | Yes (short) | Name meaning, use, or scene | Trait-dictionary stacks only ("clever, astute, street-smart") |
 | Sayings `fluff` | Situational context | Lead with emotion or **one** clarifying metaphor, then when/who uses it; concrete scenes | Metaphor-only fluff with no uses; metaphor stacks; mystical/abstract culture praise |
 | Psych-Fitness `tldr` | Campaign vignette + lesson | End on the fitness/mechanism line when needed | Caption pivots: "The long view matters.", "The connection is direct.", "The eve of decision." |
-| Reptilocracy `tldr` / `fluff` | Satire punch OK | Keep bait-and-switch / institution mechanism concrete | Aphorism quotes that restate the claim prettier after it is already clear |
+| Reptilocracy `description` / `tldr` / `fluff` | Clinical mechanism | Name who does what; continuity vs early correction; late cost when story and reality diverge | Dashboard caption poetry; rebel/activist heat; empty MBA fog; aphorism remix of the thesis |
 | T-Shirt Art teaser / `tldr` | Merch line OK | Tie the slogan to one mechanism or threat | Slogan-only copy with no so-what |
 | Project "But why" (`i18n`) | Manifesto-tinged OK | Name series mechanism once | Do not copy that lyric tone into every episode field |
 
 #### Rules
 
-- MUST keep **one** street/cartoon emotional hook when it helps; the **next** clause MUST name who does what, when someone says it, or what changes if true.
+- MUST keep **one** street/cartoon emotional hook when it helps; the **next** clause MUST name who does what, when someone says it, or what changes if true. **Exception (Reptilocracy):** prefer clinical mechanism first; see **Reptilocracy voice**.
 - MUST prefer one concrete scene or use-case over a prettier restatement of the same thesis.
 - MUST cut or merge a line that fails: *If this stood alone, would it add a fact, scene, or use?*
 - MUST NOT ship **punch closers** that only remix the claim ("The X matters.", "The connection is…", "The eve of…").
@@ -108,6 +108,41 @@ For **`Por-Estas-Calles`** / Street Wisdom **`fluff` only**:
 - MUST NOT let the metaphor remix the thesis without adding a use ("harmony with names still legible" alone fails; pair it with "You reach for it when…").
 - **`tldr`** stays tighter: meaning + scene first; save the optional literary beat for `fluff`.
 
+#### Reptilocracy voice (clinical institutional analysis)
+
+For posts under **`content/cognitive-memetics/reptilocracy/`** (category **`Reptilocracy`**), episode **`description`**, **`tldr`**, and **`fluff`** use a **clinical** register. Satire stays dry: name the institutional move as it works in practice. This **overrides** **Human-first narrative** emotion-first openings for Reptilocracy episode fields (the cartoon may still carry the gag; the copy names the mechanism).
+
+**Thesis shape (MUST make legible early, usually in `tldr`):**
+
+1. Institutions treat a hard signal (red gauges, failed policy, bad metric) as a **messaging / board-deck** problem first.
+2. **Continuity** is cheaper than early structural change (comms, PR, reframed talking points).
+3. When a real correction arrives, it is often **late**: the gap between the **public story** and day-to-day reality has already widened.
+
+**MUST**
+
+- Call things out plainly: who acts (comms, board, PR), what they do (update **public readout**, revise **board deck**, delay audit), why it is rational for them (cost, tenure, predictability).
+- Prefer concrete institutional nouns (**press release**, **board deck**, **audit**, **executive suite**, **quiet restructure**) over abstract poetry.
+- Keep each `fluff` paragraph earning its place: rhythm → incentive → who it protects → delayed cost (or a tighter subset of those beats).
+- Keep episode constructs when the panel names them (for example **Grandiosity Gauges**, **Leadership Confidence: Stable**).
+- Still obey site-wide bans: no em dash; no **Industry-verb shells** / fake scene **`the room`** (see **`.cursor/skills/revise-post/reference.md`** and **`.cursor/rules/content-markdown-writing.mdc`**).
+
+**MUST NOT**
+
+- Caption the panel beat-by-beat (green/red lever poetry that restates the image without a institutional claim).
+- Ship rebel or activist heat: hide / lie / deception / fake / eat the cost / martyr frontline closings, unless the author explicitly asks for that register.
+- Ship empty MBA fog: *variance*, *operational reality*, *situational awareness*, *data anomaly*, *display error*, *appearance of control*, *mechanics of survival*, *curate the evidence*, *clean slide*, *incentive structure* as filler without naming the move.
+- Soften the thesis into plausible-deniability mush that never states the late-cost beat.
+
+**Do / Don't (Reptilocracy)**
+
+| Do (clinical) | Don't |
+|---------------|--------|
+| Red gauges handled as a **comms** problem; **board deck** still shows **Leadership Confidence: Stable** (`2026-08-30-stability-is-a-setting`) | "One finger toggles the **public readout**… treats a **systemic collapse** as a **display error**" |
+| Continuity cheaper than correction; late **quiet restructure** after story and reality diverge | "**Frontline staff** eat the cost… layoffs land on people who never touched the lever" |
+| Wage freeze → executive bonus; name the **bait-and-switch** | Floating aphorism after the mechanism is already clear |
+
+**Gold reference:** `content/cognitive-memetics/reptilocracy/2026-08-30-stability-is-a-setting/` (`tldr` states the thesis; `fluff` is clinical sequence). Photo-op rhythm still OK when concrete: `2026-08-02-photo-op-readiness/`.
+
 #### Do / Don't (from shipped posts)
 
 | Do (hybrid) | Don't (empty polish) |
@@ -119,7 +154,8 @@ For **`Por-Estas-Calles`** / Street Wisdom **`fluff` only**:
 | Wage freeze → executive bonus; levy → consultant fees; then name the **bait-and-switch** (reptilocracy) | "We inherit the future from no one, so we spend it freely." as a floating aphorism after the mechanism is clear |
 
 **Gold reference for Street Wisdom fluff:** `content/cognitive-memetics/sayings/2026-05-18-saying-19/` (`fluff`: emotion → uses → settings).  
-**Gold reference for Psych-Fitness:** `content/cognitive-memetics/psych-fitness-28/2026-05-04-day-03-clear-thinking/` (scene → mechanism; no oracle coda).
+**Gold reference for Psych-Fitness:** `content/cognitive-memetics/psych-fitness-28/2026-05-04-day-03-clear-thinking/` (scene → mechanism; no oracle coda).  
+**Gold reference for Reptilocracy:** `content/cognitive-memetics/reptilocracy/2026-08-30-stability-is-a-setting/` (clinical thesis → delayed cost; see **Reptilocracy voice**).
 
 ### Sayings emphasis (`type: sayings`)
 
@@ -209,6 +245,10 @@ Some **`type: sayings`** posts translate **Venezuelan street wisdom** for an Eng
 For Venezuelan saying posts, **include those four tags** when promoting the series, plus **`VenezuelanSayings`** and optional **post-specific** tags (one or two hooks for that saying). Keep total tags roughly **five to seven** if you add both series tags and a hook.
 
 **LinkedIn post format:** Use **`.cursor/skills/linkedin-post/SKILL.md`** (sayings / Street Wisdom **fold-first layout**): quoted **`title`** only on line one; then **`❓`** + `tldr`, **`AND:`** + `fluff`, **`🔤 IN ENGLISH`**, **`🟣`** + **`{heading_code}: Street-Wisdom 💬🇻🇪`** + series paragraphs from **`sayingsProjectAboutP1`** / **`P2`**, hashtags, **`🖋️ Full post (site) →`** (ES then EN when bilingual), **`🔗 Por-Estas-Calles (English) →`** hub URL. Reference: `content/cognitive-memetics/sayings/2026-06-01-saying-21/linkedin.txt`.
+
+### Reptilocracy
+
+Posts under **`content/cognitive-memetics/reptilocracy/`** use **`categories`**: **`Cognitive-Memetics`** and **`Reptilocracy`**. Set **`project: Reptilocracy 🦎🏛️`**. Episode prose MUST follow **Reptilocracy voice** under **Hybrid prose** (clinical mechanism, not rebel heat or panel caption). LinkedIn: **`.cursor/skills/linkedin-post/SKILL.md`** → Reptilocracy. Footer explainer + petition CTA: **Theme and style** → **Project "But why" explainer cards**.
 
 ### T-Shirt Art
 
