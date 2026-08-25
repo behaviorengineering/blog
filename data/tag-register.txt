@@ -4,21 +4,21 @@
 
 ## Active tags
 # Columns: tag<TAB>file_count (each file counts at most once per distinct tag)
-Leadership	81
+Leadership	82
 RealityCheck	76
-ArepaContigo	73
-CulturalStopwatch	73
-StreetWisdom	73
-TakeBackYourMcDonaldsCulture	73
-VenezuelanSayings	73
+ArepaContigo	75
+CulturalStopwatch	75
+StreetWisdom	75
+TakeBackYourMcDonaldsCulture	75
+VenezuelanSayings	75
 CubeCows	72
 PsychFitness	58
 EN9806	56
 MentalFitness	56
 OfficeCulture	54
 Petition	52
-Reptilocracy	42
-NarrativeControl	36
+Reptilocracy	44
+NarrativeControl	38
 KnowledgeWork	29
 Stress	21
 Accountability	17
@@ -30,8 +30,8 @@ CheapNarratives	14
 Denial	14
 SystemsCanHijackYou	14
 TribeBeforeTruth	14
+AccountabilityGap	12
 StillYourChoice	12
-AccountabilityGap	10
 CultureRunsOnLanguage	10
 FearChain	10
 FutureOfWork	10
@@ -73,6 +73,7 @@ FreeEnergyPrinciple	4
 HiddenCosts	4
 IndustrialMindset	4
 MisalignedIncentives	4
+Oversight	4
 PatternsNotWorldModels	4
 PowerAndControl	4
 PromiseManagement	4
@@ -152,6 +153,7 @@ IteratedPrisonersDilemma	2
 KnowYourPolitics	2
 LanguageAndMind	2
 LegitimacyMachines	2
+LeverageDeficit	2
 LiveLaughScroll	2
 LongTerm	2
 LowCeiling	2
@@ -167,7 +169,6 @@ NoBrakesNoCorrection	2
 OffTarget	2
 Opportunism	2
 OptimisedForStaying	2
-Oversight	2
 OwnYourThoughts	2
 Pain	2
 PatienceAndResistance	2
@@ -224,9 +225,10 @@ VoluntarySubmission	2
 WhatTheHeatProtects	2
 WorkplaceBullying	2
 ZeroSumTraps	2
+ClosedLoop	1
 HandsOff	1
 
 ## Deprecated tags
 # Source: data/tag-deprecations.toml. Prefer "to" for new content instead of "from".
 # Columns: from<TAB>to<TAB>files_still_using_from
-ArepaContigo	ArepaContigo	73
+ArepaContigo	ArepaContigo	75

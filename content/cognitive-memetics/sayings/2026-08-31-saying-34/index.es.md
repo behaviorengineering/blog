@@ -5,11 +5,11 @@ heading_code: W34
 project: Street-Wisdom 💬🇻🇪
 title: El que se va sin que lo boten, regresa sin que lo llamen.
 type: sayings
-description: "Dar un portazo se siente increíblemente poderoso en el momento, hasta que te das cuenta de que no tienes otro lugar adonde ir."
+description: "Quien se marcha con la **maleta** hecha se aleja, y luego **se asoma con vacilación** por la puerta. Quienes se van por su cuenta a menudo vuelven sin que los inviten."
 tldr: |
-  Pierdes tu **posición** cuando te vas por voluntad propia. Luego pierdes tu **ventaja** si intentas volver sin que te inviten. Una salida voluntaria te quita poder para cualquier reingreso futuro. Imagina a un empleado que renuncia y luego busca ser recontratado. O a una pareja que deja la relación y luego intenta reconciliarse sin que la llamen. Vuelven **ahora bajo sus condiciones, no las tuyas**.
+  Irte por voluntad propia te hace **perder tu posición**. Intentas regresar sin que te inviten y **pierdes tu influencia**. Una salida voluntaria te quita poder para cualquier reingreso futuro. Imagina a un empleado que renuncia y después busca ser recontratado. O a una pareja que deja la relación y luego intenta reconciliarse sin invitación. Regresan **ahora bajo sus condiciones, no las tuyas**.
 fluff: |
-  Esto es como ese **mensaje privado silencioso** meses después, o la **advertencia clásica** que susurra la familia. Se nota con el excompañero que **renunció enfadado** y te escribe preguntando si el puesto sigue libre. Pasa igual cuando la familia susurra una advertencia después de que un pariente **rompe lazos por una disputa menor**, y luego aparece en la cena de Navidad como si nada hubiera pasado.
+  Es ese **mensaje privado** que llega meses después, o la **advertencia clásica** que te susurra la familia. Pasa con el excolega que **renunció de golpe** y te escribe por privado preguntando si el puesto anterior sigue disponible. También cuando los familiares te avisan en voz baja después de que un pariente **se distanció por una tontería**, solo para aparecer en la cena de Acción de Gracias como si nada.
 draft: false
 
 featuredImage: "el-que-se-va-sin-que-lo-boten.webp"
@@ -38,7 +38,7 @@ aliases:
 
 ### En inglés
 
-> Las equivalencias más cercanas en inglés incluyen:
+> Equivalentes más cercanos en inglés:
 >
 > - *You will come crawling back.*
 > - *They always come back.*
@@ -46,6 +46,6 @@ aliases:
 
 ### El déficit de influencia
 
-Cuando te vas de un lugar por tu cuenta, pierdes tu influencia al salir. Intentar volver sin invitación significa aceptar las condiciones que te impongan y aguantar el resentimiento silencioso de quienes se quedaron y mantuvieron el trabajo. Esa pérdida de estatus vuelve incómodo cualquier regreso, y a menudo te deja peor que la posición que abandonaste.
+Cuando te vas de un sitio por voluntad propia, quemas tu influencia al salir. Intentar volver sin invitación significa aceptar las condiciones que te pongan y aguantar el resentimiento silencioso de quienes se quedaron y mantuvieron todo funcionando. Esa pérdida de estatus convierte cualquier regreso en un movimiento débil: ya no negocias, te adaptas a lo que te quede.
 
-Usas esta frase cuando alguien que dejó el equipo con orgullo intenta regresar sin pedir disculpas.
+La usas cuando alguien que abandonó el equipo con orgullo intenta volver sin disculparse.
