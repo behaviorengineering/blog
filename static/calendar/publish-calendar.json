@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-24T03:17:46Z",
+  "generatedAt": "2026-08-25T03:17:41Z",
   "channels": [
     "site-en",
     "site-es",
@@ -4638,7 +4638,7 @@
           "status": "missing"
         },
         "linkedin": {
-          "status": "missing"
+          "status": "present"
         },
         "site-en": {
           "status": "present"
@@ -4709,6 +4709,35 @@
       }
     },
     {
+      "bundle": "cognitive-memetics/reptilocracy/2026-09-06-the-self-certified-certificate",
+      "section": "cognitive-memetics",
+      "title": "The Self-Certified Certificate",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Reptilocracy"
+      ],
+      "planned": "2026-09-06",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "missing"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "missing"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
       "bundle": "cognitive-memetics/sayings/2026-09-07-saying-35",
       "section": "cognitive-memetics",
       "title": "Tiene cara de yo no fui.",
@@ -4747,6 +4776,35 @@
         "Cube-Cows"
       ],
       "planned": "2026-09-09",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "missing"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "missing"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/reptilocracy/2026-09-13-the-alarm-worked",
+      "section": "cognitive-memetics",
+      "title": "The Alarm Worked",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Reptilocracy"
+      ],
+      "planned": "2026-09-13",
       "draft": false,
       "channels": {
         "facebook": {
@@ -4941,6 +4999,35 @@
       }
     },
     {
+      "bundle": "cognitive-memetics/sayings/2026-10-05-saying-39",
+      "section": "cognitive-memetics",
+      "title": "La verdad es hija de Dios.",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-10-05",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
       "bundle": "cognitive-memetics/cows/2026-10-07-cow-w33",
       "section": "cognitive-memetics",
       "title": "Different ways of working",
@@ -4963,6 +5050,35 @@
         },
         "site-es": {
           "status": "missing"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/sayings/2026-10-12-saying-40",
+      "section": "cognitive-memetics",
+      "title": "Miente hasta cuando dice la verdad.",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-10-12",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
         },
         "substack-en": {
           "status": "missing"
@@ -4999,6 +5115,35 @@
       }
     },
     {
+      "bundle": "cognitive-memetics/sayings/2026-10-19-saying-41",
+      "section": "cognitive-memetics",
+      "title": "Le busca cinco patas al gato para justificar lo injustificable.",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-10-19",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
       "bundle": "cognitive-memetics/cows/2026-10-21-cow-w35",
       "section": "cognitive-memetics",
       "title": "When everyone's responsible",
@@ -5021,6 +5166,35 @@
         },
         "site-es": {
           "status": "missing"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/sayings/2026-10-26-saying-42",
+      "section": "cognitive-memetics",
+      "title": "La verdad no peca, pero incomoda.",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-10-26",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
         },
         "substack-en": {
           "status": "missing"

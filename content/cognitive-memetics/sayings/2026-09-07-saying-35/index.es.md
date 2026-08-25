@@ -5,11 +5,11 @@ heading_code: W35
 project: Street-Wisdom 💬🇻🇪
 title: Tiene cara de yo no fui.
 type: sayings
-description: "Los **ojos muy abiertos** y la **sonrisa dulce** no tapan el **jarrón hecho polvo** ahí en el piso."
+description: "**Ojos grandes** y una **sonrisa dulce** no disimulan el **jarrón roto** que está ahí mismo."
 tldr: |
-  Esa cara de "¿yo?" ante un desastre obvio es **inocencia fingida** frente a la **evidencia**. Pasa cuando un niño se para junto a la lámpara rota con cara de santo, o cuando un amigo niega haberse comido la última pizza con migas en la barbilla.
+  Es esa **inocencia fingida** ante **evidencia innegable**: alguien te pone cara de 'yo no fui' cuando el desastre es obvio. Lo usas cuando un niño está junto a una lámpara rota con una cara angelical, o cuando un amigo niega haberse comido la última rebanada de pizza con migas en la barbilla.
 fluff: |
-  A mayor culpa, más se le agrandan los ojos. Se ve cuando el compañero de piso deja el **cartón de leche vacío** en la nevera y se hace el **sorprendido** en cuanto se lo señalas, o cuando un colega manda por error un **mail interno al cliente** y de pronto finge que no entiende cómo funcionan los hilos de correo.
+  Cuanto más culpable es alguien, más se hace el **desentendido**. Un compañero de piso deja un **cartón de leche vacío** en la nevera y se muestra completamente desconcertado cuando se lo señalas. O un colega copia por error a un cliente en un **correo de queja interno** y, de repente, hace como si no supiera cómo funcionan los hilos de correo electrónico.
 draft: false
 
 featuredImage: "tiene-cara-de-yo-no-fui.webp"
@@ -38,15 +38,13 @@ aliases:
 
 ### En inglés
 
-> Equivalentes más cercanos en inglés incluyen:
+> Equivalentes en inglés:
 >
 > - *Butter wouldn't melt in their mouth*
 > - *Playing innocent*
 > - *Putting on an innocent act*
 > - *Who, me?*
 
-### El precio de hacerse el inocente
+### El costo de hacerse el desentendido
 
-Hacerse el inocente tras el lío te pasa a ti la carga mental y emocional de limpiarlo. La confianza se deshilacha. No arreglas un problema con quien finge que ni estaba en la habitación cuando pasó.
-
-El dicho sale cuando la evidencia mira a los dos a la cara y el otro sigue esperando que te tragues la actuación.
+Cuando alguien finge inocencia sobre lo que hizo, no solo esquiva el error. Te cargan a ti con el peso mental y emocional de limpiarlo. La confianza se rompe porque no puedes resolver nada con quien niega haber estado presente cuando ocurrió todo. Te dan ganas de confrontarlos cuando la evidencia es innegable para los dos, pero ellos siguen esperando que les creas su cuento.

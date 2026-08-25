@@ -5,11 +5,11 @@ heading_code: W34
 project: Street-Wisdom 💬🇻🇪
 title: El que se va sin que lo boten, regresa sin que lo llamen.
 type: sayings
-description: "Slamming the door feels incredibly powerful in the moment, until you realize you have nowhere else to go."
+description: "A **figure with a suitcase** walks away, then **hesitantly peeks back** through the door. People who leave on their own often return without an invite."
 tldr: |
-  You **give up your standing** when you walk out by choice. Then you **lose your leverage** if you try to return uninvited. A voluntary exit predictably costs you power for any future re-entry. Imagine an employee who resigns, then seeks re-employment. Or a partner who leaves a relationship, then tries to reconcile uninvited. They come back **now on their terms, not yours**.
+  You **give up your standing** when you walk out by choice. Then you **lose your leverage** if you try to return uninvited. A voluntary exit costs you power if you ever try to return. Imagine an employee who resigns, then seeks re-employment. Or a partner who leaves a relationship, then tries to reconcile uninvited. They come back **now on their terms, not yours**.
 fluff: |
-  This is the **quiet DM months later**, or the **classic warning** whispered by family. You hear it when a former colleague who **quit in a huff** quietly slides into your DMs, asking if the old role is still open. You also hear it when family members whisper a warning after a relative **cuts ties over a minor dispute**, only to show up at Thanksgiving dinner as if nothing happened.
+  You recognize it as the **quiet DM** months later, or the **classic warning** whispered by family. A former colleague who **quit in a huff** quietly slides into your DMs, asking if the old role is still open. Family members also whisper a warning after a relative **cuts ties over a minor dispute**, only to show up at Thanksgiving dinner as if nothing happened.
 draft: false
 
 featuredImage: "el-que-se-va-sin-que-lo-boten.webp"
