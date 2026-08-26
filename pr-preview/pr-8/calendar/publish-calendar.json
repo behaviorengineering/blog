@@ -1,0 +1,5466 @@
+{
+  "generatedAt": "2026-08-25T03:17:41Z",
+  "channels": [
+    "site-en",
+    "site-es",
+    "linkedin",
+    "facebook",
+    "substack-en"
+  ],
+  "entries": [
+    {
+      "bundle": "cognitive-memetics/sayings/2026-01-12-saying-01",
+      "section": "cognitive-memetics",
+      "title": "Tú sabes más que pescao frito",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-01-12",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "missing"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/sayings/2026-01-19-saying-02",
+      "section": "cognitive-memetics",
+      "title": "¿Qué es una raya más para un tigre?",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-01-19",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "missing"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/sayings/2026-01-26-saying-03",
+      "section": "cognitive-memetics",
+      "title": "Más prendido que tabaco de brujo",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-01-26",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "missing"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/sayings/2026-02-02-saying-04",
+      "section": "cognitive-memetics",
+      "title": "Ecolecúa!",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-02-02",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "missing"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/sayings/2026-02-09-saying-05",
+      "section": "cognitive-memetics",
+      "title": "Te va a pisar una rueda de tomate",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-02-09",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "missing"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/sayings/2026-02-16-saying-06",
+      "section": "cognitive-memetics",
+      "title": "Con más hambre que un piojo en un peluche",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-02-16",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "missing"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/sayings/2026-02-23-saying-07",
+      "section": "cognitive-memetics",
+      "title": "Vas a ver al diablo bailando en tanga",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-02-23",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "missing"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/cows/2026-02-26-cow-w01",
+      "section": "cognitive-memetics",
+      "title": "Less thinking, more moooosic",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Cube-Cows"
+      ],
+      "planned": "2026-02-26",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "missing"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/sayings/2026-03-02-saying-08",
+      "section": "cognitive-memetics",
+      "title": "Se juntaron los mochos pa’ rascarse!",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-03-02",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "missing"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/cows/2026-03-05-cow-w02",
+      "section": "cognitive-memetics",
+      "title": "Standardized moos",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Cube-Cows"
+      ],
+      "planned": "2026-03-05",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "missing"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/sayings/2026-03-09-saying-09",
+      "section": "cognitive-memetics",
+      "title": "No seas jala bolas.",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-03-09",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "missing"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "social-protocols/2026-03-10-hard-times-cycle",
+      "section": "social-protocols",
+      "title": "😫🔄 Hard times, strong men, and feeds that reward noise over skill",
+      "type": "claims",
+      "categories": [
+        "Social-Protocols"
+      ],
+      "planned": "2026-03-10",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "present"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/cows/2026-03-12-cow-w03",
+      "section": "cognitive-memetics",
+      "title": "AI personalization, same herd",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Cube-Cows"
+      ],
+      "planned": "2026-03-12",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "missing"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/t-shirt-art/2026-03-13-tshirt-narrative",
+      "section": "cognitive-memetics",
+      "title": "Cheap narrative, expensive debunk",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Sm-Art"
+      ],
+      "planned": "2026-03-13",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "missing"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/sayings/2026-03-16-saying-10",
+      "section": "cognitive-memetics",
+      "title": "Más apretados que sardina en lata.",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-03-16",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "missing"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/cows/2026-03-19-cow-w04",
+      "section": "cognitive-memetics",
+      "title": "Free-range knowledge",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Cube-Cows"
+      ],
+      "planned": "2026-03-19",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "missing"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/t-shirt-art/2026-03-20-tshirt-prepared-advance",
+      "section": "cognitive-memetics",
+      "title": "Prepared, then advance",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Sm-Art"
+      ],
+      "planned": "2026-03-20",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "missing"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/sayings/2026-03-23-saying-11",
+      "section": "cognitive-memetics",
+      "title": "Dios los cría y ellos se juntan",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-03-23",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "missing"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/cows/2026-03-26-cow-w05",
+      "section": "cognitive-memetics",
+      "title": "Your passion is ours now",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Cube-Cows"
+      ],
+      "planned": "2026-03-26",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "missing"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "human-condition/2026-03-27-born-to-choose",
+      "section": "human-condition",
+      "title": "🔥🎯 When stakes run high, choice stops feeling free",
+      "type": "claims",
+      "categories": [
+        "Human-Condition",
+        "Mental-Processes"
+      ],
+      "planned": "2026-03-27",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "present"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/sayings/2026-03-30-saying-12",
+      "section": "cognitive-memetics",
+      "title": "Como ratón al queso",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-03-30",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "missing"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "social-protocols/2026-04-01-memes",
+      "section": "social-protocols",
+      "title": "🧬🧠 Memes jump mind to mind, then make you defend them like identity",
+      "type": "claims",
+      "categories": [
+        "Social-Protocols"
+      ],
+      "planned": "2026-04-01",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "missing"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/cows/2026-04-02-cow-w06",
+      "section": "cognitive-memetics",
+      "title": "Rubber duck carries the week",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Cube-Cows"
+      ],
+      "planned": "2026-04-02",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "missing"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "social-protocols/2026-04-03-shared-reality",
+      "section": "social-protocols",
+      "title": "🕰️🤝 You sync meaning through shared time, not through the same vocabulary",
+      "type": "claims",
+      "categories": [
+        "Social-Protocols"
+      ],
+      "planned": "2026-04-03",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "mind-infrastructure/2026-04-07-history-of-intelligence",
+      "section": "mind-infrastructure",
+      "title": "🐀🤖 Rats preview paths, chimps bluff rivals, AI scores on empathy probes without empathy",
+      "type": "video",
+      "categories": [
+        "Mind-Infrastructure"
+      ],
+      "planned": "2026-04-07",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "missing"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/sayings/2026-04-06-saying-13",
+      "section": "cognitive-memetics",
+      "title": "Cada loco con su tema",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-04-08",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "missing"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/cows/2026-04-09-cow-w07",
+      "section": "cognitive-memetics",
+      "title": "Bell curve and cowbell",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Cube-Cows"
+      ],
+      "planned": "2026-04-09",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "human-condition/2026-04-10-empathy-levels",
+      "section": "human-condition",
+      "title": "🫂🧱 Empathy is a stack of feeling, perspective, and judgment, and systems can aim it",
+      "type": "claims",
+      "categories": [
+        "Human-Condition",
+        "Mental-Processes"
+      ],
+      "planned": "2026-04-10",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/reptilocracy/2026-04-12-not-in-our-term",
+      "section": "cognitive-memetics",
+      "title": "Not In Our Term",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Reptilocracy"
+      ],
+      "planned": "2026-04-12",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/sayings/2026-04-13-saying-14",
+      "section": "cognitive-memetics",
+      "title": "Señor, dame paciencia y en el culo resistencia.",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-04-13",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "missing"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "social-protocols/2026-04-14-truth-as-meme",
+      "section": "social-protocols",
+      "title": "🧠🎭 We only accept truth as a meme ...",
+      "type": "claims",
+      "categories": [
+        "Social-Protocols"
+      ],
+      "planned": "2026-04-14",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "missing"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/cows/2026-04-16-cow-w08",
+      "section": "cognitive-memetics",
+      "title": "Premium vendor subscriptions for life",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Cube-Cows"
+      ],
+      "planned": "2026-04-16",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "missing"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/reptilocracy/2026-04-19-fear-runs-the-chain",
+      "section": "cognitive-memetics",
+      "title": "Fear Runs The Chain",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Reptilocracy"
+      ],
+      "planned": "2026-04-19",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/sayings/2026-04-20-saying-15",
+      "section": "cognitive-memetics",
+      "title": "Eso queda donde el diablo dejó los calzones.",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-04-20",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "social-protocols/2026-04-21-common-sense",
+      "section": "social-protocols",
+      "title": "🧮 Common sense is Engineered",
+      "type": "claims",
+      "categories": [
+        "Social-Protocols"
+      ],
+      "planned": "2026-04-21",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/t-shirt-art/2026-04-22-tshirt-stop-button",
+      "section": "cognitive-memetics",
+      "title": "Clear the loops, keep the stop",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Sm-Art"
+      ],
+      "planned": "2026-04-22",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "missing"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/cows/2026-04-23-cow-w09",
+      "section": "cognitive-memetics",
+      "title": "Harsher feedback, not better prompts",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Cube-Cows"
+      ],
+      "planned": "2026-04-23",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "human-condition/2026-04-24-comfort-hides-fragility",
+      "section": "human-condition",
+      "title": "What doesn't make you stronger, makes you weaker",
+      "type": "video",
+      "categories": [
+        "Human-Condition",
+        "Bio-Evolution"
+      ],
+      "planned": "2026-04-24",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/reptilocracy/2026-04-26-the-process-is-blamed",
+      "section": "cognitive-memetics",
+      "title": "The Process Is Blamed",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Reptilocracy"
+      ],
+      "planned": "2026-04-26",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "mind-infrastructure/2026-04-26-will-ai-replace-me",
+      "section": "mind-infrastructure",
+      "title": "🤖 Will AI replace you? The uncomfortable truth about work",
+      "type": "video",
+      "categories": [
+        "Mind-Infrastructure"
+      ],
+      "planned": "2026-04-26",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "social-protocols/2026-04-26-prisoner-dilemma-tit-for-tat",
+      "section": "social-protocols",
+      "title": "The Prisoner's Dilemma, Tit for Tat, and how cooperation scales",
+      "type": "video",
+      "categories": [
+        "Social-Protocols"
+      ],
+      "planned": "2026-04-26",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/sayings/2026-04-27-saying-16",
+      "section": "cognitive-memetics",
+      "title": "Ni lava, ni presta la batea.",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-04-27",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "social-protocols/2026-04-28-candor-zero-sum-politics",
+      "section": "social-protocols",
+      "title": "🎲🩸 Politics is a bloodless war game that ends in zero-sum",
+      "type": "claims",
+      "categories": [
+        "Social-Protocols"
+      ],
+      "planned": "2026-04-28",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "present"
+        }
+      }
+    },
+    {
+      "bundle": "mind-infrastructure/2026-04-29-free-energy-principle-hallucination-machine",
+      "section": "mind-infrastructure",
+      "title": "🧠🔮 Your brain is a controlled hallucination",
+      "type": "video",
+      "categories": [
+        "Mind-Infrastructure"
+      ],
+      "planned": "2026-04-29",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/cows/2026-04-30-cow-w10",
+      "section": "cognitive-memetics",
+      "title": "Fully aligned with the new TLA",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Cube-Cows"
+      ],
+      "planned": "2026-04-30",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "human-condition/2026-05-01-ego-as-game",
+      "section": "human-condition",
+      "title": "🎮🧸 Your ego is a game where you are the toy",
+      "type": "claims",
+      "categories": [
+        "Human-Condition",
+        "Mental-Processes"
+      ],
+      "planned": "2026-05-01",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/psych-fitness-28/2026-05-02-day-01-the-ask",
+      "section": "cognitive-memetics",
+      "title": "The Ask",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Psych-Fitness-28"
+      ],
+      "planned": "2026-05-02",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/psych-fitness-28/2026-05-03-day-02-long-term-thinking",
+      "section": "cognitive-memetics",
+      "title": "Long-Term Thinking",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Psych-Fitness-28"
+      ],
+      "planned": "2026-05-03",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/reptilocracy/2026-05-03-mandate-as-dashboard",
+      "section": "cognitive-memetics",
+      "title": "Mandate As Dashboard",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Reptilocracy"
+      ],
+      "planned": "2026-05-03",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/psych-fitness-28/2026-05-04-day-03-clear-thinking",
+      "section": "cognitive-memetics",
+      "title": "Clear Thinking Under Pressure",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Psych-Fitness-28"
+      ],
+      "planned": "2026-05-04",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/sayings/2026-05-04-saying-17",
+      "section": "cognitive-memetics",
+      "title": "Ser más agarrado que vieja en moto.",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-05-04",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/t-shirt-art/2026-05-04-tshirt-not-protection-escape",
+      "section": "cognitive-memetics",
+      "title": "Not protection, an escape",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Sm-Art"
+      ],
+      "planned": "2026-05-04",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/psych-fitness-28/2026-05-05-day-04-mental-fitness-flows-downward",
+      "section": "cognitive-memetics",
+      "title": "Mental fitness flows downward",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Psych-Fitness-28"
+      ],
+      "planned": "2026-05-05",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "social-protocols/2026-05-05-built-to-last",
+      "section": "social-protocols",
+      "title": "🧵 Built to last: how systems puppet themselves",
+      "type": "claims",
+      "categories": [
+        "Social-Protocols"
+      ],
+      "planned": "2026-05-05",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/psych-fitness-28/2026-05-06-day-05-decisions-on-war-start-in-one-nervous-system",
+      "section": "cognitive-memetics",
+      "title": "Decisions on war start in one nervous system",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Psych-Fitness-28"
+      ],
+      "planned": "2026-05-06",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "mind-infrastructure/2026-05-06-echo-village",
+      "section": "mind-infrastructure",
+      "title": "🏕️ They rebuilt your village to keep you circling.",
+      "type": "claims",
+      "categories": [
+        "Mind-Infrastructure"
+      ],
+      "planned": "2026-05-06",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/cows/2026-05-07-cow-w11",
+      "section": "cognitive-memetics",
+      "title": "Commute for the culture",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Cube-Cows"
+      ],
+      "planned": "2026-05-07",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/psych-fitness-28/2026-05-07-day-06-pilots-and-surgeons-accept-fitness-checks",
+      "section": "cognitive-memetics",
+      "title": "Pilots and surgeons accept fitness checks",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Psych-Fitness-28"
+      ],
+      "planned": "2026-05-07",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/psych-fitness-28/2026-05-08-day-07-pressure-pushes-shaky-leaders-toward-blame",
+      "section": "cognitive-memetics",
+      "title": "Pressure pushes shaky leaders toward blame",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Psych-Fitness-28"
+      ],
+      "planned": "2026-05-08",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "mind-infrastructure/2026-05-08-body-thinks-first",
+      "section": "mind-infrastructure",
+      "title": "🖐️🧠 You point first, then you think.",
+      "type": "video",
+      "categories": [
+        "Mind-Infrastructure"
+      ],
+      "planned": "2026-05-08",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/psych-fitness-28/2026-05-09-day-08-citizens-play-a-part-in-mental-fitness-at-the-top",
+      "section": "cognitive-memetics",
+      "title": "Citizens play a part in mental fitness at the top",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Psych-Fitness-28"
+      ],
+      "planned": "2026-05-09",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/psych-fitness-28/2026-05-10-day-09-we-currently-wait-for-crises-to-happen-before-we-act",
+      "section": "cognitive-memetics",
+      "title": "We currently wait for crises to happen before we act",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Psych-Fitness-28"
+      ],
+      "planned": "2026-05-10",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/reptilocracy/2026-05-10-principles-with-escape-hatches",
+      "section": "cognitive-memetics",
+      "title": "Rules for Thee, Not for Me",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Reptilocracy"
+      ],
+      "planned": "2026-05-10",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/psych-fitness-28/2026-05-11-day-10-treating-mental-fitness-as-a-standard-removes-the-stigma",
+      "section": "cognitive-memetics",
+      "title": "Treating mental fitness as a standard removes the stigma",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Psych-Fitness-28"
+      ],
+      "planned": "2026-05-11",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/sayings/2026-05-11-saying-18",
+      "section": "cognitive-memetics",
+      "title": "Ni tan calvo, ni con dos pelucas.",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-05-11",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/psych-fitness-28/2026-05-12-day-11-high-office-brings-relentless-pressure",
+      "section": "cognitive-memetics",
+      "title": "High office brings relentless pressure",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Psych-Fitness-28"
+      ],
+      "planned": "2026-05-12",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "social-protocols/2026-05-12-rigidity-beats-accuracy",
+      "section": "social-protocols",
+      "title": "🧠🧱 Our stubborn refusal",
+      "type": "claims",
+      "categories": [
+        "Reality-Protocols"
+      ],
+      "planned": "2026-05-12",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/pawtropolis/2026-05-13-01-i-want-this-to-be-over",
+      "section": "cognitive-memetics",
+      "title": "I want this to be over",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Pawtropolis-Under-Fire"
+      ],
+      "planned": "2026-05-13",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/psych-fitness-28/2026-05-13-day-12-when-top-leaders-submit-to-fitness-checks-they-model-accountability",
+      "section": "cognitive-memetics",
+      "title": "When top leaders submit to fitness checks, they model accountability",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Psych-Fitness-28"
+      ],
+      "planned": "2026-05-13",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/cows/2026-05-14-cow-w12",
+      "section": "cognitive-memetics",
+      "title": "Boundaries, now with growth",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Cube-Cows"
+      ],
+      "planned": "2026-05-14",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/psych-fitness-28/2026-05-14-day-13-after-a-national-crisis-we-rarely-look-at-the-leaders-directing-recovery",
+      "section": "cognitive-memetics",
+      "title": "After a national crisis, we rarely look at the leaders directing recovery",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Psych-Fitness-28"
+      ],
+      "planned": "2026-05-14",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/psych-fitness-28/2026-05-15-day-14-we-are-halfway-through",
+      "section": "cognitive-memetics",
+      "title": "We are halfway through",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Psych-Fitness-28"
+      ],
+      "planned": "2026-05-15",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "human-condition/2026-05-15-war-does-not-need-flags",
+      "section": "human-condition",
+      "title": "🧬⚔️ War starts before anyone raises a flag",
+      "type": "video",
+      "categories": [
+        "Human-Condition",
+        "Social-Behaviour"
+      ],
+      "planned": "2026-05-15",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/psych-fitness-28/2026-05-16-day-15-a-leader-s-stress-radiates-outward-to-their-staff",
+      "section": "cognitive-memetics",
+      "title": "A leader's stress radiates outward to their staff",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Psych-Fitness-28"
+      ],
+      "planned": "2026-05-16",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/t-shirt-art/2026-05-16-smart-cover-your-ears",
+      "section": "cognitive-memetics",
+      "title": "When the model feels threatened",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Sm-Art"
+      ],
+      "planned": "2026-05-16",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "present"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/psych-fitness-28/2026-05-17-day-16-stress-narrows-vision",
+      "section": "cognitive-memetics",
+      "title": "Stress narrows vision",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Psych-Fitness-28"
+      ],
+      "planned": "2026-05-17",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/reptilocracy/2026-05-17-the-vanishing-promise-act",
+      "section": "cognitive-memetics",
+      "title": "Now You See It, Now You Don't",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Reptilocracy"
+      ],
+      "planned": "2026-05-17",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "present"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/psych-fitness-28/2026-05-18-day-17-trust-in-government-drops-when-leaders-act-erratically",
+      "section": "cognitive-memetics",
+      "title": "Trust in government drops when leaders act erratically",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Psych-Fitness-28"
+      ],
+      "planned": "2026-05-18",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/sayings/2026-05-18-saying-19",
+      "section": "cognitive-memetics",
+      "title": "Aquí el que no corre vuela.",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-05-18",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "present"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/psych-fitness-28/2026-05-19-day-18-executive-burnout-costs-the-private-sector-billions",
+      "section": "cognitive-memetics",
+      "title": "Executive burnout costs the private sector billions",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Psych-Fitness-28"
+      ],
+      "planned": "2026-05-19",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "social-protocols/2026-05-19-be-the-captain-not-the-vessel",
+      "section": "social-protocols",
+      "title": "⚓ Neutrality is a risky ride",
+      "type": "claims",
+      "categories": [
+        "Reality-Protocols"
+      ],
+      "planned": "2026-05-19",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "present"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/cows/2026-05-20-cow-w13",
+      "section": "cognitive-memetics",
+      "title": "Our values, but not like that",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Cube-Cows"
+      ],
+      "planned": "2026-05-20",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "present"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/psych-fitness-28/2026-05-20-day-19-empathy-takes-mental-energy",
+      "section": "cognitive-memetics",
+      "title": "Empathy takes mental energy",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Psych-Fitness-28"
+      ],
+      "planned": "2026-05-20",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/psych-fitness-28/2026-05-21-day-20-the-complexity-of-modern-governance-is-huge",
+      "section": "cognitive-memetics",
+      "title": "The complexity of modern governance is huge",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Psych-Fitness-28"
+      ],
+      "planned": "2026-05-21",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "mind-infrastructure/2026-05-21-brain-is-not-a-computer",
+      "section": "mind-infrastructure",
+      "title": "🧠 Our brain doesn’t even fit in our brain",
+      "type": "video",
+      "categories": [
+        "Mind-Infrastructure"
+      ],
+      "planned": "2026-05-21",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "present"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/psych-fitness-28/2026-05-22-day-21-one-week-left",
+      "section": "cognitive-memetics",
+      "title": "One week left",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Psych-Fitness-28"
+      ],
+      "planned": "2026-05-22",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/reptilocracy/2026-05-22-safest-self-smallest-self",
+      "section": "cognitive-memetics",
+      "title": "Safest Self, Smallest Self",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Reptilocracy"
+      ],
+      "planned": "2026-05-22",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "present"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/psych-fitness-28/2026-05-23-day-22-we-track-the-economy-with-hard-numbers",
+      "section": "cognitive-memetics",
+      "title": "We track the economy with hard numbers",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Psych-Fitness-28"
+      ],
+      "planned": "2026-05-23",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/t-shirt-art/2026-05-23-tshirt-predictability-automates-first",
+      "section": "cognitive-memetics",
+      "title": "Predictability is exactly what you automate first",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Sm-Art"
+      ],
+      "planned": "2026-05-23",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "present"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/psych-fitness-28/2026-05-24-day-23-reactive-politics-is-exhausting-for-the-public",
+      "section": "cognitive-memetics",
+      "title": "Reactive politics is exhausting for the public",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Psych-Fitness-28"
+      ],
+      "planned": "2026-05-24",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/reptilocracy/2026-05-24-missiles-get-the-money",
+      "section": "cognitive-memetics",
+      "title": "The Money Goes To Missiles",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Reptilocracy"
+      ],
+      "planned": "2026-05-24",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "present"
+        }
+      }
+    },
+    {
+      "bundle": "human-condition/2026-05-24-when-the-universe-guru-became-one-of-us",
+      "section": "human-condition",
+      "title": "When the universe guru became one of us",
+      "type": "video",
+      "categories": [
+        "Human-Condition",
+        "Mental-Processes"
+      ],
+      "planned": "2026-05-24",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "present"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/psych-fitness-28/2026-05-25-day-24-the-policies-enacted-today-will-outlast-the-leaders",
+      "section": "cognitive-memetics",
+      "title": "The policies enacted today will outlast the leaders",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Psych-Fitness-28"
+      ],
+      "planned": "2026-05-25",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/sayings/2026-05-25-saying-20",
+      "section": "cognitive-memetics",
+      "title": "El diablo sabe más por viejo que por diablo.",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-05-25",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "present"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/psych-fitness-28/2026-05-26-day-25-we-need-to-update-our-definition-of-political-strength",
+      "section": "cognitive-memetics",
+      "title": "We need to update our definition of political strength",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Psych-Fitness-28"
+      ],
+      "planned": "2026-05-26",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "social-protocols/2026-05-26-developed-countries-are-factories",
+      "section": "social-protocols",
+      "title": "🚦 Developed countries score the machine, not your life",
+      "type": "claims",
+      "categories": [
+        "Reality-Protocols"
+      ],
+      "planned": "2026-05-26",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "present"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/cows/2026-05-27-cow-w14",
+      "section": "cognitive-memetics",
+      "title": "We rise together",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Cube-Cows"
+      ],
+      "planned": "2026-05-27",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/psych-fitness-28/2026-05-27-day-26-it-is-the-final-weekend-to-sign",
+      "section": "cognitive-memetics",
+      "title": "It is the final weekend to sign",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Psych-Fitness-28"
+      ],
+      "planned": "2026-05-27",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/psych-fitness-28/2026-05-28-day-27-tomorrow-this-petition-closes",
+      "section": "cognitive-memetics",
+      "title": "Tomorrow this petition closes",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Psych-Fitness-28"
+      ],
+      "planned": "2026-05-28",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "human-condition/2026-05-28-why-humans-keep-building-pyramids",
+      "section": "human-condition",
+      "title": "🏢🔺 Why does every group organize into a pyramid?",
+      "type": "claims",
+      "categories": [
+        "Human-Condition",
+        "Mental-Processes"
+      ],
+      "planned": "2026-05-28",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "present"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/psych-fitness-28/2026-05-29-day-28-today-is-the-final-day-to-sign",
+      "section": "cognitive-memetics",
+      "title": "Today is the final day to sign",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Psych-Fitness-28"
+      ],
+      "planned": "2026-05-29",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/t-shirt-art/2026-05-29-tshirt-not-at-the-border-at-the-table",
+      "section": "cognitive-memetics",
+      "title": "Culture loss isn't a border problem",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Sm-Art"
+      ],
+      "planned": "2026-05-29",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "present"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/reptilocracy/2026-05-31-dissent-as-background-noise",
+      "section": "cognitive-memetics",
+      "title": "Keep Protesting! They Love It",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Reptilocracy"
+      ],
+      "planned": "2026-05-31",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/sayings/2026-06-01-saying-21",
+      "section": "cognitive-memetics",
+      "title": "Juntos, pero no revueltos.",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-06-01",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "social-protocols/2026-06-02-narcissism-colonial-tool",
+      "section": "social-protocols",
+      "title": "⚜️ The Narcissistic Asset: Colonial Machinery",
+      "type": "claims",
+      "categories": [
+        "Reality-Protocols"
+      ],
+      "planned": "2026-06-02",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "present"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/cows/2026-06-03-cow-w15",
+      "section": "cognitive-memetics",
+      "title": "We speak ACR",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Cube-Cows"
+      ],
+      "planned": "2026-06-03",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "mind-infrastructure/2026-06-04-lsd-plasticity-overfitting",
+      "section": "mind-infrastructure",
+      "title": "💊🌀 Why might someone pass exams on LSD without notes?",
+      "type": "claims",
+      "categories": [
+        "Mind-Infrastructure"
+      ],
+      "planned": "2026-06-04",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "present"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/reptilocracy/2026-06-07-the-geopolitics-donation-box",
+      "section": "cognitive-memetics",
+      "title": "Thanks For Your Taxes",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Reptilocracy"
+      ],
+      "planned": "2026-06-07",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/sayings/2026-06-08-saying-22",
+      "section": "cognitive-memetics",
+      "title": "A bajarse de la mula.",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-06-08",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "social-protocols/2026-06-09-the-prediction-business",
+      "section": "social-protocols",
+      "title": "🔮 The prediction business sells obedience as foresight",
+      "type": "video",
+      "categories": [
+        "Social-Protocols"
+      ],
+      "planned": "2026-06-09",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "present"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/cows/2026-06-10-cow-w16",
+      "section": "cognitive-memetics",
+      "title": "Collaboration days",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Cube-Cows"
+      ],
+      "planned": "2026-06-10",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "human-condition/2026-06-11-think-with-elbow",
+      "section": "human-condition",
+      "title": "💆💭 Can you feel yourself thinking?",
+      "type": "claims",
+      "categories": [
+        "Human-Condition",
+        "Mental-Processes"
+      ],
+      "planned": "2026-06-11",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/reptilocracy/2026-06-14-overfunding-the-circus",
+      "section": "cognitive-memetics",
+      "title": "Bread And Circuses",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Reptilocracy"
+      ],
+      "planned": "2026-06-14",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/sayings/2026-06-15-saying-23",
+      "section": "cognitive-memetics",
+      "title": "Lo que es igual no es trampa.",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-06-15",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "human-condition/2026-06-16-deception-truth-bias-incentive-gaps",
+      "section": "human-condition",
+      "title": "🫥 You lie, but then, you trust",
+      "type": "claims",
+      "categories": [
+        "Human-Condition",
+        "Social-Trust"
+      ],
+      "planned": "2026-06-16",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "present"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/cows/2026-06-17-cow-w17",
+      "section": "cognitive-memetics",
+      "title": "Location-agnostic stress",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Cube-Cows"
+      ],
+      "planned": "2026-06-17",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "mind-infrastructure/2026-06-18-ai-persuasion-infrastructure",
+      "section": "mind-infrastructure",
+      "title": "ℹ️ \"Just play, trust us\"",
+      "type": "claims",
+      "categories": [
+        "Mind-Infrastructure"
+      ],
+      "planned": "2026-06-18",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "present"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/reptilocracy/2026-06-21-leaks-instead-of-clarity",
+      "section": "cognitive-memetics",
+      "title": "If You Hold It, It Will Blow Up In Your Hand?",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Reptilocracy"
+      ],
+      "planned": "2026-06-21",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/sayings/2026-06-22-saying-24",
+      "section": "cognitive-memetics",
+      "title": "Estas meando fuera del perol.",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-06-22",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "human-condition/2026-06-23-sociopathy-duty-of-care",
+      "section": "human-condition",
+      "title": "ℹ️ Why is sociopathy still a taboo?",
+      "type": "video",
+      "categories": [
+        "Human-Condition"
+      ],
+      "planned": "2026-06-23",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "present"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/cows/2026-06-24-cow-w18",
+      "section": "cognitive-memetics",
+      "title": "A bull two desks over",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Cube-Cows"
+      ],
+      "planned": "2026-06-24",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "human-condition/2026-06-25-ai-thinking-planes-octopus",
+      "section": "human-condition",
+      "title": "🦑🧠 You think you think?",
+      "type": "claims",
+      "categories": [
+        "Human-Condition",
+        "Mental-Processes"
+      ],
+      "planned": "2026-06-25",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "present"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/sayings/2026-06-29-saying-25",
+      "section": "cognitive-memetics",
+      "title": "Chivo que se devuelve, se esnuca.",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-06-29",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/cows/2026-07-01-cow-w19",
+      "section": "cognitive-memetics",
+      "title": "Seen as individuals",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Cube-Cows"
+      ],
+      "planned": "2026-07-01",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/reptilocracy/2026-07-05-democracy-annual-renewal",
+      "section": "cognitive-memetics",
+      "title": "Democracy — Annual Renewal",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Reptilocracy"
+      ],
+      "planned": "2026-07-05",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/sayings/2026-07-06-saying-26",
+      "section": "cognitive-memetics",
+      "title": "El que se sabe el camino no necesita que lo arreen.",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-07-06",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "missing"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/cows/2026-07-08-cow-w20",
+      "section": "cognitive-memetics",
+      "title": "Clear boundaries",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Cube-Cows"
+      ],
+      "planned": "2026-07-08",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "human-condition/2026-07-09-antisocial-configuration",
+      "section": "human-condition",
+      "title": "🧠 Antisocial wiring is human. Why is it so hard to name?",
+      "type": "claims",
+      "categories": [
+        "Human-Condition",
+        "Social-Behaviour"
+      ],
+      "planned": "2026-07-09",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/reptilocracy/2026-07-12-a-brighter-future",
+      "section": "cognitive-memetics",
+      "title": "A Brighter Future",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Reptilocracy"
+      ],
+      "planned": "2026-07-12",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/sayings/2026-07-13-saying-27",
+      "section": "cognitive-memetics",
+      "title": "A otro perro con ese hueso.",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-07-13",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/cows/2026-07-15-cow-w21",
+      "section": "cognitive-memetics",
+      "title": "We encourage proactive behavior",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Cube-Cows"
+      ],
+      "planned": "2026-07-15",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "human-condition/2026-07-16-good-guys-make-the-rules",
+      "section": "human-condition",
+      "title": "😇 Good guys make the rules",
+      "type": "claims",
+      "categories": [
+        "Human-Condition",
+        "Mental-Processes"
+      ],
+      "planned": "2026-07-16",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "present"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/reptilocracy/2026-07-19-the-false-fork",
+      "section": "cognitive-memetics",
+      "title": "The False Fork",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Reptilocracy"
+      ],
+      "planned": "2026-07-19",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/sayings/2026-07-20-saying-28",
+      "section": "cognitive-memetics",
+      "title": "En tierra de ciegos, el tuerto es rey.",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-07-20",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/cows/2026-07-22-cow-w22",
+      "section": "cognitive-memetics",
+      "title": "Worrying hours are 24/7",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Cube-Cows"
+      ],
+      "planned": "2026-07-22",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "social-protocols/2026-07-23-deniability-hood",
+      "section": "social-protocols",
+      "title": "🎭 The deniability hood: why groups prefer not to know",
+      "type": "claims",
+      "categories": [
+        "Social-Protocols"
+      ],
+      "planned": "2026-07-23",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "human-condition/2026-07-24-purpose-runs-on-mitochondria",
+      "section": "human-condition",
+      "title": "⚡ Why does purpose change your mitochondria?",
+      "type": "video",
+      "categories": [
+        "Human-Condition",
+        "Mental-Processes"
+      ],
+      "planned": "2026-07-24",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "present"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/reptilocracy/2026-07-26-case-study-1",
+      "section": "cognitive-memetics",
+      "title": "Case Study 1",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Reptilocracy"
+      ],
+      "planned": "2026-07-26",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/sayings/2026-07-27-saying-29",
+      "section": "cognitive-memetics",
+      "title": "Al que no quiere caldo, se le dan dos tazas.",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-07-27",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/cows/2026-07-29-cow-w23",
+      "section": "cognitive-memetics",
+      "title": "Protect your energy",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Cube-Cows"
+      ],
+      "planned": "2026-07-29",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/t-shirt-art/2026-07-30-tshirt-agi-tated",
+      "section": "cognitive-memetics",
+      "title": "The hype took the sanity first",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Sm-Art"
+      ],
+      "planned": "2026-07-30",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "human-condition/2026-07-31-why-you-always-have-two-reasons",
+      "section": "human-condition",
+      "title": "🎭 The good reason is cover for the real one",
+      "type": "claims",
+      "categories": [
+        "Human-Condition",
+        "Mental-Processes"
+      ],
+      "planned": "2026-07-31",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "present"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/reptilocracy/2026-08-02-photo-op-readiness",
+      "section": "cognitive-memetics",
+      "title": "Photo-Op Readiness",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Reptilocracy"
+      ],
+      "planned": "2026-08-02",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/sayings/2026-08-03-saying-30",
+      "section": "cognitive-memetics",
+      "title": "Más inútil que cenicero de moto.",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-08-03",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "human-condition/2026-08-04-when-the-critic-is-also-the-accused",
+      "section": "human-condition",
+      "title": "🪞 Reflected motives: The structure of a critique",
+      "type": "claims",
+      "categories": [
+        "Human-Condition",
+        "Mental-Processes"
+      ],
+      "planned": "2026-08-04",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "present"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/cows/2026-08-05-cow-w24",
+      "section": "cognitive-memetics",
+      "title": "Follow your dreams",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Cube-Cows"
+      ],
+      "planned": "2026-08-05",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "human-condition/2026-08-06-why-facts-trigger-rage",
+      "section": "human-condition",
+      "title": "🧩 The structural refusal of a shared timeline",
+      "type": "video",
+      "categories": [
+        "Human-Condition"
+      ],
+      "planned": "2026-08-06",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "present"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/reptilocracy/2026-08-09-charisma-on-empathy-off",
+      "section": "cognitive-memetics",
+      "title": "Charisma On, Empathy Off",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Reptilocracy"
+      ],
+      "planned": "2026-08-09",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/sayings/2026-08-10-saying-31",
+      "section": "cognitive-memetics",
+      "title": "Más perdido que Adán en el Día de las Madres.",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-08-10",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/cows/2026-08-12-cow-w25",
+      "section": "cognitive-memetics",
+      "title": "The rewritten minutes",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Cube-Cows"
+      ],
+      "planned": "2026-08-12",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "social-protocols/2026-08-14-everyone-knows-nobody-acts",
+      "section": "social-protocols",
+      "title": "Everyone knows, nobody acts",
+      "type": "claims",
+      "categories": [
+        "Social-Protocols"
+      ],
+      "planned": "2026-08-14",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/reptilocracy/2026-08-16-insert-vote-receive-same",
+      "section": "cognitive-memetics",
+      "title": "Insert Vote, Receive Same",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Reptilocracy"
+      ],
+      "planned": "2026-08-16",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/sayings/2026-08-17-saying-32",
+      "section": "cognitive-memetics",
+      "title": "El alcahuete es peor que el autor.",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-08-17",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/cows/2026-08-19-cow-w26",
+      "section": "cognitive-memetics",
+      "title": "Just smaller",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Cube-Cows"
+      ],
+      "planned": "2026-08-19",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "human-condition/2026-08-21-why-identity-keeps-rewriting",
+      "section": "human-condition",
+      "title": "🪞 Why does the brain keep selling you a new \"me\"?",
+      "type": "video",
+      "categories": [
+        "Human-Condition",
+        "Mental-Processes"
+      ],
+      "planned": "2026-08-21",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "present"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/reptilocracy/2026-08-23-public-money-private-leverage",
+      "section": "cognitive-memetics",
+      "title": "Public Money, Private Leverage",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Reptilocracy"
+      ],
+      "planned": "2026-08-23",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/sayings/2026-08-24-saying-33",
+      "section": "cognitive-memetics",
+      "title": "El que busca, encuentra.",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-08-24",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/cows/2026-08-26-cow-w27",
+      "section": "cognitive-memetics",
+      "title": "As you can see from my work",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Cube-Cows"
+      ],
+      "planned": "2026-08-26",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "social-protocols/2026-08-28-conquest-starts-with-partnership",
+      "section": "social-protocols",
+      "title": "🤝 Why does conquest start with a partnership?",
+      "type": "video",
+      "categories": [
+        "Social-Protocols"
+      ],
+      "planned": "2026-08-28",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "present"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/reptilocracy/2026-08-30-stability-is-a-setting",
+      "section": "cognitive-memetics",
+      "title": "Stability Is a Setting",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Reptilocracy"
+      ],
+      "planned": "2026-08-30",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/sayings/2026-08-31-saying-34",
+      "section": "cognitive-memetics",
+      "title": "El que se va sin que lo boten, regresa sin que lo llamen.",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-08-31",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/cows/2026-09-02-cow-w28",
+      "section": "cognitive-memetics",
+      "title": "We stand up so the status doesn't",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Cube-Cows"
+      ],
+      "planned": "2026-09-02",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "mind-infrastructure/2026-09-04-why-healthy-brains-forget",
+      "section": "mind-infrastructure",
+      "title": "🧠 Why does a healthy brain forget your keys?",
+      "type": "video",
+      "categories": [
+        "Mind-Infrastructure"
+      ],
+      "planned": "2026-09-04",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "present"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/reptilocracy/2026-09-06-the-self-certified-certificate",
+      "section": "cognitive-memetics",
+      "title": "The Self-Certified Certificate",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Reptilocracy"
+      ],
+      "planned": "2026-09-06",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "missing"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "missing"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/sayings/2026-09-07-saying-35",
+      "section": "cognitive-memetics",
+      "title": "Tiene cara de yo no fui.",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-09-07",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/cows/2026-09-09-cow-w29",
+      "section": "cognitive-memetics",
+      "title": "Forty minutes later",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Cube-Cows"
+      ],
+      "planned": "2026-09-09",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "missing"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "missing"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/reptilocracy/2026-09-13-the-alarm-worked",
+      "section": "cognitive-memetics",
+      "title": "The Alarm Worked",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Reptilocracy"
+      ],
+      "planned": "2026-09-13",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "missing"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "missing"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/sayings/2026-09-14-saying-36",
+      "section": "cognitive-memetics",
+      "title": "La mentira tiene patas cortas.",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-09-14",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/cows/2026-09-16-cow-w30",
+      "section": "cognitive-memetics",
+      "title": "Mutual performance improvement",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Cube-Cows"
+      ],
+      "planned": "2026-09-16",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "missing"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "missing"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/sayings/2026-09-21-saying-37",
+      "section": "cognitive-memetics",
+      "title": "Tapa el sol con un dedo.",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-09-21",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/cows/2026-09-23-cow-w31",
+      "section": "cognitive-memetics",
+      "title": "Graded on a curve",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Cube-Cows"
+      ],
+      "planned": "2026-09-23",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "missing"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "missing"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/sayings/2026-09-28-saying-38",
+      "section": "cognitive-memetics",
+      "title": "Caimán no come caimán.",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-09-28",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/cows/2026-09-30-cow-w32",
+      "section": "cognitive-memetics",
+      "title": "100% ceremony, 0% change",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Cube-Cows"
+      ],
+      "planned": "2026-09-30",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "missing"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "missing"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/sayings/2026-10-05-saying-39",
+      "section": "cognitive-memetics",
+      "title": "La verdad es hija de Dios.",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-10-05",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/cows/2026-10-07-cow-w33",
+      "section": "cognitive-memetics",
+      "title": "Different ways of working",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Cube-Cows"
+      ],
+      "planned": "2026-10-07",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "missing"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "missing"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/sayings/2026-10-12-saying-40",
+      "section": "cognitive-memetics",
+      "title": "Miente hasta cuando dice la verdad.",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-10-12",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/cows/2026-10-14-cow-w34",
+      "section": "cognitive-memetics",
+      "title": "The office dog as messenger",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Cube-Cows"
+      ],
+      "planned": "2026-10-14",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "missing"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "missing"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/sayings/2026-10-19-saying-41",
+      "section": "cognitive-memetics",
+      "title": "Le busca cinco patas al gato para justificar lo injustificable.",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-10-19",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/cows/2026-10-21-cow-w35",
+      "section": "cognitive-memetics",
+      "title": "When everyone's responsible",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Cube-Cows"
+      ],
+      "planned": "2026-10-21",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "missing"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "missing"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/sayings/2026-10-26-saying-42",
+      "section": "cognitive-memetics",
+      "title": "La verdad no peca, pero incomoda.",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-10-26",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/cows/2026-10-28-cow-w36",
+      "section": "cognitive-memetics",
+      "title": "Found his people",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Cube-Cows"
+      ],
+      "planned": "2026-10-28",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "missing"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "missing"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/cows/2026-11-04-cow-w37",
+      "section": "cognitive-memetics",
+      "title": "Now that's engagement",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Cube-Cows"
+      ],
+      "planned": "2026-11-04",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "missing"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "missing"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/cows/2026-11-11-cow-w38",
+      "section": "cognitive-memetics",
+      "title": "The diagnosis never includes himself",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Cube-Cows"
+      ],
+      "planned": "2026-11-11",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "missing"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "missing"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/cows/2026-11-18-cow-w39",
+      "section": "cognitive-memetics",
+      "title": "Leadership-to-PIP converter",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Cube-Cows"
+      ],
+      "planned": "2026-11-18",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "missing"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "missing"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/cows/2026-11-25-cow-w40",
+      "section": "cognitive-memetics",
+      "title": "The Mascot",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Cube-Cows"
+      ],
+      "planned": "2026-11-25",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "missing"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "missing"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/cows/2026-12-02-cow-w41",
+      "section": "cognitive-memetics",
+      "title": "Attitude review",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Cube-Cows"
+      ],
+      "planned": "2026-12-02",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "missing"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "missing"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/cows/2026-12-09-cow-w42",
+      "section": "cognitive-memetics",
+      "title": "The bragging manager",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Cube-Cows"
+      ],
+      "planned": "2026-12-09",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "missing"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "missing"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/cows/2026-12-16-cow-w43",
+      "section": "cognitive-memetics",
+      "title": "The early-warning system",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Cube-Cows"
+      ],
+      "planned": "2026-12-16",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "missing"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "missing"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/cows/2026-12-23-cow-w44",
+      "section": "cognitive-memetics",
+      "title": "The Sphinx",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Cube-Cows"
+      ],
+      "planned": "2026-12-23",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "missing"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "missing"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    }
+  ]
+}
