@@ -118,6 +118,13 @@ other = "TL;DNV"
 [videoChapterGuide]
 other = "Guía de capítulos"
 
+# claims / video singles — keep-reading related strip.
+[keepReading]
+other = "Sigue leyendo"
+
+[keepReadingAlso]
+other = "También"
+
 # type: sayings — explicación Por-Estas-Calles (partial sayings-project-about).
 [sayingsProjectAboutTitle]
 other = "¿Y esto?"

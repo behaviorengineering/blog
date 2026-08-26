@@ -19,6 +19,11 @@ resources:
     name: featured-image
 tags: ["SystemsCanHijackYou", "SeeTheGame", "StatusIsNotSurvival", "RewriteTheRules"]
 categories: ["Human-Condition", "Mental-Processes"]
+related:
+  - "/human-condition/2026-08-21-why-identity-keeps-rewriting/"
+  - "/cognitive-memetics/reptilocracy/2026-05-22-safest-self-smallest-self/"
+  - "/cognitive-memetics/cows/2026-11-11-cow-w38/"
+
 ---
 
 We talk about ego like it is a personality trait. But it is more like a **simulation** running in the background.

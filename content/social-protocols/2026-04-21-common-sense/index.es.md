@@ -30,6 +30,10 @@ aliases:
   - "/es/protocolos-sociales/2026-04-19-common-sense/"
   - "/es/reality-protocols/2026-04-21-common-sense/"
   - "/es/reality-protocols/2026-04-19-common-sense/"
+related:
+  - "/social-protocols/2026-04-03-shared-reality/"
+  - "/cognitive-memetics/reptilocracy/2026-05-03-mandate-as-dashboard/"
+  - "/cognitive-memetics/t-shirt-art/2026-03-13-tshirt-narrative/"
 
 ---
 ### Cómo definió el estudio el sentido común

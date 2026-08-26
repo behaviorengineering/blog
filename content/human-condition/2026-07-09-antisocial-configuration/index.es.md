@@ -21,6 +21,11 @@ resources:
 
 tags: ["NotEveryoneFeelsTheSame", "LetsDefineBad", "RealityCheck", "SayItOutLoud"]
 categories: ["Human-Condition", "Social-Behaviour"]
+related:
+  - "/human-condition/2026-06-23-sociopathy-duty-of-care/"
+  - "/cognitive-memetics/reptilocracy/2026-08-09-charisma-on-empathy-off/"
+  - "/cognitive-memetics/cows/2026-06-24-cow-w18/"
+
 ---
 
 Hoy nombramos algunas configuraciones en voz alta: autismo, TDAH, dislexia, no binario, neurodivergente. Podemos debatirlas y, a veces, hasta montar redes de apoyo.

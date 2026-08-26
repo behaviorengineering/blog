@@ -24,6 +24,11 @@ tags: ["FixedEnergyBudget", "SenseOfPurpose", "MitochondrialSymbiosis", "Stress"
 
 aliases:
   - /es/human-condition/2026-07-24-purpose-runs-on-mitochondria/
+related:
+  - "/mind-infrastructure/2026-09-04-why-healthy-brains-forget/"
+  - "/cognitive-memetics/cows/2026-07-29-cow-w23/"
+  - "/cognitive-memetics/psych-fitness-28/2026-05-17-day-16-stress-narrows-vision/"
+
 ---
 
 ### Tu cuerpo tiene un presupuesto fijo

@@ -27,6 +27,10 @@ aliases:
   - "/es/social-protocols/2026-05-05-built-to-last/"
   - "/es/protocolos-sociales/2026-05-05-built-to-last/"
   - "/es/protocolos-sociales/hechos-para-durar-la-trampa-de-la-sumisión-voluntaria/"
+related:
+  - "/social-protocols/2026-05-26-developed-countries-are-factories/"
+  - "/cognitive-memetics/psych-fitness-28/2026-05-25-day-24-the-policies-enacted-today-will-outlast-the-leaders/"
+  - "/cognitive-memetics/cows/2026-03-26-cow-w05/"
 
 ---
 

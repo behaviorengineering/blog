@@ -26,6 +26,10 @@ resources:
 tags: ["SharedIllusionsRunTheWorld", "IdeasBecomeIdentity", "TribeBeforeTruth"]
 aliases:
   - "/reality-protocols/2026-04-01-memes/"
+related:
+  - "/social-protocols/2026-04-14-truth-as-meme/"
+  - "/cognitive-memetics/t-shirt-art/2026-03-13-tshirt-narrative/"
+  - "/cognitive-memetics/reptilocracy/2026-05-22-safest-self-smallest-self/"
 
 ---
 ### Coinage

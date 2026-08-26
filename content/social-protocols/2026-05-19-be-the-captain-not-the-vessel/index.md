@@ -36,6 +36,10 @@ images:
 resources:
   - src: ferryman.jpg
     name: featured-image
+related:
+  - "/social-protocols/2026-06-02-narcissism-colonial-tool/"
+  - "/cognitive-memetics/t-shirt-art/2026-05-16-smart-cover-your-ears/"
+  - "/cognitive-memetics/sayings/2026-07-06-saying-26/"
 
 ---
 

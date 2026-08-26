@@ -23,6 +23,11 @@ featuredImagePreview: "https://img.youtube.com/vi/wgs_EyhXoFU/hqdefault.jpg"
 
 categories: ["Human-Condition", "Social-Behaviour"]
 tags: ["EvolutionVsCulture", "TribeBeforeTruth", "FearChain", "Escalation", "RealityCheck"]
+related:
+  - "/human-condition/2026-05-28-why-humans-keep-building-pyramids/"
+  - "/cognitive-memetics/reptilocracy/2026-05-24-missiles-get-the-money/"
+  - "/cognitive-memetics/psych-fitness-28/2026-05-06-day-05-decisions-on-war-start-in-one-nervous-system/"
+
 ---
 
 ### Desnudando el relato halagador

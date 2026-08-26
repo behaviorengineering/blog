@@ -22,6 +22,11 @@ resources:
 
 tags: ["DeniabilityHood", "CheapNarratives", "SeeTheGame", "RealityCheck"]
 categories: ["Human-Condition", "Mental-Processes"]
+related:
+  - "/social-protocols/2026-07-23-deniability-hood/"
+  - "/cognitive-memetics/sayings/2026-09-07-saying-35/"
+  - "/cognitive-memetics/cows/2026-08-12-cow-w25/"
+
 ---
 
 J. P. Morgan gets credited with a blunt line: a man has two reasons for doing something, a good reason and the real reason. The attribution arrives late (Owen Wister, 1930), and the saying was already loose in the air.

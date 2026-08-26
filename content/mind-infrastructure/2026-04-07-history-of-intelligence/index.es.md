@@ -24,6 +24,11 @@ featuredImagePreview: "https://img.youtube.com/vi/RvYSsi6rd4g/hqdefault.jpg"
 
 tags: ["PredictThenUpdate", "SocialBrainSelection", "CultureRunsOnLanguage", "PatternsNotWorldModels"]
 categories: ["Mind-Infrastructure"]
+related:
+  - "/mind-infrastructure/2026-05-21-brain-is-not-a-computer/"
+  - "/cognitive-memetics/psych-fitness-28/2026-05-20-day-19-empathy-takes-mental-energy/"
+  - "/cognitive-memetics/reptilocracy/2026-08-09-charisma-on-empathy-off/"
+
 ---
 ### Ver es adivinar
 

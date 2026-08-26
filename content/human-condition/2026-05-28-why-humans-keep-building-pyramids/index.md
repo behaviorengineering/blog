@@ -28,6 +28,10 @@ resources:
 
 tags: ["SocialBrainSelection", "PredictiveProcessing", "ObviousIsTrained", "RewriteTheRules"]
 categories: ["Human-Condition", "Mental-Processes"]
+related:
+  - "/social-protocols/2026-08-28-conquest-starts-with-partnership/"
+  - "/cognitive-memetics/cows/2026-09-02-cow-w28/"
+  - "/cognitive-memetics/reptilocracy/2026-08-16-insert-vote-receive-same/"
 
 ---
 

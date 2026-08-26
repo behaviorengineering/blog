@@ -32,6 +32,10 @@ images:
 resources:
   - src: everyone-knows-nobody-acts.webp
     name: featured-image
+related:
+  - "/social-protocols/2026-07-23-deniability-hood/"
+  - "/cognitive-memetics/cows/2026-10-21-cow-w35/"
+  - "/cognitive-memetics/sayings/2026-04-27-saying-16/"
 
 ---
 

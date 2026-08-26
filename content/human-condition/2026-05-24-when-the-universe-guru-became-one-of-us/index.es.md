@@ -25,6 +25,11 @@ featuredImagePreview: "https://img.youtube.com/vi/opB7_JXL0LA/hqdefault.jpg"
 
 categories: ["Human-Condition", "Mental-Processes"]
 tags: ["TribeBeforeTruth", "RealityCheck", "IdeasBecomeIdentity", "FearChain", "StillYourChoice"]
+related:
+  - "/human-condition/2026-08-06-why-facts-trigger-rage/"
+  - "/cognitive-memetics/cows/2026-05-20-cow-w13/"
+  - "/cognitive-memetics/cows/2026-11-11-cow-w38/"
+
 ---
 
 ### Cuando la religión parecía pegamento

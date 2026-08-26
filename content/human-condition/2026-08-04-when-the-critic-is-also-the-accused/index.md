@@ -21,6 +21,11 @@ resources:
 
 tags: ["RealityCheck", "Denial", "BlameDeflection", "WhatTheHeatProtects"]
 categories: ["Human-Condition", "Mental-Processes"]
+related:
+  - "/human-condition/2026-05-01-ego-as-game/"
+  - "/cognitive-memetics/cows/2026-11-11-cow-w38/"
+  - "/cognitive-memetics/cows/2026-05-20-cow-w13/"
+
 ---
 
 A person who fears being seen as controlling may fixate on a colleague who starts sentences with **"we should"** and who ends meetings one beat early. The colleague may only be organized. To the person watching, every polish lands as **overreach**. They rehash the same vignette for days, escalate small disagreements, and leave the conversation sure they have drawn a clean moral line. Someone who struggles with dishonesty can spiral the same way: a single missing detail becomes a hunt for **proof that others lie**. The reaction can feel like **moral clarity**.

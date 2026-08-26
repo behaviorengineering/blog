@@ -27,6 +27,10 @@ resources:
   - src: wrong-pill-matrix.webp
     name: featured-image
   - src: lsd-cognitive-effects.webp
+related:
+  - "/mind-infrastructure/2026-09-04-why-healthy-brains-forget/"
+  - "/cognitive-memetics/t-shirt-art/2026-04-22-tshirt-stop-button/"
+  - "/cognitive-memetics/cows/2026-03-19-cow-w04/"
 
 ---
 

@@ -54,6 +54,13 @@ other = "TL;DW"
 [videoChapterGuide]
 other = "Chapter Guide"
 
+# claims / video singles — keep-reading related strip.
+[keepReading]
+other = "Keep reading"
+
+[keepReadingAlso]
+other = "Also"
+
 # Home — section band link to the section list.
 [homeViewSection]
 other = "View all"

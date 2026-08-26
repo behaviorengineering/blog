@@ -21,6 +21,11 @@ resources:
 
 tags: ["RealityCheck", "Denial", "BlameDeflection", "WhatTheHeatProtects"]
 categories: ["Human-Condition", "Mental-Processes"]
+related:
+  - "/human-condition/2026-05-01-ego-as-game/"
+  - "/cognitive-memetics/cows/2026-11-11-cow-w38/"
+  - "/cognitive-memetics/cows/2026-05-20-cow-w13/"
+
 ---
 
 Si te asusta ser una persona **controladora**, vas a ver abusos de poder en cualquier compañero que solo esté intentando ser ordenado. Te obsesionas con el tema, le das mil vueltas y sales de la discusión convencido de que tú tienes la razón. Pero en realidad, solo estás intentando **no verte a ti mismo**. Con la mentira pasa lo mismo: a la mínima que alguien oculta algo, te pones a buscar pruebas de que **todo el mundo engaña**. Parece que buscas la verdad, pero solo buscas alivio.

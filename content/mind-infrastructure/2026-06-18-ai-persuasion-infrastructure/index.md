@@ -23,6 +23,10 @@ resources:
     name: featured-image
   - src: minds-vs-behavior.webp
     name: minds-vs-behavior
+related:
+  - "/social-protocols/2026-06-09-the-prediction-business/"
+  - "/cognitive-memetics/reptilocracy/2026-04-19-fear-runs-the-chain/"
+  - "/cognitive-memetics/reptilocracy/2026-08-09-charisma-on-empathy-off/"
 
 ---
 

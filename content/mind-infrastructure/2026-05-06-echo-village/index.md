@@ -23,6 +23,10 @@ images:
 resources:
   - src: campfire.jpg
     name: featured-image
+related:
+  - "/social-protocols/2026-04-01-memes/"
+  - "/cognitive-memetics/cows/2026-03-12-cow-w03/"
+  - "/cognitive-memetics/cows/2026-11-04-cow-w37/"
 
 ---
 

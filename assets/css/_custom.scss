@@ -2633,6 +2633,152 @@ $home-tile-meta-color-dark: #c4b8cc;
     margin-top: 0;
 }
 
+// Keep-reading: full-width claim/video banner, then 2 equal memetics on the next row.
+.related-keep-reading {
+    margin: 2rem 0 1.5rem;
+    padding-top: 0.5rem;
+}
+
+.related-keep-reading__heading {
+    margin-bottom: 0.75rem;
+}
+
+.related-keep-reading__layout {
+    display: flex;
+    flex-direction: column;
+    gap: 1.35rem;
+    width: 100%;
+}
+
+.related-keep-reading__banner {
+    width: 100%;
+    min-width: 0;
+}
+
+.related-keep-reading__band-sep {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 0.35rem 0 0.15rem;
+    width: 100%;
+}
+
+.related-keep-reading__band-sep-line {
+    flex: 1 1 auto;
+    height: 1px;
+    background: rgba(47, 0, 53, 0.14);
+
+    [theme=dark] & {
+        background: rgba(232, 196, 255, 0.18);
+    }
+}
+
+.related-keep-reading__band-sep-label {
+    flex: 0 0 auto;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: rgba(47, 0, 53, 0.55);
+
+    [theme=dark] & {
+        color: rgba(232, 196, 255, 0.62);
+    }
+}
+
+.related-keep-reading__memetics {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem 0.75rem;
+    width: 100%;
+    min-width: 0;
+
+    @media (min-width: 540px) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+.related-keep-reading .preview-grid-card--feature {
+    @media (min-width: 720px) {
+        display: grid;
+        grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr);
+        gap: 0.85rem 1.1rem;
+        align-items: center;
+    }
+}
+
+.related-keep-reading .preview-grid-card--feature .preview-grid-card__thumb {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    max-width: none;
+
+    // Fill the 16:9 frame; contain left gray letterbox bands on mismatched art.
+    img.lazyload,
+    img.lazyloaded,
+    img.related-keep-reading__img,
+    img.preview-grid-card__img {
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+.related-keep-reading .preview-grid-card__thumb--video {
+    background: #000;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+
+    [theme=dark] & {
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    }
+}
+
+.related-keep-reading .preview-grid-card__video-embed {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    // Hugo youtube shortcode wrapper: fill the 16:9 thumb.
+    > div,
+    iframe {
+        width: 100% !important;
+        height: 100% !important;
+        max-width: none !important;
+        border: 0;
+        display: block;
+    }
+}
+
+// Memetics row: equal 1:1 thumbs, stretched card bottoms so the pair aligns.
+.related-keep-reading__memetics {
+    align-items: stretch;
+}
+
+.related-keep-reading__memetics .preview-grid-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.related-keep-reading__memetics .preview-grid-card__thumb {
+    aspect-ratio: 1 / 1;
+    flex: 0 0 auto;
+
+    img.lazyload,
+    img.lazyloaded,
+    img.preview-grid-card__img {
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+.related-keep-reading__memetics .preview-grid-card__body {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+}
+
 // Section list: optional `listLayout: preview-grid` (responsive 1/2/3-col tiles; 1:1 thumbs, contain fit; Glide per card).
 // Same max width as seven-style list rows (site standard content band).
 .preview-grid {
@@ -3013,6 +3159,45 @@ $home-tile-meta-color-dark: #c4b8cc;
     [theme=dark] & {
         color: rgba(232, 196, 255, 0.78);
     }
+}
+
+// Keep-reading: force equal small title + teaser on banner and memetic tiles
+// (must follow base `.preview-grid-card__title` clamp so it cannot grow larger).
+.related-keep-reading .preview-grid-card__title,
+.related-keep-reading .preview-grid-card--feature .preview-grid-card__title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.35;
+    letter-spacing: -0.01rem;
+}
+
+.related-keep-reading .preview-grid-card__teaser,
+.related-keep-reading .preview-grid-card--feature .preview-grid-card__teaser {
+    font-size: 0.82rem;
+    line-height: 1.45;
+    -webkit-line-clamp: 4;
+
+    p,
+    ul,
+    ol,
+    li {
+        margin: 0;
+        padding: 0;
+        display: inline;
+        list-style: none;
+    }
+
+    li + li::before {
+        content: " ";
+    }
+
+    strong {
+        font-weight: 600;
+    }
+}
+
+.related-keep-reading .preview-grid-card--feature .preview-grid-card__teaser {
+    -webkit-line-clamp: 6;
 }
 
 // Footer: subscribe CTA (LoveIt `params.footer.custom`)

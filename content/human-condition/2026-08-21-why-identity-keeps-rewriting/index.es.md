@@ -25,6 +25,11 @@ tags: ["IdeasBecomeIdentity", "Agency", "StillYourChoice", "PredictiveProcessing
 
 aliases:
   - /es/human-condition/2026-08-21-why-identity-keeps-rewriting/
+related:
+  - "/mind-infrastructure/2026-04-29-free-energy-principle-hallucination-machine/"
+  - "/cognitive-memetics/reptilocracy/2026-05-22-safest-self-smallest-self/"
+  - "/cognitive-memetics/sayings/2026-06-29-saying-25/"
+
 ---
 
 ### Tu "yo" se arma al momento

@@ -28,6 +28,11 @@ resources:
 
 tags: ["PredictiveProcessing", "ObviousIsTrained", "BodyAsThinkingTool", "EmbodiedCognition", "SeeTheGame"]
 categories: ["Human-Condition", "Mental-Processes"]
+related:
+  - "/mind-infrastructure/2026-05-08-body-thinks-first/"
+  - "/cognitive-memetics/cows/2026-02-26-cow-w01/"
+  - "/cognitive-memetics/psych-fitness-28/2026-05-04-day-03-clear-thinking/"
+
 ---
 
 Tu cerebro manda, pero nunca sientes su esfuerzo. Se esconde para entregarte una versión simplificada de la realidad: "esto es el mundo, esto es tu cuerpo."

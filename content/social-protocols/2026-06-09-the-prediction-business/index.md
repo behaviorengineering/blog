@@ -36,6 +36,11 @@ tags:
     "PredictiveControl",
     "SpeechActs",
   ]
+related:
+  - "/mind-infrastructure/2026-06-18-ai-persuasion-infrastructure/"
+  - "/cognitive-memetics/cows/2026-03-12-cow-w03/"
+  - "/cognitive-memetics/cows/2026-07-01-cow-w19/"
+
 ---
 
 ### Surveillance got cheaper than East Germany

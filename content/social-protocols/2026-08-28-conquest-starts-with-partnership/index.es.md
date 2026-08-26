@@ -28,6 +28,11 @@ aliases:
   - "/es/social-protocols/2026-08-28-conquest-starts-with-partnership/"
   - "/es/protocolos-sociales/2026-08-28-conquest-starts-with-partnership/"
   - "/es/reality-protocols/2026-08-28-conquest-starts-with-partnership/"
+related:
+  - "/human-condition/2026-05-28-why-humans-keep-building-pyramids/"
+  - "/cognitive-memetics/sayings/2026-06-01-saying-21/"
+  - "/cognitive-memetics/reptilocracy/2026-05-10-principles-with-escape-hatches/"
+
 ---
 
 ### Te invitan de socio

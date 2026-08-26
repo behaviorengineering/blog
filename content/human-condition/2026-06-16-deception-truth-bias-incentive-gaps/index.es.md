@@ -28,6 +28,10 @@ resources:
 
 tags: ["TribeBeforeTruth", "EvolutionVsCulture", "RealityCheck", "EpistemicFog"]
 categories: ["Human-Condition", "Social-Trust"]
+related:
+  - "/social-protocols/2026-07-23-deniability-hood/"
+  - "/cognitive-memetics/sayings/2026-09-14-saying-36/"
+  - "/cognitive-memetics/sayings/2026-10-12-saying-40/"
 
 ---
 

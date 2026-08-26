@@ -19,6 +19,11 @@ images:
 
 tags: ["AGIHype", "FreeEnergyPrinciple", "EpistemicFog", "WorldModels", "PatternsNotWorldModels"]
 categories: ["Mind-Infrastructure"]
+related:
+  - "/mind-infrastructure/2026-04-29-free-energy-principle-hallucination-machine/"
+  - "/cognitive-memetics/t-shirt-art/2026-05-16-smart-cover-your-ears/"
+  - "/cognitive-memetics/cows/2026-02-26-cow-w01/"
+
 ---
 
 ### You simplify, then you forget the cut

@@ -28,6 +28,11 @@ resources:
 tags: ["GroundHogCenturies", "HardTimesStrongMen", "AlgorithmicDecay", "NarcissismFactory"]
 aliases:
   - "/reality-protocols/2026-03-10-hard-times-cycle/"
+related:
+  - "/human-condition/2026-04-24-comfort-hides-fragility/"
+  - "/cognitive-memetics/cows/2026-11-04-cow-w37/"
+  - "/cognitive-memetics/reptilocracy/2026-06-14-overfunding-the-circus/"
+
 ---
 G. Michael Hopf wrote the line below in *Those Who Remain* (2016), after reading generational-cycle theories like Strauss and Howe's *The Fourth Turning*. It is not an ancient proverb. It compresses their roughly 80-year model of stability, decay, and crisis into four beats:
 

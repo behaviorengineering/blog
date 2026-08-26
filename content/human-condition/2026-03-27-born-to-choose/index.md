@@ -26,6 +26,10 @@ resources:
 
 tags: ["WhenChoiceBitesBack", "StillYourChoice", "WhoCarriesTheWork", "NoBrakesNoCorrection"]
 categories: ["Human-Condition", "Mental-Processes"]
+related:
+  - "/human-condition/2026-04-24-comfort-hides-fragility/"
+  - "/cognitive-memetics/reptilocracy/2026-07-19-the-false-fork/"
+  - "/cognitive-memetics/sayings/2026-07-27-saying-29/"
 
 ---
 ### Outsourced decisions, owned story

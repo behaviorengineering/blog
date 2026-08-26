@@ -21,6 +21,11 @@ resources:
 
 tags: ["AGIHype", "SystemsCanHijackYou", "Automation", "SeeTheGame", "BodyAsThinkingTool"]
 categories: ["Human-Condition", "Mental-Processes"]
+related:
+  - "/mind-infrastructure/2026-04-26-will-ai-replace-me/"
+  - "/cognitive-memetics/cows/2026-02-26-cow-w01/"
+  - "/cognitive-memetics/t-shirt-art/2026-05-23-tshirt-predictability-automates-first/"
+
 ---
 
 La gente dice que la IA nos está **quitando la capacidad de pensar**. Tienen razón en parte, pero solo en el **plano del hábito**. La necesidad de pensar no desaparece, solo pasa a un **plano distinto de metacognición**.

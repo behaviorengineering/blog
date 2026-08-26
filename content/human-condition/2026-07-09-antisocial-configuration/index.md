@@ -21,6 +21,11 @@ resources:
 
 tags: ["NotEveryoneFeelsTheSame", "LetsDefineBad", "RealityCheck", "SayItOutLoud"]
 categories: ["Human-Condition", "Social-Behaviour"]
+related:
+  - "/human-condition/2026-06-23-sociopathy-duty-of-care/"
+  - "/cognitive-memetics/reptilocracy/2026-08-09-charisma-on-empathy-off/"
+  - "/cognitive-memetics/cows/2026-06-24-cow-w18/"
+
 ---
 
 Society now names some configurations out loud: Autism. ADHD. Dyslexia. Non-binary. Neurodivergent. We can name them, debate them, and sometimes even build support around them.

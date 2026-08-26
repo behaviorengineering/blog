@@ -23,6 +23,11 @@ images:
 
 tags: ["RealityCheck", "Stress", "CognitiveCapacity", "StillYourChoice"]
 categories: ["Mind-Infrastructure"]
+related:
+  - "/mind-infrastructure/2026-04-29-free-energy-principle-hallucination-machine/"
+  - "/cognitive-memetics/sayings/2026-08-10-saying-31/"
+  - "/cognitive-memetics/cows/2026-07-29-cow-w23/"
+
 ---
 
 ### Hasta un campeón de memoria se olvida de un cumpleaños

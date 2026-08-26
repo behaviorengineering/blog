@@ -321,9 +321,10 @@ Editorial passes on **human-condition**, **claims**, and org-design posts surfac
 
 **Cross-field sync:** When Claim or body wording changes (*promueve/promueven*, *a conciencia*, *demostró*), update **`facebook-es.txt`** and **`substack.es.md`** in the same bundle so social copy does not keep stale calques or slip back to **suben** / **deja subir** / **impulsa** for the same hierarchy beat.
 
-6. **Taxonomies (`categories`, `tags`)**: Keep values **identical** to the English post unless the project explicitly adopts translated taxonomy terms. Matching terms avoids duplicate tag/category hubs and keeps cross-language analytics consistent. If you must change a tag, coordinate EN and ES and accept a new taxonomy term. When choosing tags on either side, read **`data/tag-register.txt`** and **`.cursor/skills/tag-register/SKILL.md`** first.
-7. **URLs, permalinks, and `aliases`**: Follow **[Spanish URLs, permalinks, and aliases](#spanish-urls-permalinks-and-aliases)** below (canonical paths, internal links, redirects, `facebook-es.txt` / `linkedin.es.txt`).
-8. **Punctuation**: Same as English site rule—**do not** use the em dash (U+2014); use comma, semicolon, colon, or parentheses.
+6. **Taxonomies (`categories`, `tags`)**: Keep values **identical** to the English post unless the project explicitly adopts translated taxonomy terms. Matching terms avoid duplicate tag/category hubs and keep cross-language analytics consistent. If you must change a tag, coordinate EN and ES and accept a new taxonomy term. When choosing tags on either side, read **`data/tag-register.txt`** and **`.cursor/skills/tag-register/SKILL.md`** first.
+7. **`related` (claims / video):** When the English page sets **`related`**, mirror the **same path strings** on **`index.es.md`**. `Site.GetPage` in the Spanish language context resolves translated siblings when they exist. Do not invent Spanish-only related paths that the English page lacks.
+8. **URLs, permalinks, and `aliases`**: Follow **[Spanish URLs, permalinks, and aliases](#spanish-urls-permalinks-and-aliases)** below (canonical paths, internal links, redirects, `facebook-es.txt` / `linkedin.es.txt`).
+9. **Punctuation**: Same as English site rule—**do not** use the em dash (U+2014); use comma, semicolon, colon, or parentheses.
 
 ## Spanish URLs, permalinks, and aliases
 

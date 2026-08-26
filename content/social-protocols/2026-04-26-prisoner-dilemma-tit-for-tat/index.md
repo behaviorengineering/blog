@@ -32,6 +32,11 @@ aliases:
   - "/reality-protocols/2026-04-26-prisoner-dilemma-tit-for-tat/"
   - "/reality-protocols/2026-04-19-prisoner-dilemma-tit-for-tat/"
   - "/social-protocols/2026-04-19-prisoner-dilemma-tit-for-tat/"
+related:
+  - "/social-protocols/2026-08-14-everyone-knows-nobody-acts/"
+  - "/cognitive-memetics/cows/2026-10-21-cow-w35/"
+  - "/cognitive-memetics/sayings/2026-06-15-saying-23/"
+
 ---
 
 ### The Takeaway

@@ -29,6 +29,11 @@ featuredImagePreview: "https://img.youtube.com/vi/FTWNnmymMc4/hqdefault.jpg"
 
 categories: ["Human-Condition"]
 tags: ["NotEveryoneFeelsTheSame", "EmpathyIsAGreyArea", "Accountability", "RitualAndRules"]
+related:
+  - "/human-condition/2026-07-09-antisocial-configuration/"
+  - "/cognitive-memetics/reptilocracy/2026-08-09-charisma-on-empathy-off/"
+  - "/cognitive-memetics/cows/2026-06-24-cow-w18/"
+
 ---
 
 We treat sociopathy as a movie villain rather than a biological reality. We binge fiction about serial killers and crack jokes about "psychos" because it is easier than admitting some people never grow a "good" switch to flip.

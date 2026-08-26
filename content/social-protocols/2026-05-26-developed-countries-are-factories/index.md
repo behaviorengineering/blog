@@ -39,6 +39,11 @@ tags:
   - RealityCheck
   - SystemsCanHijackYou
   - SharedIllusionsRunTheWorld
+related:
+  - "/social-protocols/2026-05-19-be-the-captain-not-the-vessel/"
+  - "/cognitive-memetics/reptilocracy/2026-05-03-mandate-as-dashboard/"
+  - "/cognitive-memetics/cows/2026-03-26-cow-w05/"
+
 ---
 
 Rich nations are what we aspire to, but their metrics track output, not how people live. No one talks about how **you lose the time you have for people**.
