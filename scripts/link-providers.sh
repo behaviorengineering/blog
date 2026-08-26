@@ -14,6 +14,11 @@ link() {
 		echo "providers/${name} -> ${target} (ok)"
 		return 0
 	fi
+	if [[ -L "${link_path}" ]]; then
+		ln -sfn "${target}" "${link_path}"
+		echo "providers/${name} -> ${target} (retargeted)"
+		return 0
+	fi
 	if [[ -e "${link_path}" ]]; then
 		echo "providers/${name} exists and is not the expected symlink; remove it and retry" >&2
 		exit 1
@@ -23,6 +28,6 @@ link() {
 }
 
 # From site/providers/: up to ai/, then into the repo checkout.
-# content-pipelines lives on disk as n8n/ (module github.com/xynova/content-pipelines).
-link content-pipelines ../../../n8n
+# Module github.com/xynova/content-pipelines is checked out as content-pipelines/.
+link content-pipelines ../../../content-pipelines
 link content-pipelines-mcp ../../../content-pipelines-mcp
