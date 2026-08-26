@@ -18,6 +18,11 @@ images:
 
 tags: ["PredictiveProcessing", "ControlledHallucination", "WorldModels", "PriorsAndPredictionError", "FreeEnergyPrinciple"]
 categories: ["Mind-Infrastructure"]
+related:
+  - "/human-condition/2026-08-21-why-identity-keeps-rewriting/"
+  - "/cognitive-memetics/t-shirt-art/2026-05-16-smart-cover-your-ears/"
+  - "/cognitive-memetics/sayings/2026-10-05-saying-39/"
+
 ---
 
 ### Cómo el cerebro filtra el ruido de la realidad

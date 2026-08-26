@@ -34,6 +34,10 @@ images:
 resources:
   - src: elephant-in-the-room.webp
     name: featured-image
+related:
+  - "/human-condition/2026-07-31-why-you-always-have-two-reasons/"
+  - "/cognitive-memetics/sayings/2026-09-07-saying-35/"
+  - "/cognitive-memetics/sayings/2026-09-21-saying-37/"
 
 ---
 

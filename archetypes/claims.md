@@ -18,6 +18,11 @@ grounding = ''
 
 research = ''
 
+# Optional keep-reading paths (Hugo GetPage). Prefer sayings/panel; MAY add claims/video.
+# Example: related = ['/cognitive-memetics/sayings/2026-10-05-saying-39/']
+# Empty or omitted: layout fills from shared tags. Do not paste related links into the body.
+related = []
+
 # Optional Markdown attribution: detail meta above hero; section list under thumbnail. Omit if not needed.
 image_credit = ''
 

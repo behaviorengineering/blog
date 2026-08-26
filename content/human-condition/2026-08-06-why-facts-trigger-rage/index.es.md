@@ -22,6 +22,11 @@ featuredImagePreview: "https://img.youtube.com/vi/wmzwsKv3DcM/hqdefault.jpg"
 
 categories: ["Human-Condition"]
 tags: ["NarrativeControl", "Accountability", "Denial", "CharacterPathology", "DifferentOperatingSystems", "MentalInfrastructure"]
+related:
+  - "/social-protocols/2026-04-03-shared-reality/"
+  - "/cognitive-memetics/t-shirt-art/2026-05-16-smart-cover-your-ears/"
+  - "/cognitive-memetics/sayings/2026-10-26-saying-42/"
+
 ---
 
 ### El colapso del relato compartido

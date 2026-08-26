@@ -42,6 +42,11 @@ aliases:
   - "/es/protocolos-sociales/2026-05-23-the-prediction-business/"
   - "/es/social-protocols/2026-05-30-the-prediction-business/"
   - "/es/protocolos-sociales/2026-05-30-the-prediction-business/"
+related:
+  - "/mind-infrastructure/2026-06-18-ai-persuasion-infrastructure/"
+  - "/cognitive-memetics/cows/2026-03-12-cow-w03/"
+  - "/cognitive-memetics/cows/2026-07-01-cow-w19/"
+
 ---
 
 ### La vigilancia es hoy más barata que en la Alemania Oriental

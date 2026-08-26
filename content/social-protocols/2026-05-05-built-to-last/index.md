@@ -23,6 +23,10 @@ resources:
     name: featured-image
 
 tags: ["VoluntarySubmission", "LegitimacyMachines", "RitualAndRules", "BlameTheInterpreter", "MeaningAsControl"]
+related:
+  - "/social-protocols/2026-05-26-developed-countries-are-factories/"
+  - "/cognitive-memetics/psych-fitness-28/2026-05-25-day-24-the-policies-enacted-today-will-outlast-the-leaders/"
+  - "/cognitive-memetics/cows/2026-03-26-cow-w05/"
 
 ---
 

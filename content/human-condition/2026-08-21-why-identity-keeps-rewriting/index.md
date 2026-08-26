@@ -22,6 +22,11 @@ featuredImagePreview: "https://img.youtube.com/vi/LPN0s3lvlN0/hqdefault.jpg"
 
 categories: ["Human-Condition", "Mental-Processes"]
 tags: ["IdeasBecomeIdentity", "Agency", "StillYourChoice", "PredictiveProcessing", "ControlledHallucination"]
+related:
+  - "/mind-infrastructure/2026-04-29-free-energy-principle-hallucination-machine/"
+  - "/cognitive-memetics/reptilocracy/2026-05-22-safest-self-smallest-self/"
+  - "/cognitive-memetics/sayings/2026-06-29-saying-25/"
+
 ---
 
 ### Your "me" is a live build

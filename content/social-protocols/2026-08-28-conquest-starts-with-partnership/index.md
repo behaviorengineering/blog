@@ -23,6 +23,11 @@ featuredImage: "https://img.youtube.com/vi/W5EeZ4i73IM/hqdefault.jpg"
 featuredImagePreview: "https://img.youtube.com/vi/W5EeZ4i73IM/hqdefault.jpg"
 
 tags: ["SeeTheGame", "PowerAndControl", "RiskExport", "CheapNarratives"]
+related:
+  - "/human-condition/2026-05-28-why-humans-keep-building-pyramids/"
+  - "/cognitive-memetics/sayings/2026-06-01-saying-21/"
+  - "/cognitive-memetics/reptilocracy/2026-05-10-principles-with-escape-hatches/"
+
 ---
 
 ### They invited you as a partner

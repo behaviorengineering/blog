@@ -22,6 +22,11 @@ resources:
 
 tags: ["DeniabilityHood", "CheapNarratives", "SeeTheGame", "RealityCheck"]
 categories: ["Human-Condition", "Mental-Processes"]
+related:
+  - "/social-protocols/2026-07-23-deniability-hood/"
+  - "/cognitive-memetics/sayings/2026-09-07-saying-35/"
+  - "/cognitive-memetics/cows/2026-08-12-cow-w25/"
+
 ---
 
 A J. P. Morgan se le atribuye una frase lapidaria: un hombre siempre tiene dos razones para lo que hace, una que suena bien y la real. Aunque la atribución es tardía, la lógica es implacable.

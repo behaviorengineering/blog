@@ -26,6 +26,10 @@ resources:
 tags: ["SameButDifferentWorlds", "DoYouHaveATribe", "GoBackToOfficeFad", "TimeThatCounts"]
 aliases:
   - "/reality-protocols/2026-04-03-shared-reality/"
+related:
+  - "/human-condition/2026-08-06-why-facts-trigger-rage/"
+  - "/cognitive-memetics/sayings/2026-04-06-saying-13/"
+  - "/cognitive-memetics/sayings/2026-06-01-saying-21/"
 
 ---
 ### How alignment stacks

@@ -26,6 +26,10 @@ aliases:
   - "/es/social-protocols/2026-04-28-candor-zero-sum-politics/"
   - "/es/protocolos-sociales/2026-04-28-candor-zero-sum-politics/"
   - "/es/reality-protocols/2026-04-28-candor-zero-sum-politics/"
+related:
+  - "/social-protocols/2026-03-10-hard-times-cycle/"
+  - "/cognitive-memetics/reptilocracy/2026-05-31-dissent-as-background-noise/"
+  - "/cognitive-memetics/psych-fitness-28/2026-05-08-day-07-pressure-pushes-shaky-leaders-toward-blame/"
 
 ---
 

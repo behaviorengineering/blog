@@ -21,6 +21,11 @@ resources:
 
 tags: ["AGIHype", "SystemsCanHijackYou", "Automation", "SeeTheGame", "BodyAsThinkingTool"]
 categories: ["Human-Condition", "Mental-Processes"]
+related:
+  - "/mind-infrastructure/2026-04-26-will-ai-replace-me/"
+  - "/cognitive-memetics/cows/2026-02-26-cow-w01/"
+  - "/cognitive-memetics/t-shirt-art/2026-05-23-tshirt-predictability-automates-first/"
+
 ---
 
 People say AI is **taking our thinking**. That is partly right. It may only be right on the **habit plane**. We still have to think; we just have to do it on the **metacognition plane**.

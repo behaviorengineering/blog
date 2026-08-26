@@ -34,6 +34,10 @@ resources:
 tags: ["TruthAsContent", "SkinInTheGame", "CommentaryNotConstraint", "NodAlongChangeNothing"]
 aliases:
   - "/reality-protocols/2026-04-14-truth-as-meme/"
+related:
+  - "/social-protocols/2026-04-01-memes/"
+  - "/cognitive-memetics/sayings/2026-10-26-saying-42/"
+  - "/cognitive-memetics/t-shirt-art/2026-05-16-smart-cover-your-ears/"
 
 ---
 Memes add **distance**. It's not "this is happening to me and my people," it's "here's some content about what's happening." Same event, different circuit. The closer it feels, the more the amygdala treats it like a real threat. The farther it feels, the more it becomes entertainment.

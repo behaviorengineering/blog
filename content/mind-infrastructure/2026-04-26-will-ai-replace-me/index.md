@@ -24,6 +24,11 @@ tags:
     "HumanAIFlippedClassroom",
   ]
 categories: ["Mind-Infrastructure"]
+related:
+  - "/human-condition/2026-06-25-ai-thinking-planes-octopus/"
+  - "/cognitive-memetics/t-shirt-art/2026-05-23-tshirt-predictability-automates-first/"
+  - "/cognitive-memetics/t-shirt-art/2026-07-30-tshirt-agi-tated/"
+
 ---
 
 ### The leverage shift

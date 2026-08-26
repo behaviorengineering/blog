@@ -21,6 +21,11 @@ featuredImagePreview: "https://img.youtube.com/vi/6xlmaorRY0w/hqdefault.jpg"
 
 categories: ["Human-Condition", "Mental-Processes"]
 tags: ["FixedEnergyBudget", "SenseOfPurpose", "MitochondrialSymbiosis", "Stress", "Resilience"]
+related:
+  - "/mind-infrastructure/2026-09-04-why-healthy-brains-forget/"
+  - "/cognitive-memetics/cows/2026-07-29-cow-w23/"
+  - "/cognitive-memetics/psych-fitness-28/2026-05-17-day-16-stress-narrows-vision/"
+
 ---
 
 ### Your body runs on a fixed budget

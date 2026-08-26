@@ -36,6 +36,10 @@ aliases:
   - "/es/social-protocols/2026-04-14-truth-as-meme/"
   - "/es/protocolos-sociales/2026-04-14-truth-as-meme/"
   - "/es/reality-protocols/2026-04-14-truth-as-meme/"
+related:
+  - "/social-protocols/2026-04-01-memes/"
+  - "/cognitive-memetics/sayings/2026-10-26-saying-42/"
+  - "/cognitive-memetics/t-shirt-art/2026-05-16-smart-cover-your-ears/"
 
 ---
 Los memes añaden **distancia**. Ya no es «esto me está pasando a mí»; ahora es «mira este contenido sobre lo que está pasando». Es el mismo hecho, pero en un circuito distinto. Cuanto más cerca sientes algo, más lo trata tu amígdala como un peligro real. Cuanto más lejos está, más se convierte en simple entretenimiento.

@@ -25,6 +25,11 @@ tags:
     "BubbleStrength",
   ]
 categories: ["Human-Condition", "Bio-Evolution"]
+related:
+  - "/social-protocols/2026-03-10-hard-times-cycle/"
+  - "/cognitive-memetics/reptilocracy/2026-05-22-safest-self-smallest-self/"
+  - "/cognitive-memetics/cows/2026-07-29-cow-w23/"
+
 ---
 
 ### The unifying idea

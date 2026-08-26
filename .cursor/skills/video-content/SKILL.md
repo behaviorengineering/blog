@@ -16,7 +16,7 @@ description: >-
 
 **Video** posts pair a **YouTube embed** with a **stand-alone article** below it. **Primary goal:** the talk is worth watching; **`description`** and hooks should **sell the play button**. **Parallel goal:** many people **read first** (feeds, quick tabs, preview-then-decide) and some **never** press play, so the **body** still delivers argument, mechanism, and **so what** in text. The embed remains the full experience you recommend.
 
-**UI (this repo):** `layouts/video/single.html` renders **title** → **subtitle** (optional) → **meta** → **featured image** only if there is **no** `youtube_id` → **tags** → optional **TOC** → **lead** (see below) → **embed** (when `youtube_id` set) → **TL;DW** (body TLDR) → **Chapter Guide** (when present) → optional footer.
+**UI (this repo):** `layouts/video/single.html` renders **title** → **subtitle** (optional) → **meta** → **featured image** only if there is **no** `youtube_id` → **tags** → optional **TOC** → **lead** (see below) → **embed** (when `youtube_id` set) → **TL;DW** (body TLDR) → **Chapter Guide** (when present) → optional **Keep reading** (`related` or shared-tag fallback) → optional footer.
 
 **Lead on the single (order):** If **`sowhat`** is set, **`description`** is shown under fixed **`h3`** **“What you probably do not know yet”** (🎬), then **`sowhat`** under **`h3`** **“What you will know after”** (🎯). If **`sowhat`** is omitted, **`description`** has no extra heading above it. Both fields are markdownified.
 
@@ -39,6 +39,7 @@ description: >-
 | **Body** | **TLDR / “so what” article** **below** the embed: your summary of what the video argues, why it matters, named ideas, caveats, and links. Use **`###`** hook sections so skimmers can scan (see **Body headings**; do not use **`##`** in the site body). Optional **Chapter Guide** table at the end for people who read first then jump to a moment. Default intent: **substantive** text backup, not filler, because plenty of traffic never plays the file. |
 | **`subtitle`** | Optional second line under the **`title`** on the **single** page only (not list rows or home tiles). See **Subtitle (optional)** below. |
 | **`categories`** | Taxonomy hubs. Often **`Mind-Infrastructure`**, **`Human-Condition`**, and **`Social-Protocols`** (or **`Reality-Protocols`** under claims) by topic; pick what matches the post (see other posts in that section). For **`content/human-condition/`**, you MAY use **`Human-Condition`** plus **exactly one** theme hub (second term), same pattern as Cognitive-Memetics umbrellas (**`.cursor/skills/claims-content/SKILL.md`** → **Human-Condition theme hubs**). |
+| **`related`** | Optional **keep-reading** paths (Hugo `GetPage` strings). Layout: **one** claims/video banner on top, then up to **two** sayings/panel on the next row. Empty or omitted: layout fills from **shared tags**. MUST **not** dump related links into the TLDR body. See **`layouts/partials/related-keep-reading.html`**. |
 
 ## Subtitle (optional)
 
@@ -208,12 +209,13 @@ Posts are normal pages under a section folder, for example:
 
 1. Create with **`hugo new content/<section>/<slug>/index.md --kind video`** (archetype: **`archetypes/video.md`**).
 2. Set **`title`**, **`description`** (lead), **`youtube_id`**, **`categories`**, **`tags`**, **`draft`**, optional **`sowhat`** (add the key in front matter if you use teaser/payoff; the archetype does not include it by default), optional **`subtitle`** when **Subtitle (optional)** applies, and optional featured image resource.
-3. Write the **body** as the **TLDR / so-what article** below the embed (see **Lead, TLDR body, and optional Chapter Guide** above). Use **hook `###` headings** per **`.cursor/skills/revise-hooks/SKILL.md`**. Add **Chapter Guide** when the talk is long or dense.
-4. If you maintain **`substack.md`**, copy the **Chapter Guide** table into the sidecar per **`.cursor/skills/substack-post/SKILL.md`**.
-5. If you maintain **`linkedin.txt`**, add the chapter outline per **`.cursor/skills/linkedin-post/SKILL.md`**.
-6. If you maintain **`facebook-en.txt`** / **`facebook-es.txt`**, add the locale outline per **`.cursor/skills/facebook-post/SKILL.md`**.
-7. **Cold-read** **`description`** (especially the **first two bullets**) and **`sowhat`**; rewrite until each line passes without the body or video.
-8. Run a local **`hugo`** build before publishing.
+3. **Recommend `related`:** after tags, search for up to **two** **cognitive-memetics** sayings or panels that share the mechanism or a punchy parallel; MAY add **one** other claim or video. Write Hugo paths into **`related`**. If none fit, leave empty for tag fallback. MUST **not** paste related links into the TLDR body.
+4. Write the **body** as the **TLDR / so-what article** below the embed (see **Lead, TLDR body, and optional Chapter Guide** above). Use **hook `###` headings** per **`.cursor/skills/revise-hooks/SKILL.md`**. Add **Chapter Guide** when the talk is long or dense.
+5. If you maintain **`substack.md`**, copy the **Chapter Guide** table into the sidecar per **`.cursor/skills/substack-post/SKILL.md`**.
+6. If you maintain **`linkedin.txt`**, add the chapter outline per **`.cursor/skills/linkedin-post/SKILL.md`**.
+7. If you maintain **`facebook-en.txt`** / **`facebook-es.txt`**, add the locale outline per **`.cursor/skills/facebook-post/SKILL.md`**.
+8. **Cold-read** **`description`** (especially the **first two bullets**) and **`sowhat`**; rewrite until each line passes without the body or video.
+9. Run a local **`hugo`** build before publishing.
 
 ## Style and repo rules
 
@@ -231,6 +233,6 @@ Posts are normal pages under a section folder, for example:
 ## References in this repo
 
 - Archetype: **`archetypes/video.md`**
-- Layouts: **`layouts/video/single.html`**, **`layouts/partials/video-body-sections.html`**, **`layouts/partials/video-table-of-contents.html`**, **`layouts/partials/seven-style-row.html`** (list row embed + CTA + aside), **`layouts/_default/home-tile.html`** + **`layouts/partials/home-tile-body.html`** (home grid)
+- Layouts: **`layouts/video/single.html`**, **`layouts/partials/video-body-sections.html`**, **`layouts/partials/video-table-of-contents.html`**, **`layouts/partials/related-keep-reading.html`**, **`layouts/partials/seven-style-row.html`** (list row embed + CTA + aside), **`layouts/_default/home-tile.html`** + **`layouts/partials/home-tile-body.html`** (home grid)
 - List CTA string: **`i18n/en.toml`** → **`[fullPost]`**
 - Built-in embed: LoveIt docs *Theme Documentation - Built-in Shortcodes* → **youtube** (see `themes/LoveIt/exampleSite/content/posts/theme-documentation-built-in-shortcodes/index.en.md`).

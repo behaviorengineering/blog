@@ -37,6 +37,11 @@ aliases:
   - /es/protocolos-sociales/tener-raz%C3%B3n-o-sentirte-con-raz%C3%B3n/
   - /es/protocolos-sociales/negativa-tercada/
   - /es/protocolos-sociales/terquedad-infinita/
+related:
+  - "/human-condition/2026-08-06-why-facts-trigger-rage/"
+  - "/cognitive-memetics/t-shirt-art/2026-05-16-smart-cover-your-ears/"
+  - "/cognitive-memetics/t-shirt-art/2026-05-04-tshirt-not-protection-escape/"
+
 ---
 
 Piensa en ese título universitario que te costó años y una fortuna. Alguien te muestra números afirmando que la gente sin diploma está ganando más y, en tu industria, ese cartón ya no sirve de nada. ¡Hecatombe! No le das las gracias por abrirte los ojos. **Te pones a la defensiva.** Le explicas que los datos no entienden el valor profundo e intangible de pasar por la universidad.

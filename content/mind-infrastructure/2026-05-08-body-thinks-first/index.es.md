@@ -19,6 +19,11 @@ images:
 
 tags: ["EmbodiedCognition", "SpatialThinking", "GestureAndThought", "BodyAsThinkingTool", "LanguageAndMind"]
 categories: ["Mind-Infrastructure"]
+related:
+  - "/human-condition/2026-06-11-think-with-elbow/"
+  - "/cognitive-memetics/cows/2026-02-26-cow-w01/"
+  - "/cognitive-memetics/psych-fitness-28/2026-05-04-day-03-clear-thinking/"
+
 ---
 
 ### El cuerpo arma el pensamiento

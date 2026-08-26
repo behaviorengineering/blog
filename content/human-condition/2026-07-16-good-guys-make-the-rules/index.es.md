@@ -27,6 +27,10 @@ tags:
   - "RealityCheck"
   - "CheapNarratives"
 categories: ["Human-Condition", "Mental-Processes"]
+related:
+  - "/social-protocols/2026-07-23-deniability-hood/"
+  - "/cognitive-memetics/reptilocracy/2026-05-10-principles-with-escape-hatches/"
+  - "/cognitive-memetics/t-shirt-art/2026-03-13-tshirt-narrative/"
 
 ---
 

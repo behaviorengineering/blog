@@ -47,6 +47,11 @@ tags:
   - SeeTheGame
   - RealityCheck
   - PowerAndControl
+related:
+  - "/social-protocols/2026-05-19-be-the-captain-not-the-vessel/"
+  - "/cognitive-memetics/reptilocracy/2026-08-09-charisma-on-empathy-off/"
+  - "/cognitive-memetics/cows/2026-11-11-cow-w38/"
+
 ---
 
 ### Reflexiones

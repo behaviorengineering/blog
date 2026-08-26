@@ -32,6 +32,11 @@ resources:
     name: featured-image
 
 translationKey: "2026-05-12-rigidity-beats-accuracy"
+related:
+  - "/human-condition/2026-08-06-why-facts-trigger-rage/"
+  - "/cognitive-memetics/t-shirt-art/2026-05-16-smart-cover-your-ears/"
+  - "/cognitive-memetics/t-shirt-art/2026-05-04-tshirt-not-protection-escape/"
+
 ---
 
 Remember the degree you poured four years and six figures into? Someone shows you data proving that people without the credential are outperforming you, and the degree itself means nothing in your field. You do not say "thank you for the clarity." You **get defensive**. You explain why the data misses the deep, unquantifiable value of a proper education.

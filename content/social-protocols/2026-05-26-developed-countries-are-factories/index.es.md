@@ -40,6 +40,11 @@ tags:
   - RealityCheck
   - SystemsCanHijackYou
   - SharedIllusionsRunTheWorld
+related:
+  - "/social-protocols/2026-05-19-be-the-captain-not-the-vessel/"
+  - "/cognitive-memetics/reptilocracy/2026-05-03-mandate-as-dashboard/"
+  - "/cognitive-memetics/cows/2026-03-26-cow-w05/"
+
 ---
 
 Aspiramos a las naciones ricas, pero sus métricas miden la producción, no cómo viven las personas. Nadie habla de cómo **pierdes el tiempo que tienes para los tuyos**.

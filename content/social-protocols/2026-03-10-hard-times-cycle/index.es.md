@@ -30,6 +30,11 @@ aliases:
   - "/es/social-protocols/2026-03-10-hard-times-cycle/"
   - "/es/protocolos-sociales/2026-03-10-hard-times-cycle/"
   - "/es/reality-protocols/2026-03-10-hard-times-cycle/"
+related:
+  - "/human-condition/2026-04-24-comfort-hides-fragility/"
+  - "/cognitive-memetics/cows/2026-11-04-cow-w37/"
+  - "/cognitive-memetics/reptilocracy/2026-06-14-overfunding-the-circus/"
+
 ---
 G. Michael Hopf escribió la frase de abajo en *Those Who Remain* (2016), después de leer teorías de ciclo generacional como *The Fourth Turning*, de Strauss y Howe. No es un proverbio antiguo. Condensa su modelo de unos 80 años entre estabilidad, decadencia y crisis en cuatro pasos:
 

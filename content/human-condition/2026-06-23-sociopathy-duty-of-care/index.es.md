@@ -28,6 +28,11 @@ featuredImagePreview: "https://img.youtube.com/vi/FTWNnmymMc4/hqdefault.jpg"
 
 categories: ["Human-Condition"]
 tags: ["NotEveryoneFeelsTheSame", "EmpathyIsAGreyArea", "Accountability", "RitualAndRules"]
+related:
+  - "/human-condition/2026-07-09-antisocial-configuration/"
+  - "/cognitive-memetics/reptilocracy/2026-08-09-charisma-on-empathy-off/"
+  - "/cognitive-memetics/cows/2026-06-24-cow-w18/"
+
 ---
 
 Tratamos la sociopatía como a un villano de película en lugar de una realidad biológica. Consumimos ficción sobre asesinos en serie y bromeamos sobre "psicópatas" porque es más fácil que admitir que algunas personas nunca desarrollan un "interruptor" de bondad.

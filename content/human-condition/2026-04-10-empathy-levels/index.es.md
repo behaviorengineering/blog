@@ -26,6 +26,11 @@ image_credit: |
 
 tags: ["SystemsCanHijackYou", "NotEveryoneFeelsTheSame", "EmpathyIsAGreyArea", "LetsDefineBad"]
 categories: ["Human-Condition", "Mental-Processes"]
+related:
+  - "/human-condition/2026-06-23-sociopathy-duty-of-care/"
+  - "/cognitive-memetics/reptilocracy/2026-08-09-charisma-on-empathy-off/"
+  - "/cognitive-memetics/psych-fitness-28/2026-05-20-day-19-empathy-takes-mental-energy/"
+
 ---
 ### Tres maneras de entender a alguien
 

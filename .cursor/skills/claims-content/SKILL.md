@@ -27,11 +27,12 @@ Posts use front matter fields that split **narrative** from **intellectual ancho
 | **`description`** | **Claim**: the narrative assertion in your voice. What the reader should believe or notice. Often shown as the **Claim** block in the UI. MUST **cold-read** on cards: no **Claim fog** (abstract jargon a stranger cannot picture). See **`.cursor/skills/revise-hooks/SKILL.md`** → **Claim fog**. |
 | **Body** (markdown under front matter) | **Thoughts** on the detail page: essay, metaphor, examples, optional **primary-source quote** section. Rendered **after** Claim, **before** Grounding. |
 | **`grounding`** | **Support for the Claim**: definitions, named constructs, dates, and **links** (paper, overview) so the Claim is tied to sources or standard terminology. **Source** lines use **Markdown** `[title or short label](url)` so readers see a **title**, not a raw URL string. **Keep it short** (see **Grounding** below); it is not a second Claim and not a duplicate of the full article. |
+| **`related`** | Optional **keep-reading** paths (Hugo `GetPage` strings). Layout: **one** claims/video banner on top, then up to **two** sayings/panel on the next row. Empty or omitted: layout fills from **shared tags**. MUST **not** dump related links into the Thoughts body. |
 | **`image_credit`** | Optional **Markdown** for attribution. On the **detail** page it appears in **post metadata** (with date / word count / time, above the hero image). On **section list** rows it appears **under the thumbnail** (before tags). Requires a featured image in both cases. |
 
 **Relationship:** Grounding **supports** the Claim. The Claim says *what you are arguing in plain language*; Grounding says *what ideas or citations that maps onto*.
 
-**Detail page order** (`layouts/claims/single.html`): **Post meta** (title block, then optional **`image_credit`** when there is a hero image) → **Hero image** (if any) → **Claim** → **Thoughts** (body) → **Grounding** → optional **Research** (`research` front matter).
+**Detail page order** (`layouts/claims/single.html`): **Post meta** (title block, then optional **`image_credit`** when there is a hero image) → **Hero image** (if any) → **Claim** → **Thoughts** (body) → **Grounding** → optional **Research** (`research` front matter) → optional **Keep reading** (`related` or shared-tag fallback via `layouts/partials/related-keep-reading.html`).
 
 **Thoughts subsections (`###`):** Use **plain titles** with **no leading emoji**. Prefer **hook-style** titles (tension, question, punch), not seminar labels only; see **`.cursor/skills/revise-hooks/SKILL.md`** → **Body headings**. The template already adds icons for the main bands (**Claim**, **Thoughts**, **Grounding**, **Dig deeper**); emoji on every body subsection tends to look busy. Subsections still appear in **Contents** nested under **Thoughts**.
 
@@ -134,10 +135,12 @@ categories: ["Human-Condition", "Social-Protocols"]
 1. Draft **`description`** (Claim) so it reads well alone on a card. **Sentence-by-sentence:** each line must pass **Claim fog** in **revise-hooks** (picture direction + outcome or a concrete noun; not “control systems above local detail” without a scene). If the author supplied Claim text, follow **Author-supplied copy (preserve voice)** above; MAY still flag fog and propose a plainer clause when they ask for revise/tighten.
 2. Draft **`grounding`** as a **tight** digest (authors or construct, minimal jargon, **`Source:`** line with **`[title](url)`** Markdown, never a bare URL string). Expand nuance only in **Thoughts** if needed.
 3. Write the body (metaphor, examples, optional quote exhibit with a `###` heading before the blockquote).
-4. Re-read Claim, then body as **Thoughts**, then Grounding for alignment (same order as the live page). Shorten Grounding if it repeats **Thoughts** or reads like a second Claim.
-5. On **new bundle**, **reschedule** (**`date`** or folder rename), or **`draft`** change: run **`make calendar`** (see **`.cursor/rules/content-markdown-writing.mdc`** → **Publish calendar**).
+4. Set **`tags`** (register + tag voice). Then **recommend `related`**: search for up to **two** **cognitive-memetics** sayings or panels that share the mechanism or a punchy parallel; MAY add **one** other claim or video. Write Hugo paths into **`related`**. If none fit, leave empty and rely on tag fallback. MUST **not** paste related links into the Thoughts body.
+5. Re-read Claim, then body as **Thoughts**, then Grounding for alignment (same order as the live page). Shorten Grounding if it repeats **Thoughts** or reads like a second Claim.
+6. On **new bundle**, **reschedule** (**`date`** or folder rename), or **`draft`** change: run **`make calendar`** (see **`.cursor/rules/content-markdown-writing.mdc`** → **Publish calendar**).
 
 ## References in this repo
 
 - Archetype: `archetypes/claims.md` (TOML; content bundles may use YAML with the same fields; legacy **`paper`** may still work for grounding-style content).
+- Related strip: `layouts/partials/related-keep-reading.html` (curated **`related`** or shared-tag fallback).
 - Examples: `content/social-protocols/2026-04-01-memes/index.md` (coinage + quote exhibit), `content/social-protocols/2026-04-03-shared-reality/index.md` (theory + PDF source), `content/human-condition/2026-03-27-born-to-choose/index.md` (short Grounding + PMC source), `content/human-condition/2026-04-10-empathy-levels/index.md` (developmental moral empathy + layered tags).
