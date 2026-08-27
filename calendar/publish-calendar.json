@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-25T03:17:41Z",
+  "generatedAt": "2026-08-27T08:20:42Z",
   "channels": [
     "site-en",
     "site-es",
@@ -4566,18 +4566,19 @@
       }
     },
     {
-      "bundle": "social-protocols/2026-08-28-conquest-starts-with-partnership",
-      "section": "social-protocols",
-      "title": "🤝 Why does conquest start with a partnership?",
-      "type": "video",
+      "bundle": "cognitive-memetics/raymond/2026-08-28-collaborating-with-myself",
+      "section": "cognitive-memetics",
+      "title": "Collaborating with myself",
+      "type": "panel",
       "categories": [
-        "Social-Protocols"
+        "Cognitive-Memetics",
+        "Raymond"
       ],
       "planned": "2026-08-28",
       "draft": false,
       "channels": {
         "facebook": {
-          "status": "present"
+          "status": "missing"
         },
         "linkedin": {
           "status": "present"
@@ -4589,7 +4590,7 @@
           "status": "present"
         },
         "substack-en": {
-          "status": "present"
+          "status": "missing"
         }
       }
     },
@@ -4652,6 +4653,34 @@
       }
     },
     {
+      "bundle": "social-protocols/2026-09-01-conquest-starts-with-partnership",
+      "section": "social-protocols",
+      "title": "🤝 Why does conquest start with a partnership?",
+      "type": "video",
+      "categories": [
+        "Social-Protocols"
+      ],
+      "planned": "2026-09-01",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "present"
+        }
+      }
+    },
+    {
       "bundle": "cognitive-memetics/cows/2026-09-02-cow-w28",
       "section": "cognitive-memetics",
       "title": "We stand up so the status doesn't",
@@ -4681,18 +4710,19 @@
       }
     },
     {
-      "bundle": "mind-infrastructure/2026-09-04-why-healthy-brains-forget",
-      "section": "mind-infrastructure",
-      "title": "🧠 Why does a healthy brain forget your keys?",
-      "type": "video",
+      "bundle": "cognitive-memetics/raymond/2026-09-04-door-open-ears-closed",
+      "section": "cognitive-memetics",
+      "title": "Door open, ears closed",
+      "type": "panel",
       "categories": [
-        "Mind-Infrastructure"
+        "Cognitive-Memetics",
+        "Raymond"
       ],
       "planned": "2026-09-04",
       "draft": false,
       "channels": {
         "facebook": {
-          "status": "present"
+          "status": "missing"
         },
         "linkedin": {
           "status": "present"
@@ -4704,7 +4734,7 @@
           "status": "present"
         },
         "substack-en": {
-          "status": "present"
+          "status": "missing"
         }
       }
     },
@@ -4767,6 +4797,34 @@
       }
     },
     {
+      "bundle": "mind-infrastructure/2026-09-08-why-healthy-brains-forget",
+      "section": "mind-infrastructure",
+      "title": "🧠 Why does a healthy brain forget your keys?",
+      "type": "video",
+      "categories": [
+        "Mind-Infrastructure"
+      ],
+      "planned": "2026-09-08",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "present"
+        }
+      }
+    },
+    {
       "bundle": "cognitive-memetics/cows/2026-09-09-cow-w29",
       "section": "cognitive-memetics",
       "title": "Forty minutes later",
@@ -4789,6 +4847,35 @@
         },
         "site-es": {
           "status": "missing"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/raymond/2026-09-11-training-my-replacement",
+      "section": "cognitive-memetics",
+      "title": "Training my replacement",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Raymond"
+      ],
+      "planned": "2026-09-11",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
         },
         "substack-en": {
           "status": "missing"
@@ -4883,6 +4970,35 @@
       }
     },
     {
+      "bundle": "cognitive-memetics/raymond/2026-09-18-team-player-of-the-month",
+      "section": "cognitive-memetics",
+      "title": "Team player of the month",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Raymond"
+      ],
+      "planned": "2026-09-18",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
       "bundle": "cognitive-memetics/sayings/2026-09-21-saying-37",
       "section": "cognitive-memetics",
       "title": "Tapa el sol con un dedo.",
@@ -4934,6 +5050,35 @@
         },
         "site-es": {
           "status": "missing"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/raymond/2026-09-25-outside-the-box",
+      "section": "cognitive-memetics",
+      "title": "Outside the box",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Raymond"
+      ],
+      "planned": "2026-09-25",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
         },
         "substack-en": {
           "status": "missing"
@@ -4999,6 +5144,35 @@
       }
     },
     {
+      "bundle": "cognitive-memetics/raymond/2026-10-02-reporting-to-yourself",
+      "section": "cognitive-memetics",
+      "title": "Reporting to yourself",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Raymond"
+      ],
+      "planned": "2026-10-02",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
       "bundle": "cognitive-memetics/sayings/2026-10-05-saying-39",
       "section": "cognitive-memetics",
       "title": "La verdad es hija de Dios.",
@@ -5050,6 +5224,35 @@
         },
         "site-es": {
           "status": "missing"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/raymond/2026-10-09-diagnosing-sandwich",
+      "section": "cognitive-memetics",
+      "title": "Diagnosing: sandwich",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Raymond"
+      ],
+      "planned": "2026-10-09",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
         },
         "substack-en": {
           "status": "missing"
@@ -5115,6 +5318,35 @@
       }
     },
     {
+      "bundle": "cognitive-memetics/raymond/2026-10-16-totally-aligned",
+      "section": "cognitive-memetics",
+      "title": "Totally aligned",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Raymond"
+      ],
+      "planned": "2026-10-16",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
       "bundle": "cognitive-memetics/sayings/2026-10-19-saying-41",
       "section": "cognitive-memetics",
       "title": "Le busca cinco patas al gato para justificar lo injustificable.",
@@ -5166,6 +5398,35 @@
         },
         "site-es": {
           "status": "missing"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/raymond/2026-10-23-wellness-is-one-apple",
+      "section": "cognitive-memetics",
+      "title": "Wellness is one apple",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Raymond"
+      ],
+      "planned": "2026-10-23",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
         },
         "substack-en": {
           "status": "missing"
