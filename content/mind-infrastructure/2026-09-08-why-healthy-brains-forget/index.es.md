@@ -1,6 +1,6 @@
 ---
-translationKey: "2026-09-04-why-healthy-brains-forget"
-date: '2026-09-04T01:00:00+11:00'
+translationKey: "2026-09-08-why-healthy-brains-forget"
+date: '2026-09-08T01:00:00+11:00'
 title: "🧠 ¿Por qué un cerebro sano olvida las llaves?"
 type: video
 description: |
@@ -11,9 +11,6 @@ description: |
 sowhat: |
   El olvido cotidiano sigue a la **atención** y a cómo se arma la memoria. El Alzheimer sigue un **reloj de placas**: años de proteína pegajosa que se acumula y arranca en el hipocampo. El sueño, moverte, aprender y el **estrés crónico** sin manejo son las palancas que la mayoría sí tiene.
 draft: false
-
-aliases:
-  - /es/mind-infrastructure/2026-07-02-why-healthy-brains-forget/
 
 subtitle: "Lisa Genova sobre la memoria, el olvido y el Alzheimer"
 

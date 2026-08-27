@@ -299,7 +299,7 @@ AND:
 🔗 Por-Estas-Calles (English) → https://behaviorengineering.ai/categories/por-estas-calles/
 ```
 
-Use the **hub category** URL for the series, not the episode URL. Map from `categories` (second term): **`Por-Estas-Calles`** → `/categories/por-estas-calles/`; **`T-Shirt Art`** → `/categories/t-shirt-art/`; **`Sm-Art`** → `/categories/sm-art/`; **`Cube-Cows`** → `/categories/cube-cows/`; **`Reptilocracy`** → `/categories/reptilocracy/`; **`Pawtropolis-Under-Fire`** → `/categories/pawtropolis-under-fire/`. Prefix with **`baseURL`** from **`hugo.toml`**. Confirm with `hugo list all` on `content/categories/<slug>/_index.md` (English row, not `*.es.md`).
+Use the **hub category** URL for the series, not the episode URL. Map from `categories` (second term): **`Por-Estas-Calles`** → `/categories/por-estas-calles/`; **`T-Shirt Art`** → `/categories/t-shirt-art/`; **`Sm-Art`** → `/categories/sm-art/`; **`Cube-Cows`** → `/categories/cube-cows/`; **`Raymond`** → `/categories/raymond/`; **`Reptilocracy`** → `/categories/reptilocracy/`; **`Pawtropolis-Under-Fire`** → `/categories/pawtropolis-under-fire/`. Prefix with **`baseURL`** from **`hugo.toml`**. Confirm with `hugo list all` on `content/categories/<slug>/_index.md` (English row, not `*.es.md`).
 
 **Reference bundle** for structure and tone: `content/cognitive-memetics/sayings/2026-06-01-saying-21/` (W21; matches live LinkedIn layout).
 
@@ -375,6 +375,22 @@ AND:
 - **Series block:** `🟣 ` immediately before **`{heading_code}: Cube-Cows 🐮📈`** on the **same line** (for example `W7: Cube-Cows 🐮📈`). Blank line, then paste **`cowsProjectAboutBody`** from **`i18n/en.toml`** as plain text (`\n\n` = paragraph break; strip Markdown). **MUST NOT** invent or paraphrase series copy. **MUST NOT** use `❓ BUT WHY:` as a label.
 - **Hashtags:** one line with **all** entries from front matter `tags` (see [Hashtags from site `tags`](#hashtags-from-site-tags)), after the **`🟣`** block, before site and hub links.
 - **Closing:** **`🧷 Full post (site) →`** with **`- EN:`** first and **`- ES:`** second when **`index.es.md`** exists; blank line; then **`🔗 Cube-Cows (English) →`** hub URL (see below).
+
+### Raymond (`content/cognitive-memetics/raymond/`, `type: panel`)
+
+**Fold-first layout** (same image-only fold as Cube-Cows): quoted **`description`** on line one; series badge after the fold.
+
+**Rules**
+
+- **Plain text only:** strip `**bold**` from `description`; strip Markdown from **`raymondProjectAboutBody`**.
+- **Line one:** quoted **`description`** teaser. **MUST NOT** put **`{heading_code}: {project}`** on line two.
+- **Omit** **`❓`** and **`AND:`** on standard image-only strips.
+- **Series block:** `🟣 ` immediately before **`{heading_code}: Everyone ❤️ Raymond 🐕📓`** on the **same line** (canonical **`project`**; heart replaces “loves” in display). Blank line, then paste **`raymondProjectAboutTitle`** and **`raymondProjectAboutBody`** from **`i18n/en.toml`** as plain text. **MUST NOT** invent or paraphrase series copy.
+- **Hashtags:** all front matter `tags` (Raymond episodes MUST include **`EveryoneLovesRaymond`**, **`PetLife`**, and **`TheCutestDog`**; do **not** add bare **`Raymond`**, **`Dog`**, **`Dogs`**, or **`DogLife`** when those three are present).
+- **Quoted teaser:** MUST keep the dog signal from site **`description`** (prefer **Dawg Raymond** in EN).
+- **Closing:** **`🧷 Full post (site) →`** (**`- EN:`** then **`- ES:`** when bilingual); blank line; **`🔗 Everyone ❤️ Raymond (English) →`** hub URL (`/categories/raymond/`).
+
+**Reference bundle:** `content/cognitive-memetics/raymond/2026-08-28-collaborating-with-myself/linkedin.txt` (R1).
 
 **Template** (series body: paste from **`cowsProjectAboutBody`** in **`i18n/en.toml`**; do not hardcode it here)
 
@@ -474,7 +490,7 @@ Petition (Change.org) →
 ### English Behaviour Engineering category link
 
 - **Site `baseURL`:** read from **`hugo.toml`** at the repo root (currently `https://behaviorengineering.ai/`).
-- **Cognitive-memetics hubs:** closing link targets the **English taxonomy term** for the project hub (**`Cube-Cows`**, **`Por-Estas-Calles`**, **`T-Shirt Art`**, **`Sm-Art`**, **`Reptilocracy`**, or **`Pawtropolis-Under-Fire`**), **not** the individual post URL.
+- **Cognitive-memetics hubs:** closing link targets the **English taxonomy term** for the project hub (**`Cube-Cows`**, **`Raymond`**, **`Por-Estas-Calles`**, **`T-Shirt Art`**, **`Sm-Art`**, **`Reptilocracy`**, or **`Pawtropolis-Under-Fire`**), **not** the individual post URL.
 - **Must use** the **default-language** term page (path **without** `/es/`).
 - If unsure of the slug, run `hugo list all` and copy the **permalink** for `content/categories/<hub-slug>/_index.md` (English).
 

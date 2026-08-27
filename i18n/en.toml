@@ -109,6 +109,13 @@ other = "BUT WHY:"
 [pawtropolisProjectAboutBody]
 other = "Pawtropolis (Under Fire) is a quiet protest: war is never normal, and the moment it starts to feel normal to us is the moment we become dangerous.\n\nReal people get renamed into abstractions: collateral damage, security operations, precision strikes. Lovable pets flip that move: you feel for beings who cannot understand why the sky is trying to kill them.\n\nIf it takes cats and dogs to get people to wake up, then that is what must be done."
 
+# Everyone ❤️ Raymond explainer (raymond-project-about partial).
+[raymondProjectAboutTitle]
+other = "Why? Because everyone seems to ❤️ Raymond."
+
+[raymondProjectAboutBody]
+other = "This *Cube-Cows* spinoff follows Raymond, the junior dog from *Just smaller*, fresh out of uni, as he walks into corporate shenanigans with a notebook open.\n\nHe does not fix the system. He takes notes. Each strip is one office move he cannot unsee: out of uni, straight back to preschool.\n\nSpun out of *Tales from the Cube Farm* so the new hire gets his own stopwatch."
+
 # Section page — subsections list heading
 [subsections]
 other = "Collections"
@@ -119,3 +126,6 @@ other = "Psych-Fitness-28"
 
 ["Pawtropolis-Under-Fire"]
 other = "Pawtropolis (Under Fire)"
+
+["Raymond"]
+other = "Raymond"

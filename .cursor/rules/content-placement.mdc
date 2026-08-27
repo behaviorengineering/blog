@@ -25,7 +25,7 @@ Use the **main job of the piece**, not hashtags or “where you were browsing.�
 | **`social-protocols/`** | How social order is built and steered: norms, reciprocity, coordination, institutions, media, and the protocols behind belief and behavior (micro to macro). Usual type is **`claims`**; **`type: video`** is valid when the pick’s main job matches this intent (for example cooperation, institutions, media protocols). |
 | **`human-condition/`** | Claims about human nature, empathy, morality, development, or identity that read as psychology or philosophy of persons (**`type: claims`**) **or** a curated YouTube page (**`type: video`**) with that same core. Not office satire. |
 | **`mind-infrastructure/`** | General-interest tools, models, and curated talks whose **main job** is **not** primarily **social-protocols** (coordination, norms, institutions) or **human-condition** (person-level thesis). **`type: video`** is common here as a **default lane** when those two section intents do not fit. The folder name is **URL and home-feed routing**, not a claim that the topic is only formal models or “mental infrastructure” in a narrow sense. |
-| **`cognitive-memetics/`** | **Tales from the Cube Farm** weekly strips (`type: panel`, **`Cube-Cows`** hub), **Venezuelan sayings / Street Wisdom** (`type: sayings` + **Por-Estas-Calles** hub), **T-Shirt Art** visual line (`panel` or `sayings` + **T-Shirt Art** hub), **Reptilocracy** (`sayings` or `panel` + **Reptilocracy** hub), or **Pawtropolis (Under Fire)** (`panel` or `sayings` + **Pawtropolis-Under-Fire** hub). |
+| **`cognitive-memetics/`** | **Tales from the Cube Farm** weekly strips (`type: panel`, **`Cube-Cows`** hub), **Raymond** / Everyone ❤️ Raymond strips (`type: panel`, **`Raymond`** hub), **Venezuelan sayings / Street Wisdom** (`type: sayings` + **Por-Estas-Calles** hub), **T-Shirt Art** visual line (`panel` or `sayings` + **T-Shirt Art** hub), **Reptilocracy** (`sayings` or `panel` + **Reptilocracy** hub), or **Pawtropolis (Under Fire)** (`panel` or `sayings` + **Pawtropolis-Under-Fire** hub). |
 
 ### `type: video` (YouTube picks)
 
@@ -55,7 +55,7 @@ Use the **main job of the piece**, not hashtags or “where you were browsing.�
 
 - **`type: claims`**: Prefer one primary taxonomy category aligned with the section (for example **`Reality-Protocols`** under `social-protocols/`). See **`.cursor/skills/claims-content/SKILL.md`**.
 - **`type: video`**: Pick **`categories`** for topic fit (see **`.cursor/skills/video-content/SKILL.md`**); they need not match the section folder.
-- **`cognitive-memetics`**: Use umbrella **`Cognitive-Memetics`** plus exactly one hub (**`Cube-Cows`**, **`Por-Estas-Calles`**, **`T-Shirt Art`**, **`Reptilocracy`**, or **`Pawtropolis-Under-Fire`**). See **`.cursor/skills/cognitive-memetics-content/SKILL.md`**.
+- **`cognitive-memetics`**: Use umbrella **`Cognitive-Memetics`** plus exactly one hub (**`Cube-Cows`**, **`Raymond`**, **`Por-Estas-Calles`**, **`T-Shirt Art`**, **`Reptilocracy`**, or **`Pawtropolis-Under-Fire`**). See **`.cursor/skills/cognitive-memetics-content/SKILL.md`**.
 
 ## Quick checks
 
