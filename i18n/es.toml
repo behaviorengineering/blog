@@ -55,6 +55,9 @@ other = "Psique-Fitness-28"
 ["Pawtropolis-Under-Fire"]
 other = "Pawtropolis (Under Fire)"
 
+["Raymond"]
+other = "Raymond"
+
 [summary]
 other = "Resumen"
 
@@ -161,6 +164,13 @@ other = "¿Y ESTO?"
 
 [pawtropolisProjectAboutBody]
 other = "Pawtropolis (Under Fire) es una protesta silenciosa: la guerra nunca es normal, y el momento en que comienza a parecernos normal es el momento en que nos volvemos peligrosos.\n\nA la gente real la rebautizan con eufemismos: daño colateral, operaciones de seguridad, golpes de precisión. Las mascotas entrañables invierten ese truco: sientes por seres que no entienden por qué el cielo intenta matarlos.\n\nSi hacen falta gatos y perros para que la gente despierte, entonces eso es lo que se debe hacer."
+
+# Everyone ❤️ Raymond explainer (raymond-project-about partial).
+[raymondProjectAboutTitle]
+other = "¿Por qué? Porque todo el mundo parece ❤️ Raymond."
+
+[raymondProjectAboutBody]
+other = "Este spinoff de *Cube-Cows* sigue a Raymond, el perro junior de *Just smaller*, recién salido de la uni, mientras entra a las travesuras corporativas con la libreta abierta.\n\nNo arregla el sistema. Toma notas. Cada tira es una jugada de oficina que ya no puede ignorar: salió de la uni, y de vuelta al preescolar.\n\nSale de *Tales from the Cube Farm* para que el nuevo tenga su propio cronómetro."
 
 # Section page — subsections list heading
 [subsections]

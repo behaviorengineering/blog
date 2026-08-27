@@ -1,6 +1,6 @@
 ---
-translationKey: "2026-08-28-conquest-starts-with-partnership"
-date: '2026-08-28T01:00:00+11:00'
+translationKey: "2026-09-01-conquest-starts-with-partnership"
+date: '2026-09-01T01:00:00+11:00'
 title: "🤝 Why does conquest start with a partnership?"
 type: video
 description: |

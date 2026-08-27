@@ -48,7 +48,7 @@ Posts use front matter fields that split **narrative** from **intellectual ancho
 
 ### Human-Condition theme hubs (same idea as Cognitive-Memetics “subcats”)
 
-**Cognitive-Memetics** uses **two** `categories` terms: an **umbrella** plus **exactly one project hub** (**`Cube-Cows`**, **`Por-Estas-Calles`**, **`T-Shirt Art`**). See **`.cursor/skills/cognitive-memetics-content/SKILL.md`** → **Front matter conventions** → **`categories`**.
+**Cognitive-Memetics** uses **two** `categories` terms: an **umbrella** plus **exactly one project hub** (**`Cube-Cows`**, **`Raymond`**, **`Por-Estas-Calles`**, **`T-Shirt Art`**, **`Reptilocracy`**, **`Pawtropolis-Under-Fire`**). See **`.cursor/skills/cognitive-memetics-content/SKILL.md`** → **Front matter conventions** → **`categories`**.
 
 **Human-Condition** can use the **same pattern**: taxonomy is still **flat**, but you treat the second term as a **theme hub** (not a Hugo parent category).
 

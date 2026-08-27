@@ -107,6 +107,10 @@
             {{- partial "pawtropolis-project-about.html" . -}}
         {{- end -}}
 
+        {{- if and .Params.categories (in .Params.categories "Raymond") -}}
+            {{- partial "raymond-project-about.html" . -}}
+        {{- end -}}
+
         {{- partial "single/footer.html" . -}}
         {{- partial "comment.html" . -}}
     </article>

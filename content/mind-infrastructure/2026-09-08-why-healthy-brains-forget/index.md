@@ -1,6 +1,6 @@
 ---
-translationKey: "2026-09-04-why-healthy-brains-forget"
-date: '2026-09-04T01:00:00+11:00'
+translationKey: "2026-09-08-why-healthy-brains-forget"
+date: '2026-09-08T01:00:00+11:00'
 title: "🧠 Why does a healthy brain forget your keys?"
 type: video
 description: |
@@ -11,9 +11,6 @@ description: |
 sowhat: |
   Everyday encoding failures and Alzheimer's look alike from the outside and run on different mechanisms. While **amyloid plaques** build for 15 to 20 years in the hippocampus, most people can still change the odds with **sleep**, movement, diet, and cutting unmanaged **chronic stress**.
 draft: false
-
-aliases:
-  - /mind-infrastructure/2026-07-02-why-healthy-brains-forget/
 
 subtitle: "Lisa Genova on memory, forgetting, and Alzheimer's"
 

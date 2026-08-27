@@ -2,18 +2,15 @@
 name: cognitive-memetics-content
 description: >-
   Authors and edits Hugo posts under the cognitive-memetics section: type panel
-  (cube-cows weekly) or type sayings (TLDR / Context), Por-Estas-Calles / Street Wisdom /
-  Venezuelan sayings project tags and LinkedIn hashtags, T-Shirt Art hub posts (short teasers
-  without meta openers; sayings card **`description`** derived from **`title`** + **`tldr`** +
-  **`fluff`** when applying this skill; sayings **`**bold**`** per **`.cursor/skills/revise-emphasis/SKILL.md`**).
-  Footer "But why" explainers share one gradient card in **`assets/css/_custom.scss`** (Cube-Cows hub, Street Wisdom, Reptilocracy, Pawtropolis); extend that block instead of duplicating styles.
-  **Hybrid prose:** keep street/cartoon emotion, ban empty punch closers and poetic thesis remixes (see **Hybrid prose**). **Reptilocracy** episodes use **clinical institutional analysis** (see **Reptilocracy voice**), not rebel heat or dashboard poetry.
-  **Title** stays plain (no leading emoji; this section opts out of optional title emoji used in other site sections). **heading_code**, **categories**, featured images. Use when editing content/cognitive-memetics/,
-  when the user mentions Cognitive-Memetics, cube-cows, Tales from the Cube Farm,
-  T-Shirt Art, Por-Estas-Calles, Street Wisdom, Cultural Stopwatch, cartoon stopwatch,
-  Venezuelan sayings, Reptilocracy, or Pawtropolis (Under Fire). MUST ask before changing existing author prose (except sayings emphasis markup on
-  existing words in **`tldr`**/**`fluff`** per **revise-emphasis**, and except replacing sayings **`description`** per
-  **Sayings card teaser**) unless the user explicitly requests rewrite, revise, tighten, or similar.
+  (cube-cows, Raymond, and other cartoon hubs) or type sayings
+  (TLDR / Context). **`description`** teasers MUST be drafted via local **Gemma 4**
+  (punch the scene; not a caption) for every hub **except Por-Estas-Calles**, which
+  keeps **Por-Estas-Calles card teaser** from **`title`** + **`tldr`** + **`fluff`**.
+  Also: Street Wisdom tags and LinkedIn hashtags, T-Shirt Art, sayings **`**bold**`**
+  per **revise-emphasis**. Footer "But why" cards share one gradient in
+  **`assets/css/_custom.scss`**. Plain **title**. Ask before changing existing author
+  prose (exceptions: sayings emphasis; Por-Estas-Calles card teaser; Gemma teaser when
+  drafting or when the user asks to rewrite the teaser).
 ---
 
 # Cognitive-Memetics section content
@@ -27,9 +24,9 @@ This section does **not** define a separate `type`. Posts use existing content t
 | `type` | Role | Typical use in this folder |
 |--------|------|----------------------------|
 | **`panel`** | **Cube-cows** / weekly-style pieces (Cows **storyboards**; each image a **panel**) | **`description`** carries the strip (Teaser on the single); optional markdown body below `<!--more-->` only when you need a real essay. Optional `heading_code`; optional **`project`** + unique **`title`** |
-| **`sayings`** | Short **saying** entries with TLDR + Context | `tldr` and `fluff`; card **`description`** is derived from **`title`**, **`tldr`**, and **`fluff`** when applying this skill; optional `heading_code`; optional **`project`** (series line) + unique **`title`** (episode name), same hero pattern as **`panel`** |
+| **`sayings`** | Short entries with TLDR + Context | `tldr` and `fluff`; card **`description`**: **Por-Estas-Calles** uses derived **Por-Estas-Calles card teaser**; other hubs (T-Shirt Art, Reptilocracy, Pawtropolis, …) use **Gemma teaser**. Optional `heading_code`; optional **`project`** + unique **`title`** |
 
-**T-Shirt Art** hub posts also use **`panel`** or **`sayings`**; see [below](#t-shirt-art) for **`categories`**, **`project`**, and tags. **Reptilocracy** (`content/cognitive-memetics/reptilocracy/`) uses **`type: sayings`** or **`type: panel`** with category **`Reptilocracy`**; the footer explainer uses the same gradient card as the Cube-Cows hub and Street Wisdom, plus Reptilocracy-only CTA styling when applicable (see **Theme and style** → **Project "But why" explainer cards** in this skill). **Pawtropolis (Under Fire)** (`content/cognitive-memetics/pawtropolis/`) uses **`type: panel`** or **`type: sayings`** with category **`Pawtropolis-Under-Fire`**; copy lives in **`i18n/*`** and **`layouts/partials/pawtropolis-project-about.html`** (no petition CTA).
+**T-Shirt Art** hub posts also use **`panel`** or **`sayings`**; see [below](#t-shirt-art) for **`categories`**, **`project`**, and tags. **Raymond** (`content/cognitive-memetics/raymond/`) uses **`type: panel`** with category **`Raymond`**; Cube-Cows spinoff starring Raymond (junior dog from *Just smaller*). **Reptilocracy** (`content/cognitive-memetics/reptilocracy/`) uses **`type: sayings`** or **`type: panel`** with category **`Reptilocracy`**; the footer explainer uses the same gradient card as the Cube-Cows hub and Street Wisdom, plus Reptilocracy-only CTA styling when applicable (see **Theme and style** → **Project "But why" explainer cards** in this skill). **Pawtropolis (Under Fire)** (`content/cognitive-memetics/pawtropolis/`) uses **`type: panel`** or **`type: sayings`** with category **`Pawtropolis-Under-Fire`**; copy lives in **`i18n/*`** and **`layouts/partials/pawtropolis-project-about.html`** (no petition CTA).
 
 For **`type: claims`** (Claim / Thoughts / Grounding), use **`.cursor/skills/claims-content/SKILL.md`** and a section such as `social-protocols`, not this skill.
 
@@ -43,15 +40,16 @@ For **`type: claims`** (Claim / Thoughts / Grounding), use **`.cursor/skills/cla
 ### Ask before changing existing copy
 
 - Phrases like **apply this skill**, **check the post**, or **make it compliant** do **not** grant permission to rewrite the author’s prose.
-- When a file already has author text in **`title`**, **`description`**, **`tldr`**, **`fluff`**, or the markdown body, MUST **ask first** before changing that text (including “fixing” tone, clarity, mismatches you think you see, or aligning fields). Wait for an explicit yes to prose edits (for example: rewrite, revise, tighten, change the title, fix the TLDR). **Exceptions for `type: sayings`:** (1) **Sayings emphasis** (adding, trimming, or adjusting **`**bold**`** on **existing** words in **`tldr`** and **`fluff`** per **`.cursor/skills/revise-emphasis/SKILL.md`**) is **not** a prose edit and MUST follow that skill when you apply this one. (2) **Sayings card teaser** (replacing **`description`** using only **`title`**, **`tldr`**, and **`fluff`** as sources) is **not** a prose edit of TLDR/context and MUST run when you apply this skill.
-- If the user does not confirm prose edits, restrict changes to **mechanical** front matter, **`type: sayings` emphasis** (per **revise-emphasis**), **`type: sayings` card teaser** (see below), and structure only (see **Editing existing posts** below).
+- When a file already has author text in **`title`**, **`description`**, **`tldr`**, **`fluff`**, or the markdown body, MUST **ask first** before changing that text (including “fixing” tone, clarity, mismatches you think you see, or aligning fields). Wait for an explicit yes to prose edits (for example: rewrite, revise, tighten, change the title, fix the TLDR). **Exceptions:** (1) **`type: sayings` Sayings emphasis** (adding, trimming, or adjusting **`**bold**`** on **existing** words in **`tldr`** and **`fluff`** per **`.cursor/skills/revise-emphasis/SKILL.md`**) is **not** a prose edit and MUST follow that skill when you apply this one. (2) **Por-Estas-Calles card teaser** (replacing **`description`** using only **`title`**, **`tldr`**, and **`fluff`**, only when **`categories`** includes **`Por-Estas-Calles`**) is **not** a prose edit of TLDR/context and MUST run when you apply this skill to that hub. (3) **Gemma teaser** (see **Gemma teaser (`description`)**): for every Cognitive-Memetics hub **except Por-Estas-Calles**, when **creating** a new episode or when the user asks to rewrite / punch up / Gemma the teaser, MUST invoke local Gemma 4 and MUST NOT ship an agent-invented **`description`** as final.
+- If the user does not confirm prose edits, restrict changes to **mechanical** front matter, **`type: sayings` emphasis** (per **revise-emphasis**), **Por-Estas-Calles card teaser** when that hub applies, and structure only (see **Editing existing posts** below). Do **not** silently replace an existing non–Por-Estas-Calles **`description`** with a Gemma draft unless the user asked for a teaser rewrite.
 
 ### Editing existing posts (preserve author copy)
 
-- When the author already supplied prose in **`tldr`**, **`fluff`**, **`title`**, or the markdown body, MUST **keep their wording** unless they **explicitly** ask for a rewrite, revise, tighten, or similar. For **`type: panel`** and types other than **`sayings`**, the same applies to **`description`**.
-- **Exception (`type: sayings`):** **`description`** is **not** protected author copy when you apply this skill. MUST replace it per **Sayings card teaser** (use **`title`**, **`tldr`**, and **`fluff`** only as sources).
+- When the author already supplied prose in **`tldr`**, **`fluff`**, **`title`**, or the markdown body, MUST **keep their wording** unless they **explicitly** ask for a rewrite, revise, tighten, or similar. For hubs other than **Por-Estas-Calles**, the same applies to an **already shipped** **`description`** until they ask to rewrite the teaser.
+- **Exception (Por-Estas-Calles):** **`description`** is **not** protected author copy when you apply this skill to a **`Por-Estas-Calles`** post. MUST replace it per **Por-Estas-Calles card teaser**.
+- **Exception (Gemma hubs, new draft):** When the episode is **new** (first **`description`**) or the user asked for a teaser rewrite on any hub **except Por-Estas-Calles**, MUST follow **Gemma teaser (`description`)** instead of agent-authored caption copy.
 - MAY apply **mechanical** fixes without asking: YAML safety (quoting, colons), required front matter fields, **`categories`** / **`tags`** / **`date`** / **`heading_code`**, featured image paths, and obvious **wrong-folder** mistakes (for example mismatched **`heading_code`** vs bundle name) when fixing structure.
-- For **`type: sayings`**, when applying this skill, MUST apply **Sayings emphasis** (next subsection, **`.cursor/skills/revise-emphasis/SKILL.md`**) on **`tldr`** and **`fluff`** first, then **Sayings card teaser** on **`description`**. Do **not** wait for a separate request for bold or a new teaser.
+- For **`type: sayings`**, when applying this skill, MUST apply **Sayings emphasis** on **`tldr`** and **`fluff`** first. Then: if **`Por-Estas-Calles`**, run **Por-Estas-Calles card teaser**; otherwise run **Gemma teaser** for new/rewritten **`description`**. Do **not** wait for a separate request for bold or a new teaser on create.
 - For **`type: panel`** and other types (and for markdown **body** copy on any type), when the author **already wrote** the words, MAY add Markdown **`**bold**`** around existing words or short phrases **for emphasis only** if the user asked for emphasis, revise, tighten, or similar; otherwise MUST ask before adding bold. MUST NOT change the underlying words, add sentences, or reorder paragraphs under this rule.
 
 ### Tone and nuance (`type: sayings`)
@@ -80,7 +78,8 @@ Essays / video / Substack use **Explanatory prose** in **`.cursor/rules/content-
 
 | Field / format | Punchy by design? | MUST | MUST NOT |
 |----------------|-------------------|------|----------|
-| Cube-cows `description` | Yes (often the whole piece) | Name an office move or joke claim the strip pays off | Oracular closers with no workplace mechanism |
+| Cube-cows / Raymond / T-Shirt Art / Reptilocracy / Pawtropolis `description` | Yes (often the whole piece) | **Gemma 4** drafts it (see **Gemma teaser**); name the move or joke claim; punch the scene past a caption | Agent-only caption inventory; oracular closers with no mechanism |
+| Por-Estas-Calles `description` | Short card pitch | **Por-Estas-Calles card teaser** from **`title`** + **`tldr`** + **`fluff`** only | Gemma flow; inventing beats not in those fields |
 | Sayings `tldr` | Yes (short) | Name meaning, use, or scene | Trait-dictionary stacks only ("clever, astute, street-smart") |
 | Sayings `fluff` | Situational context | Lead with emotion or **one** clarifying metaphor, then when/who uses it; concrete scenes | Metaphor-only fluff with no uses; metaphor stacks; mystical/abstract culture praise |
 | Psych-Fitness `tldr` | Campaign vignette + lesson | End on the fitness/mechanism line when needed | Caption pivots: "The long view matters.", "The connection is direct.", "The eve of decision." |
@@ -163,12 +162,58 @@ For posts under **`content/cognitive-memetics/reptilocracy/`** (category **`Rept
 - When wrapping author text, MUST wrap **only** substrings that already appear in the author’s text; MUST NOT change, add, or remove words, or reorder sentences.
 - MUST NOT “fill” **`tldr`** or **`fluff`** with extra bold to match an older dense-scan style **unless** the user asks for that legacy style. If the user asks to **fix** or **reduce** bold, MUST trim per **revise-emphasis** (markup-only is allowed without a separate prose pass).
 
-### Sayings card teaser (`description`, `type: sayings`)
+### Por-Estas-Calles card teaser (`description`, Street Wisdom only)
 
-- When applying this skill, MUST set or replace **`description`** with a **short** card teaser **derived only** from **`title`**, **`tldr`**, and **`fluff`** (if **`fluff`** is absent or empty, use **`title`** and **`tldr`** only). Read **`title`** as the episode anchor (often the Spanish saying); read **`tldr`** and **`fluff`** after **Sayings emphasis** so the teaser matches the list/detail copy.
+**Scope:** Posts whose **`categories`** include **`Por-Estas-Calles`** (Venezuelan Street Wisdom). This is the only Cognitive-Memetics hub that skips Gemma for **`description`**.
+
+- When applying this skill to a **Por-Estas-Calles** post, MUST set or replace **`description`** with a **short** card teaser **derived only** from **`title`**, **`tldr`**, and **`fluff`** (if **`fluff`** is absent or empty, use **`title`** and **`tldr`** only). Read **`title`** as the episode anchor (often the Spanish saying); read **`tldr`** and **`fluff`** after **Sayings emphasis** so the teaser matches the list/detail copy.
 - MUST NOT invent facts, examples, or tone that are not supported by those three fields together. MAY use **`**bold**`** on key phrases in the teaser you write. Follow **`.cursor/rules/content-markdown-writing.mdc`** (English, no em dash, short sentences).
 - MUST NOT change **`title`**, **`tldr`**, or **`fluff`** while drafting the teaser unless the user asked for a prose edit to those fields.
 - **No echo rule:** `description` MUST NOT repeat key words already in `title` or `tldr`. If `title` is "The rat and the cheese", `description` should not use "rat" or "cheese". Find an evocative pitch that complements without echoing.
+- **MUST NOT** use the **Gemma teaser** flow below for **Por-Estas-Calles**.
+
+### Gemma teaser (`description`)
+
+**Scope:** Every Cognitive-Memetics hub **except Por-Estas-Calles**. Includes **Cube-Cows**, **Raymond**, **Pawtropolis**, **Reptilocracy**, **T-Shirt Art** (panel or sayings), and any future non–Por-Estas-Calles hub. Hub membership is the second **`categories`** term (or folder), **not** `type: panel` vs `type: sayings`.
+
+**MUST** invoke local **Gemma 4** to draft **`description`** when:
+
+1. Creating a **new** episode in a Gemma hub (first teaser), or
+2. The user asks to rewrite, punch up, Gemma, or replace the teaser.
+
+**MUST NOT** ship a final Gemma-hub **`description`** that the agent wrote alone as a panel caption or prop inventory. **MUST NOT** pretend a hand-written line came from Gemma.
+
+**Gateway (same stack as `/revise-prose` and carousel captions):**
+
+| Setting | Default |
+|---------|---------|
+| Base URL | `LOCAL_LLM_BASE_URL` or `http://127.0.0.1:1320/v1` |
+| Model | `LOCAL_LLM_MODEL` or `@cf/google/gemma-4-26b-a4b-it` |
+
+MAY call via **`.cursor/skills/local_eval_common/common.py`** → **`chat_complete`**, or an equivalent `POST …/chat/completions`.
+
+**Prompt goals (EN):**
+
+- Punch the **scene** past a caption: escalate the absurdity; do **not** inventory every prop or quote every bubble.
+- Match Cube-Cows gold density when the hub is cartoon satire, for example: *This week, the bull's entire **leadership philosophy** fits inside a **matryoshka** doll: '**be exactly like me**,' he tells the dog, '**just smaller.**'*
+- Obey **Hybrid prose** (and **Reptilocracy voice** when that hub applies).
+- No em dash (U+2014). Restrained **`**bold**`** on the joke spine only.
+- Prefer opening with **This week,** when it fits the series voice.
+- Ban empty MBA fog (*synergy*, *collaborative spirit*, *thriving*) unless the joke is mocking that fog on purpose.
+- **Raymond:** each candidate MUST use **Dawg Raymond** (or another clear dog signal once). Spanish adapt MUST include **perro** or **perros** (typically **Raymond el perro**).
+
+**Procedure:**
+
+1. Brief Gemma with: series/hub, episode **`title`**, strip or piece setup (mechanism of the gag, not a full visual inventory), and any gold-tone sample for that hub.
+2. Ask for **three** numbered teaser candidates.
+3. Present them as **🧭 Options** and wait for a numbered pick (unless the user already supplied the final teaser text).
+4. Apply the pick to EN **`description`**. Light mechanical cleanup only (em dash, YAML safety, bold density per **revise-emphasis**). MUST NOT rewrite the joke into a flatter caption.
+5. If **`index.es.md`** (or sibling ES) exists or is being created: invoke Gemma again to **adapt** the chosen EN teaser into Spanish (native punch, not a calque). Present three ES candidates or apply the best mirror of the EN pick when the user already chose the EN joke spine; then set ES **`description`**.
+6. Keep LinkedIn line one in sync when `linkedin.txt` quotes the teaser.
+
+**Gateway down:** MUST say the gateway is unreachable. MUST NOT invent teasers and claim Gemma wrote them. MAY leave a clearly labeled temporary stub only if the user accepts shipping later.
+
+**Skip Gemma only when:** the user pastes the final teaser themselves, or the post is **Por-Estas-Calles** (use **Por-Estas-Calles card teaser**).
 
 ## Front matter conventions
 
@@ -179,11 +224,15 @@ For posts under **`content/cognitive-memetics/reptilocracy/`** (category **`Rept
 - **`heading_code`** (optional): short label before the title (e.g. `W6`, `W13`). Rendered via `layouts/partials/heading-title-markup.html` with class `heading-code--tldr`.
 - **`categories`**: Use **two** terms so each post belongs to the section **and** to a **project hub** you can link to (Hugo taxonomy list pages under `/categories/<slug>/`).
   - **Umbrella:** always **`Cognitive-Memetics`** (this site area).
-  - **Project (pick one):** **`Cube-Cows`** for **`type: panel`** (the **Tales from the Cube Farm** series; Hugo taxonomy term for the shareable hub at `/categories/cube-cows/`). **`Por-Estas-Calles`** for **Street Wisdom** **`type: sayings`** posts (Venezuelan sayings series). **`T-Shirt Art`** for visual / merch-style pieces (often **`type: sayings`** with art as featured image; **`type: panel`** if you want a longer essay under the same hub). **`Reptilocracy`** for the reptile-institutions satire line. **`Pawtropolis-Under-Fire`** for **Pawtropolis (Under Fire)** (pets in a cartoon war zone; hub slug is typically `/categories/pawtropolis-under-fire/`).
+  - **Project (pick one):** **`Cube-Cows`** for **`type: panel`** (the **Tales from the Cube Farm** series; Hugo taxonomy term for the shareable hub at `/categories/cube-cows/`). **`Raymond`** for the Raymond junior-dog spinoff (`/categories/raymond/`). **`Por-Estas-Calles`** for **Street Wisdom** **`type: sayings`** posts (Venezuelan sayings series). **`T-Shirt Art`** for visual / merch-style pieces (often **`type: sayings`** with art as featured image; **`type: panel`** if you want a longer essay under the same hub). **`Reptilocracy`** for the reptile-institutions satire line. **`Pawtropolis-Under-Fire`** for **Pawtropolis (Under Fire)** (pets in a cartoon war zone; hub slug is typically `/categories/pawtropolis-under-fire/`).
   Example YAML:
 
   ```yaml
   categories: ["Cognitive-Memetics", "Cube-Cows"]   # type: panel (cube-cow / Tales from the Cube Farm)
+  ```
+
+  ```yaml
+  categories: ["Cognitive-Memetics", "Raymond"]   # Raymond spinoff
   ```
 
   ```yaml
@@ -200,7 +249,7 @@ For posts under **`content/cognitive-memetics/reptilocracy/`** (category **`Rept
 
 ### `type: panel`
 
-- **`description`**: Teaser for cards / list; on the **detail** page it becomes the **Teaser** block (markdownified). For this site, **that is usually the whole piece**; do **not** add body copy unless you deliberately want a long follow-up.
+- **`description`**: Teaser for cards / list; on the **detail** page it becomes the **Teaser** block (markdownified). For this site, **that is usually the whole piece**; do **not** add body copy unless you deliberately want a long follow-up. **MUST** draft new or rewritten teasers via **Gemma teaser (`description`)** above (not agent-only captions).
 - **`project`** (optional but recommended for **Tales from the Cube Farm**): The recurring **series line** on the detail hero (e.g. `Cube-Cows 🐮📈`). **`title`** must be a **unique episode name** (lists, prev/next links, browser tab). Without `project`, the layout falls back to `heading_code` + `title` everywhere (legacy one-line titles).
 - **Optional** body markdown below `<!--more-->`: only when you need an **Article** section (`layouts/panel/single.html`). If the body is empty, the single shows **Teaser** only.
 
@@ -218,18 +267,36 @@ The **Hugo category** (second `categories` term) for these posts is **`Cube-Cows
 
 **LinkedIn post format:** Use **`.cursor/skills/linkedin-post/SKILL.md`** (*Cube cows / Tales from the Cube Farm* **fold-first layout**): quoted `description` teaser on **line one** only, then **`🟣`** + **`{heading_code}: Cube-Cows 🐮📈`** and series paragraphs from **`cowsProjectAboutBody`** (no `❓ BUT WHY:` label on image-only strips), one hashtag line with **all** `tags` from front matter, **`🧷 Full post (site) →`** (EN then ES when bilingual), then **English** **`Cube-Cows`** category URL (`/categories/cube-cows/`). Save as `linkedin.txt` in the page bundle.
 
+#### Raymond (Cube-Cows spinoff)
+
+Posts under **`content/cognitive-memetics/raymond/`** use **`categories`**: **`Cognitive-Memetics`** and **`Raymond`**. Set **`project: Everyone ❤️ Raymond 🐕📓`** (heart stands in for “loves” in display; taxonomy term stays **`Raymond`**).
+
+**Premise:** Raymond is the junior dog from Cube-Cows *Just smaller* (`2026-08-19-cow-w26`): fresh out of uni, walks into corporate shenanigans with a notebook open. He does not fix the system; he takes notes.
+
+**Publish day:** New bundles MUST use a **Friday** calendar day in the folder name and in **`date`**.
+
+**Tags:** Always include **`EveryoneLovesRaymond`**, **`PetLife`**, and **`TheCutestDog`** (series flourish + pet discovery; teaser copy uses **Dawg Raymond**). Do **not** add bare **`Raymond`**, **`Dog`**, **`Dogs`**, or **`DogLife`** as tags when those three are present (category **`Raymond`** already hubs the series). Add recurring office tags when they fit (**`OfficeCulture`**, **`RealityCheck`**, **`KnowledgeWork`**). Add one or two episode-specific hooks. LinkedIn hashtag line MUST include **`#EveryoneLovesRaymond`**, **`#PetLife`**, and **`#TheCutestDog`** via front matter.
+
+**Dog in copy:** Episode **`description`** (EN) MUST include a dog signal at least once; prefer the character label **Dawg Raymond** (not “Raymond the dog”). Spanish **`description`** MUST include **perro** or **perros** at least once (typically **Raymond el perro**; do not force “Dawg” into ES). Series LinkedIn body already says junior dog; still keep the dog signal in the quoted teaser line when it mirrors **`description`**.
+
+**Footer explainer:** **`layouts/partials/raymond-project-about.html`** when the category is present; copy from **`raymondProjectAbout*`** in **`i18n/en.toml`** / **`i18n/es.toml`**.
+
+**LinkedIn:** Same fold-first image-only pattern as Cube-Cows (quoted **`description`** on line one; **`🟣`** + **`{heading_code}: Everyone ❤️ Raymond 🐕📓`**; paste **`raymondProjectAboutTitle`** then **`raymondProjectAboutBody`**; hub **`/categories/raymond/`**). See **`.cursor/skills/linkedin-post/SKILL.md`**.
+
 ### `type: sayings`
 
-- **`description`**: Short teaser for cards. When applying this skill, MUST set it per **Sayings card teaser** from **`title`**, **`tldr`**, and **`fluff`** (after **Sayings scan emphasis** on the latter two).
+- **`description`**: Short teaser for cards. **Por-Estas-Calles:** MUST set per **Por-Estas-Calles card teaser** from **`title`**, **`tldr`**, and **`fluff`**. **All other hubs** using **`type: sayings`** (T-Shirt Art, Reptilocracy, Pawtropolis, …): MUST draft new or rewritten teasers via **Gemma teaser**.
 - **`tldr`**: Main “TLDR” block (shown in list and on the single layout). When applying this skill, MUST include restrained **`**bold**`** per **`.cursor/skills/revise-emphasis/SKILL.md`**.
 - **`fluff`**: “Context” block (optional second column on list; shown on single). When present and when applying this skill, MUST include restrained **`**bold**`** per **revise-emphasis**.
-- **`project`** (optional): Recurring **series line** on the detail hero. For **Por-Estas-Calles** / Street Wisdom sayings, use the canonical **`Street-Wisdom 💬🇻🇪`** (speech balloon + Venezuelan flag); keep **`ArepaContigo`** in **`tags`** only. **`title`** should be the **unique** episode name (Spanish saying, etc.) for lists, prev/next, and the tab. Without `project`, the layout uses one-line `heading_code` + `title` everywhere.
+- **`project`** (optional): Recurring **series line** on the detail hero. For **Por-Estas-Calles** / Street Wisdom, use the canonical **`Street-Wisdom 💬🇻🇪`** (speech balloon + Venezuelan flag); keep **`ArepaContigo`** in **`tags`** only. **`title`** should be the **unique** episode name (Spanish saying, etc.) for lists, prev/next, and the tab. Without `project`, the layout uses one-line `heading_code` + `title` everywhere.
 
 Archetype: **`archetypes/sayings.md`**.
 
 ### Por-Estas-Calles (Venezuelan sayings / Street Wisdom)
 
-Some **`type: sayings`** posts translate **Venezuelan street wisdom** for an English audience. They usually use **`categories`**: **`Cognitive-Memetics`** and **`Por-Estas-Calles`** (shareable hub at `/categories/por-estas-calles/`). For the detail hero, set **`project: Street-Wisdom 💬🇻🇪`** on every bundle; **`linkedin.txt`** uses the **fold-first** Por-Estas-Calles layout (quoted saying, then **`❓`** / **`AND:`** / **`🔤 IN ENGLISH`**, then **`🟣`** + **`{heading_code}: {project}`**; see **`.cursor/skills/linkedin-post/SKILL.md`** → **Sayings / Street Wisdom**).
+**Por-Estas-Calles** is the Street Wisdom hub (often called “sayings” in conversation). Posts usually use **`type: sayings`** with **`categories`**: **`Cognitive-Memetics`** and **`Por-Estas-Calles`** (shareable hub at `/categories/por-estas-calles/`). For the detail hero, set **`project: Street-Wisdom 💬🇻🇪`** on every bundle; **`linkedin.txt`** uses the **fold-first** Por-Estas-Calles layout (quoted saying, then **`❓`** / **`AND:`** / **`🔤 IN ENGLISH`**, then **`🟣`** + **`{heading_code}: {project}`**; see **`.cursor/skills/linkedin-post/SKILL.md`** → **Sayings / Street Wisdom**).
+
+**Teaser:** MUST use **Por-Estas-Calles card teaser** (derived from **`title`** / **`tldr`** / **`fluff`**). MUST NOT use **Gemma teaser** for this hub.
 
 **Canonical series explainer** (site "But why" footer, Substack paste, LinkedIn **`🟣`** series block): **`sayingsProjectAboutTitle`**, **`sayingsProjectAboutP1`**, **`sayingsProjectAboutP2`** in **`i18n/en.toml`** and **`i18n/es.toml`**. **MUST NOT** duplicate or paraphrase that body in this skill.
 
@@ -256,7 +323,7 @@ Posts in this line use **`categories`**: **`Cognitive-Memetics`** and **`T-Shirt
 
 - **`type`:** Prefer **`sayings`** when you want **Teaser** / **TLDR** / **Context** plus a featured image of the graphic. Use **`panel`** when the piece is a longer essay with the art as hero.
 - **`project`:** Set a recurring **series line** on the detail hero (for example **`T-Shirt Art`** or a short branded label). Match the voice you want on the card; **`title`** stays the unique episode name.
-- **`description` (Teaser):** Same **Sayings card teaser** rules as other **`type: sayings`** posts (from **`title`**, **`tldr`**, **`fluff`**). Keep it **short**; **`project`** and **`categories`** already show the series; MUST NOT open with redundant meta like “T-Shirt Art piece,” “this post,” or “in this entry.” Jump straight into substance.
+- **`description` (Teaser):** MUST draft new or rewritten teasers via **Gemma teaser** (not **Por-Estas-Calles card teaser**). Keep it **short**; **`project`** and **`categories`** already show the series; MUST NOT open with redundant meta like “T-Shirt Art piece,” “this post,” or “in this entry.” Jump straight into substance.
 - **`tldr`:** Same **Sayings emphasis** rules as other **`type: sayings`** posts (**`.cursor/skills/revise-emphasis/SKILL.md`**). MUST NOT change the author’s words; only add, trim, or adjust **`**bold**`** on existing text.
 - **`title`:** Unique **episode** name; **two-beat** parallels (for example *cheap X, expensive Y* or *prepare, then advance*) read well as a line without extra labels.
 - **`tags`:** Include **`TShirtArt`** plus **two to four** post-specific hooks (themes, mood, format). Do **not** add the **Street Wisdom** LinkedIn set unless the post is also part of that project.
@@ -307,10 +374,10 @@ Use one folder per post with **`index.md`** and assets beside it, for example:
 
 ### Project "But why" explainer cards (detail footers)
 
-- **Shared look (site-wide):** After the article on **`type: panel`**, **`type: sayings`** (when the Street Wisdom partial shows), **Reptilocracy** singles, and **Pawtropolis-Under-Fire** singles, the **"But why"** explainer is a **gradient card** (warm wash, left accent stripe, soft shadow, circular **❓** mark, slightly roomier body type). Styles live under **`assets/css/_custom.scss`** for **`.cow-project-about`** and **`.sayings-project-about`** together (same shell). Partials: **`layouts/partials/cows-project-about.html`**, **`layouts/partials/sayings-project-about.html`**, **`layouts/partials/reptilocracy-project-about.html`** (Reptilocracy also adds **`reptilocracy-project-about`** for extra rules only), **`layouts/partials/pawtropolis-project-about.html`**.
-- **MUST NOT** add duplicate or conflicting card chrome for these explainers in other SCSS files or inline styles unless the user explicitly asks for an exception; extend the shared block in **`_custom.scss`** so Cube-Cows, Street Wisdom, Reptilocracy, and Pawtropolis stay visually aligned.
+- **Shared look (site-wide):** After the article on **`type: panel`**, **`type: sayings`** (when the Street Wisdom partial shows), **Reptilocracy** singles, **Pawtropolis-Under-Fire** singles, and **Raymond** singles, the **"But why"** explainer is a **gradient card** (warm wash, left accent stripe, soft shadow, circular **❓** mark, slightly roomier body type). Styles live under **`assets/css/_custom.scss`** for **`.cow-project-about`** and **`.sayings-project-about`** together (same shell). Partials: **`layouts/partials/cows-project-about.html`**, **`layouts/partials/sayings-project-about.html`**, **`layouts/partials/reptilocracy-project-about.html`** (Reptilocracy also adds **`reptilocracy-project-about`** for extra rules only), **`layouts/partials/pawtropolis-project-about.html`**, **`layouts/partials/raymond-project-about.html`**.
+- **MUST NOT** add duplicate or conflicting card chrome for these explainers in other SCSS files or inline styles unless the user explicitly asks for an exception; extend the shared block in **`_custom.scss`** so Cube-Cows, Street Wisdom, Reptilocracy, Pawtropolis, and Raymond stay visually aligned.
 - **Reptilocracy-only:** After **`reptilocracyProjectAboutBody`** (markdown), **`layouts/partials/reptilocracy-project-about.html`** renders a small **CTA row**: **`reptilocracyProjectAboutCtaTitle`** as a **`span`** (not a paragraph, so it lines up cleanly with the pill) plus **`reptilocracyProjectAboutCtaButton`**; the petition URL lives in that partial. Companion styles use **`.reptilocracy-project-about__cta*`** in **`_custom.scss`**. Do not reuse that CTA pattern on Cube-Cows or Street Wisdom explainers.
-- **Copy source (canonical; do not paraphrase in this skill):** Tales from the Cube Farm → **`cowsProjectAbout*`**; Street Wisdom → **`sayingsProjectAbout*`**; Reptilocracy → **`reptilocracyProjectAboutBody`** plus **`reptilocracyProjectAboutCtaTitle`** / **`reptilocracyProjectAboutCtaButton`**; Pawtropolis → **`pawtropolisProjectAboutTitle`** / **`pawtropolisProjectAboutBody`**. All live in **`i18n/en.toml`** / **`i18n/es.toml`**. LinkedIn series blocks: **`.cursor/skills/linkedin-post/SKILL.md`**.
+- **Copy source (canonical; do not paraphrase in this skill):** Tales from the Cube Farm → **`cowsProjectAbout*`**; Street Wisdom → **`sayingsProjectAbout*`**; Reptilocracy → **`reptilocracyProjectAboutBody`** plus **`reptilocracyProjectAboutCtaTitle`** / **`reptilocracyProjectAboutCtaButton`**; Pawtropolis → **`pawtropolisProjectAboutTitle`** / **`pawtropolisProjectAboutBody`**; Raymond → **`raymondProjectAboutTitle`** / **`raymondProjectAboutBody`**. All live in **`i18n/en.toml`** / **`i18n/es.toml`**. LinkedIn series blocks: **`.cursor/skills/linkedin-post/SKILL.md`**.
 
 ## References in this repo
 

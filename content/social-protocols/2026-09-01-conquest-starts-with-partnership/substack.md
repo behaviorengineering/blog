@@ -50,6 +50,6 @@ This note is a sketch. The talk walks **necessity**, **competition**, and why **
 | [39:00](https://www.youtube.com/watch?v=W5EeZ4i73IM&t=2340) | **People** Colonists, spoils, and quick wars |
 | [44:28](https://www.youtube.com/watch?v=W5EeZ4i73IM&t=2668) | **Modernity** Nukes, tech, and commercial expansion |
 
-Chapter notes and the full pick live on the site: [Why does conquest start with a partnership?](https://behaviorengineering.ai/social-protocols/2026-08-28-conquest-starts-with-partnership/).
+Chapter notes and the full pick live on the site: [Why does conquest start with a partnership?](https://behaviorengineering.ai/social-protocols/2026-09-01-conquest-starts-with-partnership/).
 
 Watch on YouTube: [You Need More Danger In Your Life | Machiavelli Explained](https://www.youtube.com/watch?v=W5EeZ4i73IM)

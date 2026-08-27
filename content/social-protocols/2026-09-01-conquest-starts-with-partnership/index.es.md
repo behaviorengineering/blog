@@ -1,6 +1,6 @@
 ---
-translationKey: "2026-08-28-conquest-starts-with-partnership"
-date: '2026-08-28T01:00:00+11:00'
+translationKey: "2026-09-01-conquest-starts-with-partnership"
+date: '2026-09-01T01:00:00+11:00'
 title: "🤝 ¿Por qué la conquista empieza con una alianza?"
 type: video
 description: |
@@ -25,9 +25,9 @@ featuredImagePreview: "https://img.youtube.com/vi/W5EeZ4i73IM/hqdefault.jpg"
 tags: ["SeeTheGame", "PowerAndControl", "RiskExport", "CheapNarratives"]
 
 aliases:
-  - "/es/social-protocols/2026-08-28-conquest-starts-with-partnership/"
-  - "/es/protocolos-sociales/2026-08-28-conquest-starts-with-partnership/"
-  - "/es/reality-protocols/2026-08-28-conquest-starts-with-partnership/"
+  - "/es/social-protocols/2026-09-01-conquest-starts-with-partnership/"
+  - "/es/protocolos-sociales/2026-09-01-conquest-starts-with-partnership/"
+  - "/es/reality-protocols/2026-09-01-conquest-starts-with-partnership/"
 related:
   - "/human-condition/2026-05-28-why-humans-keep-building-pyramids/"
   - "/cognitive-memetics/sayings/2026-06-01-saying-21/"
