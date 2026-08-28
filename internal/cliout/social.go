@@ -7,15 +7,15 @@ import (
 	"strings"
 )
 
-// PrintSocialAutopostEmpty reports no bundles matched the requested publish date.
+// PrintSocialAutopostEmpty reports no bundles matched the requested publish date (warn / skip, exit 0).
 func PrintSocialAutopostEmpty(out io.Writer, network, date, postPath string) {
-	Heading(out, "📭", network+" autopost: nothing scheduled for "+date)
+	Heading(out, "⚠️", network+" autopost: nothing scheduled for "+date+" (skip)")
 	if postPath != "" {
 		Meta(out, "📌", "post filter", postPath)
 	}
 	Body(out,
 		"No bundle under content/ has that publish date in index.md front matter,",
-		"or the bundle is missing linkedin.txt.",
+		"or the bundle is missing linkedin.txt. This is not a failure.",
 	)
 	Divider(out)
 	cmd := strings.ToLower(network) + "-autopost"

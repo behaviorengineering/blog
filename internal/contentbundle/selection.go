@@ -3,7 +3,6 @@
 package contentbundle
 
 import (
-	"fmt"
 	"log"
 	"os"
 	"path/filepath"
@@ -19,6 +18,9 @@ import (
 // (for example human-condition/2026-05-01-ego-as-game or cognitive-memetics/reptilocracy/2026-05-10-slug),
 // sorted lexicographically by that relative path. Each bundle has index.md whose front matter date
 // matches dateYYYYMMDD (wall date in the timestamp's offset).
+//
+// If no bundles match the date, it returns an empty slice and logs a warning (not an error), so
+// scheduled social autopost can exit cleanly on empty calendar days.
 //
 // If postPath is non-empty, it must be a single bundle path under content/ (with or without content/ prefix);
 // that path is returned as a one-element slice without date filtering (same as facebook-autopost -post).
@@ -82,7 +84,8 @@ func PublishedBundleRelsForDate(repoRoot, dateYYYYMMDD, postPath string) ([]stri
 	}
 
 	if len(cands) == 0 {
-		return nil, fmt.Errorf("no content bundle found for date %s", dateYYYYMMDD)
+		log.Printf("contentbundle: warning: no content bundle found for date %s (nothing to post)", dateYYYYMMDD)
+		return []string{}, nil
 	}
 
 	type bundlePick struct {
