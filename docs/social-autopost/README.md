@@ -160,6 +160,7 @@ go run ./cmd/facebook-autopost -date "YYYY-MM-DD" -dry-run
 Notes:
 
 - Resolves every matching bundle under `content/<section>/<slug>/` and `content/<section>/<hub>/<slug>/` whose front matter **`date`** matches `YYYY-MM-DD` (sorted by path). Each bundle must have **`linkedin.txt`** with a **`behaviorengineering.ai`** URL.
+- **Empty day:** if no bundle matches the date, both tools **warn and exit 0** (scheduled CI stays green on quiet calendar days).
 - If more than one bundle shares that date, it posts **each** in order. Use **`-post section/slug`** (or **`SOCIAL_POST=...`** with `make facebook-autopost`) to target a single bundle.
 - It extracts the canonical site URL from `linkedin.txt` for idempotency and for the Facebook link post.
 - **Image:** when **`featuredImage`** resolves to a file in the bundle, Facebook autopost uploads that file as a **published Page photo** and sets **`linkedin.txt`** as the photo **caption** (so the post card shows your art). If Graph rejects a format (rare for **`.webp`**), fix the raster or temporarily clear **`featuredImage`** to fall back to a link-only post.
