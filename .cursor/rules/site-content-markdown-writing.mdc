@@ -52,7 +52,7 @@ alwaysApply: false
 
 ## Raster images in `content/` page bundles
 
-- MUST follow **`.cursor/rules/site-content-images-webp.mdc`** when a bundle under **`content/`** includes **`.png`** rasters (convert to **`.webp`**, update references, verify build).
+- MUST follow **`.cursor/rules/png-to-webp.mdc`** when a task adds or updates **`.png`** rasters (convert to **`.webp`**, update references, verify build).
 
 ## Front matter when `type: claims`
 

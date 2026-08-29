@@ -8,7 +8,7 @@ description: >-
   format chat, content/.
 ---
 
-# Site human interaction
+# Site human interaction (always-rules-01 overlay)
 
 Generic human interaction: `.cursor/rules/always-rules-01-human-interaction.mdc`.
 
