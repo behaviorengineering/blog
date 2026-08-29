@@ -1053,7 +1053,7 @@ RunE: func(cmd *cobra.Command, args []string) (err error) {
 #### **7.5 Comment Formatting (MANDATORY)**
 - [ ] **ALL comments MUST end with a period (`.`)**
 - [ ] **RED FLAG**: Comments without periods? → The `godot` linter will fail
-- [ ] **Reference**: See `rules-for-golang-coding.mdc` → [**CRITICAL: Comment Formatting (MANDATORY)**](#-critical-comment-formatting-mandatory) (Line 506) for complete details, rationale, and examples.
+- [ ] **Reference**: See `site-rules-for-golang-coding.mdc` → [**CRITICAL: Comment Formatting (MANDATORY)**](#-critical-comment-formatting-mandatory) (Line 506) for complete details, rationale, and examples.
 - [ ] **Quick Summary**: Missing periods cause lint failures and waste time fixing trivial issues.
 
 **Example (Go)**:

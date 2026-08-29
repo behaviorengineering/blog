@@ -78,7 +78,7 @@ Goal: **guide the eye** to the twist, risk, or anchor term. If almost every cont
 
 ## English spelling (default-language `content/`)
 
-- MUST use **US English** (**generalize**, **behavior**). See **`.cursor/rules/content-markdown-writing.mdc`** → **Language**.
+- MUST use **US English** (**generalize**, **behavior**). See **`.cursor/rules/site-content-markdown-writing.mdc`** → **Language**.
 
 ## Spanish (`*.es.md`)
 
@@ -86,6 +86,6 @@ Goal: **guide the eye** to the twist, risk, or anchor term. If almost every cont
 
 ## Related
 
-- **`.cursor/rules/content-markdown-writing.mdc`**
+- **`.cursor/rules/site-content-markdown-writing.mdc`**
 - **`.cursor/skills/claims-content/SKILL.md`**
 - **`.cursor/skills/cognitive-memetics-content/SKILL.md`**

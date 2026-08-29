@@ -28,7 +28,7 @@ Metadata (title, date, tags, featured image) still comes from the index file. Th
 ## Philosophy
 
 - **Adaptation over copy-paste:** Use `index.md` (and type-specific fields) as source material, not as the paste target.
-- **Newsletter voice:** Warm, direct, spoken prose (same café register as friends Facebook copy in **`.cursor/skills/facebook-post/SKILL.md`**, but structured for email). For claims and video newsletters, MUST follow **Explanatory prose** in **`.cursor/rules/content-markdown-writing.mdc`** (mechanism paragraphs, not revelation stacks; audit: **revise-post** Step 2).
+- **Newsletter voice:** Warm, direct, spoken prose (same café register as friends Facebook copy in **`.cursor/skills/facebook-post/SKILL.md`**, but structured for email). For claims and video newsletters, MUST follow **Explanatory prose** in **`.cursor/rules/site-content-markdown-writing.mdc`** (mechanism paragraphs, not revelation stacks; audit: **revise-post** Step 2).
 - **One review surface for Substack:** Maintain **`substack.md`** only; do not also maintain `facebook-en.md` for Substack.
 - **Video picks:** Mirror the site **Chapter guide** table in the sidecar so newsletter readers can jump by timestamp (see **Chapter guide (`type: video` only)**).
 - **Neurodivergent-friendly scan:** Guide the eye with **typography** (`**bold**`, `*italics*`, `>` quotes). **MUST NOT** rely on chopping every idea into tiny paragraphs as the main readability fix.

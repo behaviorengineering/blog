@@ -426,7 +426,7 @@ Any **label the reader did not bring** fails cold-read unless decoded in the **s
 **Checks:**
 - [ ] **Em dash search executed** (Grep or `rg` for U+2014 `—` on target path). ZERO hits in scope.
 - [ ] **Bold audit executed** per **`.cursor/skills/revise-emphasis/SKILL.md`** (count spans per block; flag wall-to-wall).
-- [ ] Default-language `content/` uses **US English** spelling (**generalize**, not **generalise**); see **`.cursor/rules/content-markdown-writing.mdc`** → **Language**.
+- [ ] Default-language `content/` uses **US English** spelling (**generalize**, not **generalise**); see **`.cursor/rules/site-content-markdown-writing.mdc`** → **Language**.
 - [ ] No decorative emoji in `description` or `grounding`.
 - [ ] For `cognitive-memetics`: no leading emoji in `title`.
 - [ ] For other sections: max two leading emoji in `title` if they signal the hook.

@@ -70,7 +70,7 @@ For **`type: claims`** (Claim / Thoughts / Grounding), use **`.cursor/skills/cla
 
 Cognitive-Memetics is **not** essay prose. Punch and street feeling are allowed. Empty polish is not.
 
-Essays / video / Substack use **Explanatory prose** in **`.cursor/rules/content-markdown-writing.mdc`**. This section uses a **hybrid**: one emotional or cartoon beat, then a clear claim or scene. Full essay paragraphs are optional only when a post deliberately adds body Article copy.
+Essays / video / Substack use **Explanatory prose** in **`.cursor/rules/site-content-markdown-writing.mdc`**. This section uses a **hybrid**: one emotional or cartoon beat, then a clear claim or scene. Full essay paragraphs are optional only when a post deliberately adds body Article copy.
 
 **Applies when drafting or when the user asks to rewrite, revise, or tighten** `description`, `tldr`, `fluff`, or body under `content/cognitive-memetics/`.
 
@@ -123,7 +123,7 @@ For posts under **`content/cognitive-memetics/reptilocracy/`** (category **`Rept
 - Prefer concrete institutional nouns (**press release**, **board deck**, **audit**, **executive suite**, **quiet restructure**) over abstract poetry.
 - Keep each `fluff` paragraph earning its place: rhythm → incentive → who it protects → delayed cost (or a tighter subset of those beats).
 - Keep episode constructs when the panel names them (for example **Grandiosity Gauges**, **Leadership Confidence: Stable**).
-- Still obey site-wide bans: no em dash; no **Industry-verb shells** / fake scene **`the room`** (see **`.cursor/skills/revise-post/reference.md`** and **`.cursor/rules/content-markdown-writing.mdc`**).
+- Still obey site-wide bans: no em dash; no **Industry-verb shells** / fake scene **`the room`** (see **`.cursor/skills/revise-post/reference.md`** and **`.cursor/rules/site-content-markdown-writing.mdc`**).
 
 **MUST NOT**
 
@@ -167,7 +167,7 @@ For posts under **`content/cognitive-memetics/reptilocracy/`** (category **`Rept
 **Scope:** Posts whose **`categories`** include **`Por-Estas-Calles`** (Venezuelan Street Wisdom). This is the only Cognitive-Memetics hub that skips Gemma for **`description`**.
 
 - When applying this skill to a **Por-Estas-Calles** post, MUST set or replace **`description`** with a **short** card teaser **derived only** from **`title`**, **`tldr`**, and **`fluff`** (if **`fluff`** is absent or empty, use **`title`** and **`tldr`** only). Read **`title`** as the episode anchor (often the Spanish saying); read **`tldr`** and **`fluff`** after **Sayings emphasis** so the teaser matches the list/detail copy.
-- MUST NOT invent facts, examples, or tone that are not supported by those three fields together. MAY use **`**bold**`** on key phrases in the teaser you write. Follow **`.cursor/rules/content-markdown-writing.mdc`** (English, no em dash, short sentences).
+- MUST NOT invent facts, examples, or tone that are not supported by those three fields together. MAY use **`**bold**`** on key phrases in the teaser you write. Follow **`.cursor/rules/site-content-markdown-writing.mdc`** (English, no em dash, short sentences).
 - MUST NOT change **`title`**, **`tldr`**, or **`fluff`** while drafting the teaser unless the user asked for a prose edit to those fields.
 - **No echo rule:** `description` MUST NOT repeat key words already in `title` or `tldr`. If `title` is "The rat and the cheese", `description` should not use "rat" or "cheese". Find an evocative pitch that complements without echoing.
 - **MUST NOT** use the **Gemma teaser** flow below for **Por-Estas-Calles**.
@@ -219,8 +219,8 @@ MAY call via **`.cursor/skills/local_eval_common/common.py`** → **`chat_comple
 
 ### Shared
 
-- **`date`**, **`title`**, **`draft`** — **`date`** MUST follow **`.cursor/rules/content-markdown-writing.mdc`** → **Publish `date`** (default **`date: 'YYYY-MM-DDT01:00:00+11:00'`**).
-- **`title`**: MUST **not** use **leading emoji** in **`title`**. **Cognitive-Memetics** opts out of **Optional leading emoji in `title`** in **`.cursor/rules/content-markdown-writing.mdc`** (which applies to **`social-protocols`**, **`human-condition`**, and **`mind-infrastructure`** only). Keep the episode or saying line in plain words; use optional **`heading_code`** when you want a compact prefix in the UI.
+- **`date`**, **`title`**, **`draft`** — **`date`** MUST follow **`.cursor/rules/site-content-markdown-writing.mdc`** → **Publish `date`** (default **`date: 'YYYY-MM-DDT01:00:00+11:00'`**).
+- **`title`**: MUST **not** use **leading emoji** in **`title`**. **Cognitive-Memetics** opts out of **Optional leading emoji in `title`** in **`.cursor/rules/site-content-markdown-writing.mdc`** (which applies to **`social-protocols`**, **`human-condition`**, and **`mind-infrastructure`** only). Keep the episode or saying line in plain words; use optional **`heading_code`** when you want a compact prefix in the UI.
 - **`heading_code`** (optional): short label before the title (e.g. `W6`, `W13`). Rendered via `layouts/partials/heading-title-markup.html` with class `heading-code--tldr`.
 - **`categories`**: Use **two** terms so each post belongs to the section **and** to a **project hub** you can link to (Hugo taxonomy list pages under `/categories/<slug>/`).
   - **Umbrella:** always **`Cognitive-Memetics`** (this site area).
@@ -370,7 +370,7 @@ Use one folder per post with **`index.md`** and assets beside it, for example:
 ## Theme and style
 
 - Site overrides: **`assets/css/_custom.scss`** (prefer not editing `themes/LoveIt/`).
-- LoveIt how-tos: **`themes/LoveIt/exampleSite/content/posts/`** (see **`.cursor/rules/always-rules-3-hugo.mdc`** index).
+- LoveIt how-tos: **`themes/LoveIt/exampleSite/content/posts/`** (see **`.cursor/rules/site-always-rules-3-hugo.mdc`** index).
 
 ### Project "But why" explainer cards (detail footers)
 

@@ -11,7 +11,7 @@ alwaysApply: false
 
 ## Content placement
 
-- MUST choose `content/<section>/` and `type` using **`.cursor/rules/content-placement.mdc`** before drafting or refactoring front matter.
+- MUST choose `content/<section>/` and `type` using **`.cursor/rules/site-content-placement.mdc`** before drafting or refactoring front matter.
 
 ## Language
 
@@ -52,7 +52,7 @@ alwaysApply: false
 
 ## Raster images in `content/` page bundles
 
-- MUST follow **`.cursor/rules/content-images-webp.mdc`** when a bundle under **`content/`** includes **`.png`** rasters (convert to **`.webp`**, update references, verify build).
+- MUST follow **`.cursor/rules/site-content-images-webp.mdc`** when a bundle under **`content/`** includes **`.png`** rasters (convert to **`.webp`**, update references, verify build).
 
 ## Front matter when `type: claims`
 
@@ -76,7 +76,7 @@ alwaysApply: false
 ## Front matter when `type: video`
 
 - MUST treat `description` as the **lead** above the embed: it must read well alone in list and card views.
-- MUST follow `.cursor/skills/video-content/SKILL.md` for **`youtube_id`** vs body shortcode, **`categories`** (topic hubs such as Mind-Infrastructure, Human-Condition, or Social-Protocols), section folder per **`.cursor/rules/content-placement.mdc`**, tags, optional featured image, **lead that invites a full watch**, and **TLDR body** (so-what article for text-first readers).
+- MUST follow `.cursor/skills/video-content/SKILL.md` for **`youtube_id`** vs body shortcode, **`categories`** (topic hubs such as Mind-Infrastructure, Human-Condition, or Social-Protocols), section folder per **`.cursor/rules/site-content-placement.mdc`**, tags, optional featured image, **lead that invites a full watch**, and **TLDR body** (so-what article for text-first readers).
 
 ## Voice while drafting
 

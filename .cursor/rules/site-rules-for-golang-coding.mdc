@@ -1067,7 +1067,7 @@ go run ./cmd --help
 
 ### **🚨 ANTI-CHEATING PROTOCOLS**
 
-> **Note**: For global code quality and anti-cheating rules that apply to all code, see `always-rules-2-quality.mdc`. This section focuses on verification protocols specific to Go code completion.
+> **Note**: For global code quality and anti-cheating rules that apply to all code, see `site-always-rules-2-quality.mdc`. This section focuses on verification protocols specific to Go code completion.
 
 #### **What Constitutes Incomplete Work:**
 - [ ] **Claiming completion without deep search verification**

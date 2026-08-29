@@ -25,7 +25,7 @@ description: >-
 ## Workflow
 
 1. **Locate the English source** in `content/<section>/...`. Do not move the section; translation is a **sibling file** in the same folder.
-2. **Create** `index.es.md` (or `*.es.md`) with the same `type`, **`date`** (identical string to English; site default **`date: 'YYYY-MM-DDT01:00:00+11:00'`** per **`.cursor/rules/content-markdown-writing.mdc`** → **Publish `date`**), `slug` (if set on EN), images paths, and structural front matter as the English file.
+2. **Create** `index.es.md` (or `*.es.md`) with the same `type`, **`date`** (identical string to English; site default **`date: 'YYYY-MM-DDT01:00:00+11:00'`** per **`.cursor/rules/site-content-markdown-writing.mdc`** → **Publish `date`**), `slug` (if set on EN), images paths, and structural front matter as the English file.
 3. **Set `translationKey`** to the same stable string on **both** files (for example `translationKey: "2026-04-07-yt-history-of-intelligence"`). Use one identifier per logical article, not per language.
 4. **Adapt, do not gloss:** From the English **meaning** (who does what, when, stakes), write Spanish a native editor would say. MUST rebuild clause order per **Clause rebuild** below. MUST NOT substitute Spanish words into the English sentence (same relatives, *thus/making*, *You hear it when*). Keep **proper nouns**, paper titles, and product names as in the source unless a standard Spanish name exists.
 5. **Apply the right type skill** for structure and field roles (Claim vs Grounding, video `description`, sayings `tldr`/`fluff`, etc.): **`.cursor/skills/claims-content/SKILL.md`**, **video-content**, **cognitive-memetics-content**—and for Markdown **`**bold**`** density in any translated field, **`.cursor/skills/revise-emphasis/SKILL.md`**—but **Spanish prose** inside those roles.
@@ -376,8 +376,8 @@ Editorial passes on **human-condition**, **claims**, and org-design posts surfac
 
 ## Related
 
-- **Placement and section**: `.cursor/rules/content-placement.mdc`
-- **English default prose rules**: `.cursor/rules/content-markdown-writing.mdc` (English); Spanish files follow this skill for language choice.
+- **Placement and section**: `.cursor/rules/site-content-placement.mdc`
+- **English default prose rules**: `.cursor/rules/site-content-markdown-writing.mdc` (English); Spanish files follow this skill for language choice.
 - **Hooks / titles**: `.cursor/skills/revise-hooks/SKILL.md` after the type skill, adapted for Spanish.
 - **Facebook (ES/EN) and LinkedIn (ES) permalinks**: `.cursor/skills/facebook-post/SKILL.md`, `.cursor/skills/linkedin-post/SKILL.md` (site link blocks; always align with **`hugo list all`**).
 - **Gemma 4 evaluate script / standalone audit**: `.cursor/skills/revise-spanish/SKILL.md` (this skill runs the same script while drafting; `/revise-spanish` is evaluate-only until the user confirms).

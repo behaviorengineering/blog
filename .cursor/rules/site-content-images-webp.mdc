@@ -29,4 +29,4 @@ alwaysApply: false
 
 ## Related
 
-- **`.cursor/rules/content-markdown-writing.mdc`** for front matter and prose constraints alongside this workflow.
+- **`.cursor/rules/site-content-markdown-writing.mdc`** for front matter and prose constraints alongside this workflow.

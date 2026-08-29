@@ -26,7 +26,7 @@ description: >-
 
 **Home feed** (`layouts/index.html` → **`layouts/_default/home-tile.html`**): **`type: video`** with **`youtube_id`** (or **`youtube`**) uses the **same YouTube embed** in the card (iframes cannot wrap in the card’s outer link, so the template uses a **split card**: embed block, then a **text link** to the single with summary + optional **`fullPost`** pill). Featured image is **not** shown as the card hero when the embed is used. **`assets/css/_custom.scss`**: prose blurbs use **line-clamp + ellipsis**; **`description`** with a **top-level list** uses block layout, a **taller cap**, a **bottom fade**, and at most **four** list items so bullets do not collide with `-webkit-line-clamp` or clip mid-line.
 
-**`date`:** MUST use the site **`date`** form in **`.cursor/rules/content-markdown-writing.mdc`** → **Publish `date`**.
+**`date`:** MUST use the site **`date`** form in **`.cursor/rules/site-content-markdown-writing.mdc`** → **Publish `date`**.
 
 ## Field roles
 
@@ -181,7 +181,7 @@ See **`.cursor/skills/revise-post/SKILL.md`** Step 1 and Step 3 for the revision
 - Write the **body** so it **stands alone** for text-first visitors, without implying “you failed if you did not watch.”
 - Keep **`description`** as **hooks**, not a duplicate of the whole body.
 - Run the **cold-read gate** on **`description`** and **`sowhat`** on every new or updated video post (not optional).
-- Use **educational, active voice**. Explain terms in plain language when you introduce them. Body, `description`, and `sowhat` MUST follow **Explanatory prose** in **`.cursor/rules/content-markdown-writing.mdc`** (claim before interpretation; 2–4 sentence paragraphs; no rhetorical fragment stacks; no **Metaphor-shell restack**; no **Industry-verb shells**).
+- Use **educational, active voice**. Explain terms in plain language when you introduce them. Body, `description`, and `sowhat` MUST follow **Explanatory prose** in **`.cursor/rules/site-content-markdown-writing.mdc`** (claim before interpretation; 2–4 sentence paragraphs; no rhetorical fragment stacks; no **Metaphor-shell restack**; no **Industry-verb shells**).
 
 **MUST NOT**
 
@@ -203,7 +203,7 @@ Posts are normal pages under a section folder, for example:
 - `content/mind-infrastructure/<slug>/index.md`
 - `content/human-condition/<slug>/index.md`
 
-**Section** comes from the **folder**, not from `type`. Pick the folder by **main job** (same intent as **`claims`**): see **`.cursor/rules/content-placement.mdc`** → **`type: video` (YouTube picks)**. Use **`social-protocols/`** when the pick is really about norms, reciprocity, coordination, or institutions; **`human-condition/`** when the core is person-level psychology or identity; **`mind-infrastructure/`** as the **default lane** for general-interest picks when the other two do not fit. Taxonomy **`categories`** are independent of the folder. `hugo.toml` lists **`social-protocols`**, **`mind-infrastructure`**, and **`human-condition`** in **`params.home.contentSections`** so new video posts in those folders can appear on the home feed.
+**Section** comes from the **folder**, not from `type`. Pick the folder by **main job** (same intent as **`claims`**): see **`.cursor/rules/site-content-placement.mdc`** → **`type: video` (YouTube picks)**. Use **`social-protocols/`** when the pick is really about norms, reciprocity, coordination, or institutions; **`human-condition/`** when the core is person-level psychology or identity; **`mind-infrastructure/`** as the **default lane** for general-interest picks when the other two do not fit. Taxonomy **`categories`** are independent of the folder. `hugo.toml` lists **`social-protocols`**, **`mind-infrastructure`**, and **`human-condition`** in **`params.home.contentSections`** so new video posts in those folders can appear on the home feed.
 
 ## Authoring workflow
 
@@ -219,7 +219,7 @@ Posts are normal pages under a section folder, for example:
 
 ## Style and repo rules
 
-- MUST follow **`.cursor/rules/content-markdown-writing.mdc`** for English, punctuation, and prose habits.
+- MUST follow **`.cursor/rules/site-content-markdown-writing.mdc`** for English, punctuation, and prose habits.
 - Styling hooks: **`assets/css/_custom.scss`** — single: `.single-video`, `.video-page__embed`, `.video-page__lead`; section list video row: `.seven-list__figure--video`, `.seven-list__video-embed`, `.seven-list__video-detail-link`.
 
 ## Body headings (`###` on site pages)

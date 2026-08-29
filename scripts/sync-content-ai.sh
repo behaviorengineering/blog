@@ -14,9 +14,12 @@ SKILLS=(
 )
 RULES=(
   always-rules-0-ai.mdc
-  content-placement.mdc
-  content-markdown-writing.mdc
-  content-images-webp.mdc
+  always-rules-01-human-interaction.mdc
+  site-human-interaction.mdc
+  site-model-behavior.mdc
+  site-content-placement.mdc
+  site-content-markdown-writing.mdc
+  site-content-images-webp.mdc
 )
 
 mkdir -p content-ai/skills content-ai/rules

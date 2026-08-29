@@ -18,7 +18,7 @@ Posts use front matter fields that split **narrative** from **intellectual ancho
 
 **UI (this repo):** Any page with **`type: claims`** uses the same list and single labels (**Claim**, **Grounding**, **Dig deeper** where applicable), regardless of section. Section only affects URL path and default category display when categories are omitted.
 
-**`date`:** MUST use the site **`date`** form in **`.cursor/rules/content-markdown-writing.mdc`** → **Publish `date`**.
+**`date`:** MUST use the site **`date`** form in **`.cursor/rules/site-content-markdown-writing.mdc`** → **Publish `date`**.
 
 ## Field roles
 
@@ -118,7 +118,7 @@ categories: ["Human-Condition", "Social-Protocols"]
 
 ## Prose style (project preference)
 
-- While drafting, MUST follow **`.cursor/rules/content-markdown-writing.mdc`** → **Voice while drafting** and **Explanatory prose** (clear mechanism paragraphs, not revelation stacks; full audit: **revise-post** Step 2).
+- While drafting, MUST follow **`.cursor/rules/site-content-markdown-writing.mdc`** → **Voice while drafting** and **Explanatory prose** (clear mechanism paragraphs, not revelation stacks; full audit: **revise-post** Step 2).
 - **Avoid em dashes (`—`).** Prefer commas, semicolons, colons, or parentheses.
 - **English only** for site content (paths, front matter strings, body copy).
 
@@ -137,7 +137,7 @@ categories: ["Human-Condition", "Social-Protocols"]
 3. Write the body (metaphor, examples, optional quote exhibit with a `###` heading before the blockquote).
 4. Set **`tags`** (register + tag voice). Then **recommend `related`**: search for up to **two** **cognitive-memetics** sayings or panels that share the mechanism or a punchy parallel; MAY add **one** other claim or video. Write Hugo paths into **`related`**. If none fit, leave empty and rely on tag fallback. MUST **not** paste related links into the Thoughts body.
 5. Re-read Claim, then body as **Thoughts**, then Grounding for alignment (same order as the live page). Shorten Grounding if it repeats **Thoughts** or reads like a second Claim.
-6. On **new bundle**, **reschedule** (**`date`** or folder rename), or **`draft`** change: run **`make calendar`** (see **`.cursor/rules/content-markdown-writing.mdc`** → **Publish calendar**).
+6. On **new bundle**, **reschedule** (**`date`** or folder rename), or **`draft`** change: run **`make calendar`** (see **`.cursor/rules/site-content-markdown-writing.mdc`** → **Publish calendar**).
 
 ## References in this repo
 

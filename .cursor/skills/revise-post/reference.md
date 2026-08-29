@@ -33,7 +33,7 @@ Full banned-pattern tables and examples for **Step 2** in **`SKILL.md`**. Agents
 
 ## Explanatory prose (claims, video, Substack)
 
-**Scope:** `type: claims` Thoughts body; `type: video` body, `description`, and `sowhat`; `substack.md` / `substack.es.md`. Drafting constraint also in **`.cursor/rules/content-markdown-writing.mdc`** → **Explanatory prose**.
+**Scope:** `type: claims` Thoughts body; `type: video` body, `description`, and `sowhat`; `substack.md` / `substack.es.md`. Drafting constraint also in **`.cursor/rules/site-content-markdown-writing.mdc`** → **Explanatory prose**.
 
 **Goal:** Write like a clear human explaining a difficult idea. Polished fragment stacks that sound deep but do not name a mechanism or a falsifiable claim are fluff.
 

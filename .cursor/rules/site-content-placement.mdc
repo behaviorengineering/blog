@@ -62,4 +62,4 @@ Use the **main job of the piece**, not hashtags or “where you were browsing.�
 - If the page is **Claim + Grounding + essay**, and it is **not** a cow, saying, or video → **`social-protocols/`** or **`human-condition/`**, **`type: claims`**.
 - If the page is **strip / saying / shirt line** with the cognitive-memetics hubs → **`cognitive-memetics/`**, **`panel`** or **`sayings`**.
 - If the page is **`type: video`** → **`social-protocols/`**, **`mind-infrastructure/`**, or **`human-condition/`** by main job; set **`categories`** for hubs, not for folder choice alone.
-- After **any** new bundle, folder rename/move, or **`date`** / **`draft`** change → **`make calendar`** (see **`.cursor/rules/content-markdown-writing.mdc`** → **Publish calendar**).
+- After **any** new bundle, folder rename/move, or **`date`** / **`draft`** change → **`make calendar`** (see **`.cursor/rules/site-content-markdown-writing.mdc`** → **Publish calendar**).

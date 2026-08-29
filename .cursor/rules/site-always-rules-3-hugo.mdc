@@ -14,7 +14,7 @@ themes/LoveIt/exampleSite/content/posts/
 
 ## This repository (paths and claims)
 
-- MUST choose section folder and `type` using `.cursor/rules/content-placement.mdc` when adding or moving posts under `content/`.
+- MUST choose section folder and `type` using `.cursor/rules/site-content-placement.mdc` when adding or moving posts under `content/`.
 - For `type: claims` front matter: MUST use `description` (Claim) and `grounding` (support). MAY use `paper` as alias for `grounding` in templates.
 - MUST follow `.cursor/skills/claims-content/SKILL.md` when authoring or editing claims.
 - Reference: archetype `archetypes/claims.md`; templates `layouts/claims/`; section list row partial `layouts/partials/seven-style-row.html` (see also `layouts/partials/`).
@@ -271,7 +271,7 @@ themes/LoveIt/exampleSite/content/posts/
 **Video picks (`type: video`, YouTube)?** → `.cursor/skills/video-content/SKILL.md`  
 **Custom CSS (links, footer, section lists)?** → `assets/css/_custom.scss`  
 **Hooks, list cold-read, body ## headings?** → `.cursor/skills/revise-hooks/SKILL.md` 
-**Voice while drafting (active, direct, no AI rhetoric)?** → **`.cursor/rules/content-markdown-writing.mdc`** → **Voice while drafting** + **Explanatory prose** for claims / video / Substack (full audit: **revise-post** Step 2)
+**Voice while drafting (active, direct, no AI rhetoric)?** → **`.cursor/rules/site-content-markdown-writing.mdc`** → **Voice while drafting** + **Explanatory prose** for claims / video / Substack (full audit: **revise-post** Step 2)
 **Prose cadence loop (clarity → compression → flow → voice → purpose)?** → `.cursor/skills/revise-flow/SKILL.md`
 **Full editorial lot (lot plan → heavy flow → hooks → post filters → fine flow → format last)?** → `.cursor/skills/revise-post/SKILL.md` (default mode `rough`; list-scope Gemma in the plan, prompt to skip)
 **Em dashes + emphasis/bold (ship-time mechanics)?** → `.cursor/skills/revise-format/SKILL.md` (authoring bold rules: `revise-emphasis`)
@@ -284,6 +284,6 @@ themes/LoveIt/exampleSite/content/posts/
 **Need an admonition box?** → `theme-documentation-extended-shortcodes/index.en.md` Line 196-281  
 **Need emoji?** → `emoji-support/index.en.md` Line 30+
 **LinkedIn post from a site post?** → `.cursor/skills/linkedin-post/SKILL.md`
-**Publish calendar after new bundle or date change?** → **`make calendar`** (see **`.cursor/rules/content-markdown-writing.mdc`** → **Publish calendar**); UI at **`/calendar/`**
+**Publish calendar after new bundle or date change?** → **`make calendar`** (see **`.cursor/rules/site-content-markdown-writing.mdc`** → **Publish calendar**); UI at **`/calendar/`**
 **Facebook post (friends/family, ES or EN)?** → `.cursor/skills/facebook-post/SKILL.md`
 **Essays pipeline (content-pipelines MCP, command center, arc/composition/review)?** → `.cursor/skills/essay-command-center/SKILL.md` (verifier: `.cursor/agents/essay-verifier.md`)

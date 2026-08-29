@@ -110,5 +110,5 @@ Apply all? (y / cancel / apply em dash only / apply emphasis only)
 - **`.cursor/skills/revise-emphasis/SKILL.md`** — rulebook while authoring
 - **`.cursor/skills/revise-post/SKILL.md`** → Step 4
 - **`.cursor/skills/revise-post/SKILL.md`** → format phase (last)
-- **`.cursor/rules/content-markdown-writing.mdc`**
+- **`.cursor/rules/site-content-markdown-writing.mdc`**
 - **`.cursor/rules/always-rules-0-ai.mdc`** (no `—` in generated text)

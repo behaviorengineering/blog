@@ -27,7 +27,7 @@ External research for **behaviorengineering.ai**: a Hugo (LoveIt) site publishin
 - Spanish sibling: `[index.es.md if present]`
 - Sidecars: `[substack.md, linkedin.txt, tmp/articles/<topic>.md, etc.]`
 - Type skill: `[.cursor/skills/claims-content/SKILL.md | video-content/SKILL.md | …]`
-- Placement: `.cursor/rules/content-placement.mdc`
+- Placement: `.cursor/rules/site-content-placement.mdc`
 - Prior research: `[docs/research/*.md if any]`
 
 ---

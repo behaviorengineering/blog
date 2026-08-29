@@ -166,7 +166,7 @@ For each section of the Spanish text (front matter and body), perform this menta
 - [ ] Bold (`**`) is restrained: ~2-5 spans per short block (not wall-to-wall).
 - [ ] `translationKey` matches the English file exactly.
 - [ ] `categories` and `tags` are identical to the English post (do not translate taxonomy terms).
-- [ ] `date`, `youtube_id`, `images`, and structural front matter are mirrored from the English file ( **`date`** format: **`.cursor/rules/content-markdown-writing.mdc`** → **Publish `date`**).
+- [ ] `date`, `youtube_id`, `images`, and structural front matter are mirrored from the English file ( **`date`** format: **`.cursor/rules/site-content-markdown-writing.mdc`** → **Publish `date`**).
 - [ ] No decorative emoji in `description` or `grounding`.
 
 **Action:** Search for `—` and replace. Audit `**` density. Verify front matter field parity with the English file.

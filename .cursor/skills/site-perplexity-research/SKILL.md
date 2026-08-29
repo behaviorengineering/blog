@@ -50,7 +50,7 @@ Read these repo paths first (source of truth):
 
 - Target page bundle under `content/` (`index.md`, optional `index.es.md`, sidecars)
 - Matching type skill (`.cursor/skills/claims-content/SKILL.md`, `video-content/SKILL.md`, etc.)
-- `.cursor/rules/content-placement.mdc` when section or type is unclear
+- `.cursor/rules/site-content-placement.mdc` when section or type is unclear
 - Optional: `tmp/articles/`, prior `docs/research/`, `data/tag-register.txt`
 
 Fill the matching pack:
