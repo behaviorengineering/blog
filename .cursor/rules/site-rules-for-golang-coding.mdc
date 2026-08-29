@@ -946,7 +946,7 @@ func TestService_ProcessData(t *testing.T) {
 - [ ] **Context usage**: All long-running operations use context.Context
 - [ ] **Visibility compliance**: Only essential symbols are exported; use review-member-visibility skill to audit/fix
 - [ ] **No internal details exported**: All internal structs, interfaces, and methods are private
-- [ ] **Code review completed**: Systematic review performed using `.cursor/commands/code-review.md` checklist
+- [ ] **Code review completed**: Systematic review performed using `.cursor/skills/review-code-staged/SKILL.md`
 
 ## 🔍 **MANDATORY CODE REVIEW PROTOCOL**
 
@@ -955,7 +955,7 @@ func TestService_ProcessData(t *testing.T) {
 Before claiming completion, you MUST:
 
 #### **1. Read Code Review Protocol**
-- [ ] **Read `.cursor/commands/code-review.md`** - Review the complete checklist
+- [ ] **Read `.cursor/skills/review-code-staged/SKILL.md`** - Review the complete checklist
 - [ ] **Understand all review steps** - Know what to check for
 
 #### **2. Execution Flow Tracing** ⚡

@@ -29,7 +29,7 @@ Use the **main job of the piece**, not hashtags or â€œwhere you were browsing.â€
 
 ### `type: video` (YouTube picks)
 
-- MUST follow **`.cursor/skills/video-content/SKILL.md`**.
+- MUST follow **`.cursor/skills/site-video-content/SKILL.md`**.
 - MAY live under **`content/social-protocols/<slug>/`**, **`content/mind-infrastructure/<slug>/`**, or **`content/human-condition/<slug>/`**. Pick the folder by **main job**, same as for **`claims`**:
   - **`social-protocols/`** when the spine is norms, reciprocity, coordination, institutions, or protocols of collective belief and behavior.
   - **`human-condition/`** when the spine is person-level psychology, morality, development, or identity.
@@ -46,16 +46,16 @@ Use the **main job of the piece**, not hashtags or â€œwhere you were browsing.â€
 
 | `type` | Section(s) | Use when |
 |--------|------------|----------|
-| **`claims`** | `social-protocols/`, `human-condition/` | You need **Claim** (`description`), **Grounding** (`grounding`), optional **Thoughts** body. Follow **`.cursor/skills/claims-content/SKILL.md`**. |
-| **`panel`** | `cognitive-memetics/` | Cube-cow strip or longer Tales from the Cube Farm piece; **`description`** as Teaser. Follow **`.cursor/skills/cognitive-memetics-content/SKILL.md`**. |
-| **`sayings`** | `cognitive-memetics/` | TLDR + Context pattern; Venezuelan lines or T-Shirt Art. Follow **`.cursor/skills/cognitive-memetics-content/SKILL.md`**. |
-| **`video`** | `social-protocols/`, `mind-infrastructure/`, `human-condition/` | YouTube pick with **`description`** as lead. Follow **`.cursor/skills/video-content/SKILL.md`**. |
+| **`claims`** | `social-protocols/`, `human-condition/` | You need **Claim** (`description`), **Grounding** (`grounding`), optional **Thoughts** body. Follow **`.cursor/skills/site-claims-content/SKILL.md`**. |
+| **`panel`** | `cognitive-memetics/` | Cube-cow strip or longer Tales from the Cube Farm piece; **`description`** as Teaser. Follow **`.cursor/skills/site-cognitive-memetics-content/SKILL.md`**. |
+| **`sayings`** | `cognitive-memetics/` | TLDR + Context pattern; Venezuelan lines or T-Shirt Art. Follow **`.cursor/skills/site-cognitive-memetics-content/SKILL.md`**. |
+| **`video`** | `social-protocols/`, `mind-infrastructure/`, `human-condition/` | YouTube pick with **`description`** as lead. Follow **`.cursor/skills/site-video-content/SKILL.md`**. |
 
 ## Categories
 
-- **`type: claims`**: Prefer one primary taxonomy category aligned with the section (for example **`Reality-Protocols`** under `social-protocols/`). See **`.cursor/skills/claims-content/SKILL.md`**.
-- **`type: video`**: Pick **`categories`** for topic fit (see **`.cursor/skills/video-content/SKILL.md`**); they need not match the section folder.
-- **`cognitive-memetics`**: Use umbrella **`Cognitive-Memetics`** plus exactly one hub (**`Cube-Cows`**, **`Raymond`**, **`Por-Estas-Calles`**, **`T-Shirt Art`**, **`Reptilocracy`**, or **`Pawtropolis-Under-Fire`**). See **`.cursor/skills/cognitive-memetics-content/SKILL.md`**.
+- **`type: claims`**: Prefer one primary taxonomy category aligned with the section (for example **`Reality-Protocols`** under `social-protocols/`). See **`.cursor/skills/site-claims-content/SKILL.md`**.
+- **`type: video`**: Pick **`categories`** for topic fit (see **`.cursor/skills/site-video-content/SKILL.md`**); they need not match the section folder.
+- **`cognitive-memetics`**: Use umbrella **`Cognitive-Memetics`** plus exactly one hub (**`Cube-Cows`**, **`Raymond`**, **`Por-Estas-Calles`**, **`T-Shirt Art`**, **`Reptilocracy`**, or **`Pawtropolis-Under-Fire`**). See **`.cursor/skills/site-cognitive-memetics-content/SKILL.md`**.
 
 ## Quick checks
 

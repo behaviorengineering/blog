@@ -1,7 +1,7 @@
 # Short root paths for carousel CTAs and print-friendly URLs.
 # Each path MUST have a matching Hugo alias on the English index.md for that bundle.
 # Before adding a row: read data/short-link-register.txt and confirm the path is unused.
-# See .cursor/skills/short-link-register/SKILL.md
+# See .cursor/skills/site-short-link-register/SKILL.md
 
 [[link]]
 path = "/war-game/"

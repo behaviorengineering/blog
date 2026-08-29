@@ -16,10 +16,10 @@ themes/LoveIt/exampleSite/content/posts/
 
 - MUST choose section folder and `type` using `.cursor/rules/site-content-placement.mdc` when adding or moving posts under `content/`.
 - For `type: claims` front matter: MUST use `description` (Claim) and `grounding` (support). MAY use `paper` as alias for `grounding` in templates.
-- MUST follow `.cursor/skills/claims-content/SKILL.md` when authoring or editing claims.
+- MUST follow `.cursor/skills/site-claims-content/SKILL.md` when authoring or editing claims.
 - Reference: archetype `archetypes/claims.md`; templates `layouts/claims/`; section list row partial `layouts/partials/seven-style-row.html` (see also `layouts/partials/`).
 - For `type: video` front matter: MUST use `description` as the lead above the embed; MAY use `youtube_id` or a body `youtube` shortcode per skill (not both for the same id).
-- MUST follow `.cursor/skills/video-content/SKILL.md` when authoring or editing video picks.
+- MUST follow `.cursor/skills/site-video-content/SKILL.md` when authoring or editing video picks.
 - Reference: archetype `archetypes/video.md`; template `layouts/video/single.html`.
 - Site CSS overrides: `assets/css/_custom.scss`. Prefer not editing `themes/LoveIt/`.
 - Site config: `hugo.toml` at repository root.
@@ -265,25 +265,25 @@ themes/LoveIt/exampleSite/content/posts/
 
 ## Quick Lookup
 
-**Claims posts (Claim / Grounding)?** → `.cursor/skills/claims-content/SKILL.md`  
-**Cognitive-Memetics section (panel / sayings / T-Shirt Art hub)?** → `.cursor/skills/cognitive-memetics-content/SKILL.md` (hybrid prose; Gemma 4 teasers except Por-Estas-Calles card teaser)  
-**Markdown bold / emphasis density (any `content/` type)?** → `.cursor/skills/revise-emphasis/SKILL.md`  
-**Video picks (`type: video`, YouTube)?** → `.cursor/skills/video-content/SKILL.md`  
+**Claims posts (Claim / Grounding)?** → `.cursor/skills/site-claims-content/SKILL.md`  
+**Cognitive-Memetics section (panel / sayings / T-Shirt Art hub)?** → `.cursor/skills/site-cognitive-memetics-content/SKILL.md` (hybrid prose; Gemma 4 teasers except Por-Estas-Calles card teaser)  
+**Markdown bold / emphasis density (any `content/` type)?** → `.cursor/skills/site-revise-emphasis/SKILL.md`  
+**Video picks (`type: video`, YouTube)?** → `.cursor/skills/site-video-content/SKILL.md`  
 **Custom CSS (links, footer, section lists)?** → `assets/css/_custom.scss`  
-**Hooks, list cold-read, body ## headings?** → `.cursor/skills/revise-hooks/SKILL.md` 
+**Hooks, list cold-read, body ## headings?** → `.cursor/skills/site-revise-hooks/SKILL.md` 
 **Voice while drafting (active, direct, no AI rhetoric)?** → **`.cursor/rules/site-content-markdown-writing.mdc`** → **Voice while drafting** + **Explanatory prose** for claims / video / Substack (full audit: **revise-post** Step 2)
-**Prose cadence loop (clarity → compression → flow → voice → purpose)?** → `.cursor/skills/revise-flow/SKILL.md`
-**Full editorial lot (lot plan → heavy flow → hooks → post filters → fine flow → format last)?** → `.cursor/skills/revise-post/SKILL.md` (default mode `rough`; list-scope Gemma in the plan, prompt to skip)
-**Em dashes + emphasis/bold (ship-time mechanics)?** → `.cursor/skills/revise-format/SKILL.md` (authoring bold rules: `revise-emphasis`)
-**Curiosity title (gap question, legitimate tension, not bait)?** → `.cursor/skills/curiosity-title/SKILL.md` (audit: `revise-hooks`)
-**Claim cold-read / abstract list copy (Claim fog)?** → `.cursor/skills/revise-hooks/SKILL.md` → **Claim fog**; gate in **revise-post** Step 1
+**Prose cadence loop (clarity → compression → flow → voice → purpose)?** → `.cursor/skills/site-revise-flow/SKILL.md`
+**Full editorial lot (lot plan → heavy flow → hooks → post filters → fine flow → format last)?** → `.cursor/skills/site-revise-post/SKILL.md` (default mode `rough`; list-scope Gemma in the plan, prompt to skip)
+**Em dashes + emphasis/bold (ship-time mechanics)?** → `.cursor/skills/site-revise-format/SKILL.md` (authoring bold rules: `revise-emphasis`)
+**Curiosity title (gap question, legitimate tension, not bait)?** → `.cursor/skills/site-curiosity-title/SKILL.md` (audit: `revise-hooks`)
+**Claim cold-read / abstract list copy (Claim fog)?** → `.cursor/skills/site-revise-hooks/SKILL.md` → **Claim fog**; gate in **revise-post** Step 1
 **Need to add an image?** → `theme-documentation-extended-shortcodes/index.en.md` Line 128-195 
 **Need front matter?** → `theme-documentation-content/index.en.md` Line 60-185
 **Need math formulas?** → `theme-documentation-content/index.en.md` Line 273-462  
 **Need a diagram?** → `theme-documentation-mermaid-shortcode/index.en.md` Line 31+  
 **Need an admonition box?** → `theme-documentation-extended-shortcodes/index.en.md` Line 196-281  
 **Need emoji?** → `emoji-support/index.en.md` Line 30+
-**LinkedIn post from a site post?** → `.cursor/skills/linkedin-post/SKILL.md`
+**LinkedIn post from a site post?** → `.cursor/skills/site-linkedin-post/SKILL.md`
 **Publish calendar after new bundle or date change?** → **`make calendar`** (see **`.cursor/rules/site-content-markdown-writing.mdc`** → **Publish calendar**); UI at **`/calendar/`**
-**Facebook post (friends/family, ES or EN)?** → `.cursor/skills/facebook-post/SKILL.md`
-**Essays pipeline (content-pipelines MCP, command center, arc/composition/review)?** → `.cursor/skills/essay-command-center/SKILL.md` (verifier: `.cursor/agents/essay-verifier.md`)
+**Facebook post (friends/family, ES or EN)?** → `.cursor/skills/site-facebook-post/SKILL.md`
+**Essays pipeline (content-pipelines MCP, command center, arc/composition/review)?** → `.cursor/skills/site-essay-command-center/SKILL.md` (verifier: `.cursor/agents/essay-verifier.md`)

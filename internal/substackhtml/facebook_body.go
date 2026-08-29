@@ -124,7 +124,7 @@ func ResolveSubstackBody(indexRaw []byte, markdownPath string) (SubstackBodyResu
 		return out, err
 	}
 	if !ok {
-		return out, fmt.Errorf("substackhtml: missing %s (required for Substack; see .cursor/skills/substack-post/SKILL.md)", name)
+		return out, fmt.Errorf("substackhtml: missing %s (required for Substack; see .cursor/skills/site-substack-post/SKILL.md)", name)
 	}
 	merged, err := mergeIndexFrontMatterWithBody(indexRaw, md)
 	if err != nil {

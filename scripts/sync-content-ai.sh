@@ -5,12 +5,12 @@ ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
 
 SKILLS=(
-  claims-content video-content cognitive-memetics-content spanish-translation-content
-  revise-post revise-flow revise-hooks revise-format revise-emphasis
-  curiosity-title revise-score revise-post-es revise-spanish revise-prose
-  linkedin-post facebook-post substack-post carousel-post
-  tag-register tag-unify short-link-register ai-for-general-audience
-  perplexity-browser-research
+  site-claims-content site-video-content site-cognitive-memetics-content site-spanish-translation-content
+  site-revise-post site-revise-flow site-revise-hooks site-revise-format site-revise-emphasis
+  site-curiosity-title site-revise-score site-revise-post-es site-revise-spanish site-revise-prose
+  site-linkedin-post site-facebook-post site-substack-post site-carousel-post
+  site-tag-register site-tag-unify site-short-link-register site-ai-for-general-audience
+  site-perplexity-research
 )
 RULES=(
   always-rules-0-ai.mdc

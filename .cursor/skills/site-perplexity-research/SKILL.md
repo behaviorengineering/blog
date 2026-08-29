@@ -28,7 +28,7 @@ Perplexity output is **research input only**. Validate against primary sources a
 |----------|------|------|------|
 | Deep research | `.cursor/skills/site-perplexity-research/packs/deep-research.md` | deep | Fact-check posts, find grounding sources, map interview claims to literature |
 | Prose review | `.cursor/skills/site-perplexity-research/packs/prose-review.md` | search | Cold-read for human flow, voice, AI artifacts; not fact-checking |
-| Revise prose (local) | `.cursor/skills/revise-prose/SKILL.md` | local API | Same diagnostic intent offline via `evaluate_prose.py` (evaluate only; no Perplexity) |
+| Revise prose (local) | `.cursor/skills/site-revise-prose/SKILL.md` | local API | Same diagnostic intent offline via `evaluate_prose.py` (evaluate only; no Perplexity) |
 
 **Pick one pack per run.** Fact-check and prose review are separate submits.
 
@@ -49,7 +49,7 @@ Discover MCP tool schemas through your client's introspection before calling.
 Read these repo paths first (source of truth):
 
 - Target page bundle under `content/` (`index.md`, optional `index.es.md`, sidecars)
-- Matching type skill (`.cursor/skills/claims-content/SKILL.md`, `video-content/SKILL.md`, etc.)
+- Matching type skill (`.cursor/skills/site-claims-content/SKILL.md`, `video-content/SKILL.md`, etc.)
 - `.cursor/rules/site-content-placement.mdc` when section or type is unclear
 - Optional: `tmp/articles/`, prior `docs/research/`, `data/tag-register.txt`
 
@@ -58,7 +58,7 @@ Fill the matching pack:
 - `.cursor/skills/site-perplexity-research/packs/deep-research.md` (facts, sources)
 - `.cursor/skills/site-perplexity-research/packs/prose-review.md` (human read, AI artifacts)
 
-For prose review, also skim `.cursor/skills/revise-post/SKILL.md` → **Step 2** so the pack's artifact list matches site rules.
+For prose review, also skim `.cursor/skills/site-revise-post/SKILL.md` → **Step 2** so the pack's artifact list matches site rules.
 
 Rules:
 

@@ -26,7 +26,7 @@ External research for **behaviorengineering.ai**: a Hugo (LoveIt) site publishin
 - Target bundle: `[content/<section>/<slug>/index.md]`
 - Spanish sibling: `[index.es.md if present]`
 - Sidecars: `[substack.md, linkedin.txt, tmp/articles/<topic>.md, etc.]`
-- Type skill: `[.cursor/skills/claims-content/SKILL.md | video-content/SKILL.md | …]`
+- Type skill: `[.cursor/skills/site-claims-content/SKILL.md | video-content/SKILL.md | …]`
 - Placement: `.cursor/rules/site-content-placement.mdc`
 - Prior research: `[docs/research/*.md if any]`
 
@@ -79,8 +79,8 @@ Pick **one** primary intent (delete the others):
 
 - Prose is **US English**, accessible mechanism, **no em dashes** (U+2014).
 - Do not overstate causality; correlation and small-n studies need explicit caveats.
-- For `type: claims`: Grounding needs a **Source** line with Markdown link (`[title](url)`), not bare URLs. See `.cursor/skills/claims-content/SKILL.md`.
-- For `type: video`: `description` is the list lead; body is a TLDR for text-first readers. See `.cursor/skills/video-content/SKILL.md`.
+- For `type: claims`: Grounding needs a **Source** line with Markdown link (`[title](url)`), not bare URLs. See `.cursor/skills/site-claims-content/SKILL.md`.
+- For `type: video`: `description` is the list lead; body is a TLDR for text-first readers. See `.cursor/skills/site-video-content/SKILL.md`.
 - Perplexity output is **research input only**; a human validates before edits ship.
 
 **Out of scope** (unless the question says otherwise)
@@ -134,5 +134,5 @@ Please structure your answer as:
 
 1. Export via `perplexity_export`; note path under `~/.perplexity-browser-mcp/exports/`.
 2. Create `docs/research/YYYY-MM-DD-perplexity-<slug>.md` with: pack path, thread URL, export path, summary bullets, edit priorities, open questions.
-3. After **human review**, apply edits via the matching type skill and **`.cursor/skills/revise-post/SKILL.md`** (full lot; or focused `revise-format` alone).
+3. After **human review**, apply edits via the matching type skill and **`.cursor/skills/site-revise-post/SKILL.md`** (full lot; or focused `revise-format` alone).
 4. Do **not** commit raw Perplexity exports or auto-merge research prose into `content/` without validation.

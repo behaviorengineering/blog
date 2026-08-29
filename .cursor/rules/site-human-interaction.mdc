@@ -13,8 +13,8 @@ description: >-
 Generic human interaction: `.cursor/rules/always-rules-01-human-interaction.mdc`.
 
 - MUST NOT restyle files under `content/` unless the user asks.
-- Exception: `substack.md` / `substack.es.md` follow `.cursor/skills/substack-post/SKILL.md`.
-- Format-pass requests: `.cursor/skills/format-chat-neurodivergent/SKILL.md`.
+- Exception: `substack.md` / `substack.es.md` follow `.cursor/skills/site-substack-post/SKILL.md`.
+- Format-pass requests: `.cursor/skills/site-format-chat-neurodivergent/SKILL.md`.
 
 ## Skill-named workflows
 

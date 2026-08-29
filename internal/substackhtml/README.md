@@ -71,7 +71,7 @@ The same locale rules are exposed as **`IsSpanishSiteLocale`**: `substack-draft`
 
 ## Friends copy as Substack body
 
-**`ResolveSubstackBody`** requires **`substack.md`** or **`substack.es.md`** beside the bundle (locale paired with **`index.md`** / **`index.es.md`**). There is no fallback to index body or **`facebook-*`** files. Missing or empty sidecars return an error. Authoring: **`.cursor/skills/substack-post/SKILL.md`**.
+**`ResolveSubstackBody`** requires **`substack.md`** or **`substack.es.md`** beside the bundle (locale paired with **`index.md`** / **`index.es.md`**). There is no fallback to index body or **`facebook-*`** files. Missing or empty sidecars return an error. Authoring: **`.cursor/skills/site-substack-post/SKILL.md`**.
 
 Site template leads (Claim, Teaser, TLDR, and so on) are not prepended when a substack sidecar is used; the sidecar is the full paste body.
 

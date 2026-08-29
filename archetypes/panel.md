@@ -4,7 +4,7 @@ draft = false
 title = '{{ replace .File.ContentBaseName "-" " " | title }}'
 type = 'panel'
 
-# Umbrella + project hub (shareable /categories/.../ lists). See .cursor/skills/cognitive-memetics-content/SKILL.md
+# Umbrella + project hub (shareable /categories/.../ lists). See .cursor/skills/site-cognitive-memetics-content/SKILL.md
 categories = ['Cognitive-Memetics', 'Cube-Cows']
 
 # Optional week / id before the title (same TLDR purple as sayings via .heading-code--tldr)

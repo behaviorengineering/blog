@@ -1,6 +1,6 @@
 # Short-link register (hand-maintained). Do not add paths here without editing short-links.toml.
 # Source of truth: data/short-links.toml
-# Workflow: .cursor/skills/short-link-register/SKILL.md
+# Workflow: .cursor/skills/site-short-link-register/SKILL.md
 
 ## Active short paths
 # Columns: path<TAB>bundle<TAB>carousel_slug<TAB>note
