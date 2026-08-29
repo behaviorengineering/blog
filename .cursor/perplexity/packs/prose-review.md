@@ -1,6 +1,6 @@
 # Pack — Prose review (human read, AI artifacts)
 
-Workflow: `site-perplexity-research`. Mode: **search** (default). Use **deep** only for a very long piece (e.g. full Substack draft).
+Workflow: `perplexity-browser-research` overlay `.cursor/perplexity/`. Mode: **search** (default). Use **deep** only for a very long piece (e.g. full Substack draft).
 
 **Not fact-checking.** Do not verify citations, numbers, or science. This pack judges **readability, flow, voice, and AI slop** only.
 
@@ -79,7 +79,7 @@ How well does this prose read for **humans**? Where does it **lose trust, rhythm
 
 **Out of scope**
 
-- Factual accuracy, citation quality, grounding sources (use `deep-research.md` instead)
+- Factual accuracy, citation quality, grounding sources (use `.cursor/perplexity/packs/deep-research.md` instead)
 - SEO, title clickbait, Hugo formatting
 - Spanish (`index.es.md`)
 

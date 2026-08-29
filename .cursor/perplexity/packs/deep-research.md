@@ -1,6 +1,6 @@
 # Pack — Deep Research (behaviorengineering.ai content)
 
-Workflow: `site-perplexity-research`. Mode: **deep** (use `search` only for a quick single-fact lookup).
+Workflow: `perplexity-browser-research` overlay `.cursor/perplexity/`. Mode: **deep** (use `search` only for a quick single-fact lookup).
 
 Fill every `[bracket]` section from the target post and repo files before submit. Copy the **whole** block into `perplexity_research` `prompt`.
 
@@ -26,7 +26,7 @@ External research for **behaviorengineering.ai**: a Hugo (LoveIt) site publishin
 - Target bundle: `[content/<section>/<slug>/index.md]`
 - Spanish sibling: `[index.es.md if present]`
 - Sidecars: `[substack.md, linkedin.txt, tmp/articles/<topic>.md, etc.]`
-- Type skill: `[.cursor/skills/site-claims-content/SKILL.md | video-content/SKILL.md | …]`
+- Type skill: `[.cursor/skills/site-claims-content/SKILL.md | site-video-content/SKILL.md | …]`
 - Placement: `.cursor/rules/site-content-placement.mdc`
 - Prior research: `[docs/research/*.md if any]`
 
@@ -87,7 +87,7 @@ Pick **one** primary intent (delete the others):
 
 - Hugo theme internals, `go.mod`, Substack pipeline, social autopost tooling
 - Spanish translation (research in English; adapt later via `revise-post-es`)
-- Prose quality / AI voice (use `prose-review.md` instead)
+- Prose quality / AI voice (use `.cursor/perplexity/packs/prose-review.md` instead)
 
 ---
 

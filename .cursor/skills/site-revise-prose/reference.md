@@ -74,7 +74,7 @@ Fails: *In English you'd say…*, *This concept acknowledges that…*, *When one
 
 ## AI artifact shortlist (quote when found)
 
-Aligns with `.cursor/skills/site-perplexity-research/packs/prose-review.md` and revise-post Step 2.
+Aligns with `.cursor/perplexity/packs/prose-review.md` and revise-post Step 2.
 
 | Pattern | Example shape |
 |---------|----------------|
