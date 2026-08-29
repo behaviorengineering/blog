@@ -1,0 +1,65 @@
+---
+description: >-
+  Tells where new posts go: Hugo section folder (URL path) and content type
+  (claims, panel, sayings, video). Apply when creating, moving, or categorizing
+  content under content/ or when the author asks where a piece belongs.
+globs:
+  - content/**/*.md
+alwaysApply: false
+---
+
+# Content placement (section and type)
+
+## Definitions
+
+- **Section** is the first folder under `content/` (for example `social-protocols/`). It sets the URL prefix and which list pages include the page. Home feed sections are listed in **`hugo.toml`** under `params.home.contentSections`.
+- **`type`** is front matter. It selects layouts and required fields. MUST pick **section intent first**, then **`type`**.
+- **Taxonomy `categories`** (for example **`Mind-Infrastructure`**, **`Human-Condition`**) label topics and hub pages. They **do not** have to mirror the section folder name. A video under **`mind-infrastructure/`**, **`human-condition/`**, or **`social-protocols/`** may still use any matching hub in **`categories`** (for example **`Human-Condition`** on a **`social-protocols/`** pick).
+
+## Pick the section (folder)
+
+Use the **main job of the piece**, not hashtags or “where you were browsing.”
+
+| Put it under | When the core of the post is |
+|--------------|-------------------------------|
+| **`social-protocols/`** | How social order is built and steered: norms, reciprocity, coordination, institutions, media, and the protocols behind belief and behavior (micro to macro). Usual type is **`claims`**; **`type: video`** is valid when the pick’s main job matches this intent (for example cooperation, institutions, media protocols). |
+| **`human-condition/`** | Claims about human nature, empathy, morality, development, or identity that read as psychology or philosophy of persons (**`type: claims`**) **or** a curated YouTube page (**`type: video`**) with that same core. Not office satire. |
+| **`mind-infrastructure/`** | General-interest tools, models, and curated talks whose **main job** is **not** primarily **social-protocols** (coordination, norms, institutions) or **human-condition** (person-level thesis). **`type: video`** is common here as a **default lane** when those two section intents do not fit. The folder name is **URL and home-feed routing**, not a claim that the topic is only formal models or “mental infrastructure” in a narrow sense. |
+| **`cognitive-memetics/`** | **Tales from the Cube Farm** weekly strips (`type: panel`, **`Cube-Cows`** hub), **Raymond** / Everyone ❤️ Raymond strips (`type: panel`, **`Raymond`** hub), **Venezuelan sayings / Street Wisdom** (`type: sayings` + **Por-Estas-Calles** hub), **T-Shirt Art** visual line (`panel` or `sayings` + **T-Shirt Art** hub), **Reptilocracy** (`sayings` or `panel` + **Reptilocracy** hub), or **Pawtropolis (Under Fire)** (`panel` or `sayings` + **Pawtropolis-Under-Fire** hub). |
+
+### `type: video` (YouTube picks)
+
+- MUST follow **`.cursor/skills/site-video-content/SKILL.md`**.
+- MAY live under **`content/social-protocols/<slug>/`**, **`content/mind-infrastructure/<slug>/`**, or **`content/human-condition/<slug>/`**. Pick the folder by **main job**, same as for **`claims`**:
+  - **`social-protocols/`** when the spine is norms, reciprocity, coordination, institutions, or protocols of collective belief and behavior.
+  - **`human-condition/`** when the spine is person-level psychology, morality, development, or identity.
+  - **`mind-infrastructure/`** as the **default lane** when neither of the above is the primary intent (general models, tools, and cross-topic picks).
+- Set **`categories`** for **readers and taxonomy hubs** (often **`Mind-Infrastructure`**, **`Human-Condition`**, **`Social-Protocols`**, or combinations that fit). **Section folder** and **`categories`** are independent.
+
+### MUST NOT
+
+- MUST NOT put general essays or Claim-style arguments in **`cognitive-memetics/`** just because they mention work, algorithms, or culture. If the spine is “how social protocols/systems work,” default to **`social-protocols/`** with **`type: claims`** (unless it is clearly **human-condition** thesis material).
+- MUST NOT use **`cognitive-memetics/`** as a catch-all for “memes” in the abstract; **`social-protocols/`** already covers memes-as-mechanics when the post is Claim-shaped.
+- MUST NOT treat **`mind-infrastructure/`** as mandatory because a video mentions simulations, tournaments, or models; that is **content detail**, not the placement rule.
+
+## Pick the `type`
+
+| `type` | Section(s) | Use when |
+|--------|------------|----------|
+| **`claims`** | `social-protocols/`, `human-condition/` | You need **Claim** (`description`), **Grounding** (`grounding`), optional **Thoughts** body. Follow **`.cursor/skills/site-claims-content/SKILL.md`**. |
+| **`panel`** | `cognitive-memetics/` | Cube-cow strip or longer Tales from the Cube Farm piece; **`description`** as Teaser. Follow **`.cursor/skills/site-cognitive-memetics-content/SKILL.md`**. |
+| **`sayings`** | `cognitive-memetics/` | TLDR + Context pattern; Venezuelan lines or T-Shirt Art. Follow **`.cursor/skills/site-cognitive-memetics-content/SKILL.md`**. |
+| **`video`** | `social-protocols/`, `mind-infrastructure/`, `human-condition/` | YouTube pick with **`description`** as lead. Follow **`.cursor/skills/site-video-content/SKILL.md`**. |
+
+## Categories
+
+- **`type: claims`**: Prefer one primary taxonomy category aligned with the section (for example **`Reality-Protocols`** under `social-protocols/`). See **`.cursor/skills/site-claims-content/SKILL.md`**.
+- **`type: video`**: Pick **`categories`** for topic fit (see **`.cursor/skills/site-video-content/SKILL.md`**); they need not match the section folder.
+- **`cognitive-memetics`**: Use umbrella **`Cognitive-Memetics`** plus exactly one hub (**`Cube-Cows`**, **`Raymond`**, **`Por-Estas-Calles`**, **`T-Shirt Art`**, **`Reptilocracy`**, or **`Pawtropolis-Under-Fire`**). See **`.cursor/skills/site-cognitive-memetics-content/SKILL.md`**.
+
+## Quick checks
+
+- If the page is **Claim + Grounding + essay**, and it is **not** a cow, saying, or video → **`social-protocols/`** or **`human-condition/`**, **`type: claims`**.
+- If the page is **strip / saying / shirt line** with the cognitive-memetics hubs → **`cognitive-memetics/`**, **`panel`** or **`sayings`**.
+- If the page is **`type: video`** → **`social-protocols/`**, **`mind-infrastructure/`**, or **`human-condition/`** by main job; set **`categories`** for hubs, not for folder choice alone.
+- After **any** new bundle, folder rename/move, or **`date`** / **`draft`** change → **`make calendar`** (see **`.cursor/rules/site-content-markdown-writing.mdc`** → **Publish calendar**).

@@ -5,18 +5,18 @@ ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
 
 SKILLS=(
-  claims-content video-content cognitive-memetics-content spanish-translation-content
-  revise-post revise-flow revise-hooks revise-format revise-emphasis
-  curiosity-title revise-score revise-post-es revise-spanish revise-prose
-  linkedin-post facebook-post substack-post carousel-post
-  tag-register tag-unify short-link-register ai-for-general-audience
-  perplexity-browser-research
+  site-claims-content site-video-content site-cognitive-memetics-content site-spanish-translation-content
+  site-revise-post site-revise-flow site-revise-hooks site-revise-format site-revise-emphasis
+  site-curiosity-title site-revise-score site-revise-post-es site-revise-spanish site-revise-prose
+  site-linkedin-post site-facebook-post site-substack-post site-carousel-post
+  site-tag-register site-tag-unify site-short-link-register site-ai-for-general-audience
 )
 RULES=(
   always-rules-0-ai.mdc
-  content-placement.mdc
-  content-markdown-writing.mdc
-  content-images-webp.mdc
+  always-rules-01-human-interaction.mdc
+  site-always-rules-01-human-interaction.mdc
+  site-content-placement.mdc
+  site-content-markdown-writing.mdc
 )
 
 mkdir -p content-ai/skills content-ai/rules

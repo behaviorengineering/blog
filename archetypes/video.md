@@ -12,7 +12,7 @@ youtube_id = ''
 
 subtitle = ''
 
-# Taxonomy hubs (Mind-Infrastructure, Human-Condition, Social-Protocols, etc.); pick folder under content/ by main job (see .cursor/rules/content-placement.mdc).
+# Taxonomy hubs (Mind-Infrastructure, Human-Condition, Social-Protocols, etc.); pick folder under content/ by main job (see .cursor/rules/site-content-placement.mdc).
 categories = ['Mind-Infrastructure']
 
 tags = []
