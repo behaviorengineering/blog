@@ -238,8 +238,9 @@ enableEmoji = true
       cognitive-memetics = 3
 
     # Psych Fitness 28: separate home band (one post per calendar day in timeZone; see layouts/partials/home-psych-fitness-daily.html).
+    # Campaign finished; keep enable = false so the band stays off the homepage.
     [params.home.psychFitness]
-      enable = true
+      enable = false
       timeZone = "Australia/Sydney"
       pathPrefix = "cognitive-memetics/psych-fitness-28/"
       title = "Psychological fitness standards for Australia's highest offices"
