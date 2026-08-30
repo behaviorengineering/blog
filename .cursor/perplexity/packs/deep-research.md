@@ -18,6 +18,7 @@ External research for **behaviorengineering.ai**: a Hugo (LoveIt) site publishin
 | --- | --- | --- |
 | `social-protocols/` | `claims`, `video` | Norms, institutions, game theory, media, coordination |
 | `human-condition/` | `claims`, `video` | Psychology, morality, identity, person-level mechanisms |
+| `x-minds/` | `claims`, `video` | Mixed-wiring lives, parents, community (public name **X-Minds**; do not use neurodivergence in titles or teasers) |
 | `mind-infrastructure/` | `video` (often) | Models, tools, cross-topic picks |
 | `cognitive-memetics/` | `panel`, `sayings` | Rarely Perplexity; satire/sayings unless fact-checking a cited study |
 

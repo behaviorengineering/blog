@@ -220,7 +220,7 @@ MAY call via **`.cursor/skills/site_local_eval_common/common.py`** → **`chat_c
 ### Shared
 
 - **`date`**, **`title`**, **`draft`** — **`date`** MUST follow **`.cursor/rules/site-content-markdown-writing.mdc`** → **Publish `date`** (default **`date: 'YYYY-MM-DDT01:00:00+11:00'`**).
-- **`title`**: MUST **not** use **leading emoji** in **`title`**. **Cognitive-Memetics** opts out of **Optional leading emoji in `title`** in **`.cursor/rules/site-content-markdown-writing.mdc`** (which applies to **`social-protocols`**, **`human-condition`**, and **`mind-infrastructure`** only). Keep the episode or saying line in plain words; use optional **`heading_code`** when you want a compact prefix in the UI.
+- **`title`**: MUST **not** use **leading emoji** in **`title`**. **Cognitive-Memetics** opts out of **Optional leading emoji in `title`** in **`.cursor/rules/site-content-markdown-writing.mdc`** (which applies to **`social-protocols`**, **`human-condition`**, **`mind-infrastructure`**, and **`x-minds`** only). Keep the episode or saying line in plain words; use optional **`heading_code`** when you want a compact prefix in the UI.
 - **`heading_code`** (optional): short label before the title (e.g. `W6`, `W13`). Rendered via `layouts/partials/heading-title-markup.html` with class `heading-code--tldr`.
 - **`categories`**: Use **two** terms so each post belongs to the section **and** to a **project hub** you can link to (Hugo taxonomy list pages under `/categories/<slug>/`).
   - **Umbrella:** always **`Cognitive-Memetics`** (this site area).

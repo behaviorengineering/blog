@@ -228,6 +228,7 @@ enableEmoji = true
       contentSections = [
         "cognitive-memetics",
         "human-condition",
+        "x-minds",
         "mind-infrastructure",
         "social-protocols",
       ]
@@ -289,6 +290,14 @@ enableEmoji = true
   title = ""
 [[languages.en.menu.main]]
   weight = 5
+  identifier = "x-minds"
+  pre = ""
+  post = ""
+  name = "X-Minds"
+  url = "/x-minds/"
+  title = ""
+[[languages.en.menu.main]]
+  weight = 6
   identifier = "about"
   pre = "<i class=\"fas fa-info-circle\" aria-hidden=\"true\"></i>"
   post = ""
@@ -331,6 +340,14 @@ enableEmoji = true
   title = ""
 [[languages.es.menu.main]]
   weight = 5
+  identifier = "x-minds"
+  pre = ""
+  post = ""
+  name = "X-Minds"
+  url = "/es/x-minds/"
+  title = ""
+[[languages.es.menu.main]]
+  weight = 6
   identifier = "about"
   pre = "<i class=\"fas fa-info-circle\" aria-hidden=\"true\"></i>"
   post = ""

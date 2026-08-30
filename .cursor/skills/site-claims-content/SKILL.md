@@ -5,7 +5,7 @@ description: >-
   (short digest plus Source line with Markdown link: article or paper title as anchor text, not a bare URL),
   optional primary-source quote blocks (`###` heading + blockquote), prose style, and
   preserving the author’s direct voice when they supply finished copy (no fluff rewrites).
-  Use when editing or adding content under social-protocols, human-condition, or
+  Use when editing or adding content under social-protocols, human-condition, x-minds, or
   other sections using claims, when the user mentions Claim, Grounding, categories,
   tags, or claims archetype, or when shaping list-view copy for those posts.
 ---
@@ -44,7 +44,7 @@ Posts use front matter fields that split **narrative** from **intellectual ancho
 - **`categories`** are a **taxonomy**: optional labels for grouping and taxonomy pages. They do not have to mirror the folder name.
 - If **`categories`** is omitted, list partials in this project can fall back to the **section** name for display; if set, the **first** category is often what themes show in list meta—check `layouts/partials/seven-style-row.html` when in doubt.
 - Hugo **categories** are **flat** (no built-in parent/child). Use **tags** for hooks and subtopics (see **Tag voice** below).
-- **Recommendation:** one **primary category** aligned with the main site area (for example `Reality-Protocols` under `content/social-protocols/`, or `Human-Condition` under `content/human-condition/`), and **several tags** for topic detail. Add a second category only if you need another taxonomy axis and accept how the theme surfaces the first term.
+- **Recommendation:** one **primary category** aligned with the main site area (for example `Reality-Protocols` under `content/social-protocols/`, `Human-Condition` under `content/human-condition/`, or `X-Minds` under `content/x-minds/`), and **several tags** for topic detail. Add a second category only if you need another taxonomy axis and accept how the theme surfaces the first term.
 
 ### Human-Condition theme hubs (same idea as Cognitive-Memetics “subcats”)
 
@@ -55,13 +55,27 @@ Posts use front matter fields that split **narrative** from **intellectual ancho
 **Publish day (`content/human-condition/`):** From **2026-05-28** onward, new posts under **`content/human-condition/`** MUST use a **Thursday** calendar day in the bundle folder name and in **`date`**. Older Friday-dated episodes stay as-is unless the author asks to reschedule. When deferring a Friday slot by one week into the new rhythm, use the **Thursday** of that target week (for example **2026-05-22** → **2026-05-28**).
 
 - **Umbrella:** always **`Human-Condition`** first (so list meta and habits stay consistent).
-- **Theme (pick one):** add a **second** term only when the post clearly belongs under that theme, for example **`Mental-Processes`** (choice, mental models, development of empathy or morals), **`Social-Protocols`** (reciprocity rules, iterated strategies, norms of response), **`Social-Behaviour`** (what people do together in the wild), **`Cooperation`** (helping, collective outcomes), **`Social-Trust`** (expectations, reputation, repair), **`Dark-Triad`**, **`Neurodivergence`**, **`Present-Moment`**. Do **not** stack several theme hubs on one post; use **tags** for extra angles. **`Social-Protocols`** is **not** **`Reality-Protocols`** (different section and hub: shared belief and large-scale coordination).
+- **Theme (pick one):** add a **second** term only when the post clearly belongs under that theme, for example **`Mental-Processes`** (choice, mental models, development of empathy or morals), **`Social-Protocols`** (reciprocity rules, iterated strategies, norms of response), **`Social-Behaviour`** (what people do together in the wild), **`Cooperation`** (helping, collective outcomes), **`Social-Trust`** (expectations, reputation, repair), **`Dark-Triad`**, **`Present-Moment`**. Do **not** stack several theme hubs on one post; use **tags** for extra angles. **`Social-Protocols`** is **not** **`Reality-Protocols`** (different section and hub: shared belief and large-scale coordination). Mixed-wiring community posts (parents, school, finding others like you) belong in **`content/x-minds/`**, not as a Human-Condition theme.
 - **Hub pages:** when you introduce or reuse a theme term, add or maintain **`content/categories/<slug>/_index.md`** (and **`_index.es.md`** if the site localizes that hub) so `/categories/<slug>/` reads like the Cognitive-Memetics project pages.
 
 Example:
 
 ```yaml
 categories: ["Human-Condition", "Social-Protocols"]
+```
+
+### X-Minds (`content/x-minds/`)
+
+Public section **X-Minds** (`/x-minds/`): mixed-wiring lives, parents, and community. Usual types are **`claims`** and **`video`**.
+
+- **Umbrella:** always **`X-Minds`** first.
+- MUST NOT use **neurodivergence** (or clinical “off the typical” labels) in **`title`**, **`description`**, or hub `_index` copy. Body MAY name a diagnosis when a source or a person uses that word; prefer **mixed wiring** in the author’s frame.
+- Hub page: **`content/categories/x-minds/_index.md`** (and **`_index.es.md`**).
+
+Example:
+
+```yaml
+categories: ["X-Minds"]
 ```
 
 ### Tag register (site-wide inventory)

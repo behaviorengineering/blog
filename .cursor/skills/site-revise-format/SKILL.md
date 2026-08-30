@@ -75,7 +75,7 @@ Zero hits → **`Em dash: 0 hits (Pass)`**.
 
 - [ ] US English in default-language `content/` (spot UK: behaviour, centre, generalise).
 - [ ] No decorative emoji in Claim / grounding.
-- [ ] Title leading emoji: max 2 (social-protocols, human-condition, mind-infrastructure); **none** in cognitive-memetics `title`.
+- [ ] Title leading emoji: max 2 (social-protocols, human-condition, mind-infrastructure, x-minds); **none** in cognitive-memetics `title`.
 
 ## Output format
 
