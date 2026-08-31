@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>TimeThatCounts on behaviorengineering.ai</title><link>https://behaviorengineering.ai/pr-preview/pr-14/tags/timethatcounts/</link><description>Recent content in TimeThatCounts on behaviorengineering.ai</description><generator>Hugo</generator><language>en</language><lastBuildDate>Fri, 03 Apr 2026 01:00:00 +1100</lastBuildDate><atom:link href="https://behaviorengineering.ai/pr-preview/pr-14/tags/timethatcounts/index.xml" rel="self" type="application/rss+xml"/><item><title>🕰️🤝 You sync meaning through shared time, not through the same vocabulary</title><link>https://behaviorengineering.ai/pr-preview/pr-14/social-protocols/2026-04-03-shared-reality/</link><pubDate>Fri, 03 Apr 2026 01:00:00 +1100</pubDate><guid>https://behaviorengineering.ai/pr-preview/pr-14/social-protocols/2026-04-03-shared-reality/</guid><description>&lt;h3 id="how-alignment-stacks"&gt;How alignment stacks&lt;/h3&gt;
+&lt;textarea id="id-1-mermaid-src" class="mermaid-source" hidden readonly&gt;flowchart TB
+ classDef pastelLavender fill:#e8d4ef,stroke:#b894c9,color:#1c1422,stroke-width:2px
+ classDef pastelSky fill:#cfe8f6,stroke:#7eb3d4,color:#1c1422,stroke-width:3px
+ classDef pastelMint fill:#d4f0e2,stroke:#7fbf9a,color:#1c1422,stroke-width:4px
+ classDef pastelApricot fill:#fde6d4,stroke:#e0a882,color:#1c1422,stroke-width:5px,margin:10em;
+ A(&amp;#34;Shared feelings&amp;#34;):::pastelLavender -.-&amp;gt;|leads to| B(&amp;#34;Shared practices&amp;#34;):::pastelSky
+ B -.-&amp;gt;|leads to| C(&amp;#34;Shared coordination&amp;#34;):::pastelMint
+ C -.-&amp;gt;|leads to| D((&amp;#34;Shared identity ✅&amp;#34;)):::pastelApricot&lt;/textarea&gt;
+&lt;div class="mermaid" id="id-1"&gt;&lt;/div&gt;
+&lt;h3 id="language-as-zip"&gt;Language as zip&lt;/h3&gt;
+&lt;p&gt;Language is what happens when you &lt;strong&gt;zip&lt;/strong&gt; a whole mental universe into one thin line of text. Someone else unzips it with a different brain and never gets your exact state, only their reconstruction.&lt;/p&gt;</description></item></channel></rss>
