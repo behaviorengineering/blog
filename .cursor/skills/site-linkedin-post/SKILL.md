@@ -38,7 +38,7 @@ Read from the English `index.md`:
 
 | Site field | Maps to |
 |---|---|
-| `title` | Hook material; **line 1** SHOULD repeat the full English **`title`** string (including any leading emoji per **Optional leading emoji in `title`** in `.cursor/rules/site-content-markdown-writing.mdc` for `social-protocols`, `human-condition`, `mind-infrastructure`). Add a blank line, then the opening hook paragraphs if they are not the same text. For **`type: video`** or plain titles without emoji, still use **line 1** = full **`title`** before the body. **Do not** use this line-one rule for **cognitive-memetics** bundles that use the [two-line series header](#cognitive-memetics-two-line-header-all-series). Strip emoji **only** if the author asks or the fold leaves no room (rare). |
+| `title` | Hook material; **line 1** SHOULD repeat the full English **`title`** string (including any leading emoji per **Optional leading emoji in `title`** in `.cursor/rules/site-content-markdown-writing.mdc` for `social-protocols`, `human-condition`, `mind-infrastructure`, `x-minds`). Add a blank line, then the opening hook paragraphs if they are not the same text. For **`type: video`** or plain titles without emoji, still use **line 1** = full **`title`** before the body. **Do not** use this line-one rule for **cognitive-memetics** bundles that use the [two-line series header](#cognitive-memetics-two-line-header-all-series). Strip emoji **only** if the author asks or the fold leaves no room (rare). |
 | `description` | The Claim; strong hook candidate |
 | `grounding` | Citation line at the close |
 | Body `###` sections | The argument and examples to compress |
@@ -506,7 +506,7 @@ Petition (Change.org) →
 - **Compress or drop:** diagrams (Mermaid), section headings, and anything
   that only works as formatted text. Re-express the idea in prose.
 - **Default drop (claims / video / `social-protocols` / `human-condition` /
-  `mind-infrastructure`):** second workplace vignette, "behind the curtain"
+  `mind-infrastructure` / `x-minds`):** second workplace vignette, "behind the curtain"
   restatements already covered by the ladder, extra `###` subsections, and
   mechanism lists the Claim already states. One example max unless the author
   asks for long form.
@@ -519,7 +519,7 @@ Petition (Change.org) →
 
 ## Length
 
-### Default posts (claims, video, `social-protocols`, `human-condition`, `mind-infrastructure`)
+### Default posts (claims, video, `social-protocols`, `human-condition`, `mind-infrastructure`, `x-minds`)
 
 - **Target:** **150-300 words** for the **body only**.
 - **Body** runs from **line 1** (usually the site **`title`**) through the

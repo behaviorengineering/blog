@@ -101,7 +101,7 @@ Use **different patterns** (not five rewrites of the same joke):
 
 ### 4. Emoji (section rules)
 
-- **`human-condition`**, **`social-protocols`**, **`mind-infrastructure`:** MAY use **1–2** leading emoji if they signal the hook.
+- **`human-condition`**, **`social-protocols`**, **`mind-infrastructure`**, **`x-minds`:** MAY use **1–2** leading emoji if they signal the hook.
 - **`cognitive-memetics`:** **no** leading emoji in **`title`** (use **`heading_code`** when needed).
 
 ### 5. Cold-read each candidate

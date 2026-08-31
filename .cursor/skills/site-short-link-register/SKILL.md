@@ -36,7 +36,7 @@ description: >-
 ## Collision rules
 
 - MUST NOT reuse a `path` for a different post. Retire or rename the old link first.
-- MUST NOT add a short path that matches an existing Hugo **section** (`/social-protocols/`, `/human-condition/`, etc.).
+- MUST NOT add a short path that matches an existing Hugo **section** (`/social-protocols/`, `/human-condition/`, `/x-minds/`, etc.).
 - Spanish short links: only if needed; add `aliases` on **`index.es.md`** under `/es/...` (separate register row optional).
 
 ## Related

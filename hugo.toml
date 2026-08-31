@@ -228,6 +228,7 @@ enableEmoji = true
       contentSections = [
         "cognitive-memetics",
         "human-condition",
+        "x-minds",
         "mind-infrastructure",
         "social-protocols",
       ]
@@ -237,8 +238,9 @@ enableEmoji = true
       cognitive-memetics = 3
 
     # Psych Fitness 28: separate home band (one post per calendar day in timeZone; see layouts/partials/home-psych-fitness-daily.html).
+    # Campaign finished; keep enable = false so the band stays off the homepage.
     [params.home.psychFitness]
-      enable = true
+      enable = false
       timeZone = "Australia/Sydney"
       pathPrefix = "cognitive-memetics/psych-fitness-28/"
       title = "Psychological fitness standards for Australia's highest offices"
@@ -289,6 +291,14 @@ enableEmoji = true
   title = ""
 [[languages.en.menu.main]]
   weight = 5
+  identifier = "x-minds"
+  pre = ""
+  post = ""
+  name = "X-Minds"
+  url = "/x-minds/"
+  title = ""
+[[languages.en.menu.main]]
+  weight = 6
   identifier = "about"
   pre = "<i class=\"fas fa-info-circle\" aria-hidden=\"true\"></i>"
   post = ""
@@ -331,6 +341,14 @@ enableEmoji = true
   title = ""
 [[languages.es.menu.main]]
   weight = 5
+  identifier = "x-minds"
+  pre = ""
+  post = ""
+  name = "X-Minds"
+  url = "/es/x-minds/"
+  title = ""
+[[languages.es.menu.main]]
+  weight = 6
   identifier = "about"
   pre = "<i class=\"fas fa-info-circle\" aria-hidden=\"true\"></i>"
   post = ""

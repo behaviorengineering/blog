@@ -60,16 +60,16 @@ alwaysApply: false
 - MUST treat `grounding` as support for the Claim: definitions, named constructs, dates, and links. It is not a full article and not a substitute for an optional long quotation in the body.
 - MUST follow `.cursor/skills/site-claims-content/SKILL.md` for field roles and optional primary-source quotes: introduce them with a plain **`###`** heading (no leading emoji on **Thoughts** subsections), then the blockquote; do **not** use a plain `[WHAT HE SAID]` line.
 
-## Optional leading emoji in `title` (`social-protocols`, `human-condition`, `mind-infrastructure`)
+## Optional leading emoji in `title` (`social-protocols`, `human-condition`, `mind-infrastructure`, `x-minds`)
 
-- For posts under **`content/social-protocols/`**, **`content/human-condition/`**, or **`content/mind-infrastructure/`**, MAY prefix **`title`** with **one or two** leading emoji when they **signal the hook** (tone or metaphor). Plain titles remain valid.
+- For posts under **`content/social-protocols/`**, **`content/human-condition/`**, **`content/mind-infrastructure/`**, or **`content/x-minds/`**, MAY prefix **`title`** with **one or two** leading emoji when they **signal the hook** (tone or metaphor). Plain titles remain valid.
 - MUST **not** use this pattern under **`content/cognitive-memetics/`**; there MUST **not** be leading emoji in **`title`** there (use optional **`heading_code`** when you need a prefix; see **`.cursor/skills/site-cognitive-memetics-content/SKILL.md`**).
 - MUST NOT use **more than two** leading emoji in **`title`** where this pattern is allowed.
 - MUST keep **`description`** without decorative emoji: it is the **Claim** for **`type: claims`** and the **lead** for **`type: video`**. MUST keep **`grounding`** (when present) without decorative emoji.
 
 ## Front matter under `content/cognitive-memetics/`
 
-- MUST **not** prefix **`title`** with leading emoji; optional title emoji applies only in **`social-protocols`**, **`human-condition`**, and **`mind-infrastructure`** (see **Optional leading emoji in `title`** above).
+- MUST **not** prefix **`title`** with leading emoji; optional title emoji applies only in **`social-protocols`**, **`human-condition`**, **`mind-infrastructure`**, and **`x-minds`** (see **Optional leading emoji in `title`** above).
 - MUST follow `.cursor/skills/site-cognitive-memetics-content/SKILL.md` for **umbrella + project** `categories` (shareable `/categories/...` hubs: **Cube-Cows**, **Por-Estas-Calles**, **T-Shirt Art**), cube-cows vs sayings fields, and **Street Wisdom** tags when that hub applies (including LinkedIn hashtag mapping).
 - MUST preserve the author’s existing **`title`**, **`tldr`**, **`fluff`**, and body prose unless they explicitly ask for a rewrite, revise, tighten, or similar. For hubs other than **Por-Estas-Calles**, MUST preserve a **shipped** **`description`** the same way until they ask to rewrite the teaser. MUST **ask first** before any other prose edits; see **Ask before changing existing copy** in `.cursor/skills/site-cognitive-memetics-content/SKILL.md`. For **Por-Estas-Calles**, applying that skill **requires** **Sayings emphasis** on **`tldr`** / **`fluff`** per **`.cursor/skills/site-revise-emphasis/SKILL.md`** and **Por-Estas-Calles card teaser** (replace **`description`** from **`title`**, **`tldr`**, **`fluff`** only). For every other Cognitive-Memetics hub, new or rewritten teasers MUST follow **Gemma teaser (`description`)** in that skill (local Gemma 4; not agent-only captions). Bold on existing words follows **revise-emphasis** and the relevant type skill.
 
@@ -114,7 +114,7 @@ For **long prose** in **`type: claims`** (Thoughts body), **`type: video`** (bod
 - MAY use second person for stakes or direct address. MUST NOT turn most paragraphs into imperative lists or manuals.
 - MUST prefer concrete verbs over stacks of abstract nouns (see **Voice while drafting**). For claims, video, and Substack, metaphors are rare clarifiers, not the default texture.
 - MUST use **bold** sparingly per **`.cursor/skills/site-revise-emphasis/SKILL.md`**, only for emphasis.
-- MAY use emoji as section or title markers in non-claims content. For **`type: claims`**, do **not** use leading emoji on **`###`** headings under **Thoughts** (see `.cursor/skills/site-claims-content/SKILL.md`); leading emoji in **`title`** is optional only under **`content/social-protocols/`**, **`content/human-condition/`**, and **`content/mind-infrastructure/`**, and MUST **not** appear on **`title`** under **`content/cognitive-memetics/`** (see **Optional leading emoji in `title`** above). MUST NOT put emoji in most sentences.
+- MAY use emoji as section or title markers in non-claims content. For **`type: claims`**, do **not** use leading emoji on **`###`** headings under **Thoughts** (see `.cursor/skills/site-claims-content/SKILL.md`); leading emoji in **`title`** is optional only under **`content/social-protocols/`**, **`content/human-condition/`**, **`content/mind-infrastructure/`**, and **`content/x-minds/`**, and MUST **not** appear on **`title`** under **`content/cognitive-memetics/`** (see **Optional leading emoji in `title`** above). MUST NOT put emoji in most sentences.
 
 ## Do not
 
