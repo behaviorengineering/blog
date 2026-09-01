@@ -37,7 +37,7 @@ You are the **operator's assistant**, not the pipeline autopilot. Postgres holds
 
 | Tool | When |
 |------|------|
-| `essay_create` | New piece: `title`, `notes_files` (array), and/or `notes_file`, optional `notes` preface, optional `stance` / `charge` |
+| `essay_create` | New or resume: `title`, `notes_files` / `notes_file`, optional `notes` / `stance` / `charge`; optional `force_new`. Same notes sources return existing `piece_id` with `resumed: true` (MCP `wip-index.json`). |
 | `essay_board` | Always after mutations; start of each operator turn |
 | `essay_focus_set` | Operator WIP label: `focus`, optional `bookmark` |
 | `essay_arc_proposal_generate` | First arc pass; use `auto_select: true` or `arc: trap_conundrum_fork` to skip TUI |
@@ -52,7 +52,7 @@ You are the **operator's assistant**, not the pipeline autopilot. Postgres holds
 ## Operator loop
 
 ```
-essay_create (or resume with piece_id)
+essay_create (idempotent on notes sources; or resume with piece_id)
   → essay_board
   → [operator picks verb]
   → run one verb tool
@@ -101,12 +101,14 @@ Catalog reference: `docs/features/essay-reader-arcs.md` in content-pipelines (n8
 
 ## Long-running jobs
 
-`essay_arc_proposal_*` and `essay_composition_*` block until the CLI finishes (minutes). If MCP times out, run the same command in the n8n repo terminal, then `essay_board` again.
+`essay_arc_proposal_*` and `essay_composition_*` block until the CLI finishes (minutes). Pipelines `--json` emits NDJSON progress lines (`module_start`, `module_end`, …) and a final `result` or `error` with a bounded `diagnosis` (logs + traces digested in content-pipelines, not by MCP). The MCP forwards progress as logging notifications and returns the diagnosis as structured tool error content on failure.
+
+If MCP times out, run the same command in the n8n / content-pipelines repo terminal, then `essay_board` again.
 
 Example CLI (equivalent):
 
 ```bash
-cd /path/to/n8n
+cd /path/to/content-pipelines
 bin/pipelines essays arc-proposal generate <piece-id> --auto-select --json
 bin/pipelines essays composition generate <piece-id> --json
 bin/pipelines essays board <piece-id> --json
