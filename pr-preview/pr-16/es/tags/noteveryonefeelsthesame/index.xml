@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>NotEveryoneFeelsTheSame on behaviorengineering.ai</title><link>https://behaviorengineering.ai/pr-preview/pr-16/es/tags/noteveryonefeelsthesame/</link><description>Recent content in NotEveryoneFeelsTheSame on behaviorengineering.ai</description><generator>Hugo</generator><language>es</language><lastBuildDate>Thu, 09 Jul 2026 01:00:00 +1100</lastBuildDate><atom:link href="https://behaviorengineering.ai/pr-preview/pr-16/es/tags/noteveryonefeelsthesame/index.xml" rel="self" type="application/rss+xml"/><item><title>🧠 El cableado antisocial es humano. ¿Por qué cuesta tanto nombrarlo?</title><link>https://behaviorengineering.ai/pr-preview/pr-16/es/human-condition/2026-07-09-antisocial-configuration/</link><pubDate>Thu, 09 Jul 2026 01:00:00 +1100</pubDate><guid>https://behaviorengineering.ai/pr-preview/pr-16/es/human-condition/2026-07-09-antisocial-configuration/</guid><description>&lt;p&gt;Hoy nombramos algunas configuraciones en voz alta: autismo, TDAH, dislexia, no binario, neurodivergente. Podemos debatirlas y, a veces, hasta montar redes de apoyo.&lt;/p&gt;
+&lt;p&gt;La &lt;strong&gt;psicopatía&lt;/strong&gt; (poca culpa, afecto superficial, mucha búsqueda de recompensa) y los patrones antisociales ni siquiera entran como &lt;strong&gt;neurodivergentes&lt;/strong&gt;. Siguen viviendo sobre todo en el tabú: género de terror, gancho de crimen real, sinónimo de maldad. Esos rasgos se mueven en una &lt;strong&gt;distribución dimensional&lt;/strong&gt; (un rango gradual entre personas) de emoción, recompensa y procesamiento social. Forman parte de la naturaleza humana: otra configuración interesante y recurrente de la mente.&lt;/p&gt;</description></item><item><title>ℹ️ ¿Por qué la sociopatía sigue siendo un tabú?</title><link>https://behaviorengineering.ai/pr-preview/pr-16/es/human-condition/2026-06-23-sociopathy-duty-of-care/</link><pubDate>Tue, 23 Jun 2026 01:00:00 +1100</pubDate><guid>https://behaviorengineering.ai/pr-preview/pr-16/es/human-condition/2026-06-23-sociopathy-duty-of-care/</guid><description>&lt;p&gt;Tratamos la sociopatía como a un villano de película en lugar de una realidad biológica. Consumimos ficción sobre asesinos en serie y bromeamos sobre &amp;ldquo;psicópatas&amp;rdquo; porque es más fácil que admitir que algunas personas nunca desarrollan un &amp;ldquo;interruptor&amp;rdquo; de bondad.&lt;/p&gt;
+&lt;p&gt;El silencio deja a las familias y a los niños sin una guía clara. Los padres suelen confiar en moralismos abstractos en lugar de reglas prácticas. Los adultos que reconocen su propia falta de regulación interna a menudo la ocultan.&lt;/p&gt;</description></item><item><title>🫂🧱 La empatía es un conjunto de sentir, perspectiva y juicio, y los sistemas pueden orientarla</title><link>https://behaviorengineering.ai/pr-preview/pr-16/es/human-condition/2026-04-10-empathy-levels/</link><pubDate>Fri, 10 Apr 2026 01:00:00 +1100</pubDate><guid>https://behaviorengineering.ai/pr-preview/pr-16/es/human-condition/2026-04-10-empathy-levels/</guid><description>&lt;h3 id="tres-maneras-de-entender-a-alguien"&gt;Tres maneras de entender a alguien&lt;/h3&gt;
+&lt;textarea id="id-1-mermaid-src" class="mermaid-source" hidden readonly&gt;flowchart TB
+ classDef pastelLavender fill:#e8d4ef,stroke:#b894c9,color:#1c1422,stroke-width:2px
+ classDef pastelSky fill:#cfe8f6,stroke:#7eb3d4,color:#1c1422,stroke-width:3px
+ classDef pastelMint fill:#d4f0e2,stroke:#7fbf9a,color:#1c1422,stroke-width:4px,margin:2em
+ classDef pastelNote fill:transparent,stroke:transparent,color:#ffffff,stroke-width:0px
+ subgraph r1[&amp;#34; &amp;#34;]
+ direction LR
+ A(&amp;#34;Empatía emocional&amp;#34;):::pastelLavender
+ A1[&amp;#34;Sientes lo que otros sienten;&amp;lt;br/&amp;gt;el cuerpo refleja la emoción&amp;#34;]:::pastelNote
+ A ---&amp;gt; A1
+ end
+ subgraph r2[&amp;#34; &amp;#34;]
+ direction LR
+ B(&amp;#34;Empatía cognitiva&amp;#34;):::pastelSky
+ B1[&amp;#34;Ves lo que otros ven;&amp;lt;br/&amp;gt;sigues su perspectiva&amp;#34;]:::pastelNote
+ B ---&amp;gt; B1
+ end
+ subgraph r3[&amp;#34; &amp;#34;]
+ direction LR
+ C((Empatía moral-cognitiva ✅)):::pastelMint
+ C1[&amp;#34;Sabes culpa aunque ganes; juzgas desde ese estado de culpa.&amp;#34;]:::pastelNote
+ C ---&amp;gt; C1
+ end
+ r1 --&amp;gt; r2
+ r2 --&amp;gt; r3
+ linkStyle 0 stroke:#a8a4ad,stroke-width:2px,stroke-dasharray:2 3
+ linkStyle 1 stroke:#a8a4ad,stroke-width:2px,stroke-dasharray:2 3
+ linkStyle 2 stroke:#a8a4ad,stroke-width:2px,stroke-dasharray:2 3
+ linkStyle 3 stroke:#a8a4ad,stroke-width:4px
+ linkStyle 4 stroke:#a8a4ad,stroke-width:4px&lt;/textarea&gt;
+&lt;div class="mermaid" id="id-1"&gt;&lt;/div&gt;
+&lt;p&gt;Cuando le pides a un niño pequeño que comparta sus juguetes, normalmente no lo ve lógico: para él, el juguete es suyo y compartir parece una regla impuesta sin sentido.&lt;/p&gt;</description></item></channel></rss>
