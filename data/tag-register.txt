@@ -99,10 +99,12 @@ BellCurve	3
 AgenticNervousness	2
 AhaMoment	2
 Alignment	2
+AttentionPatterns	2
 AuthorizedBeneficiaries	2
 AutomationAndJudgment	2
 BirdsOfAFeather	2
 BlameTheInterpreter	2
+BrainImaging	2
 BubbleStrength	2
 BuiltToFail	2
 Chaos	2
@@ -170,6 +172,7 @@ ManySourcesGame	2
 MeaningAsControl	2
 MentalInfrastructure	2
 MiddleOfNowhere	2
+Misdiagnosis	2
 MitochondrialSymbiosis	2
 MutualNonAggression	2
 NarcissismFactory	2
@@ -225,8 +228,10 @@ StreetSmarts	2
 StructuralFixes	2
 SubscriptionEconomy	2
 Sycophancy	2
+SymptomChecklists	2
 SynchronyIsNotWisdom	2
 SystemAbstraction	2
+TargetedTreatment	2
 ThinCulture	2
 TimeThatCounts	2
 TinyBandAid	2

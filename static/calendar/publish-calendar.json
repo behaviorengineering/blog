@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-27T08:20:42Z",
+  "generatedAt": "2026-09-02T15:54:31Z",
   "channels": [
     "site-en",
     "site-es",
@@ -4706,6 +4706,34 @@
         },
         "substack-en": {
           "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "x-minds/2026-09-03-same-add-pill-wrong-brain",
+      "section": "x-minds",
+      "title": "🧠 Why can the same ADD medicine ruin one brain and save another?",
+      "type": "video",
+      "categories": [
+        "X-Minds"
+      ],
+      "planned": "2026-09-03",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "present"
         }
       }
     },
