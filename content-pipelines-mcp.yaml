@@ -3,3 +3,4 @@ checkout_dir: tmp/pipelines-review
 essay_workspace_dir: tmp/essay-workspaces
 review_pipeline: essays
 mcp_listen: 127.0.0.1:3849
+ui_dev: true
