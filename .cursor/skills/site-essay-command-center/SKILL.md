@@ -29,7 +29,7 @@ You are the **operator's assistant**, not the pipeline autopilot. Postgres holds
 1. **No silent auto-advance** after `essay_create` unless the user asked for a one-shot run.
 2. Call **`essay_board`** after every mutating tool to refresh facts before suggesting the next action.
 3. **`status`** = review queue only (pending composition for Gate). **`essay_board`** = full WIP (step run counts, actions, focus).
-4. Use **`essay_focus_set`** when the operator shifts context (e.g. "reworking hook after disagree").
+4. Use **`essay_objective_set`** when the operator shifts context (WIP objective or a step’s focus, e.g. "composition: types as contrast only").
 5. Prefer opening **`command_center_url`** or **`review_url`** in the browser when the user wants a visible panel.
 6. **No Hugo export yet**: approved essays stay in Postgres; do not copy into `content/` unless a future export exists.
 
@@ -39,7 +39,7 @@ You are the **operator's assistant**, not the pipeline autopilot. Postgres holds
 |------|------|
 | `essay_create` | New or resume: `title`, `notes_files` / `notes_file`, optional `notes` / `stance` / `charge`; optional `force_new`. Same notes sources return existing `piece_id` with `resumed: true` (MCP `wip-index.json`). |
 | `essay_board` | Always after mutations; start of each operator turn |
-| `essay_focus_set` | Operator WIP label: `focus`, optional `bookmark` |
+| `essay_objective_set` | WIP `objective`, optional per-step `focus` (`step` + `focus`), optional `bookmark` |
 | `essay_arc_proposal_generate` | First arc pass; use `auto_select: true` or `arc: trap_conundrum_fork` to skip TUI |
 | `essay_arc_proposal_regenerate` | Re-run arc with `message` feedback |
 | `essay_arc_pick` | Pick catalog id from latest proposal without LLM (`arc` required) |
@@ -60,7 +60,7 @@ essay_create (idempotent on notes sources; or resume with piece_id)
   → repeat
 ```
 
-When `essay_board` shows `review.pending`, offer **checkout** then open `review_url` (or `http://127.0.0.1:3849/review`).
+When `essay_board` shows `review.pending`, prefer the **Composition** tab (inline proposal + Agree/Disagree). **`checkout`** still works; **`review_url`** remains a thin alias of the same Gate.
 
 ## Starting with context files
 
@@ -85,9 +85,29 @@ Typical bundle for a claim-shaped essay:
 
 ## Browser UI
 
-- Command center: `http://127.0.0.1:3849/command-center?piece_id=<UUID>`
-- Review panel: `http://127.0.0.1:3849/review` (after checkout)
-- Workspace files: `tmp/essay-workspaces/<piece_id>/` (`notes.md`, `run.json`)
+- Command center (board): `http://127.0.0.1:3849/command-center?piece_id=<UUID>`
+- Arc picker: `http://127.0.0.1:3849/command-center/arcs?piece_id=<UUID>` (or `arcs_url` on `essay_board`)
+- Composition: `http://127.0.0.1:3849/command-center/composition?piece_id=<UUID>` (generate/regenerate plus inline Gate when review is pending)
+- Review panel: `http://127.0.0.1:3849/review?piece_id=<UUID>` (alias of the same Gate; also used by MCP Apps)
+- **Author desk:** `tmp/essay-workspaces/<piece_id>/`
+
+```text
+<piece_id>/
+  notes.md              # edit here; MCP syncs to Postgres before arc/composition
+  run.json              # objective, per-step focus, notes_hash, step mirror, last_action, history
+  sources/              # copied context files from essay_create
+  artifacts/
+    arc/latest.json
+    composition/latest.json
+    composition/checkout-<timestamp>.md   # after checkout
+```
+
+## Editing notes (author desk)
+
+1. Open `tmp/essay-workspaces/<piece_id>/notes.md` (and optionally files under `sources/`).
+2. **Do not** re-run `essay_create` for text edits; that tool is for create/resume only.
+3. Run `essay_arc_proposal_regenerate` or `essay_composition_regenerate` (or generate). MCP auto-syncs changed `notes.md` to Postgres via `pipelines essays notes set` when `notes_hash` in `run.json` differs.
+4. Use `force_new: true` on `essay_create` only when you deliberately want a second piece for the same source paths.
 
 ## Arc selection (MCP)
 

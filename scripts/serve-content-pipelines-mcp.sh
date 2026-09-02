@@ -41,4 +41,4 @@ if [[ ! -d "${PIPELINES_DIR}" ]]; then
 fi
 
 cd "${root}"
-exec go tool wgo -cd "${mcp}" -file .go go run ./cmd/content-pipelines-mcp --config "${cfg}" "$@"
+exec go tool wgo -cd "${mcp}" -file .go -file .html -file .css go run ./cmd/content-pipelines-mcp --config "${cfg}" "$@"
