@@ -386,8 +386,8 @@ AND:
 - **Line one:** quoted **`description`** teaser. **MUST NOT** put **`{heading_code}: {project}`** on line two.
 - **Omit** **`❓`** and **`AND:`** on standard image-only strips.
 - **Series block:** `🟣 ` immediately before **`{heading_code}: Everyone ❤️ Raymond 🐕📓`** on the **same line** (canonical **`project`**; heart replaces “loves” in display). Blank line, then paste **`raymondProjectAboutTitle`** and **`raymondProjectAboutBody`** from **`i18n/en.toml`** as plain text. **MUST NOT** invent or paraphrase series copy.
-- **Hashtags:** all front matter `tags` (Raymond episodes MUST include **`EveryoneLovesRaymond`**, **`PetLife`**, and **`TheCutestDog`**; do **not** add bare **`Raymond`**, **`Dog`**, **`Dogs`**, or **`DogLife`** when those three are present).
-- **Quoted teaser:** MUST keep the dog signal from site **`description`** (prefer **Dawg Raymond** in EN).
+- **Hashtags:** all front matter `tags` (Raymond episodes MUST include **`EveryoneLovesRaymond`**, **`PetLife`**, **`TheCutestDog`**, **`OfficeCulture`**, and **`OfficeSatire`**; do **not** add bare **`Raymond`**, **`Dog`**, **`Dogs`**, or **`DogLife`** when the series pet tags are present). Pet tags = character discovery; office tags = subject matter. Prefer order: series + pet, then office anchors, then episode hooks. Do **not** claim tags “trick” a platform classifier.
+- **Quoted teaser:** MUST keep the dog signal from site **`description`** (prefer **Dawg Raymond** in EN). MUST also make the episode’s workplace tension clear in that same line-one teaser (office joke first; dog signal still required).
 - **Closing:** **`🧷 Full post (site) →`** (**`- EN:`** then **`- ES:`** when bilingual); blank line; **`🔗 Everyone ❤️ Raymond (English) →`** hub URL (`/categories/raymond/`).
 
 **Reference bundle:** `content/cognitive-memetics/raymond/2026-08-28-collaborating-with-myself/linkedin.txt` (R1).
