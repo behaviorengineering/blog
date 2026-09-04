@@ -107,16 +107,30 @@ func ScheduleDebugSnapshotJS() string {
     const roots = dlg ? [dlg] : [document.body];
     roots.forEach((root) => {
       if (!root || !root.querySelectorAll) return;
-      root.querySelectorAll('input[type="text"], input[type="search"], input:not([type])').forEach((inp, j) => {
+      root.querySelectorAll('input[type="text"], input[type="search"], input:not([type]), input[role="combobox"]').forEach((inp, j) => {
         if (j > 20) return;
         if (!visible(inp) && inp !== document.activeElement) return;
         const ph = (inp.getAttribute('placeholder') || '').toLowerCase();
         const al = (inp.getAttribute('aria-label') || '').toLowerCase();
-        if (!ph.includes('tag') && !(ph.includes('select') && ph.includes('create')) && !al.includes('tag')) return;
+        const role = (inp.getAttribute('role') || '').toLowerCase();
+        const id = String(inp.id || '');
+        const parCls = String((inp.parentElement && inp.parentElement.className) || '');
+        const looksTag =
+          ph.includes('tag') ||
+          (ph.includes('select') && ph.includes('create')) ||
+          al.includes('tag') ||
+          role === 'combobox' ||
+          id.indexOf('headlessui-combobox-input') >= 0 ||
+          parCls.indexOf('inputBox') >= 0 ||
+          parCls.indexOf('hasChips') >= 0;
+        if (!looksTag) return;
         tagInputs.push({
           placeholder: clip(inp.getAttribute('placeholder'), 120),
           ariaLabel: clip(inp.getAttribute('aria-label'), 120),
+          role: clip(role, 40),
+          id: clip(id, 120),
           value: clip(inp.value, 200),
+          ariaExpanded: clip(inp.getAttribute('aria-expanded'), 20),
           outerHTML: clip(inp.outerHTML, 1600),
         });
       });

@@ -1,6 +1,6 @@
 module github.com/xynova/behaviour-engineering
 
-go 1.25.5
+go 1.27.0
 
 tool (
 	github.com/bokwoon95/wgo

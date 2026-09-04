@@ -367,6 +367,37 @@ func ScheduleAfterContinueJS(opt ScheduleAfterContinueOptions) (string, error) {
     return false;
   }
 
+  function pressTagComboboxEnter(inp) {
+    if (!inp) return;
+    try { inp.focus(); } catch (e) {}
+    const opts = { bubbles: true, cancelable: true, key: 'Enter', code: 'Enter', keyCode: 13, which: 13 };
+    try {
+      inp.dispatchEvent(new KeyboardEvent('keydown', opts));
+      inp.dispatchEvent(new KeyboardEvent('keypress', opts));
+      inp.dispatchEvent(new KeyboardEvent('keyup', opts));
+    } catch (e) {}
+  }
+
+  function rowMatchesTagNeedle(line, needle, want) {
+    if (!line) return false;
+    if (looksLikeCreateTagLine(line, needle) || line.startsWith('create')) return true;
+    return line === needle || alnumKey(line) === want;
+  }
+
+  function exactTagOptionVisible(tagText) {
+    const needle = String(tagText || '').trim().toLowerCase();
+    const want = alnumKey(tagText);
+    if (!needle || want.length < 2) return false;
+    const rows = document.querySelectorAll('[cmdk-item], [data-radix-collection-item], [role="listbox"] [role="option"]');
+    for (const el of rows) {
+      if (!visible(el) || !tagListRowContextOk(el)) continue;
+      const line = cleanTagRowText(el.innerText || '').toLowerCase();
+      if (!line || line.startsWith('create')) continue;
+      if (line === needle || alnumKey(line) === want) return true;
+    }
+    return false;
+  }
+
   async function commitOneTagFromFullQuery(tagText, inp) {
     const needle = tagText.trim().toLowerCase();
     const want = alnumKey(tagText);
@@ -402,10 +433,10 @@ func ScheduleAfterContinueJS(opt ScheduleAfterContinueOptions) (string, error) {
       }
       if (exactHit) {
         const el = exactHit.el;
+        // List checkmark is not a chip: only succeed when hasCommittedTagPill is true.
         if (listOptionShowsAlreadyApplied(el)) {
           await sleep(200);
           if (hasCommittedTagPill(tagText)) return true;
-          return true;
         }
         if (el.matches && el.matches('[role="option"]') && el.getAttribute('aria-selected') === 'true') {
           await sleep(160);
@@ -416,6 +447,9 @@ func ScheduleAfterContinueJS(opt ScheduleAfterContinueOptions) (string, error) {
         syntheticPointerClick(el);
         await sleep(240);
         if (hasCommittedTagPill(tagText)) return true;
+        pressTagComboboxEnter(inp);
+        await sleep(200);
+        if (hasCommittedTagPill(tagText)) return true;
         await sleep(90);
         continue;
       }
@@ -424,6 +458,9 @@ func ScheduleAfterContinueJS(opt ScheduleAfterContinueOptions) (string, error) {
         try { el.scrollIntoView({ block: 'center' }); el.click(); } catch (e) {}
         syntheticPointerClick(el);
         await sleep(240);
+        if (hasCommittedTagPill(tagText)) return true;
+        pressTagComboboxEnter(inp);
+        await sleep(200);
         if (hasCommittedTagPill(tagText)) return true;
         await sleep(90);
         continue;
@@ -462,9 +499,7 @@ func ScheduleAfterContinueJS(opt ScheduleAfterContinueOptions) (string, error) {
       hits.sort((a, b) => a.len - b.len);
       if (hits.length > 0) {
         const target = hits[0].el;
-        if (target.matches && target.matches('[role="option"]') && target.getAttribute('aria-selected') === 'true') {
-          return false;
-        }
+        // aria-selected highlight is not a chip; still click when no pill.
         try {
           target.scrollIntoView({ block: 'center' });
           target.click();
@@ -478,47 +513,79 @@ func ScheduleAfterContinueJS(opt ScheduleAfterContinueOptions) (string, error) {
     return false;
   }
 
+  function highlightedTagListRow(preferTagText) {
+    const prefer = document.querySelector(
+      '[cmdk-item][data-selected], [cmdk-item][aria-selected="true"], [cmdk-item][data-highlighted]'
+    );
+    if (prefer && tagListRowContextOk(prefer)) return prefer;
+    let needle = String(preferTagText || '').trim().toLowerCase();
+    let want = alnumKey(preferTagText);
+    if (!needle) {
+      const inp = tagInput();
+      if (inp) {
+        needle = String(inp.value || '').trim().toLowerCase();
+        want = alnumKey(needle);
+      }
+    }
+    const items = Array.from(document.querySelectorAll('[cmdk-item]')).filter(el => tagListRowContextOk(el));
+    if (items.length > 0) {
+      if (needle && want.length >= 2) {
+        for (const el of items) {
+          const line = cleanTagRowText(el.innerText || '').toLowerCase();
+          if (line && !line.startsWith('create') && (line === needle || alnumKey(line) === want)) return el;
+        }
+      }
+      return items[0];
+    }
+    const opts = Array.from(document.querySelectorAll('[role="listbox"] [role="option"]')).filter(visible);
+    let firstOk = null;
+    let exactOk = null;
+    for (const o of opts) {
+      if (!tagListRowContextOk(o)) continue;
+      if (!firstOk) firstOk = o;
+      const line = cleanTagRowText(o.innerText || '').toLowerCase();
+      if (needle && want.length >= 2 && line && !line.startsWith('create') && (line === needle || alnumKey(line) === want)) {
+        exactOk = o;
+      }
+      const aria = (o.getAttribute('aria-selected') || '').toLowerCase();
+      const st = (o.getAttribute('data-headlessui-state') || '').toLowerCase();
+      const cls = String(o.className || '').toLowerCase();
+      if (aria === 'true' || st.includes('active') || st.includes('selected') || cls.includes('active') || cls.includes('highlight')) {
+        return o;
+      }
+    }
+    if (exactOk) return exactOk;
+    return firstOk;
+  }
+
+  function highlightedTagRowMatchesNeedle(tagText) {
+    const hi = highlightedTagListRow(tagText);
+    if (!hi) return false;
+    const needle = tagText.trim().toLowerCase();
+    const want = alnumKey(tagText);
+    const line = cleanTagRowText(hi.innerText || '').toLowerCase();
+    return rowMatchesTagNeedle(line, needle, want);
+  }
+
   async function navigateTagListWithArrows(tagText, inp) {
     const want = alnumKey(tagText);
     const needle = tagText.trim().toLowerCase();
     if (!want || want.length < 2) return false;
-    function highlightedCmdkItem() {
-      const prefer = document.querySelector(
-        '[cmdk-item][data-selected], [cmdk-item][aria-selected="true"], [cmdk-item][data-highlighted]'
-      );
-      if (prefer && tagListRowContextOk(prefer)) return prefer;
-      const items = Array.from(document.querySelectorAll('[cmdk-item]')).filter(el => tagListRowContextOk(el));
-      return items.length > 0 ? items[0] : null;
-    }
-    function highlightedListboxOption() {
-      const opts = Array.from(document.querySelectorAll('[role="listbox"] [role="option"]')).filter(visible);
-      let active = null;
-      for (const o of opts) {
-        if (!tagListRowContextOk(o)) continue;
-        const aria = (o.getAttribute('aria-selected') || '').toLowerCase();
-        const st = (o.getAttribute('data-headlessui-state') || '').toLowerCase();
-        const cls = String(o.className || '').toLowerCase();
-        if (aria === 'true' || st === 'active' || cls.includes('active') || cls.includes('highlight')) {
-          active = o;
-          break;
-        }
-      }
-      if (active) return active;
-      for (const o of opts) {
-        if (tagListRowContextOk(o)) return o;
-      }
-      return null;
-    }
+    if (!tagQueryLooksApplied(inp, tagText)) return false;
     for (let step = 0; step < 48; step++) {
       if (hasCommittedTagPill(tagText)) return true;
-      const hi = highlightedCmdkItem() || highlightedListboxOption();
+      if (!tagQueryLooksApplied(inp, tagText)) return false;
+      const hi = highlightedTagListRow(tagText);
       if (hi) {
         const line = cleanTagRowText(hi.innerText || '').toLowerCase();
-        if (line && !line.startsWith('create') && (line === needle || alnumKey(line) === want)) {
+        if (line && (looksLikeCreateTagLine(line, needle) || (!line.startsWith('create') && (line === needle || alnumKey(line) === want)))) {
           if (hasCommittedTagPill(tagText)) return true;
           try { hi.scrollIntoView({ block: 'center' }); hi.click(); } catch (e) {}
           syntheticPointerClick(hi);
           await sleep(260);
+          if (hasCommittedTagPill(tagText)) return true;
+          pressTagComboboxEnter(inp);
+          await sleep(200);
           if (hasCommittedTagPill(tagText)) return true;
         }
       }
@@ -527,10 +594,10 @@ func ScheduleAfterContinueJS(opt ScheduleAfterContinueOptions) (string, error) {
       inp.dispatchEvent(new KeyboardEvent('keyup', { bubbles: true, key: 'ArrowDown', code: 'ArrowDown', key: 'ArrowDown', keyCode: 40 }));
       await sleep(85);
     }
-    try { inp.focus(); } catch (e) {}
-    inp.dispatchEvent(new KeyboardEvent('keydown', { bubbles: true, key: 'Enter', code: 'Enter', key: 'Enter', keyCode: 13 }));
-    inp.dispatchEvent(new KeyboardEvent('keyup', { bubbles: true, key: 'Enter', code: 'Enter', key: 'Enter', keyCode: 13 }));
-    await sleep(240);
+    if (highlightedTagRowMatchesNeedle(tagText) || exactTagOptionVisible(tagText)) {
+      pressTagComboboxEnter(inp);
+      await sleep(240);
+    }
     return hasCommittedTagPill(tagText);
   }
 
@@ -724,6 +791,135 @@ func ScheduleAfterContinueJS(opt ScheduleAfterContinueOptions) (string, error) {
     return false;
   }
 
+  function setNativeInputValue(inp, val) {
+    if (!inp) return;
+    const value = val == null ? '' : String(val);
+    try {
+      const proto = window.HTMLInputElement.prototype;
+      const desc = Object.getOwnPropertyDescriptor(proto, 'value');
+      const own = Object.getOwnPropertyDescriptor(inp, 'value');
+      if (desc && desc.set && (!own || own.set !== desc.set)) {
+        desc.set.call(inp, value);
+      } else if (own && own.set) {
+        own.set.call(inp, value);
+      } else {
+        inp.value = value;
+      }
+    } catch (e) {
+      try { inp.value = value; } catch (e2) {}
+    }
+  }
+
+  function dispatchTagInputEvent(inp, data, inputType) {
+    if (!inp) return;
+    try {
+      inp.dispatchEvent(new InputEvent('input', { bubbles: true, cancelable: true, data: data, inputType: inputType || 'insertText' }));
+    } catch (e) {
+      inp.dispatchEvent(new Event('input', { bubbles: true }));
+    }
+  }
+
+  function tagQueryLooksApplied(inp, tagText) {
+    if (!inp) return false;
+    const want = String(tagText || '').trim().toLowerCase();
+    if (!want) return false;
+    const got = String(inp.value || '').trim().toLowerCase();
+    return got === want || got.replace(/\s+/g, '') === want.replace(/\s+/g, '');
+  }
+
+  function tagSuggestionReady(tagText) {
+    const needle = String(tagText || '').trim().toLowerCase();
+    const want = alnumKey(tagText);
+    if (!needle || want.length < 2) return false;
+    const rows = document.querySelectorAll('[cmdk-item], [data-radix-collection-item], [role="listbox"] [role="option"]');
+    for (const el of rows) {
+      if (!visible(el) || !tagListRowContextOk(el)) continue;
+      const line = cleanTagRowText(el.innerText || '').toLowerCase();
+      if (!line) continue;
+      if (looksLikeCreateTagLine(line, needle) || line.startsWith('create')) return true;
+      if (line === needle || alnumKey(line) === want) return true;
+    }
+    return false;
+  }
+
+  async function clearTagComboboxQuery(inp) {
+    if (!inp) return;
+    try { inp.focus(); } catch (e) {}
+    await sleep(30);
+    try { inp.select(); } catch (e) {}
+    setNativeInputValue(inp, '');
+    dispatchTagInputEvent(inp, '', 'deleteContentBackward');
+    try {
+      document.execCommand('selectAll', false, null);
+      document.execCommand('delete', false, null);
+    } catch (e) {}
+    try {
+      inp.dispatchEvent(new KeyboardEvent('keydown', { bubbles: true, key: 'Backspace', code: 'Backspace', keyCode: 8 }));
+      inp.dispatchEvent(new KeyboardEvent('keyup', { bubbles: true, key: 'Backspace', code: 'Backspace', keyCode: 8 }));
+    } catch (e) {}
+    await sleep(40);
+  }
+
+  async function typeTagQuery(inp, tagText) {
+    const text = String(tagText || '').trim();
+    if (!inp || !text) return false;
+    try { inp.scrollIntoView({ block: 'center' }); } catch (e) {}
+    await clearTagComboboxQuery(inp);
+    try { inp.focus(); } catch (e) {}
+    await sleep(40);
+    let inserted = false;
+    try {
+      inserted = !!document.execCommand('insertText', false, text);
+    } catch (e) {
+      inserted = false;
+    }
+    if (inserted && tagQueryLooksApplied(inp, text)) {
+      try { inp.dispatchEvent(new Event('change', { bubbles: true })); } catch (e) {}
+      return true;
+    }
+    setNativeInputValue(inp, text);
+    dispatchTagInputEvent(inp, text, 'insertText');
+    try { inp.dispatchEvent(new Event('change', { bubbles: true })); } catch (e) {}
+    if (tagQueryLooksApplied(inp, text)) return true;
+    await clearTagComboboxQuery(inp);
+    try { inp.focus(); } catch (e) {}
+    let built = '';
+    for (let i = 0; i < text.length; i++) {
+      const ch = text.charAt(i);
+      built += ch;
+      try {
+        inp.dispatchEvent(new KeyboardEvent('keydown', { bubbles: true, key: ch, code: 'Key' + ch.toUpperCase(), keyCode: ch.charCodeAt(0) }));
+      } catch (e) {}
+      let charOk = false;
+      try {
+        charOk = !!document.execCommand('insertText', false, ch);
+      } catch (e) {
+        charOk = false;
+      }
+      if (!charOk || String(inp.value || '') !== built) {
+        setNativeInputValue(inp, built);
+        dispatchTagInputEvent(inp, ch, 'insertText');
+      }
+      try {
+        inp.dispatchEvent(new KeyboardEvent('keyup', { bubbles: true, key: ch, code: 'Key' + ch.toUpperCase(), keyCode: ch.charCodeAt(0) }));
+      } catch (e) {}
+      await sleep(18);
+    }
+    try { inp.dispatchEvent(new Event('change', { bubbles: true })); } catch (e) {}
+    return tagQueryLooksApplied(inp, text);
+  }
+
+  async function waitForTagSuggestions(tagText, inp, maxMs) {
+    const deadline = Date.now() + (maxMs || 2500);
+    while (Date.now() < deadline) {
+      if (hasCommittedTagPill(tagText)) return true;
+      if (tagSuggestionReady(tagText)) return true;
+      if (inp && !tagQueryLooksApplied(inp, tagText)) return false;
+      await sleep(80);
+    }
+    return tagSuggestionReady(tagText) || hasCommittedTagPill(tagText);
+  }
+
   async function addTags(tags) {
     if (!tags || !tags.length) return true;
     const waitInpUntil = Date.now() + 22000;
@@ -749,32 +945,28 @@ func ScheduleAfterContinueJS(opt ScheduleAfterContinueOptions) (string, error) {
         await sleep(40);
         continue;
       }
-      try { inp.scrollIntoView({ block: 'center' }); } catch (e) {}
-      inp.focus();
-      inp.value = '';
-      inp.dispatchEvent(new Event('input', { bubbles: true }));
-      await sleep(50);
-      inp.value = t;
-      try {
-        inp.dispatchEvent(new InputEvent('input', { bubbles: true, data: t, inputType: 'insertText' }));
-      } catch (e) {
-        inp.dispatchEvent(new Event('input', { bubbles: true }));
+      let typed = await typeTagQuery(inp, t);
+      if (!typed) {
+        await sleep(120);
+        typed = await typeTagQuery(inp, t);
       }
-      inp.dispatchEvent(new Event('change', { bubbles: true }));
-      await sleep(280);
+      if (!typed) {
+        reasons.push('tag query did not stick in combobox for: ' + t);
+        return false;
+      }
+      await waitForTagSuggestions(t, inp, 2800);
       let added = await commitOneTagFromFullQuery(t, inp);
-      if (!added) added = await navigateTagListWithArrows(t, inp);
-      if (!added) {
-        try {
-          inp.focus();
-          inp.dispatchEvent(new KeyboardEvent('keydown', { bubbles: true, key: 'Enter', code: 'Enter', key: 'Enter', keyCode: 13 }));
-          inp.dispatchEvent(new KeyboardEvent('keyup', { bubbles: true, key: 'Enter', code: 'Enter', key: 'Enter', keyCode: 13 }));
-        } catch (e) {}
-        await sleep(220);
-        added = hasCommittedTagPill(t);
-      }
       if (!added) {
         added = await clickCreateTagSuggestion(t);
+      }
+      if (!added && tagQueryLooksApplied(inp, t)) {
+        added = await navigateTagListWithArrows(t, inp);
+      }
+      // Enter only when an exact matching option is visible (or highlighted for that needle), not any open list.
+      if (!added && tagQueryLooksApplied(inp, t) && (highlightedTagRowMatchesNeedle(t) || exactTagOptionVisible(t))) {
+        pressTagComboboxEnter(inp);
+        await sleep(220);
+        added = hasCommittedTagPill(t);
       }
       await sleep(280);
       if (!added && hasCommittedTagPill(t)) added = true;
