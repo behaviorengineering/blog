@@ -1622,8 +1622,9 @@ func ScheduleAfterContinueJS(opt ScheduleAfterContinueOptions) (string, error) {
   if (!cfg.tickEmailSubstack) {
     await tryUntickSubstackEmailDelivery();
   }
-  // Schedule before tags: Substack only mounts the time field after the schedule row is on; filling
-  // before the tag combobox avoids typing the date into Add tags.
+  // Schedule before tags: Substack only mounts the time field after the schedule row is on.
+  // Tags are normally applied from Go via CDP mouse clicks (Headless UI ignores JS el.click);
+  // when cfg.tags is empty this no-ops. Filling schedule before any tag typing avoids date bleed.
   if ((cfg.dateTimeLocal && cfg.dateTimeLocal.trim()) || (cfg.dateDisplay && cfg.dateDisplay.trim())) {
     if (!(await fillScheduleDateTime(cfg.dateTimeLocal || '', cfg.dateDisplay || ''))) {
       return JSON.stringify({ ok: false, reason: reasons.join('; ') });
