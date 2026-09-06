@@ -275,13 +275,13 @@ Posts under **`content/cognitive-memetics/raymond/`** use **`categories`**: **`C
 
 **Publish day:** New bundles MUST use a **Friday** calendar day in the folder name and in **`date`**.
 
-**Tags:** Always include **`EveryoneLovesRaymond`**, **`PetLife`**, and **`TheCutestDog`** (series flourish + pet discovery; teaser copy uses **Dawg Raymond**). Do **not** add bare **`Raymond`**, **`Dog`**, **`Dogs`**, or **`DogLife`** as tags when those three are present (category **`Raymond`** already hubs the series). Add recurring office tags when they fit (**`OfficeCulture`**, **`RealityCheck`**, **`KnowledgeWork`**). Add one or two episode-specific hooks. LinkedIn hashtag line MUST include **`#EveryoneLovesRaymond`**, **`#PetLife`**, and **`#TheCutestDog`** via front matter.
+**Tags:** Always include **`EveryoneLovesRaymond`**, **`PetLife`**, and **`TheCutestDog`** (series flourish + pet discovery; these match the dog character). Always include **`OfficeCulture`** and **`OfficeSatire`** (subject matter: every strip is office satire). Do **not** add bare **`Raymond`**, **`Dog`**, **`Dogs`**, or **`DogLife`** when those series tags are present (category **`Raymond`** already hubs the series). MAY add other recurring office tags when they fit (**`RealityCheck`**, **`KnowledgeWork`**). Add one or two episode-specific hooks. Prefer front-matter order: series + pet discovery, then office anchors, then episode hooks. LinkedIn hashtag line MUST mirror all front matter `tags`. Pet tags describe character discovery; office tags describe subject matter. Both are accurate. Do **not** frame tag choice as “tricking” any platform algorithm.
 
 **Dog in copy:** Episode **`description`** (EN) MUST include a dog signal at least once; prefer the character label **Dawg Raymond** (not “Raymond the dog”). Spanish **`description`** MUST include **perro** or **perros** at least once (typically **Raymond el perro**; do not force “Dawg” into ES). Series LinkedIn body already says junior dog; still keep the dog signal in the quoted teaser line when it mirrors **`description`**.
 
 **Footer explainer:** **`layouts/partials/raymond-project-about.html`** when the category is present; copy from **`raymondProjectAbout*`** in **`i18n/en.toml`** / **`i18n/es.toml`**.
 
-**LinkedIn:** Same fold-first image-only pattern as Cube-Cows (quoted **`description`** on line one; **`🟣`** + **`{heading_code}: Everyone ❤️ Raymond 🐕📓`**; paste **`raymondProjectAboutTitle`** then **`raymondProjectAboutBody`**; hub **`/categories/raymond/`**). See **`.cursor/skills/site-linkedin-post/SKILL.md`**.
+**LinkedIn:** Same fold-first image-only pattern as Cube-Cows (quoted **`description`** on line one; **`🟣`** + **`{heading_code}: Everyone ❤️ Raymond 🐕📓`**; paste **`raymondProjectAboutTitle`** then **`raymondProjectAboutBody`**; hub **`/categories/raymond/`**). Line-one teaser MUST carry the workplace tension of that episode (office joke first; dog signal still required in the same teaser). See **`.cursor/skills/site-linkedin-post/SKILL.md`**.
 
 ### `type: sayings`
 

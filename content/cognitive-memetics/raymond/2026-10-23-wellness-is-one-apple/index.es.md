@@ -24,6 +24,7 @@ tags:
   - "PetLife"
   - "TheCutestDog"
   - "OfficeCulture"
+  - "OfficeSatire"
   - "Wellness"
 categories: ["Cognitive-Memetics", "Raymond"]
 

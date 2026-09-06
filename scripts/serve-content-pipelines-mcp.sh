@@ -16,29 +16,5 @@ if [[ ! -f "${cfg}" ]]; then
 	exit 1
 fi
 
-abs_from_root() {
-	local p="$1"
-	if [[ "${p}" = /* ]]; then
-		printf '%s\n' "${p}"
-	else
-		printf '%s\n' "${root}/${p}"
-	fi
-}
-
-: "${PIPELINES_BIN:=providers/content-pipelines/bin/pipelines}"
-: "${PIPELINES_DIR:=providers/content-pipelines}"
-PIPELINES_BIN="$(abs_from_root "${PIPELINES_BIN}")"
-PIPELINES_DIR="$(abs_from_root "${PIPELINES_DIR}")"
-export PIPELINES_BIN PIPELINES_DIR
-
-if [[ ! -x "${PIPELINES_BIN}" ]]; then
-	echo "PIPELINES_BIN not executable: ${PIPELINES_BIN} (run ./scripts/link-providers.sh and build pipelines)" >&2
-	exit 1
-fi
-if [[ ! -d "${PIPELINES_DIR}" ]]; then
-	echo "PIPELINES_DIR missing: ${PIPELINES_DIR} (run ./scripts/link-providers.sh)" >&2
-	exit 1
-fi
-
 cd "${root}"
 exec go tool wgo -cd "${mcp}" -file .go -file .html -file .css go run ./cmd/content-pipelines-mcp --config "${cfg}" "$@"

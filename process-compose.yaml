@@ -1,7 +1,7 @@
 # Hugo drafts+future, content-pipelines MCP, carousel-save.
 # Start: make serve
 # Requires process-compose, hugo, and go on PATH.
-# PIPELINES_BIN / PIPELINES_DIR point at providers/content-pipelines (symlink from scripts/link-providers.sh).
+# User-level MCP config supplies PIPELINES_BIN / PIPELINES_DIR and credential refs.
 # Go processes use `go tool wgo` so they rebuild when .go files change (MCP via scripts/serve-content-pipelines-mcp.sh).
 
 version: "0.5"
@@ -30,9 +30,6 @@ processes:
 
   content-pipelines-mcp:
     command: ./scripts/serve-process.sh ./scripts/serve-content-pipelines-mcp.sh
-    environment:
-      - "PIPELINES_BIN=providers/content-pipelines/bin/pipelines"
-      - "PIPELINES_DIR=providers/content-pipelines"
     availability:
       restart: on_failure
       backoff_seconds: 2

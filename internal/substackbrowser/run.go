@@ -321,7 +321,11 @@ func Run(parent context.Context, cfg Config) error {
 		if maxAttempts > 6 {
 			maxAttempts = 6
 		}
-		scheduleExpr, schedErr := ScheduleAfterContinueJS(cfg.Schedule)
+		// Headless UI ignores JS el.click on tag options; select tags with CDP mouse after schedule JS.
+		schedOpt := cfg.Schedule
+		publishTags := append([]string(nil), schedOpt.Tags...)
+		schedOpt.Tags = nil
+		scheduleExpr, schedErr := ScheduleAfterContinueJS(schedOpt)
 		if schedErr != nil {
 			return schedErr
 		}
@@ -408,9 +412,30 @@ func Run(parent context.Context, cfg Config) error {
 			if strings.TrimSpace(sres.Reason) != "" {
 				log.Println("substackbrowser: schedule notes:", strings.TrimSpace(sres.Reason))
 			}
+			if len(publishTags) > 0 {
+				LogTagCDPStart(len(publishTags))
+				if tagErr := AddPublishTagsCDP(pasteCtx, publishTags); tagErr != nil {
+					if attempt < maxAttempts {
+						log.Printf("substackbrowser: CDP tag select failed on attempt %d/%d: %v; retrying after recovery", attempt, maxAttempts, tagErr)
+						continue
+					}
+					if cfg.ScheduleDebugDOM {
+						p := strings.TrimSpace(cfg.ScheduleDebugDOMPath)
+						if p == "" {
+							p = DefaultScheduleDebugSnapshotPath()
+						}
+						if werr := WriteScheduleDebugSnapshot(pasteCtx, p, tagErr.Error()); werr != nil {
+							log.Printf("substackbrowser: schedule debug DOM not written: %v", werr)
+						} else {
+							log.Printf("substackbrowser: wrote schedule debug DOM after tag failure: %s", p)
+						}
+					}
+					return fmt.Errorf("substackbrowser: schedule tags: %w", tagErr)
+				}
+			}
 			log.Printf("substackbrowser: publish settings automation returned OK (section=%q, tags=%d, email_delivery=%v, schedule_fields=%v, attempts_used=%d)",
 				strings.TrimSpace(cfg.Schedule.SectionLabel),
-				len(cfg.Schedule.Tags),
+				len(publishTags),
 				cfg.Schedule.TickEmailSubstack,
 				strings.TrimSpace(cfg.Schedule.DateTimeLocal) != "" || strings.TrimSpace(cfg.Schedule.DateDisplay) != "",
 				attempt,
