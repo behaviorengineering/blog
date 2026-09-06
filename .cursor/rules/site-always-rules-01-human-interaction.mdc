@@ -5,7 +5,7 @@ description: >-
   asked; Substack sidecars; format-chat skill; named editorial workflows that
   skip Intent-First and Consultant. Triggers: revise this post, carousel,
   Facebook, LinkedIn, Substack, claims, video pick, Spanish translation,
-  format chat, content/.
+  essay, arc, essay arc, format chat, content/.
 ---
 
 # Site human interaction (always-rules-01 overlay)
@@ -20,6 +20,6 @@ Generic human interaction: `.cursor/rules/always-rules-01-human-interaction.mdc`
 
 MUST treat these as skill-named (run the skill; load neither Intent-First nor Consultant):
 
-- revise this post, make a carousel, Facebook post, LinkedIn post, Substack, claims, video pick, Spanish translation
+- revise this post, make a carousel, Facebook post, LinkedIn post, Substack, claims, video pick, Spanish translation, essay, arc, essay arc, recreate an arc
 
 Skip Consultant when a skill or rule already decides the shape (for example carousel JSON, claims front matter, no em dash, US English).
