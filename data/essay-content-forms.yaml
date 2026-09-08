@@ -1,0 +1,64 @@
+# Host-owned essay content_form pack for content-pipelines.
+# Loaded via essays.content_forms_path / MCP essay_content_forms_path / --content-forms.
+default: essay_argument
+forms:
+  essay_argument:
+    label: Free essay
+    guide: |
+      content_form=essay_argument (default thesis essay):
+      - Job: stanceful 600–800 word essay on a durable theme from the notes.
+      - Follow the selected reader journey; examples as evidence for a pattern.
+      - Close with a concrete author landing (fork / diagnostic question).
+      - No required Hugo bands.
+    required_bands: []
+
+  video:
+    label: Video pick (TL;DW)
+    aliases: [video_tldw]
+    guide: |
+      content_form=video (Hugo type video / TL;DW):
+      - Emit markdown bands in order: DESCRIPTION, SOWHAT (preferred), TLDW, optional CHAPTER_GUIDE.
+      - DESCRIPTION = lead that sells the watch; SOWHAT = payoff after watching.
+      - TLDW = surprise-led so-what article for non-watchers; not talk chronology.
+      - Under TLDW use ### hooks only.
+      - Proximity pillars (generator contract; evaluators enforce the same ideas):
+        1) No meta-discourse: stay inside the argument.
+           WEAK: "This reveals the core tension." / "Here we see why that matters."
+           STRONG: Name the trap in the reader's world and keep moving inside it.
+        2) Fused example + take: one breath, not show-then-tell.
+           WEAK: "[Sealed anecdote.] This reveals that X is true."
+           STRONG: Scene and judgment share the clause or the next.
+        3) No phantom critics: do not summon a chorus to look balanced or to pre-empt imaginary objection.
+           WEAK: "Critics will say…" / "Experts still reject this…"
+           WEAK: Close cites "the field" or "practitioners and institutions" so the reader hears both sides.
+           STRONG: Last proof hands off into a diagnostic question; no professional chorus. Notes mentioning those fields do not license a close hedge.
+        4) Paradox uncured: leave the bind standing; no neat moral rescue; no unattributed finish-line apology.
+           WEAK: "In the end both sides are right, so choose balance."
+           STRONG: Last proof hands off into a sharp insight, then one diagnostic question. No concession paragraph.
+    required_bands: [DESCRIPTION, TLDW]
+    optional_bands: [SOWHAT, CHAPTER_GUIDE]
+    criteria_notes: |
+      Friction/opposition acknowledgment is optional; do not invent critics.
+      Prefer surprise → so-what → diagnostic close.
+      Fail closed on meta-discourse, show-then-tell, phantom critics, paradox rescue, and finish-line thesis apology.
+
+  claims:
+    label: Claim post
+    guide: |
+      content_form=claims (Hugo type claims):
+      - Emit bands: CLAIM, THOUGHTS, GROUNDING.
+      - CLAIM = plain-language assertion (list-card cold-read).
+      - THOUGHTS = essay body; GROUNDING = short support + Source line shape.
+    required_bands: [CLAIM, THOUGHTS, GROUNDING]
+
+  cognitive_memetics:
+    label: Cognitive-Memetics
+    guide: |
+      content_form=cognitive_memetics:
+      - First band CM_SUBTYPE with value sayings or panel.
+      - sayings: DESCRIPTION (teaser), TLDR, FLUFF (Context).
+      - panel: DESCRIPTION (teaser), optional BODY article.
+      - Prefer sayings for short vernacular; panel for strip+narrative.
+      - Operator step focus may force subtype. For long free prose use essay_argument instead.
+    required_bands: [CM_SUBTYPE, DESCRIPTION]
+    optional_bands: [TLDR, FLUFF, BODY]
