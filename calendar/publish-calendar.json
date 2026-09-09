@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-02T15:54:31Z",
+  "generatedAt": "2026-09-09T14:36:30Z",
   "channels": [
     "site-en",
     "site-es",
@@ -4875,6 +4875,34 @@
         },
         "site-es": {
           "status": "missing"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "x-minds/2026-09-10-the-invisible-prototype",
+      "section": "x-minds",
+      "title": "The Invisible Prototype",
+      "type": "video",
+      "categories": [
+        "X-Minds"
+      ],
+      "planned": "2026-09-10",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
         },
         "substack-en": {
           "status": "missing"
