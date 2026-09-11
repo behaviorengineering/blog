@@ -17,10 +17,15 @@ forms:
     aliases: [video_tldw]
     guide: |
       content_form=video (Hugo type video / TL;DW):
-      - Emit markdown bands in order: DESCRIPTION, SOWHAT (preferred), TLDW, optional CHAPTER_GUIDE.
-      - DESCRIPTION = lead that sells the watch; SOWHAT = payoff after watching.
-      - TLDW = surprise-led so-what article for non-watchers; not talk chronology.
-      - Under TLDW use ### hooks only.
+      - Publish shape for Hugo: DESCRIPTION, SOWHAT, TLDW, optional CHAPTER_GUIDE.
+      - Composition Gate shell maps to those bands (keep ## Title / ## Unknown yet / ## Will know / ## Hook / ## Essay block / ## Close for review):
+        - ## Unknown yet = DESCRIPTION: 3–4 cold-readable novelty open loops that sell pressing play. Not topic-gap lines ("why tools fail"); not a thesis paragraph.
+        - ## Will know = SOWHAT: one payoff paragraph ("what you will know after").
+        - ## Hook + ## Essay block + ## Close = TLDW: thesis-first so-what article for non-watchers; one accruing claim with evidence. Not talk chronology; not a novelty or surprise stack.
+      - Also emit ### DESCRIPTION, ### SOWHAT, and ### TLDW once in the assembled prose (label those sections) so required-band checks can see them.
+      - Under TLDW body sections use ### hooks only (inside blocks / close as needed).
+      - CHAPTER_GUIDE (when present, usually polish/export or notes): timestamp jump map with plain chapter labels for landing in the talk. Not novelty slogans; not a second teaser list.
+      - Spine/arc: thesis-capable through-line; novelty is a DESCRIPTION / Unknown-yet job, not the spine engine.
       - Proximity pillars (generator contract; evaluators enforce the same ideas):
         1) No meta-discourse: stay inside the argument.
            WEAK: "This reveals the core tension." / "Here we see why that matters."
@@ -35,11 +40,12 @@ forms:
         4) Paradox uncured: leave the bind standing; no neat moral rescue; no unattributed finish-line apology.
            WEAK: "In the end both sides are right, so choose balance."
            STRONG: Last proof hands off into a sharp insight, then one diagnostic question. No concession paragraph.
-    required_bands: [DESCRIPTION, TLDW]
-    optional_bands: [SOWHAT, CHAPTER_GUIDE]
+    required_bands: [DESCRIPTION, SOWHAT, TLDW]
+    optional_bands: [CHAPTER_GUIDE]
     criteria_notes: |
       Friction/opposition acknowledgment is optional; do not invent critics.
-      Prefer surprise → so-what → diagnostic close.
+      Novelty belongs in DESCRIPTION (Gate: Unknown yet); TLDW is thesis-first (Gate: Hook + blocks + Close); CHAPTER_GUIDE orients with timestamps when present.
+      Close with a diagnostic question; do not reward surprise-led body stacks.
       Fail closed on meta-discourse, show-then-tell, phantom critics, paradox rescue, and finish-line thesis apology.
 
   claims:
