@@ -5,15 +5,15 @@ heading_code: W22
 project: Reptilocracy 🦎🏛️
 title: The Alarm Worked
 type: sayings
-description: "**Ethics Commission** and **Judicial Review** still hang in view. The check that could force a search is gone."
+description: "The company removed the only **canary** that actually signaled danger. Now they leave the empty cage on the wall to prove they are still watching."
 tldr: |
-  A working **Leader Fitness Assessment** is emptied because it kept forcing a leadership search. The other labeled cages stay occupied.
+  They killed the **alarm** because it was too loud. That gives them **plausible deniability**: the oversight gear is still on the wall.
 fluff: |
-  When the **Leader Fitness Assessment** keeps going off, the first institutional move is to open that cage and leave it empty. **Corporate Governance**, **Judicial Review**, **Media Scrutiny**, and **Ethics Commission** remain on display.
+  The **canary** kept dying every time the air got bad. Instead of fixing the air, the bosses took the bird out and called it a **process fix** to stop the noise.
 
-  The empty cage is filed as a process fix. The **executive suite** keeps the cycle because the check that interrupted tenure is gone.
+  The cage is empty now. They left the labels on the wall so they can tell the board the mine is still being monitored.
 
-  The decisive cage is marked **Vacant**.
+  The alarm worked. That was the problem.
 draft: false
 
 featuredImage: "the-alarm-worked.webp"
