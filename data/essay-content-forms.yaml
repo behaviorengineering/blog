@@ -1,6 +1,18 @@
 # Host-owned essay content_form pack for content-pipelines.
 # Loaded via essays.content_forms_path / MCP essay_content_forms_path / --content-forms.
 default: essay_argument
+
+# Applies to every form (prepended to form guide / criteria_notes).
+shared_guide: |
+  Shared voice (all content_form values):
+  - Train-ride / commute read: short-to-medium sentences, concrete scenes, plain words. Talk to one person on the train, not a seminar or journal.
+  - WEAK: "The foundational history of X rests on a skewed sample." / "This historical oversight turned a subset into a universal definition." / "systemic blind spot" / "diagnostic architecture" / "codified a narrow definition"
+  - STRONG: Name the scene (classroom, toy, exhaustion); keep jargon only when naming a real construct, then gloss it in the same breath.
+  - Prefer concrete nouns and verbs over stacked abstractions. No manifesto "we must rebuild the framework" closes unless the form asks for a policy landing.
+
+shared_criteria_notes: |
+  Voice must pass a commute test: readable on a train, not an academic paper. Fail lecture cadence, stacked abstractions, and seminar diction.
+
 forms:
   essay_argument:
     label: Free essay
@@ -17,10 +29,16 @@ forms:
     aliases: [video_tldw]
     guide: |
       content_form=video (Hugo type video / TL;DW):
-      - Emit markdown bands in order: DESCRIPTION, SOWHAT (preferred), TLDW, optional CHAPTER_GUIDE.
-      - DESCRIPTION = lead that sells the watch; SOWHAT = payoff after watching.
-      - TLDW = surprise-led so-what article for non-watchers; not talk chronology.
-      - Under TLDW use ### hooks only.
+      - Publish shape for Hugo: DESCRIPTION, SOWHAT, TLDW, optional CHAPTER_GUIDE.
+      - Composition Gate shell maps to those bands (keep ## Title / ## Unknown yet / ## Will know / ## Hook / ## Essay block / ## Close for review):
+        - ## Unknown yet = DESCRIPTION: 3–4 cold-readable novelty open loops that sell pressing play. Not topic-gap lines ("why tools fail"); not a thesis paragraph.
+        - ## Will know = SOWHAT: one payoff paragraph ("what you will know after").
+        - ## Hook + ## Essay block + ## Close = TLDW: thesis-first so-what article for non-watchers; one accruing claim with evidence. Not talk chronology; not a novelty or surprise stack.
+      - Also emit ### DESCRIPTION, ### SOWHAT, and ### TLDW once in the assembled prose (label those sections) so required-band checks can see them.
+      - Under TLDW body sections use ### hooks only (inside blocks / close as needed).
+      - CHAPTER_GUIDE (when present, usually polish/export or notes): timestamp jump map with plain chapter labels for landing in the talk. Not novelty slogans; not a second teaser list.
+      - Spine/arc: thesis-capable through-line; novelty is a DESCRIPTION / Unknown-yet job, not the spine engine.
+      - Audience cue (x-minds / mixed-wiring): parents and late-discovery readers; still obey shared commute voice.
       - Proximity pillars (generator contract; evaluators enforce the same ideas):
         1) No meta-discourse: stay inside the argument.
            WEAK: "This reveals the core tension." / "Here we see why that matters."
@@ -35,11 +53,12 @@ forms:
         4) Paradox uncured: leave the bind standing; no neat moral rescue; no unattributed finish-line apology.
            WEAK: "In the end both sides are right, so choose balance."
            STRONG: Last proof hands off into a sharp insight, then one diagnostic question. No concession paragraph.
-    required_bands: [DESCRIPTION, TLDW]
-    optional_bands: [SOWHAT, CHAPTER_GUIDE]
+    required_bands: [DESCRIPTION, SOWHAT, TLDW]
+    optional_bands: [CHAPTER_GUIDE]
     criteria_notes: |
       Friction/opposition acknowledgment is optional; do not invent critics.
-      Prefer surprise → so-what → diagnostic close.
+      Novelty belongs in DESCRIPTION (Gate: Unknown yet); TLDW is thesis-first (Gate: Hook + blocks + Close); CHAPTER_GUIDE orients with timestamps when present.
+      Close with a diagnostic question; do not reward surprise-led body stacks.
       Fail closed on meta-discourse, show-then-tell, phantom critics, paradox rescue, and finish-line thesis apology.
 
   claims:

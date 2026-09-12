@@ -2,10 +2,10 @@
 name: site-video-content
 description: >-
   Authors and edits Hugo posts with type video: YouTube embed via youtube_id or
-  body shortcode, description as lead, optional sowhat (teaser/payoff), list-row
+  body shortcode, description as novelty lead, sowhat payoff, list-row
   embed plus fullPost CTA, categories (often Mind-Infrastructure,
   Human-Condition, or Social-Protocols by topic), tags, optional featured image for cards, and a
-  TLDR-style body (so-what article) for text-first readers and feed skims, while the lead still invites a full watch. Use when editing or adding video picks, when
+  thesis-first TLDR body (so-what article) for text-first readers and feed skims, while the lead still invites a full watch. Use when editing or adding video picks, when
   the user mentions type video, youtube_id, video archetype, curated videos, or
   chapter notes and summaries.
 ---
@@ -14,7 +14,9 @@ description: >-
 
 ## What this type is for
 
-**Video** posts pair a **YouTube embed** with a **stand-alone article** below it. **Primary goal:** the talk is worth watching; **`description`** and hooks should **sell the play button**. **Parallel goal:** many people **read first** (feeds, quick tabs, preview-then-decide) and some **never** press play, so the **body** still delivers argument, mechanism, and **so what** in text. The embed remains the full experience you recommend.
+**Video** posts pair a **YouTube embed** with a **stand-alone article** below it. **Primary goal:** the talk is worth watching; **`description`** novelty open loops should **sell the play button**. **Parallel goal:** many people **read first** (feeds, quick tabs, preview-then-decide) and some **never** press play, so the **body** still delivers a **thesis-first** argument, mechanism, and **so what** in text. Voice follows the site-wide **commute test** in **`.cursor/rules/site-content-markdown-writing.mdc`** → **Voice while drafting** (and essay pack **`shared_guide`**). The embed remains the full experience you recommend.
+
+**Essay MCP / `content_form=video`:** The same band split (DESCRIPTION novelty, SOWHAT payoff, thesis-first TLDW, optional CHAPTER_GUIDE jump map) is the host pack in **`data/essay-content-forms.yaml`** (`forms.video`). MCP spine/arc/composition/polish inject that guide. Composition Gate review still uses **Unknown yet / Will know / Hook / blocks / Close**; those fields map to DESCRIPTION / SOWHAT / TLDW per the pack. Keep this skill and that YAML aligned; do not put per-piece band rules only in WIP notes.
 
 **UI (this repo):** `layouts/video/single.html` renders **title** → **subtitle** (optional) → **meta** → **featured image** only if there is **no** `youtube_id` → **tags** → optional **TOC** → **lead** (see below) → **embed** (when `youtube_id` set) → **TL;DW** (body TLDR) → **Chapter Guide** (when present) → optional **Keep reading** (`related` or shared-tag fallback) → optional footer.
 
@@ -33,10 +35,10 @@ description: >-
 | Field | Role |
 |-------|------|
 | **`type`** | Must be **`video`**. |
-| **`description`** | **Lead** above the player: why the reader should watch (one tight paragraph, bullets, or a few lines). On the **single**, shown before the embed; with **`sowhat`**, it appears under **“What you probably do not know yet.”** Also drives the **list row** aside. |
-| **`sowhat`** | Optional **payoff** after the teaser: one short paragraph on what the viewer gains (overarching value). On single and list, rendered after **`description`** under **“What you will know after.”** When **`sowhat`** is set, the layout also adds **“What you probably do not know yet”** above **`description`** so teaser and payoff stay paired. |
+| **`description`** | **Novelty lead** above the player (Hugo: **“What you probably do not know yet”** when paired with **`sowhat`**): 3–4 cold-readable **open loops** that sell pressing play. Not topic-gap lines (“why tools fail”); not a thesis paragraph. Also drives the **list row** aside. |
+| **`sowhat`** | **Required payoff** in practice (essay MCP requires the SOWHAT band): one short paragraph on what the viewer gains (**“What you will know after”**). On single and list, rendered after **`description`**. When set, the layout adds **“What you probably do not know yet”** above **`description`**. |
 | **`youtube_id`** | The id from `https://www.youtube.com/watch?v=THIS` (or the `v=` value in a short URL). The layout injects Hugo’s **`youtube`** shortcode into **`.video-page__embed`**. Alias front matter key **`youtube`** is accepted. |
-| **Body** | **TLDR / “so what” article** **below** the embed: your summary of what the video argues, why it matters, named ideas, caveats, and links. Use **`###`** hook sections so skimmers can scan (see **Body headings**; do not use **`##`** in the site body). Optional **Chapter Guide** table at the end for people who read first then jump to a moment. Default intent: **substantive** text backup, not filler, because plenty of traffic never plays the file. |
+| **Body** | **Thesis-first TLDR / “so what” article** **below** the embed: one accruing claim with evidence, mechanisms, examples, and your angle. Use **`###`** hook sections so skimmers can scan (see **Body headings**; do not use **`##`** in the site body). **Not** talk chronology and **not** a novelty stack (novelty lives in **`description`**). Optional **Chapter Guide** table at the end for jump-in after reading. Default intent: **substantive** text backup, because plenty of traffic never plays the file. |
 | **`subtitle`** | Optional second line under the **`title`** on the **single** page only (not list rows or home tiles). See **Subtitle (optional)** below. |
 | **`categories`** | Taxonomy hubs. Often **`Mind-Infrastructure`**, **`Human-Condition`**, **`Social-Protocols`**, or **`X-Minds`** (or **`Reality-Protocols`** under claims) by topic; pick what matches the post (see other posts in that section). For **`content/human-condition/`**, you MAY use **`Human-Condition`** plus **exactly one** theme hub (second term), same pattern as Cognitive-Memetics umbrellas (**`.cursor/skills/site-claims-content/SKILL.md`** → **Human-Condition theme hubs**). For **`content/x-minds/`**, use **`X-Minds`** first. |
 | **`related`** | Optional **keep-reading** paths (Hugo `GetPage` strings). Layout: **one** claims/video banner on top, then up to **two** sayings/panel on the next row. Empty or omitted: layout fills from **shared tags**. MUST **not** dump related links into the TLDR body. See **`layouts/partials/related-keep-reading.html`**. |
@@ -81,12 +83,12 @@ description: >-
 
 ## Chapter Guide (optional)
 
-For long videos (>15m) or dense talks, include a **Chapter Guide** at the bottom of the body.
+For long videos (>15m) or dense talks, include a **Chapter Guide** at the bottom of the body. Job: **timestamp jump map** so readers can land in the talk after the TL;DW. **MUST NOT** write novelty slogans or second-teaser lines as chapter titles; keep plain, orienting labels.
 - Use **`### Chapter Guide`** (Spanish: **`### Guía de capítulos`**) in the markdown source so the layout can split the table into its own **`h2`** band after **TL;DW**. Do **not** add a duplicate **`## Chapter Guide`** heading for display; the template renders **`h2` Chapter Guide** (📑).
 - Use a **2-column Markdown table** so the timecodes align.
 - Link directly to the YouTube timestamp (e.g., `&t=694`).
-- Keep chapter titles descriptive but concise.
-- This helps readers navigate the "infrastructure" of the talk without watching the whole 3-hour video.
+- Keep chapter titles descriptive but concise (what that segment is about, not a curiosity hook).
+- This helps readers navigate the infrastructure of the talk without watching the whole long video.
 
 ### Chapter Guide formatting (this repo)
 
@@ -128,10 +130,10 @@ Do **not** set **`youtube_id`** **and** repeat the same id in a body shortcode (
 
 | Part | Role |
 |------|------|
-| **`description`** | **Hooks** for list and card views: stakes, surprise, or tension, written so **pressing play feels worthwhile**. Bullets are fine. MUST read well **above** the player and in **feeds**; it is **not** the full article (that lives in the body). **MUST pass the cold-read gate** (below). |
-| **`sowhat`** | Optional **one-paragraph** umbrella payoff (list + single). Use when you want a tight line under the hooks; the **body** still does the real TLDR work. **MUST pass the cold-read gate** when present. |
-| **Body** | **So-what article / TLDR** after the embed: structured prose (**`###`** hook sections), main claims, mechanisms, examples, and your angle. A reader who never presses play should leave with the gist. Use **active, plain** explanations; name constructs when they matter. Short **speaker quotes** MAY punctuate a section. **`###` headings MAY stay punchy.** Body paragraphs MUST NOT restack the section hook in metaphor shells or industry verbs (fail: "sells the blend as 'me'", "steer the rewrite", "keeps assembling it"). Patterns: **Metaphor-shell restack** and **Industry-verb shells** in **`.cursor/skills/site-revise-post/reference.md`**. |
-| **Chapter Guide** | Optional **end** table: timestamps for people who want to dip into the video after reading your summary. |
+| **`description`** | **Novelty open loops** for list and card views: concrete surprises or stakes that make **pressing play feel worthwhile**. Bullets are fine (about 3–4). MUST read well **above** the player and in **feeds**; it is **not** the full article. **MUST pass the cold-read gate** (below). |
+| **`sowhat`** | **One-paragraph** umbrella payoff (list + single). Required for essay MCP video form; strongly preferred on published pages. The **body** still does the real TLDR work. **MUST pass the cold-read gate**. |
+| **Body** | **Thesis-first** so-what article / TLDR after the embed: structured prose (**`###`** hook sections), one accruing claim, mechanisms, examples, and your angle. A reader who never presses play should leave with the gist. Use **active, plain** explanations; name constructs when they matter. Short **speaker quotes** MAY punctuate a section. **`###` headings MAY stay punchy.** Body paragraphs MUST NOT restack the section hook in metaphor shells or industry verbs (fail: "sells the blend as 'me'", "steer the rewrite", "keeps assembling it"). Patterns: **Metaphor-shell restack** and **Industry-verb shells** in **`.cursor/skills/site-revise-post/reference.md`**. |
+| **Chapter Guide** | Optional **end** table: timestamps + plain chapter labels for jumping into the video after the summary. Not novelty slogans. |
 
 ## Cold-read gate (`description` + `sowhat`) (MUST)
 
@@ -140,9 +142,9 @@ Do **not** set **`youtube_id`** **and** repeat the same id in a body shortcode (
 **`description`** and **`sowhat`** decide whether you **capture** the reader or they **pass**.
 
 - On **feeds and list rows**, most people never open the post. They only see **`title`**, **`description`**, and (when set) **`sowhat`**. If a line does not make sense in a few seconds, they scroll on. The body and the video never get a chance.
-- **`description`** = **capture the click** (why open this page or press play).
+- **`description`** = **capture the click** with **novelty open loops** (why open this page or press play).
 - **`sowhat`** = **capture the stay** (what they get if they read or watch; why it is worth their time).
-- The **body** is for people who already said yes. It must stand alone for text-first readers, but it cannot rescue opaque list copy.
+- The **body** is for people who already said yes. It must stand alone as a **thesis-first** TLDR for text-first readers, but it cannot rescue opaque list copy.
 
 **Success:** A stranger understands each line and feels a reason to open or keep going. **Failure:** They need the essay, the video, or your private metaphors to decode the line.
 
@@ -179,8 +181,9 @@ See **`.cursor/skills/site-revise-post/SKILL.md`** Step 1 and Step 3 for the rev
 
 - Make **watching** feel like the natural next step (strong lead, concrete payoff, why this speaker or framing).
 - Write the **body** so it **stands alone** for text-first visitors, without implying “you failed if you did not watch.”
-- Keep **`description`** as **hooks**, not a duplicate of the whole body.
+- Keep **`description`** as **novelty hooks**, not a duplicate of the whole body.
 - Run the **cold-read gate** on **`description`** and **`sowhat`** on every new or updated video post (not optional).
+- Prefer a filled **`sowhat`** on every video pick (essay MCP `content_form=video` requires the SOWHAT band).
 - Use **educational, active voice**. Explain terms in plain language when you introduce them. Body, `description`, and `sowhat` MUST follow **Explanatory prose** in **`.cursor/rules/site-content-markdown-writing.mdc`** (claim before interpretation; 2–4 sentence paragraphs; no rhetorical fragment stacks; no **Metaphor-shell restack**; no **Industry-verb shells**).
 
 **MUST NOT**
@@ -209,9 +212,9 @@ Posts are normal pages under a section folder, for example:
 ## Authoring workflow
 
 1. Create with **`hugo new content/<section>/<slug>/index.md --kind video`** (archetype: **`archetypes/video.md`**).
-2. Set **`title`**, **`description`** (lead), **`youtube_id`**, **`categories`**, **`tags`**, **`draft`**, optional **`sowhat`** (add the key in front matter if you use teaser/payoff; the archetype does not include it by default), optional **`subtitle`** when **Subtitle (optional)** applies, and optional featured image resource.
+2. Set **`title`**, **`description`** (novelty lead), **`sowhat`** (payoff; add the key in front matter; the archetype may omit it by default), **`youtube_id`**, **`categories`**, **`tags`**, **`draft`**, optional **`subtitle`** when **Subtitle (optional)** applies, and optional featured image resource.
 3. **Recommend `related`:** after tags, search for up to **two** **cognitive-memetics** sayings or panels that share the mechanism or a punchy parallel; MAY add **one** other claim or video. Write Hugo paths into **`related`**. If none fit, leave empty for tag fallback. MUST **not** paste related links into the TLDR body.
-4. Write the **body** as the **TLDR / so-what article** below the embed (see **Lead, TLDR body, and optional Chapter Guide** above). Use **hook `###` headings** per **`.cursor/skills/site-revise-hooks/SKILL.md`**. Add **Chapter Guide** when the talk is long or dense.
+4. Write the **body** as the **thesis-first TLDR / so-what article** below the embed (see **Lead, TLDR body, and optional Chapter Guide** above). Use **hook `###` headings** per **`.cursor/skills/site-revise-hooks/SKILL.md`**. Add **Chapter Guide** (orienting labels, not novelty slogans) when the talk is long or dense.
 5. If you maintain **`substack.md`**, copy the **Chapter Guide** table into the sidecar per **`.cursor/skills/site-substack-post/SKILL.md`**.
 6. If you maintain **`linkedin.txt`**, add the chapter outline per **`.cursor/skills/site-linkedin-post/SKILL.md`**.
 7. If you maintain **`facebook-en.txt`** / **`facebook-es.txt`**, add the locale outline per **`.cursor/skills/site-facebook-post/SKILL.md`**.
