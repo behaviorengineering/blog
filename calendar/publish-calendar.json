@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-12T13:05:19Z",
+  "generatedAt": "2026-09-12T16:24:22Z",
   "channels": [
     "site-en",
     "site-es",
@@ -4984,6 +4984,35 @@
         },
         "linkedin": {
           "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "human-condition/2026-09-15-the-joy-of-doing-wrong",
+      "section": "human-condition",
+      "title": "The Joy of Doing Wrong",
+      "type": "video",
+      "categories": [
+        "Human-Condition",
+        "Mental-Processes"
+      ],
+      "planned": "2026-09-15",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "missing"
         },
         "site-en": {
           "status": "present"
