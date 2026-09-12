@@ -1,6 +1,18 @@
 # Host-owned essay content_form pack for content-pipelines.
 # Loaded via essays.content_forms_path / MCP essay_content_forms_path / --content-forms.
 default: essay_argument
+
+# Applies to every form (prepended to form guide / criteria_notes).
+shared_guide: |
+  Shared voice (all content_form values):
+  - Train-ride / commute read: short-to-medium sentences, concrete scenes, plain words. Talk to one person on the train, not a seminar or journal.
+  - WEAK: "The foundational history of X rests on a skewed sample." / "This historical oversight turned a subset into a universal definition." / "systemic blind spot" / "diagnostic architecture" / "codified a narrow definition"
+  - STRONG: Name the scene (classroom, toy, exhaustion); keep jargon only when naming a real construct, then gloss it in the same breath.
+  - Prefer concrete nouns and verbs over stacked abstractions. No manifesto "we must rebuild the framework" closes unless the form asks for a policy landing.
+
+shared_criteria_notes: |
+  Voice must pass a commute test: readable on a train, not an academic paper. Fail lecture cadence, stacked abstractions, and seminar diction.
+
 forms:
   essay_argument:
     label: Free essay
@@ -26,6 +38,7 @@ forms:
       - Under TLDW body sections use ### hooks only (inside blocks / close as needed).
       - CHAPTER_GUIDE (when present, usually polish/export or notes): timestamp jump map with plain chapter labels for landing in the talk. Not novelty slogans; not a second teaser list.
       - Spine/arc: thesis-capable through-line; novelty is a DESCRIPTION / Unknown-yet job, not the spine engine.
+      - Audience cue (x-minds / mixed-wiring): parents and late-discovery readers; still obey shared commute voice.
       - Proximity pillars (generator contract; evaluators enforce the same ideas):
         1) No meta-discourse: stay inside the argument.
            WEAK: "This reveals the core tension." / "Here we see why that matters."

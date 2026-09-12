@@ -14,7 +14,7 @@ description: >-
 
 ## What this type is for
 
-**Video** posts pair a **YouTube embed** with a **stand-alone article** below it. **Primary goal:** the talk is worth watching; **`description`** novelty open loops should **sell the play button**. **Parallel goal:** many people **read first** (feeds, quick tabs, preview-then-decide) and some **never** press play, so the **body** still delivers a **thesis-first** argument, mechanism, and **so what** in text. The embed remains the full experience you recommend.
+**Video** posts pair a **YouTube embed** with a **stand-alone article** below it. **Primary goal:** the talk is worth watching; **`description`** novelty open loops should **sell the play button**. **Parallel goal:** many people **read first** (feeds, quick tabs, preview-then-decide) and some **never** press play, so the **body** still delivers a **thesis-first** argument, mechanism, and **so what** in text. Voice follows the site-wide **commute test** in **`.cursor/rules/site-content-markdown-writing.mdc`** → **Voice while drafting** (and essay pack **`shared_guide`**). The embed remains the full experience you recommend.
 
 **Essay MCP / `content_form=video`:** The same band split (DESCRIPTION novelty, SOWHAT payoff, thesis-first TLDW, optional CHAPTER_GUIDE jump map) is the host pack in **`data/essay-content-forms.yaml`** (`forms.video`). MCP spine/arc/composition/polish inject that guide. Composition Gate review still uses **Unknown yet / Will know / Hook / blocks / Close**; those fields map to DESCRIPTION / SOWHAT / TLDW per the pack. Keep this skill and that YAML aligned; do not put per-piece band rules only in WIP notes.
 
