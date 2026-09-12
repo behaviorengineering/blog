@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-09T14:36:30Z",
+  "generatedAt": "2026-09-12T13:05:19Z",
   "channels": [
     "site-en",
     "site-es",
@@ -4868,13 +4868,13 @@
           "status": "missing"
         },
         "linkedin": {
-          "status": "missing"
+          "status": "present"
         },
         "site-en": {
           "status": "present"
         },
         "site-es": {
-          "status": "missing"
+          "status": "present"
         },
         "substack-en": {
           "status": "missing"
@@ -4954,13 +4954,13 @@
           "status": "missing"
         },
         "linkedin": {
-          "status": "missing"
+          "status": "present"
         },
         "site-en": {
           "status": "present"
         },
         "site-es": {
-          "status": "missing"
+          "status": "present"
         },
         "substack-en": {
           "status": "missing"
@@ -5012,13 +5012,13 @@
           "status": "missing"
         },
         "linkedin": {
-          "status": "missing"
+          "status": "present"
         },
         "site-en": {
           "status": "present"
         },
         "site-es": {
-          "status": "missing"
+          "status": "present"
         },
         "substack-en": {
           "status": "missing"
@@ -5099,13 +5099,13 @@
           "status": "missing"
         },
         "linkedin": {
-          "status": "missing"
+          "status": "present"
         },
         "site-en": {
           "status": "present"
         },
         "site-es": {
-          "status": "missing"
+          "status": "present"
         },
         "substack-en": {
           "status": "missing"
@@ -5186,13 +5186,13 @@
           "status": "missing"
         },
         "linkedin": {
-          "status": "missing"
+          "status": "present"
         },
         "site-en": {
           "status": "present"
         },
         "site-es": {
-          "status": "missing"
+          "status": "present"
         },
         "substack-en": {
           "status": "missing"
