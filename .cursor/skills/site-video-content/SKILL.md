@@ -18,7 +18,7 @@ description: >-
 
 **Essay MCP / `content_form=video`:** The same band split (DESCRIPTION novelty, SOWHAT payoff, thesis-first TLDW, optional CHAPTER_GUIDE jump map) is the host pack in **`data/essay-content-forms.yaml`** (`forms.video`). MCP spine/arc/composition/polish inject that guide. Composition Gate review still uses **Unknown yet / Will know / Hook / blocks / Close**; those fields map to DESCRIPTION / SOWHAT / TLDW per the pack. Keep this skill and that YAML aligned; do not put per-piece band rules only in WIP notes.
 
-**UI (this repo):** `layouts/video/single.html` renders **title** → **subtitle** (optional) → **meta** → **featured image** only if there is **no** `youtube_id` → **tags** → optional **TOC** → **lead** (see below) → **embed** (when `youtube_id` set) → **TL;DW** (body TLDR) → **Chapter Guide** (when present) → optional **Keep reading** (`related` or shared-tag fallback) → optional footer.
+**UI (this repo):** `layouts/video/single.html` renders **title** → **subtitle** (optional) → **meta** → **featured image** only if there is **no** `youtube_id` → **tags** → optional **TOC** → **lead** (see below) → **embed** (when `youtube_id` set) → **TL;DW** (body TLDR) → **Chapter Guide** (when present) → **piece footer** (updated date, tags + shares on one row, prev/next) → optional **Related** shelf (`related` or shared-tag fallback; RELATED band above the cards) → **Back | Home**.
 
 **Lead on the single (order):** If **`sowhat`** is set, **`description`** is shown under fixed **`h3`** **“What you probably do not know yet”** (🎬), then **`sowhat`** under **`h3`** **“What you will know after”** (🎯). If **`sowhat`** is omitted, **`description`** has no extra heading above it. Both fields are markdownified.
 

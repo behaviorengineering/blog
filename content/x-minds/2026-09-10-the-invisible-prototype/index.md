@@ -4,11 +4,12 @@ date: '2026-09-10T01:00:00+11:00'
 title: "The Invisible Prototype"
 type: video
 description: |
-  - For decades, the autism diagnostic blueprint treated **young boys with overt, disruptive behavior** as the universal yardstick.
-  - Girls and women with the same wiring often **pass through the filter**: quiet, internalized patterns get read as personality quirks or social eccentricity.
-  - Many survive by **camouflaging**: a constructed persona that smooths sensory and social strain, and opens a gap between inner life and what others see.
+  - Why a 1920s discovery was buried for decades.
+  - The specific social camouflage that hides autism in plain sight.
+  - How standard diagnostic tests ignore female-typical interests.
+  - The hidden cost of being mislabeled for a lifetime.
 sowhat: |
-  When tools only catch **loud disruption**, quiet compensation looks like the absence of autism. A fuller model tracks how different brains manage social and sensory unpredictability, including the exhausting work that never shows as classroom noise.
+  The medical world's reliance on a single, male-coded blueprint creates a massive blind spot, leaving millions of women to navigate a world they were never properly seen in.
 draft: false
 
 subtitle: "Gina Rippon on autism diagnosis, masking, and the male blueprint"
@@ -34,19 +35,19 @@ Autism research rests on a narrow, gendered history. In the 1920s, psychiatrist 
 
 ### Jack gets flagged; Chloe gets "quirks"
 
-Diagnostic tools function as filters that only catch specific types of noise. In classrooms, the filter often relies on overt, disruptive behaviors to trigger an assessment. A teacher watching a boy named Jack display repetitive or intense behaviors will likely flag him for autism. That same teacher, watching a girl named Chloe show identical patterns, often dismisses them as personality quirks or social eccentricity. The model looks for the loud, visible disruptions characteristic of the **male prototype**. Because the criteria favor those high-visibility signals, quiet, internalized presentations of girls pass through the system undetected.
+A teacher watches a boy named Jack disrupt the classroom and immediately flags him for an autism assessment. In the next seat, a girl named Chloe sits quietly, follows every social cue, and stays engaged with her books. Diagnostic tools function as filters that only catch specific types of noise. They look for disruptive patterns or intense, socially isolated interests like trains or mechanical parts. When a girl shows a deep, focused interest in something socially acceptable, like animals or specific authors, the system fails to flag it. The criteria prioritize the "acting out" seen in boys and overlook the internalized, quiet intensity common in girls. This design ensures that anyone who maintains social order remains invisible to the diagnostic machine.
 
 ### Camouflage buys belonging and spends the self
 
-Pressure to fit social norms pushes many autistic girls into a grueling process of **camouflaging**. A young girl might consciously buy the "wrong" My Little Pony toys just to secure a place in a peer group, trading authentic interests for social survival. Masking works as a cognitive compensation strategy: it reduces the friction of social unpredictability. It helps her navigate the immediate environment, and the cost is a profound, lifelong disconnect from her own needs. The constant performance leads to exhaustion and mental health crises when the energy required to maintain the persona outstrips her capacity to cope.
+The pressure to fit in forces many autistic women into a life of constant, exhausting **camouflage**. A young girl might buy the "wrong" My Little Pony just to blend in with her peers, a small act of survival that eventually scales into a lifelong habit of masking. This masking hides the autism from doctors while creating a massive internal toll. Without an accurate label, these women often face years of inappropriate treatments for anxiety or eating disorders. They spend their lives managing a neurological reality that the medical world refuses to name, trading their mental health for a seat at a table where they are never truly understood.
 
 ### Loud signals are not the whole spectrum
 
-The current diagnostic framework functions as a narrow lens that only captures a specific frequency of behavior. By centering the male prototype, the system treats the absence of overt disruption as the absence of autism. That reliance on visible, disruptive signals ignores the profound internal labor of women who navigate the world through constant, exhausting compensation.
+The current diagnostic system functions as a filter that only catches specific types of noise. It treats the absence of disruptive, male-coded behavior as a sign of typicality, ignoring the different ways autism actually manifests. This reliance on a single prototype mislabels survival strategies as personality flaws or mental illnesses.
 
-We need a model that recognizes autism as a spectrum of **internal experience**: how different brains manage social and sensory unpredictability, including presentations that never show as classroom disruption.
+We need frameworks that account for internalizing behaviors and the high cognitive cost of social camouflage. Diagnostic tools must recognize intense, socially acceptable interests as valid neurological signatures.
 
-When you look at a diagnostic tool or a behavioral standard, ask yourself: does this measure the presence of a condition, or does it simply measure how loudly that condition expresses itself?
+How can we design a diagnostic model that values the quiet, internal reality of the person as much as the loud, external behavior of the prototype?
 
 ### Chapter Guide
 

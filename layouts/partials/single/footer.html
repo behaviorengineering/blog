@@ -29,27 +29,23 @@
             </div>
             {{- end -}}
         </div>
+        {{- if $params.linktomarkdown -}}
         <div class="post-info-line">
             <div class="post-info-md">
-                {{- if $params.linktomarkdown -}}
-                    {{- with .OutputFormats.Get "markdown" -}}
-                        <span>
-                            <a class="link-to-markdown" href="{{ .RelPermalink }}" target="_blank">
-                                {{- T "readMarkdown" -}}
-                            </a>
-                        </span>
-                    {{- end -}}
+                {{- with .OutputFormats.Get "markdown" -}}
+                    <span>
+                        <a class="link-to-markdown" href="{{ .RelPermalink }}" target="_blank">
+                            {{- T "readMarkdown" -}}
+                        </a>
+                    </span>
                 {{- end -}}
             </div>
-            <div class="post-info-share">
-                <span>
-                    {{- partial "plugin/share.html" . -}}
-                </span>
-            </div>
         </div>
+        {{- end -}}
     </div>
 
-    <div class="post-info-more">
+    {{- /* Tags + shares above the piece-end rule. */ -}}
+    <div class="post-info-more post-info-more--tags-share">
         {{- if not (in (slice "claims" "panel" "sayings") .Type) -}}
         <section class="post-tags">
             {{- with .Params.tags -}}
@@ -62,9 +58,11 @@
             {{- end -}}
         </section>
         {{- end -}}
-        <section>
-            <span><a href="javascript:void(0);" onclick="window.history.back();">{{ T "back" }}</a></span>&nbsp;|&nbsp;<span><a href="{{ .Site.Home.RelPermalink }}">{{ T "home" }}</a></span>
-        </section>
+        <div class="post-info-share">
+            <span>
+                {{- partial "plugin/share.html" . -}}
+            </span>
+        </div>
     </div>
 
     <div class="post-nav">
@@ -118,11 +116,16 @@
             {{- $prevPage = .PrevInSection -}}
             {{- $nextPage = .NextInSection -}}
         {{- end -}}
-        {{- with $prevPage -}}
-            <a href="{{ .RelPermalink }}" class="prev" rel="prev" title="{{ .Title }}"><i class="fas fa-angle-left" aria-hidden="true"></i>{{ .Title | emojify }}</a>
-        {{- end -}}
-        {{ with $nextPage }}
-            <a href="{{ .RelPermalink }}" class="next" rel="next" title="{{ .Title }}">{{ .Title | emojify }}<i class="fas fa-angle-right" aria-hidden="true"></i></a>
-        {{- end -}}
+        {{- /* 50/50 columns so theme floats cannot collapse the row. */ -}}
+        <div class="post-nav__col post-nav__col--prev">
+            {{- with $prevPage -}}
+                <a href="{{ .RelPermalink }}" class="prev" rel="prev" title="{{ .Title }}"><i class="fas fa-angle-left" aria-hidden="true"></i>{{ .Title | emojify }}</a>
+            {{- end -}}
+        </div>
+        <div class="post-nav__col post-nav__col--next">
+            {{- with $nextPage -}}
+                <a href="{{ .RelPermalink }}" class="next" rel="next" title="{{ .Title }}">{{ .Title | emojify }}<i class="fas fa-angle-right" aria-hidden="true"></i></a>
+            {{- end -}}
+        </div>
     </div>
 </div>

@@ -93,11 +93,13 @@
 {{- end -}}
 
 {{- if or (gt (len $memetics) 0) (gt (len $features) 0) -}}
-<section class="related-keep-reading" aria-labelledby="related-keep-reading-heading">
-  <h2 id="related-keep-reading-heading" class="related-keep-reading__heading sayings-section-heading">
-    <span aria-hidden="true">🔗</span> {{ T "keepReading" }}
-  </h2>
-  <div class="related-keep-reading__layout" aria-label="{{ T "keepReading" }}">
+<section class="related-keep-reading" aria-labelledby="related-keep-reading-label">
+  <div class="related-keep-reading__layout">
+    <div class="related-keep-reading__band-sep related-keep-reading__band-sep--piece">
+      <span class="related-keep-reading__band-sep-line" aria-hidden="true"></span>
+      <span id="related-keep-reading-label" class="related-keep-reading__band-sep-label">{{ T "keepReadingRelated" }}</span>
+      <span class="related-keep-reading__band-sep-line" aria-hidden="true"></span>
+    </div>
     {{- range $features -}}
       <div class="related-keep-reading__banner">
         {{- partial "section-preview-grid-card.html" (dict "Page" . "MarkdownTeaser" true "Feature" true "SingleImage" true "HideDate" true "AllowVideo" true) -}}

@@ -3,6 +3,7 @@ package substackbrowser
 import (
 	"context"
 	"encoding/json"
+	"errors"
 	"fmt"
 	"log"
 	"strings"
@@ -12,10 +13,16 @@ import (
 	"github.com/chromedp/chromedp"
 )
 
+// errTagInputAtCapacity means Substack locked the tag combobox (readonly / full chip row).
+// Remaining Hugo tags are skipped so section and schedule can still finish.
+var errTagInputAtCapacity = errors.New("substackbrowser: tag input at capacity")
+
 // tagPointResult is the JSON shape returned by tag-combobox locate helpers.
 type tagPointResult struct {
 	OK       bool    `json:"ok"`
 	Already  bool    `json:"already"`
+	Create   bool    `json:"create"`
+	Capacity bool    `json:"capacity"`
 	X        float64 `json:"x"`
 	Y        float64 `json:"y"`
 	Reason   string  `json:"reason"`
@@ -36,8 +43,13 @@ func AddPublishTagsCDP(ctx context.Context, tags []string) error {
 	if len(clean) == 0 {
 		return nil
 	}
-	for _, tag := range clean {
+	for i, tag := range clean {
 		if err := addOnePublishTagCDP(ctx, tag); err != nil {
+			if errors.Is(err, errTagInputAtCapacity) {
+				left := clean[i:]
+				log.Printf("substackbrowser: Substack tag field at capacity; skipping %v", left)
+				return nil
+			}
 			return err
 		}
 	}
@@ -51,6 +63,14 @@ func addOnePublishTagCDP(ctx context.Context, tag string) error {
 	}
 	if pill.Already {
 		return nil
+	}
+
+	var capRes tagPointResult
+	if err := evalTagJSON(ctx, tagCapacityJS(), &capRes); err != nil {
+		return fmt.Errorf("substackbrowser: tag capacity check for %q: %w", tag, err)
+	}
+	if capRes.Capacity {
+		return errTagInputAtCapacity
 	}
 
 	var inp tagPointResult
@@ -85,6 +105,7 @@ func addOnePublishTagCDP(ctx context.Context, tag string) error {
 
 	var opt tagPointResult
 	deadline := time.Now().Add(4 * time.Second)
+	createOnlyWaits := 0
 	for {
 		if err := evalTagJSON(ctx, tagOptionCenterJS(tag), &opt); err != nil {
 			return fmt.Errorf("substackbrowser: tag option locate for %q: %w", tag, err)
@@ -93,6 +114,15 @@ func addOnePublishTagCDP(ctx context.Context, tag string) error {
 			return nil
 		}
 		if opt.OK {
+			// Prefer an existing tag match; Substack often shows Create first while
+			// search settles. Wait a few polls before accepting Create-only.
+			if opt.Create && createOnlyWaits < 5 {
+				createOnlyWaits++
+				if err := chromedp.Run(ctx, chromedp.Sleep(220*time.Millisecond)); err != nil {
+					return err
+				}
+				continue
+			}
 			break
 		}
 		if time.Now().After(deadline) {
@@ -107,7 +137,7 @@ func addOnePublishTagCDP(ctx context.Context, tag string) error {
 		chromedp.MouseEvent(input.MouseMoved, opt.X, opt.Y),
 		chromedp.Sleep(40*time.Millisecond),
 		chromedp.MouseClickXY(opt.X, opt.Y),
-		chromedp.Sleep(280*time.Millisecond),
+		chromedp.Sleep(450*time.Millisecond),
 	); err != nil {
 		return fmt.Errorf("substackbrowser: click tag option for %q: %w", tag, err)
 	}
@@ -122,7 +152,7 @@ func addOnePublishTagCDP(ctx context.Context, tag string) error {
 	// Fallback: trusted Enter on the focused combobox after the option is highlighted.
 	if err := chromedp.Run(ctx,
 		chromedp.KeyEvent("\r"),
-		chromedp.Sleep(280*time.Millisecond),
+		chromedp.Sleep(400*time.Millisecond),
 	); err != nil {
 		return fmt.Errorf("substackbrowser: Enter after tag option for %q: %w", tag, err)
 	}
@@ -131,6 +161,9 @@ func addOnePublishTagCDP(ctx context.Context, tag string) error {
 	}
 	if pill.Already {
 		return nil
+	}
+	if err := evalTagJSON(ctx, tagCapacityJS(), &capRes); err == nil && capRes.Capacity {
+		return errTagInputAtCapacity
 	}
 	return fmt.Errorf("substackbrowser: tag chip not confirmed after CDP click for %q", tag)
 }
@@ -271,6 +304,13 @@ func tagSharedHelpersJS() string {
     if (r.width < 2 || r.height < 2) return null;
     return { x: r.left + r.width / 2, y: r.top + r.height / 2 };
   }
+  function looksLikeCreateTagLine(txLower, needleLower) {
+    if (!txLower.includes('create')) return false;
+    if (txLower.includes(needleLower)) return true;
+    const a = alnumKey(txLower);
+    const b = alnumKey(needleLower);
+    return b.length > 1 && a.includes(b);
+  }
   function findExactTagOption(tagText) {
     const needle = String(tagText || '').trim().toLowerCase();
     const want = alnumKey(tagText);
@@ -293,6 +333,23 @@ func tagSharedHelpersJS() string {
     }
     return best;
   }
+  function findCreateTagOption(tagText) {
+    const needle = String(tagText || '').trim().toLowerCase();
+    const want = alnumKey(tagText);
+    if (!needle || want.length < 2) return null;
+    const rows = Array.from(document.querySelectorAll(
+      '[role="listbox"] [role="option"], li[role="option"], [cmdk-item], [data-radix-collection-item]'
+    ));
+    for (const el of rows) {
+      if (!visible(el)) continue;
+      const line = cleanTagRowText(el.innerText || '').toLowerCase();
+      if (!line) continue;
+      if (looksLikeCreateTagLine(line, needle) || (line.startsWith('create') && alnumKey(line).includes(want))) {
+        return el;
+      }
+    }
+    return null;
+  }
 `
 }
 
@@ -302,9 +359,21 @@ func tagPillStatusJS(tag string) string {
 ` + tagSharedHelpersJS() + `
   const tag = ` + t + `;
   if (hasCommittedTagPill(tag)) {
-    return JSON.stringify({ ok: true, already: true, x: 0, y: 0, reason: '' });
+    return JSON.stringify({ ok: true, already: true, capacity: false, x: 0, y: 0, reason: '' });
   }
-  return JSON.stringify({ ok: true, already: false, x: 0, y: 0, reason: '' });
+  return JSON.stringify({ ok: true, already: false, capacity: false, x: 0, y: 0, reason: '' });
+})()`
+}
+
+func tagCapacityJS() string {
+	return `(async function(){
+` + tagSharedHelpersJS() + `
+  const inp = tagInputEl();
+  if (!inp) {
+    return JSON.stringify({ ok: false, already: false, capacity: false, x: 0, y: 0, reason: 'tag combobox input not found' });
+  }
+  const locked = !!(inp.readOnly || inp.disabled);
+  return JSON.stringify({ ok: true, already: false, capacity: locked, x: 0, y: 0, reason: locked ? 'readonly' : '' });
 })()`
 }
 
@@ -359,15 +428,23 @@ func tagOptionCenterJS(tag string) string {
   if (hasCommittedTagPill(tag)) {
     return JSON.stringify({ ok: true, already: true, x: 0, y: 0, reason: '', optionOk: true });
   }
-  const el = findExactTagOption(tag);
-  if (!el) {
-    return JSON.stringify({ ok: false, already: false, x: 0, y: 0, reason: 'exact listbox option not visible', optionOk: false });
+  const exact = findExactTagOption(tag);
+  if (exact) {
+    const c = centerOf(exact);
+    if (!c) {
+      return JSON.stringify({ ok: false, already: false, create: false, x: 0, y: 0, reason: 'option has no clickable box', optionOk: false });
+    }
+    return JSON.stringify({ ok: true, already: false, create: false, x: c.x, y: c.y, reason: '', optionOk: true });
   }
-  const c = centerOf(el);
-  if (!c) {
-    return JSON.stringify({ ok: false, already: false, x: 0, y: 0, reason: 'option has no clickable box', optionOk: false });
+  const createEl = findCreateTagOption(tag);
+  if (createEl) {
+    const c = centerOf(createEl);
+    if (!c) {
+      return JSON.stringify({ ok: false, already: false, create: true, x: 0, y: 0, reason: 'create option has no clickable box', optionOk: false });
+    }
+    return JSON.stringify({ ok: true, already: false, create: true, x: c.x, y: c.y, reason: 'create', optionOk: true });
   }
-  return JSON.stringify({ ok: true, already: false, x: c.x, y: c.y, reason: '', optionOk: true });
+  return JSON.stringify({ ok: false, already: false, create: false, x: 0, y: 0, reason: 'exact listbox option not visible', optionOk: false });
 })()`
 }
 
