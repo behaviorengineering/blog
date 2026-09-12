@@ -32,7 +32,7 @@ Posts use front matter fields that split **narrative** from **intellectual ancho
 
 **Relationship:** Grounding **supports** the Claim. The Claim says *what you are arguing in plain language*; Grounding says *what ideas or citations that maps onto*.
 
-**Detail page order** (`layouts/claims/single.html`): **Post meta** (title block, then optional **`image_credit`** when there is a hero image) → **Hero image** (if any) → **Claim** → **Thoughts** (body) → **Grounding** → optional **Research** (`research` front matter) → optional **Keep reading** (`related` or shared-tag fallback via `layouts/partials/related-keep-reading.html`).
+**Detail page order** (`layouts/claims/single.html`): **Post meta** (title block, then optional **`image_credit`** when there is a hero image) → **Hero image** (if any) → **Claim** → **Thoughts** (body) → **Grounding** → optional **Research** (`research` front matter) → **piece footer** (updated date, tags/shares when applicable, prev/next) → optional **Related** shelf (`related` or shared-tag fallback via `layouts/partials/related-keep-reading.html`; RELATED band above the cards) → **Back | Home**.
 
 **Thoughts subsections (`###`):** Use **plain titles** with **no leading emoji**. Prefer **hook-style** titles (tension, question, punch), not seminar labels only; see **`.cursor/skills/site-revise-hooks/SKILL.md`** → **Body headings**. The template already adds icons for the main bands (**Claim**, **Thoughts**, **Grounding**, **Dig deeper**); emoji on every body subsection tends to look busy. Subsections still appear in **Contents** nested under **Thoughts**.
 
@@ -52,7 +52,11 @@ Posts use front matter fields that split **narrative** from **intellectual ancho
 
 **Human-Condition** can use the **same pattern**: taxonomy is still **flat**, but you treat the second term as a **theme hub** (not a Hugo parent category).
 
-**Publish day (`content/human-condition/`):** From **2026-05-28** onward, new posts under **`content/human-condition/`** MUST use a **Thursday** calendar day in the bundle folder name and in **`date`**. Older Friday-dated episodes stay as-is unless the author asks to reschedule. When deferring a Friday slot by one week into the new rhythm, use the **Thursday** of that target week (for example **2026-05-22** → **2026-05-28**).
+**Publish days (site calendar):**
+
+- **`content/x-minds/`:** new posts MUST use a **Thursday** calendar day in the bundle folder name and in **`date`**.
+- **Tuesday** is **freestyle**: any non-reserved section may publish that day (including **`human-condition/`**, **`mind-infrastructure/`**, **`social-protocols/`**, and video picks there). Prefer Tuesday when the author asks for a mid-week freestyle slot.
+- **`content/human-condition/`:** no fixed weekday lock. Older Thursday- or Friday-dated episodes stay as-is unless the author asks to reschedule.
 
 - **Umbrella:** always **`Human-Condition`** first (so list meta and habits stay consistent).
 - **Theme (pick one):** add a **second** term only when the post clearly belongs under that theme, for example **`Mental-Processes`** (choice, mental models, development of empathy or morals), **`Social-Protocols`** (reciprocity rules, iterated strategies, norms of response), **`Social-Behaviour`** (what people do together in the wild), **`Cooperation`** (helping, collective outcomes), **`Social-Trust`** (expectations, reputation, repair), **`Dark-Triad`**, **`Present-Moment`**. Do **not** stack several theme hubs on one post; use **tags** for extra angles. **`Social-Protocols`** is **not** **`Reality-Protocols`** (different section and hub: shared belief and large-scale coordination). Mixed-wiring community posts (parents, school, finding others like you) belong in **`content/x-minds/`**, not as a Human-Condition theme.
@@ -69,6 +73,7 @@ categories: ["Human-Condition", "Social-Protocols"]
 Public section **X-Minds** (`/x-minds/`): mixed-wiring lives, parents, and community. Usual types are **`claims`** and **`video`**.
 
 - **Umbrella:** always **`X-Minds`** first.
+- **Publish day:** MUST use a **Thursday** calendar day in the bundle folder name and in **`date`** (see **Publish days** above).
 - MUST NOT use **neurodivergence** (or clinical “off the typical” labels) in **`title`**, **`description`**, or hub `_index` copy. Body MAY name a diagnosis when a source or a person uses that word; prefer **mixed wiring** in the author’s frame.
 - Hub page: **`content/categories/x-minds/_index.md`** (and **`_index.es.md`**).
 

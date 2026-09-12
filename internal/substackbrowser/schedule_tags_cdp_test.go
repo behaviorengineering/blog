@@ -11,6 +11,8 @@ func TestTagOptionCenterJSTargetsHeadlessListbox(t *testing.T) {
 		`[role="listbox"] [role="option"]`,
 		`li[role="option"]`,
 		`findExactTagOption`,
+		`findCreateTagOption`,
+		`looksLikeCreateTagLine`,
 		`hasCommittedTagPill`,
 		`LetsDefineBad`,
 	} {
@@ -41,5 +43,19 @@ func TestTagClearQueryJSClearsNativeValue(t *testing.T) {
 	}
 	if !strings.Contains(js, "deleteContentBackward") {
 		t.Fatal("tagClearQueryJS missing input clear event")
+	}
+}
+
+func TestTagCapacityJSChecksReadonly(t *testing.T) {
+	js := tagCapacityJS()
+	for _, needle := range []string{
+		`readOnly`,
+		`disabled`,
+		`capacity`,
+		`tagInputEl`,
+	} {
+		if !strings.Contains(js, needle) {
+			t.Fatalf("tagCapacityJS missing %q", needle)
+		}
 	}
 }
