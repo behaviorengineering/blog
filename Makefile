@@ -26,7 +26,7 @@ SOCIAL_ASK_FLAG := $(if $(filter 1 true yes,$(SOCIAL_AUTOPOST_ASK)),-ask,) $(if 
 
 .DEFAULT_GOAL := help
 
-.PHONY: help all deps tidy build tag-register calendar publish-calendar facebook-autopost linkedin-autopost social-autopost serve server serve-down serve-cleanup down test lint clean list verify check-links substack-html-sample substack-draft sb-html sb-en sb-en-pick sb-en-pick-publish sb-es sb-es-pick-publish sb-list-unpublished sb-mark-published sb-config-init sb-login sb-cc mermaid-render mermaid-render-en mermaid-render-es mermaid motif-editor carousel-pdf carousel-save
+.PHONY: help all deps tidy build tag-register calendar publish-calendar hooks-install facebook-autopost linkedin-autopost social-autopost serve server serve-down serve-cleanup down test lint clean list verify check-links substack-html-sample substack-draft sb-html sb-en sb-en-pick sb-en-pick-publish sb-es sb-es-pick-publish sb-list-unpublished sb-mark-published sb-config-init sb-login sb-cc mermaid-render mermaid-render-en mermaid-render-es mermaid motif-editor carousel-pdf carousel-save
 
 all: build
 
@@ -35,6 +35,7 @@ help:
 	@echo "  make sync-content-ai   Copy selected .cursor skills/rules into content-ai/ for Continue agents"
 	@echo "  make tag-register Scan content tags + deprecations -> data/tag-register.txt (runs before hugo on build)"
 	@echo "  make calendar          Scan content -> static/calendar/publish-calendar.json (open /calendar/ under make serve)"
+	@echo "  make hooks-install     Point this clone at .githooks (pre-commit runs make calendar when content/ is staged)"
 	@echo "  make facebook-autopost  Post linkedin.txt to Facebook (DATE=; DRY_RUN=1 default; prompt: publish vs tag-as-published)"
 	@echo "  make linkedin-autopost  Post linkedin.txt to LinkedIn (DATE=; DRY_RUN=1 default; idempotency off; prompt: publish vs tag-as-published)"
 	@echo "  make social-autopost    Run both facebook-autopost and linkedin-autopost"
@@ -87,6 +88,12 @@ calendar:
 	go run ./cmd/publish-calendar -content content -out static/calendar/publish-calendar.json
 
 publish-calendar: calendar
+
+# Local only: sets core.hooksPath for this clone so .githooks/pre-commit runs.
+hooks-install:
+	git config core.hooksPath .githooks
+	@chmod +x .githooks/pre-commit
+	@echo "Installed: core.hooksPath=.githooks (pre-commit regenerates publish calendar when content/ is staged)"
 
 linkedin-autopost:
 	go run ./cmd/linkedin-autopost -root . -date "$(DATE)" $(SOCIAL_POST_FLAG) $(LINKEDIN_IDEMPOTENCY_FLAG) $(LINKEDIN_VERIFY_FLAG) $(SOCIAL_ASK_FLAG) $(DRY_FLAG)
@@ -172,7 +179,7 @@ substack-html-sample:
 # _SB_KNOWN_TARGETS so it is not mistaken for a post path. Paths must include '/' so plain words like "help" are not
 # picked up. Folder forms: section/slug, content/section/slug, optional trailing slash; index.md / index.es.md are
 # stripped later via _POST_NORM. Mark published also accepts: make sb-mark-published POST=section/slug.
-_SB_KNOWN_TARGETS := help all deps tidy build tag-register calendar publish-calendar facebook-autopost linkedin-autopost social-autopost serve server serve-down serve-cleanup down test lint clean list verify check-links substack-html-sample substack-draft sb-html sb-en sb-en-pick sb-en-pick-publish sb-es sb-es-pick-publish sb-list-unpublished sb-mark-published sb-config-init sb-login sb-cc mermaid-render mermaid-render-en mermaid-render-es mermaid carousel-pdf carousel-save
+_SB_KNOWN_TARGETS := help all deps tidy build tag-register calendar publish-calendar hooks-install facebook-autopost linkedin-autopost social-autopost serve server serve-down serve-cleanup down test lint clean list verify check-links substack-html-sample substack-draft sb-html sb-en sb-en-pick sb-en-pick-publish sb-es sb-es-pick-publish sb-list-unpublished sb-mark-published sb-config-init sb-login sb-cc mermaid-render mermaid-render-en mermaid-render-es mermaid carousel-pdf carousel-save
 _SB_FIRST_GOAL := $(firstword $(MAKECMDGOALS))
 _SB_SECOND_GOAL := $(word 2,$(MAKECMDGOALS))
 ifneq ($(filter $(_SB_FIRST_GOAL),sb-en sb-es sb-en-pick sb-en-pick-publish sb-es-pick-publish substack-draft sb-mark-published),)
