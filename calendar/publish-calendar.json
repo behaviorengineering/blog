@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-12T16:24:22Z",
+  "generatedAt": "2026-09-16T11:01:37Z",
   "channels": [
     "site-en",
     "site-es",
@@ -4997,35 +4997,6 @@
       }
     },
     {
-      "bundle": "human-condition/2026-09-15-the-joy-of-doing-wrong",
-      "section": "human-condition",
-      "title": "The Joy of Doing Wrong",
-      "type": "video",
-      "categories": [
-        "Human-Condition",
-        "Mental-Processes"
-      ],
-      "planned": "2026-09-15",
-      "draft": false,
-      "channels": {
-        "facebook": {
-          "status": "missing"
-        },
-        "linkedin": {
-          "status": "missing"
-        },
-        "site-en": {
-          "status": "present"
-        },
-        "site-es": {
-          "status": "present"
-        },
-        "substack-en": {
-          "status": "missing"
-        }
-      }
-    },
-    {
       "bundle": "cognitive-memetics/cows/2026-09-16-cow-w30",
       "section": "cognitive-memetics",
       "title": "Mutual performance improvement",
@@ -5051,6 +5022,35 @@
         },
         "substack-en": {
           "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "human-condition/2026-09-17-the-joy-of-doing-wrong",
+      "section": "human-condition",
+      "title": "The Joy of Doing Wrong",
+      "type": "video",
+      "categories": [
+        "Human-Condition",
+        "Mental-Processes"
+      ],
+      "planned": "2026-09-17",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "present"
         }
       }
     },
