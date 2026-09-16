@@ -1,6 +1,6 @@
 ---
-translationKey: "2026-09-15-the-joy-of-doing-wrong"
-date: '2026-09-15T01:00:00+11:00'
+translationKey: "2026-09-17-the-joy-of-doing-wrong"
+date: '2026-09-17T01:00:00+11:00'
 title: "The Joy of Doing Wrong"
 type: video
 description: |
@@ -25,6 +25,8 @@ related:
   - "/human-condition/2026-03-27-born-to-choose/"
   - "/cognitive-memetics/reptilocracy/2026-05-10-principles-with-escape-hatches/"
   - "/cognitive-memetics/reptilocracy/2026-07-26-case-study-1/"
+aliases:
+  - /human-condition/2026-09-15-the-joy-of-doing-wrong/
 
 ---
 
