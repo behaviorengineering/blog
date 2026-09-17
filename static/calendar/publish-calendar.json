@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-16T11:01:37Z",
+  "generatedAt": "2026-09-17T13:01:51Z",
   "channels": [
     "site-en",
     "site-es",
@@ -5080,6 +5080,34 @@
         },
         "substack-en": {
           "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "x-minds/2026-09-19-the-pain-that-looks-like-personality",
+      "section": "x-minds",
+      "title": "The Pain That Looks Like Personality",
+      "type": "video",
+      "categories": [
+        "X-Minds"
+      ],
+      "planned": "2026-09-19",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "present"
         }
       }
     },
