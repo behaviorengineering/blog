@@ -266,7 +266,8 @@ themes/LoveIt/exampleSite/content/posts/
 ## Quick Lookup
 
 **Claims posts (Claim / Grounding)?** → `.cursor/skills/site-claims-content/SKILL.md`  
-**Cognitive-Memetics section (panel / sayings / T-Shirt Art hub)?** → `.cursor/skills/site-cognitive-memetics-content/SKILL.md` (hybrid prose; Gemma 4 teasers except Por-Estas-Calles card teaser)  
+**Cognitive-Memetics section (panel / sayings / T-Shirt Art hub)?** → `.cursor/skills/site-cognitive-memetics-content/SKILL.md` (hybrid prose; Gemma 4 teasers except Por-Estas-Calles card teaser; Reptilocracy episode copy → `.cursor/skills/site-reptilocracy-gemma/SKILL.md`)
+**Reptilocracy Gemma copy (`description` / `tldr` / `fluff`)?** → `.cursor/skills/site-reptilocracy-gemma/SKILL.md`  
 **Markdown bold / emphasis density (any `content/` type)?** → `.cursor/skills/site-revise-emphasis/SKILL.md`  
 **Video picks (`type: video`, YouTube)?** → `.cursor/skills/site-video-content/SKILL.md`  
 **Custom CSS (links, footer, section lists)?** → `assets/css/_custom.scss`  
