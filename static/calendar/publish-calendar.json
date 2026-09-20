@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-17T13:01:51Z",
+  "generatedAt": "2026-09-20T15:04:53Z",
   "channels": [
     "site-en",
     "site-es",
@@ -5112,6 +5112,35 @@
       }
     },
     {
+      "bundle": "cognitive-memetics/reptilocracy/2026-09-20-good-days-bad-days",
+      "section": "cognitive-memetics",
+      "title": "Good Days, Bad Days",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Reptilocracy"
+      ],
+      "planned": "2026-09-20",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
       "bundle": "cognitive-memetics/sayings/2026-09-21-saying-37",
       "section": "cognitive-memetics",
       "title": "Tapa el sol con un dedo.",
@@ -5199,6 +5228,35 @@
       }
     },
     {
+      "bundle": "cognitive-memetics/reptilocracy/2026-09-27-the-bridge-is-open",
+      "section": "cognitive-memetics",
+      "title": "The Bridge Is Open",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Reptilocracy"
+      ],
+      "planned": "2026-09-27",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
       "bundle": "cognitive-memetics/sayings/2026-09-28-saying-38",
       "section": "cognitive-memetics",
       "title": "Caimán no come caimán.",
@@ -5266,6 +5324,35 @@
         "Raymond"
       ],
       "planned": "2026-10-02",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/reptilocracy/2026-10-04-stable-enough-to-remain-unpredictable",
+      "section": "cognitive-memetics",
+      "title": "Stable Enough to Remain Unpredictable",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Reptilocracy"
+      ],
+      "planned": "2026-10-04",
       "draft": false,
       "channels": {
         "facebook": {

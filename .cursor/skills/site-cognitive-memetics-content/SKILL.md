@@ -78,12 +78,13 @@ Essays / video / Substack use **Explanatory prose** in **`.cursor/rules/site-con
 
 | Field / format | Punchy by design? | MUST | MUST NOT |
 |----------------|-------------------|------|----------|
-| Cube-cows / Raymond / T-Shirt Art / Reptilocracy / Pawtropolis `description` | Yes (often the whole piece) | **Gemma 4** drafts it (see **Gemma teaser**); name the move or joke claim; punch the scene past a caption | Agent-only caption inventory; oracular closers with no mechanism |
+| Cube-cows / Raymond / T-Shirt Art / Pawtropolis `description` | Yes (often the whole piece) | **Gemma 4** drafts it (see **Gemma teaser**); name the move or joke claim; punch the scene past a caption | Agent-only caption inventory; oracular closers with no mechanism |
+| Reptilocracy `description` / `tldr` / `fluff` | Yes | **`.cursor/skills/site-reptilocracy-gemma/SKILL.md`** (satire-first + psych-fitness knife + thinking) | Generic Gemma teaser-only; agent stamp poetry sold as Gemma |
 | Por-Estas-Calles `description` | Short card pitch | **Por-Estas-Calles card teaser** from **`title`** + **`tldr`** + **`fluff`** only | Gemma flow; inventing beats not in those fields |
 | Sayings `tldr` | Yes (short) | Name meaning, use, or scene | Trait-dictionary stacks only ("clever, astute, street-smart") |
 | Sayings `fluff` | Situational context | Lead with emotion or **one** clarifying metaphor, then when/who uses it; concrete scenes | Metaphor-only fluff with no uses; metaphor stacks; mystical/abstract culture praise |
 | Psych-Fitness `tldr` | Campaign vignette + lesson | End on the fitness/mechanism line when needed | Caption pivots: "The long view matters.", "The connection is direct.", "The eve of decision." |
-| Reptilocracy `description` / `tldr` / `fluff` | Clinical mechanism | Name who does what; continuity vs early correction; late cost when story and reality diverge | Dashboard caption poetry; rebel/activist heat; empty MBA fog; aphorism remix of the thesis |
+| Reptilocracy clinical edit (non-Gemma polish) | Clinical mechanism OK | Name who does what; continuity vs early correction; late cost when story and reality diverge | Dashboard caption poetry; rebel/activist heat; empty MBA fog; aphorism remix of the thesis |
 | T-Shirt Art teaser / `tldr` | Merch line OK | Tie the slogan to one mechanism or threat | Slogan-only copy with no so-what |
 | Project "But why" (`i18n`) | Manifesto-tinged OK | Name series mechanism once | Do not copy that lyric tone into every episode field |
 
@@ -174,7 +175,9 @@ For posts under **`content/cognitive-memetics/reptilocracy/`** (category **`Rept
 
 ### Gemma teaser (`description`)
 
-**Scope:** Every Cognitive-Memetics hub **except Por-Estas-Calles**. Includes **Cube-Cows**, **Raymond**, **Pawtropolis**, **Reptilocracy**, **T-Shirt Art** (panel or sayings), and any future non–Por-Estas-Calles hub. Hub membership is the second **`categories`** term (or folder), **not** `type: panel` vs `type: sayings`.
+**Scope:** Every Cognitive-Memetics hub **except Por-Estas-Calles** and **except Reptilocracy**. Includes **Cube-Cows**, **Raymond**, **Pawtropolis**, **T-Shirt Art** (panel or sayings), and any future non–Por-Estas-Calles / non–Reptilocracy hub. Hub membership is the second **`categories`** term (or folder), **not** `type: panel` vs `type: sayings`.
+
+**Reptilocracy:** MUST use **`.cursor/skills/site-reptilocracy-gemma/SKILL.md`** for new or rewritten **`description`**, **`tldr`**, and **`fluff`** (not this generic teaser-only flow).
 
 **MUST** invoke local **Gemma 4** to draft **`description`** when:
 
@@ -315,7 +318,11 @@ For Venezuelan saying posts, **include those four tags** when promoting the seri
 
 ### Reptilocracy
 
-Posts under **`content/cognitive-memetics/reptilocracy/`** use **`categories`**: **`Cognitive-Memetics`** and **`Reptilocracy`**. Set **`project: Reptilocracy 🦎🏛️`**. Episode prose MUST follow **Reptilocracy voice** under **Hybrid prose** (clinical mechanism, not rebel heat or panel caption). LinkedIn: **`.cursor/skills/site-linkedin-post/SKILL.md`** → Reptilocracy. Footer explainer + petition CTA: **Theme and style** → **Project "But why" explainer cards**.
+Posts under **`content/cognitive-memetics/reptilocracy/`** use **`categories`**: **`Cognitive-Memetics`** and **`Reptilocracy`**. Set **`project: Reptilocracy 🦎🏛️`**.
+
+**Gemma episode copy (`description` / `tldr` / `fluff`):** MUST use **`.cursor/skills/site-reptilocracy-gemma/SKILL.md`** (satire-first brief, thinking mode, psych-fitness knife, three teaser picks). MUST NOT use the generic **Gemma teaser** flow below for this hub when drafting or rewriting those fields.
+
+**Voice:** New or rewritten Gemma fields follow that skill (satire first). Agent clinical edits and older clinical gold (for example `2026-08-30-stability-is-a-setting`) still follow **Reptilocracy voice** under **Hybrid prose** (mechanism, not rebel heat or panel caption). LinkedIn: **`.cursor/skills/site-linkedin-post/SKILL.md`** → Reptilocracy. Footer explainer + petition CTA: **Theme and style** → **Project "But why" explainer cards**.
 
 ### T-Shirt Art
 
