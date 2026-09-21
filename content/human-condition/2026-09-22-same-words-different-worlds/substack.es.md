@@ -1,36 +1,36 @@
 ## Mandas una frase. El otro arma otro mundo.
 
-El lenguaje funciona como un **algoritmo de compresión** para la mente. Tomas un universo interno enorme y desordenado (recuerdos concretos, ánimos sutiles, asociaciones privadas) y lo comprimes en una sola línea de texto o de habla. Quien recibe ese paquete tiene que abrirlo con su propia historia, sus miedos y sus prejuicios. Arma una **reconstrucción**, no una copia.
+El lenguaje carga un peso enorme. Tomas un universo interno vasto y desordenado, lleno de recuerdos concretos, de matices sutiles y de asociaciones privadas, y lo reduces a una sola línea de lo que dices. Cuando mandas esa frase al otro lado de la habitación, mandas un **paquete pequeño**. Quien lo recibe tiene que reconstruir tu pensamiento con su propia historia, sus miedos y sus supuestos. Arma una versión de tu mente, no una copia.
 
-Ese proceso deja siempre una **brecha** entre lo que quisiste decir y lo que el otro escuchó. Las palabras pueden coincidir, y las **simulaciones mentales** seguir en mundos distintos.
+Ese proceso abre una **brecha** entre lo que quisiste decir y lo que el otro escuchó. Las palabras pueden coincidir, y las **simulaciones mentales** seguir cayendo en mundos distintos.
 
 > **Mismas palabras.** Un **mundo distinto**.
 
-## La historia compartida es la biblioteca privada
+## La biblioteca privada
 
-Las amistades largas hacen más precisa esa lectura porque la **historia compartida** funciona como una **biblioteca privada**. Un chiste interno o una frase corta tira de una base enorme de datos mutuos. El **terreno común** es saber que los dos saben lo que el otro sabe, así que un poco de lenguaje comprimido se expande en una imagen rica y exacta. No hace falta explicar el contexto. Ya está ahí, entre los dos. Ese registro es lo que mantiene un vínculo profundo incluso tras años de distancia.
+La **historia compartida** funciona como una **biblioteca privada** que hace más precisa esa reconstrucción. Los amigos de toda la vida usan un chiste interno o una frase corta para tirar de un archivo enorme de historia común. El **terreno común** deja que un poco de lenguaje se abra en una imagen rica y exacta. Te saltas la explicación porque el contexto ya está en la habitación, entre los dos. Ese registro compartido agiliza la comunicación y sostiene vínculos profundos incluso tras años de distancia.
 
-## El conflicto mantiene el mapa al día
+## La actualización en vivo
 
-El **conflicto** es la vía principal para actualizar esos mapas compartidos. Cuando alguien pone un límite nuevo, o explica cómo le cayó una acción, entrega el **dato que faltaba** para corregir un modelo viejo. Un desacuerdo constructivo es una calibración en vivo: uno dice *"Ahora esto es lo que necesito"* y el otro mete ese hecho en su imagen de la mente del primero. Sin esa frase, la **realidad compartida** se queda en un montón de suposiciones vencidas.
+El problema empieza cuando la vida de uno de los dos cambia y la conversación se queda igual. Alguien asume nuevas responsabilidades, deja atrás viejos hábitos o decide que ya no tolera una dinámica antigua. Si nunca dice ese cambio en voz alta, la otra persona sigue reconstruyendo su imagen desde una **versión caduca**.
 
-## Uno satura la línea. El otro nunca manda la actualización.
+El **conflicto** es el mecanismo que corrige ese modelo viejo. Cuando alguien marca un límite nuevo, o explica cómo le pegó una acción concreta, aporta el **dato que faltaba**. Uno dice *"Ahora esto es lo que necesito"* y el otro absorbe ese hecho en su reconstrucción de la mente del primero. Así la **realidad compartida** no se convierte en un museo de supuestos obsoletos.
 
-El modelo falla cuando la gente esconde un **desajuste** detrás de una **falsa armonía**.
+## Ruido que ahoga, o silencio que no dice
 
-Las personalidades de alto conflicto hacen un *ataque de denegación de servicio* contra la relación. Inundan la línea con **estatus y culpa** para que no pase ninguna **actualización útil**.
+El modelo falla cuando la gente disfraza la falta de sintonía con una **falsa armonía**.
 
-La charla superficial mantiene el canal abierto con *paquetes de mantenimiento* vacíos: el clima, la logística, opiniones seguras. Nunca manda una **revisión real** del **modelo compartido**.
+Las personalidades de alto conflicto tratan cada desacuerdo como una pelea por **estatus**, y ahí se corta el intercambio de información real.
 
-Uno satura la línea hasta que la honestidad no puede entrar. El otro nunca transmite una revisión. En los dos casos la brecha se queda sin parche, y el vínculo se vuelve una **actuación de conexión** en lugar de una **reconstrucción viva**.
+Quienes viven de la charla superficial usan la **ligereza** para esconder que no tienen intención de armar un vínculo de verdad.
 
-## Terminas hablando con quien era el año pasado
+Uno inunda la conexión con **ruido** para dominarla. El otro congela la conexión en una **omisión cortés**. El ruido ahoga la actualización; el silencio cortés la deja **sin aire**. En ambos casos la brecha queda sin atender, y la relación se vuelve una **actuación**.
 
-La conexión real necesita la fricción de un **desacuerdo honesto**. Una relación perfectamente suave suele ser una relación que **funciona por omisión**. Dejas de nombrar las brechas y dejas de actualizar el mapa. Con el tiempo interactúas con **fantasmas de quien era el año pasado**.
+## Fantasmas de quien era el año pasado
 
-Busca la **capacidad de dejarte corregir**. Fíjate en si puedes poner un **límite nuevo**, o una mirada distinta, sin que se caiga toda la estructura. Un vínculo resistente aguanta la incomodidad de un desencuentro.
+La conexión real pide la fricción del **desacuerdo honesto**. Una relación perfectamente suave suele funcionar a base de **omisiones**. Cuando llega una **colisión honesta**, las suposiciones que ambos cargaban ceden. Pones el requisito real sobre la mesa, escuchas dónde cayó el golpe y aceptas que tu imagen del otro estaba incompleta. Cuando la colisión limpia el aire, los dos pueden reconstruir el entendimiento sobre suelo firme, viéndose como son ahora y no como eran antes.
 
-> Nos han enseñado a ver el conflicto como una señal de **fracaso**, no como una herramienta para **alinearnos**.
+> Nos han entrenado para ver el conflicto como señal de **fracaso**, no como herramienta de **alineación**. ¿A quién beneficia ese entrenamiento?
 
 [Common ground and the sharing of meaning (PMC)](https://pmc.ncbi.nlm.nih.gov/articles/PMC4224066/)
 

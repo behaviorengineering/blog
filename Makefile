@@ -26,7 +26,7 @@ SOCIAL_ASK_FLAG := $(if $(filter 1 true yes,$(SOCIAL_AUTOPOST_ASK)),-ask,) $(if 
 
 .DEFAULT_GOAL := help
 
-.PHONY: help all deps tidy build tag-register calendar publish-calendar hooks-install facebook-autopost linkedin-autopost social-autopost serve server serve-down serve-cleanup down test lint clean list verify check-links substack-html-sample substack-draft sb-html sb-en sb-en-pick sb-en-pick-publish sb-es sb-es-pick-publish sb-list-unpublished sb-mark-published sb-config-init sb-login sb-cc mermaid-render mermaid-render-en mermaid-render-es mermaid motif-editor carousel-pdf carousel-save
+.PHONY: help all deps tidy build tag-register calendar publish-calendar hooks-install facebook-autopost linkedin-autopost social-autopost serve server serve-down serve-cleanup down test lint clean list verify check-links substack-html-sample substack-draft sb-html sb-en sb-en-pick sb-en-pick-publish sb-es sb-es-pick-publish sb-list-unpublished sb-mark-published sb-config-init sb-login sb-cc mermaid-render mermaid-render-en mermaid-render-es mermaid motif-editor carousel-pdf carousel-save audit-voice
 
 all: build
 
@@ -35,6 +35,7 @@ help:
 	@echo "  make sync-content-ai   Copy selected .cursor skills/rules into content-ai/ for Continue agents"
 	@echo "  make tag-register Scan content tags + deprecations -> data/tag-register.txt (runs before hugo on build)"
 	@echo "  make calendar          Scan content -> static/calendar/publish-calendar.json (open /calendar/ under make serve)"
+	@echo "  make audit-voice       Deterministic voice audit (POST=section/slug or index.md path, VOICE=patient-narrator)"
 	@echo "  make hooks-install     Point this clone at .githooks (pre-commit runs make calendar when content/ is staged)"
 	@echo "  make facebook-autopost  Post linkedin.txt to Facebook (DATE=; DRY_RUN=1 default; prompt: publish vs tag-as-published)"
 	@echo "  make linkedin-autopost  Post linkedin.txt to LinkedIn (DATE=; DRY_RUN=1 default; idempotency off; prompt: publish vs tag-as-published)"
@@ -88,6 +89,19 @@ calendar:
 	go run ./cmd/publish-calendar -content content -out static/calendar/publish-calendar.json
 
 publish-calendar: calendar
+
+# POST is section/slug or a path ending in .md. VOICE is a data/voices id.
+audit-voice:
+	@post="$(POST)"; voice="$(VOICE)"; \
+	if [ -z "$$post" ] || [ -z "$$voice" ]; then \
+	  echo "usage: make audit-voice POST=section/slug VOICE=patient-narrator" >&2; \
+	  exit 2; \
+	fi; \
+	case "$$post" in \
+	  *.md) ;; \
+	  *) post="content/$$post/index.md" ;; \
+	esac; \
+	go run ./cmd/audit-essay-voice -post "$$post" -voice "$$voice" -voices-dir data/voices
 
 # Local only: sets core.hooksPath for this clone so .githooks/pre-commit runs.
 hooks-install:
@@ -179,7 +193,7 @@ substack-html-sample:
 # _SB_KNOWN_TARGETS so it is not mistaken for a post path. Paths must include '/' so plain words like "help" are not
 # picked up. Folder forms: section/slug, content/section/slug, optional trailing slash; index.md / index.es.md are
 # stripped later via _POST_NORM. Mark published also accepts: make sb-mark-published POST=section/slug.
-_SB_KNOWN_TARGETS := help all deps tidy build tag-register calendar publish-calendar hooks-install facebook-autopost linkedin-autopost social-autopost serve server serve-down serve-cleanup down test lint clean list verify check-links substack-html-sample substack-draft sb-html sb-en sb-en-pick sb-en-pick-publish sb-es sb-es-pick-publish sb-list-unpublished sb-mark-published sb-config-init sb-login sb-cc mermaid-render mermaid-render-en mermaid-render-es mermaid carousel-pdf carousel-save
+_SB_KNOWN_TARGETS := help all deps tidy build tag-register calendar publish-calendar hooks-install facebook-autopost linkedin-autopost social-autopost serve server serve-down serve-cleanup down test lint clean list verify check-links substack-html-sample substack-draft sb-html sb-en sb-en-pick sb-en-pick-publish sb-es sb-es-pick-publish sb-list-unpublished sb-mark-published sb-config-init sb-login sb-cc mermaid-render mermaid-render-en mermaid-render-es mermaid carousel-pdf carousel-save audit-voice
 _SB_FIRST_GOAL := $(firstword $(MAKECMDGOALS))
 _SB_SECOND_GOAL := $(word 2,$(MAKECMDGOALS))
 ifneq ($(filter $(_SB_FIRST_GOAL),sb-en sb-es sb-en-pick sb-en-pick-publish sb-es-pick-publish substack-draft sb-mark-published),)
