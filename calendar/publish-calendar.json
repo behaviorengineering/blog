@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-20T15:14:43Z",
+  "generatedAt": "2026-09-21T05:41:16Z",
   "channels": [
     "site-en",
     "site-es",
@@ -5166,6 +5166,35 @@
         },
         "substack-en": {
           "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "human-condition/2026-09-22-same-words-different-worlds",
+      "section": "human-condition",
+      "title": "Why are you closer after the fight?",
+      "type": "claims",
+      "categories": [
+        "Human-Condition",
+        "Mental-Processes"
+      ],
+      "planned": "2026-09-22",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "present"
         }
       }
     },
