@@ -10,7 +10,7 @@ The portable checker lives in strop (`pkg/evaluation/voice`). These files are th
 | --- | --- |
 | `human-condition` | `patient-narrator.md` |
 | `x-minds` | `patient-narrator.md` |
-| `social-protocols` | `lean-realist.md` |
+| `social-protocols` | `clint-eastwood.md` (or `lean-realist.md`) |
 | `mind-infrastructure` | `cognitive-pragmatist.md` |
 
 Technical posts that should stay technical do not take a narrator file. Leave polish focus empty.

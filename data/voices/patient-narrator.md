@@ -9,7 +9,19 @@ banned_patterns:
   - "relational repair"
   - "unwashed forks"
   - "we're all just"
-required_verb_classes: ["collapse", "rebuild", "populate", "absorb"]
+required_verb_classes:
+  - "collapse"
+  - "collapses"
+  - "collapsed"
+  - "rebuild"
+  - "rebuilds"
+  - "rebuilt"
+  - "populate"
+  - "populates"
+  - "populated"
+  - "absorb"
+  - "absorbs"
+  - "absorbed"
 max_staccato_run: 2
 ---
 

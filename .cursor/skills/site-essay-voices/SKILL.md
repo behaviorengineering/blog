@@ -20,7 +20,7 @@ Composition stays on the shared commute voice in `data/essay-content-forms.yaml`
 | --- | --- | --- |
 | `human-condition` | `patient-narrator` | `data/voices/patient-narrator.md` |
 | `x-minds` | `patient-narrator` | `data/voices/patient-narrator.md` |
-| `social-protocols` | `lean-realist` | `data/voices/lean-realist.md` |
+| `social-protocols` | `clint-eastwood` | `data/voices/clint-eastwood.md` |
 | `mind-infrastructure` | `cognitive-pragmatist` | `data/voices/cognitive-pragmatist.md` |
 
 Technical pieces that must stay technical take no voice id.
