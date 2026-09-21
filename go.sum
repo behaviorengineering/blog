@@ -10,8 +10,8 @@ github.com/aymanbagabas/go-osc52/v2 v2.0.1 h1:HwpRHbFMcZLEVr42D4p7XBqjyuxQH5SMiE
 github.com/aymanbagabas/go-osc52/v2 v2.0.1/go.mod h1:uYgXzlJ7ZpABp8OJ+exZzJJhRNQ2ASbcXHWsFqH8hp8=
 github.com/aymanbagabas/go-udiff v0.3.1 h1:LV+qyBQ2pqe0u42ZsUEtPiCaUoqgA9gYRDs3vj1nolY=
 github.com/aymanbagabas/go-udiff v0.3.1/go.mod h1:G0fsKmG+P6ylD0r6N/KgQD/nWzgfnl8ZBcNLgcbrw8E=
-github.com/behaviorengineering/strop v0.4.1-0.20260921113336-f26b47fdecf0 h1:CgKTM1FuL5J6j+v4ZAJKb9BzaawHEZR6ejgpr7An+fM=
-github.com/behaviorengineering/strop v0.4.1-0.20260921113336-f26b47fdecf0/go.mod h1:ZXzOR9YRdQhE7RaajwqhxwQSQmu8P1bYF6F9P9TKGYM=
+github.com/behaviorengineering/strop v0.4.1-0.20260921145623-6ef1c12853f1 h1:hzXY8ud0QTSwP56LfZ+p/g/Qqmo25iQV2t60wSYueAg=
+github.com/behaviorengineering/strop v0.4.1-0.20260921145623-6ef1c12853f1/go.mod h1:ZXzOR9YRdQhE7RaajwqhxwQSQmu8P1bYF6F9P9TKGYM=
 github.com/benbjohnson/clock v1.3.0 h1:ip6w0uFQkncKQ979AypyG0ER7mqUSBdKLOgAle/AT8A=
 github.com/benbjohnson/clock v1.3.0/go.mod h1:J11/hYXuz8f4ySSvYwY0FKfm+ezbsZBKZxNJlLklBHA=
 github.com/bokwoon95/wgo v0.6.4 h1:BW+iQH3jj6D7GMw3jK6KYUGro7sjxqz8vH01nA2OrCA=
