@@ -25,7 +25,7 @@ Composition stays on the shared commute voice in `data/essay-content-forms.yaml`
 
 Technical pieces that must stay technical take no voice id.
 
-**CONSTRAINT:** A new or edited voice file MUST live under `data/voices/` in this repository, with YAML front matter (`id`, `label`, `sections`, `banned_patterns`, `required_verb_classes`, `max_staccato_run`) and two Markdown sections: Generator contract and Evaluator contract.
+**CONSTRAINT:** A new or edited voice file MUST live under `data/voices/` in this repository, with YAML front matter (`id`, `label`, `sections`, `banned_patterns`, `max_staccato_run`; optional `required_verb_classes`) and two Markdown sections: Generator contract and Evaluator contract.
 - Enforcement: File path is `data/voices/<id>.md`; front matter parses; both headings are present.
 - Violation: STOP, move the file into the catalog or add the missing heading. Do not put phrase banks in strop.
 

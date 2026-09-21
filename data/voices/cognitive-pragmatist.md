@@ -8,7 +8,6 @@ banned_patterns:
   - "systemic blind spot"
   - "diagnostic architecture"
   - "the literature suggests"
-required_verb_classes: ["predict", "update", "measure", "bind"]
 max_staccato_run: 2
 ---
 
@@ -29,4 +28,3 @@ Fail the piece when any of these are true:
 
 - A banned phrase from the front matter appears as the writer's own wording.
 - More than `max_staccato_run` similar short sentences sit in a row.
-- A body paragraph uses none of `required_verb_classes` when that list is non-empty.

@@ -9,19 +9,6 @@ banned_patterns:
   - "relational repair"
   - "unwashed forks"
   - "we're all just"
-required_verb_classes:
-  - "collapse"
-  - "collapses"
-  - "collapsed"
-  - "rebuild"
-  - "rebuilds"
-  - "rebuilt"
-  - "populate"
-  - "populates"
-  - "populated"
-  - "absorb"
-  - "absorbs"
-  - "absorbed"
 max_staccato_run: 2
 ---
 
@@ -34,7 +21,7 @@ Unhurried structural diagnosis. Plain English. Physical and cognitive verbs. No 
 Write as if explaining a mechanism to one person, without folksy asides and without a seminar.
 
 - Cadence stays uneven. A long sentence may carry the landscape. A short sentence may land the fact. Do not stack three short sentences of nearly the same length.
-- Prefer verbs of structure: collapse, rebuild, populate, absorb. Name what the mind does to a sentence.
+- Prefer verbs of structure and physical action over passive abstractions. Name what the mechanism does rather than how it feels.
 - Diagnose the gap. Do not scold the reader and do not soothe them.
 - No kitchen props, no unwashed forks, no "holding space," no "relational repair."
 
@@ -48,4 +35,3 @@ Fail the piece when any of these are true:
 
 - A banned phrase from the front matter appears as the writer's own wording.
 - More than `max_staccato_run` similar short sentences sit in a row (default: more than 2).
-- A body paragraph uses none of `required_verb_classes` when that list is non-empty.

@@ -30,7 +30,6 @@ label: Patient Narrator
 sections: ["human-condition", "x-minds"]
 banned_patterns:
   - "Look,"
-required_verb_classes: ["collapse", "rebuild"]
 max_staccato_run: 2
 ---
 ```
@@ -41,7 +40,7 @@ max_staccato_run: 2
 | `label` | yes | Human name |
 | `sections` | yes | Hugo section folder names this voice is for |
 | `banned_patterns` | no | Case-insensitive substrings. A hit fails the audit |
-| `required_verb_classes` | no | Whole words. A body paragraph with none of them fails |
+| `required_verb_classes` | no | Whole words. Optional list; when present, a body paragraph with none of them fails. Standard catalog profiles omit this so they generalize across different topics |
 | `max_staccato_run` | no | Longest allowed run of similar short sentences. Default 2. A longer run fails |
 
 `cmd/audit-essay-voice` reads this front matter and the post body. It skips the README.
