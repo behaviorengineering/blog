@@ -1,0 +1,40 @@
+🧠 Our brain doesn't even fit in our brain
+
+You simplify to think, you drop detail, draw a line around the problem, and accept a few small lies so you can hold it in your head. The trap is when you forget you made that cut and treat the slice as how reality works.
+
+✜ Like becomes is
+Brain talk spreads as short comparisons: tubes, telegraph wires, computers, prediction machines. Each retelling drops what does not fit the story: glia, chemistry, bodies, the world outside the skull. Repeat the slice often enough and the comparison becomes reality: the brain gets sold as a computer.
+
+✜ Your tools set your brain story
+Your mind-story follows whatever tool is on the bench (the tools and ideas you have on hand): today an LLM trained on huge written archives. The "prediction engine" brain story starts to sound like fact because the text it learned from comes back as smooth insight.
+
+✜ Mechanism, story, or reassurance?
+"How does the brain work?" depends on whether you need a mechanism, a fundable story, a roadmap, or reassurance. AGI hype narrows it to "are we on track?" and benchmarks that sound certain until the model leaves training and stumbles.
+
+Before you repeat a frame, say what it is for and what it leaves out.
+
+📑 What's in the talk
+
+• Friston · free energy and the spherical cow
+• Chirimuuta · why scientists abstract
+• Debate · Simplicius vs Ignorantio on simplicity
+• Chollet · kaleidoscope hypothesis
+• Metaphor · mind as software
+• Critique · software as spirit
+• Hidalgo · temperature as property, not thing
+• Floridi · ontology and relational answers
+• Metaphors · when brain models harden into "fact"
+• AGI · cultural illusion of inevitability
+• Prediction · where prediction passes for understanding
+• Functionalism · climbing the mountain (same function, different paths)
+• Haptic · knowledge as perspectival
+• Proteus · cognitive limits and nature's many faces
+
+#AGIHype #FreeEnergyPrinciple #EpistemicFog #WorldModels #PatternsNotWorldModels
+
+🧷 Full post (site) →
+- EN: https://behaviorengineering.ai/mind-infrastructure/2026-05-21-brain-is-not-a-computer/
+- ES: https://behaviorengineering.ai/es/mind-infrastructure/2026-05-21-brain-is-not-a-computer/
+
+▶️ Brain metaphors, prediction machines, and what counts as understanding (YouTube) →
+- https://www.youtube.com/watch?v=pO0WZsN8Oiw
