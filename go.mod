@@ -9,6 +9,7 @@ tool (
 
 require (
 	github.com/BurntSushi/toml v1.5.0
+	github.com/behaviorengineering/strop v0.4.1-0.20260921113336-f26b47fdecf0
 	github.com/charmbracelet/bubbletea v1.3.6
 	github.com/charmbracelet/huh v1.0.0
 	github.com/chromedp/cdproto v0.0.0-20250724212937-08a3db8b4327
@@ -16,7 +17,7 @@ require (
 	github.com/mattn/go-isatty v0.0.20
 	github.com/yuin/goldmark v1.7.13
 	golang.org/x/image v0.45.0
-	golang.org/x/net v0.47.0
+	golang.org/x/net v0.58.0
 	gopkg.in/yaml.v3 v3.0.1
 )
 
@@ -43,7 +44,6 @@ require (
 	github.com/gobwas/httphead v0.1.0 // indirect
 	github.com/gobwas/pool v0.2.1 // indirect
 	github.com/gobwas/ws v1.4.0 // indirect
-	github.com/google/go-cmp v0.7.0 // indirect
 	github.com/jessevdk/go-flags v1.6.1 // indirect
 	github.com/klauspost/compress v1.18.1 // indirect
 	github.com/kr/pretty v0.3.1 // indirect
