@@ -1,7 +1,7 @@
 ---
 translationKey: "2026-09-22-same-words-different-worlds"
 date: '2026-09-22T01:00:00+11:00'
-title: "¿Por qué una bronca y la charla vacía fallan igual?"
+title: "¿Por qué quedas más cerca después de la pelea?"
 type: claims
 description: |
   La misma frase llega a otra mente como reconstrucción, no como copia. La historia compartida acelera esa lectura, y el conflicto honesto mantiene vigente esa imagen compartida. Tanto la pelea interminable como la charla vacía se niegan a actualizarla.
