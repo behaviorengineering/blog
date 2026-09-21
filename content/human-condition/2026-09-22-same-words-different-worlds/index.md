@@ -1,7 +1,7 @@
 ---
 translationKey: "2026-09-22-same-words-different-worlds"
 date: '2026-09-22T01:00:00+11:00'
-title: "Same Words, Different Worlds"
+title: "Why do a blow-up and small talk fail the same way?"
 type: claims
 description: |
   The same sentence lands in another mind as a reconstruction, not a copy. Shared history makes that decode faster. Honest conflict is how the shared picture stays current. Endless fighting and empty small talk both refuse the update.
