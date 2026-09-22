@@ -1,14 +1,14 @@
 ## Mandas una frase. El otro arma otro mundo.
 
-El lenguaje carga un peso enorme. Tomas un universo interno vasto y desordenado, lleno de recuerdos concretos, de matices sutiles y de asociaciones privadas, y lo reduces a una sola línea de lo que dices. Cuando mandas esa frase al otro lado de la habitación, mandas un **paquete pequeño**. Quien lo recibe tiene que reconstruir tu pensamiento con su propia historia, sus miedos y sus supuestos. Arma una versión de tu mente, no una copia.
+El lenguaje carga un peso enorme. Tomas un universo interno vasto y desordenado, lleno de recuerdos concretos, de matices sutiles y de asociaciones privadas, y lo reduces a una sola frase o enunciado. Cuando mandas esa frase al otro lado de la habitación, mandas un **paquete pequeño**. Quien lo recibe tiene que reconstruir tu pensamiento con su propia historia, sus miedos y sus supuestos. Arma una versión de tu mente, no una copia.
 
-Ese proceso abre una **brecha** entre lo que quisiste decir y lo que el otro escuchó. Las palabras pueden coincidir, y las **simulaciones mentales** seguir cayendo en mundos distintos.
+Ese proceso abre una **brecha** entre tu intención y la interpretación del otro. Las palabras pueden coincidir, y las **simulaciones mentales** siguen cayendo en mundos distintos.
 
 > **Mismas palabras.** Un **mundo distinto**.
 
 ## La biblioteca privada
 
-La **historia compartida** funciona como una **biblioteca privada** que hace más precisa esa reconstrucción. Los amigos de toda la vida usan un chiste interno o una frase corta para tirar de un archivo enorme de historia común. El **terreno común** deja que un poco de lenguaje se abra en una imagen rica y exacta. Te saltas la explicación porque el contexto ya está en la habitación, entre los dos. Ese registro compartido agiliza la comunicación y sostiene vínculos profundos incluso tras años de distancia.
+La **historia compartida** funciona como una **biblioteca privada** que hace más precisa esa reconstrucción. Con un chiste interno o una frase corta, los amigos de toda la vida activan un archivo enorme de historia común. El **terreno común** permite que el lenguaje active una imagen rica y exacta. Te saltas la explicación porque el contexto ya está en la habitación, entre los dos. Ese registro compartido agiliza la comunicación y sostiene vínculos profundos incluso tras años de distancia.
 
 ## La actualización en vivo
 
@@ -24,7 +24,7 @@ Las personalidades de alto conflicto tratan cada desacuerdo como una pelea por *
 
 Quienes viven de la charla superficial usan la **ligereza** para esconder que no tienen intención de armar un vínculo de verdad.
 
-Uno inunda la conexión con **ruido** para dominarla. El otro congela la conexión en una **omisión cortés**. El ruido ahoga la actualización; el silencio cortés la deja **sin aire**. En ambos casos la brecha queda sin atender, y la relación se vuelve una **actuación**.
+Uno inunda la conexión con **ruido** para dominarla. El otro congela la conexión en una **omisión cortés**. El ruido ahoga la actualización; el silencio cortés la deja **sin aire**. En ambos casos la brecha queda sin atender, y la relación se convierte en un **simulacro**.
 
 ## Fantasmas de quien era el año pasado
 
