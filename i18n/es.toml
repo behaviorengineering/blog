@@ -89,6 +89,21 @@ other = "Sustento"
 [protocolDepth]
 other = "Profundizar"
 
+[readerLandingWhy]
+other = "Por qué te puede importar"
+
+[readerLandingTakeaways]
+other = "Qué llevarte"
+
+[readerLandingExplore]
+other = "Seguir explorando"
+
+[readerLandingPrefillHint]
+other = "Abre una búsqueda nueva en Perplexity con esta pregunta"
+
+[readerLandingThreadHint]
+other = "Hilo de investigación ya resuelto"
+
 # type: sayings — main markdown body when TLDR / Context / Teaser precede it (detail TOC).
 [sayingsArticle]
 other = "En detalle"

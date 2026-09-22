@@ -124,12 +124,7 @@
         {{- dict "Content" (. | markdownify) "Ruby" $params.ruby "Fraction" $params.fraction "Fontawesome" $params.fontawesome | partial "function/content.html" | safeHTML -}}
       {{- end -}}
 
-      {{- with .Params.research -}}
-        <h2 id="section-research" class="sayings-section-heading">
-          <span aria-hidden="true">🔭</span> {{ T "protocolDepth" }}
-        </h2>
-        {{- dict "Content" (. | markdownify) "Ruby" $params.ruby "Fraction" $params.fraction "Fontawesome" $params.fontawesome | partial "function/content.html" | safeHTML -}}
-      {{- end -}}
+      {{- partial "reader-landing.html" . -}}
     </div>
 
     {{- partial "single/footer.html" . -}}

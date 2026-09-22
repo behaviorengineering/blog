@@ -18,7 +18,7 @@ description: >-
 
 **Essay MCP / `content_form=video`:** The same band split (DESCRIPTION novelty, SOWHAT payoff, thesis-first TLDW, optional CHAPTER_GUIDE jump map) is the host pack in **`data/essay-content-forms.yaml`** (`forms.video`). MCP spine/arc/composition/polish inject that guide. Composition Gate review still uses **Unknown yet / Will know / Hook / blocks / Close**; those fields map to DESCRIPTION / SOWHAT / TLDW per the pack. Keep this skill and that YAML aligned; do not put per-piece band rules only in WIP notes.
 
-**UI (this repo):** `layouts/video/single.html` renders **title** → **subtitle** (optional) → **meta** → **featured image** only if there is **no** `youtube_id` → **tags** → optional **TOC** → **lead** (see below) → **embed** (when `youtube_id` set) → **TL;DW** (body TLDR) → **Chapter Guide** (when present) → **piece footer** (updated date, tags + shares on one row, prev/next) → optional **Related** shelf (`related` or shared-tag fallback; RELATED band above the cards) → **Back | Home**.
+**UI (this repo):** `layouts/video/single.html` renders **title** → **subtitle** (optional) → **meta** → **featured image** only if there is **no** `youtube_id` → **tags** → optional **TOC** → **lead** (see below) → **embed** (when `youtube_id` set) → **TL;DW** (body TLDR) → **Chapter Guide** (when present) → optional **Dig deeper** (`reader_landing` or legacy `research`) → **piece footer** (updated date, tags + shares on one row, prev/next) → optional **Related** shelf (`related` or shared-tag fallback; RELATED band above the cards) → **Back | Home**.
 
 **Lead on the single (order):** If **`sowhat`** is set, **`description`** is shown under fixed **`h3`** **“What you probably do not know yet”** (🎬), then **`sowhat`** under **`h3`** **“What you will know after”** (🎯). If **`sowhat`** is omitted, **`description`** has no extra heading above it. Both fields are markdownified.
 
@@ -42,6 +42,7 @@ description: >-
 | **`subtitle`** | Optional second line under the **`title`** on the **single** page only (not list rows or home tiles). See **Subtitle (optional)** below. |
 | **`categories`** | Taxonomy hubs. Often **`Mind-Infrastructure`**, **`Human-Condition`**, **`Social-Protocols`**, or **`X-Minds`** (or **`Reality-Protocols`** under claims) by topic; pick what matches the post (see other posts in that section). For **`content/human-condition/`**, you MAY use **`Human-Condition`** plus **exactly one** theme hub (second term), same pattern as Cognitive-Memetics umbrellas (**`.cursor/skills/site-claims-content/SKILL.md`** → **Human-Condition theme hubs**). For **`content/x-minds/`**, use **`X-Minds`** first. |
 | **`related`** | Optional **keep-reading** paths (Hugo `GetPage` strings). Layout: **one** claims/video banner on top, then up to **two** sayings/panel on the next row. Empty or omitted: layout fills from **shared tags**. MUST **not** dump related links into the TLDR body. See **`layouts/partials/related-keep-reading.html`**. |
+| **`reader_landing`** | Optional **Dig deeper** after TL;DW / Chapter Guide: `why_it_matters`, `takeaways`, `explore` (related / source / prefilled Perplexity queries / optional completed thread). See **`layouts/partials/reader-landing.html`**. Legacy **`research`** markdown still works when `reader_landing` is absent. |
 
 ## Subtitle (optional)
 

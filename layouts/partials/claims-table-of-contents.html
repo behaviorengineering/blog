@@ -2,7 +2,7 @@
 {{- $hasThoughts := ne (strings.TrimSpace .Content) "" -}}
 {{- $grounding := .Params.grounding | default .Params.paper -}}
 {{- $hasGrounding := $grounding -}}
-{{- $hasResearch := .Params.research -}}
+{{- $hasLanding := or .Params.reader_landing .Params.research -}}
 {{- $mdLis := findRE `(?s)<li>\s*<a href="#[^"]+">[^<]*</a></li>` .TableOfContents -}}
 {{- $hasBodyHeadings := gt (len $mdLis) 0 -}}
 <nav id="TableOfContents">
@@ -29,8 +29,8 @@
     {{- if $hasGrounding -}}
       <li><a href="#section-grounding"><span aria-hidden="true">📑</span> {{ T "protocolGrounding" }}</a></li>
     {{- end -}}
-    {{- if $hasResearch -}}
-      <li><a href="#section-research"><span aria-hidden="true">🔭</span> {{ T "protocolDepth" }}</a></li>
+    {{- if $hasLanding -}}
+      <li><a href="#section-reader-landing"><span aria-hidden="true">🔭</span> {{ T "protocolDepth" }}</a></li>
     {{- end -}}
   </ul>
 </nav>

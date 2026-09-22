@@ -20,6 +20,30 @@ related:
   - "/human-condition/2026-07-31-why-you-always-have-two-reasons/"
   - "/human-condition/2026-08-06-why-facts-trigger-rage/"
 
+reader_landing:
+  why_it_matters: |
+    If you have ever left a hard talk feeling surprisingly closer, or left a polite week feeling farther apart, this is the mechanism under both. Shared history makes rebuilds faster, but only an honest update keeps the shared picture current. That matters when a relationship starts running on an outdated model of who you each are.
+  takeaways:
+    - "The same words trigger different mental rebuilds; shared history is the cache that makes those rebuilds accurate."
+    - "Honest conflict is how a **shared picture** absorbs a new fact; endless fighting and empty small talk both starve that update."
+    - "Ask whether the last fight added information, or only noise and status."
+  explore:
+    - type: related
+      label: "Why you always have two reasons"
+      path: "/human-condition/2026-07-31-why-you-always-have-two-reasons/"
+    - type: related
+      label: "Why facts trigger rage"
+      path: "/human-condition/2026-08-06-why-facts-trigger-rage/"
+    - type: source
+      label: "Common ground and the sharing of meaning (PMC)"
+      url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC4224066/"
+    - type: perplexity_query
+      label: "When does conflict build common ground?"
+      query: "In close relationships, when does constructive conflict increase common ground and shared reality, and when does hostile conflict erode the bond? Summarize peer-reviewed findings with primary sources."
+    - type: perplexity_query
+      label: "How do people rebuild meaning from short messages?"
+      query: "How do interlocutors use common ground and prior shared history to reconstruct a speaker's intended meaning from short utterances? Prefer psycholinguistics and communication research with citations."
+
 ---
 
 Language carries a heavy load. You take a vast, messy internal universe, filled with specific memories, subtle moods, and private associations, and condense it into a single line of text or speech. When you send that sentence across a room, you send a small package. The person receiving it must **rebuild your thought** using their own history, fears, and cultural assumptions. They construct a version of your mind from their own mental architecture. This process creates a **gap** between your intention and their hearing. Even with identical words, the **mental simulations** they trigger land in different worlds.

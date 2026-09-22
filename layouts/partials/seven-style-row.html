@@ -129,6 +129,19 @@
                         {{ . | markdownify }}
                     </div>
                 </div>
+            {{- else -}}
+                {{- with $p.Params.reader_landing -}}
+                    {{- with .why_it_matters -}}
+                        <div class="seven-list__sayings-block">
+                            <p class="seven-list__sayings-label">
+                                <span aria-hidden="true">🔭</span> {{ T "protocolDepth" }}
+                            </p>
+                            <div class="seven-list__summary-text seven-list__summary-text--md">
+                                {{ . | markdownify }}
+                            </div>
+                        </div>
+                    {{- end -}}
+                {{- end -}}
             {{- end -}}
         {{- else if or $p.Params.tldr $p.Params.fluff -}}
             {{- with $p.Params.tldr -}}

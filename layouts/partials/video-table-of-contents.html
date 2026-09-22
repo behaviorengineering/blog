@@ -1,6 +1,7 @@
 {{- $hasLeadPair := and .Description .Params.sowhat -}}
 {{- $hasBody := ne (strings.TrimSpace .Content) "" -}}
 {{- $hasChapter := or (findRE `<h[23][^>]*id="chapter-guide"` .Content) (findRE `<h[23][^>]*id="guía-de-capítulos"` .Content) (findRE `<h[23][^>]*id="guia-de-capitulos"` .Content) -}}
+{{- $hasLanding := or .Params.reader_landing .Params.research -}}
 {{/* Video bodies use ### only. Hugo TOC startLevel is 2, so it wraps those h3s in a parent <li><ul> with no <a>. Extract leaf <li><a> rows (same pattern as claims). Do not allow tags inside <a>: that group also matches </a> and the find fails. */}}
 {{- $mdLis := findRE `(?s)<li>\s*<a href="#[^"]+">[^<]*</a>\s*</li>` .TableOfContents -}}
 {{- $bodyLis := slice -}}
@@ -32,6 +33,9 @@
     {{- end -}}
     {{- if $hasChapter -}}
       <li><a href="#section-chapter-guide"><span aria-hidden="true">📑</span> {{ T "videoChapterGuide" }}</a></li>
+    {{- end -}}
+    {{- if $hasLanding -}}
+      <li><a href="#section-reader-landing"><span aria-hidden="true">🔭</span> {{ T "protocolDepth" }}</a></li>
     {{- end -}}
   </ul>
 </nav>
