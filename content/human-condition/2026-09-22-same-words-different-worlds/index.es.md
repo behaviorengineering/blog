@@ -20,13 +20,37 @@ related:
   - "/human-condition/2026-07-31-why-you-always-have-two-reasons/"
   - "/human-condition/2026-08-06-why-facts-trigger-rage/"
 
+reader_landing:
+  why_it_matters: |
+    Si alguna vez saliste de una conversación dura sintiéndote más cerca, o de una semana educada sintiéndote más lejos, este es el mecanismo detrás de ambas. La historia compartida acelera la reconstrucción, pero solo una actualización honesta mantiene viva la imagen compartida. Importa cuando la relación empieza a funcionar con un modelo caduco de quiénes son cada uno.
+  takeaways:
+    - "Las mismas palabras activan reconstrucciones mentales distintas; la historia compartida es la caché que las hace exactas."
+    - "El conflicto honesto es cómo una **imagen compartida** incorpora un hecho nuevo; la pelea interminable y la charla vacía ahogan esa actualización."
+    - "Pregúntate si la última pelea aportó información, o solo ruido y estatus."
+  explore:
+    - type: related
+      label: "Por qué siempre tienes dos razones"
+      path: "/human-condition/2026-07-31-why-you-always-have-two-reasons/"
+    - type: related
+      label: "Por qué los hechos encienden la rabia"
+      path: "/human-condition/2026-08-06-why-facts-trigger-rage/"
+    - type: source
+      label: "Common ground and the sharing of meaning (PMC)"
+      url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC4224066/"
+    - type: perplexity_query
+      label: "¿Cuándo el conflicto construye terreno común?"
+      query: "In close relationships, when does constructive conflict increase common ground and shared reality, and when does hostile conflict erode the bond? Summarize peer-reviewed findings with primary sources."
+    - type: perplexity_query
+      label: "¿Cómo se reconstruye el sentido de un mensaje corto?"
+      query: "How do interlocutors use common ground and prior shared history to reconstruct a speaker's intended meaning from short utterances? Prefer psycholinguistics and communication research with citations."
+
 ---
 
-El lenguaje carga un peso enorme. Tomas un universo interno vasto y desordenado, lleno de recuerdos concretos, de matices sutiles y de asociaciones privadas, y lo reduces a una sola línea de lo que dices. Cuando mandas esa frase al otro lado de la habitación, mandas un **paquete pequeño**. Quien lo recibe tiene que **reconstruir tu pensamiento** con su propia historia, sus miedos y sus supuestos culturales. Arma una versión de tu mente a partir de su arquitectura mental. Ese proceso **abre una brecha** entre lo que quisiste decir y lo que el otro escuchó. Aunque las palabras sean idénticas, las simulaciones mentales que activan caen en mundos distintos.
+El lenguaje carga un peso enorme. Tomas un universo interno vasto y desordenado, lleno de recuerdos concretos, de matices sutiles y de asociaciones privadas, y lo reduces a una sola frase o enunciado. Cuando mandas esa frase al otro lado de la habitación, mandas un **paquete pequeño**. Quien lo recibe tiene que **reconstruir tu pensamiento** con su propia historia, sus miedos y sus supuestos culturales. Arma una versión de tu mente a partir de su arquitectura mental. Ese proceso **abre una brecha** entre tu intención y la interpretación del otro. Aunque las palabras sean idénticas, las simulaciones mentales que activan caen en mundos distintos.
 
 ### La biblioteca privada
 
-La historia compartida funciona como una **biblioteca privada** que hace más precisa esa reconstrucción. Los amigos de toda la vida usan un chiste interno o una frase corta y concreta para tirar de un archivo enorme de historia común. Ese terreno común deja que un poco de lenguaje se abra en una **simulación rica y exacta**. Te saltas la explicación porque el contexto ya está en la habitación, entre los dos. Ese **registro compartido** agiliza la comunicación y ayuda a mantener vínculos profundos incluso tras años de distancia física.
+La historia compartida funciona como una **biblioteca privada** que hace más precisa esa reconstrucción. Con un chiste interno o una frase corta y concreta, los amigos de toda la vida activan un archivo enorme de historia común. Ese terreno común permite que el lenguaje active una **simulación rica y exacta**. Te saltas la explicación porque el contexto ya está en la habitación, entre los dos. Ese **registro compartido** agiliza la comunicación y ayuda a mantener vínculos profundos incluso tras años de distancia física.
 
 ### La actualización en vivo
 
@@ -34,7 +58,7 @@ El problema empieza cuando la vida de uno de los dos cambia y la conversación s
 
 ### Ruido que ahoga, o silencio que no dice
 
-El modelo falla cuando la gente disfraza la falta de sintonía con una **falsa armonía**. Las personalidades de alto conflicto tratan cada desacuerdo como una **pelea por estatus**, y ahí se corta el intercambio de información real. Quienes viven de la charla superficial y constante usan la ligereza para esconder que no tienen intención de armar un vínculo de verdad. Ambos enfoques dejan falsa la realidad compartida. Uno inunda la conexión con ruido para dominarla; el otro congela la conexión en una omisión cortés. El ruido ahoga la actualización; el silencio cortés la deja sin aire. En ambos casos la **brecha de fondo** queda sin atender, y la relación se vuelve una actuación.
+El modelo falla cuando la gente disfraza la falta de sintonía con una **falsa armonía**. Las personalidades de alto conflicto tratan cada desacuerdo como una **pelea por estatus**, y ahí se corta el intercambio de información real. Quienes viven de la charla superficial y constante usan la ligereza para esconder que no tienen intención de armar un vínculo de verdad. Ambos enfoques distorsionan la realidad compartida. Uno inunda la conexión con ruido para dominarla; el otro congela la conexión en una omisión cortés. El ruido ahoga la actualización; el silencio cortés la deja sin aire. En ambos casos la **brecha de fondo** queda sin atender, y la relación se convierte en un simulacro.
 
 ### Fantasmas de quien era el año pasado
 

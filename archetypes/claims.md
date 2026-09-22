@@ -16,7 +16,11 @@ og_description = ''
 # Citations / evidence that ground the claim (Markdown). Legacy key `paper` still works.
 grounding = ''
 
+# Optional freeform dig-deeper markdown (legacy). Prefer structured reader_landing below.
 research = ''
+
+# Reader landing: why it matters, takeaways, curated explore links (see layouts/partials/reader-landing.html).
+# reader_landing = { why_it_matters = '', takeaways = [], explore = [] }
 
 # Optional keep-reading paths (Hugo GetPage). Prefer sayings/panel; MAY add claims/video.
 # Example: related = ['/cognitive-memetics/sayings/2026-10-05-saying-39/']

@@ -21,6 +21,9 @@ tags = []
 # Example: related = ['/cognitive-memetics/sayings/2026-10-05-saying-39/']
 # Empty or omitted: layout fills from shared tags. Do not paste related links into the body.
 related = []
+
+# Reader landing after the TL;DW (why it matters, takeaways, explore links).
+# reader_landing = { why_it_matters = '', takeaways = [], explore = [] }
 +++
 
 TLDR / so-what article below the embed (summary for readers who skip the watch). Alternatively, leave `youtube_id` empty and add the built-in YouTube shortcode in Markdown.

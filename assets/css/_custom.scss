@@ -2288,6 +2288,36 @@ $home-tile-meta-color-dark: #c4b8cc;
     }
 }
 
+// Reader landing (claims + video Dig deeper): why / takeaways / explore.
+.reader-landing {
+    margin-top: 0.25rem;
+}
+
+.reader-landing__subhead {
+    font-size: 1.05rem;
+    font-weight: 650;
+    margin: 1.1rem 0 0.45rem;
+    color: inherit;
+}
+
+.reader-landing__explore-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0.35rem 0 0;
+}
+
+.reader-landing__explore-item {
+    margin: 0.55rem 0;
+    line-height: 1.45;
+}
+
+.reader-landing__explore-hint {
+    display: block;
+    font-size: 0.85rem;
+    opacity: 0.72;
+    margin-top: 0.15rem;
+}
+
 // Detail pages: keep long-form reading narrower for panel + sayings.
 .page.single.single-panel,
 .page.single.single-saying {

@@ -12,10 +12,19 @@ shared_guide: |
   - Composition stays on this shared commute voice. Do not imitate a section narrator during composition.
   - Polish applies one file from data/voices/ when polish_focus names its id (patient-narrator, lean-realist, cognitive-pragmatist). Until then, leave the section voice off.
 
+  Reader landing (after the diagnostic close; all essay and video forms):
+  - After the stanceful close, emit a separate reader_landing field (not counted in the 600–800 word band).
+  - Job 1 — why_it_matters: return the idea to the reader's world in 2–4 sentences. Name who might recognize themselves and why this may interest them now. Concrete scene, not a summary restack.
+  - Job 2 — takeaways: 2–4 short carry-forward lines (concrete, actionable or diagnostic). Do not reprint the thesis paragraph.
+  - Job 3 — explore: 2–4 ready-to-run follow-ups. Prefer fully phrased research questions a reader can paste into Perplexity. MAY list related site paths or titled source links when notes already supply them.
+  - Explore link kinds: perplexity_query (question text only; host builds a prefilled search URL), source (label + url already in notes/grounding), related (site path), perplexity_thread (only when a real completed research thread URL exists; never invent one).
+  - Do not present a prefilled question as if research already ran. Do not invent paper URLs or thread links.
+
 shared_criteria_notes: |
   Voice must pass a commute test: readable on a train, not an academic paper. Fail lecture cadence, stacked abstractions, and seminar diction.
   Composition: score the commute test and proximity rules. Do not fail a composition for missing a section voice.
   Polish: when polish_focus names a data/voices profile, also fail staccato runs, banned phrases, and missing required verbs from that profile.
+  Reader landing: fail empty why_it_matters, takeaway restacks of the close, invented source/thread URLs, or missing explore questions when notes support follow-up.
 
 forms:
   essay_argument:
@@ -25,6 +34,7 @@ forms:
       - Job: stanceful 600–800 word essay on a durable theme from the notes.
       - Follow the selected reader journey; examples as evidence for a pattern.
       - Close with a concrete author landing (fork / diagnostic question).
+      - Then emit reader_landing (why_it_matters + takeaways + explore) after that landing.
       - No required Hugo bands.
     required_bands: []
 
@@ -41,6 +51,7 @@ forms:
       - Also emit ### DESCRIPTION, ### SOWHAT, and ### TLDW once in the assembled prose (label those sections) so required-band checks can see them.
       - Under TLDW body sections use ### hooks only (inside blocks / close as needed).
       - CHAPTER_GUIDE (when present, usually polish/export or notes): timestamp jump map with plain chapter labels for landing in the talk. Not novelty slogans; not a second teaser list.
+      - After Close / TLDW landing, emit reader_landing the same way as essay_argument (why it matters, takeaways, explore questions).
       - Spine/arc: thesis-capable through-line; novelty is a DESCRIPTION / Unknown-yet job, not the spine engine.
       - Audience cue (x-minds / mixed-wiring): parents and late-discovery readers; still obey shared commute voice.
       - Proximity pillars (generator contract; evaluators enforce the same ideas):
@@ -72,6 +83,7 @@ forms:
       - Emit bands: CLAIM, THOUGHTS, GROUNDING.
       - CLAIM = plain-language assertion (list-card cold-read).
       - THOUGHTS = essay body; GROUNDING = short support + Source line shape.
+      - After the Thoughts landing, emit reader_landing (why_it_matters + takeaways + explore) for Hugo Dig deeper.
     required_bands: [CLAIM, THOUGHTS, GROUNDING]
 
   cognitive_memetics:
@@ -83,5 +95,6 @@ forms:
       - panel: DESCRIPTION (teaser), optional BODY article.
       - Prefer sayings for short vernacular; panel for strip+narrative.
       - Operator step focus may force subtype. For long free prose use essay_argument instead.
+      - Reader landing is optional for short sayings; include it on longer panel BODY pieces.
     required_bands: [CM_SUBTYPE, DESCRIPTION]
     optional_bands: [TLDR, FLUFF, BODY]

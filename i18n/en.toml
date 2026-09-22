@@ -33,6 +33,21 @@ other = "Grounding"
 [protocolDepth]
 other = "Dig deeper"
 
+[readerLandingWhy]
+other = "Why this might land for you"
+
+[readerLandingTakeaways]
+other = "What to carry forward"
+
+[readerLandingExplore]
+other = "Explore further"
+
+[readerLandingPrefillHint]
+other = "Opens a new Perplexity search with this question"
+
+[readerLandingThreadHint]
+other = "Completed research thread"
+
 # type: sayings — main markdown body when TLDR / Context / Teaser precede it (detail TOC).
 [sayingsArticle]
 other = "Going deeper"
