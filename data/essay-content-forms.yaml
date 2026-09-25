@@ -96,5 +96,10 @@ forms:
       - Prefer sayings for short vernacular; panel for strip+narrative.
       - Operator step focus may force subtype. For long free prose use essay_argument instead.
       - Reader landing is optional for short sayings; include it on longer panel BODY pieces.
+      - Composition uses hook → clues → stakes arc phases; conundrum emits ### band prose in essay_blocks (not three long essay blocks).
     required_bands: [CM_SUBTYPE, DESCRIPTION]
     optional_bands: [TLDR, FLUFF, BODY]
+    composition:
+      require_reader_landing: false
+      middle_shape: publish_bands
+      enforce_word_band: false
