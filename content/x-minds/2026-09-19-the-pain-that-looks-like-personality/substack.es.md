@@ -1,34 +1,34 @@
 ## Un punto en el chat te parte el pecho
 
-Tu pareja pone un **punto** en vez de un emoji y te llega una ola de **vergüenza**. El corazón se dispara. La mente se va a *no valer nada*. Ese pico tiene nombre: **RSD** (disforia sensible al rechazo), dolor emocional y físico intenso ante un rechazo real o percibido, una crítica o una burla.
+Tu pareja pone un **punto** en vez de un emoji y te llega una ola de **vergüenza**. El corazón se dispara. La mente se va a *no valer nada*. Ese pico tiene nombre: la **RSD** (disforia sensible al rechazo). Es un dolor emocional y físico intenso que aparece ante una crítica, una burla o un rechazo, sea real o percibido.
 
 El **freno** que debería cortar el pico es una **señal inhibitoria** que no llega. Sin esa **pausa** neurológica, cualquier desplante puede convertirse en un derrumbe.
 
-> El dolor **parece** personalidad. El mecanismo es un **hueco biológico**.
+> El dolor se confunde con la personalidad. El mecanismo es un **hueco biológico**.
 
 ## Cuando la ruptura acaba en etiqueta de carácter
 
 Un adolescente se derrumba tras una ruptura devastadora. Los clínicos cuelgan la etiqueta de **trastorno de la personalidad**, y la vergüenza pesa.
 
-Cuando aparece el **TDAH** de fondo, el cuento cambia. La intensidad apunta a una falta de señales inhibitorias en la **corteza prefrontal**. Es un cerebro sin freno natural para la intensidad emocional, **no** un veredicto permanente sobre quién eres.
+Cuando aparece el **TDAH** de fondo, el cuento cambia. La intensidad apunta a una falta de señales inhibitorias en la **corteza prefrontal**. Es un cerebro sin freno natural para la intensidad emocional; no es un veredicto permanente sobre quién eres.
 
 Entender el mecanismo quita vergüenza y abre un enfoque pragmático: manejar una **realidad biológica**.
 
 ## Medicación equivocada cuando falta la pausa
 
-Hay gente que vive en **depresión** o **ansiedad** resistente al tratamiento y los antidepresivos estándar no terminan de llegar. A menudo el problema principal es una deficiencia de **dopamina** y **noradrenalina** disfrazada de historia de humor.
+Hay gente que vive en **depresión** o **ansiedad** resistente al tratamiento y los antidepresivos estándar resultan insuficientes. A menudo el problema principal es una deficiencia de **dopamina** y **noradrenalina** disfrazada de rasgo de carácter o de un trastorno del estado de ánimo.
 
-Cuando alguien ve la **RSD** ligada al TDAH, opciones como la **Guanfacina** entran en juego. Ese medicamento refuerza la actividad noradrenérgica, crea la **pausa** emocional necesaria y calma la respuesta de miedo hiperactiva. Cuando los picos bajan de golpe, se ve un **vacío neuroquímico** concreto.
+Al identificar la **RSD** ligada al TDAH, opciones como la **Guanfacina** pueden integrarse en el tratamiento. Ese medicamento refuerza la actividad noradrenérgica, crea la **pausa** emocional necesaria y calma la respuesta de miedo hiperactiva. Cuando los picos bajan de golpe, se ve un **vacío neuroquímico** concreto.
 
-## Ponle nombre al pico antes de que se vaya el fin de semana
+## Ponle nombre al pico antes de que el fin de semana se te eche encima
 
-Una petición vaga del jefe (*«hablemos el lunes»*) puede comerte el fin de semana entero. El pensamiento catastrófico es una señal clara de la RSD: el cerebro no logra racionalizar al momento.
+Una petición vaga del jefe (*«hablemos el lunes»*) puede comerte el fin de semana entero. El pensamiento catastrófico es síntoma de la RSD, ya que el cerebro es incapaz de racionalizar al momento.
 
-La recuperación empieza al etiquetar. Di *«esto es mi RSD»* y abres un **espacio** de conciencia. En ese margen puedes sopesar el mejor escenario y el resultado realista antes del derrumbe.
+La recuperación empieza al etiquetar. Di *«esto es mi RSD»* y abres un **espacio** de conciencia. En ese margen puedes contrastar el escenario más probable con la realidad antes del derrumbe.
 
-## Fabrica la pausa a propósito
+## Crea la pausa de forma consciente
 
-Deja de preguntarte si tus reacciones demuestran que eres **inestable**. Pregúntate si hay aunque sea **un segundo** entre el detonante y el pico. Si el desastre aterriza antes de que puedas pensar, estás ante una falta neurológica de **inhibición**.
+Deja de preguntarte si tus reacciones demuestran que eres **inestable**. Pregúntate si hay aunque sea **un segundo** entre el detonante y el pico. Si la crisis te desborda antes de que puedas pensar, estás ante una falta neurológica de **inhibición**.
 
 Cuando llegue la próxima ola de vergüenza o rabia, ponle nombre de inmediato. Esa etiqueta traza un límite entre **identidad** e impulso biológico. Te da la pequeña pausa artificial que la corteza necesita para volver a racionalizar.
 

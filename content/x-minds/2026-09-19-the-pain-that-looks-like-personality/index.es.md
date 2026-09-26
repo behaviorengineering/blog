@@ -4,14 +4,14 @@ date: '2026-09-19T01:00:00+11:00'
 title: "El dolor que parece personalidad"
 type: video
 description: |
-  - Cómo un mensaje de texto puede provocar una crisis física.
+  - Un mensaje de texto es capaz de desencadenar una crisis física.
   - La señal cerebral específica que impide frenar el derrumbe emocional.
-  - Cómo las deficiencias de dopamina se disfrazan de trastornos de personalidad.
+  - Las deficiencias de dopamina que se disfrazan de trastornos de personalidad.
 sowhat: |
-  Conocerás el mecanismo neurológico tras la sensibilidad intensa al rechazo: así distinguirás una reacción cerebral de un defecto de carácter.
+  Entender el mecanismo neurológico de la sensibilidad intensa al rechazo permite distinguir una reacción cerebral de un defecto de carácter.
 draft: false
 
-subtitle: "RSD, TDAH y la trampa del diagnóstico erróneo, con el Dr. Shyamal Mashru"
+subtitle: "El Dr. Shyamal Mashru analiza el RSD, el TDAH y la trampa del diagnóstico erróneo"
 
 youtube_id: z3ALcuPVMY4
 images:
@@ -33,25 +33,25 @@ aliases:
 
 ### Un punto en el chat te parte el pecho
 
-Tu pareja usa un punto en un mensaje de texto en lugar de un emoji y sientes una ola repentina y aplastante de vergüenza. Ese impacto te parte el pecho; el corazón se acelera y la mente se precipita en una espiral de no valer nada. La reacción nace de una señal inhibitoria que falta: el freno que suele cortar la intensidad emocional. Sin esa pausa neurológica, cualquier desplante percibido se convierte en un desastre total de angustia. Estás ante un fallo biológico en el procesamiento emocional: un dolor con reglas propias.
+Tu pareja usa un punto en un mensaje de texto en lugar de un emoji y sientes una ola repentina y aplastante de vergüenza. Ese impacto te parte el pecho; el corazón se acelera y la mente se hunde en una espiral de desvalorización. La reacción nace de la ausencia de una señal inhibitoria: el freno que suele cortar la intensidad emocional. Sin esa pausa neurológica, cualquier desplante percibido se convierte en un desastre total de angustia. Estás ante un fallo biológico en el procesamiento emocional: un dolor con reglas propias.
 
 ### La ruptura acabó en etiqueta de personalidad
 
-Un adolescente sufre una ruptura devastadora y entra en una espiral de autolesiones. Los clínicos etiquetan el comportamiento como trastorno de la personalidad. Esa etiqueta impone una carga enorme de vergüenza. El TDAH subyacente apunta a otra causa: faltan señales inhibitorias en la corteza prefrontal. Su cerebro no trae un freno natural para la intensidad emocional. Entender el mecanismo quita vergüenza y abre un enfoque pragmático sobre una realidad biológica. El primer paso real hacia la estabilidad es mirar cómo el cerebro procesa, no quién eres.
+Un adolescente sufre una ruptura devastadora y entra en una espiral de autolesiones. Los clínicos etiquetan el comportamiento como trastorno de la personalidad. Esa etiqueta conlleva una carga de vergüenza enorme. El TDAH subyacente revela la verdadera causa: faltan señales inhibitorias en la corteza prefrontal. Su cerebro carece de un freno natural para la intensidad emocional. Entender el mecanismo quita vergüenza y abre un enfoque pragmático sobre una realidad biológica. El primer paso real hacia la estabilidad es mirar cómo el cerebro procesa, no quién eres.
 
 ### Medicación equivocada cuando falta la pausa
 
-Muchos pacientes luchan contra la depresión o la ansiedad resistente al tratamiento y no encuentran alivio en los antidepresivos estándar. Una deficiencia de dopamina y noradrenalina suele impulsar el problema principal; por eso viven con un diagnóstico erróneo. Cuando un clínico identifica la **RSD** (disforia sensible al rechazo) ligada al TDAH, puede usar tratamientos específicos como la **Guanfacina**. Ese medicamento refuerza la actividad noradrenérgica, crea la pausa emocional necesaria y calma la respuesta de miedo hiperactiva del cerebro. Que puedan regular esos picos de golpe demuestra un vacío neuroquímico concreto. Encuentran claridad donde antes solo había agotamiento.
+Muchos pacientes con depresión o ansiedad resistente al tratamiento no logran alivio con los antidepresivos estándar. Esa deficiencia de dopamina y noradrenalina suele ser el motor del problema y provoca diagnósticos erróneos. Cuando un clínico identifica la **RSD** (disforia sensible al rechazo) ligada al TDAH, puede usar tratamientos específicos como la **Guanfacina**. Ese medicamento refuerza la actividad noradrenérgica, crea la pausa emocional necesaria y calma la respuesta de miedo hiperactiva del cerebro. La capacidad de regular esos picos de golpe evidencia un vacío neuroquímico concreto. Esa claridad confirma que el problema no era el carácter, sino la química.
 
 ### Ponle nombre al pico antes del fin de semana
 
-Un empleado pasa todo el fin de semana en pánico tras una petición vaga del jefe para reunirse el lunes. Ese pensamiento catastrófico es una señal clara de la RSD: el cerebro no logra racionalizar la situación al momento. Se recupera con la práctica activa de etiquetar las emociones. Nombrar la sensación **"mi RSD"** abre un espacio de conciencia. Esa pausa permite sopesar el mejor escenario y el resultado realista, y devuelve el control de la narrativa interna. Usar la pausa así convierte un posible desastre emocional en un tramo de incomodidad manejable. Pasan a intervenir en su propia regulación emocional.
+Un empleado pasa todo el fin de semana en pánico tras una petición vaga del jefe para reunirse el lunes. Ese pensamiento catastrófico es síntoma de la RSD, ya que el cerebro es incapaz de racionalizar la situación en el momento. La clave está en practicar el etiquetado emocional. Nombrar la sensación **"mi RSD"** abre un espacio de conciencia. Esa pausa ayuda a sopesar el escenario más probable frente al real, devolviendo el control sobre la propia narrativa. Esa pausa convierte un posible desastre emocional en algo manejable, una simple incomodidad. Es el primer paso para empezar a regularse por sí mismos.
 
-### Fabrica la pausa a propósito
+### Crea la pausa de forma consciente
 
-Busca aunque sea un segundo de margen entre el detonante y el pico emocional. Si el desastre aterriza antes de que puedas procesar el pensamiento, estás ante una falta neurológica de inhibición.
+Busca aunque sea un segundo de margen entre el detonante y el pico emocional. Si la crisis te desborda antes de que puedas procesar el pensamiento, estás ante una falta neurológica de inhibición.
 
-Cuando llegue la próxima ola de vergüenza o rabia, ponle nombre de inmediato. Di **"esto es mi RSD"** y traza un límite consciente entre tu identidad y el impulso biológico. Etiquetar así te da la pequeña pausa artificial que la corteza prefrontal necesita para pasar a la racionalización antes de que la espiral te atrape.
+Cuando llegue la próxima ola de vergüenza o rabia, ponle nombre de inmediato. Di **"esto es mi RSD"** y traza un límite consciente entre tu identidad y el impulso biológico. Etiquetar así te da la pequeña pausa artificial que la corteza prefrontal necesita para que la razón tome el mando antes de que la espiral te atrape.
 
 ### Guía de capítulos
 

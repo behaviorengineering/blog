@@ -89,7 +89,7 @@ Progress on stderr (`Evaluating unit k/n…`). Surface the full stdout report (p
 When any rewrite/eval unit is applied by an agent or LLM:
 
 - **title / subtitle:** exactly **one** plain line; if output has `###`, newlines, or body paste → **discard**.
-- **description / sowhat:** keep block shape; **MUST NOT** inject body paragraphs.
+- **description / sowhat:** keep block shape; **MUST NOT** inject body paragraphs. For **`description`** list bullets (video novelty lead), **MUST NOT** use pitch-deck colon formulas (*X: de A a B*), bullets starting with *Cómo…* (*How to* calque), or *mentes diseñadas para* (*brains built to*); use active Spanish claims with finite verbs.
 - **body unit:** rewrite only that unit; **MUST NOT** repeat prior paragraphs or emit meta labels (*UNIDAD ACTUAL*, *Aquí tienes*).
 - **Reverse-translation test:** if ES remounts into the EN sentence almost word-for-word → fail `anti_calque` and rewrite syntax.
 
@@ -102,6 +102,8 @@ When any rewrite/eval unit is applied by an agent or LLM:
 - **MUST NOT** drop verb objects that carry ethical or clinical load (*a la persona*).
 - **MUST NOT** prioritize fluency over `conceptual_fidelity` when both conflict.
 - **MUST NOT** treat “reads smoothly” as native if clause order still mirrors English (esqueleto EN + léxico ES). Rewrite syntax, not only vocabulary.
+- **MUST NOT** apply cosmetic word-level patches (swapping 1 or 2 words) when a paragraph fails the reverse-translation test or carries an English sentence skeleton. Swapping *impuesto de carrera* for *lastre* while keeping the English clause order leaves the prose sounding like dubbing.
+- **MUST** re-adapt the full paragraph when syntax fails reverse-translation: extract the claim and mechanism, close the English source, and reconstruct the paragraph in natural Spanish using organic hypotaxis, active verbs, and natural connectors.
 
 ### Author micro-edits bind
 
