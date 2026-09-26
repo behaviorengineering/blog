@@ -1,6 +1,7 @@
 {{- $p := .Page -}}
 {{- $params := $p.Params | merge $p.Site.Params.page -}}
 {{- $isClaims := eq $p.Type `claims` -}}
+{{- $isOpinion := eq $p.Type `opinion` -}}
 {{- $isVideo := eq $p.Type `video` -}}
 {{- $isPanel := eq $p.Type `panel` -}}
 {{- $preview := $params.featuredImagePreview | default $params.featuredimagepreview -}}
@@ -74,7 +75,7 @@
                 {{- end -}}
             </div>
         {{- end -}}
-        {{- if and $isClaims $image $p.Params.image_credit -}}
+        {{- if and (or $isClaims $isOpinion) $image $p.Params.image_credit -}}
             <div class="seven-list__image-credit" role="note">
                 {{- dict "Content" ($p.Params.image_credit | markdownify) "Ruby" $params.ruby "Fraction" $params.fraction "Fontawesome" $params.fontawesome | partial "function/content.html" | safeHTML -}}
             </div>
@@ -93,13 +94,61 @@
         {{- end -}}
     </div>
     {{- $grounding := $p.Params.grounding | default $p.Params.paper -}}
-    {{- $asideBlocks := or (eq $p.Type `sayings`) $isClaims $p.Params.tldr $p.Params.fluff (and $isVideo $p.Params.sowhat) -}}
+    {{- $asideBlocks := or (eq $p.Type `sayings`) $isClaims $isOpinion $p.Params.tldr $p.Params.fluff (and $isVideo $p.Params.sowhat) -}}
     <div class="seven-list__summary-col{{ if $asideBlocks }} seven-list__summary-col--sayings{{ end }}">
         {{- if $isClaims -}}
             {{- if or $p.Description $p.Summary -}}
                 <div class="seven-list__sayings-block">
                     <p class="seven-list__sayings-label">
                         <span aria-hidden="true">🎯</span> {{ T "protocolClaim" }}
+                    </p>
+                    <div class="seven-list__summary-text seven-list__summary-text--md">
+                        {{- if $p.Description -}}
+                            {{ $p.Description | markdownify }}
+                        {{- else -}}
+                            <p>{{ $p.Summary | plainify }}</p>
+                        {{- end -}}
+                    </div>
+                </div>
+            {{- end -}}
+            {{- with $grounding -}}
+                <div class="seven-list__sayings-block">
+                    <p class="seven-list__sayings-label">
+                        <span aria-hidden="true">📑</span> {{ T "protocolGrounding" }}
+                    </p>
+                    <div class="seven-list__summary-text seven-list__summary-text--md">
+                        {{ . | markdownify }}
+                    </div>
+                </div>
+            {{- end -}}
+            {{- with $p.Params.research -}}
+                <div class="seven-list__sayings-block">
+                    <p class="seven-list__sayings-label">
+                        <span aria-hidden="true">🔭</span> {{ T "protocolDepth" }}
+                    </p>
+                    <div class="seven-list__summary-text seven-list__summary-text--md">
+                        {{ . | markdownify }}
+                    </div>
+                </div>
+            {{- else -}}
+                {{- with $p.Params.reader_landing -}}
+                    {{- with .why_it_matters -}}
+                        <div class="seven-list__sayings-block">
+                            <p class="seven-list__sayings-label">
+                                <span aria-hidden="true">🔭</span> {{ T "protocolDepth" }}
+                            </p>
+                            <div class="seven-list__summary-text seven-list__summary-text--md">
+                                {{ . | markdownify }}
+                            </div>
+                        </div>
+                    {{- end -}}
+                {{- end -}}
+            {{- end -}}
+        {{- else if $isOpinion -}}
+            {{- if or $p.Description $p.Summary -}}
+                <div class="seven-list__sayings-block">
+                    <p class="seven-list__sayings-label">
+                        <span aria-hidden="true">📌</span> {{ T "protocolOpinion" }}
                     </p>
                     <div class="seven-list__summary-text seven-list__summary-text--md">
                         {{- if $p.Description -}}

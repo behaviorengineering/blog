@@ -12,12 +12,22 @@ Extension research for **Explore further** MUST run inside the shared Perplexity
 
 Paste sources for Instructions and skill zips: `tmp/essay-extension-skills/perplexity-computer/` (local; not in git).
 
+## Blog Explore links (`perplexity_query`)
+
+Hugo `reader_landing.explore` rows with `type: perplexity_query` link to `site.Params.perplexityProjectURL` in `hugo.toml` (same URL as this project). The full question is shown under the link for paste into **Start a Session**. MUST NOT use `?q=` on the project URL: that does not attach threads to the project Overview.
+
+## Orphan threads (not on project Overview)
+
+Threads started from global **New** / Search, `/search/new?q=`, MCP `perplexity_research`, or the top search bar without the project composer do **not** appear under the project session list. Recovery: **History** (library) → ⋯ on the thread → **Add it to a project** → **behaviorengineering blog**. Prefer re-running from the project ask box when project Instructions must apply from turn one.
+
+Shipped completed research uses `type: perplexity_thread` with public share URLs.
+
 ## Operator workflow (each new research thread)
 
 1. Open the **project URL** above (Overview tab).
 2. Use the project **Ask anything about this project** field (or **New thread** inside this project). MUST NOT use the top-level **New** search outside the project.
 3. Paste the Gemma **PRIMARY_PROMPT** (from `site-essay-extend-explore` / Polypus). One hinge per thread for a 2–3 thread batch.
-4. When the answer finishes: **Share** → **Anyone with the link can view** (see [PERPLEXITY-SHARE.md](PERPLEXITY-SHARE.md)) → copy URL into `candidates.json`.
+4. When the answer finishes: **Share** → **Anyone with the link can view** (see [PERPLEXITY-SHARE.md](PERPLEXITY-SHARE.md)) → copy URL into `candidates.json` → record in `share-manifest.json` via `make explore-share-prepare` / `explore-share-confirm` / `explore-share-verify-cold` (browser helper: [PERPLEXITY-SHARE-BROWSER.md](PERPLEXITY-SHARE-BROWSER.md)).
 5. Confirm the thread appears under this project’s session list (same Overview), not only under generic Sessions.
 
 Pass: thread listed on the project Overview with project Instructions/Skills active.  

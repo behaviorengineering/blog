@@ -5,7 +5,7 @@
 ## Active tags
 # Columns: tag<TAB>file_count (each file counts at most once per distinct tag)
 Leadership	92
-RealityCheck	85
+RealityCheck	87
 ArepaContigo	83
 CulturalStopwatch	83
 StreetWisdom	83
@@ -21,13 +21,13 @@ Reptilocracy	51
 NarrativeControl	45
 KnowledgeWork	37
 OfficeSatire	24
+SeeTheGame	22
 Stress	22
-AccountabilityGap	19
+AccountabilityGap	21
 AGIHype	18
 CheapNarratives	18
 EveryoneLovesRaymond	18
 PetLife	18
-SeeTheGame	18
 TheCutestDog	18
 Accountability	17
 Agency	16
@@ -44,6 +44,7 @@ PredictiveProcessing	10
 SharedIllusionsRunTheWorld	10
 Automation	8
 IdeasBecomeIdentity	8
+BlameDeflection	6
 BodyAsThinkingTool	6
 CognitiveCapacity	6
 CorporateJargon	6
@@ -69,8 +70,8 @@ WhenChoiceBitesBack	6
 WorldModels	6
 Oversight	5
 AlgorithmicDecay	4
+AttentionPatterns	4
 BellCurve	4
-BlameDeflection	4
 CalendarManagement	4
 ControlledHallucination	4
 DeniabilityHood	4
@@ -102,7 +103,6 @@ BadNews	3
 AgenticNervousness	2
 AhaMoment	2
 Alignment	2
-AttentionPatterns	2
 AuthorizedBeneficiaries	2
 AutomationAndJudgment	2
 BirdsOfAFeather	2
@@ -163,6 +163,7 @@ InGroupBias	2
 IndustrialCage	2
 InformationLeaks	2
 InstitutionalHypocrisy	2
+InterestBeforeImportance	2
 InvisibleHarm	2
 IteratedPrisonersDilemma	2
 KnowYourPolitics	2
@@ -183,6 +184,7 @@ NervousSystem	2
 NeutralMirror	2
 NoBrakesNoCorrection	2
 OffTarget	2
+OffloadTheFriction	2
 OpenDoor	2
 Opportunism	2
 OptimisedForStaying	2

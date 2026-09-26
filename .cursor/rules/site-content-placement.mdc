@@ -1,7 +1,7 @@
 ---
 description: >-
   Tells where new posts go: Hugo section folder (URL path) and content type
-  (claims, panel, sayings, video). Apply when creating, moving, or categorizing
+  (claims, opinion, panel, sayings, video). Apply when creating, moving, or categorizing
   content under content/ or when the author asks where a piece belongs.
 globs:
   - content/**/*.md
@@ -22,10 +22,10 @@ Use the **main job of the piece**, not hashtags or “where you were browsing.�
 
 | Put it under | When the core of the post is |
 |--------------|-------------------------------|
-| **`social-protocols/`** | How social order is built and steered: norms, reciprocity, coordination, institutions, media, and the protocols behind belief and behavior (micro to macro). Usual type is **`claims`**; **`type: video`** is valid when the pick’s main job matches this intent (for example cooperation, institutions, media protocols). |
-| **`human-condition/`** | Claims about human nature, empathy, morality, development, or identity that read as psychology or philosophy of persons (**`type: claims`**) **or** a curated YouTube page (**`type: video`**) with that same core. Not office satire. Not the **X-Minds** community lane (parents and mixed-wiring minds looking for others like them). |
-| **`x-minds/`** | Lived experience and community for **mixed-wiring** minds: parents raising kids who think in a different mix, and people looking for others like them. Usual types are **`claims`** and **`video`**. Public name is **X-Minds**. MUST NOT use **neurodivergence** (or clinical “off the typical” labels) in section titles, teasers, or hub copy. |
-| **`mind-infrastructure/`** | General-interest tools, models, and curated talks whose **main job** is **not** primarily **social-protocols** (coordination, norms, institutions), **human-condition** (person-level thesis), or **x-minds** (mixed-wiring community). **`type: video`** is common here as a **default lane** when those section intents do not fit. The folder name is **URL and home-feed routing**, not a claim that the topic is only formal models or “mental infrastructure” in a narrow sense. |
+| **`social-protocols/`** | How social order is built and steered: norms, reciprocity, coordination, institutions, media, and the protocols behind belief and behavior (micro to macro). Usual types are **`claims`** and **`opinion`** (full stanceful essays); **`type: video`** is valid when the pick’s main job matches this intent (for example cooperation, institutions, media protocols). |
+| **`human-condition/`** | Claims about human nature, empathy, morality, development, or identity that read as psychology or philosophy of persons (**`type: claims`** or **`type: opinion`**) **or** a curated YouTube page (**`type: video`**) with that same core. Not office satire. Not the **X-Minds** community lane (parents and mixed-wiring minds looking for others like them). |
+| **`x-minds/`** | Lived experience and community for **mixed-wiring** minds: parents raising kids who think in a different mix, and people looking for others like them. Usual types are **`claims`**, **`opinion`**, and **`video`**. Public name is **X-Minds**. MUST NOT use **neurodivergence** (or clinical “off the typical” labels) in section titles, teasers, or hub copy. |
+| **`mind-infrastructure/`** | General-interest tools, models, and curated talks whose **main job** is **not** primarily **social-protocols** (coordination, norms, institutions), **human-condition** (person-level thesis), or **x-minds** (mixed-wiring community). **`type: video`** is common here as a **default lane** when those section intents do not fit; **`type: opinion`** is valid for essay-shaped pieces. The folder name is **URL and home-feed routing**, not a claim that the topic is only formal models or “mental infrastructure” in a narrow sense. |
 | **`cognitive-memetics/`** | **Tales from the Cube Farm** weekly strips (`type: panel`, **`Cube-Cows`** hub), **Raymond** / Everyone ❤️ Raymond strips (`type: panel`, **`Raymond`** hub), **Venezuelan sayings / Street Wisdom** (`type: sayings` + **Por-Estas-Calles** hub), **T-Shirt Art** visual line (`panel` or `sayings` + **T-Shirt Art** hub), **Reptilocracy** (`sayings` or `panel` + **Reptilocracy** hub), or **Pawtropolis (Under Fire)** (`panel` or `sayings` + **Pawtropolis-Under-Fire** hub). |
 
 ### `type: video` (YouTube picks)
@@ -51,6 +51,7 @@ Use the **main job of the piece**, not hashtags or “where you were browsing.�
 | `type` | Section(s) | Use when |
 |--------|------------|----------|
 | **`claims`** | `social-protocols/`, `human-condition/`, `x-minds/` | You need **Claim** (`description`), **Grounding** (`grounding`), optional **Thoughts** body. Follow **`.cursor/skills/site-claims-content/SKILL.md`**. |
+| **`opinion`** | `social-protocols/`, `human-condition/`, `mind-infrastructure/`, `x-minds/` | Full **stanceful essay**: **Opinion** (`description`), **Essay** body, **optional** `grounding`, optional **`reader_landing`**. Not Claim/Grounding semantics. Follow **`.cursor/skills/site-opinion-content/SKILL.md`**. Essay MCP: **`content_form=opinion_essay`**. |
 | **`panel`** | `cognitive-memetics/` | Cube-cow strip or longer Tales from the Cube Farm piece; **`description`** as Teaser. Follow **`.cursor/skills/site-cognitive-memetics-content/SKILL.md`**. |
 | **`sayings`** | `cognitive-memetics/` | TLDR + Context pattern; Venezuelan lines or T-Shirt Art. Follow **`.cursor/skills/site-cognitive-memetics-content/SKILL.md`**. |
 | **`video`** | `social-protocols/`, `mind-infrastructure/`, `human-condition/`, `x-minds/` | YouTube pick with **`description`** as lead. Follow **`.cursor/skills/site-video-content/SKILL.md`**. |
@@ -64,6 +65,7 @@ Use the **main job of the piece**, not hashtags or “where you were browsing.�
 ## Quick checks
 
 - If the page is **Claim + Grounding + essay**, and it is **not** a cow, saying, or video → **`social-protocols/`**, **`human-condition/`**, or **`x-minds/`**, **`type: claims`**.
+- If the page is a **full stanceful essay** without Claim/Grounding semantics → same sections (by main job), **`type: opinion`** (pipeline **`opinion_essay`**).
 - If the page is **strip / saying / shirt line** with the cognitive-memetics hubs → **`cognitive-memetics/`**, **`panel`** or **`sayings`**.
 - If the page is **`type: video`** → **`social-protocols/`**, **`mind-infrastructure/`**, **`human-condition/`**, or **`x-minds/`** by main job; set **`categories`** for hubs, not for folder choice alone.
 - After **any** new bundle, folder rename/move, or **`date`** / **`draft`** change → **`make calendar`** (see **`.cursor/rules/site-content-markdown-writing.mdc`** → **Publish calendar**).

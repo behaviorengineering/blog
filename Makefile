@@ -26,7 +26,7 @@ SOCIAL_ASK_FLAG := $(if $(filter 1 true yes,$(SOCIAL_AUTOPOST_ASK)),-ask,) $(if 
 
 .DEFAULT_GOAL := help
 
-.PHONY: help all deps tidy build tag-register calendar publish-calendar hooks-install facebook-autopost linkedin-autopost social-autopost serve server serve-down serve-cleanup down test lint clean list verify check-links substack-html-sample substack-draft sb-html sb-en sb-en-pick sb-en-pick-publish sb-es sb-es-pick-publish sb-list-unpublished sb-mark-published sb-config-init sb-login sb-cc mermaid-render mermaid-render-en mermaid-render-es mermaid motif-editor carousel-pdf carousel-save audit-voice explore-proposal explore-fetch-exports explore-apply verify-explore-links
+.PHONY: help all deps tidy build tag-register calendar publish-calendar hooks-install facebook-autopost linkedin-autopost social-autopost serve server serve-down serve-cleanup down test lint clean list verify check-links substack-html-sample substack-draft sb-html sb-en sb-en-pick sb-en-pick-publish sb-es sb-es-pick-publish sb-list-unpublished sb-mark-published sb-config-init sb-login sb-cc mermaid-render mermaid-render-en mermaid-render-es mermaid motif-editor carousel-pdf carousel-save audit-voice explore-proposal explore-fetch-exports explore-apply explore-share-prepare explore-share-confirm explore-share-verify-cold explore-share-check verify-explore-links explore-share-test
 
 all: build
 
@@ -39,6 +39,11 @@ help:
 	@echo "  make explore-proposal  Gemma review + hooks proposal (ESSAY=, CANDIDATES=; ALLOW_SUMMARY=1 optional)"
 	@echo "  make explore-fetch-exports  Sync export paths + MCP manifest (ESSAY=, CANDIDATES=, SYNC=1)"
 	@echo "  make explore-apply     Gemma applicability review; APPLY=1 CONFIRM=1 merges after operator OK"
+	@echo "  make explore-share-prepare   Init share-manifest.json from CANDIDATES=..."
+	@echo "  make explore-share-confirm   Record UI share (CANDIDATES=..., CANDIDATE_ID=...)"
+	@echo "  make explore-share-verify-cold  HTTP probe and/or OPERATOR=1 incognito record"
+	@echo "  make explore-share-check     Preflight manifest vs PROPOSAL=... CANDIDATES=..."
+	@echo "  make explore-share-test      Unit tests for share manifest preflight"
 	@echo "  make verify-explore-links  List Perplexity thread URLs to confirm public share (POST=section/slug)"
 	@echo "  make hooks-install     Point this clone at .githooks (pre-commit runs make calendar when content/ is staged)"
 	@echo "  make facebook-autopost  Post linkedin.txt to Facebook (DATE=; DRY_RUN=1 default; prompt: publish vs tag-as-published)"
@@ -146,6 +151,54 @@ explore-apply:
 	else \
 	  python3 scripts/explore_apply.py --essay "$$essay" --proposal "$$prop" $$candflag; \
 	fi
+
+explore-share-prepare:
+	@cand="$(CANDIDATES)"; essay="$(ESSAY)"; \
+	if [ -z "$$cand" ]; then \
+	  echo "usage: make explore-share-prepare CANDIDATES=tmp/explore-proposals/.../candidates.json [ESSAY=content/.../index.md]" >&2; \
+	  exit 2; \
+	fi; \
+	essayflag=""; \
+	if [ -n "$$essay" ]; then essayflag="--essay $$essay"; fi; \
+	python3 scripts/explore_share.py prepare --candidates "$$cand" $$essayflag
+
+explore-share-confirm:
+	@cand="$(CANDIDATES)"; cid="$(CANDIDATE_ID)"; url="$(URL)"; by="$(BY)"; \
+	if [ -z "$$cand" ] || [ -z "$$cid" ]; then \
+	  echo "usage: make explore-share-confirm CANDIDATES=... CANDIDATE_ID=blame-blindspot [URL=...] [BY=operator]" >&2; \
+	  exit 2; \
+	fi; \
+	urlflag=""; \
+	if [ -n "$$url" ]; then urlflag="--url $$url"; fi; \
+	byflag=""; \
+	if [ -n "$$by" ]; then byflag="--by $$by"; fi; \
+	python3 scripts/explore_share.py confirm --candidates "$$cand" --candidate-id "$$cid" $$urlflag $$byflag
+
+explore-share-verify-cold:
+	@cand="$(CANDIDATES)"; cid="$(CANDIDATE_ID)"; probe="$(PROBE)"; op="$(OPERATOR)"; \
+	if [ -z "$$cand" ] || [ -z "$$cid" ]; then \
+	  echo "usage: make explore-share-verify-cold CANDIDATES=... CANDIDATE_ID=... [PROBE=1] [OPERATOR=1]" >&2; \
+	  exit 2; \
+	fi; \
+	flags=""; \
+	if [ "$$probe" = "1" ]; then flags="$$flags --probe"; fi; \
+	if [ "$$op" = "1" ]; then flags="$$flags --operator"; fi; \
+	if [ -z "$$flags" ]; then \
+	  echo "Pass PROBE=1 (HTTP heuristic) and/or OPERATOR=1 (record incognito check)" >&2; \
+	  exit 2; \
+	fi; \
+	python3 scripts/explore_share.py verify-cold --candidates "$$cand" --candidate-id "$$cid" $$flags
+
+explore-share-check:
+	@prop="$(PROPOSAL)"; cand="$(CANDIDATES)"; \
+	if [ -z "$$prop" ] || [ -z "$$cand" ]; then \
+	  echo "usage: make explore-share-check PROPOSAL=tmp/.../slug.proposal.yaml CANDIDATES=tmp/.../candidates.json" >&2; \
+	  exit 2; \
+	fi; \
+	python3 scripts/explore_share.py check --proposal "$$prop" --candidates "$$cand"
+
+explore-share-test:
+	python3 -m unittest discover -s .cursor/skills/site-extension-pipeline/scripts -p 'test_explore_share*.py' -v
 
 verify-explore-links:
 	@post="$(POST)"; \

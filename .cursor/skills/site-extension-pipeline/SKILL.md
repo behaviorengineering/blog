@@ -56,11 +56,21 @@ By default the runner **syncs `research_export` paths** and **requires** markdow
 
 Helper: `make explore-fetch-exports` / [`scripts/explore_fetch_exports.py`](/Users/hector/Xynova/ai/behaviourengineering/site/scripts/explore_fetch_exports.py).
 
+## Share manifest (before apply)
+
+**Runner:** `make explore-share-prepare` / `explore-share-confirm` / `explore-share-verify-cold` / `explore-share-check` → [`scripts/explore_share.py`](/Users/hector/Xynova/ai/behaviourengineering/site/scripts/explore_share.py).
+
+1. After `candidates.json` has URLs: `make explore-share-prepare CANDIDATES=...`
+2. Operator sets **Anyone with the link** in Perplexity (see [PERPLEXITY-SHARE-BROWSER.md](PERPLEXITY-SHARE-BROWSER.md)); `make explore-share-confirm CANDIDATES=... CANDIDATE_ID=...`
+3. Incognito pass (+ optional `PROBE=1`): `make explore-share-verify-cold ... OPERATOR=1`
+4. `make explore-share-check PROPOSAL=... CANDIDATES=...` must pass before `explore-apply`.
+
 ## Apply runner (operator gate)
 
 **Runner:** `make explore-apply` → [`scripts/explore_apply.py`](/Users/hector/Xynova/ai/behaviourengineering/site/scripts/explore_apply.py).
 
-1. `make explore-apply ESSAY=... PROPOSAL=tmp/.../slug.proposal.yaml CANDIDATES=.../candidates.json`  
+1. Share preflight (manifest) runs automatically unless `SKIP_SHARE_PREFLIGHT=1` (tests only).
+2. `make explore-apply ESSAY=... PROPOSAL=tmp/.../slug.proposal.yaml CANDIDATES=.../candidates.json`  
    Gemma **applicability** review writes `<proposal>.applicability.yaml` and prints `operator_question`.
 2. **Agent MUST** surface that question to the operator (AskQuestion or plain ask). MUST NOT pass `APPLY=1` in the same turn as the review.
 3. Only if the operator confirms:  
@@ -72,8 +82,8 @@ MUST NOT patch `index.md` / `index.es.md` without step 2 and `CONFIRM=1`.
 
 **CONSTRAINT:** Every `perplexity_thread` URL on the live site MUST be **viewable by anyone with the link** (Perplexity Share → public / anyone with link). MUST NOT ship workspace-private threads that show a login wall to readers.
 
-- **Before explore-apply:** Operator confirms incognito check for each URL (`make verify-explore-links POST=section/slug`).
-- **Reference:** [PERPLEXITY-SHARE.md](PERPLEXITY-SHARE.md)
+- **Before explore-apply:** `make explore-share-check` (manifest) for proposal URLs; after ship, `make verify-explore-links POST=section/slug`.
+- **Reference:** [PERPLEXITY-SHARE.md](PERPLEXITY-SHARE.md), [PERPLEXITY-SHARE-BROWSER.md](PERPLEXITY-SHARE-BROWSER.md)
 
 CORRECT:
 ```text
@@ -100,8 +110,8 @@ Project instructions and skill zips: `tmp/essay-extension-skills/perplexity-comp
 - [ ] Real thread URL only (operator supplied)
 - [ ] Every perplexity row has Gemma `label` + `hook`
 - [ ] No em dash in hooks or labels
-- [ ] **Public share:** Each `perplexity_thread` URL verified in incognito (Anyone with the link)
-      Method: `make verify-explore-links POST=...` then manual check
+- [ ] **Public share:** `share-manifest.json` passes `make explore-share-check` (confirm + cold verify per URL)
+      After Hugo apply: `make verify-explore-links POST=...`
       Pass: Cold reader sees research
       Fail: STOP, re-share in Perplexity before deploy
 - [ ] ES hooks native, not calque

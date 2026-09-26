@@ -12,6 +12,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 import sys
 import urllib.error
@@ -23,7 +24,13 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 if str(SCRIPT_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPT_DIR))
 
-from explore_pipeline_common import repo_root_from_here  # noqa: E402
+from explore_pipeline_common import bundle_slug_from_essay, repo_root_from_here  # noqa: E402
+from explore_share import urls_from_proposal  # noqa: E402
+from explore_share_manifest import (  # noqa: E402
+    load_manifest,
+    manifest_path_for_slug,
+    validate_manifest_for_urls,
+)
 
 REPO_ROOT = repo_root_from_here(Path(__file__))
 _SKILLS = REPO_ROOT / ".cursor" / "skills"
@@ -88,14 +95,15 @@ def parse_proposal_hooks(proposal_text: str) -> list[dict[str, str]]:
     block = m.group(1)
     rows: list[dict[str, str]] = []
     for chunk in re.split(r"\n\s*-\s*candidate_id:", block):
-        if "candidate_id:" not in chunk and not chunk.strip().startswith("candidate_id:"):
+        stripped = chunk.strip()
+        if not stripped or stripped.startswith("hooks:"):
             continue
-        piece = chunk if chunk.strip().startswith("candidate_id:") else "candidate_id:" + chunk
+        piece = chunk if stripped.startswith("candidate_id:") else "candidate_id:" + chunk
         cid = re.search(r"candidate_id:\s*(\S+)", piece)
-        label = re.search(r'label:\s*"([^"]*)"', piece)
-        hook = re.search(r'hook:\s*"([^"]*)"', piece)
-        es_label = re.search(r'es_label:\s*"([^"]*)"', piece)
-        es_hook = re.search(r'es_hook:\s*"([^"]*)"', piece)
+        label = re.search(r'^\s+label:\s*"([^"]*)"', piece, re.M)
+        hook = re.search(r'^\s+hook:\s*"([^"]*)"', piece, re.M)
+        es_label = re.search(r'^\s+es_label:\s*"([^"]*)"', piece, re.M)
+        es_hook = re.search(r'^\s+es_hook:\s*"([^"]*)"', piece, re.M)
         if not cid or not label or not hook:
             continue
         row = {
@@ -221,6 +229,7 @@ def upsert_perplexity_threads(
     rows: list[dict[str, str]],
     *,
     use_spanish: bool,
+    replace_all: bool = False,
 ) -> str:
     if not rows:
         return md
@@ -246,17 +255,21 @@ def upsert_perplexity_threads(
         die("No reader_landing.explore block found")
 
     prefix, explore_body = explore_m.group(1), explore_m.group(2)
-    for r in rows:
-        url = re.escape(r["url"])
-        new_block = block_for(r)
-        item_pat = re.compile(
-            rf"    - type: perplexity_thread\n(?:      .+\n)*?      url: \"{url}\"\n",
-            re.M,
-        )
-        if item_pat.search(explore_body):
-            explore_body = item_pat.sub(new_block, explore_body)
-        else:
-            explore_body = explore_body.rstrip("\n") + "\n" + new_block
+    new_blocks = "".join(block_for(r) for r in rows)
+    if replace_all:
+        explore_body = "\n" + new_blocks
+    else:
+        for r in rows:
+            url = re.escape(r["url"])
+            new_block = block_for(r)
+            item_pat = re.compile(
+                rf"    - type: perplexity_thread\n(?:      .+\n)*?      url: \"{url}\"\n",
+                re.M,
+            )
+            if item_pat.search(explore_body):
+                explore_body = item_pat.sub(new_block, explore_body)
+            else:
+                explore_body = explore_body.rstrip("\n") + "\n" + new_block
 
     new_fm = fm[: explore_m.start()] + prefix + explore_body + fm[explore_m.end() :]
     return new_fm + body
@@ -278,6 +291,17 @@ def main() -> int:
         action="store_true",
         help="Confirm apply after operator answered yes",
     )
+    parser.add_argument(
+        "--share-manifest",
+        type=Path,
+        default=None,
+        help="share-manifest.json (default: tmp/explore-proposals/<slug>/share-manifest.json)",
+    )
+    parser.add_argument(
+        "--skip-share-preflight",
+        action="store_true",
+        help="Emergency only; prefer SKIP_SHARE_PREFLIGHT=1 in tests",
+    )
     args = parser.parse_args()
 
     essay_path = args.essay if args.essay.is_absolute() else REPO_ROOT / args.essay
@@ -290,6 +314,36 @@ def main() -> int:
     essay_en = load_text(essay_path)
     es_path = essay_path.parent / "index.es.md"
     essay_es = load_text(es_path) if es_path.is_file() else None
+
+    skip_share = args.skip_share_preflight or os.environ.get("SKIP_SHARE_PREFLIGHT") == "1"
+    if not skip_share:
+        manifest_path = args.share_manifest
+        if manifest_path is None:
+            slug = bundle_slug_from_essay(essay_path)
+            manifest_path = manifest_path_for_slug(REPO_ROOT, slug)
+        elif not manifest_path.is_absolute():
+            manifest_path = REPO_ROOT / manifest_path
+        if not manifest_path.is_file():
+            die(
+                f"Missing share manifest {manifest_path}. "
+                "Run: make explore-share-prepare CANDIDATES=... then confirm + verify-cold "
+                "(see PERPLEXITY-SHARE.md)."
+            )
+        manifest = load_manifest(manifest_path)
+        required_urls = urls_from_proposal(proposal_text)
+        if not required_urls:
+            die("No approved Perplexity URLs in proposal for share preflight")
+        preflight = validate_manifest_for_urls(manifest, required_urls)
+        for w in preflight.warnings:
+            print(f"share preflight warning: {w}", file=sys.stderr)
+        if not preflight.ok:
+            for err in preflight.errors:
+                print(f"share preflight error: {err}", file=sys.stderr)
+            die(
+                "Share preflight failed. Fix manifest before explore-apply "
+                "(make explore-share-check PROPOSAL=... CANDIDATES=...)."
+            )
+        print("Share preflight OK.", file=sys.stderr)
 
     ship_rows = build_ship_rows(proposal_text, cand_path)
     if not ship_rows:
@@ -311,8 +365,8 @@ def main() -> int:
         print(
             "\nNext: ask the operator the operator_question above. "
             "If they confirm, run with --apply --yes\n"
-            "Before apply: operator must set each Perplexity thread to Anyone with the link "
-            "(see .cursor/skills/site-extension-pipeline/PERPLEXITY-SHARE.md).",
+            "Before apply: share manifest must pass (make explore-share-check). "
+            "See .cursor/skills/site-extension-pipeline/PERPLEXITY-SHARE.md.",
             file=sys.stderr,
         )
         return 0
@@ -324,10 +378,14 @@ def main() -> int:
     if rec and rec.group(1).lower() == "no":
         die("Gemma recommend_apply: no; fix proposal or override manually")
 
-    new_en = upsert_perplexity_threads(essay_en, ship_rows, use_spanish=False)
+    new_en = upsert_perplexity_threads(
+        essay_en, ship_rows, use_spanish=False, replace_all=True
+    )
     essay_path.write_text(new_en, encoding="utf-8")
     if essay_es:
-        new_es = upsert_perplexity_threads(essay_es, ship_rows, use_spanish=True)
+        new_es = upsert_perplexity_threads(
+            essay_es, ship_rows, use_spanish=True, replace_all=True
+        )
         es_path.write_text(new_es, encoding="utf-8")
     print(f"Applied {len(ship_rows)} row(s) to {essay_path}", file=sys.stderr)
     if essay_es:

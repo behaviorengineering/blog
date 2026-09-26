@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-26T03:45:43Z",
+  "generatedAt": "2026-09-26T11:01:27Z",
   "channels": [
     "site-en",
     "site-es",
@@ -5339,6 +5339,34 @@
         },
         "substack-en": {
           "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "social-protocols/2026-09-29-the-mirror-that-only-blames",
+      "section": "social-protocols",
+      "title": "The Mirror That Only Blames",
+      "type": "opinion",
+      "categories": [
+        "Reality-Protocols"
+      ],
+      "planned": "2026-09-29",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "present"
         }
       }
     },

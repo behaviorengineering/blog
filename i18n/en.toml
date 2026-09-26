@@ -33,6 +33,13 @@ other = "Grounding"
 [protocolDepth]
 other = "Key points"
 
+# type: opinion — sidebar labels (stanceful essay; distinct from claims Claim / Thoughts).
+[protocolOpinion]
+other = "Opinion"
+
+[protocolEssay]
+other = "Essay"
+
 [readerLandingWhy]
 other = "Why this might land for you"
 
