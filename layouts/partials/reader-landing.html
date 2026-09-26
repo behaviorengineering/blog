@@ -11,6 +11,7 @@
     explore:
       - type: perplexity_query   # host builds prefilled search URL from query
         label: "Short link text"
+        hook: "One-line curiosity (optional; replaces generic hint)"
         query: "Full research question"
       - type: source
         label: "Paper or article title"
@@ -20,6 +21,7 @@
         path: "/human-condition/some-slug/"
       - type: perplexity_thread  # only when a real completed thread URL exists
         label: "Completed research"
+        hook: "One-line curiosity (optional; replaces generic hint)"
         url: "https://www.perplexity.ai/search/..."
 
   Also accepts legacy Params.research (markdown) when reader_landing is absent.
@@ -28,7 +30,8 @@
 {{- $legacy := .Params.research -}}
 {{- if or $landing $legacy -}}
   {{- $heading := .Params.reader_landing_heading | default (T "protocolDepth") -}}
-  <h2 id="section-reader-landing" class="sayings-section-heading">
+  <div class="reader-landing-panel">
+  <h2 id="section-reader-landing" class="sayings-section-heading reader-landing-panel__heading">
     <span aria-hidden="true">🔭</span> {{ $heading }}
   </h2>
   {{- if $landing -}}
@@ -56,13 +59,18 @@
             {{- range . -}}
               {{- $type := .type | default .kind | default "" -}}
               {{- $label := .label | default .title | default "" -}}
+              {{- $hook := .hook | default .description | default "" -}}
               {{- if eq $type "perplexity_query" -}}
                 {{- $q := .query | default .q | default "" -}}
                 {{- if and $q $label -}}
                   {{- $href := printf "https://www.perplexity.ai/search/new?q=%s" ($q | urlquery) -}}
                   <li class="reader-landing__explore-item reader-landing__explore-item--query">
                     <a href="{{ $href }}" target="_blank" rel="noopener noreferrer">{{ $label }}</a>
-                    <span class="reader-landing__explore-hint">{{ T "readerLandingPrefillHint" }}</span>
+                    {{- if $hook -}}
+                      <span class="reader-landing__explore-hint">{{ $hook | markdownify }}</span>
+                    {{- else -}}
+                      <span class="reader-landing__explore-hint">{{ T "readerLandingPrefillHint" }}</span>
+                    {{- end -}}
                   </li>
                 {{- end -}}
               {{- else if eq $type "perplexity_thread" -}}
@@ -70,7 +78,11 @@
                 {{- if and $threadURL $label -}}
                   <li class="reader-landing__explore-item reader-landing__explore-item--thread">
                     <a href="{{ $threadURL }}" target="_blank" rel="noopener noreferrer">{{ $label }}</a>
-                    <span class="reader-landing__explore-hint">{{ T "readerLandingThreadHint" }}</span>
+                    {{- if $hook -}}
+                      <span class="reader-landing__explore-hint">{{ $hook | markdownify }}</span>
+                    {{- else -}}
+                      <span class="reader-landing__explore-hint">{{ T "readerLandingThreadHint" }}</span>
+                    {{- end -}}
                   </li>
                 {{- end -}}
               {{- else if eq $type "source" -}}
@@ -101,4 +113,5 @@
   {{- else -}}
     {{- dict "Content" ($legacy | markdownify) "Ruby" false "Fraction" false "Fontawesome" false | partial "function/content.html" | safeHTML -}}
   {{- end -}}
+  </div>
 {{- end -}}

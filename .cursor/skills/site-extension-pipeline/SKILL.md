@@ -1,0 +1,84 @@
+---
+name: site-extension-pipeline
+description: >-
+  Blog-side workflow for essay extensions: Gemma research prompts, Perplexity
+  thread, Gemma explore hooks, optional companion draft. Use when formalizing
+  extension work before content-pipelines MCP owns it.
+---
+
+# Site extension pipeline (blog operator)
+
+**Moral:** Extension research ships as **Explore further** links on the source post; companion prose is optional.
+
+Human-driven loop on the Hugo host (future: content-pipelines MCP verbs).
+
+## Default deliverable: Explore further
+
+| Output | Where | When |
+| --- | --- | --- |
+| Completed Perplexity research | `reader_landing.explore` → `type: perplexity_thread` + `url` + Gemma `label`/`hook` | Operator pasted a real thread URL |
+| Follow-up question door | `reader_landing.explore` → `type: perplexity_query` + `query` + Gemma `label`/`hook` | One novel hinge still open |
+| Companion essay | New draft or bundle | Operator explicitly asked for essay/sequel |
+
+The on-page section title is **Explore further** (EN) / explore copy in ES. Template: `layouts/partials/reader-landing.html`.
+
+## Loop
+
+1. **Source:** Read English `index.md`; name settled thesis and one unpaid hinge.
+2. **Research packet:** Assemble essay path, 2 or 3 target hinges, Gemma PRIMARY/BACKUP prompts, existing explore excludes, and candidate rows (`id`, `url`, `hinge`, export or summary). See **Research packet** in `site-essay-extend-explore` and `site-explore-research-review`.
+3. **Research prompt (when operator asks):** MUST NOT draft the Perplexity paste prompt in the agent voice. Polypus Gemma 4 with `enable_thinking: true`. Deliver **PRIMARY_PROMPT**, optional **BACKUP**, and **NO:** lines. Operator runs the shared Perplexity project and returns result URLs.
+4. **Research:** Perplexity project (manual). Bullets, plain English, real citations. No essay unless asked.
+5. **Thread URLs:** Operator supplies one URL per candidate (2 or 3 total for a full set).
+6. **Gemma research review (mandatory):** `site-explore-research-review` on each candidate before hooks. Reject weak or duplicate research.
+7. **Explore ship set:** Approved candidates only; `site-essay-extend-explore` mechanical dedupe and counter-cost check.
+8. **Gemma link hooks (mandatory):** `site-explore-link-hooks` Call A + Call B. Agent MUST NOT write labels or hooks.
+9. **Proposal or apply:** Default `scripts/explore_proposal.py` (proposal only). Patch `reader_landing.explore` only after operator accepts the proposal.
+10. **Companion (optional):** `site-essay-extend` only on explicit request.
+
+## Proposal runner (no Hugo write)
+
+**Runner:** `make explore-proposal` → [`scripts/explore_proposal.py`](/Users/hector/Xynova/ai/behaviourengineering/site/scripts/explore_proposal.py) (implementation under `.cursor/skills/site-extension-pipeline/scripts/`).
+
+```bash
+make explore-proposal ESSAY=content/x-minds/2026-09-26-the-octopus-advantage/index.md \
+  CANDIDATES=tmp/explore-proposals/2026-09-26-the-octopus-advantage/candidates.json \
+  ALLOW_SUMMARY=1
+```
+
+By default the runner **syncs `research_export` paths** and **requires** markdown export files. Use `ALLOW_SUMMARY=1` only when the operator has not yet exported threads.
+
+### Perplexity exports (MCP, before proposal)
+
+1. `make explore-fetch-exports ESSAY=... CANDIDATES=... SYNC=1`
+2. Read `tmp/explore-proposals/<slug>/export-manifest.json`
+3. **Agent:** for each pending row, call `user-perplexity-browser` **`perplexity_export`** with `thread_id`, `save_dir=<repo>/<save_dir>`, `format=markdown` (one attempt per row; no retry loop)
+4. Ensure each file exists at `research_export` path, then re-run `make explore-proposal` (without `ALLOW_SUMMARY=1` when exports are present)
+
+Helper: `make explore-fetch-exports` / [`scripts/explore_fetch_exports.py`](/Users/hector/Xynova/ai/behaviourengineering/site/scripts/explore_fetch_exports.py).
+
+## Apply runner (operator gate)
+
+**Runner:** `make explore-apply` → [`scripts/explore_apply.py`](/Users/hector/Xynova/ai/behaviourengineering/site/scripts/explore_apply.py).
+
+1. `make explore-apply ESSAY=... PROPOSAL=tmp/.../slug.proposal.yaml CANDIDATES=.../candidates.json`  
+   Gemma **applicability** review writes `<proposal>.applicability.yaml` and prints `operator_question`.
+2. **Agent MUST** surface that question to the operator (AskQuestion or plain ask). MUST NOT pass `APPLY=1` in the same turn as the review.
+3. Only if the operator confirms:  
+   `make explore-apply ESSAY=... PROPOSAL=... APPLY=1 CONFIRM=1`
+
+MUST NOT patch `index.md` / `index.es.md` without step 2 and `CONFIRM=1`.
+
+## Perplexity Computer assets
+
+Project instructions and skill zips: `tmp/essay-extension-skills/perplexity-computer/` (paste instructions; upload skills).
+
+## Pre-ship checklist
+
+- [ ] Research packet complete (candidates have export or summary)
+- [ ] Gemma research review: every candidate has verdict (`.cursor/skills/site-explore-research-review/SKILL.md`)
+- [ ] Only approved URLs in ship set (2 or 3 `perplexity_thread` target for full pipeline batch)
+- [ ] Gemma Call A + Call B complete for hooks (`approve: yes`)
+- [ ] Real thread URL only (operator supplied)
+- [ ] Every perplexity row has Gemma `label` + `hook`
+- [ ] No em dash in hooks or labels
+- [ ] ES hooks native, not calque

@@ -2,6 +2,10 @@
 id: patient-narrator
 label: Patient Narrator
 sections: ["human-condition", "x-minds"]
+example: |
+  In writing, each person rebuilds the other from the words alone, and the guess of their real view drifts. Face to face, tone and timing keep correcting that rebuild, so the guess sits closer to what they later report.
+
+  A finished thread is not proof you shared a model. Speech was fixing mistakes as they appeared. Text never started that repair.
 banned_patterns:
   - "Look,"
   - "Here's the thing"
@@ -9,6 +13,14 @@ banned_patterns:
   - "relational repair"
   - "unwashed forks"
   - "we're all just"
+  - "zone of genius"
+  - "competitive advantage"
+  - "you find your edge"
+  - "rules of the game are finally changing"
+tone_notes: >-
+  Unhurried structural diagnosis in plain English. Name what the mechanism
+  does. Diagnose the gap; do not scold and do not soothe. No pep talk, no
+  coaching close, no kitchen props.
 max_staccato_run: 2
 ---
 
@@ -35,3 +47,4 @@ Fail the piece when any of these are true:
 
 - A banned phrase from the front matter appears as the writer's own wording.
 - More than `max_staccato_run` similar short sentences sit in a row (default: more than 2).
+- `tone_notes` is set and the prose misses that tone (pep talk, coaching, or soothing instead of structural diagnosis).

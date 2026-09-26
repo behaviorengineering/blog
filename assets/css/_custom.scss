@@ -2289,6 +2289,43 @@ $home-tile-meta-color-dark: #c4b8cc;
 }
 
 // Reader landing (claims + video Dig deeper): why / takeaways / explore.
+// Soft card wash cousin of .sayings-project-about / "But why" footers.
+.reader-landing-panel {
+    position: relative;
+    margin: 1.75rem 0 1.25rem;
+    padding: 1.25rem 1.2rem 1.35rem 1.4rem;
+    border-radius: 14px;
+    border: 1px solid rgba(91, 18, 115, 0.22);
+    background: linear-gradient(145deg, rgba(255, 252, 248, 0.98) 0%, rgba(246, 240, 252, 0.92) 48%, rgba(235, 244, 238, 0.55) 100%);
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.65) inset,
+        0 10px 28px rgba(45, 0, 53, 0.07);
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 5px;
+        border-radius: 14px 0 0 14px;
+        background: linear-gradient(180deg, #6d8f5f 0%, #5b1273 52%, #4a8fa3 100%);
+    }
+
+    [theme=dark] & {
+        border-color: rgba(232, 213, 236, 0.28);
+        background: linear-gradient(145deg, rgba(38, 32, 44, 0.98) 0%, rgba(42, 34, 52, 0.95) 55%, rgba(32, 42, 40, 0.9) 100%);
+        box-shadow:
+            0 1px 0 rgba(255, 255, 255, 0.04) inset,
+            0 12px 32px rgba(0, 0, 0, 0.35);
+    }
+}
+
+.reader-landing-panel__heading.sayings-section-heading {
+    margin-top: 0;
+    margin-bottom: 0.65rem;
+}
+
 .reader-landing {
     margin-top: 0.25rem;
 }

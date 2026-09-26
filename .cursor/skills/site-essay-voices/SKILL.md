@@ -25,9 +25,9 @@ Composition stays on the shared commute voice in `data/essay-content-forms.yaml`
 
 Technical pieces that must stay technical take no voice id.
 
-**CONSTRAINT:** A new or edited voice file MUST live under `data/voices/` in this repository, with YAML front matter (`id`, `label`, `sections`, `banned_patterns`, `max_staccato_run`; optional `required_verb_classes`) and two Markdown sections: Generator contract and Evaluator contract.
-- Enforcement: File path is `data/voices/<id>.md`; front matter parses; both headings are present.
-- Violation: STOP, move the file into the catalog or add the missing heading. Do not put phrase banks in strop.
+**CONSTRAINT:** A new or edited voice file MUST live under `data/voices/` in this repository, with YAML front matter (`id`, `label`, `sections`, `example`, `tone_notes`, `banned_patterns`, `max_staccato_run`; optional `required_verb_classes`) and two Markdown sections: Generator contract and Evaluator contract. `example` MUST be two short paragraphs rewriting the shared seed in `data/voices/picker.yaml` in that voice (setup, then turn; polish picker hover and polish `voice_profile` demonstration). `tone_notes` and `example` MUST be non-empty: polish empties notes and only sends front-matter JSON to the model, so missing either leaves a voice-named pass without a usable cadence contract.
+- Enforcement: File path is `data/voices/<id>.md`; front matter parses; both headings are present; `example` is two paragraphs and clearly a rewrite of the picker seed; `tone_notes` and `example` are present and non-empty.
+- Violation: STOP, move the file into the catalog or add the missing heading, example, or `tone_notes`. Do not put phrase banks in strop.
 
 CORRECT:
 ```text
@@ -103,6 +103,10 @@ Agree polish because the paragraph "sounds right" while audit-voice exits 1
       Method: Search the file for those headings
       Pass: Both present
       Fail: STOP, add the missing section
+- [ ] **tone_notes:** Front matter `tone_notes` is present and non-empty
+      Method: Read YAML front matter
+      Pass: A plain tone brief the model can match
+      Fail: STOP, add `tone_notes` before polish
 - [ ] **Composition untouched:** composition focus has no voice id
       Method: Read the composition step focus on the board
       Pass: Structural only
