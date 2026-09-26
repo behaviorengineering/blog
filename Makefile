@@ -26,7 +26,7 @@ SOCIAL_ASK_FLAG := $(if $(filter 1 true yes,$(SOCIAL_AUTOPOST_ASK)),-ask,) $(if 
 
 .DEFAULT_GOAL := help
 
-.PHONY: help all deps tidy build tag-register calendar publish-calendar hooks-install facebook-autopost linkedin-autopost social-autopost serve server serve-down serve-cleanup down test lint clean list verify check-links substack-html-sample substack-draft sb-html sb-en sb-en-pick sb-en-pick-publish sb-es sb-es-pick-publish sb-list-unpublished sb-mark-published sb-config-init sb-login sb-cc mermaid-render mermaid-render-en mermaid-render-es mermaid motif-editor carousel-pdf carousel-save audit-voice explore-proposal explore-fetch-exports explore-apply
+.PHONY: help all deps tidy build tag-register calendar publish-calendar hooks-install facebook-autopost linkedin-autopost social-autopost serve server serve-down serve-cleanup down test lint clean list verify check-links substack-html-sample substack-draft sb-html sb-en sb-en-pick sb-en-pick-publish sb-es sb-es-pick-publish sb-list-unpublished sb-mark-published sb-config-init sb-login sb-cc mermaid-render mermaid-render-en mermaid-render-es mermaid motif-editor carousel-pdf carousel-save audit-voice explore-proposal explore-fetch-exports explore-apply verify-explore-links
 
 all: build
 
@@ -39,6 +39,7 @@ help:
 	@echo "  make explore-proposal  Gemma review + hooks proposal (ESSAY=, CANDIDATES=; ALLOW_SUMMARY=1 optional)"
 	@echo "  make explore-fetch-exports  Sync export paths + MCP manifest (ESSAY=, CANDIDATES=, SYNC=1)"
 	@echo "  make explore-apply     Gemma applicability review; APPLY=1 CONFIRM=1 merges after operator OK"
+	@echo "  make verify-explore-links  List Perplexity thread URLs to confirm public share (POST=section/slug)"
 	@echo "  make hooks-install     Point this clone at .githooks (pre-commit runs make calendar when content/ is staged)"
 	@echo "  make facebook-autopost  Post linkedin.txt to Facebook (DATE=; DRY_RUN=1 default; prompt: publish vs tag-as-published)"
 	@echo "  make linkedin-autopost  Post linkedin.txt to LinkedIn (DATE=; DRY_RUN=1 default; idempotency off; prompt: publish vs tag-as-published)"
@@ -145,6 +146,14 @@ explore-apply:
 	else \
 	  python3 scripts/explore_apply.py --essay "$$essay" --proposal "$$prop" $$candflag; \
 	fi
+
+verify-explore-links:
+	@post="$(POST)"; \
+	if [ -z "$$post" ]; then \
+	  echo "usage: make verify-explore-links POST=x-minds/2026-09-26-the-octopus-advantage" >&2; \
+	  exit 2; \
+	fi; \
+	python3 scripts/verify_explore_perplexity_links.py --post "$$post"
 
 # Local only: sets core.hooksPath for this clone so .githooks/pre-commit runs.
 hooks-install:
