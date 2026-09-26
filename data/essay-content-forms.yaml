@@ -17,7 +17,7 @@ shared_guide: |
   - Job 1 — why_it_matters: return the idea to the reader's world in 2–4 sentences. Name who might recognize themselves and why this may interest them now. Concrete scene, not a summary restack.
   - Job 2 — takeaways: 2–4 short carry-forward lines (concrete, actionable or diagnostic). Do not reprint the thesis paragraph.
   - Job 3 — explore: 2–4 ready-to-run follow-ups. Prefer fully phrased research questions a reader can paste into Perplexity. MAY list related site paths or titled source links when notes already supply them.
-  - Explore link kinds: perplexity_query (question text only; host builds a prefilled search URL), source (label + url already in notes/grounding), related (site path), perplexity_thread (only when a real completed research thread URL exists; never invent one).
+  - Explore link kinds: perplexity_query (question text only; host builds a prefilled search URL), source (label + url already in notes/grounding), related (site path), perplexity_thread (only when a real completed research thread URL exists; never invent one). perplexity_query and perplexity_thread SHOULD include hook (one-line teaser under the link; Gemma-authored via site-explore-link-hooks).
   - Do not present a prefilled question as if research already ran. Do not invent paper URLs or thread links.
 
 shared_criteria_notes: |

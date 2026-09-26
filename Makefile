@@ -26,7 +26,7 @@ SOCIAL_ASK_FLAG := $(if $(filter 1 true yes,$(SOCIAL_AUTOPOST_ASK)),-ask,) $(if 
 
 .DEFAULT_GOAL := help
 
-.PHONY: help all deps tidy build tag-register calendar publish-calendar hooks-install facebook-autopost linkedin-autopost social-autopost serve server serve-down serve-cleanup down test lint clean list verify check-links substack-html-sample substack-draft sb-html sb-en sb-en-pick sb-en-pick-publish sb-es sb-es-pick-publish sb-list-unpublished sb-mark-published sb-config-init sb-login sb-cc mermaid-render mermaid-render-en mermaid-render-es mermaid motif-editor carousel-pdf carousel-save audit-voice
+.PHONY: help all deps tidy build tag-register calendar publish-calendar hooks-install facebook-autopost linkedin-autopost social-autopost serve server serve-down serve-cleanup down test lint clean list verify check-links substack-html-sample substack-draft sb-html sb-en sb-en-pick sb-en-pick-publish sb-es sb-es-pick-publish sb-list-unpublished sb-mark-published sb-config-init sb-login sb-cc mermaid-render mermaid-render-en mermaid-render-es mermaid motif-editor carousel-pdf carousel-save audit-voice explore-proposal explore-fetch-exports explore-apply
 
 all: build
 
@@ -36,6 +36,9 @@ help:
 	@echo "  make tag-register Scan content tags + deprecations -> data/tag-register.txt (runs before hugo on build)"
 	@echo "  make calendar          Scan content -> static/calendar/publish-calendar.json (open /calendar/ under make serve)"
 	@echo "  make audit-voice       Deterministic voice audit (POST=section/slug or index.md path, VOICE=patient-narrator)"
+	@echo "  make explore-proposal  Gemma review + hooks proposal (ESSAY=, CANDIDATES=; ALLOW_SUMMARY=1 optional)"
+	@echo "  make explore-fetch-exports  Sync export paths + MCP manifest (ESSAY=, CANDIDATES=, SYNC=1)"
+	@echo "  make explore-apply     Gemma applicability review; APPLY=1 CONFIRM=1 merges after operator OK"
 	@echo "  make hooks-install     Point this clone at .githooks (pre-commit runs make calendar when content/ is staged)"
 	@echo "  make facebook-autopost  Post linkedin.txt to Facebook (DATE=; DRY_RUN=1 default; prompt: publish vs tag-as-published)"
 	@echo "  make linkedin-autopost  Post linkedin.txt to LinkedIn (DATE=; DRY_RUN=1 default; idempotency off; prompt: publish vs tag-as-published)"
@@ -102,6 +105,46 @@ audit-voice:
 	  *) post="content/$$post/index.md" ;; \
 	esac; \
 	go run ./cmd/audit-essay-voice -post "$$post" -voice "$$voice" -voices-dir data/voices
+
+# Proposal-only Explore further pipeline (Polypus Gemma). Does not patch content/.
+explore-proposal:
+	@essay="$(ESSAY)"; cand="$(CANDIDATES)"; allow="$(ALLOW_SUMMARY)"; \
+	if [ -z "$$essay" ] || [ -z "$$cand" ]; then \
+	  echo "usage: make explore-proposal ESSAY=content/.../index.md CANDIDATES=tmp/explore-proposals/.../candidates.json" >&2; \
+	  exit 2; \
+	fi; \
+	extra=""; \
+	if [ "$$allow" = "1" ]; then extra="--allow-summary-only"; fi; \
+	python3 scripts/explore_proposal.py --essay "$$essay" --candidates "$$cand" $$extra
+
+explore-fetch-exports:
+	@essay="$(ESSAY)"; cand="$(CANDIDATES)"; sync="$(SYNC)"; \
+	if [ -z "$$essay" ] || [ -z "$$cand" ]; then \
+	  echo "usage: make explore-fetch-exports ESSAY=.../index.md CANDIDATES=.../candidates.json SYNC=1" >&2; \
+	  exit 2; \
+	fi; \
+	syncflag=""; \
+	if [ "$$sync" = "1" ]; then syncflag="--sync"; fi; \
+	python3 scripts/explore_fetch_exports.py --essay "$$essay" --candidates "$$cand" $$syncflag
+
+explore-apply:
+	@essay="$(ESSAY)"; prop="$(PROPOSAL)"; cand="$(CANDIDATES)"; apply="$(APPLY)"; confirm="$(CONFIRM)"; \
+	if [ -z "$$essay" ] || [ -z "$$prop" ]; then \
+	  echo "usage: make explore-apply ESSAY=.../index.md PROPOSAL=tmp/.../slug.proposal.yaml [CANDIDATES=.../candidates.json]" >&2; \
+	  echo "       review only by default; APPLY=1 CONFIRM=1 after operator confirms applicability question" >&2; \
+	  exit 2; \
+	fi; \
+	candflag=""; \
+	if [ -n "$$cand" ]; then candflag="--candidates $$cand"; fi; \
+	if [ "$$apply" = "1" ]; then \
+	  if [ "$$confirm" != "1" ]; then \
+	    echo "Refusing APPLY=1 without CONFIRM=1 (operator must answer applicability question first)" >&2; \
+	    exit 2; \
+	  fi; \
+	  python3 scripts/explore_apply.py --essay "$$essay" --proposal "$$prop" $$candflag --apply --yes; \
+	else \
+	  python3 scripts/explore_apply.py --essay "$$essay" --proposal "$$prop" $$candflag; \
+	fi
 
 # Local only: sets core.hooksPath for this clone so .githooks/pre-commit runs.
 hooks-install:
