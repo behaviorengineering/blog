@@ -86,7 +86,8 @@ Draft to **`.cursor/skills/site-revise-post/SKILL.md`** → **Step 2** (voice sc
 
 - MUST use **active voice**: named subjects perform actions. MUST NOT use passive piles ("It was determined that...", "it was found that...") when the actor is known.
 - MUST state ideas **directly**. MUST NOT use teacher/editor framing, bridge verbs, semicolon aphorisms, watch/read CTAs, **clever filler metaphors**, **Industry-verb shells** (`sells the blend`, `steer the rewrite`, `assembling it`, `next assembly`, `template can harden`, "name the box… and the box"), **caption pivots**, **telegraphic compression**, **parallel contrast stacks**, **construct-labeling meta**, **academic accessibility jargon**, **mechanism jargon without a scene**, filler hedges, meta-commentary, vague intensifiers, adverb stacks, or **AI rhetoric**. Full banned-pattern table: **revise-post** → **Step 2**.
-- MUST prefer spoken verbs and room-level scenes over packaged thesis pairs. Prefer "lie to the room / buy your own story" over "Some people… Others… **Self-deception** names that move."
+- MUST prefer spoken verbs and concrete scenes over packaged thesis pairs. Prefer "lie to the audience / buy your own story" over "Some people… Others… **Self-deception** names that move."
+- MUST NOT use abstract social metonymy (e.g. "the room learns to freeze", "lie to the room", "read the room"). Name the actual actors, bystanders, or physical setting.
 - MUST NOT use **negation-first** or **negation fluff** ("It is not X; it is Y", "Not A but B", "as X, not Y", trailing ", not a fuel shortage"). State the positive claim instead. **Exception:** evidence-scope qualifiers that narrow overclaim ("This does not mean every criticism is projection") are allowed; see **revise-post** → **Step 5**.
 - MUST gloss **named constructs and coined labels** in the **same sentence** on first use (`fixed energy budget: a limited daily pool…`). Cold-read rule: **revise-post** → **Step 3**.
 - Every sentence and paragraph MUST pass **standalone worth**: if it stood alone, would it be worth saying? It must add a new fact, example, mechanism, stakes, or turn not already in the title, list copy, or previous paragraph. A new metaphor or coined label for the same claim is not a turn. CUT/MERGE rules: **revise-post** → **Step 2**.
@@ -105,7 +106,7 @@ For **long prose** in **`type: claims`** (Thoughts body), **`type: video`** (bod
 - MUST NOT use rhetorical noun fragments ("The mirror.", "The wound.", "The truth.").
 - MUST NOT restack the same claim in altered poetic language.
 - MUST NOT ship **Metaphor-shell restack**: after sentence N, N+1 fails if it only relabels N, restates it as a tautology, or restates its implication with a new metaphor pair. Full test: **`.cursor/skills/site-revise-post/reference.md`** → **Metaphor-shell restack**.
-- MUST NOT ship **Industry-verb shells**: a clause fails even alone if its payload is `sells`, `steer`, `assembling` / `assembly`, `harden`, a fake scene (`the same room`), or "name the box… and the box." Full row: **`.cursor/skills/site-revise-post/reference.md`** → **Industry-verb shells**.
+- MUST NOT ship **Industry-verb shells**: a clause fails even alone if its payload is `sells`, `steer`, `assembling` / `assembly`, `harden`, a fake scene (vague group container with no people or objects), or "name the box… and the box." Full row: **`.cursor/skills/site-revise-post/reference.md`** → **Industry-verb shells**.
 - MUST use metaphors **rarely**, and only when they clarify.
 - Aim for psychologically careful, evidence-led, morally restrained tone: no accusing the reader, no promising hidden insight.
 - Full banned patterns, do/don't, and checks: **revise-post** → **Step 2** → **Explanatory prose**.
