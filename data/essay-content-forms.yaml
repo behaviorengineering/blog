@@ -1,5 +1,6 @@
 # Host-owned essay content_form pack for content-pipelines.
 # Loaded via essays.content_forms_path / MCP essay_content_forms_path / --content-forms.
+# Operator: content_form selects generation shape; Hugo `type` selects render layout (see site-opinion-content for opinion_essay → type opinion).
 default: essay_argument
 
 # Applies to every form (prepended to form guide / criteria_notes).
@@ -103,3 +104,20 @@ forms:
       require_reader_landing: false
       middle_shape: publish_bands
       enforce_word_band: false
+
+  opinion_essay:
+    label: Opinion essay
+    aliases: [opinion]
+    guide: |
+      content_form=opinion_essay (Hugo type opinion):
+      - Job: stanceful 600–800 word essay with a clear authorial position (not Claim/Grounding bands).
+      - Follow the selected reader journey; concrete scenes and examples as evidence for a pattern.
+      - Close with a concrete author landing (fork / diagnostic question).
+      - Then emit reader_landing (why_it_matters + takeaways + explore) after that landing.
+      - Hugo export: type opinion; description = editorial position; body = essay; grounding optional.
+      - Prefer this form over cognitive_memetics when the publish target is a full essay, not a short saying or panel strip.
+    required_bands: []
+    composition:
+      require_reader_landing: true
+      middle_shape: three_essay_blocks
+      enforce_word_band: true

@@ -89,6 +89,13 @@ other = "Sustento"
 [protocolDepth]
 other = "Puntos clave"
 
+# type: opinion — sidebar labels (ensayo con postura; distinto de claims Afirmación / Reflexiones).
+[protocolOpinion]
+other = "Postura"
+
+[protocolEssay]
+other = "Ensayo"
+
 [readerLandingWhy]
 other = "Por qué te puede importar"
 

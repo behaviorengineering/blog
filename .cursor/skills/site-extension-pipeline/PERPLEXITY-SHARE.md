@@ -26,16 +26,33 @@ Pass: full answer visible without signing in. Fail: sign-in prompt or empty thre
 
 Perplexity Computer project: run this on every thread before you paste the URL into the blog packet.
 
-## Verify (required before `explore-apply`)
+## Share manifest (required before `explore-apply`)
+
+`explore-apply` (review-only or `APPLY=1`) runs a **fail-closed** preflight against `tmp/explore-proposals/<slug>/share-manifest.json`. Each approved proposal URL must have:
+
+- `share_setting: anyone_with_link` and `share_confirmed_at` (after you set **Anyone with the link** in the UI)
+- `cold_verified: true` and a fresh `cold_verified_at` (incognito pass, optionally plus HTTP probe)
+
+```bash
+make explore-share-prepare CANDIDATES=tmp/explore-proposals/<slug>/candidates.json
+# Share each thread in Perplexity UI (globe / anyone with link)
+make explore-share-confirm CANDIDATES=... CANDIDATE_ID=blame-blindspot
+make explore-share-verify-cold CANDIDATES=... CANDIDATE_ID=blame-blindspot PROBE=1 OPERATOR=1
+make explore-share-check PROPOSAL=tmp/explore-proposals/<slug>.proposal.yaml CANDIDATES=...
+```
+
+Cursor browser steps: [PERPLEXITY-SHARE-BROWSER.md](PERPLEXITY-SHARE-BROWSER.md). Scripts do **not** click Share for you; they record and gate on operator-confirmed public access.
+
+## Verify (cold reader)
 
 - Open the URL in a **private/incognito** window (or another browser where you are not logged into Perplexity).
 - Pass: the research answer and citations load.
 - Fail: login wall, blank thread, or “no access” → re-share as public, then update YAML if the URL changed.
 
-Optional repo check (bot blocking may false-fail):
+After Hugo ship, list URLs on the post:
 
 ```bash
 make verify-explore-links POST=x-minds/2026-09-26-the-octopus-advantage
 ```
 
-Treat a failed automated check as a reminder to run the incognito test, not as proof the link is private.
+HTTP probe (`PROBE=1`) may false-fail on bot blocking; `OPERATOR=1` records your incognito pass and is required for a green `explore-share-check`.

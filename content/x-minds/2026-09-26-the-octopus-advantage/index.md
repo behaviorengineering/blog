@@ -35,9 +35,9 @@ reader_landing:
     - "Build value where **curiosities intersect**, not inside a single lane specialists already own."
   explore:
     - type: perplexity_thread
-      label: "When AI Ends The Managerial Era"
-      hook: "AI turns ADHD chaos into permissionless creative power."
-      url: "https://www.perplexity.ai/search/aee56cb3-690e-4a6c-abd4-b3c5f41bf4f5"
+      label: "The Cognitive Dividend"
+      hook: "AI handles the admin. Divergent thinkers trade executive struggle for high-value pattern recognition."
+      url: "https://www.perplexity.ai/search/1e75bfc8-c146-4f3d-ae24-5827cf721c38"
     - type: perplexity_thread
       label: "How unrelated fields spark breakthroughs"
       hook: "See real-world evidence of how merging disparate disciplines drives massive innovation."

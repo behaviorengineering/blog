@@ -38,9 +38,9 @@ reader_landing:
     - "Crea valor donde **se cruzan saberes dispares**, no compitiendo en el carril estrecho que los especialistas ya tienen copado."
   explore:
     - type: perplexity_thread
-      label: "El fin de la era de la gestión"
-      hook: "La IA descarga la fricción burocrática y devuelve energía al pensamiento divergente frente al trabajo rutinario."
-      url: "https://www.perplexity.ai/search/aee56cb3-690e-4a6c-abd4-b3c5f41bf4f5"
+      label: "El dividendo cognitivo"
+      hook: "La IA gestiona la administración. Las mentes divergentes cambian el esfuerzo administrativo por la detección de patrones."
+      url: "https://www.perplexity.ai/search/1e75bfc8-c146-4f3d-ae24-5827cf721c38"
     - type: perplexity_thread
       label: "El cruce de disciplinas como motor de avances"
       hook: "Los avances aparecen donde chocan saberes que parecían no tener nada en común."
