@@ -8,7 +8,7 @@ description: |
   - Los **proyectos paralelos** despegan de verdad cuando dejas que una herramienta resuelva la agenda, los esquemas y el papeleo.
   - El viejo culto a la **hiperespecialización** penalizaba a los cerebros capaces de conectar disciplinas lejanas, justo los que hoy marcan la diferencia.
 sowhat: |
-  Las mentes **estimuladas por la curiosidad** pueden descargar la gestión rutinaria en la **IA**. Al liberar energía para **conectar patrones entre disciplinas distintas**, destrabar un proyecto estancado se reduce a un solo paso práctico de organización.
+  Las mentes **estimuladas por la curiosidad** pueden delegar la gestión rutinaria en la **IA**. Al liberar energía para **conectar patrones entre disciplinas distintas**, destrabar un proyecto estancado pasa a ser cuestión de un solo paso práctico de organización.
 draft: false
 
 subtitle: "ADHDVision: IA, TDAH y el cerebro multicarril"
@@ -39,24 +39,24 @@ reader_landing:
   explore:
     - type: perplexity_thread
       label: "El fin de la era de la gestión"
-      hook: "La IA convierte el caos del TDAH en poder creativo sin restricciones."
+      hook: "La IA descarga la fricción burocrática y devuelve energía al pensamiento divergente frente al trabajo rutinario."
       url: "https://www.perplexity.ai/search/aee56cb3-690e-4a6c-abd4-b3c5f41bf4f5"
     - type: perplexity_thread
-      label: "Cómo campos distintos generan avances"
-      hook: "Mira evidencia real de cómo fusionar disciplinas diversas impulsa la innovación."
+      label: "El cruce de disciplinas como motor de avances"
+      hook: "Los avances aparecen donde chocan saberes que parecían no tener nada en común."
       url: "https://www.perplexity.ai/search/92aff80d-d080-4e7b-93c5-d0f3acf71bc1"
     - type: perplexity_thread
-      label: "El costo oculto del pensamiento IA"
-      hook: "Explora el riesgo de que la IA vuelva nuestra inteligencia colectiva peligrosamente uniforme."
+      label: "El coste oculto de pensar con la IA"
+      hook: "Delegar el razonamiento a la máquina puede volver nuestra inteligencia colectiva peligrosamente uniforme."
       url: "https://www.perplexity.ai/search/2c5fc73d-7fda-4d8b-a4f1-77ea3bce69ee"
 
 ---
 
-Durante décadas, el mercado laboral operó como una **máquina clasificadora inflexible**. A cada persona se le asignaba una casilla fija y un manual estrecho para demostrar su valía. Triunfar exigía especializarse a fondo en una sola dirección, exactamente como un **brazo mecánico** programado para calcar el mismo movimiento una y otra vez. Quienes nacían con la **curiosidad abierta de un pulpo**, tanteando varios frentes al mismo tiempo, no les quedaba otra que replegar sus tentáculos para encajar en el molde. Salirse del carril o dejarse llevar por una intuición inesperada se castigaba como una falta de disciplina. El sistema premiaba al especialista que repetía su función con precisión matemática **y excluía a los cerebros capaces de abarcar el panorama completo y de unir puntos lejanos**. Se malgastaba una cantidad inmensa de energía en encogerse para caber en el puesto, mientras se reprimía el impulso natural de explorar lo que ocurría más allá de la propia parcela.
+Durante décadas, el mercado laboral operó como una **máquina clasificadora inflexible**. A cada persona se le asignaba una casilla fija y un manual estrecho para demostrar su valía. Triunfar exigía especializarse a fondo en una sola dirección, exactamente como un **brazo mecánico** programado para calcar el mismo movimiento una y otra vez. Quienes nacían con la **curiosidad abierta de un pulpo**, tanteando varios frentes al mismo tiempo, no les quedaba otra que replegar sus tentáculos para encajar en el molde. Salirse del carril o dejarse llevar por una intuición inesperada se castigaba como una falta de disciplina. El sistema premiaba al especialista que repetía su función con precisión matemática **mientras excluía a los cerebros capaces de abarcar el panorama completo y de unir puntos lejanos**. Se malgastaba una cantidad inmensa de energía en encogerse para caber en el puesto. Se reprimía el impulso natural de explorar lo que ocurría más allá de la propia parcela.
 
 ### El choque entre mundos desconectados
 
-Los saltos de gigante rara vez nacen dentro de un carril cerrado. Johannes Gutenberg revolucionó el conocimiento porque buscó soluciones mucho más allá del oficio de los copistas: combinó el mecanismo de una prensa de vino con las técnicas de fundición de metales y con eso inventó la imprenta. Esa **capacidad de enlazar mundos ajenos** es el sistema operativo natural de quien salta de una disciplina a otra. Mientras los especialistas pulían el arte de copiar textos a mano, los generalistas crearon la herramienta que volvió obsoleto todo ese esfuerzo. La verdadera ventaja competitiva está en las **intersecciones**, justo donde colisionan saberes que parecían no tener nada en común.
+Los grandes avances rara vez nacen dentro de un carril cerrado. Johannes Gutenberg revolucionó el conocimiento porque buscó soluciones mucho más allá del oficio de los copistas: combinó el mecanismo de una prensa de vino con las técnicas de fundición de metales y con eso inventó la imprenta. Esa **capacidad de enlazar mundos ajenos** es el sistema operativo natural de quien salta de una disciplina a otra. Mientras los especialistas pulían el arte de copiar textos a mano, los generalistas crearon la herramienta que volvió obsoleto todo ese esfuerzo. La verdadera ventaja competitiva está en las **intersecciones**, justo donde colisionan saberes que parecían no tener nada en común.
 
 ### La curiosidad manda sobre la lista de tareas
 
@@ -64,7 +64,7 @@ La disciplina tradicional fracasa sistemáticamente cuando se enfrenta a una men
 
 ### La IA asume la carga mecánica
 
-La IA actúa como una **prótesis cognitiva** para cubrir los fallos de función ejecutiva que suelen paralizar a quien tiene TDAH. Estas herramientas funcionan como **brazos adicionales** encargados de todo lo rígido y predecible: armar esquemas, coordinar calendarios y procesar papeleo rutinario. Al traspasar esa fricción a una capa digital, la mente humana recupera el espacio necesario para lo que mejor sabe hacer: **conectar patrones complejos de forma lateral**. Hoy una sola persona puede alcanzar el rendimiento de un equipo entero si utiliza la IA para salvar la distancia entre una intuición brillante y un producto terminado. Lo que antes era dispersión se transforma así en un flujo de trabajo escalable.
+La IA actúa como una **prótesis cognitiva** para cubrir los fallos de función ejecutiva que suelen paralizar a quien tiene TDAH. Estas herramientas funcionan como **brazos adicionales** encargados de todo lo rígido y predecible: armar esquemas, coordinar calendarios y procesar papeleo rutinario. Al traspasar esa fricción a una capa digital, la mente humana recupera el espacio necesario para lo que mejor sabe hacer: **conectar patrones complejos de forma lateral**. Hoy una sola persona puede alcanzar el rendimiento de un equipo entero si utiliza la IA para cerrar la brecha entre una intuición brillante y un producto terminado. Lo que antes era dispersión se transforma así en un flujo de trabajo escalable.
 
 ### Desbloquea un proyecto personal
 
@@ -76,10 +76,10 @@ Elige un **proyecto personal** que tengas congelado por culpa de la burocracia o
 
 | Time | Chapter |
 | --- | --- |
-| [0:00](https://www.youtube.com/watch?v=VTjsDNq1Eqw&t=0) | **Intro** Era de la IA y ventaja del TDAH |
-| [0:41](https://www.youtube.com/watch?v=VTjsDNq1Eqw&t=41) | **Divergente** Bucles abiertos y escaneo de patrones |
-| [3:56](https://www.youtube.com/watch?v=VTjsDNq1Eqw&t=236) | **Generalistas** Gutenberg y conocimiento conectado |
-| [5:48](https://www.youtube.com/watch?v=VTjsDNq1Eqw&t=348) | **IA** Tareas ejecutivas y resultado de equipo |
-| [7:10](https://www.youtube.com/watch?v=VTjsDNq1Eqw&t=430) | **Carreras** Intersecciones de intereses diversos |
-| [8:30](https://www.youtube.com/watch?v=VTjsDNq1Eqw&t=510) | **Interés** Interruptor de activación frente a importancia |
-| [9:32](https://www.youtube.com/watch?v=VTjsDNq1Eqw&t=572) | **Multicarril** Energía, producción y ejecución |
+| [0:00](https://www.youtube.com/watch?v=VTjsDNq1Eqw&t=0) | **Intro:** la era de la IA y la ventaja del TDAH |
+| [0:41](https://www.youtube.com/watch?v=VTjsDNq1Eqw&t=41) | **Divergente:** bucles abiertos y escaneo de patrones |
+| [3:56](https://www.youtube.com/watch?v=VTjsDNq1Eqw&t=236) | **Generalistas:** Gutenberg y conocimiento conectado |
+| [5:48](https://www.youtube.com/watch?v=VTjsDNq1Eqw&t=348) | **IA:** de las tareas ejecutivas al rendimiento de equipo |
+| [7:10](https://www.youtube.com/watch?v=VTjsDNq1Eqw&t=430) | **Carreras:** intersecciones de intereses diversos |
+| [8:30](https://www.youtube.com/watch?v=VTjsDNq1Eqw&t=510) | **Interés:** el interruptor que manda sobre la importancia |
+| [9:32](https://www.youtube.com/watch?v=VTjsDNq1Eqw&t=572) | **Multicarril:** energía, producción y ejecución |
