@@ -89,7 +89,7 @@ Progress on stderr (`Evaluating unit k/n…`). Surface the full stdout report (p
 When any rewrite/eval unit is applied by an agent or LLM:
 
 - **title / subtitle:** exactly **one** plain line; if output has `###`, newlines, or body paste → **discard**.
-- **description / sowhat:** keep block shape; **MUST NOT** inject body paragraphs.
+- **description / sowhat:** keep block shape; **MUST NOT** inject body paragraphs. For **`description`** list bullets (video novelty lead), **MUST NOT** use pitch-deck colon formulas (*X: de A a B*), bullets starting with *Cómo…* (*How to* calque), or *mentes diseñadas para* (*brains built to*); use active Spanish claims with finite verbs.
 - **body unit:** rewrite only that unit; **MUST NOT** repeat prior paragraphs or emit meta labels (*UNIDAD ACTUAL*, *Aquí tienes*).
 - **Reverse-translation test:** if ES remounts into the EN sentence almost word-for-word → fail `anti_calque` and rewrite syntax.
 

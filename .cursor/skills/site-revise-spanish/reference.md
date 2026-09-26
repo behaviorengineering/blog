@@ -50,6 +50,19 @@ A paragraph can sound smooth and still fail **anti_calque** / **native_naturalne
 | *career tax* | *impuesto de carrera* | *lastre profesional*, *peaje en la trayectoria* | *Tax* abstracto se traduce por lastre, peaje o coste, no impuesto directo. |
 | *routine data entry* | *entrada rutinaria de datos* | *registro mecánico de datos*, *papeleo rutinario* | Evitar ristras de sustantivos abstractos sin verbo. |
 
+## Video / list front matter (description bullets)
+
+Novelty bullets under **What you probably do not know yet** must read as Spanish claims, not translated slide titles.
+
+| English-shaped | Prefer (ES) |
+|----------------|-------------|
+| *La IA como palanca ante X: de A a B* | *La IA no solo compensa X: puede convertirla en ventaja…* (verbo + afirmación) |
+| *Cómo hacer rendir… al delegar…* | *Los proyectos paralelos despegan cuando dejas que…* (sin viñeta *Cómo…*) |
+| *El ocaso del especialista de carril único* | *El viejo culto a la hiperespecialización penalizaba…* (evitar *carril único* = traffic calque; evitar *mentes diseñadas para*) |
+| *brains built/designed to connect* | *cerebros capaces de conectar* / *volcados en enlazar saberes* |
+
+**Test:** if a bullet is a nominal phrase with a colon and no finite verb, or starts with *Cómo*, treat as **anti_calque** unless author-locked.
+
 ## Re-adaptación de párrafo vs parches cosméticos
 
 Cuando la prueba de reversión detecte un esqueleto sintáctico inglés:

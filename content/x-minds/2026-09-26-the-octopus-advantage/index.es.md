@@ -4,11 +4,11 @@ date: '2026-09-26T01:00:00+11:00'
 title: "La ventaja del pulpo"
 type: video
 description: |
-  - La **IA** como palanca ante la **disfunción ejecutiva**: de lastre profesional a ventaja diferencial.
-  - Cómo hacer rendir los **proyectos paralelos** al delegar calendarios, esquemas y tareas mecánicas.
-  - El ocaso del **especialista de carril único** que dejaba fuera a las mentes diseñadas para cruzar disciplinas lejanas.
+  - La **IA** no solo compensa la **disfunción ejecutiva**: puede convertirla en una ventaja diferencial frente al trabajo rutinario.
+  - Los **proyectos paralelos** despegan de verdad cuando dejas que una herramienta resuelva la agenda, los esquemas y el papeleo.
+  - El viejo culto a la **hiperespecialización** penalizaba a los cerebros capaces de conectar disciplinas lejanas, justo los que hoy marcan la diferencia.
 sowhat: |
-  Aprenderás cómo una mente **estimulada por la curiosidad** puede descargar la gestión rutinaria en la **IA**. Al liberar energía para **conectar patrones entre disciplinas distintas**, destrabar un proyecto estancado se reduce a un solo paso práctico de organización.
+  Las mentes **estimuladas por la curiosidad** pueden descargar la gestión rutinaria en la **IA**. Al liberar energía para **conectar patrones entre disciplinas distintas**, destrabar un proyecto estancado se reduce a un solo paso práctico de organización.
 draft: false
 
 subtitle: "ADHDVision: IA, TDAH y el cerebro multicarril"
@@ -52,7 +52,7 @@ reader_landing:
 
 ---
 
-Durante décadas, el mercado laboral operó como una **máquina clasificadora inflexible**. A cada persona se le asignaba una casilla fija y un manual estrecho para demostrar su valía. Triunfar exigía especializarse a fondo en una sola dirección, exactamente como un **brazo mecánico** programado para calcar el mismo movimiento una y otra vez. Si alguien nacía con la **curiosidad abierta de un pulpo**, tanteando varios frentes al mismo tiempo, no le quedaba otra que replegar sus tentáculos para encajar en el molde. Salirse del carril o dejarse llevar por una intuición inesperada se castigaba como una falta de disciplina. El sistema premiaba al especialista que repetía su función con precisión matemática, lo que dejaba fuera a los cerebros diseñados para **abarcar el panorama completo y unir puntos lejanos**. Se malgastaba una cantidad inmensa de energía en encogerse para caber en el puesto, mientras se reprimía el impulso natural de explorar lo que ocurría más allá de la propia parcela.
+Durante décadas, el mercado laboral operó como una **máquina clasificadora inflexible**. A cada persona se le asignaba una casilla fija y un manual estrecho para demostrar su valía. Triunfar exigía especializarse a fondo en una sola dirección, exactamente como un **brazo mecánico** programado para calcar el mismo movimiento una y otra vez. Quienes nacían con la **curiosidad abierta de un pulpo**, tanteando varios frentes al mismo tiempo, no les quedaba otra que replegar sus tentáculos para encajar en el molde. Salirse del carril o dejarse llevar por una intuición inesperada se castigaba como una falta de disciplina. El sistema premiaba al especialista que repetía su función con precisión matemática **y excluía a los cerebros capaces de abarcar el panorama completo y de unir puntos lejanos**. Se malgastaba una cantidad inmensa de energía en encogerse para caber en el puesto, mientras se reprimía el impulso natural de explorar lo que ocurría más allá de la propia parcela.
 
 ### El choque entre mundos desconectados
 
@@ -68,7 +68,7 @@ La IA actúa como una **prótesis cognitiva** para cubrir los fallos de función
 
 ### Desbloquea un proyecto personal
 
-Conviene construir una trayectoria profesional que funcione como una **red de enlaces**. Tu mayor fortaleza reside en los puntos de cruce entre intereses diversos, allí donde detectas patrones que los especialistas pasan por alto.
+Conviene construir una trayectoria profesional que funcione como una **red de enlaces**. Tu mayor fortaleza reside en los puntos de cruce entre intereses diversos, donde detectas patrones que los especialistas pasan por alto.
 
 Elige un **proyecto personal** que tengas congelado por culpa de la burocracia o el desorden inicial. Apóyate en la IA para resolver los tres primeros pasos de organización, ya sea estructurar el esquema, planificar los plazos o recopilar la información básica. Al convertir la IA en una **función ejecutiva externa**, consigues mantenerte de lleno en el flujo creativo sin ahogarte en el arranque. Es la forma de desplegar esos **tentáculos digitales**: dejas que la máquina resuelva la mecánica y tú te concentras en empujar la idea hacia adelante.
 
