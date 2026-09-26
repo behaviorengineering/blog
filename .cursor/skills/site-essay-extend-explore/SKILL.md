@@ -164,7 +164,7 @@ PROHIBITED:
 Four restatements of "use AI for executive function"
 ```
 
-**CONSTRAINT:** MUST prefer Perplexity MCP (`user-perplexity-browser` `perplexity_research`, mode `search`) when the operator asked Perplexity. MUST attach the source thesis and the existing explore queries so the model does not duplicate them. MUST NOT invent `perplexity_thread` URLs. A completed thread MAY be stored only when the operator supplies a real search URL.
+**CONSTRAINT:** Explore further research MUST run inside the Perplexity project **behaviorengineering blog** (https://www.perplexity.ai/projects/72fa0438-7055-414e-8c7d-2c7642bb8ed5) so Instructions and Skills apply. MUST NOT use MCP `user-perplexity-browser` **`perplexity_research`** for Explore batch threads until the MCP can start threads in that project. Operator pastes Gemma prompts in the project ask box; agent MAY use **`perplexity_export`** on operator-supplied URLs. MUST attach the source thesis and existing explore queries in the Gemma prompt so the model does not duplicate them. MUST NOT invent `perplexity_thread` URLs.
 
 - Enforcement: Prompt contains source hinge + existing queries; YAML `type: perplexity_thread` only with a real `url` from the operator or export
 - Violation: STOP, strip invented threads; re-query with the exclusion list
@@ -201,7 +201,7 @@ PROHIBITED:
 
 1. **Inventory:** List existing `explore` labels and queries on EN (and ES if present).
 2. **Thesis packet:** One short block: claim, examples, close, rows to exclude.
-3. **Research prompt (if asked):** Gemma thinking pass per **Perplexity research prompt (Gemma)**; hand prompts to operator; stop until they return thread URL(s).
+3. **Research prompt (if asked):** Gemma thinking pass per **Perplexity research prompt (Gemma)**; hand prompts to operator to paste in the **Perplexity project** ([PERPLEXITY-PROJECT.md](../site-extension-pipeline/PERPLEXITY-PROJECT.md)); stop until they return thread URL(s).
 4. **Research packet:** Fill `candidates.json` (or equivalent) with 2 or 3 URLs plus export or summary text per candidate.
 5. **Gemma research review:** Load `site-explore-research-review`; reject weak candidates before hooks.
 6. **Proposal:** Run `make explore-proposal` or `python3 scripts/explore_proposal.py`; operator reviews YAML proposal.

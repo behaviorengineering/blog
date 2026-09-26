@@ -27,7 +27,7 @@ The on-page section title is **Explore further** (EN) / explore copy in ES. Temp
 1. **Source:** Read English `index.md`; name settled thesis and one unpaid hinge.
 2. **Research packet:** Assemble essay path, 2 or 3 target hinges, Gemma PRIMARY/BACKUP prompts, existing explore excludes, and candidate rows (`id`, `url`, `hinge`, export or summary). See **Research packet** in `site-essay-extend-explore` and `site-explore-research-review`.
 3. **Research prompt (when operator asks):** MUST NOT draft the Perplexity paste prompt in the agent voice. Polypus Gemma 4 with `enable_thinking: true`. Deliver **PRIMARY_PROMPT**, optional **BACKUP**, and **NO:** lines. Operator runs the shared Perplexity project and returns result URLs.
-4. **Research:** Perplexity project (manual). Bullets, plain English, real citations. No essay unless asked.
+4. **Research:** Perplexity **project** only ([PERPLEXITY-PROJECT.md](PERPLEXITY-PROJECT.md)). Operator starts each thread from https://www.perplexity.ai/projects/72fa0438-7055-414e-8c7d-2c7642bb8ed5 (Instructions + Skills). MUST NOT use MCP `perplexity_research` for Explore batches until project-scoped research exists. Bullets, plain English, real citations. No essay unless asked.
 5. **Thread URLs:** Operator supplies one URL per candidate (2 or 3 total for a full set). Each thread MUST be **shared public** in Perplexity (**Anyone with the link**) before ship; see **Public share (Perplexity)** below.
 6. **Gemma research review (mandatory):** `site-explore-research-review` on each candidate before hooks. Reject weak or duplicate research.
 7. **Explore ship set:** Approved candidates only; `site-essay-extend-explore` mechanical dedupe and counter-cost check.
@@ -87,11 +87,13 @@ Copy URL from address bar while thread is still private to your account
 
 ## Perplexity Computer assets
 
-Project instructions and skill zips: `tmp/essay-extension-skills/perplexity-computer/` (paste instructions; upload skills).
+Project instructions and skill zips: `tmp/essay-extension-skills/perplexity-computer/` (paste into project Settings; upload skills).
+
+**Explore research home:** [PERPLEXITY-PROJECT.md](PERPLEXITY-PROJECT.md) (mandatory project URL; MCP `perplexity_research` not for Explore batch).
 
 ## Pre-ship checklist
 
-- [ ] Research packet complete (candidates have export or summary)
+- [ ] **Project scope:** Every candidate thread was started from [PERPLEXITY-PROJECT.md](PERPLEXITY-PROJECT.md) (not global Search / MCP `perplexity_research`)
 - [ ] Gemma research review: every candidate has verdict (`.cursor/skills/site-explore-research-review/SKILL.md`)
 - [ ] Only approved URLs in ship set (2 or 3 `perplexity_thread` target for full pipeline batch)
 - [ ] Gemma Call A + Call B complete for hooks (`approve: yes`)

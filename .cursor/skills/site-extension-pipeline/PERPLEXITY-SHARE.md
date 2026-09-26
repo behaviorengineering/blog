@@ -4,7 +4,7 @@ Explore further `perplexity_thread` rows MUST open for **cold readers** (logged 
 
 ## Critical: default is private
 
-New searches (including MCP `perplexity_research`) start as **Only people with access can view**. The URL in the address bar works for you but **not** for blog readers until you change **General access**.
+New searches (including MCP `perplexity_research` outside the blog project) start as **Only people with access can view**. Explore batch threads MUST be created inside the project first; see [PERPLEXITY-PROJECT.md](PERPLEXITY-PROJECT.md).
 
 ## Do not test inside Perplexity “incognito”
 
