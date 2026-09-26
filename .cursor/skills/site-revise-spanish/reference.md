@@ -1,4 +1,4 @@
-# Revise Spanish — reference
+# Revise Spanish: reference
 
 Deep rules live in **`.cursor/skills/site-spanish-translation-content/SKILL.md`**. This file is a **fast sniff list** for read-aloud audits and the **local Gemma evaluate** pack.
 
@@ -38,6 +38,23 @@ A paragraph can sound smooth and still fail **anti_calque** / **native_naturalne
 **Test:** if you can put the Spanish clauses back into English almost word-for-word and recover the original EN sentence, rewrite the Spanish syntax. Do not only swap synonyms.
 
 **Exception:** author-locked lines in `index.es.md` (including intentional calques) are not “fix targets.”
+
+## Cognitive false friends, pop calques, and gerunds (MUST check)
+
+| English pattern | Avoid (calque) | Prefer (idiomatic ES) | Notes |
+|---|---|---|---|
+| *interest-based* / *interest-driven* | *se mueve por intereses*, *basado en el interés* | *guiado por la curiosidad*, *estimulado por el interés intrínseco*, *funciona por fascinación genuina* | En español, *moverse por intereses* connota egoísmo o oportunismo. |
+| *side quests* | *misiones secundarias* | *proyectos paralelos*, *iniciativas personales*, *inquietudes fuera de ruta* | *Misiones secundarias* suena a videojuego y desentona en prosa de ensayo. |
+| Gerundio de posterioridad (*-ing* consecutivo) | *filtrando a los cerebros...*, *reprimiendo las ganas...*, *viendo patrones...* | *lo que filtraba a los cerebros...*, *al tiempo que reprimían...*, *y detectan patrones...* | En español el gerundio no expresa consecuencia o resultado posterior; exige verbo conjugado. |
+| Metáforas literales no asimiladas | *tentáculos lineales*, *curiosidad tipo pulpo*, *llevar tentáculos* | *tareas rutinarias y lineales*, *curiosidad expansiva*, *delegar la carga mecánica* | Aterrizar a la imagen o función real; no calcar adjetivos ingleses sobre metáforas biológicas. |
+| *career tax* | *impuesto de carrera* | *lastre profesional*, *peaje en la trayectoria* | *Tax* abstracto se traduce por lastre, peaje o coste, no impuesto directo. |
+| *routine data entry* | *entrada rutinaria de datos* | *registro mecánico de datos*, *papeleo rutinario* | Evitar ristras de sustantivos abstractos sin verbo. |
+
+## Re-adaptación de párrafo vs parches cosméticos
+
+Cuando la prueba de reversión detecte un esqueleto sintáctico inglés:
+- **PROHIBIDO:** sustituir solo dos o tres palabras sueltas manteniendo la misma estructura de oraciones calcada del inglés. Eso deja el texto sonando a doblaje.
+- **OBLIGATORIO:** Re-adaptar el párrafo completo. Extraer la afirmación central y el mecanismo, cerrar la frase inglesa y redactar en español fluido con hipotaxis natural (conectores orgánicos y subordinación).
 
 ## Soft essay vs spoken manifesto (false “improvements”)
 

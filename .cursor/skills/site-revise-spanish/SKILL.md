@@ -102,6 +102,8 @@ When any rewrite/eval unit is applied by an agent or LLM:
 - **MUST NOT** drop verb objects that carry ethical or clinical load (*a la persona*).
 - **MUST NOT** prioritize fluency over `conceptual_fidelity` when both conflict.
 - **MUST NOT** treat “reads smoothly” as native if clause order still mirrors English (esqueleto EN + léxico ES). Rewrite syntax, not only vocabulary.
+- **MUST NOT** apply cosmetic word-level patches (swapping 1 or 2 words) when a paragraph fails the reverse-translation test or carries an English sentence skeleton. Swapping *impuesto de carrera* for *lastre* while keeping the English clause order leaves the prose sounding like dubbing.
+- **MUST** re-adapt the full paragraph when syntax fails reverse-translation: extract the claim and mechanism, close the English source, and reconstruct the paragraph in natural Spanish using organic hypotaxis, active verbs, and natural connectors.
 
 ### Author micro-edits bind
 
