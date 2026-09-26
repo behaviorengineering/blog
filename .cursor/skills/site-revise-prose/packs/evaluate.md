@@ -26,7 +26,8 @@ The CLI walks units in order: list fields, then body paragraphs. For each step y
 
 **Metaphor-shell vs PRIOR is a CURRENT failure.** If CURRENT only relabels a PRIOR claim with an undefined noun, restates it as a tautology, or restates its implication with a new metaphor pair, put it in the **Failures** table (pattern: **Metaphor-shell restack**). Do **not** bury it under Continuity. Do **not** list that quote under **Keep**.
 
-**Industry-verb shells fail even as CURRENT alone.** If CURRENT's payload is `sells`, `steer`, `assembling` / `assembly`, `harden`, a fake scene (`the same room`), or "name the box… and the box," put it in **Failures**. Do **not** Keep `"identity feels solid because the brain keeps assembling it."`
+**Industry-verb shells fail even as CURRENT alone.** If CURRENT's payload is `sells`, `steer`, `assembling` / `assembly`, `harden`, a fake scene (vague group container), abstract "the room" for an audience, or "name the box… and the box," put it in **Failures**. Do **not** Keep `"identity feels solid because the brain keeps assembling it."`
+**Abstract metonymy fails as CURRENT alone.** If CURRENT uses "the room" to mean people, bystanders, or social pressure (not a literal physical space), put it in **Failures** (pattern: **Abstract metonymy**).
 
 ### Sequence test (Metaphor-shell restack)
 
@@ -58,7 +59,8 @@ After sentence N (in CURRENT or in PRIOR), sentence N+1 **fails** if it only (a)
 | Staccato thesis stacks | Same-length punch lines every sentence |
 | Compression smell | Tight but dead; cadence or voice lost |
 | Metaphor-shell restack | After a mechanism sentence: "The blend is your experienced reality…" then "sealed file / steering wheel." Do not Keep the tautology as punchy. |
-| Industry-verb shells | "sells the blend as 'me'"; "steer the rewrite"; "identity feels solid because the brain keeps assembling it"; "next assembly"; "the same room"; "template can harden"; "name the box… and the box." Do not Keep these as punchy. |
+| Abstract metonymy | "The room learns to freeze." / "lie to the room" / "read the room" | Name actual people or a literal physical setting. |
+| Industry-verb shells | "sells the blend as 'me'"; "steer the rewrite"; "identity feels solid because the brain keeps assembling it"; "next assembly"; vague group container with no people; "template can harden"; "name the box… and the box." Do not Keep these as punchy. |
 
 ---
 

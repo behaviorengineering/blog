@@ -21,15 +21,16 @@ Full banned-pattern tables and examples for **Step 2** in **`SKILL.md`**. Agents
 | Clever filler metaphors | "not a label on your calendar", "the meter is running", "bodies buffer and compensates", "sells the blend as 'me'", "steer the rewrite" | State the qualification in plain words; one metaphor thread per paragraph |
 | Caption pivots | "Picard is careful here.", "The pattern matters.", "Still," opening a punch line | Fold the caveat into the sentence before it; use concrete symptoms or numbers |
 | Telegraphic compression | "Cortisol rises. Shoulders tighten. You replay..." (five same-length beats) | One spoken sentence with commas or a subordinate clause |
-| Parallel contrast stacks | "Some people run a cold two-track story for the audience. Others sell themselves the good reason until it feels true." | Say the two moves in plain verbs (lie to the room / buy your own story); avoid matched Some/Others thesis pairs |
+| Parallel contrast stacks | "Some people run a cold two-track story for the audience. Others sell themselves the good reason until it feels true." | Say the two moves in plain verbs (lie to the audience / buy your own story); avoid matched Some/Others thesis pairs |
+| Abstract metonymy | "The room learns to freeze." / "You can lie to the room." / "read the room" | Name the actual people, bystanders, or physical setting. Literal physical rooms are allowed. |
 | Construct-labeling meta | "**Self-deception** names that move:", "X names the pattern:" (label is the sentence's only job) | State the behavior in spoken English first; MAY gloss a named construct in the same sentence (`**cold-hot empathy gap**: when you are calm…`) |
 | Academic accessibility jargon | "partly available to reflection", "cognitively inaccessible", "phenomenally present but report-poor" | Plain access words: hard to see, hard to say, foggy even to you |
-| Mechanism jargon without a scene | "cold two-track story", "dual-process cover", "strategic opacity" with no picture | Who does what in a room: quit a job, pick a side, nod along |
+| Mechanism jargon without a scene | "cold two-track story", "dual-process cover", "strategic opacity" with no picture | Who does what in a concrete scene (kitchen, meeting): quit a job, pick a side, nod along |
 | Rhetorical noun fragments | "The mirror." / "The wound." / "The truth." as standalone beats | Fold into a full sentence with subject + verb, or cut |
 | Revelation stacks | Several one-line poetic restatements of the same idea | One claim, then mechanism, scope, or evidence |
 | Poetic thesis remix | Same claim restated in prettier metaphors without new information | Keep one clear statement; cut the echo |
 | Metaphor-shell restack | After a live-mix claim: "The blend is your experienced reality…" then "If the self were a sealed file, you would have no steering wheel." | Next sentences MUST add how (inputs, evidence, example, scope). Cut undefined nouns (`the blend`) and extra metaphor pairs (`sealed file` / `steering wheel`). |
-| Industry-verb shells | "then sells the blend as 'me.'"; "let you steer the rewrite."; "identity feels solid because the brain keeps assembling it."; "can change the next assembly."; "what you remember from the same room"; "that template can harden"; "You can name the box parents or peers put you in, and the box you put yourself in." | Drop sales, factory, driving, and hardening verbs when they are the clause's only job. Use spoken verbs and a real scene (kitchen, not "the same room"). Parallel "name the box… and the box" fails; say the story they taught you and the story you now tell yourself. |
+| Industry-verb shells | "then sells the blend as 'me.'"; "let you steer the rewrite."; "identity feels solid because the brain keeps assembling it."; "can change the next assembly."; "what you remember from the same room" (abstract group, no people); "that template can harden"; "You can name the box parents or peers put you in, and the box you put yourself in." | Drop sales, factory, driving, and hardening verbs when they are the clause's only job. Use spoken verbs and a real scene (kitchen, named colleagues). Parallel "name the box… and the box" fails; say the story they taught you and the story you now tell yourself. |
 
 ## Explanatory prose (claims, video, Substack)
 
@@ -56,7 +57,7 @@ Full banned-pattern tables and examples for **Step 2** in **`SKILL.md`**. Agents
 
 **Sequence test (Metaphor-shell restack):** After sentence N, sentence N+1 **fails** if it only (a) relabels N with an undefined noun (`the blend`), (b) restates N as a tautology (`experienced reality`), or (c) restates the implication of N with a new metaphor pair (`sealed file` / `steering wheel`). Consecutive punches that do not add mechanism, evidence, example, or scope fail **even if each line is a complete sentence**.
 
-**Clause test (Industry-verb shells):** A clause **fails even alone** (not only as N+1) if its payload is a clever industry verb for a mental process, or a fake scene (`the same room` with no kitchen, people, or objects). "Identity feels solid because the brain keeps assembling it" fails this test: assembling is the factory verb, not the mechanism (expectations + current input).
+**Clause test (Industry-verb shells):** A clause **fails even alone** (not only as N+1) if its payload is a clever industry verb for a mental process, or a fake scene (vague group container with no kitchen, people, or objects; includes abstract "the room" for an audience). "Identity feels solid because the brain keeps assembling it" fails this test: assembling is the factory verb, not the mechanism (expectations + current input).
 
 **`cognitive-memetics`:** MUST follow **Hybrid prose** in **`.cursor/skills/site-cognitive-memetics-content/SKILL.md`** (emotion + claim; punch OK when the next clause names mechanism/scene; ban empty closers like "The long view matters."). Not full essay Explanatory prose.
 
@@ -76,7 +77,7 @@ Full banned-pattern tables and examples for **Step 2** in **`SKILL.md`**. Agents
 - [ ] Default paragraph shape is 2–4 sentences, not fragment stacks
 - [ ] Zero rhetorical noun fragments / revelation stacks / poetic thesis remixes / **Metaphor-shell restack** / **Industry-verb shells**
 - [ ] Sequence test: each sentence after the first adds mechanism, evidence, example, or scope
-- [ ] Clause test: no sales, factory, driving, or hardening verb as the clause's only job; no fake scene (`the same room`)
+- [ ] Clause test: no sales, factory, driving, or hardening verb as the clause's only job; no fake scene (vague group container; abstract "the room")
 - [ ] Metaphors are rare clarifiers, not the paragraph's main job
 - [ ] Evidence-scope qualifiers appear where overclaim would mislead
 
@@ -104,4 +105,4 @@ After compression or a "polish" pass, agents often add **smooth-sounding filler*
 | "Picard applies that figure to dish biology, not your whole daily burn, yet faster heart rate, tight muscles, and rumination at 2 a.m. still drain the **budget**." | "not a label on your calendar. A whole body buffers and compensates. Still, …the meter is running." |
 | "Place cells track location." (direct) | "One live possibility is that place cells track location." (hedged) |
 | "This interview ties fatigue to where cellular **budget** goes." | "This interview bridges fatigue and allocation: not more fuel, better aim." |
-| "You can lie to the room on purpose. You can also buy your own story." | "Some people run a cold two-track story for the audience. Others sell themselves the good reason until it feels true. **Self-deception** names that move…" |
+| "You can lie to the audience on purpose. You can also buy your own story." | "Some people run a cold two-track story for the audience. Others sell themselves the good reason until it feels true. **Self-deception** names that move…" |

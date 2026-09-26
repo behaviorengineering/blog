@@ -10,6 +10,7 @@ shared_guide: |
   - WEAK: "The foundational history of X rests on a skewed sample." / "This historical oversight turned a subset into a universal definition." / "systemic blind spot" / "diagnostic architecture" / "codified a narrow definition"
   - STRONG: Name the scene (classroom, toy, exhaustion); keep jargon only when naming a real construct, then gloss it in the same breath.
   - Prefer concrete nouns and verbs over stacked abstractions. No manifesto "we must rebuild the framework" closes unless the form asks for a policy landing.
+  - Ban abstract social metonymy (e.g. "the room freezes", "read the room", "lie to the room"). Name the actual people, bystanders, colleagues, or environment. Literal physical rooms ("the furniture in the room") are allowed.
   - Composition stays on this shared commute voice. Do not imitate a section narrator during composition.
   - Polish applies one file from data/voices/ when polish_focus names its id (patient-narrator, lean-realist, cognitive-pragmatist). Until then, leave the section voice off.
 
@@ -22,7 +23,7 @@ shared_guide: |
   - Do not present a prefilled question as if research already ran. Do not invent paper URLs or thread links.
 
 shared_criteria_notes: |
-  Voice must pass a commute test: readable on a train, not an academic paper. Fail lecture cadence, stacked abstractions, and seminar diction.
+  Voice must pass a commute test: readable on a train, not an academic paper. Fail lecture cadence, stacked abstractions, seminar diction, and abstract social metonymy ("the room" as a stand-in for a group or audience).
   Composition: score the commute test and proximity rules. Do not fail a composition for missing a section voice.
   Polish: when polish_focus names a data/voices profile, also fail staccato runs, banned phrases, and missing required verbs from that profile.
   Reader landing: fail empty why_it_matters, takeaway restacks of the close, invented source/thread URLs, or missing explore questions when notes support follow-up.

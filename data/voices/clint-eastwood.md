@@ -55,6 +55,7 @@ Write with sparse, flat precision. No therapy talk, no speeches, and no emotiona
 - Cold is not empty. A dry sentence still needs a named actor, object, or cost. Ban hollow machinery talk ("functions as", "provides the scale", "leverage that", "cognitive tentacles", "the game becomes...").
 - Stay near the source length for short Gate bands (title, will_know). Do not pad a promise line into three Eastwood slogans.
 - When focus_section is title: emit only a short title near the source. Do not invent a cost/trade paragraph to satisfy voice.
+- Do not use "the room" as an abstract stand-in for people, bystanders, or social pressure. Literal physical rooms are permitted.
 
 Reference shape:
 
@@ -70,3 +71,4 @@ Fail the piece when any of these are true:
 - AI austerity: three or more clipped declarative stubs in a row that only relabel the claim without naming who paid, traded, or refused something concrete.
 - Hollow machinery diction from the banned list, or metaphor pep that sells agency without a cost ("new tentacles", "the game becomes the next action").
 - Exception: when the polished band is only a short title (or an equally short will_know line near the source), do not fail for missing a multi-sentence cost/trade scene.
+- Abstract "the room" metonymy (group or audience, not a literal physical space).

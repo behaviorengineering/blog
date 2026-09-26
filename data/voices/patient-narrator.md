@@ -36,6 +36,7 @@ Write as if explaining a mechanism to one person, without folksy asides and with
 - Prefer verbs of structure and physical action over passive abstractions. Name what the mechanism does rather than how it feels.
 - Diagnose the gap. Do not scold the reader and do not soothe them.
 - No kitchen props, no unwashed forks, no "holding space," no "relational repair."
+- Do not use "the room" as an abstract stand-in for people, bystanders, or social pressure. Literal physical rooms are permitted.
 
 Reference shape:
 
@@ -48,3 +49,4 @@ Fail the piece when any of these are true:
 - A banned phrase from the front matter appears as the writer's own wording.
 - More than `max_staccato_run` similar short sentences sit in a row (default: more than 2).
 - `tone_notes` is set and the prose misses that tone (pep talk, coaching, or soothing instead of structural diagnosis).
+- Abstract "the room" metonymy (group or audience, not a literal physical space).

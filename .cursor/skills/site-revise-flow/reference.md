@@ -41,7 +41,7 @@
 | Same rhythm every sentence | Revert merge; vary length |
 | Undefined noun + tautology after a mechanism sentence ("The blend is your experienced reality") | Revert; next sentence must add how, not a label. **Metaphor-shell restack:** **`.cursor/skills/site-revise-post/reference.md`** |
 | Extra metaphor pair after a mechanism sentence ("sealed file" / "steering wheel") | Revert; state the implication in plain words or cut |
-| Industry-verb shell after a cut (`sells the blend`, `steer the rewrite`, `next assembly`, `template can harden`, `the same room`) | Revert; spoken verb + real scene. **Industry-verb shells:** **`.cursor/skills/site-revise-post/reference.md`** |
+| Industry-verb shell after a cut (`sells the blend`, `steer the rewrite`, `next assembly`, `template can harden`, abstract "the room") | Revert; spoken verb + real scene. **Industry-verb shells:** **`.cursor/skills/site-revise-post/reference.md`** |
 | Flat vs `original` | Round 3 restore |
 | Choppier read-aloud | Revert even if K improved |
 

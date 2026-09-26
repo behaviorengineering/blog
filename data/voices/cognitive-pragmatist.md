@@ -32,6 +32,7 @@ Workbench observation. Cause, then effect, then the step you can check. Precisio
 - One construct per breath. Gloss a term in the same sentence that introduces it.
 - No seminar cadence and no pile of nominalizations standing in for a verb.
 - Technical posts that are already precise do not need this voice pasted on top. Use it when the piece would otherwise drift into a talk.
+- Do not use "the room" as an abstract stand-in for people, bystanders, or social pressure. Literal physical rooms are permitted.
 
 ## Evaluator contract
 
@@ -40,3 +41,4 @@ Fail the piece when any of these are true:
 - A banned phrase from the front matter appears as the writer's own wording.
 - More than `max_staccato_run` similar short sentences sit in a row.
 - `tone_notes` is set and the prose misses that tone (seminar / pep talk instead of checkable workbench steps).
+- Abstract "the room" metonymy (group or audience, not a literal physical space).

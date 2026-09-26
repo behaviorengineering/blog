@@ -23,7 +23,7 @@ This skill handles **line-level prose** (grammar, filler, cadence, voice, format
 
 **AI voice and negation fluff** are **not** owned here. After flow passes, MUST run **`.cursor/skills/site-revise-post/SKILL.md`** → **Steps 2, 3, and 5** on all prose fields (body, list copy, sidecars).
 
-**Compression guardrail:** Satisficing cuts **MUST NOT** introduce clever filler, caption pivots, staccato punch stacks, **Metaphor-shell restack**, or **Industry-verb shells** (`sells`, `steer`, `assembling`, `harden`, fake scene `the same room`; see **revise-post** → **Step 2** and **`.cursor/skills/site-revise-post/reference.md`**). If tightening creates those patterns, **revert** and merge into one spoken sentence instead.
+**Compression guardrail:** Satisficing cuts **MUST NOT** introduce clever filler, caption pivots, staccato punch stacks, **Metaphor-shell restack**, **abstract social metonymy** ("the room" for a group), or **Industry-verb shells** (`sells`, `steer`, `assembling`, `harden`, fake scene with no people; see **revise-post** → **Step 2** and **`.cursor/skills/site-revise-post/reference.md`**). If tightening creates those patterns, **revert** and merge into one spoken sentence instead.
 
 ## Voice lock (global)
 

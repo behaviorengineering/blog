@@ -1,8 +1,8 @@
-## El espejo no devuelve nada, y la culpa se va a la habitación
+## El espejo no devuelve nada, y la culpa cae sobre quienes están cerca
 
-Imagina a un **vampiro** frente al espejo después de alimentarse. El cristal queda vacío. Como no le devuelve su reflejo, empieza a buscar el desastre por la habitación. Ante esa superficie, la **culpa se desplaza** hacia los muebles, la luz o quien esté cerca.
+Imagina a un **vampiro** frente al espejo después de alimentarse. El cristal queda vacío. Como no le devuelve su reflejo, empieza a buscar a su alrededor el origen del desastre. Ante esa superficie, la **culpa se desplaza** hacia los muebles, la luz o quien esté cerca.
 
-Esto no es una metáfora: es una descripción de cómo se mueve mucha gente en un conflicto. Quien no puede registrar su propia imagen pierde la capacidad de **ubicar el error adentro**. Busca una causa y solo encuentra un vacío donde debería estar la responsabilidad. Desde ahí la **culpa se proyecta hacia afuera** hasta que cada error pasa a ser culpa del entorno o de los demás. El objetivo es la habitación.
+Esto no es una metáfora: es una descripción de cómo se mueve mucha gente en un conflicto. Quien no puede registrar su propia imagen pierde la capacidad de **ubicar el error adentro**. Busca una causa y solo encuentra un vacío donde debería estar la responsabilidad. Desde ahí la **culpa se proyecta hacia afuera** hasta que cada error pasa a ser culpa del entorno o de los demás. **El objetivo de todo el ataque son los demás**.
 
 > ***«Yo causé esto»*** no está en el menú. Esa opción no aparece.
 
@@ -12,7 +12,7 @@ Bajo esta lógica, alguien explica su vida. En una crisis, abre un **menú menta
 
 No siempre es teatro. Para algunas personas el **punto ciego es estructural**: la historia interna no lista la autoculpa como algo creíble. Desde adentro puede sentirse como sinceridad, no como evasión.
 
-## La habitación aprende a quedarse quieta
+## Cómo los demás aprenden a paralizarse
 
 Quien está alrededor aprende rápido las **reglas de supervivencia**: señalar el desastre te convierte en el **siguiente blanco**, así que para no encender otra pelea la gente se paraliza, se traga las quejas, asume el impacto y **limpia en silencio** para que la otra persona ni se entere.
 

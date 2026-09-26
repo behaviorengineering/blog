@@ -24,7 +24,7 @@ Increase **pull** on links, list rows, and in-page scans: copy should trigger **
 
 **Full lot (flow + hooks + post in one go):** **`.cursor/skills/site-revise-post/SKILL.md`** (default mode **`rough`**). Use **this skill alone** when you only need list copy and heading hooks.
 
-**Draft or retitle (curiosity gap, 3–5 candidates):** **`.cursor/skills/site-curiosity-title/SKILL.md`** first, then **this skill** to audit the pick.
+**Draft or retitle (curiosity gap, 3–5 candidates):** **`.cursor/skills/site-curiosity-title/SKILL.md`** first (Gemma 4 thinking on Polypus for candidates + cold-read), then **this skill** to audit the pick.
 
 ## How the theme uses fields (this repo)
 

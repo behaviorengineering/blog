@@ -19,7 +19,7 @@ Technical posts that should stay technical do not take a narrator file. Leave po
 
 ## Two contracts in each file
 
-Generator contract: how the polish model should write (cadence, verbs, what to refuse). The Markdown body still helps humans and `polish_focus` paste; the model sees `tone_notes` and bans via `voice_profile` JSON.
+Generator contract: how the polish model should write (cadence, verbs, what to refuse). The Markdown body still helps humans and `polish_focus` paste; the model sees `tone_notes` and bans via `voice_profile` JSON. All catalog voices refuse abstract "the room" metonymy (group/audience); literal physical rooms stay allowed. Do not add "the room" to `banned_patterns` (substring audits cannot distinguish abstract vs literal use).
 
 Evaluator contract: what a deterministic audit and the `voice_fidelity` role can fail closed (banned phrases, staccato run, required verbs, tone). Those checks are the YAML front matter.
 
