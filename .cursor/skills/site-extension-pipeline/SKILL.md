@@ -28,7 +28,7 @@ The on-page section title is **Explore further** (EN) / explore copy in ES. Temp
 2. **Research packet:** Assemble essay path, 2 or 3 target hinges, Gemma PRIMARY/BACKUP prompts, existing explore excludes, and candidate rows (`id`, `url`, `hinge`, export or summary). See **Research packet** in `site-essay-extend-explore` and `site-explore-research-review`.
 3. **Research prompt (when operator asks):** MUST NOT draft the Perplexity paste prompt in the agent voice. Polypus Gemma 4 with `enable_thinking: true`. Deliver **PRIMARY_PROMPT**, optional **BACKUP**, and **NO:** lines. Operator runs the shared Perplexity project and returns result URLs.
 4. **Research:** Perplexity project (manual). Bullets, plain English, real citations. No essay unless asked.
-5. **Thread URLs:** Operator supplies one URL per candidate (2 or 3 total for a full set).
+5. **Thread URLs:** Operator supplies one URL per candidate (2 or 3 total for a full set). Each thread MUST be **shared public** in Perplexity (**Anyone with the link**) before ship; see **Public share (Perplexity)** below.
 6. **Gemma research review (mandatory):** `site-explore-research-review` on each candidate before hooks. Reject weak or duplicate research.
 7. **Explore ship set:** Approved candidates only; `site-essay-extend-explore` mechanical dedupe and counter-cost check.
 8. **Gemma link hooks (mandatory):** `site-explore-link-hooks` Call A + Call B. Agent MUST NOT write labels or hooks.
@@ -68,6 +68,23 @@ Helper: `make explore-fetch-exports` / [`scripts/explore_fetch_exports.py`](/Use
 
 MUST NOT patch `index.md` / `index.es.md` without step 2 and `CONFIRM=1`.
 
+## Public share (Perplexity)
+
+**CONSTRAINT:** Every `perplexity_thread` URL on the live site MUST be **viewable by anyone with the link** (Perplexity Share → public / anyone with link). MUST NOT ship workspace-private threads that show a login wall to readers.
+
+- **Before explore-apply:** Operator confirms incognito check for each URL (`make verify-explore-links POST=section/slug`).
+- **Reference:** [PERPLEXITY-SHARE.md](PERPLEXITY-SHARE.md)
+
+CORRECT:
+```text
+Share thread → Anyone with the link → incognito opens full research → paste URL in YAML
+```
+
+PROHIBITED:
+```text
+Copy URL from address bar while thread is still private to your account
+```
+
 ## Perplexity Computer assets
 
 Project instructions and skill zips: `tmp/essay-extension-skills/perplexity-computer/` (paste instructions; upload skills).
@@ -81,4 +98,8 @@ Project instructions and skill zips: `tmp/essay-extension-skills/perplexity-comp
 - [ ] Real thread URL only (operator supplied)
 - [ ] Every perplexity row has Gemma `label` + `hook`
 - [ ] No em dash in hooks or labels
+- [ ] **Public share:** Each `perplexity_thread` URL verified in incognito (Anyone with the link)
+      Method: `make verify-explore-links POST=...` then manual check
+      Pass: Cold reader sees research
+      Fail: STOP, re-share in Perplexity before deploy
 - [ ] ES hooks native, not calque

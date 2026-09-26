@@ -93,7 +93,7 @@ Use one JSON or operator checklist per essay when running 2 or 3 Perplexity proj
 
 Example: [tmp/explore-proposals/2026-09-26-the-octopus-advantage/candidates.json](/Users/hector/Xynova/ai/behaviourengineering/site/tmp/explore-proposals/2026-09-26-the-octopus-advantage/candidates.json)
 
-**CONSTRAINT:** MUST run `site-explore-research-review` on every candidate before `site-explore-link-hooks`. MUST NOT patch Hugo until the operator accepts a proposal from `scripts/explore_proposal.py` or explicitly says to apply.
+**CONSTRAINT:** MUST NOT patch Hugo until the operator accepts a proposal from `scripts/explore_proposal.py` or explicitly says to apply. MUST NOT ship `perplexity_thread` URLs until the operator shared each thread in Perplexity as **Anyone with the link** and verified in incognito (`make verify-explore-links`).
 
 ## Core constraints
 

@@ -310,7 +310,9 @@ def main() -> int:
     if not args.apply:
         print(
             "\nNext: ask the operator the operator_question above. "
-            "If they confirm, run with --apply --yes",
+            "If they confirm, run with --apply --yes\n"
+            "Before apply: operator must set each Perplexity thread to Anyone with the link "
+            "(see .cursor/skills/site-extension-pipeline/PERPLEXITY-SHARE.md).",
             file=sys.stderr,
         )
         return 0
