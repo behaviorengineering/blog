@@ -150,8 +150,3 @@ func EffectiveIncludeCognitiveMemeticsProjectAbout(c LocalConfig) bool {
 func LoadLocalConfig(path string) (LocalConfig, bool, error) {
 	return LoadLocalConfigWithGlobal("", path)
 }
-
-// DefaultLocalConfigPath is the repo-root filename for Substack tooling (substack-draft, substack-html).
-func DefaultLocalConfigPath() string {
-	return "substack.json"
-}
