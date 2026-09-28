@@ -435,12 +435,7 @@ sb-cc:
 	go run ./cmd/substack-draft -action cc -chrome-user-data-dir "$(CHROME_PROFILE)" -paste-timeout "$(PASTE_TIMEOUT)" -keep-open "$(KEEP_OPEN)"
 
 sb-config-init:
-	@if [ -f substack.json ]; then \
-		printf 'ℹ️  substack.json already exists\n'; \
-	else \
-		cp docs/substack-html/substack-config.example.json substack.json; \
-		printf '\n✅  created substack.json\n\n   Chrome profile: use direnv .envrc + SUBSTACK_CHROMIUM_USER_DATA_DIRECTORY\n\n'; \
-	fi
+	go run ./cmd/substack-config-init
 
 mermaid-render:
 	@if [ -z "$(strip $(IN))" ] || [ -z "$(strip $(OUT))" ]; then \
