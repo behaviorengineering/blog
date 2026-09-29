@@ -68,7 +68,7 @@
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": {{ .Title | jsonify }},
+        "headline": {{ partial "function/social-page-title.html" .Title | jsonify }},
         "inLanguage": "{{ .Site.LanguageCode }}",
         "mainEntityOfPage": {
             "@type": "WebPage",

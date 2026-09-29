@@ -6,7 +6,13 @@
   <meta name="twitter:card" content="summary">
 {{- end }}
 
-{{- with or .Title site.Title site.Params.title | plainify }}
+{{- $twTitle := "" -}}
+{{- if .IsPage -}}
+  {{- $twTitle = partial "function/social-page-title.html" .Title -}}
+{{- else -}}
+  {{- $twTitle = .Title | plainify -}}
+{{- end -}}
+{{- with or $twTitle site.Title site.Params.title }}
   <meta name="twitter:title" content="{{ . }}">
 {{- end }}
 

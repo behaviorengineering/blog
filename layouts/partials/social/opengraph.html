@@ -4,7 +4,13 @@
   <meta property="og:site_name" content="{{ . }}">
 {{- end }}
 
-{{- with or .Title site.Title site.Params.title | plainify }}
+{{- $ogTitle := "" -}}
+{{- if .IsPage -}}
+  {{- $ogTitle = partial "function/social-page-title.html" .Title -}}
+{{- else -}}
+  {{- $ogTitle = .Title | plainify -}}
+{{- end -}}
+{{- with or $ogTitle site.Title site.Params.title }}
   <meta property="og:title" content="{{ . }}">
 {{- end }}
 
