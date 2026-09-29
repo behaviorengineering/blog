@@ -1,6 +1,9 @@
 ---
 translationKey: "2026-09-29-the-mirror-that-only-blames"
 date: '2026-09-29T01:00:00+11:00'
+slug: el-espejo-que-solo-culpa
+aliases:
+  - /es/protocolos-sociales/cómo-el-entorno-aprende-a-proteger-al-culpable/
 title: "🔄 Cómo el entorno aprende a proteger al culpable"
 type: opinion
 description: |

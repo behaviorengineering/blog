@@ -1,6 +1,7 @@
 {{- define "title" -}}
+  {{- $socialTitle := partial "function/social-page-title.html" .Title -}}
   {{- with .Params.heading_code }}{{ . }}: {{ end -}}
-  {{- .Title }} - {{ .Site.Title -}}
+  {{- $socialTitle }} - {{ .Site.Title -}}
 {{- end -}}
 
 {{- define "content" -}}
