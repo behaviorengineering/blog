@@ -5,8 +5,8 @@ date: '2026-10-07T01:00:00+11:00'
 type: panel
 heading_code: W33
 project: Cube-Cows 🐮📈
-title: Different ways of working
-description: "This week, we observe the massive divide between those doing the labor and those crafting the **narrative of success**. The hyena is busy perfecting a slide deck to prove everything is fine, even as the background cows are drowning in a sea of **sticky notes and printer jams**. One person builds the reality while the other builds the presentation."
+title: "Formas distintas de trabajar"
+description: "Esta semana se nota la grieta entre quien hace el trabajo de verdad y quien teje la **historia del éxito**. La hiena pule el deck para demostrar que todo va **en verde**, mientras las vacas de fondo se ahogan entre **post-its y atascos de impresora**. Uno arma la realidad; el otro arma la presentación."
 draft: false
 
 featuredImage: "different-ways-of-working.webp"
