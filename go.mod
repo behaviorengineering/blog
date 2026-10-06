@@ -10,13 +10,13 @@ tool (
 require (
 	github.com/BurntSushi/toml v1.5.0
 	github.com/behaviorengineering/operatorconfig v0.1.1
-	github.com/behaviorengineering/strop v0.4.1-0.20260921145623-6ef1c12853f1
+	github.com/behaviorengineering/strop v0.5.13
 	github.com/charmbracelet/bubbletea v1.3.6
 	github.com/charmbracelet/huh v1.0.0
 	github.com/chromedp/cdproto v0.0.0-20250724212937-08a3db8b4327
 	github.com/chromedp/chromedp v0.14.2
 	github.com/mattn/go-isatty v0.0.23
-	github.com/stretchr/testify v1.12.0
+	github.com/stretchr/testify v1.12.1
 	github.com/yuin/goldmark v1.7.13
 	golang.org/x/image v0.45.0
 	golang.org/x/net v0.58.0
@@ -184,7 +184,7 @@ require (
 	go.opentelemetry.io/otel/sdk/metric v1.44.0 // indirect
 	go.opentelemetry.io/otel/trace v1.44.0 // indirect
 	go.uber.org/ratelimit v0.3.1 // indirect
-	go.yaml.in/yaml/v3 v3.0.4 // indirect
+	go.yaml.in/yaml/v3 v3.0.5 // indirect
 	golang.org/x/crypto v0.55.0 // indirect
 	golang.org/x/oauth2 v0.36.0 // indirect
 	golang.org/x/sync v0.22.0 // indirect
