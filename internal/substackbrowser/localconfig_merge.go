@@ -80,7 +80,7 @@ func readLocalConfigFileBytes(path string) ([]byte, error) {
 	if !os.IsNotExist(err) {
 		return nil, err
 	}
-	if filepath.Clean(path) != DefaultLocalConfigPath() {
+	if filepath.Clean(path) != "substack.json" {
 		return nil, err
 	}
 	for _, alt := range []string{"substack.config", filepath.Join(".substack", "config.json"), filepath.Join(".substack", "substack.json")} {

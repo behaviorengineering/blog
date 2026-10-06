@@ -41,7 +41,7 @@ Substack’s **post editor URL varies** and the writer dashboard (`…/publish/h
 
 ### Local config (optional)
 
-Store defaults in **`substack.json`** at the repo root (often committed; avoid secrets), or pass **`-config`**. Optional root **`.envrc`** (direnv) exports **`SUBSTACK_*`** overrides; see `docs/substack-html/README.md`. If `substack.json` is missing, the loader tries **`substack.config`** (older default), then **`.substack/config.json`**, then **`.substack/substack.json`** for migration.
+Discovery order: **`SUBSTACK_CONFIG`**, then **`~/.config/behaviour-engineering/substack.json`** (`make sb-config-init`), then repo **`substack.json`** (often committed; avoid secrets), or pass **`-config`**. Optional root **`.envrc`** (direnv) exports **`SUBSTACK_*`** overrides; see `docs/substack-html/README.md`. If the resolved file is missing, the loader tries **`substack.config`**, then **`.substack/config.json`**, then **`.substack/substack.json`** for migration.
 
 Prefer the grouped layout in `docs/substack-html/substack-config.example.json` (sections `substack_browser`, `markdown_export`, …). Flat root keys and legacy keys (`pub`, …) still load; see `internal/substackbrowser/localconfig.go`.
 
