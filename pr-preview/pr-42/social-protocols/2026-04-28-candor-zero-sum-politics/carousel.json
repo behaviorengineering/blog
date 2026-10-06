@@ -1,0 +1,552 @@
+{
+  "version": 1,
+  "title": "Politics is a bloodless war game that ends in zero-sum",
+  "slug": "candor-zero-sum-politics",
+  "source": "content/social-protocols/2026-04-28-candor-zero-sum-politics/index.md",
+  "deck": {
+    "displayFont": "Playfair Display",
+    "bodyFont": "Source Sans 3",
+    "palette": {
+      "background": "#130101",
+      "text": "#d3cabb",
+      "muted": "#f2ebe3",
+      "accent1": "#e18a5b",
+      "accent2": "#c64601"
+    },
+    "backgroundGradient": "depth",
+    "marginHorizontal": "10%",
+    "marginVertical": "10%",
+    "size": 1080,
+    "contentMaxWidth": "100%",
+    "previewMaxPx": 300,
+    "fontSizes": {
+      "header": 55,
+      "body": 80,
+      "footer": 55
+    },
+    "lineHeights": {
+      "header": 1.3,
+      "normal": 1.3,
+      "punch": 1.2,
+      "footer": 1.3
+    },
+    "emphasisGap": 0,
+    "emphasisScale": {
+      "normal": 1,
+      "punch": 1.25
+    },
+    "cta": {
+      "background": "#20111c",
+      "backgroundGradient": "solid",
+      "brandImage": "/images/og-logo.webp",
+      "qr": {
+        "layout": "split",
+        "color": "#964e94"
+      },
+      "shortUrl": "https://behaviorengineering.ai/war-game/",
+      "postUrl": "https://behaviorengineering.ai/social-protocols/2026-04-28-candor-zero-sum-politics/"
+    }
+  },
+  "slides": [
+    {
+      "number": 1,
+      "role": "hook",
+      "variants": [
+        {
+          "archetype": "stacked_rhythm",
+          "verticalAlign": "center",
+          "blocks": [
+            {
+              "section": "body",
+              "emphasis": "normal",
+              "text": "Politics is a"
+            },
+            {
+              "section": "body",
+              "emphasis": "punch",
+              "text": "bloodless"
+            },
+            {
+              "section": "body",
+              "emphasis": "punch",
+              "text": "war game",
+              "color": "accent2"
+            }
+          ]
+        },
+        {
+          "archetype": "hero_punch",
+          "verticalAlign": "center",
+          "blocks": [
+            {
+              "section": "body",
+              "emphasis": "punch",
+              "color": "accent2",
+              "text": "Politics"
+            },
+            {
+              "section": "body",
+              "text": "is a **bloodless**"
+            },
+            {
+              "section": "body",
+              "emphasis": "punch",
+              "text": "war game"
+            }
+
+          ]
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "role": "thesis",
+      "variants": [
+        {
+          "archetype": "stacked_rhythm",
+          "verticalAlign": "center",
+          "blocks": [
+            {
+              "section": "body",
+              "emphasis": "normal",
+              "text": "Dodge **candor**"
+            },
+            {
+              "section": "body",
+              "emphasis": "punch",
+              "text": "and you"
+            },
+            {
+              "section": "body",
+              "emphasis": "punch",
+              "text": "don't erase"
+            },
+            {
+              "section": "body",
+              "emphasis": "punch",
+              "color": "accent2",
+              "text": "the fight"
+            },
+            {
+              "section": "footer",
+              "text": "You push it sideways."
+            }
+          ]
+        },
+        {
+          "archetype": "stacked_rhythm",
+          "verticalAlign": "center",
+          "alignment": {
+            "footer": "center"
+          },
+          "blocks": [
+            {
+              "section": "body",
+              "emphasis": "normal",
+              "text": "Dodge **candor**"
+            },
+            {
+              "section": "body",
+              "emphasis": "punch",
+              "text": "and you"
+            },
+            {
+              "section": "body",
+              "emphasis": "punch",
+              "text": "don't erase"
+            },
+            {
+              "section": "body",
+              "emphasis": "punch",
+              "color": "accent2",
+              "text": "the fight"
+            },
+            {
+              "section": "footer",
+              "text": "You push it sideways."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "role": "mechanism",
+      "variants": [
+        {
+          "archetype": "keyword_anchor",
+          "verticalAlign": "center",
+          "alignment": {
+            "body": "right",
+            "footer": "right"
+          },
+          "blocks": [
+            {
+              "section": "body",
+              "text": "Politeness",
+              "emphasis": "punch",
+              "color": "accent1"
+            },
+            {
+              "section": "body",
+              "text": "isn't Payment",
+              "color": "accent2",
+              "emphasis": "punch"
+            },
+            {
+              "section": "footer",
+              "text": "Soft words only delay the bill.",
+              "color": "muted",
+              "font": "body"
+            }
+          ]
+        },
+        {
+          "archetype": "keyword_anchor",
+          "verticalAlign": "center",
+          "alignment": {
+            "body": "right",
+            "footer": "center"
+          },
+          "blocks": [
+            {
+              "section": "body",
+              "text": "Politeness",
+              "emphasis": "punch",
+              "color": "accent1"
+            },
+            {
+              "section": "body",
+              "text": "isn't Payment",
+              "color": "accent2",
+              "emphasis": "punch"
+            },
+            {
+              "section": "footer",
+              "text": "Soft words only delay the bill.",
+              "color": "muted",
+              "font": "body"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "role": "trade-off",
+      "variants": [
+        {
+          "archetype": "stacked_rhythm",
+          "verticalAlign": "center",
+          "alignment": {
+            "footer": "center"
+          },
+          "blocks": [
+            {
+              "section": "body",
+              "emphasis": "normal",
+              "color": "accent1",
+              "text": "The **bill**"
+            },
+            {
+              "section": "body",
+              "font": "body",
+              "text": "still **lands**"
+            },
+            {
+              "section": "body",
+              "emphasis": "punch",
+              "text": "on someone",
+              "color": "accent2"
+            },
+            {
+              "section": "footer",
+              "text": "You just **won't** say who."
+            }
+          ]
+        },
+        {
+          "archetype": "stacked_rhythm",
+          "verticalAlign": "center",
+          "alignment": {
+            "footer": "center"
+          },
+          "blocks": [
+            {
+              "section": "body",
+              "emphasis": "normal",
+              "text": "The **bill**"
+            },
+            {
+              "section": "body",
+              "font": "body",
+              "text": "still **lands**"
+            },
+            {
+              "section": "body",
+              "emphasis": "punch",
+              "text": "on someone",
+              "color": "accent2"
+            },
+            {
+              "section": "footer",
+              "text": "You just **won't** say who."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "role": "mindset",
+      "variants": [
+        {
+          "archetype": "stacked_rhythm",
+          "verticalAlign": "center",
+          "alignment": {
+            "footer": "right",
+            "body": "center"
+          },
+          "blocks": [
+            {
+              "section": "header",
+              "text": "Call it out **clearly**:",
+              "weight": "100"
+            },
+            {
+              "section": "body",
+              "text": "not nice ..."
+            },
+            {
+              "section": "body",
+              "color": "accent1",
+              "text": "not mean ..."
+            },
+            {
+              "section": "body",
+              "emphasis": "punch",
+              "color": "accent2",
+              "text": "**Legible**"
+            },
+            {
+              "section": "footer",
+              "text": "That, is **Candor**.",
+              "color": "muted",
+              "font": "body"
+            }
+          ]
+        },
+        {
+          "archetype": "stacked_rhythm",
+          "verticalAlign": "center",
+          "blocks": [
+            {
+              "section": "body",
+              "text": "Call it out **clearly**:"
+            },
+            {
+              "section": "body",
+              "emphasis": "punch",
+              "text": "Not nice"
+            },
+            {
+              "section": "body",
+              "emphasis": "punch",
+              "text": "Not mean"
+            },
+            {
+              "section": "body",
+              "emphasis": "punch",
+              "color": "accent2",
+              "text": "**Legible**"
+            },
+            {
+              "section": "footer",
+              "text": "That, is **Candor**.",
+              "color": "muted",
+              "font": "body"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "role": "implication",
+      "variants": [
+        {
+          "archetype": "claim_proof",
+          "verticalAlign": "center",
+          "alignment": {
+            "body": "right"
+          },
+          "blocks": [
+            {
+              "section": "header",
+              "text": "**Diplomacy** only exists ..."
+            },
+            {
+              "section": "body",
+              "text": "when **people** either"
+            },
+            {
+              "section": "body",
+              "emphasis": "punch",
+              "text": "**respect** you",
+              "color": "accent1"
+            },
+            {
+              "section": "body",
+              "emphasis": "punch",
+              "text": "or **fear** you",
+              "color": "accent2"
+            }
+          ]
+        },
+        {
+          "archetype": "claim_proof",
+          "verticalAlign": "center",
+          "blocks": [
+            {
+              "section": "body",
+              "text": "**Diplomacy** only exists when people either"
+            },
+            {
+              "section": "body",
+              "emphasis": "punch",
+              "text": "**respect** you",
+              "color": "accent1"
+            },
+            {
+              "section": "body",
+              "emphasis": "punch",
+              "text": "or **fear** you",
+              "color": "accent2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "role": "closing thesis",
+      "variants": [
+        {
+          "archetype": "closing_thesis",
+          "verticalAlign": "center",
+          "alignment": {
+            "footer": "center"
+          },
+          "blocks": [
+            {
+              "section": "body",
+              "emphasis": "punch",
+              "color": "muted",
+              "text": "Kids fight,"
+            },
+            {
+              "section": "body",
+              "emphasis": "punch",
+              "color": "accent2",
+              "text": "shake hands,"
+            },
+            {
+              "section": "body",
+              "emphasis": "punch",
+              "color": "accent1",
+              "text": "move on"
+            },
+            {
+              "section": "footer",
+              "text": "Adults trade that for long, expensive and polite wars.",
+              "color": "muted",
+              "font": "body"
+            }
+          ]
+        },
+        {
+          "archetype": "closing_thesis",
+          "verticalAlign": "center",
+          "alignment": {
+            "footer": "center"
+          },
+          "blocks": [
+            {
+              "section": "body",
+              "text": "Kids **fight**"
+            },
+            {
+              "section": "body",
+              "color": "accent2",
+              "text": "**shake** hands"
+            },
+            {
+              "section": "body",
+              "emphasis": "punch",
+              "color": "accent1",
+              "text": "move on"
+            },
+            {
+              "section": "footer",
+              "text": "We linger, in **long** and **polite** wars.",
+              "color": "muted",
+              "font": "body"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "role": "cta",
+      "variants": [
+        {
+          "archetype": "post_cta",
+          "featuredImage": "/social-protocols/2026-04-28-candor-zero-sum-politics/cowboys.jpg",
+          "featuredMaxHeight": 500,
+          "qr": {
+            "size": "85%",
+            "layout": "split"
+          },
+          "alignment": {
+            "body": "right",
+            "footer": "left"
+          },
+          "blocks": [
+            {
+              "section": "body",
+              "text": "Politics is a **bloodless war game**",
+              "color": "accent2",
+              "fontSize": 62
+            },
+            {
+              "section": "body",
+              "emphasis": "normal",
+              "color": "muted",
+              "text": "**Read @** behaviorengineering.ai/war-game",
+              "fontSize": 42
+            },
+            {
+              "section": "footer",
+              "text": "Find this essay",
+              "fontSize": 35
+            },
+            {
+              "section": "footer",
+              "text": "... and **yourself**",
+              "color": "accent2",
+              "fontSize": 35
+            },
+            {
+              "section": "footer",
+              "text": "← **@**",
+              "color": "accent2",
+              "fontSize": 40
+            }
+
+          ]
+        }
+      ]
+    }
+  ]
+}

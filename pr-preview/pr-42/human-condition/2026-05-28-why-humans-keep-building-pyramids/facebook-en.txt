@@ -1,0 +1,21 @@
+🏢🔺 Why does every group organize into a pyramid?
+
+Look: families get elders, classrooms get teachers, armies get ranks, companies get managers. Even a group chat ends up with mods, influencers, and an inner circle, even when it started with no bosses.
+
+It is not only culture or greed. The deeper reason starts in the body: your brain already stacks the world in layers. Detail stays downstairs. A clean summary goes up. That is why you can read rank in a room before anyone draws an org chart.
+
+Zink et al. (2008) showed it in the lab: from faces alone, people learned who outranked whom. Rising or falling in rank lit the same brain networks as winning or losing money. Ten people can talk it out face to face. At company scale that is not enough: ten speak in a meeting, and the VP gets one bullet that skipped a level, your boss's boss.
+
+That funnel makes coordination faster and gives you someone to blame. You also get bottlenecks, ego fights, and a gap between the person who decides and the people who eat the cost.
+
+Hierarchy is an attractor: groups keep sliding into a pyramid. If you want something flatter, you have to design against it on purpose: written rules, shared maps, rotation of who can approve. If you do not, the room orbits the founder, or the mod with the delete button.
+
+#SocialBrainSelection #PredictiveProcessing #ObviousIsTrained #RewriteTheRules
+
+If you want to read more:
+
+- EN: https://behaviorengineering.ai/human-condition/2026-05-28-why-humans-keep-building-pyramids/
+
+- ES: https://behaviorengineering.ai/es/human-condition/2026-05-28-why-humans-keep-building-pyramids/
+
+🔖 Zink et al. (2008) → https://pmc.ncbi.nlm.nih.gov/articles/PMC2430590/
