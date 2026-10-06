@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-26T15:37:04Z",
+  "generatedAt": "2026-10-06T15:30:29Z",
   "channels": [
     "site-en",
     "site-es",
@@ -5502,13 +5502,13 @@
           "status": "missing"
         },
         "linkedin": {
-          "status": "missing"
+          "status": "present"
         },
         "site-en": {
           "status": "present"
         },
         "site-es": {
-          "status": "missing"
+          "status": "present"
         },
         "substack-en": {
           "status": "missing"
