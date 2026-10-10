@@ -122,8 +122,8 @@ github.com/aymanbagabas/go-udiff v0.3.1 h1:LV+qyBQ2pqe0u42ZsUEtPiCaUoqgA9gYRDs3v
 github.com/aymanbagabas/go-udiff v0.3.1/go.mod h1:G0fsKmG+P6ylD0r6N/KgQD/nWzgfnl8ZBcNLgcbrw8E=
 github.com/behaviorengineering/operatorconfig v0.1.1 h1:VYCyg9/sMiIjmcjcQzaU2xDQ1NBzixwb2JkaJOlUmb8=
 github.com/behaviorengineering/operatorconfig v0.1.1/go.mod h1:YK48fp+pItReAvi+CubwdtVMFdVM9DivhIuo0fVb1/Y=
-github.com/behaviorengineering/strop v0.5.13 h1:S7pEvkIlu2YEbaKE9nLlV3ls2OxBXZoIY9tirbo60g0=
-github.com/behaviorengineering/strop v0.5.13/go.mod h1:9q5ityg3GeKtip5HMoq6G4h9ar5U2tID13UAXBM2Guw=
+github.com/behaviorengineering/strop v0.5.14 h1:x3ULUvHPhNUmtJaKaHfyLuWw7ozOf9k4YlW9m0VJlfs=
+github.com/behaviorengineering/strop v0.5.14/go.mod h1:EUAB1xJo/4KzPHZt+LwmXDPBXliGefVFRRtp7D7GsPE=
 github.com/benbjohnson/clock v1.3.0 h1:ip6w0uFQkncKQ979AypyG0ER7mqUSBdKLOgAle/AT8A=
 github.com/benbjohnson/clock v1.3.0/go.mod h1:J11/hYXuz8f4ySSvYwY0FKfm+ezbsZBKZxNJlLklBHA=
 github.com/blang/semver v3.5.1+incompatible h1:cQNTCjp13qL8KC3Nbxr/y2Bqb63oX6wdnnjpJbkM4JQ=
