@@ -13,6 +13,8 @@ import (
 	"path/filepath"
 	"strings"
 	"time"
+
+	"github.com/xynova/behaviour-engineering/internal/outbound"
 )
 
 // DefaultLinkedInVersion is the Linkedin-Version header value (YYYYMM).
@@ -39,8 +41,9 @@ func NewClient(timeout time.Duration, accessToken, linkedinVer string) *Client {
 	if ver == "" {
 		ver = DefaultLinkedInVersion
 	}
+	_ = timeout // per-hop bounds come from caller context deadlines (outbound.Do).
 	return &Client{
-		HTTP:        &http.Client{Timeout: timeout},
+		HTTP:        &http.Client{},
 		AccessToken: strings.TrimSpace(accessToken),
 		LinkedinVer: ver,
 		RestliProto: "2.0.0",
@@ -58,9 +61,21 @@ func (c *Client) addHeaders(req *http.Request) {
 	}
 }
 
-func (c *Client) do(req *http.Request) (*http.Response, []byte, error) {
-	c.addHeaders(req)
-	resp, err := c.HTTP.Do(req)
+func (c *Client) do(ctx context.Context, class outbound.RetryClass, newReq func() (*http.Request, error)) (*http.Response, []byte, error) {
+	var method string
+	resp, err := outbound.Do(ctx, outbound.Config{
+		HTTP:  c.HTTP,
+		Name:  "linkedin-rest",
+		Class: class,
+	}, func() (*http.Request, error) {
+		req, err := newReq()
+		if err != nil {
+			return nil, err
+		}
+		method = req.Method
+		c.addHeaders(req)
+		return req, nil
+	})
 	if err != nil {
 		return nil, nil, err
 	}
@@ -74,10 +89,10 @@ func (c *Client) do(req *http.Request) (*http.Response, []byte, error) {
 		if len(preview) > 600 {
 			preview = preview[:600] + "..."
 		}
-		c.RequestLogger(req.Method, req.URL.String(), resp.StatusCode, preview)
+		c.RequestLogger(method, resp.Request.URL.String(), resp.StatusCode, preview)
 	}
 	if resp.StatusCode < 200 || resp.StatusCode > 299 {
-		return nil, nil, errWithLinkedInAPIHints(fmt.Errorf("linkedin %s %s: status %d body %s", req.Method, req.URL.String(), resp.StatusCode, strings.TrimSpace(string(body))))
+		return nil, nil, errWithLinkedInAPIHints(fmt.Errorf("linkedin %s %s: status %d body %s", method, resp.Request.URL.String(), resp.StatusCode, strings.TrimSpace(string(body))))
 	}
 	return resp, body, nil
 }
@@ -150,12 +165,14 @@ func (c *Client) FindRecentPostsByAuthor(ctx context.Context, authorURN string, 
 	q.Set("sortBy", "LAST_MODIFIED")
 	u.RawQuery = q.Encode()
 
-	req, err := http.NewRequestWithContext(ctx, http.MethodGet, u.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-	req.Header.Set("X-RestLi-Method", "FINDER")
-	_, body, err := c.do(req)
+	_, body, err := c.do(ctx, outbound.ClassIdempotent, func() (*http.Request, error) {
+		req, err := http.NewRequestWithContext(ctx, http.MethodGet, u.String(), nil)
+		if err != nil {
+			return nil, err
+		}
+		req.Header.Set("X-RestLi-Method", "FINDER")
+		return req, nil
+	})
 	if err != nil {
 		return nil, err
 	}
@@ -183,12 +200,14 @@ func (c *Client) InitializeImageUpload(ctx context.Context, ownerURN string) (up
 		},
 	}
 	b, _ := json.Marshal(payload)
-	req, err := http.NewRequestWithContext(ctx, http.MethodPost, u, bytes.NewReader(b))
-	if err != nil {
-		return "", "", err
-	}
-	req.Header.Set("Content-Type", "application/json")
-	_, body, err := c.do(req)
+	_, body, err := c.do(ctx, outbound.ClassWrite, func() (*http.Request, error) {
+		req, err := http.NewRequestWithContext(ctx, http.MethodPost, u, bytes.NewReader(b))
+		if err != nil {
+			return nil, err
+		}
+		req.Header.Set("Content-Type", "application/json")
+		return req, nil
+	})
 	if err != nil {
 		return "", "", err
 	}
@@ -227,12 +246,18 @@ func (c *Client) UploadToURL(ctx context.Context, uploadURL string, data []byte,
 	if contentType == "" {
 		contentType = "application/octet-stream"
 	}
-	req, err := http.NewRequestWithContext(ctx, http.MethodPut, uploadURL, bytes.NewReader(data))
-	if err != nil {
-		return err
-	}
-	req.Header.Set("Content-Type", contentType)
-	resp, err := c.HTTP.Do(req)
+	resp, err := outbound.Do(ctx, outbound.Config{
+		HTTP:  c.HTTP,
+		Name:  "linkedin-upload",
+		Class: outbound.ClassWrite,
+	}, func() (*http.Request, error) {
+		req, err := http.NewRequestWithContext(ctx, http.MethodPut, uploadURL, bytes.NewReader(data))
+		if err != nil {
+			return nil, err
+		}
+		req.Header.Set("Content-Type", contentType)
+		return req, nil
+	})
 	if err != nil {
 		return err
 	}
@@ -269,13 +294,13 @@ var osReadFile = func(path string) ([]byte, error) {
 // ---------------- Posts: create ----------------
 
 type createPostRequest struct {
-	Author                 string `json:"author"`
-	Commentary             string `json:"commentary"`
-	Visibility             string `json:"visibility"`
-	Distribution           any    `json:"distribution"`
-	Content                any    `json:"content,omitempty"`
-	LifecycleState         string `json:"lifecycleState"`
-	IsReshareDisabledByAuthor bool `json:"isReshareDisabledByAuthor"`
+	Author                    string `json:"author"`
+	Commentary                string `json:"commentary"`
+	Visibility                string `json:"visibility"`
+	Distribution              any    `json:"distribution"`
+	Content                   any    `json:"content,omitempty"`
+	LifecycleState            string `json:"lifecycleState"`
+	IsReshareDisabledByAuthor bool   `json:"isReshareDisabledByAuthor"`
 }
 
 // UploadImageBytes uploads image bytes via initializeUpload + PUT, returning the image URN.
@@ -305,8 +330,8 @@ func (c *Client) CreatePost(ctx context.Context, authorURN, commentary string, o
 		Commentary: commentary,
 		Visibility: "PUBLIC",
 		Distribution: map[string]any{
-			"feedDistribution":              "MAIN_FEED",
-			"targetEntities":                []any{},
+			"feedDistribution":               "MAIN_FEED",
+			"targetEntities":                 []any{},
 			"thirdPartyDistributionChannels": []any{},
 		},
 		LifecycleState:            "PUBLISHED",
@@ -332,12 +357,14 @@ func (c *Client) CreatePost(ctx context.Context, authorURN, commentary string, o
 		}
 	}
 	b, _ := json.Marshal(reqBody)
-	req, err := http.NewRequestWithContext(ctx, http.MethodPost, u, bytes.NewReader(b))
-	if err != nil {
-		return "", err
-	}
-	req.Header.Set("Content-Type", "application/json")
-	resp, _, err := c.do(req)
+	resp, _, err := c.do(ctx, outbound.ClassWrite, func() (*http.Request, error) {
+		req, err := http.NewRequestWithContext(ctx, http.MethodPost, u, bytes.NewReader(b))
+		if err != nil {
+			return nil, err
+		}
+		req.Header.Set("Content-Type", "application/json")
+		return req, nil
+	})
 	if err != nil {
 		return "", err
 	}
@@ -360,11 +387,9 @@ func (c *Client) GetPost(ctx context.Context, postURN string) (PostElement, erro
 		return PostElement{}, fmt.Errorf("postURN is empty")
 	}
 	u := c.APIBase + "/rest/posts/" + encodeRestLiResourceKey(postURN)
-	req, err := http.NewRequestWithContext(ctx, http.MethodGet, u, nil)
-	if err != nil {
-		return PostElement{}, err
-	}
-	_, body, err := c.do(req)
+	_, body, err := c.do(ctx, outbound.ClassIdempotent, func() (*http.Request, error) {
+		return http.NewRequestWithContext(ctx, http.MethodGet, u, nil)
+	})
 	if err != nil {
 		return PostElement{}, err
 	}
@@ -374,4 +399,3 @@ func (c *Client) GetPost(ctx context.Context, postURN string) (PostElement, erro
 	}
 	return el, nil
 }
-

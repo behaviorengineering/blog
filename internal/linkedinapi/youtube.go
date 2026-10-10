@@ -7,6 +7,8 @@ import (
 	"net/http"
 	"regexp"
 	"strings"
+
+	"github.com/xynova/behaviour-engineering/internal/outbound"
 )
 
 var youtubeIDRe = regexp.MustCompile(`(?:youtube\.com/watch\?v=|youtu\.be/)([A-Za-z0-9_-]{11})`)
@@ -44,14 +46,22 @@ func FetchYouTubeThumbnail(ctx context.Context, httpClient *http.Client, videoID
 	if u == "" {
 		return nil, fmt.Errorf("youtube: empty video id")
 	}
+	if ctx == nil {
+		return nil, outbound.ErrNilContext
+	}
+	if _, ok := ctx.Deadline(); !ok {
+		return nil, outbound.ErrMissingDeadline
+	}
 	if httpClient == nil {
-		httpClient = http.DefaultClient
+		return nil, outbound.ErrNilHTTPClient
 	}
-	req, err := http.NewRequestWithContext(ctx, http.MethodGet, u, nil)
-	if err != nil {
-		return nil, err
-	}
-	resp, err := httpClient.Do(req)
+	resp, err := outbound.Do(ctx, outbound.Config{
+		HTTP:  httpClient,
+		Name:  "youtube-img",
+		Class: outbound.ClassIdempotent,
+	}, func() (*http.Request, error) {
+		return http.NewRequestWithContext(ctx, http.MethodGet, u, nil)
+	})
 	if err != nil {
 		return nil, fmt.Errorf("youtube thumbnail GET: %w", err)
 	}

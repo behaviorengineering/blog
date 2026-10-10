@@ -1,6 +1,7 @@
 package facebookautopost
 
 import (
+	"context"
 	"errors"
 	"net/http"
 	"net/http/httptest"
@@ -10,7 +11,15 @@ import (
 	"time"
 )
 
-func noopRetrySleep(time.Duration) {}
+func testCtx(t *testing.T) context.Context {
+	ctx, cancel := context.WithTimeout(context.Background(), 30*time.Second)
+	t.Cleanup(cancel)
+	return ctx
+}
+
+func zeroOperationDelay() func(int) time.Duration {
+	return func(int) time.Duration { return 0 }
+}
 
 func TestIsTransientGraphError(t *testing.T) {
 	tests := []struct {
@@ -72,12 +81,13 @@ func TestDoWithRetryRecoversFromTransientError(t *testing.T) {
 	t.Cleanup(srv.Close)
 
 	c := &Client{
-		HTTP:       srv.Client(),
-		BaseURL:    strings.TrimSuffix(srv.URL, "/"),
-		RetrySleep: noopRetrySleep,
+		HTTP:           srv.Client(),
+		BaseURL:        strings.TrimSuffix(srv.URL, "/"),
+		OperationDelay: zeroOperationDelay(),
 	}
-	err := c.DoWithRetry(3, func() error {
-		return c.PostLink("page1", "tok", "hello", "https://example.com/p/")
+	ctx := testCtx(t)
+	err := c.DoWithRetry(ctx, 3, func() error {
+		return c.PostLink(ctx, "page1", "tok", "hello", "https://example.com/p/")
 	})
 	if err != nil {
 		t.Fatalf("DoWithRetry: %v", err)
@@ -97,12 +107,13 @@ func TestDoWithRetryDoesNotRetryPermanentError(t *testing.T) {
 	t.Cleanup(srv.Close)
 
 	c := &Client{
-		HTTP:       srv.Client(),
-		BaseURL:    strings.TrimSuffix(srv.URL, "/"),
-		RetrySleep: noopRetrySleep,
+		HTTP:           srv.Client(),
+		BaseURL:        strings.TrimSuffix(srv.URL, "/"),
+		OperationDelay: zeroOperationDelay(),
 	}
-	err := c.DoWithRetry(3, func() error {
-		return c.PostLink("page1", "tok", "hello", "https://example.com/p/")
+	ctx := testCtx(t)
+	err := c.DoWithRetry(ctx, 3, func() error {
+		return c.PostLink(ctx, "page1", "tok", "hello", "https://example.com/p/")
 	})
 	if err == nil {
 		t.Fatal("expected error")
@@ -134,11 +145,12 @@ func TestPublishWithRetrySkipsSecondPostWhenURLOnFeed(t *testing.T) {
 	t.Cleanup(srv.Close)
 
 	c := &Client{
-		HTTP:       srv.Client(),
-		BaseURL:    strings.TrimSuffix(srv.URL, "/"),
-		RetrySleep: noopRetrySleep,
+		HTTP:           srv.Client(),
+		BaseURL:        strings.TrimSuffix(srv.URL, "/"),
+		OperationDelay: zeroOperationDelay(),
 	}
-	err := c.PublishWithRetry(PublishRequest{
+	ctx := testCtx(t)
+	err := c.PublishWithRetry(ctx, PublishRequest{
 		PageID:               "page1",
 		AccessToken:          "tok",
 		PostURL:              siteURL,
@@ -146,7 +158,7 @@ func TestPublishWithRetrySkipsSecondPostWhenURLOnFeed(t *testing.T) {
 		MaxAttempts:          3,
 		CheckFeedBeforeRetry: true,
 		Post: func() error {
-			return c.PostLink("page1", "tok", "hello", siteURL)
+			return c.PostLink(ctx, "page1", "tok", "hello", siteURL)
 		},
 	})
 	if err != nil {
@@ -176,11 +188,12 @@ func TestRecentlyPostedURLWithRetryRecoversFromTransientFeedError(t *testing.T) 
 	t.Cleanup(srv.Close)
 
 	c := &Client{
-		HTTP:       srv.Client(),
-		BaseURL:    strings.TrimSuffix(srv.URL, "/"),
-		RetrySleep: noopRetrySleep,
+		HTTP:           srv.Client(),
+		BaseURL:        strings.TrimSuffix(srv.URL, "/"),
+		OperationDelay: zeroOperationDelay(),
 	}
-	already, err := c.RecentlyPostedURLWithRetry("page1", "tok", siteURL, 10, 3)
+	ctx := testCtx(t)
+	already, err := c.RecentlyPostedURLWithRetry(ctx, "page1", "tok", siteURL, 10, 3)
 	if err != nil {
 		t.Fatalf("RecentlyPostedURLWithRetry: %v", err)
 	}

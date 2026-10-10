@@ -15,6 +15,7 @@ require (
 	github.com/charmbracelet/huh v1.0.0
 	github.com/chromedp/cdproto v0.0.0-20250724212937-08a3db8b4327
 	github.com/chromedp/chromedp v0.14.2
+	github.com/failsafe-go/failsafe-go v0.9.8
 	github.com/mattn/go-isatty v0.0.23
 	github.com/stretchr/testify v1.12.1
 	github.com/yuin/goldmark v1.7.13
@@ -72,6 +73,7 @@ require (
 	github.com/aws/smithy-go v1.28.1 // indirect
 	github.com/aymanbagabas/go-osc52/v2 v2.0.1 // indirect
 	github.com/benbjohnson/clock v1.3.0 // indirect
+	github.com/bits-and-blooms/bitset v1.24.4 // indirect
 	github.com/blang/semver v3.5.1+incompatible // indirect
 	github.com/bokwoon95/wgo v0.6.4 // indirect
 	github.com/breml/rootcerts v0.3.3 // indirect
