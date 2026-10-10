@@ -16,6 +16,7 @@ import (
 
 	"github.com/xynova/behaviour-engineering/internal/cliout"
 	"github.com/xynova/behaviour-engineering/internal/linkedinapi"
+	"github.com/xynova/behaviour-engineering/internal/outbound"
 	"github.com/xynova/behaviour-engineering/internal/socialautopost"
 	"github.com/xynova/behaviour-engineering/internal/socialbundle"
 	"github.com/xynova/behaviour-engineering/internal/substackpublishstate"
@@ -75,7 +76,6 @@ func main() {
 	}
 
 	var (
-		ctx    context.Context
 		client *linkedinapi.Client
 		posts  []linkedinapi.PostElement
 	)
@@ -86,15 +86,16 @@ func main() {
 			liVer = strings.TrimSpace(os.Getenv("LINKEDIN_VERSION"))
 		}
 
-		ctx = context.Background()
 		client = linkedinapi.NewClient(*timeout, *token, liVer)
 		client.RequestLogger = func(method, url string, status int, preview string) {
 			log.Printf("linkedin: %s %s -> %d", method, url, status)
 		}
 
 		if !skipRecentPostScan {
+			idempCtx, idempCancel := context.WithTimeout(context.Background(), outbound.JobBudget(*timeout, 3, time.Second))
+			defer idempCancel()
 			var err error
-			posts, err = client.FindRecentPostsByAuthor(ctx, *authorURN, *recentCount)
+			posts, err = client.FindRecentPostsByAuthor(idempCtx, *authorURN, *recentCount)
 			if err != nil {
 				log.Fatalf("find posts: %v", err)
 			}
@@ -194,19 +195,22 @@ func main() {
 			log.Fatalf("linkedin.txt is empty: %s", b.LinkedInPath)
 		}
 
-		opts, err := linkedInPostOptions(ctx, client, *authorURN, b)
+		bundleCtx, bundleCancel := context.WithTimeout(context.Background(), outbound.JobBudget(*timeout, 3, time.Second))
+		defer bundleCancel()
+
+		opts, err := linkedInPostOptions(bundleCtx, client, *authorURN, b)
 		if err != nil {
 			log.Fatalf("prepare post: %v", err)
 		}
 
-		postID, err := client.CreatePost(ctx, *authorURN, plan.Encoded, opts)
+		postID, err := client.CreatePost(bundleCtx, *authorURN, plan.Encoded, opts)
 		if err != nil {
 			log.Fatalf("create post: %v", err)
 		}
 		cliout.PrintSocialPosted(os.Stdout, "LinkedIn", postID)
 
 		if verifyCommentary {
-			stored, err := client.GetPost(ctx, postID)
+			stored, err := client.GetPost(bundleCtx, postID)
 			if err != nil {
 				if linkedinapi.IsAccessDenied(err) {
 					log.Printf("verify commentary: skipped (no read scope; POST succeeded as %s)", postID)

@@ -2,6 +2,7 @@
 package main
 
 import (
+	"context"
 	"errors"
 	"flag"
 	"log"
@@ -12,6 +13,7 @@ import (
 
 	"github.com/xynova/behaviour-engineering/internal/cliout"
 	"github.com/xynova/behaviour-engineering/internal/facebookautopost"
+	"github.com/xynova/behaviour-engineering/internal/outbound"
 	"github.com/xynova/behaviour-engineering/internal/socialautopost"
 	"github.com/xynova/behaviour-engineering/internal/socialbundle"
 	"github.com/xynova/behaviour-engineering/internal/substackpublishstate"
@@ -85,7 +87,9 @@ func main() {
 
 		idempotencySkipped := false
 		if !*dryRun && !*disableIdempotency {
-			already, err := client.RecentlyPostedURLWithRetry(*pageID, *token, b.PostURL, facebookautopost.DefaultFeedScanLimit, *httpRetries)
+			idempCtx, idempCancel := context.WithTimeout(context.Background(), outbound.JobBudget(*timeout, *httpRetries, 20*time.Second))
+			defer idempCancel()
+			already, err := client.RecentlyPostedURLWithRetry(idempCtx, *pageID, *token, b.PostURL, facebookautopost.DefaultFeedScanLimit, *httpRetries)
 			if err != nil {
 				log.Printf("facebook-autopost: idempotency check failed content/%s: %v", b.RelUnderContent, err)
 				bundleFailures++
@@ -144,6 +148,9 @@ func main() {
 		log.Printf("\n\nfacebook-autopost: ------------------------------------------------------------")
 		log.Printf("facebook-autopost: using %s", socialbundle.FacebookPostMode)
 
+		pubCtx, pubCancel := context.WithTimeout(context.Background(), outbound.JobBudget(*timeout, *httpRetries, 20*time.Second))
+		defer pubCancel()
+
 		publishReq := facebookautopost.PublishRequest{
 			PageID:               *pageID,
 			AccessToken:          *token,
@@ -155,15 +162,15 @@ func main() {
 		if withImage {
 			log.Printf("facebook-autopost: posting Page photo + caption (image: %s)", b.FeaturedImagePath)
 			publishReq.Post = func() error {
-				return client.PostPhotoFromFile(*pageID, *token, b.FeaturedImagePath, b.Message)
+				return client.PostPhotoFromFile(pubCtx, *pageID, *token, b.FeaturedImagePath, b.Message)
 			}
 		} else {
 			log.Printf("facebook-autopost: posting link preview (no featured image in bundle)")
 			publishReq.Post = func() error {
-				return client.PostLink(*pageID, *token, b.Message, b.PostURL)
+				return client.PostLink(pubCtx, *pageID, *token, b.Message, b.PostURL)
 			}
 		}
-		if postErr := client.PublishWithRetry(publishReq); postErr != nil {
+		if postErr := client.PublishWithRetry(pubCtx, publishReq); postErr != nil {
 			log.Printf("facebook-autopost: failed content/%s: %v", b.RelUnderContent, postErr)
 			bundleFailures++
 			continue
