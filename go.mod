@@ -10,7 +10,7 @@ tool (
 require (
 	github.com/BurntSushi/toml v1.5.0
 	github.com/behaviorengineering/operatorconfig v0.1.1
-	github.com/behaviorengineering/strop v0.5.13
+	github.com/behaviorengineering/strop v0.5.14
 	github.com/charmbracelet/bubbletea v1.3.6
 	github.com/charmbracelet/huh v1.0.0
 	github.com/chromedp/cdproto v0.0.0-20250724212937-08a3db8b4327
