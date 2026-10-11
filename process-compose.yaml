@@ -1,5 +1,5 @@
 # Hugo drafts+future, content-pipelines MCP, carousel-save.
-# Start: make serve
+# Start: go tool task serve
 # Requires process-compose, hugo, and go on PATH.
 # User-level MCP config supplies PIPELINES_BIN / PIPELINES_DIR and credential refs.
 # Go processes use `go tool wgo` so they rebuild when .go files change (MCP via scripts/serve-content-pipelines-mcp.sh).

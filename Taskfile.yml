@@ -100,11 +100,12 @@ tasks:
 
   serve:
     desc: process-compose local stack (Hugo, MCP, carousel-save)
+    interactive: true
     cmds:
-      - chmod +x scripts/serve-process.sh scripts/serve-cleanup.sh scripts/link-providers.sh scripts/serve-content-pipelines-mcp.sh
+      - chmod +x scripts/serve-up.sh scripts/serve-process.sh scripts/serve-cleanup.sh scripts/link-providers.sh scripts/serve-content-pipelines-mcp.sh
       - ./scripts/link-providers.sh
       - ./scripts/serve-cleanup.sh --preflight
-      - trap './scripts/serve-cleanup.sh' EXIT INT TERM; process-compose up -f process-compose.yaml
+      - ./scripts/serve-up.sh
 
   serve-down:
     desc: Stop process-compose and free serve ports
