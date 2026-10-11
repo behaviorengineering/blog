@@ -12,8 +12,8 @@ BASE_URL="http://127.0.0.1:${PORT}/"
 # Remove stale HTML so a prior `hugo server` or partial build cannot leave dev-only references in public/.
 rm -rf public
 
-# Keep data/tag-register.txt aligned with content (same as make build prerequisite).
-make tag-register
+# Keep data/tag-register.txt aligned with content (same as hugo task prerequisite).
+go run ./cmd/tag-register -content content -deprecations data/tag-deprecations.toml -out data/tag-register.txt
 
 # Absolute links must target this server; otherwise muffet would hit production baseURL from hugo.toml.
 hugo --minify --gc --baseURL "$BASE_URL"

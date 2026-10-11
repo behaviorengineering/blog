@@ -14,9 +14,9 @@ The system is designed to be stateless in CI:
 
 **Local interactive mode:** when stdin is a TTY and the process is not in CI (`CI` / `GITHUB_ACTIONS`), `facebook-autopost` and `linkedin-autopost` **prompt once per bundle**: **publish** (API + `social-published`), **tag-as-published** (`social-published` only), or **quit**. **`DRY_RUN=1`** (make default) shows the menu but writes **no** files and calls **no** API; **publish** only prints the preview payload. Use this when several posts share a date and some were already published manually. CI and non-TTY runs post every bundle that passes idempotency without prompting. Flags: **`-ask`** / **`SOCIAL_AUTOPOST_ASK=1`** force prompts; **`-no-ask`** / **`SOCIAL_AUTOPOST_NO_ASK=1`** disable them.
 
-**`social-published` markers:** unless **`-dry-run`** or **`-no-mark-published`** / **`SOCIAL_AUTOPOST_NO_MARK=1`**, the tool updates `social-published` in the page bundle: target **`linkedin`** or **`facebook`** plus a UTC timestamp (same format as Substack: `make sb-mark-published POST=section/slug PUBLISH_TARGET=linkedin`). Written when you choose **tag-as-published**, when **API idempotency** skips (URL already on the network), and after a **successful publish**. Bundles that already list the channel in `social-published` are skipped on later runs without prompting. Commit the file when you want the repo to remember state.
+**`social-published` markers:** unless **`-dry-run`** or **`-no-mark-published`** / **`SOCIAL_AUTOPOST_NO_MARK=1`**, the tool updates `social-published` in the page bundle: target **`linkedin`** or **`facebook`** plus a UTC timestamp (same format as Substack: `go tool task sb-mark-published POST=section/slug PUBLISH_TARGET=linkedin`). Written when you choose **tag-as-published**, when **API idempotency** skips (URL already on the network), and after a **successful publish**. Bundles that already list the channel in `social-published` are skipped on later runs without prompting. Commit the file when you want the repo to remember state.
 
-**Closed loop (local, same file as Substack):** **tag-as-published** or a successful **publish** appends **`linkedin`** or **`facebook`** in that bundle’s `social-published`; the next autopost run skips bundles that already have that line. To list gaps manually: `make sb-list-unpublished PUBLISH_TARGET=linkedin` (or `facebook`). One bundle can hold several targets (`substack-en`, `linkedin`, `facebook`), each with its own timestamp.
+**Closed loop (local, same file as Substack):** **tag-as-published** or a successful **publish** appends **`linkedin`** or **`facebook`** in that bundle’s `social-published`; the next autopost run skips bundles that already have that line. To list gaps manually: `go tool task sb-list-unpublished PUBLISH_TARGET=linkedin` (or `facebook`). One bundle can hold several targets (`substack-en`, `linkedin`, `facebook`), each with its own timestamp.
 
 ## GitHub Actions workflows
 
@@ -37,7 +37,7 @@ LinkedIn:
 - `LINKEDIN_AUTHOR_URN` (example: `urn:li:person:...` or `urn:li:organization:...`)
 - `LINKEDIN_ACCESS_TOKEN` (OAuth access token)
 
-Local **`make linkedin-autopost`** defaults **`LINKEDIN_DISABLE_IDEMPOTENCY=1`** (no recent-post API scan) and **`LINKEDIN_NO_VERIFY_COMMENTARY=1`** (no GET-after-post; needs the same read scopes). Set either to **`0`** only if your token has **`r_member_social`** or **`r_organization_social`**. A **403** on verify after **201** publish means the post went live; verify was skipped.
+Local **`go tool task linkedin-autopost`** defaults **`LINKEDIN_DISABLE_IDEMPOTENCY=1`** (no recent-post API scan) and **`LINKEDIN_NO_VERIFY_COMMENTARY=1`** (no GET-after-post; needs the same read scopes). Set either to **`0`** only if your token has **`r_member_social`** or **`r_organization_social`**. A **403** on verify after **201** publish means the post went live; verify was skipped.
 
 ### GitHub Environment for the workflow
 
@@ -161,7 +161,7 @@ Notes:
 
 - Resolves every matching bundle under `content/<section>/<slug>/` and `content/<section>/<hub>/<slug>/` whose front matter **`date`** matches `YYYY-MM-DD` (sorted by path). Each bundle must have **`linkedin.txt`** with a **`behaviorengineering.ai`** URL.
 - **Empty day:** if no bundle matches the date, both tools **warn and exit 0** (scheduled CI stays green on quiet calendar days).
-- If more than one bundle shares that date, it posts **each** in order. Use **`-post section/slug`** (or **`SOCIAL_POST=...`** with `make facebook-autopost`) to target a single bundle.
+- If more than one bundle shares that date, it posts **each** in order. Use **`-post section/slug`** (or **`SOCIAL_POST=...`** with `go tool task facebook-autopost`) to target a single bundle.
 - It extracts the canonical site URL from `linkedin.txt` for idempotency and for the Facebook link post.
 - **Image:** when **`featuredImage`** resolves to a file in the bundle, Facebook autopost uploads that file as a **published Page photo** and sets **`linkedin.txt`** as the photo **caption** (so the post card shows your art). If Graph rejects a format (rare for **`.webp`**), fix the raster or temporarily clear **`featuredImage`** to fall back to a link-only post.
 - **Caption limits:** link-only / text-only posts must be at most **3000 characters** (`facebook-autopost` fails before calling the API). Image captions are not hard-capped in bytes (LinkedIn UI may accept more than the API stored in some cases).
@@ -176,7 +176,7 @@ go run ./cmd/linkedin-autopost -date "YYYY-MM-DD" -dry-run
 
 Notes:
 
-- Same bundle selection as **facebook-autopost** (see `internal/contentbundle`). Optional **`-post`** / env **`SOCIAL_POST`** (same as **`make linkedin-autopost`** with **`SOCIAL_POST=section/slug`**).
+- Same bundle selection as **facebook-autopost** (see `internal/contentbundle`). Optional **`-post`** / env **`SOCIAL_POST`** (same as **`go tool task linkedin-autopost`** with **`SOCIAL_POST=section/slug`**).
 - If more than one bundle shares that date, the command posts **each** in order unless **`-post`** narrows to one bundle.
 - **LinkedIn guardrails (autopost):**
   - **Video bundles (`youtube_id`, no local `featuredImage`):** `linkedin-autopost` builds a **link card** via `content.article`: downloads `https://img.youtube.com/vi/{id}/hqdefault.jpg`, uploads it with the Images API, sets `source` to the YouTube watch URL, and uses `title` / `subtitle` (or first `description` line) from `index.md`. No local thumb file required. Local `featuredImage` still wins (image + caption post).
@@ -188,7 +188,7 @@ Notes:
 
 ### Post text looks truncated (for example `TS5: Sm(` or missing `🧷` / `🔗` links)
 
-**`linkedin-autopost`** and **`facebook-autopost`** read **`linkedin.txt`** with Go from disk. They do **not** pipe the body through **`sh`**. Copy such as **`TS5: Sm(art)`** is safe for **`make linkedin-autopost`** in this repository.
+**`linkedin-autopost`** and **`facebook-autopost`** read **`linkedin.txt`** with Go from disk. They do **not** pipe the body through **`sh`**. Copy such as **`TS5: Sm(art)`** is safe for **`go tool task linkedin-autopost`** in this repository.
 
 If links are missing on LinkedIn but paste in the UI works:
 
@@ -200,4 +200,4 @@ If you see a cut right after **`Sm(`** when testing outside this command:
 
 1. **GNU Make:** In a **`Makefile`**, the substring **`$(art)`** expands the Make variable **`art`**. Never inline post bodies into Makefiles.
 2. **Shell:** Unquoted **`echo ... Sm(art)`** treats **`(`** as a subshell. Use **`printf '%s\n' '...'`** or a here-doc.
-3. **Sanity check:** **`DRY_RUN=1 SOCIAL_POST=section/slug make linkedin-autopost DATE=YYYY-MM-DD`** prints the exact API payload (little text encoded when enabled).
+3. **Sanity check:** **`DRY_RUN=1 SOCIAL_POST=section/slug go tool task linkedin-autopost DATE=YYYY-MM-DD`** prints the exact API payload (little text encoded when enabled).

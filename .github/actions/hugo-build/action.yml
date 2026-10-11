@@ -32,6 +32,7 @@ runs:
       shell: bash
       env:
         BASE_URL: ${{ inputs.base-url }}
+        HUGO_PREVIEW: ${{ env.HUGO_PREVIEW }}
       run: |
         set -euo pipefail
-        make build
+        go tool task hugo

@@ -68,4 +68,4 @@ Use the **main job of the piece**, not hashtags or “where you were browsing.�
 - If the page is a **full stanceful essay** without Claim/Grounding semantics → same sections (by main job), **`type: opinion`** (pipeline **`opinion_essay`**).
 - If the page is **strip / saying / shirt line** with the cognitive-memetics hubs → **`cognitive-memetics/`**, **`panel`** or **`sayings`**.
 - If the page is **`type: video`** → **`social-protocols/`**, **`mind-infrastructure/`**, **`human-condition/`**, or **`x-minds/`** by main job; set **`categories`** for hubs, not for folder choice alone.
-- After **any** new bundle, folder rename/move, or **`date`** / **`draft`** change → **`make calendar`** (see **`.cursor/rules/site-content-markdown-writing.mdc`** → **Publish calendar**).
+- After **any** new bundle, folder rename/move, or **`date`** / **`draft`** change → **`go tool task calendar`** (see **`.cursor/rules/site-content-markdown-writing.mdc`** → **Publish calendar**).

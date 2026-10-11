@@ -41,7 +41,7 @@ Substack’s **post editor URL varies** and the writer dashboard (`…/publish/h
 
 ### Local config (optional)
 
-Discovery order: **`SUBSTACK_CONFIG`**, then **`~/.config/behaviour-engineering/substack.json`** (`make sb-config-init`), then repo **`substack.json`** (often committed; avoid secrets), or pass **`-config`**. Optional root **`.envrc`** (direnv) exports **`SUBSTACK_*`** overrides; see `docs/substack-html/README.md`. If the resolved file is missing, the loader tries **`substack.config`**, then **`.substack/config.json`**, then **`.substack/substack.json`** for migration.
+Discovery order: **`SUBSTACK_CONFIG`**, then **`~/.config/behaviour-engineering/substack.json`** (`go tool task sb-config-init`), then repo **`substack.json`** (often committed; avoid secrets), or pass **`-config`**. Optional root **`.envrc`** (direnv) exports **`SUBSTACK_*`** overrides; see `docs/substack-html/README.md`. If the resolved file is missing, the loader tries **`substack.config`**, then **`.substack/config.json`**, then **`.substack/substack.json`** for migration.
 
 Prefer the grouped layout in `docs/substack-html/substack-config.example.json` (sections `substack_browser`, `markdown_export`, …). Flat root keys and legacy keys (`pub`, …) still load; see `internal/substackbrowser/localconfig.go`.
 
@@ -49,7 +49,7 @@ Prefer the grouped layout in `docs/substack-html/substack-config.example.json` (
 
 **`SUBSTACK_*` env vars:** after JSON loads, optional environment variables override the same fields (see the table in `docs/substack-html/README.md`). `cmd/substack-draft` flags still win over config where the command sets them after load.
 
-`cmd/substack-draft` reads it automatically unless you override with flags. From the repo Makefile: **`make substack-draft`** or **`make sb-en`** (English, root `substack.json` only) and **`make sb-es`** (Spanish overlay merge + default `index.es.md`); see `docs/substack-html/README.md`.
+`cmd/substack-draft` reads it automatically unless you override with flags. From the repo Makefile: **`go tool task substack-draft`** or **`go tool task sb-en`** (English, root `substack.json` only) and **`go tool task sb-es`** (Spanish overlay merge + default `index.es.md`); see `docs/substack-html/README.md`.
 
 When `substack_editor.insert_category_browse_button_after_paste` is true and `category_browse_button_url` is empty, the draft command fills the button URL from the post’s first Hugo `categories` value and `site.canonical_base_url` (same as `…/categories/<slug>/` under that base).
 

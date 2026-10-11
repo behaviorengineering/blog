@@ -11,6 +11,11 @@ import (
 	"github.com/xynova/behaviour-engineering/internal/substackhtml"
 )
 
+func writeTestSubstackMD(bundleDir string) error {
+	body := "## Newsletter\n\nSidecar body for Substack paste.\n"
+	return os.WriteFile(filepath.Join(bundleDir, "substack.md"), []byte(body), 0o644)
+}
+
 func TestBundleDirFromMarkdownPath(t *testing.T) {
 	dir := t.TempDir()
 	bundle := filepath.Join(dir, "human-condition", "2026-01-01-test")
@@ -68,6 +73,9 @@ func TestBuildHTMLPrefersTypeLineWhenDescriptionAndCategoriesPresent(t *testing.
 	if err := os.WriteFile(md, []byte(fm), 0o644); err != nil {
 		t.Fatal(err)
 	}
+	if err := writeTestSubstackMD(dir); err != nil {
+		t.Fatal(err)
+	}
 	lc := substackbrowser.LocalConfig{
 		SubtitleIncludeCategories: true,
 		SubtitleCategoriesMax:     3,
@@ -92,6 +100,9 @@ func TestBuildHTMLUsesTypeLineWhenDescriptionEmpty(t *testing.T) {
 	md := filepath.Join(dir, "index.md")
 	fm := "---\ntitle: X\ncategories: [\"Mind-Infrastructure\"]\ntype: video\n---\n\nBody.\n"
 	if err := os.WriteFile(md, []byte(fm), 0o644); err != nil {
+		t.Fatal(err)
+	}
+	if err := writeTestSubstackMD(dir); err != nil {
 		t.Fatal(err)
 	}
 	lc := substackbrowser.LocalConfig{
@@ -247,6 +258,9 @@ func TestBuildHTMLIncludesCognitiveMemeticsProjectAbout(t *testing.T) {
 	if err := os.WriteFile(md, []byte(fm), 0o644); err != nil {
 		t.Fatal(err)
 	}
+	if err := writeTestSubstackMD(subdir); err != nil {
+		t.Fatal(err)
+	}
 	lc := substackbrowser.LocalConfig{
 		IncludeFrontMatterLead: false,
 	}
@@ -271,6 +285,9 @@ func TestBuildHTMLSkipsCognitiveMemeticsProjectAboutWhenDisabled(t *testing.T) {
 	md := filepath.Join(subdir, "index.md")
 	fm := "---\ntitle: Cow\ncategories: [\"Cognitive-Memetics\", \"Cube-Cows\"]\ntype: panel\n---\n\nBody.\n"
 	if err := os.WriteFile(md, []byte(fm), 0o644); err != nil {
+		t.Fatal(err)
+	}
+	if err := writeTestSubstackMD(subdir); err != nil {
 		t.Fatal(err)
 	}
 	off := false
