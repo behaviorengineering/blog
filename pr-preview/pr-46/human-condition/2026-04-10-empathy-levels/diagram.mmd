@@ -1,0 +1,32 @@
+flowchart TB
+    classDef pastelLavender fill:#e8d4ef,stroke:#b894c9,color:#1c1422,stroke-width:2px
+    classDef pastelSky fill:#cfe8f6,stroke:#7eb3d4,color:#1c1422,stroke-width:3px
+    classDef pastelMint fill:#d4f0e2,stroke:#7fbf9a,color:#1c1422,stroke-width:4px,margin:2em
+    classDef pastelNote fill:transparent,stroke:transparent,color:#ffffff,stroke-width:0px
+    %% Each row: main node | description (LR). Horizontal --- links are visible (styled below); vertical links stack rows.
+    subgraph r1[" "]
+        direction LR
+        A("Emotional empathy"):::pastelLavender
+        A1["Feel what others feel;<br/>body mirrors emotion"]:::pastelNote
+        A ---> A1
+    end
+    subgraph r2[" "]
+        direction LR
+        B("Cognitive empathy"):::pastelSky
+        B1["See what others see;<br/>track their perspective"]:::pastelNote
+        B ---> B1
+    end
+    subgraph r3[" "]
+        direction LR
+        C((Moral-cognitive empathy ✅)):::pastelMint
+        C1["Know guilt even when you win; judge from that guilt state."]:::pastelNote
+        C ---> C1
+    end
+    r1 --> r2
+    r2 --> r3
+    %% 0–2: horizontal node→note (explicit stroke so PNG export matches vertical grey, not theme #333).
+    linkStyle 0 stroke:#a8a4ad,stroke-width:2px,stroke-dasharray:2 3
+    linkStyle 1 stroke:#a8a4ad,stroke-width:2px,stroke-dasharray:2 3
+    linkStyle 2 stroke:#a8a4ad,stroke-width:2px,stroke-dasharray:2 3
+    linkStyle 3 stroke:#a8a4ad,stroke-width:4px
+    linkStyle 4 stroke:#a8a4ad,stroke-width:4px
