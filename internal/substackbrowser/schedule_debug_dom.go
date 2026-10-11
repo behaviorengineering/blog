@@ -157,7 +157,7 @@ func DefaultScheduleDebugSnapshotPath() string {
 }
 
 // WriteScheduleDebugSnapshot runs ScheduleDebugSnapshotJS in the browser and writes a JSON file
-// that includes scheduleFailureReason and the snapshot object. destPath directories are created as needed.
+// that includes scheduleFailureReason and the snapshot object. DestPath directories are created as needed.
 func WriteScheduleDebugSnapshot(ctx context.Context, destPath, scheduleFailureReason string) error {
 	var raw string
 	if err := chromedp.Run(ctx, chromedp.Evaluate(ScheduleDebugSnapshotJS(), &raw)); err != nil {
@@ -168,9 +168,9 @@ func WriteScheduleDebugSnapshot(ctx context.Context, destPath, scheduleFailureRe
 		return fmt.Errorf("substackbrowser: schedule debug DOM inner JSON: %w", err)
 	}
 	out := struct {
-		WrittenAt               string          `json:"writtenAt"`
-		ScheduleFailureReason   string          `json:"scheduleFailureReason"`
-		Snapshot                json.RawMessage `json:"snapshot"`
+		WrittenAt             string          `json:"writtenAt"`
+		ScheduleFailureReason string          `json:"scheduleFailureReason"`
+		Snapshot              json.RawMessage `json:"snapshot"`
 	}{
 		WrittenAt:             time.Now().UTC().Format(time.RFC3339),
 		ScheduleFailureReason: scheduleFailureReason,

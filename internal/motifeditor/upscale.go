@@ -20,9 +20,9 @@ const upscaleTimeout = 10 * time.Minute
 
 // UpscaleMode reports how UpscaleToWidth reached the target width.
 const (
-	UpscaleModeRealESRGAN = "realesrgan+ffmpeg"
+	UpscaleModeRealESRGAN  = "realesrgan+ffmpeg"
 	UpscaleModeWidthResize = "width-resize"
-	UpscaleModeCopy       = "copy"
+	UpscaleModeCopy        = "copy"
 )
 
 // BinaryAvailable reports whether a CLI binary can be executed.
@@ -57,7 +57,7 @@ func ImageSize(path string) (width, height int, err error) {
 
 // UpscaleToWidth uses Real-ESRGAN then ffmpeg resize to the exact target width.
 // When slideCount > 0, strips studio panorama gaps (600px slices + 5px separators) before processing.
-// keyColor (e.g. #013231): flatten transparency before Real-ESRGAN and restore via colorkey after resize.
+// KeyColor (e.g. #013231): flatten transparency before Real-ESRGAN and restore via colorkey after resize.
 func UpscaleToWidth(
 	ctx context.Context,
 	realesrganBin, model, ffmpegBin,

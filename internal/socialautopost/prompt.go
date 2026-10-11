@@ -42,7 +42,7 @@ type ItemPrompt struct {
 }
 
 // PromptEnabled reports whether to ask publish or skip per bundle.
-// forceAsk and forceNoAsk override auto-detection (-ask / -no-ask).
+// ForceAsk and forceNoAsk override auto-detection (-ask / -no-ask).
 func PromptEnabled(forceAsk, forceNoAsk bool) bool {
 	if forceNoAsk {
 		return false

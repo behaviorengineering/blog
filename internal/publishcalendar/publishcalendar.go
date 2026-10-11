@@ -50,9 +50,9 @@ type Entry struct {
 
 // Calendar is the root JSON document.
 type Calendar struct {
-	GeneratedAt string  `json:"generatedAt"`
+	GeneratedAt string   `json:"generatedAt"`
 	Channels    []string `json:"channels"`
-	Entries     []Entry `json:"entries"`
+	Entries     []Entry  `json:"entries"`
 }
 
 type frontMatterDoc struct {

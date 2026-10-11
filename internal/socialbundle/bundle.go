@@ -21,23 +21,23 @@ const (
 
 // Bundle is one content bundle ready for social posting.
 type Bundle struct {
-	RelUnderContent   string // path relative to content/, forward slashes
-	BundleDir         string // absolute directory
-	IndexPath         string
-	LinkedInPath      string
-	Message           string // trimmed linkedin.txt body
-	PostURL           string // canonical behaviorengineering.ai URL from Message
-	FeaturedImagePath string // absolute path if file exists, else empty
-	AltText           string // index title, for LinkedIn image alt
-	Type              string // Hugo type (e.g. video)
-	YouTubeID         string // from front matter or linkedin.txt
-	YouTubeURL        string // watch URL when YouTubeID set
-	ArticleTitle      string // article card title
+	RelUnderContent    string // path relative to content/, forward slashes
+	BundleDir          string // absolute directory
+	IndexPath          string
+	LinkedInPath       string
+	Message            string // trimmed linkedin.txt body
+	PostURL            string // canonical behaviorengineering.ai URL from Message
+	FeaturedImagePath  string // absolute path if file exists, else empty
+	AltText            string // index title, for LinkedIn image alt
+	Type               string // Hugo type (e.g. video)
+	YouTubeID          string // from front matter or linkedin.txt
+	YouTubeURL         string // watch URL when YouTubeID set
+	ArticleTitle       string // article card title
 	ArticleDescription string // article card description
 }
 
-// LoadBundlesForPublishDate resolves bundle paths for the date (same rules as facebook-autopost),
-// then loads each bundle. rel is under content/ without leading "content/".
+// LoadBundlesForPublishDate resolves bundle paths for the date (same rules as facebook-autopost).
+// Then loads each bundle. Rel is under content/ without leading "content/".
 func LoadBundlesForPublishDate(repoRoot, dateYYYYMMDD, postPath string) ([]*Bundle, error) {
 	absRoot, err := filepath.Abs(repoRoot)
 	if err != nil {

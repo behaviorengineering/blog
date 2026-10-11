@@ -75,9 +75,9 @@ func TestBuildHTMLPrefersTypeLineWhenDescriptionAndCategoriesPresent(t *testing.
 		IncludeFrontMatterLead:    false,
 	}
 	_, cfg, _, err := buildHTMLAndURL(buildOptions{
-			Action: "paste", MDPath: md, HTMLPath: "", Fixture: true, Pub: "", TargetURL: "",
-			Tables: "html", LocalCfg: lc, LocalCfgFound: true, NoDemote: false, TitleOverride: "", SubtitleOverride: "",
-		})
+		Action: "paste", MDPath: md, HTMLPath: "", Fixture: true, Pub: "", TargetURL: "",
+		Tables: "html", LocalCfg: lc, LocalCfgFound: true, NoDemote: false, TitleOverride: "", SubtitleOverride: "",
+	})
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -101,9 +101,9 @@ func TestBuildHTMLUsesTypeLineWhenDescriptionEmpty(t *testing.T) {
 		IncludeFrontMatterLead:    false,
 	}
 	_, cfg, _, err := buildHTMLAndURL(buildOptions{
-			Action: "paste", MDPath: md, HTMLPath: "", Fixture: true, Pub: "", TargetURL: "",
-			Tables: "html", LocalCfg: lc, LocalCfgFound: true, NoDemote: false, TitleOverride: "", SubtitleOverride: "",
-		})
+		Action: "paste", MDPath: md, HTMLPath: "", Fixture: true, Pub: "", TargetURL: "",
+		Tables: "html", LocalCfg: lc, LocalCfgFound: true, NoDemote: false, TitleOverride: "", SubtitleOverride: "",
+	})
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -251,9 +251,9 @@ func TestBuildHTMLIncludesCognitiveMemeticsProjectAbout(t *testing.T) {
 		IncludeFrontMatterLead: false,
 	}
 	html, _, _, err := buildHTMLAndURL(buildOptions{
-			Action: "paste", MDPath: md, HTMLPath: "", Fixture: true, Pub: "", TargetURL: "",
-			Tables: "html", LocalCfg: lc, LocalCfgFound: true, NoDemote: false, TitleOverride: "", SubtitleOverride: "",
-		})
+		Action: "paste", MDPath: md, HTMLPath: "", Fixture: true, Pub: "", TargetURL: "",
+		Tables: "html", LocalCfg: lc, LocalCfgFound: true, NoDemote: false, TitleOverride: "", SubtitleOverride: "",
+	})
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -279,9 +279,9 @@ func TestBuildHTMLSkipsCognitiveMemeticsProjectAboutWhenDisabled(t *testing.T) {
 		IncludeCognitiveMemeticsProjectAbout: &off,
 	}
 	html, _, _, err := buildHTMLAndURL(buildOptions{
-			Action: "paste", MDPath: md, HTMLPath: "", Fixture: true, Pub: "", TargetURL: "",
-			Tables: "html", LocalCfg: lc, LocalCfgFound: true, NoDemote: false, TitleOverride: "", SubtitleOverride: "",
-		})
+		Action: "paste", MDPath: md, HTMLPath: "", Fixture: true, Pub: "", TargetURL: "",
+		Tables: "html", LocalCfg: lc, LocalCfgFound: true, NoDemote: false, TitleOverride: "", SubtitleOverride: "",
+	})
 	if err != nil {
 		t.Fatal(err)
 	}

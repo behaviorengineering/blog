@@ -12,4 +12,3 @@ func TestExtractAndPickCanonicalURL(t *testing.T) {
 		t.Fatalf("got %q", got)
 	}
 }
-

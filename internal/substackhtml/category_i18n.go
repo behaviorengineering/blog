@@ -14,9 +14,9 @@ type i18nOtherEntry struct {
 }
 
 var (
-	categoryI18nES     map[string]string
-	categoryI18nOnce   sync.Once
-	categoryI18nErr    error
+	categoryI18nES   map[string]string
+	categoryI18nOnce sync.Once
+	categoryI18nErr  error
 )
 
 func loadCategoryI18nMaps() error {

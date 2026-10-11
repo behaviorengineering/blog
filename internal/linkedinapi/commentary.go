@@ -10,12 +10,12 @@ import (
 
 // CommentaryPlan is the payload prepared for POST /rest/posts.
 type CommentaryPlan struct {
-	Raw           string
-	Encoded       string
-	LittleText    bool
-	Stats         socialautopost.CommentaryStats
-	Warnings      []string
-	SiteURLs      []string
+	Raw            string
+	Encoded        string
+	LittleText     bool
+	Stats          socialautopost.CommentaryStats
+	Warnings       []string
+	SiteURLs       []string
 	EncodedChanged bool
 }
 

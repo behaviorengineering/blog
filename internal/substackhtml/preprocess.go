@@ -13,7 +13,7 @@ var (
 	reHugoShortcodeAngle   = regexp.MustCompile(`\{\{<[\s\S]*?>\}\}`)
 	reHugoShortcodePercent = regexp.MustCompile(`\{\{%[\s\S]*?%\}\}`)
 	reHTMLComment          = regexp.MustCompile(`<!--[\s\S]*?-->`)
-	// youtube shortcode common forms: {{< youtube id >}} or {{< youtube "id" >}}
+	// YouTube shortcode common forms: {{< youtube id >}} or {{< youtube "id" >}}.
 	reYouTubeShortcode = regexp.MustCompile(`\{\{<\s*youtube\s+["']?([A-Za-z0-9_-]{6,20})["']?\s*>\}\}`)
 	// {{< mermaidfile >}} or {{< mermaidfile "diagram.mmd" >}} (same as layouts/shortcodes/mermaidfile.html).
 	reMermaidfileShortcode = regexp.MustCompile(`\{\{<\s*mermaidfile(?:\s+["']([^"']+)["'])?\s*>\}\}`)
@@ -22,8 +22,8 @@ var (
 // PreprocessMarkdown removes Hugo shortcodes and HTML comments so goldmark does
 // not see raw braces as text. Known media shortcodes become plain paragraphs
 // with a normal link so paste stays readable.
-// markdownSourcePath is the absolute or relative path to the Markdown file (for example -in);
-// when set, {{< mermaidfile "name.mmd" >}} is inlined as a fenced mermaid block from the same directory.
+// MarkdownSourcePath is the absolute or relative path to the Markdown file (for example -in).
+// When set, {{< mermaidfile "name.mmd" >}} is inlined as a fenced mermaid block from the same directory.
 func PreprocessMarkdown(src []byte, markdownSourcePath string) []byte {
 	s := src
 	s = reHTMLComment.ReplaceAll(s, nil)
@@ -73,9 +73,8 @@ func expandMermaidfileShortcodes(src []byte, mdPath string) []byte {
 	})
 }
 
-// resolveMermaidfilePath returns an absolute path to a diagram file that must
-// live in the same directory as mdPath (no path traversal). fname must be a
-// single path segment (no separators, no "..").
+// resolveMermaidfilePath returns a diagram path in the same directory as mdPath (no path traversal).
+// Fname must be a single path segment (no separators, no "..").
 func resolveMermaidfilePath(mdPath, fname string) (string, error) {
 	fname = strings.TrimSpace(fname)
 	if fname == "" {

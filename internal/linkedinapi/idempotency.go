@@ -36,4 +36,3 @@ func PickCanonicalURL(urls []string) string {
 	}
 	return ""
 }
-

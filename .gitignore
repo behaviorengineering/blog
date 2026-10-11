@@ -52,8 +52,9 @@ __pycache__/
 *.local
 .hugo_build.lock
 .venv-og/
+# Local go build -o at repo root (sources live under cmd/)
+/linkedin-autopost
 /motif-editor
-
 
 /tmp/
 

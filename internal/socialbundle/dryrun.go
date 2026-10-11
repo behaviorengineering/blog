@@ -9,7 +9,7 @@ import (
 )
 
 // PrintDryRunItem prints one bundle preview in the same shape as facebook-autopost dry-run.
-// imagePath is optional; when empty the Image line is omitted.
+// ImagePath is optional; when empty the Image line is omitted.
 func PrintDryRunItem(w io.Writer, index, total int, mode, postURL, imagePath, message string) {
 	PrintDryRunLinkedInItem(w, index, total, mode, postURL, imagePath, "", "", message)
 }

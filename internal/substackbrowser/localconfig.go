@@ -32,16 +32,16 @@ var legacyLocalConfigJSONKeys = map[string]string{
 	"footer_category_link_index":   "html_footer_category_link_list_index",
 	"footer_include_site_link":     "html_footer_include_read_on_site_link",
 	"footer_include_cognitive_memetics_project_about": "html_footer_include_cognitive_memetics_project_about",
-	"site_base_url":                "site_base_url_for_generated_links",
-	"auto_button":                  "substack_insert_category_browse_button_after_paste",
-	"button_text":                  "substack_category_browse_button_label",
-	"button_url":                   "substack_category_browse_button_url",
-	"demote_headings":              "markdown_demote_heading_levels_one_step",
-	"schedule_substack_section":    "substack_publish_after_continue_section_label",
-	"schedule_email_substack_app":  "substack_publish_schedule_push_deliveries",
+	"site_base_url":               "site_base_url_for_generated_links",
+	"auto_button":                 "substack_insert_category_browse_button_after_paste",
+	"button_text":                 "substack_category_browse_button_label",
+	"button_url":                  "substack_category_browse_button_url",
+	"demote_headings":             "markdown_demote_heading_levels_one_step",
+	"schedule_substack_section":   "substack_publish_after_continue_section_label",
+	"schedule_email_substack_app": "substack_publish_schedule_push_deliveries",
 	"substack_publish_schedule_enable_email_and_app_delivery": "substack_publish_schedule_push_deliveries",
-	"schedule_debug_dom_on_failure": "substack_publish_schedule_debug_dom_on_failure",
-	"schedule_max_attempts":       "substack_publish_schedule_max_attempts",
+	"schedule_debug_dom_on_failure":                           "substack_publish_schedule_debug_dom_on_failure",
+	"schedule_max_attempts":                                   "substack_publish_schedule_max_attempts",
 }
 
 // LocalConfig is project-local Substack automation settings (default file: substack.json at repo root).
@@ -71,13 +71,13 @@ type LocalConfig struct {
 	SubtitleCategoriesMax     int  `json:"substack_subtitle_max_categories_in_type_line"`
 	SubtitleMaxChars          int  `json:"substack_subtitle_max_length_characters"`
 
-	FooterIncludeTags         bool   `json:"html_footer_include_article_tags"`
-	FooterIncludeCategoryLink bool   `json:"html_footer_include_category_browse_link"`
-	FooterCategoryLinkIndex   int    `json:"html_footer_category_link_list_index"`
-	FooterIncludeSiteLink     bool   `json:"html_footer_include_read_on_site_link"`
+	FooterIncludeTags         bool `json:"html_footer_include_article_tags"`
+	FooterIncludeCategoryLink bool `json:"html_footer_include_category_browse_link"`
+	FooterCategoryLinkIndex   int  `json:"html_footer_category_link_list_index"`
+	FooterIncludeSiteLink     bool `json:"html_footer_include_read_on_site_link"`
 	// IncludeCognitiveMemeticsProjectAbout: nil means true (append "But why" blocks for matching cognitive-memetics posts).
-	IncludeCognitiveMemeticsProjectAbout *bool `json:"html_footer_include_cognitive_memetics_project_about"`
-	SiteBaseURL               string `json:"site_base_url_for_generated_links"`
+	IncludeCognitiveMemeticsProjectAbout *bool  `json:"html_footer_include_cognitive_memetics_project_about"`
+	SiteBaseURL                          string `json:"site_base_url_for_generated_links"`
 	// MarkdownLeadImageResolveOrigin overrides the scheme and host (only) of the Hugo
 	// permalink when turning bundle-relative featured images into absolute URLs for Substack paste.
 	// Example: "http://localhost:1313" for local preview only. Leave empty for production

@@ -76,7 +76,7 @@ func DetectProjectAboutKinds(mdPath string, meta FrontMatterMeta) []ProjectAbout
 }
 
 // AppendCognitiveMemeticsProjectAboutHTML appends Substack-friendly explainer sections for cognitive-memetics
-// posts that mirror the site "But why" partials. spanish selects i18n/es copy when true.
+// posts that mirror the site "But why" partials. Spanish selects i18n/es copy when true.
 func AppendCognitiveMemeticsProjectAboutHTML(html string, mdPath string, meta FrontMatterMeta, spanish bool) (string, error) {
 	kinds := DetectProjectAboutKinds(mdPath, meta)
 	if len(kinds) == 0 {
@@ -100,6 +100,8 @@ func AppendCognitiveMemeticsProjectAboutHTML(html string, mdPath string, meta Fr
 
 func renderProjectAboutKind(k ProjectAboutKind, pc *projectAboutCopy) (string, error) {
 	switch k {
+	case ProjectAboutNone:
+		return "", nil
 	case ProjectAboutCubeCows:
 		return renderCubeCowsProjectAbout(pc)
 	case ProjectAboutPorEstasCallesSayings:

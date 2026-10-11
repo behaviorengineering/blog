@@ -120,6 +120,7 @@ func main() {
 				log.Fatalf("prompt: %v", err)
 			}
 			switch choice {
+			case socialautopost.ChoicePublish:
 			case socialautopost.ChoiceTagAsPublished:
 				if *dryRun {
 					log.Printf("dry-run: tag-as-published (no file write)")

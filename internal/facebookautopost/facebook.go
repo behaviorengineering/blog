@@ -41,7 +41,7 @@ type Client struct {
 	OperationDelay func(attempt int) time.Duration
 }
 
-// NewClient returns a Graph API client. timeout is kept for API compatibility; use context deadlines at call sites.
+// NewClient returns a Graph API client. Timeout is kept for API compatibility; use context deadlines at call sites.
 func NewClient(timeout time.Duration) *Client {
 	if timeout < time.Second {
 		timeout = time.Second

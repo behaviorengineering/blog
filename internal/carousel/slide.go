@@ -14,8 +14,10 @@ const PanoramaSlideWidthPx = 600
 // PanoramaGapPxDefault is the inter-slide gap at PanoramaSlideWidthPx (studio export).
 const PanoramaGapPxDefault = 5
 
-const panoramaGapPxAtReference = 4
-const panoramaGapReferenceSlideWidthPx = 480
+const (
+	panoramaGapPxAtReference         = 4
+	panoramaGapReferenceSlideWidthPx = 480
+)
 
 // PanoramaGapPx returns the gap between slides in a studio panorama export.
 func PanoramaGapPx(slideWidth int) int {
