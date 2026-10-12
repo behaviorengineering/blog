@@ -52,7 +52,7 @@ func PreferredImageURL(it Item) string {
 }
 
 type rssFeed struct {
-	XMLName xml.Name `xml:"rss"`
+	XMLName xml.Name   `xml:"rss"`
 	Channel rssChannel `xml:"channel"`
 }
 

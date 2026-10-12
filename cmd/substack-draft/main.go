@@ -322,14 +322,14 @@ func bundleDirFromMarkdownPath(mdIn string) (string, error) {
 
 // buildOptions groups inputs for build and buildHTMLAndURL so call sites stay readable and new flags can extend the struct.
 type buildOptions struct {
-	Action            string
-	MDPath            string
-	HTMLPath          string
-	Fixture           bool
-	Pub               string
-	TargetURL         string
-	LocalCfg          substackbrowser.LocalConfig
-	LocalCfgFound     bool
+	Action             string
+	MDPath             string
+	HTMLPath           string
+	Fixture            bool
+	Pub                string
+	TargetURL          string
+	LocalCfg           substackbrowser.LocalConfig
+	LocalCfgFound      bool
 	Tables             string
 	NoDemote           bool
 	TitleOverride      string

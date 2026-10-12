@@ -202,4 +202,3 @@ func InsertSubscribeButton() (string, error) {
   return JSON.stringify({ ok: true, reason: '' });
 })()`, nil
 }
-

@@ -2,7 +2,7 @@
 description: >-
   Instructs English prose, punctuation, and Hugo front matter for site markdown
   under content/. Apply when creating, editing, or reviewing files matching
-  content/**/*.md. After bundle create or reschedule, run make calendar (Publish calendar).
+  content/**/*.md. After bundle create or reschedule, run go tool task calendar (Publish calendar).
 globs: content/**/*.md
 alwaysApply: false
 ---
@@ -31,8 +31,8 @@ alwaysApply: false
 
 ## Publish calendar (after bundle create or reschedule)
 
-- When an agent **creates** any post bundle under **`content/`**, **renames or moves** a bundle folder, or changes **`date`** or **`draft`** on any page, MUST run **`make calendar`** in the same session before marking the task done (alias: **`make publish-calendar`**).
-- That refreshes **`static/calendar/publish-calendar.json`** (all sections and types; UI at **`/calendar/`** under **`make serve`**).
+- When an agent **creates** any post bundle under **`content/`**, **renames or moves** a bundle folder, or changes **`date`** or **`draft`** on any page, MUST run **`go tool task calendar`** in the same session before marking the task done (alias: **`go tool task publish-calendar`**).
+- That refreshes **`static/calendar/publish-calendar.json`** (all sections and types; UI at **`/calendar/`** under **`go tool task serve`**).
 - MUST commit the updated JSON when the user asks for a commit that includes the content change.
 - Skip only when the user says to skip calendar, or when a prior run in the same session already regenerated after the same bundle change.
 

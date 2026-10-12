@@ -16,9 +16,9 @@ const TargetFacebook = "facebook"
 // Draft is always honored: index.md must not set draft to a truthy value. For site-es and
 // substack-es, index.es.md must exist with real body text and must not set draft to a truthy value either.
 // A future post date in front matter does not block readiness (only draft does, for the files that apply).
-// site-en requires index.md body text; site-es requires index.es.md body text.
-// linkedin requires linkedin.txt with non-whitespace content (draft still comes from index.md).
-// facebook requires facebook-es.txt; substack-en requires substack.md; substack-es requires substack.es.md (and index.es.md).
+// Site-en requires index.md body text; site-es requires index.es.md body text.
+// LinkedIn requires linkedin.txt with non-whitespace content (draft still comes from index.md).
+// Facebook requires facebook-es.txt; substack-en requires substack.md; substack-es requires substack.es.md (and index.es.md).
 //
 // Missing or unclosed front matter is treated as not draft.
 func BundleReadyForPublish(bundleDir, targetKey string) (bool, error) {

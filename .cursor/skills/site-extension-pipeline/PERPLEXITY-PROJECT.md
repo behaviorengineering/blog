@@ -27,7 +27,7 @@ Shipped completed research uses `type: perplexity_thread` with public share URLs
 1. Open the **project URL** above (Overview tab).
 2. Use the project **Ask anything about this project** field (or **New thread** inside this project). MUST NOT use the top-level **New** search outside the project.
 3. Paste the Gemma **PRIMARY_PROMPT** (from `site-essay-extend-explore` / Polypus). One hinge per thread for a 2–3 thread batch.
-4. When the answer finishes: **Share** → **Anyone with the link can view** (see [PERPLEXITY-SHARE.md](PERPLEXITY-SHARE.md)) → copy URL into `candidates.json` → record in `share-manifest.json` via `make explore-share-prepare` / `explore-share-confirm` / `explore-share-verify-cold` (browser helper: [PERPLEXITY-SHARE-BROWSER.md](PERPLEXITY-SHARE-BROWSER.md)).
+4. When the answer finishes: **Share** → **Anyone with the link can view** (see [PERPLEXITY-SHARE.md](PERPLEXITY-SHARE.md)) → copy URL into `candidates.json` → record in `share-manifest.json` via `go tool task explore-share-prepare` / `explore-share-confirm` / `explore-share-verify-cold` (browser helper: [PERPLEXITY-SHARE-BROWSER.md](PERPLEXITY-SHARE-BROWSER.md)).
 5. Confirm the thread appears under this project’s session list (same Overview), not only under generic Sessions.
 
 Pass: thread listed on the project Overview with project Instructions/Skills active.  

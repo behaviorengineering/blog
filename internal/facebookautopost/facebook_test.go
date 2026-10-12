@@ -18,7 +18,8 @@ func TestRecentlyPostedURLErrorOmitsAccessToken(t *testing.T) {
 		HTTP:    srv.Client(),
 		BaseURL: strings.TrimSuffix(srv.URL, "/"),
 	}
-	_, err := c.RecentlyPostedURL("page1", "secret-token-xyz", "https://example.com/p/", 5)
+	ctx := testCtx(t)
+	_, err := c.RecentlyPostedURL(ctx, "page1", "secret-token-xyz", "https://example.com/p/", 5)
 	if err == nil {
 		t.Fatal("expected error")
 	}

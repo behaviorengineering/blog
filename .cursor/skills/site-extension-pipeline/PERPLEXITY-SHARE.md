@@ -34,11 +34,11 @@ Perplexity Computer project: run this on every thread before you paste the URL i
 - `cold_verified: true` and a fresh `cold_verified_at` (incognito pass, optionally plus HTTP probe)
 
 ```bash
-make explore-share-prepare CANDIDATES=tmp/explore-proposals/<slug>/candidates.json
+go tool task explore-share-prepare CANDIDATES=tmp/explore-proposals/<slug>/candidates.json
 # Share each thread in Perplexity UI (globe / anyone with link)
-make explore-share-confirm CANDIDATES=... CANDIDATE_ID=blame-blindspot
-make explore-share-verify-cold CANDIDATES=... CANDIDATE_ID=blame-blindspot PROBE=1 OPERATOR=1
-make explore-share-check PROPOSAL=tmp/explore-proposals/<slug>.proposal.yaml CANDIDATES=...
+go tool task explore-share-confirm CANDIDATES=... CANDIDATE_ID=blame-blindspot
+go tool task explore-share-verify-cold CANDIDATES=... CANDIDATE_ID=blame-blindspot PROBE=1 OPERATOR=1
+go tool task explore-share-check PROPOSAL=tmp/explore-proposals/<slug>.proposal.yaml CANDIDATES=...
 ```
 
 Cursor browser steps: [PERPLEXITY-SHARE-BROWSER.md](PERPLEXITY-SHARE-BROWSER.md). Scripts do **not** click Share for you; they record and gate on operator-confirmed public access.
@@ -52,7 +52,7 @@ Cursor browser steps: [PERPLEXITY-SHARE-BROWSER.md](PERPLEXITY-SHARE-BROWSER.md)
 After Hugo ship, list URLs on the post:
 
 ```bash
-make verify-explore-links POST=x-minds/2026-09-26-the-octopus-advantage
+go tool task verify-explore-links POST=x-minds/2026-09-26-the-octopus-advantage
 ```
 
 HTTP probe (`PROBE=1`) may false-fail on bot blocking; `OPERATOR=1` records your incognito pass and is required for a green `explore-share-check`.

@@ -9,7 +9,7 @@
 # PR preview baseURL must use the same host as hugo.toml baseURL (custom domain). Project sites are served at the
 # domain root there, while *.github.io/<repo>/ includes an extra path segment — a github.io-only baseURL breaks CSS
 # and assets when opening previews at https://behaviorengineering.ai/pr-preview/pr-<n>/.
-# Preview builds set HUGO_PREVIEW=1 → make build uses -e preview + --buildFuture so upcoming posts appear in lists
+# Preview builds set HUGO_PREVIEW=1 → go tool task hugo uses -e preview + --buildFuture so upcoming posts appear in lists
 # (production lists still hide future-dated rows via filter-pages-released-as-of-now).
 #
 # Scheduled deploy (single UTC cron; GitHub does not support IANA time zones in cron):

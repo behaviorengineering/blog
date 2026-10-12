@@ -7,9 +7,9 @@ import (
 
 // ScheduleAfterContinueOptions is embedded as JSON into ScheduleAfterContinueJS.
 type ScheduleAfterContinueOptions struct {
-	Tags              []string `json:"tags"`
-	SectionLabel      string   `json:"sectionLabel"`
-	DateTimeLocal     string   `json:"dateTimeLocal"`
+	Tags          []string `json:"tags"`
+	SectionLabel  string   `json:"sectionLabel"`
+	DateTimeLocal string   `json:"dateTimeLocal"`
 	// DateDisplay is Substack's text schedule field (e.g. "29/04/2026, 08:40 am"), not ISO datetime-local.
 	DateDisplay       string `json:"dateDisplay"`
 	TickEmailSubstack bool   `json:"tickEmailSubstack"`

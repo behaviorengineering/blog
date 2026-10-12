@@ -39,4 +39,3 @@ func TestGetPostRequestPathEncodesURN(t *testing.T) {
 		t.Fatalf("EscapedPath = %q, want %q (URL.String=%q)", got, want, req.URL.String())
 	}
 }
-

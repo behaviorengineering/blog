@@ -5,7 +5,7 @@ Default: Gemma thinking applicability review + operator_question (no file writes
 With --apply --yes: patch index.md and index.es.md explore rows.
 
 Agent workflow: run without --apply, AskQuestion using operator_question, then
-make explore-apply APPLY=1 CONFIRM=1 if the human confirms.
+go tool task explore-apply APPLY=1 CONFIRM=1 if the human confirms.
 """
 
 from __future__ import annotations
@@ -326,7 +326,7 @@ def main() -> int:
         if not manifest_path.is_file():
             die(
                 f"Missing share manifest {manifest_path}. "
-                "Run: make explore-share-prepare CANDIDATES=... then confirm + verify-cold "
+                "Run: go tool task explore-share-prepare CANDIDATES=... then confirm + verify-cold "
                 "(see PERPLEXITY-SHARE.md)."
             )
         manifest = load_manifest(manifest_path)
@@ -341,7 +341,7 @@ def main() -> int:
                 print(f"share preflight error: {err}", file=sys.stderr)
             die(
                 "Share preflight failed. Fix manifest before explore-apply "
-                "(make explore-share-check PROPOSAL=... CANDIDATES=...)."
+                "(go tool task explore-share-check PROPOSAL=... CANDIDATES=...)."
             )
         print("Share preflight OK.", file=sys.stderr)
 
@@ -365,7 +365,7 @@ def main() -> int:
         print(
             "\nNext: ask the operator the operator_question above. "
             "If they confirm, run with --apply --yes\n"
-            "Before apply: share manifest must pass (make explore-share-check). "
+            "Before apply: share manifest must pass (go tool task explore-share-check). "
             "See .cursor/skills/site-extension-pipeline/PERPLEXITY-SHARE.md.",
             file=sys.stderr,
         )

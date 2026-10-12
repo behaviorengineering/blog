@@ -13,10 +13,10 @@ import (
 // loaded from the same Hugo i18n tables as layouts/partials/*-project-about.html.
 type projectAboutCopy struct {
 	SayingsTitle, SayingsP1, SayingsP2 string
-	CowsTitle, CowsBody               string
-	ReptoTitle, ReptoBody             string
-	ReptoCtaTitle, ReptoCtaButton     string
-	PawTitle, PawBody                 string
+	CowsTitle, CowsBody                string
+	ReptoTitle, ReptoBody              string
+	ReptoCtaTitle, ReptoCtaButton      string
+	PawTitle, PawBody                  string
 }
 
 // hugoI18nProjectAbout matches the [table] / other = "..." blocks in i18n/en.toml and i18n/es.toml.
@@ -89,17 +89,17 @@ func decodeProjectAboutFile(path string) (projectAboutCopy, error) {
 		return projectAboutCopy{}, fmt.Errorf("decode %s: %w", path, err)
 	}
 	out := projectAboutCopy{
-		SayingsTitle:    raw.SayingsProjectAboutTitle.Other,
-		SayingsP1:       raw.SayingsProjectAboutP1.Other,
-		SayingsP2:       raw.SayingsProjectAboutP2.Other,
-		CowsTitle:       raw.CowsProjectAboutTitle.Other,
-		CowsBody:        raw.CowsProjectAboutBody.Other,
-		ReptoTitle:      raw.ReptilocracyProjectAboutTitle.Other,
-		ReptoBody:       raw.ReptilocracyProjectAboutBody.Other,
-		ReptoCtaTitle:   raw.ReptilocracyProjectAboutCtaTitle.Other,
-		ReptoCtaButton:  raw.ReptilocracyProjectAboutCtaButton.Other,
-		PawTitle:        raw.PawtropolisProjectAboutTitle.Other,
-		PawBody:         raw.PawtropolisProjectAboutBody.Other,
+		SayingsTitle:   raw.SayingsProjectAboutTitle.Other,
+		SayingsP1:      raw.SayingsProjectAboutP1.Other,
+		SayingsP2:      raw.SayingsProjectAboutP2.Other,
+		CowsTitle:      raw.CowsProjectAboutTitle.Other,
+		CowsBody:       raw.CowsProjectAboutBody.Other,
+		ReptoTitle:     raw.ReptilocracyProjectAboutTitle.Other,
+		ReptoBody:      raw.ReptilocracyProjectAboutBody.Other,
+		ReptoCtaTitle:  raw.ReptilocracyProjectAboutCtaTitle.Other,
+		ReptoCtaButton: raw.ReptilocracyProjectAboutCtaButton.Other,
+		PawTitle:       raw.PawtropolisProjectAboutTitle.Other,
+		PawBody:        raw.PawtropolisProjectAboutBody.Other,
 	}
 	if err := validateProjectAboutCopy(out, path); err != nil {
 		return projectAboutCopy{}, err

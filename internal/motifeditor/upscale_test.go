@@ -24,8 +24,8 @@ func TestRealesrganTileSize(t *testing.T) {
 func TestPreferWidthResizeOnly(t *testing.T) {
 	t.Parallel()
 	tests := []struct {
-		w, h   int
-		want   bool
+		w, h int
+		want bool
 	}{
 		{4000, 150, true},
 		{7560, 200, true},

@@ -42,4 +42,4 @@ jobs:
           extended: true
 
       - name: Verify Go module and check links
-        run: make verify check-links
+        run: go tool task verify && go tool task check-links

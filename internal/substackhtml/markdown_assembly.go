@@ -25,9 +25,9 @@ func init() {
 }
 
 type featuredImageTmplData struct {
-	ImageURL         string
-	YouTubeWatchURL  string
-	WatchOn          string
+	ImageURL        string
+	YouTubeWatchURL string
+	WatchOn         string
 }
 
 func featuredImageTmplDataFromMeta(meta FrontMatterMeta, opt Options) featuredImageTmplData {

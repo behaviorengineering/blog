@@ -52,13 +52,14 @@ __pycache__/
 *.local
 .hugo_build.lock
 .venv-og/
+# Local go build -o at repo root (sources live under cmd/)
+/linkedin-autopost
 /motif-editor
-
 
 /tmp/
 
 # Local provider repos (symlinks to sibling checkouts; see scripts/link-providers.sh).
-# Not a Go module replace: make serve runs MCP via scripts/serve-content-pipelines-mcp.sh.
+# Not a Go module replace: go tool task serve runs MCP via scripts/serve-content-pipelines-mcp.sh.
 /providers/
 
 # direnv per-machine allow cache (do not commit)

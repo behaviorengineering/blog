@@ -1,6 +1,13 @@
 package linkedinapi
 
-import "testing"
+import (
+	"context"
+	"errors"
+	"net/http"
+	"testing"
+
+	"github.com/xynova/behaviour-engineering/internal/outbound"
+)
 
 func TestYouTubeURLs(t *testing.T) {
 	id := "pO0WZsN8Oiw"
@@ -9,6 +16,18 @@ func TestYouTubeURLs(t *testing.T) {
 	}
 	if got := YouTubeThumbnailURL(id); got != "https://img.youtube.com/vi/pO0WZsN8Oiw/hqdefault.jpg" {
 		t.Fatalf("thumb: %q", got)
+	}
+}
+
+func TestFetchYouTubeThumbnailRequiresContext(t *testing.T) {
+	_, err := FetchYouTubeThumbnail(nil, http.DefaultClient, "pO0WZsN8Oiw")
+	if !errors.Is(err, outbound.ErrNilContext) {
+		t.Fatalf("err = %v, want ErrNilContext", err)
+	}
+	ctx := context.Background()
+	_, err = FetchYouTubeThumbnail(ctx, http.DefaultClient, "pO0WZsN8Oiw")
+	if !errors.Is(err, outbound.ErrMissingDeadline) {
+		t.Fatalf("err = %v, want ErrMissingDeadline", err)
 	}
 }
 

@@ -93,7 +93,7 @@ Use one JSON or operator checklist per essay when running 2 or 3 Perplexity proj
 
 Example: [tmp/explore-proposals/2026-09-26-the-octopus-advantage/candidates.json](/Users/hector/Xynova/ai/behaviourengineering/site/tmp/explore-proposals/2026-09-26-the-octopus-advantage/candidates.json)
 
-**CONSTRAINT:** MUST NOT patch Hugo until the operator accepts a proposal from `scripts/explore_proposal.py` or explicitly says to apply. MUST NOT ship `perplexity_thread` URLs until the operator shared each thread in Perplexity as **Anyone with the link** and verified in incognito (`make verify-explore-links`).
+**CONSTRAINT:** MUST NOT patch Hugo until the operator accepts a proposal from `scripts/explore_proposal.py` or explicitly says to apply. MUST NOT ship `perplexity_thread` URLs until the operator shared each thread in Perplexity as **Anyone with the link** and verified in incognito (`go tool task verify-explore-links`).
 
 ## Core constraints
 
@@ -204,10 +204,10 @@ PROHIBITED:
 3. **Research prompt (if asked):** Gemma thinking pass per **Perplexity research prompt (Gemma)**; hand prompts to operator to paste in the **Perplexity project** ([PERPLEXITY-PROJECT.md](../site-extension-pipeline/PERPLEXITY-PROJECT.md)); stop until they return thread URL(s).
 4. **Research packet:** Fill `candidates.json` (or equivalent) with 2 or 3 URLs plus export or summary text per candidate.
 5. **Gemma research review:** Load `site-explore-research-review`; reject weak candidates before hooks.
-6. **Proposal:** Run `make explore-proposal` or `python3 scripts/explore_proposal.py`; operator reviews YAML proposal.
+6. **Proposal:** Run `go tool task explore-proposal` or `python3 scripts/explore_proposal.py`; operator reviews YAML proposal.
 7. **Gemma ship set:** Load `site-explore-link-hooks` Call A (approved rows only) and Call B. Agent does not substitute its own link copy.
 8. **Mechanical check:** Dedupe labels/queries, real thread URL, counter-cost row when needed.
-9. **Apply (explicit):** Run `make explore-apply` (applicability + operator question). Patch only after operator confirms and `APPLY=1 CONFIRM=1`.
+9. **Apply (explicit):** Run `go tool task explore-apply` (applicability + operator question). Patch only after operator confirms and `APPLY=1 CONFIRM=1`.
 
 ## Themes that pay (use as a checklist, not a dump)
 

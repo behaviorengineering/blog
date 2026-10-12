@@ -37,10 +37,10 @@ The on-page section title is **Explore further** (EN) / explore copy in ES. Temp
 
 ## Proposal runner (no Hugo write)
 
-**Runner:** `make explore-proposal` → [`scripts/explore_proposal.py`](/Users/hector/Xynova/ai/behaviourengineering/site/scripts/explore_proposal.py) (implementation under `.cursor/skills/site-extension-pipeline/scripts/`).
+**Runner:** `go tool task explore-proposal` → [`scripts/explore_proposal.py`](/Users/hector/Xynova/ai/behaviourengineering/site/scripts/explore_proposal.py) (implementation under `.cursor/skills/site-extension-pipeline/scripts/`).
 
 ```bash
-make explore-proposal ESSAY=content/x-minds/2026-09-26-the-octopus-advantage/index.md \
+go tool task explore-proposal ESSAY=content/x-minds/2026-09-26-the-octopus-advantage/index.md \
   CANDIDATES=tmp/explore-proposals/2026-09-26-the-octopus-advantage/candidates.json \
   ALLOW_SUMMARY=1
 ```
@@ -49,32 +49,32 @@ By default the runner **syncs `research_export` paths** and **requires** markdow
 
 ### Perplexity exports (MCP, before proposal)
 
-1. `make explore-fetch-exports ESSAY=... CANDIDATES=... SYNC=1`
+1. `go tool task explore-fetch-exports ESSAY=... CANDIDATES=... SYNC=1`
 2. Read `tmp/explore-proposals/<slug>/export-manifest.json`
 3. **Agent:** for each pending row, call `user-perplexity-browser` **`perplexity_export`** with `thread_id`, `save_dir=<repo>/<save_dir>`, `format=markdown` (one attempt per row; no retry loop)
-4. Ensure each file exists at `research_export` path, then re-run `make explore-proposal` (without `ALLOW_SUMMARY=1` when exports are present)
+4. Ensure each file exists at `research_export` path, then re-run `go tool task explore-proposal` (without `ALLOW_SUMMARY=1` when exports are present)
 
-Helper: `make explore-fetch-exports` / [`scripts/explore_fetch_exports.py`](/Users/hector/Xynova/ai/behaviourengineering/site/scripts/explore_fetch_exports.py).
+Helper: `go tool task explore-fetch-exports` / [`scripts/explore_fetch_exports.py`](/Users/hector/Xynova/ai/behaviourengineering/site/scripts/explore_fetch_exports.py).
 
 ## Share manifest (before apply)
 
-**Runner:** `make explore-share-prepare` / `explore-share-confirm` / `explore-share-verify-cold` / `explore-share-check` → [`scripts/explore_share.py`](/Users/hector/Xynova/ai/behaviourengineering/site/scripts/explore_share.py).
+**Runner:** `go tool task explore-share-prepare` / `explore-share-confirm` / `explore-share-verify-cold` / `explore-share-check` → [`scripts/explore_share.py`](/Users/hector/Xynova/ai/behaviourengineering/site/scripts/explore_share.py).
 
-1. After `candidates.json` has URLs: `make explore-share-prepare CANDIDATES=...`
-2. Operator sets **Anyone with the link** in Perplexity (see [PERPLEXITY-SHARE-BROWSER.md](PERPLEXITY-SHARE-BROWSER.md)); `make explore-share-confirm CANDIDATES=... CANDIDATE_ID=...`
-3. Incognito pass (+ optional `PROBE=1`): `make explore-share-verify-cold ... OPERATOR=1`
-4. `make explore-share-check PROPOSAL=... CANDIDATES=...` must pass before `explore-apply`.
+1. After `candidates.json` has URLs: `go tool task explore-share-prepare CANDIDATES=...`
+2. Operator sets **Anyone with the link** in Perplexity (see [PERPLEXITY-SHARE-BROWSER.md](PERPLEXITY-SHARE-BROWSER.md)); `go tool task explore-share-confirm CANDIDATES=... CANDIDATE_ID=...`
+3. Incognito pass (+ optional `PROBE=1`): `go tool task explore-share-verify-cold ... OPERATOR=1`
+4. `go tool task explore-share-check PROPOSAL=... CANDIDATES=...` must pass before `explore-apply`.
 
 ## Apply runner (operator gate)
 
-**Runner:** `make explore-apply` → [`scripts/explore_apply.py`](/Users/hector/Xynova/ai/behaviourengineering/site/scripts/explore_apply.py).
+**Runner:** `go tool task explore-apply` → [`scripts/explore_apply.py`](/Users/hector/Xynova/ai/behaviourengineering/site/scripts/explore_apply.py).
 
 1. Share preflight (manifest) runs automatically unless `SKIP_SHARE_PREFLIGHT=1` (tests only).
-2. `make explore-apply ESSAY=... PROPOSAL=tmp/.../slug.proposal.yaml CANDIDATES=.../candidates.json`  
+2. `go tool task explore-apply ESSAY=... PROPOSAL=tmp/.../slug.proposal.yaml CANDIDATES=.../candidates.json`  
    Gemma **applicability** review writes `<proposal>.applicability.yaml` and prints `operator_question`.
 2. **Agent MUST** surface that question to the operator (AskQuestion or plain ask). MUST NOT pass `APPLY=1` in the same turn as the review.
 3. Only if the operator confirms:  
-   `make explore-apply ESSAY=... PROPOSAL=... APPLY=1 CONFIRM=1`
+   `go tool task explore-apply ESSAY=... PROPOSAL=... APPLY=1 CONFIRM=1`
 
 MUST NOT patch `index.md` / `index.es.md` without step 2 and `CONFIRM=1`.
 
@@ -82,7 +82,7 @@ MUST NOT patch `index.md` / `index.es.md` without step 2 and `CONFIRM=1`.
 
 **CONSTRAINT:** Every `perplexity_thread` URL on the live site MUST be **viewable by anyone with the link** (Perplexity Share → public / anyone with link). MUST NOT ship workspace-private threads that show a login wall to readers.
 
-- **Before explore-apply:** `make explore-share-check` (manifest) for proposal URLs; after ship, `make verify-explore-links POST=section/slug`.
+- **Before explore-apply:** `go tool task explore-share-check` (manifest) for proposal URLs; after ship, `go tool task verify-explore-links POST=section/slug`.
 - **Reference:** [PERPLEXITY-SHARE.md](PERPLEXITY-SHARE.md), [PERPLEXITY-SHARE-BROWSER.md](PERPLEXITY-SHARE-BROWSER.md)
 
 CORRECT:
@@ -110,8 +110,8 @@ Project instructions and skill zips: `tmp/essay-extension-skills/perplexity-comp
 - [ ] Real thread URL only (operator supplied)
 - [ ] Every perplexity row has Gemma `label` + `hook`
 - [ ] No em dash in hooks or labels
-- [ ] **Public share:** `share-manifest.json` passes `make explore-share-check` (confirm + cold verify per URL)
-      After Hugo apply: `make verify-explore-links POST=...`
+- [ ] **Public share:** `share-manifest.json` passes `go tool task explore-share-check` (confirm + cold verify per URL)
+      After Hugo apply: `go tool task verify-explore-links POST=...`
       Pass: Cold reader sees research
       Fail: STOP, re-share in Perplexity before deploy
 - [ ] ES hooks native, not calque

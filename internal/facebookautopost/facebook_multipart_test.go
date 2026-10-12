@@ -83,7 +83,8 @@ func TestPostPhotoFromFileMultipartShape(t *testing.T) {
 		HTTP:    srv.Client(),
 		BaseURL: strings.TrimSuffix(srv.URL, "/"),
 	}
-	if err := c.PostPhotoFromFile("page1", "tok-test", imgPath, "Line1\n\nhttps://behaviorengineering.ai/x/"); err != nil {
+	ctx := testCtx(t)
+	if err := c.PostPhotoFromFile(ctx, "page1", "tok-test", imgPath, "Line1\n\nhttps://behaviorengineering.ai/x/"); err != nil {
 		t.Fatal(err)
 	}
 }

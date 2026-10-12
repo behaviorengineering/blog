@@ -487,6 +487,8 @@ func cloneDeep(n *xhtml.Node) *xhtml.Node {
 		return nil
 	}
 	switch n.Type {
+	case xhtml.ErrorNode, xhtml.DocumentNode, xhtml.CommentNode, xhtml.DoctypeNode, xhtml.RawNode:
+		return nil
 	case xhtml.TextNode:
 		return &xhtml.Node{Type: xhtml.TextNode, Data: n.Data}
 	case xhtml.ElementNode:
@@ -583,6 +585,8 @@ func sanitizeTree(n *xhtml.Node, opt Options) ([]*xhtml.Node, error) {
 		return nil, nil
 	}
 	switch n.Type {
+	case xhtml.ErrorNode, xhtml.DocumentNode, xhtml.DoctypeNode, xhtml.RawNode:
+		return nil, nil
 	case xhtml.CommentNode:
 		return nil, nil
 	case xhtml.TextNode:
@@ -853,6 +857,8 @@ func renderNode(w io.Writer, n *xhtml.Node) error {
 		return nil
 	}
 	switch n.Type {
+	case xhtml.ErrorNode, xhtml.DocumentNode, xhtml.CommentNode, xhtml.DoctypeNode, xhtml.RawNode:
+		return nil
 	case xhtml.TextNode:
 		_, err := io.WriteString(w, html.EscapeString(n.Data))
 		return err

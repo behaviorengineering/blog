@@ -3,6 +3,7 @@ package main
 
 import (
 	"encoding/json"
+	"flag"
 	"io"
 	"log"
 	"net/http"
@@ -10,8 +11,6 @@ import (
 	"path/filepath"
 	"strconv"
 	"strings"
-
-	"flag"
 
 	"github.com/xynova/behaviour-engineering/internal/carousel"
 	"github.com/xynova/behaviour-engineering/internal/motifeditor"
@@ -88,13 +87,13 @@ func configHandler() http.HandlerFunc {
 func healthHandler(realesrganBin, ffmpegBin, cwebpBin string) http.HandlerFunc {
 	return func(w http.ResponseWriter, _ *http.Request) {
 		writeJSON(w, http.StatusOK, map[string]any{
-			"ok":                  true,
-			"realesrganBin":       realesrganBin,
-			"realesrganAvailable": motifeditor.BinaryAvailable(realesrganBin),
-			"ffmpegBin":           ffmpegBin,
-			"ffmpegAvailable":     motifeditor.BinaryAvailable(ffmpegBin),
-			"cwebpBin":            cwebpBin,
-			"cwebpAvailable":      motifeditor.BinaryAvailable(cwebpBin),
+			"ok":                   true,
+			"realesrganBin":        realesrganBin,
+			"realesrganAvailable":  motifeditor.BinaryAvailable(realesrganBin),
+			"ffmpegBin":            ffmpegBin,
+			"ffmpegAvailable":      motifeditor.BinaryAvailable(ffmpegBin),
+			"cwebpBin":             cwebpBin,
+			"cwebpAvailable":       motifeditor.BinaryAvailable(cwebpBin),
 			"panoramaSlideWidthPx": carousel.PanoramaSlideWidthPx,
 			"panoramaGapPx":        carousel.PanoramaGapPxDefault,
 			"slideWidthPx":         carousel.SlideWidthPx,

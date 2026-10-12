@@ -9,7 +9,7 @@ No npm. The server is Go (`cmd/motif-editor`), same as other repo tools.
 From the repo root:
 
 ```bash
-make motif-editor
+go tool task motif-editor
 ```
 
 Or:

@@ -16,7 +16,7 @@ const minStoredRatioOfSource = 0.45
 const minStoredRatioOfEncoded = 0.45
 
 // VerifyCommentary checks stored commentary from GET /rest/posts/{id} after publish.
-// sourceRaw is linkedin.txt; encodedSent is the POST body when little text encoding ran (else "").
+// SourceRaw is linkedin.txt; encodedSent is the POST body when little text encoding ran (else "").
 func VerifyCommentary(sourceRaw, stored, encodedSent string) error {
 	sourceRaw = strings.TrimSpace(sourceRaw)
 	stored = strings.TrimSpace(stored)

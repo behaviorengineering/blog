@@ -152,4 +152,3 @@ func SetTitleAndSubtitle(title string, subtitle string) (string, error) {
 })()`
 	return js, nil
 }
-

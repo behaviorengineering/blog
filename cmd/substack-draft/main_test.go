@@ -11,6 +11,11 @@ import (
 	"github.com/xynova/behaviour-engineering/internal/substackhtml"
 )
 
+func writeTestSubstackMD(bundleDir string) error {
+	body := "## Newsletter\n\nSidecar body for Substack paste.\n"
+	return os.WriteFile(filepath.Join(bundleDir, "substack.md"), []byte(body), 0o644)
+}
+
 func TestBundleDirFromMarkdownPath(t *testing.T) {
 	dir := t.TempDir()
 	bundle := filepath.Join(dir, "human-condition", "2026-01-01-test")
@@ -68,6 +73,9 @@ func TestBuildHTMLPrefersTypeLineWhenDescriptionAndCategoriesPresent(t *testing.
 	if err := os.WriteFile(md, []byte(fm), 0o644); err != nil {
 		t.Fatal(err)
 	}
+	if err := writeTestSubstackMD(dir); err != nil {
+		t.Fatal(err)
+	}
 	lc := substackbrowser.LocalConfig{
 		SubtitleIncludeCategories: true,
 		SubtitleCategoriesMax:     3,
@@ -75,9 +83,9 @@ func TestBuildHTMLPrefersTypeLineWhenDescriptionAndCategoriesPresent(t *testing.
 		IncludeFrontMatterLead:    false,
 	}
 	_, cfg, _, err := buildHTMLAndURL(buildOptions{
-			Action: "paste", MDPath: md, HTMLPath: "", Fixture: true, Pub: "", TargetURL: "",
-			Tables: "html", LocalCfg: lc, LocalCfgFound: true, NoDemote: false, TitleOverride: "", SubtitleOverride: "",
-		})
+		Action: "paste", MDPath: md, HTMLPath: "", Fixture: true, Pub: "", TargetURL: "",
+		Tables: "html", LocalCfg: lc, LocalCfgFound: true, NoDemote: false, TitleOverride: "", SubtitleOverride: "",
+	})
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -94,6 +102,9 @@ func TestBuildHTMLUsesTypeLineWhenDescriptionEmpty(t *testing.T) {
 	if err := os.WriteFile(md, []byte(fm), 0o644); err != nil {
 		t.Fatal(err)
 	}
+	if err := writeTestSubstackMD(dir); err != nil {
+		t.Fatal(err)
+	}
 	lc := substackbrowser.LocalConfig{
 		SubtitleIncludeCategories: true,
 		SubtitleCategoriesMax:     3,
@@ -101,9 +112,9 @@ func TestBuildHTMLUsesTypeLineWhenDescriptionEmpty(t *testing.T) {
 		IncludeFrontMatterLead:    false,
 	}
 	_, cfg, _, err := buildHTMLAndURL(buildOptions{
-			Action: "paste", MDPath: md, HTMLPath: "", Fixture: true, Pub: "", TargetURL: "",
-			Tables: "html", LocalCfg: lc, LocalCfgFound: true, NoDemote: false, TitleOverride: "", SubtitleOverride: "",
-		})
+		Action: "paste", MDPath: md, HTMLPath: "", Fixture: true, Pub: "", TargetURL: "",
+		Tables: "html", LocalCfg: lc, LocalCfgFound: true, NoDemote: false, TitleOverride: "", SubtitleOverride: "",
+	})
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -247,13 +258,16 @@ func TestBuildHTMLIncludesCognitiveMemeticsProjectAbout(t *testing.T) {
 	if err := os.WriteFile(md, []byte(fm), 0o644); err != nil {
 		t.Fatal(err)
 	}
+	if err := writeTestSubstackMD(subdir); err != nil {
+		t.Fatal(err)
+	}
 	lc := substackbrowser.LocalConfig{
 		IncludeFrontMatterLead: false,
 	}
 	html, _, _, err := buildHTMLAndURL(buildOptions{
-			Action: "paste", MDPath: md, HTMLPath: "", Fixture: true, Pub: "", TargetURL: "",
-			Tables: "html", LocalCfg: lc, LocalCfgFound: true, NoDemote: false, TitleOverride: "", SubtitleOverride: "",
-		})
+		Action: "paste", MDPath: md, HTMLPath: "", Fixture: true, Pub: "", TargetURL: "",
+		Tables: "html", LocalCfg: lc, LocalCfgFound: true, NoDemote: false, TitleOverride: "", SubtitleOverride: "",
+	})
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -273,15 +287,18 @@ func TestBuildHTMLSkipsCognitiveMemeticsProjectAboutWhenDisabled(t *testing.T) {
 	if err := os.WriteFile(md, []byte(fm), 0o644); err != nil {
 		t.Fatal(err)
 	}
+	if err := writeTestSubstackMD(subdir); err != nil {
+		t.Fatal(err)
+	}
 	off := false
 	lc := substackbrowser.LocalConfig{
 		IncludeFrontMatterLead:               false,
 		IncludeCognitiveMemeticsProjectAbout: &off,
 	}
 	html, _, _, err := buildHTMLAndURL(buildOptions{
-			Action: "paste", MDPath: md, HTMLPath: "", Fixture: true, Pub: "", TargetURL: "",
-			Tables: "html", LocalCfg: lc, LocalCfgFound: true, NoDemote: false, TitleOverride: "", SubtitleOverride: "",
-		})
+		Action: "paste", MDPath: md, HTMLPath: "", Fixture: true, Pub: "", TargetURL: "",
+		Tables: "html", LocalCfg: lc, LocalCfgFound: true, NoDemote: false, TitleOverride: "", SubtitleOverride: "",
+	})
 	if err != nil {
 		t.Fatal(err)
 	}
