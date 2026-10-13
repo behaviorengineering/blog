@@ -39,7 +39,7 @@ if str(_SKILLS) not in sys.path:
 
 from site_local_eval_common.common import DEFAULT_BASE, die  # noqa: E402
 
-MODEL = "cf_local/@cf/google/gemma-4-26b-a4b-it"
+MODEL = "gemini_paid/gemma-4-26b-a4b-it"
 
 
 def load_text(path: Path) -> str:
@@ -68,7 +68,6 @@ def chat_thinking(base_url: str, system: str, user: str) -> str:
         ],
         "temperature": 0.2,
         "max_tokens": 2048,
-        "chat_template_kwargs": {"enable_thinking": True},
     }
     data = json.dumps(payload).encode("utf-8")
     req = urllib.request.Request(

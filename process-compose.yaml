@@ -28,8 +28,30 @@ processes:
       signal: 15
       timeout_seconds: 5
 
+  pipelines-api:
+    command: ./scripts/serve-process.sh ./scripts/serve-pipelines-api.sh
+    readiness_probe:
+      exec:
+        command: curl -sf http://127.0.0.1:3850/readyz
+      initial_delay_seconds: 2
+      period_seconds: 2
+      timeout_seconds: 5
+      success_threshold: 1
+      failure_threshold: 30
+    availability:
+      restart: on_failure
+      backoff_seconds: 2
+    shutdown:
+      signal: 15
+      timeout_seconds: 35
+
   content-pipelines-mcp:
     command: ./scripts/serve-process.sh ./scripts/serve-content-pipelines-mcp.sh
+    environment:
+      - PIPELINES_API_URL=http://127.0.0.1:3850
+    depends_on:
+      pipelines-api:
+        condition: process_healthy
     availability:
       restart: on_failure
       backoff_seconds: 2

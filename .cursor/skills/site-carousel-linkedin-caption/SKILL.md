@@ -61,7 +61,7 @@ Tap to explore the cold-hot empathy gap and why you always have two reasons for 
 | Setting | Value |
 |---------|--------|
 | Gateway | `LOCAL_LLM_BASE_URL` or `http://127.0.0.1:1320/v1` |
-| Model | `LOCAL_LLM_MODEL` or `@cf/google/gemma-4-26b-a4b-it` |
+| Model | `LOCAL_LLM_MODEL` or `gemini_paid/gemma-4-26b-a4b-it` |
 | Source | First variant (`a`) of each slide in `carousel.json` |
 | Essay URL | `deck.cta.shortUrl`, else `deck.cta.postUrl` |
 

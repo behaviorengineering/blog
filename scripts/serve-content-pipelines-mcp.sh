@@ -17,4 +17,8 @@ if [[ ! -f "${cfg}" ]]; then
 fi
 
 cd "${root}"
-exec go tool wgo -cd "${mcp}" -file .go -file .html -file .css go run ./cmd/content-pipelines-mcp --config "${cfg}" "$@"
+if ! command -v go >/dev/null 2>&1 || ! go tool templ version >/dev/null 2>&1; then
+	echo "go tool templ is required; run: cd providers/content-pipelines-mcp && go get -tool github.com/a-h/templ/cmd/templ@latest" >&2
+	exit 1
+fi
+exec go tool wgo -cd "${mcp}" -file .go -file .html -file .css -file .templ bash -c 'go tool templ generate && go run ./cmd/content-pipelines-mcp --config "$1" "${@:2}"' _ "${cfg}" "$@"

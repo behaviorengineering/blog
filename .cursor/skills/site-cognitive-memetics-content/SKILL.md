@@ -191,7 +191,7 @@ For posts under **`content/cognitive-memetics/reptilocracy/`** (category **`Rept
 | Setting | Default |
 |---------|---------|
 | Base URL | `LOCAL_LLM_BASE_URL` or `http://127.0.0.1:1320/v1` |
-| Model | `LOCAL_LLM_MODEL` or `@cf/google/gemma-4-26b-a4b-it` |
+| Model | `LOCAL_LLM_MODEL` or `gemini_paid/gemma-4-26b-a4b-it` |
 
 MAY call via **`.cursor/skills/site_local_eval_common/common.py`** → **`chat_complete`**, or an equivalent `POST …/chat/completions`.
 

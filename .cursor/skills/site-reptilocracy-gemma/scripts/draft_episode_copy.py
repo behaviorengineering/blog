@@ -56,7 +56,7 @@ def chat_complete_thinking(
     max_tokens: int = 4096,
     temperature: float = 0.7,
 ) -> tuple[str, str]:
-    """Return (content, reasoning). Thinking enabled for Gemma 4 chat template."""
+    """Return (content, reasoning). gemini_paid may attach reasoning_details without CF kwargs."""
     url = base_url.rstrip("/") + "/chat/completions"
     payload: dict = {
         "model": model,
@@ -66,7 +66,6 @@ def chat_complete_thinking(
         ],
         "temperature": temperature,
         "max_tokens": max_tokens,
-        "chat_template_kwargs": {"enable_thinking": True},
     }
     data = json.dumps(payload).encode("utf-8")
     headers = {

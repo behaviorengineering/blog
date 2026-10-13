@@ -57,7 +57,7 @@ Run **two** calls when shipping (or one combined call with two sections in the p
 
 1. **Health:** `GET ${POLYPUS_BASE_URL:-http://127.0.0.1:1320}/health` (see `.cursor/skills/ask-polypus/SKILL.md`).
 2. **Payload:** Post title, settled thesis (2 bullets), unpaid hinge, thread summary bullets, each full `query` string, existing explore rows to avoid duplicating, banned first-order clichés for this topic.
-3. **Model:** `cf_local/@cf/google/gemma-4-26b-a4b-it` with `"chat_template_kwargs": {"enable_thinking": true}`.
+3. **Model:** `gemini_paid/gemma-4-26b-a4b-it` (do not send CF `enable_thinking`; gemini_paid may return `reasoning_details`).
 4. **Ask:** Propose 2-4 perplexity rows to ship (`thread` and/or `query`). For each row output `label` + `hook`. If `index.es.md` exists, output parallel `es` blocks (native Spanish, not calque).
 5. **Parse:** Strip leaked thinking; keep YAML only. Re-call if output is not paste-ready.
 
