@@ -30,6 +30,9 @@ processes:
 
   pipelines-api:
     command: ./scripts/serve-process.sh ./scripts/serve-pipelines-api.sh
+    environment:
+      - POLYPUS_BASE_URL=https://polypus.manticore-powan.ts.net
+      - POLYPUS_OTLP_ENDPOINT=polypus.manticore-powan.ts.net:4317
     readiness_probe:
       exec:
         command: curl -sf http://127.0.0.1:3850/readyz
@@ -49,6 +52,8 @@ processes:
     command: ./scripts/serve-process.sh ./scripts/serve-content-pipelines-mcp.sh
     environment:
       - PIPELINES_API_URL=http://127.0.0.1:3850
+      - POLYPUS_BASE_URL=https://polypus.manticore-powan.ts.net
+      - POLYPUS_OTLP_ENDPOINT=polypus.manticore-powan.ts.net:4317
     depends_on:
       pipelines-api:
         condition: process_healthy

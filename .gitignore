@@ -37,6 +37,7 @@ Thumbs.db
 .env.*
 
 # Log files
+logs/
 *.log
 
 # Python bytecode / caches
