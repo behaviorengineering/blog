@@ -17,4 +17,8 @@ if [[ -f "${forms}" ]]; then
 	extra_args+=(--content-forms "${forms}")
 fi
 
-exec go tool wgo -cd "${lib}" -file .go go run ./cmd serve "${extra_args[@]}" "$@"
+polypus_base="${POLYPUS_BASE_URL:-https://polypus.manticore-powan.ts.net}"
+polypus_otlp="${POLYPUS_OTLP_ENDPOINT:-polypus.manticore-powan.ts.net:4317}"
+exec go tool wgo -cd "${lib}" -file .go \
+	env "POLYPUS_BASE_URL=${polypus_base}" "POLYPUS_OTLP_ENDPOINT=${polypus_otlp}" \
+	go run ./cmd serve "${extra_args[@]}" "$@"

@@ -4,4 +4,5 @@ essay_workspace_dir: tmp/essay-workspaces
 essay_content_forms_path: data/essay-content-forms.yaml
 review_pipeline: essays
 mcp_listen: 127.0.0.1:3849
+pipelines_api_url: http://127.0.0.1:3850
 ui_dev: true
