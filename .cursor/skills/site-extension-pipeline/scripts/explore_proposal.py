@@ -35,7 +35,7 @@ if str(_SKILLS) not in sys.path:
 
 from site_local_eval_common.common import DEFAULT_BASE, die  # noqa: E402
 
-MODEL = "cf_local/@cf/google/gemma-4-26b-a4b-it"
+MODEL = "gemini_paid/gemma-4-26b-a4b-it"
 MAX_TOKENS = 4096
 
 
@@ -65,7 +65,6 @@ def chat_thinking(
         ],
         "temperature": 0.25,
         "max_tokens": max_tokens,
-        "chat_template_kwargs": {"enable_thinking": True},
     }
     data = json.dumps(payload).encode("utf-8")
     req = urllib.request.Request(

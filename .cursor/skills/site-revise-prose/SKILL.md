@@ -40,7 +40,7 @@ Prompt pack filled by the CLI: **`packs/evaluate.md`**.
 | Setting | Value |
 |---------|--------|
 | Base URL | `LOCAL_LLM_BASE_URL` or `http://127.0.0.1:1320/v1` |
-| Model | `LOCAL_LLM_MODEL` or `@cf/google/gemma-4-26b-a4b-it` |
+| Model | `LOCAL_LLM_MODEL` or `gemini_paid/gemma-4-26b-a4b-it` |
 | Second opinion | `--model @cf/zai-org/glm-4.7-flash` |
 | Scope | `full` (title + list fields + body) |
 | Mode | `progressive` (default): each list field / body paragraph judged alone with **prior units as context**, then overall synthesis. Use `--mode whole` for a single pass. |

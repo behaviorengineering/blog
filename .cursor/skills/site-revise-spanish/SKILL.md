@@ -36,7 +36,7 @@ Answer two questions:
 | Setting | Value |
 |---------|--------|
 | Base URL | `LOCAL_LLM_BASE_URL` or `http://127.0.0.1:1320/v1` |
-| Model | `LOCAL_LLM_MODEL` or `@cf/google/gemma-4-26b-a4b-it` |
+| Model | `LOCAL_LLM_MODEL` or `gemini_paid/gemma-4-26b-a4b-it` |
 | Scope | `full` (all ES files in the bundle that exist) |
 | Mode | `progressive` (default): each field/paragraph with **prior units as context**, then overall synthesis. `--mode whole` for one shot. |
 

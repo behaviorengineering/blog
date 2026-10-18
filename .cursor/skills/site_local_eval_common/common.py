@@ -12,7 +12,7 @@ from dataclasses import dataclass
 from typing import Callable
 
 DEFAULT_BASE = "http://127.0.0.1:1320/v1"
-DEFAULT_MODEL = "@cf/google/gemma-4-26b-a4b-it"
+DEFAULT_MODEL = "gemini_paid/gemma-4-26b-a4b-it"
 TEMPERATURE = 0.25
 MAX_TOKENS_UNIT = 1536
 MAX_TOKENS_WHOLE = 4096

@@ -37,7 +37,7 @@ MUST NOT review a candidate without readable research text (export markdown or o
 ## Gemma review call (Polypus, thinking)
 
 1. **Health:** `GET /health` (`.cursor/skills/ask-polypus/SKILL.md`).
-2. **Model:** `cf_local/@cf/google/gemma-4-26b-a4b-it`, `"chat_template_kwargs": {"enable_thinking": true}`.
+2. **Model:** `gemini_paid/gemma-4-26b-a4b-it` (do not send CF `enable_thinking`; gemini_paid may return `reasoning_details`).
 3. **Payload:** Essay excerpt (title + thesis bullets + close), full exclude list, editorial filters from `tmp/essay-extension-skills/perplexity-computer/PROJECT-INSTRUCTIONS.md`, and each candidate's hinge + research text + URL.
 4. **Ask:** One structured block per candidate (YAML only in final output). Score 1-5: `evidence`, `novelty`, `source_fit`, `counter_cost_value`. Set `duplication_risk: low|medium|high`. Set `verdict: approve|reject` and `reason` (one sentence). Set `ship_priority: 1|2|3` for approved only (1 = ship first).
 5. **Batch rule:** Approve at most `target_count` candidates. If more than `target_count` would approve, reject the weakest with reason `capacity`.
