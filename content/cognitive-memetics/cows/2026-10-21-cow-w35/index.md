@@ -6,7 +6,7 @@ type: panel
 heading_code: W35
 project: Cube-Cows 🐮📈
 title: When everyone's responsible
-description: "This week, our cube-cows form a perfect **circle of pointing**: when **everyone's responsible**, **no cow is responsible**, while the ACCOUNTABILITY poster just looks sad."
+description: "This week, the cows practice **diffusion of responsibility** as a team sport: they have successfully turned **corporate oversight** into a perpetual motion machine of excuses."
 draft: false
 
 featuredImage: "when-everyones-responsible.webp"

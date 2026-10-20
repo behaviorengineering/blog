@@ -6,7 +6,7 @@ type: panel
 heading_code: W38
 project: Cube-Cows 🐮📈
 title: The diagnosis never includes himself
-description: "This week, the **Chosen One** diagnoses everything wrong with the company after **three months** on the job: the diagnosis, notably, **never includes himself**."
+description: "This week, the team discovers that **comprehensive leadership reviews** are much easier when you treat your own **influence** as an invisible variable."
 draft: false
 
 featuredImage: "diagnosis-never-includes-himself.webp"

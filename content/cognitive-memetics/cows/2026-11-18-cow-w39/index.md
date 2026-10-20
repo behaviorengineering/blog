@@ -6,7 +6,7 @@ type: panel
 heading_code: W39
 project: Cube-Cows 🐮📈
 title: Leadership-to-PIP converter
-description: "This week, our cube-cows watch the bull feed **vague instructions**, **shifting priorities**, and **impossible deadlines** into the Leadership-to-PIP Converter: input **poor leadership**, output **performance concern**, while the cow who already **delivered** just holds the box."
+description: "This week, management perfects the art of **automated blame** by routing **unclear directives** through a machine that only prints out employee failures."
 draft: false
 
 featuredImage: "leadership-to-pip-converter.webp"
