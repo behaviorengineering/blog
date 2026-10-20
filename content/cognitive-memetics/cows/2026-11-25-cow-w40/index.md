@@ -5,8 +5,8 @@ date: '2026-11-25T01:00:00+11:00'
 type: panel
 heading_code: W40
 project: Cube-Cows 🐮📈
-title: The Mascot
-description: "This week, our cube-cows ask what the office dog actually **does** here. The answer from the careers-page shoot: it **photographs well**. No real function, treated as core to **'culture'**, and on the careers page more than any cow."
+title: The Title Inflation
+description: "This week, a golden retriever gets promoted to **Chief Culture Officer** so the branding shoot has a title on the nameplate. The cows learn a **title** only has to help the **studio** go smoothly."
 draft: false
 
 featuredImage: "the-mascot.webp"

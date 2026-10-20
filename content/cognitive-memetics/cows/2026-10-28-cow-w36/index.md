@@ -6,7 +6,7 @@ type: panel
 heading_code: W36
 project: Cube-Cows 🐮📈
 title: Found his people
-description: "This week, the **Chosen One** announces he's 'finally **found his people**' at the company: the people, it turns out, are just really good at **nodding**."
+description: "This week, a leader finally finds his **ideal audience** after realizing his colleagues have replaced **critical thinking** with **reflexive agreement**."
 draft: false
 
 featuredImage: "found-his-people.webp"
