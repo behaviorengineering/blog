@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-06T15:30:29Z",
+  "generatedAt": "2026-10-20T13:42:10Z",
   "channels": [
     "site-en",
     "site-es",
@@ -5676,13 +5676,13 @@
           "status": "missing"
         },
         "linkedin": {
-          "status": "missing"
+          "status": "present"
         },
         "site-en": {
           "status": "present"
         },
         "site-es": {
-          "status": "missing"
+          "status": "present"
         },
         "substack-en": {
           "status": "missing"
@@ -5699,6 +5699,35 @@
         "Raymond"
       ],
       "planned": "2026-10-23",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/reptilocracy/2026-10-25-dont-make-eye-contact",
+      "section": "cognitive-memetics",
+      "title": "Don't Make Eye Contact",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Reptilocracy"
+      ],
+      "planned": "2026-10-25",
       "draft": false,
       "channels": {
         "facebook": {
@@ -5763,13 +5792,13 @@
           "status": "missing"
         },
         "linkedin": {
-          "status": "missing"
+          "status": "present"
         },
         "site-en": {
           "status": "present"
         },
         "site-es": {
-          "status": "missing"
+          "status": "present"
         },
         "substack-en": {
           "status": "missing"
@@ -5779,7 +5808,7 @@
     {
       "bundle": "cognitive-memetics/cows/2026-11-04-cow-w37",
       "section": "cognitive-memetics",
-      "title": "Now that's engagement",
+      "title": "The Spectacle Trap",
       "type": "panel",
       "categories": [
         "Cognitive-Memetics",
@@ -5792,13 +5821,13 @@
           "status": "missing"
         },
         "linkedin": {
-          "status": "missing"
+          "status": "present"
         },
         "site-en": {
           "status": "present"
         },
         "site-es": {
-          "status": "missing"
+          "status": "present"
         },
         "substack-en": {
           "status": "missing"
@@ -5821,13 +5850,13 @@
           "status": "missing"
         },
         "linkedin": {
-          "status": "missing"
+          "status": "present"
         },
         "site-en": {
           "status": "present"
         },
         "site-es": {
-          "status": "missing"
+          "status": "present"
         },
         "substack-en": {
           "status": "missing"
@@ -5850,13 +5879,13 @@
           "status": "missing"
         },
         "linkedin": {
-          "status": "missing"
+          "status": "present"
         },
         "site-en": {
           "status": "present"
         },
         "site-es": {
-          "status": "missing"
+          "status": "present"
         },
         "substack-en": {
           "status": "missing"
@@ -5866,7 +5895,7 @@
     {
       "bundle": "cognitive-memetics/cows/2026-11-25-cow-w40",
       "section": "cognitive-memetics",
-      "title": "The Mascot",
+      "title": "The Title Inflation",
       "type": "panel",
       "categories": [
         "Cognitive-Memetics",
@@ -5879,13 +5908,13 @@
           "status": "missing"
         },
         "linkedin": {
-          "status": "missing"
+          "status": "present"
         },
         "site-en": {
           "status": "present"
         },
         "site-es": {
-          "status": "missing"
+          "status": "present"
         },
         "substack-en": {
           "status": "missing"
