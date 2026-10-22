@@ -37,25 +37,36 @@ signal_tree() {
 	done
 }
 
+# Fixed-string match against ps command lines (relative ./scripts/... and
+# absolute paths both contain scripts/serve-process.sh). pgrep -f is regex
+# and previously used $root/scripts/... which missed process-compose's
+# bash ./scripts/serve-process.sh leftovers.
+pids_matching() {
+	local needle="$1"
+	local pid cmd
+	while read -r pid cmd; do
+		if [[ "$pid" == "$$" || "$pid" == "$PPID" ]]; then
+			continue
+		fi
+		if [[ "$cmd" == *"$needle"* ]]; then
+			printf '%s\n' "$pid"
+		fi
+	done < <(ps -ax -o pid=,command=)
+}
+
 kill_trees_matching() {
-	local pattern="$1"
+	local needle="$1"
 	local pids pid
-	pids="$(pgrep -f "$pattern" 2>/dev/null || true)"
+	pids="$(pids_matching "$needle")"
 	if [[ -z "$pids" ]]; then
 		return 0
 	fi
 	for pid in $pids; do
-		if [[ "$pid" == "$$" ]]; then
-			continue
-		fi
 		signal_tree TERM "$pid"
 	done
 	sleep 0.4
-	pids="$(pgrep -f "$pattern" 2>/dev/null || true)"
+	pids="$(pids_matching "$needle")"
 	for pid in $pids; do
-		if [[ "$pid" == "$$" ]]; then
-			continue
-		fi
 		signal_tree KILL "$pid"
 	done
 }
@@ -86,9 +97,17 @@ process-compose down -U -u "$SOCK" 2>/dev/null || true
 rm -f "$SOCK"
 
 # Wrappers first: leftover wgo will otherwise restart go run and re-bind.
-kill_trees_matching "${root}/scripts/serve-process.sh"
-kill_trees_matching "${root}/scripts/serve-pipelines-api.sh"
-kill_trees_matching "${root}/scripts/serve-content-pipelines-mcp.sh"
+# Substring needles hit both ./scripts/... and absolute script paths.
+kill_trees_matching "scripts/serve-process.sh"
+kill_trees_matching "scripts/serve-pipelines-api.sh"
+kill_trees_matching "scripts/serve-content-pipelines-mcp.sh"
+kill_trees_matching "scripts/serve-carousel-save.sh"
+# Orphaned wgo after the wrapper is SIGKILL'd (new process group, PPID 1).
+kill_trees_matching "-cd ${root}/providers/content-pipelines-mcp"
+kill_trees_matching "carousel-save -addr 127.0.0.1:3848"
+kill_trees_matching "${root}/tmp/pipelines-serve"
+kill_trees_matching "${root}/tmp/content-pipelines-mcp"
+kill_trees_matching "${root}/tmp/carousel-save"
 
 for port in "${ports[@]}"; do
 	free_listen_port "$port"

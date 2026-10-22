@@ -2,7 +2,7 @@
 # Start: go tool task serve
 # Requires process-compose, hugo, and go on PATH.
 # User-level MCP config supplies PIPELINES_BIN / PIPELINES_DIR and credential refs.
-# Go processes use `go tool wgo` so they rebuild when .go files change (MCP via scripts/serve-content-pipelines-mcp.sh).
+# All Go services are prebuilt by scripts/serve-up.sh (task serve); wgo rebuilds the same tmp/ binaries.
 
 version: "0.5"
 
@@ -12,6 +12,14 @@ log_length: 200
 processes:
   hugo:
     command: hugo server --buildDrafts --buildFuture
+    readiness_probe:
+      exec:
+        command: curl -sf http://127.0.0.1:1313/
+      initial_delay_seconds: 2
+      period_seconds: 2
+      timeout_seconds: 5
+      success_threshold: 1
+      failure_threshold: 30
     availability:
       restart: on_failure
       backoff_seconds: 2
@@ -20,7 +28,15 @@ processes:
       timeout_seconds: 10
 
   carousel-save:
-    command: ./scripts/serve-process.sh go tool wgo run ./cmd/carousel-save -addr 127.0.0.1:3848 -root .
+    command: ./scripts/serve-process.sh ./scripts/serve-carousel-save.sh
+    readiness_probe:
+      exec:
+        command: curl -sf http://127.0.0.1:3848/api/health
+      initial_delay_seconds: 2
+      period_seconds: 2
+      timeout_seconds: 5
+      success_threshold: 1
+      failure_threshold: 30
     availability:
       restart: on_failure
       backoff_seconds: 2
@@ -57,6 +73,14 @@ processes:
     depends_on:
       pipelines-api:
         condition: process_healthy
+    readiness_probe:
+      exec:
+        command: curl -sf http://127.0.0.1:3849/readyz
+      initial_delay_seconds: 2
+      period_seconds: 2
+      timeout_seconds: 5
+      success_threshold: 1
+      failure_threshold: 30
     availability:
       restart: on_failure
       backoff_seconds: 2
