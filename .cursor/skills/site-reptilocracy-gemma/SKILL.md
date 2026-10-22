@@ -23,6 +23,7 @@ This skill owns **Gemma prompting and pick flow** only. Bundle layout, tags, dat
 | New Reptilocracy episode copy via Gemma | **`site-cognitive-memetics-content`** for folder, front matter shell, categories, tags, images |
 | Rewrite / punch up Reptilocracy `description` / `tldr` / `fluff` with Gemma | **`site-linkedin-post`** for `linkedin.txt` |
 | User says Gemma, thinking mode, satire, psych fitness for Reptilocracy | **`site-revise-spanish`** after ES copy exists |
+| | **`site-reptilocracy-themes`** for Dark Triad theme lists and joke pitches (before this skill) |
 | | Generic **Gemma teaser** in cognitive-memetics for Cube-Cows / Raymond / Pawtropolis / T-Shirt Art (not this hub) |
 
 ## Defaults
@@ -79,7 +80,7 @@ with board-deck vocabulary and no satire beat.
 
 ## Procedure
 
-1. Resolve episode **`title`** (working or final) and a **mechanism brief** (gag + institutional knife; not a full prop inventory). Prefer art caption + one sentence of what the stamp / system move means.
+1. Resolve episode **`title`** (working or final) and a **mechanism brief** (gag + institutional knife; not a full prop inventory). When the pitch came from **`site-reptilocracy-themes`**, MUST include **power species**, **role**, **public species** (usually ants), and **species rationale** from the pitch gate. MUST NOT use cows or Cube-Cows fauna in the brief. Prefer art caption + one sentence of what the stamp / system move means.
 2. From repo root, run (do not hand-roll the API unless the script fails):
 
 ```bash
@@ -117,6 +118,7 @@ Sister psych-fitness close (tone only; do not paste petition into episode fields
 
 ## Related
 
+- Dark Triad theme catalog and joke pitches: **`.cursor/skills/site-reptilocracy-themes/SKILL.md`**
 - Bundle / hub rules: **`.cursor/skills/site-cognitive-memetics-content/SKILL.md`**
 - LinkedIn: **`.cursor/skills/site-linkedin-post/SKILL.md`**
 - Spanish audit: **`.cursor/skills/site-revise-spanish/SKILL.md`**

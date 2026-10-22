@@ -320,6 +320,8 @@ For Venezuelan saying posts, **include those four tags** when promoting the seri
 
 Posts under **`content/cognitive-memetics/reptilocracy/`** use **`categories`**: **`Cognitive-Memetics`** and **`Reptilocracy`**. Set **`project: Reptilocracy 🦎🏛️`**.
 
+**Joke premises / Dark Triad themes:** MUST use **`.cursor/skills/site-reptilocracy-themes/SKILL.md`** when the user asks for Reptilocracy joke ideas, theme lists, or Dark Triad satire (herd-blindness gags). MUST NOT invent a new episode premise that skips that catalog when the user asked for jokes or themes.
+
 **Gemma episode copy (`description` / `tldr` / `fluff`):** MUST use **`.cursor/skills/site-reptilocracy-gemma/SKILL.md`** (satire-first brief, thinking mode, psych-fitness knife, three teaser picks). MUST NOT use the generic **Gemma teaser** flow below for this hub when drafting or rewriting those fields.
 
 **Voice:** New or rewritten Gemma fields follow that skill (satire first). Agent clinical edits and older clinical gold (for example `2026-08-30-stability-is-a-setting`) still follow **Reptilocracy voice** under **Hybrid prose** (mechanism, not rebel heat or panel caption). LinkedIn: **`.cursor/skills/site-linkedin-post/SKILL.md`** → Reptilocracy. Footer explainer + petition CTA: **Theme and style** → **Project "But why" explainer cards**.

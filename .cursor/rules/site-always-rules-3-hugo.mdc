@@ -271,6 +271,7 @@ themes/LoveIt/exampleSite/content/posts/
 **Claims posts (Claim / Grounding)?** → `.cursor/skills/site-claims-content/SKILL.md`  
 **Opinion essays (stanceful essay, optional grounding)?** → `.cursor/skills/site-opinion-content/SKILL.md` (pipeline: `opinion_essay` in `data/essay-content-forms.yaml`)  
 **Cognitive-Memetics section (panel / sayings / T-Shirt Art hub)?** → `.cursor/skills/site-cognitive-memetics-content/SKILL.md` (hybrid prose; Gemma 4 teasers except Por-Estas-Calles card teaser; Reptilocracy episode copy → `.cursor/skills/site-reptilocracy-gemma/SKILL.md`)
+**Reptilocracy joke ideas / Dark Triad themes?** → `.cursor/skills/site-reptilocracy-themes/SKILL.md`
 **Reptilocracy Gemma copy (`description` / `tldr` / `fluff`)?** → `.cursor/skills/site-reptilocracy-gemma/SKILL.md`  
 **Markdown bold / emphasis density (any `content/` type)?** → `.cursor/skills/site-revise-emphasis/SKILL.md`  
 **Video picks (`type: video`, YouTube)?** → `.cursor/skills/site-video-content/SKILL.md`  
