@@ -102,7 +102,7 @@ tasks:
     desc: process-compose local stack (Hugo, MCP, carousel-save)
     interactive: true
     cmds:
-      - chmod +x scripts/serve-up.sh scripts/serve-process.sh scripts/serve-cleanup.sh scripts/link-providers.sh scripts/serve-content-pipelines-mcp.sh
+      - chmod +x scripts/serve-up.sh scripts/serve-process.sh scripts/serve-cleanup.sh scripts/link-providers.sh scripts/serve-content-pipelines-mcp.sh scripts/serve-content-pipelines-mcp-inner.sh scripts/serve-pipelines-api.sh scripts/serve-build-pipelines-api.sh scripts/serve-build-content-pipelines-mcp.sh scripts/serve-build-carousel-save.sh scripts/serve-carousel-save.sh scripts/serve-carousel-save-inner.sh
       - ./scripts/link-providers.sh
       - ./scripts/serve-cleanup.sh --preflight
       - ./scripts/serve-up.sh
