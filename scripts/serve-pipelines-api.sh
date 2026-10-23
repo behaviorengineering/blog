@@ -12,10 +12,7 @@ if [[ ! -d "${lib}" ]]; then
 	exit 1
 fi
 
-if [[ ! -x "${bin}" ]]; then
-	echo "serve: tmp/pipelines-serve missing; building before exec" >&2
-	"${root}/scripts/serve-build-pipelines-api.sh"
-fi
+"${root}/scripts/serve-build-pipelines-api.sh"
 
 extra_args=()
 if [[ -f "${forms}" ]]; then

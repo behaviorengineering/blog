@@ -17,33 +17,7 @@ if [[ ! -d "${mcp}" ]]; then
 	exit 1
 fi
 
-need_templ=false
-while IFS= read -r -d '' f; do
-	gof="${f%.templ}_templ.go"
-	if [[ ! -f "${gof}" ]] || [[ "${f}" -nt "${gof}" ]]; then
-		need_templ=true
-		break
-	fi
-done < <(find "${mcp}" \( -path '*/.git/*' -o -path '*/tmp/*' \) -prune -o -name '*.templ' -print0 2>/dev/null)
-
-if [[ "${need_templ}" == true ]]; then
-	if ! go -C "${mcp}" tool templ version >/dev/null 2>&1; then
-		echo "go tool templ is required; run: cd providers/content-pipelines-mcp && go get -tool github.com/a-h/templ/cmd/templ@latest" >&2
-		exit 1
-	fi
-	go -C "${mcp}" tool templ generate
-fi
-
-need_build=false
-if [[ ! -x "${bin}" ]]; then
-	need_build=true
-elif find "${mcp}" \( -path '*/.git/*' -o -path '*/tmp/*' \) -prune -o \( -name '*.go' -o -name '*.templ' \) -newer "${bin}" -print -quit 2>/dev/null | grep -q .; then
-	need_build=true
-fi
-
-if [[ "${need_build}" == true ]]; then
-	"${root}/scripts/serve-build-content-pipelines-mcp.sh"
-fi
+"${root}/scripts/serve-build-content-pipelines-mcp.sh"
 
 export PIPELINES_API_URL="${api_url}"
 export POLYPUS_BASE_URL="${polypus_base}"
