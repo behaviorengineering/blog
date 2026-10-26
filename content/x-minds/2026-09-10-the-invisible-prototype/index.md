@@ -1,7 +1,7 @@
 ---
 translationKey: "2026-09-10-the-invisible-prototype"
 date: '2026-09-10T01:00:00+11:00'
-title: "🔍 Why was the boy the blueprint and the girl invisible?"
+title: "👧 Why did Jack get flagged while Chloe got \"quirks\"?"
 type: video
 description: |
   - Why a 1920s discovery was buried for decades.

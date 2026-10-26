@@ -1,7 +1,7 @@
 ---
 translationKey: "2026-09-26-the-octopus-advantage"
 date: '2026-09-26T01:00:00+11:00'
-title: "🐙 Why does a wide-scanning brain win when AI handles the admin?"
+title: "🐙 Why do side quests finally count when AI handles the boring stuff?"
 type: video
 description: |
   - Why **AI** can turn **executive dysfunction** into a specialized engine instead of a career tax.

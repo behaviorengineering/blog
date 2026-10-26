@@ -1,7 +1,7 @@
 ---
 translationKey: "2026-09-10-the-invisible-prototype"
 date: '2026-09-10T01:00:00+11:00'
-title: "🔍 ¿Por qué el niño era el modelo y la niña invisible?"
+title: "👧 ¿Por qué señalaron a Jack y a Chloe le dijeron \"rarezas\"?"
 type: video
 description: |
   - Un descubrimiento de los años veinte que permaneció enterrado durante décadas.
