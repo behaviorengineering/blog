@@ -1,7 +1,7 @@
 ---
 translationKey: "2026-09-17-the-joy-of-doing-wrong"
 date: '2026-09-17T01:00:00+11:00'
-title: "The Joy of Doing Wrong"
+title: "🍐 Why do we do wrong when nothing is in it for us?"
 type: video
 description: |
   - Why humans occasionally choose a path that offers zero benefit or pleasure.

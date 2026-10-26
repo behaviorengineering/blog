@@ -1,7 +1,7 @@
 ---
 translationKey: "2026-09-10-the-invisible-prototype"
 date: '2026-09-10T01:00:00+11:00'
-title: "The Invisible Prototype"
+title: "👧 Jack got flagged; Chloe got \"quirks\""
 type: video
 description: |
   - Why a 1920s discovery was buried for decades.

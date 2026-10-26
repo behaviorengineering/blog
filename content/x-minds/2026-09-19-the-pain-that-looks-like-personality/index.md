@@ -1,7 +1,7 @@
 ---
 translationKey: "2026-09-19-the-pain-that-looks-like-personality"
 date: '2026-09-19T01:00:00+11:00'
-title: "The Pain That Looks Like Personality"
+title: "💔 Shame lands before your brain can argue back"
 type: video
 description: |
   - Why a simple text message can trigger a physical crisis.

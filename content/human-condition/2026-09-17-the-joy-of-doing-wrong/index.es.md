@@ -1,7 +1,7 @@
 ---
 translationKey: "2026-09-17-the-joy-of-doing-wrong"
 date: '2026-09-17T01:00:00+11:00'
-title: "El gusto de la transgresión"
+title: "🍐 ¿Por qué hacemos lo incorrecto cuando no ganamos nada?"
 type: video
 description: |
   - Por qué elegimos, a veces, caminos que no nos reportan beneficio ni placer.
