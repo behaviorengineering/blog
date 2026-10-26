@@ -1,0 +1,19 @@
+---
+alwaysApply: true
+description: >-
+  This Hugo site overrides pack ask-polypus: default Gemma is
+  gemini_paid/gemma-4-26b-a4b-it, never gemini_free or unnamed cf_local
+  Cloudflare Gemma. Triggers: ask gemma, ask polypus, LOCAL_LLM_MODEL,
+  POLYPUS_URL, curiosity title, local eval.
+---
+
+# Site Ask Polypus (always overlay)
+
+Generic pack rule: `.cursor/packs/shared/rules/ask-polypus.mdc` (default model there is Cloudflare `cf_local`).
+
+Host skill: `.cursor/skills/ask-polypus/SKILL.md`.
+
+**CONSTRAINT:** On this host, unnamed Gemma / ask Polypus MUST use `gemini_paid/gemma-4-26b-a4b-it` (or `LOCAL_LLM_MODEL` when set). MUST NOT use `gemini_free/`. MUST NOT default to `cf_local/@cf/google/gemma-4-26b-a4b-it`.
+
+- Enforcement: Before a Polypus chat, confirm the model id is `gemini_paid/` unless the operator named another prefixed id
+- Violation: STOP, switch to `gemini_paid/gemma-4-26b-a4b-it`, then call
