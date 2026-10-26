@@ -1,7 +1,7 @@
 ---
 translationKey: "2026-10-27-the-ark-that-only-saves-the-loud"
 date: '2026-10-27T01:00:00+11:00'
-title: "The Ark That Only Saves the Loud"
+title: "🌊 Why do we build arks for the loudest deniers?"
 type: opinion
 description: |
   Our belief in **human exceptionalism** hides the biological limits that drive our failures. We build arks for the loudest deniers, then treat the flood as someone else's problem.
