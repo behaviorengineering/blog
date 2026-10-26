@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-26T15:13:05Z",
+  "generatedAt": "2026-10-26T21:42:04Z",
   "channels": [
     "site-en",
     "site-es",
@@ -5719,35 +5719,6 @@
       }
     },
     {
-      "bundle": "cognitive-memetics/reptilocracy/2026-10-25-dont-make-eye-contact",
-      "section": "cognitive-memetics",
-      "title": "Don't Make Eye Contact",
-      "type": "sayings",
-      "categories": [
-        "Cognitive-Memetics",
-        "Reptilocracy"
-      ],
-      "planned": "2026-10-25",
-      "draft": false,
-      "channels": {
-        "facebook": {
-          "status": "missing"
-        },
-        "linkedin": {
-          "status": "present"
-        },
-        "site-en": {
-          "status": "present"
-        },
-        "site-es": {
-          "status": "present"
-        },
-        "substack-en": {
-          "status": "missing"
-        }
-      }
-    },
-    {
       "bundle": "cognitive-memetics/sayings/2026-10-26-saying-42",
       "section": "cognitive-memetics",
       "title": "La verdad no peca, pero incomoda.",
@@ -5814,6 +5785,35 @@
         "Cube-Cows"
       ],
       "planned": "2026-10-28",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/reptilocracy/2026-11-02-dont-make-eye-contact",
+      "section": "cognitive-memetics",
+      "title": "Don't Make Eye Contact",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Reptilocracy"
+      ],
+      "planned": "2026-11-02",
       "draft": false,
       "channels": {
         "facebook": {
