@@ -70,7 +70,7 @@ Find **`title`** lines that make a stranger think *I don't know why that happens
 
 ### Call A — Gap + candidates (create)
 
-1. **Health:** `GET ${POLYPUS_BASE_URL:-http://127.0.0.1:1320}/health`.
+1. **Health:** `GET ${POLYPUS_URL:-${POLYPUS_BASE_URL:-https://polypus.manticore-powan.ts.net}}/health`.
 2. **Payload:** Current `title`, full `description` / Claim / lead, `type`, section folder, body spine (agent one-liner), body `###` headings (lines only), gold-standard reminder (pyramids question title), pattern table **A–E**, emoji rules for the section, banned bait list from **Legitimate vs bait**.
 3. **Ask Gemma:** State **Reader believes / Article shows / Gap** in plain English; draft **5** titles using **at least three different patterns** (A–E); tag each with pattern letter; note optional **1–2** leading emoji only when section allows.
 4. **Output shape (MUST):** Ask Gemma to end with a **paste-ready block** only (no prose after it). Prefer line-oriented keys (thinking models often miss fenced YAML):

@@ -20,7 +20,7 @@ fi
 
 # wgo's child can drop process-compose env; pass API and Polypus on argv.
 api_url="${PIPELINES_API_URL:-http://127.0.0.1:3850}"
-polypus_base="${POLYPUS_BASE_URL:-https://polypus.manticore-powan.ts.net}"
+polypus_base="${POLYPUS_URL:-${POLYPUS_BASE_URL:-https://polypus.manticore-powan.ts.net}}"
 polypus_otlp="${POLYPUS_OTLP_ENDPOINT:-polypus.manticore-powan.ts.net:4317}"
 
 cd "${mcp}"

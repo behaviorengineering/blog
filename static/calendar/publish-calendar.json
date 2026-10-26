@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-20T13:42:10Z",
+  "generatedAt": "2026-10-26T15:13:05Z",
   "channels": [
     "site-en",
     "site-es",
@@ -5757,6 +5757,34 @@
         "Por-Estas-Calles"
       ],
       "planned": "2026-10-26",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "human-condition/2026-10-27-the-ark-that-only-saves-the-loud",
+      "section": "human-condition",
+      "title": "The Ark That Only Saves the Loud",
+      "type": "opinion",
+      "categories": [
+        "Human-Condition"
+      ],
+      "planned": "2026-10-27",
       "draft": false,
       "channels": {
         "facebook": {

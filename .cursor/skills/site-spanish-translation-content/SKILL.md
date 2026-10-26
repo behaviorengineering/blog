@@ -43,7 +43,7 @@ python3 .cursor/skills/site-revise-spanish/scripts/evaluate_spanish.py \
   --scope site
 ```
 
-Default model: `LOCAL_LLM_MODEL` or `gemini_paid/gemma-4-26b-a4b-it` at `LOCAL_LLM_BASE_URL` or `${POLYPUS_BASE_URL}/v1`.
+Default model: `LOCAL_LLM_MODEL` or `gemini_paid/gemma-4-26b-a4b-it` at `LOCAL_LLM_BASE_URL` or `${POLYPUS_URL}/v1` (`.envrc` sets `POLYPUS_URL`; `POLYPUS_BASE_URL` is kept for pipelines YAML).
 
 **While drafting with this skill:** apply report fixes that fail native-Spanish, reverse-translation, or meaning-load. Do **not** wait for a separate apply confirmation (that wait is for **revise-spanish** on already-shipped copy). MUST NOT apply fluency-only rewrites that drop contrasts or verb objects (same **Apply / "mejora" guardrails** as **revise-spanish**).
 

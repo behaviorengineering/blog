@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import json
+import os
 import re
 import sys
 import urllib.error
@@ -11,7 +12,30 @@ import urllib.request
 from dataclasses import dataclass
 from typing import Callable
 
-DEFAULT_BASE = "http://127.0.0.1:1320/v1"
+_SITE_DEFAULT_POLYPUS_ORIGIN = "https://polypus.manticore-powan.ts.net"
+
+
+def polypus_origin() -> str:
+    """Polypus gateway origin (no /v1). POLYPUS_URL wins over POLYPUS_BASE_URL."""
+    for key in ("POLYPUS_URL", "POLYPUS_BASE_URL"):
+        raw = os.environ.get(key, "").strip()
+        if raw:
+            return raw.rstrip("/")
+    return _SITE_DEFAULT_POLYPUS_ORIGIN
+
+
+def openai_compatible_base_url() -> str:
+    """OpenAI chat/completions base URL for site evaluate scripts."""
+    local = os.environ.get("LOCAL_LLM_BASE_URL", "").strip()
+    if local:
+        return local.rstrip("/")
+    origin = polypus_origin()
+    if origin.endswith("/v1"):
+        return origin
+    return origin + "/v1"
+
+
+DEFAULT_BASE = openai_compatible_base_url()
 DEFAULT_MODEL = "gemini_paid/gemma-4-26b-a4b-it"
 TEMPERATURE = 0.25
 MAX_TOKENS_UNIT = 1536

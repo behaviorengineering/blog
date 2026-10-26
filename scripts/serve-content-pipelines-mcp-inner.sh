@@ -20,6 +20,7 @@ fi
 "${root}/scripts/serve-build-content-pipelines-mcp.sh"
 
 export PIPELINES_API_URL="${api_url}"
+export POLYPUS_URL="${polypus_base}"
 export POLYPUS_BASE_URL="${polypus_base}"
 export POLYPUS_OTLP_ENDPOINT="${polypus_otlp}"
 exec "${bin}" --config "${cfg}" "$@"

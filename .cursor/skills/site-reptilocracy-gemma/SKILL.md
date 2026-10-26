@@ -30,7 +30,7 @@ This skill owns **Gemma prompting and pick flow** only. Bundle layout, tags, dat
 
 | Setting | Value |
 |---------|--------|
-| Gateway | `LOCAL_LLM_BASE_URL` or `http://127.0.0.1:1320/v1` |
+| Gateway | `LOCAL_LLM_BASE_URL` or `${POLYPUS_URL}/v1` (`.envrc`) |
 | Model | `LOCAL_LLM_MODEL` or `gemini_paid/gemma-4-26b-a4b-it` |
 | Thinking | Do not send CF `enable_thinking`; gemini_paid may return `reasoning_details` |
 | Pack | **`packs/episode_copy.md`** |
