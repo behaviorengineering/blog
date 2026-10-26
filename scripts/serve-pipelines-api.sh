@@ -19,9 +19,9 @@ if [[ -f "${forms}" ]]; then
 	extra_args+=(--content-forms "${forms}")
 fi
 
-polypus_base="${POLYPUS_BASE_URL:-https://polypus.manticore-powan.ts.net}"
+polypus_base="${POLYPUS_URL:-${POLYPUS_BASE_URL:-https://polypus.manticore-powan.ts.net}}"
 polypus_otlp="${POLYPUS_OTLP_ENDPOINT:-polypus.manticore-powan.ts.net:4317}"
 # Relative migration paths (migrations/shared) resolve from the pipelines module.
 cd "${lib}"
-exec env "POLYPUS_BASE_URL=${polypus_base}" "POLYPUS_OTLP_ENDPOINT=${polypus_otlp}" \
+exec env "POLYPUS_URL=${polypus_base}" "POLYPUS_BASE_URL=${polypus_base}" "POLYPUS_OTLP_ENDPOINT=${polypus_otlp}" \
 	"${bin}" serve "${extra_args[@]}" "$@"

@@ -18,6 +18,7 @@ if str(_SKILLS) not in sys.path:
     sys.path.insert(0, str(_SKILLS))
 from site_local_eval_common.common import (  # noqa: E402
     DEFAULT_BASE,
+    openai_compatible_base_url,
     DEFAULT_MODEL,
     chat_complete,
     die,
@@ -222,7 +223,7 @@ def main() -> None:
     if not beats:
         die(f"No slide text found in {carousel_path}")
 
-    base = os.environ.get("LOCAL_LLM_BASE_URL", DEFAULT_BASE)
+    base = openai_compatible_base_url()
     api_key = os.environ.get("LOCAL_LLM_API_KEY")
     system = load_pack_system()
     user = (

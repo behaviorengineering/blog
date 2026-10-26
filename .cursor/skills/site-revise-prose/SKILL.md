@@ -2,7 +2,7 @@
 name: site-revise-prose
 description: >-
   Evaluate-only local prose critique for Hugo posts via OpenAI-compatible gateway
-  (default http://127.0.0.1:1320/v1). Scores human-friendliness, bar-test tone, and
+  (default `${POLYPUS_URL}/v1` from `.envrc`). Scores human-friendliness, bar-test tone, and
   AI artifacts; does not rewrite content. Triggers: revise-prose, local prose
   review, local evaluate, bar-test critique, human-friendliness score,
   evaluate-only.
@@ -39,7 +39,7 @@ Prompt pack filled by the CLI: **`packs/evaluate.md`**.
 
 | Setting | Value |
 |---------|--------|
-| Base URL | `LOCAL_LLM_BASE_URL` or `http://127.0.0.1:1320/v1` |
+| Base URL | `LOCAL_LLM_BASE_URL` or `${POLYPUS_URL}/v1` (`.envrc`; legacy `POLYPUS_BASE_URL`) |
 | Model | `LOCAL_LLM_MODEL` or `gemini_paid/gemma-4-26b-a4b-it` |
 | Second opinion | `--model @cf/zai-org/glm-4.7-flash` |
 | Scope | `full` (title + list fields + body) |

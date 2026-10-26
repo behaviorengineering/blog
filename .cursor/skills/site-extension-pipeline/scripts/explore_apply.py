@@ -37,7 +37,7 @@ _SKILLS = REPO_ROOT / ".cursor" / "skills"
 if str(_SKILLS) not in sys.path:
     sys.path.insert(0, str(_SKILLS))
 
-from site_local_eval_common.common import DEFAULT_BASE, die  # noqa: E402
+from site_local_eval_common.common import DEFAULT_BASE, die, openai_compatible_base_url  # noqa: E402
 
 MODEL = "gemini_paid/gemma-4-26b-a4b-it"
 
@@ -279,7 +279,7 @@ def main() -> int:
     parser.add_argument("--essay", type=Path, required=True)
     parser.add_argument("--proposal", type=Path, required=True)
     parser.add_argument("--candidates", type=Path, default=None)
-    parser.add_argument("--base-url", default=DEFAULT_BASE)
+    parser.add_argument("--base-url", default=openai_compatible_base_url())
     parser.add_argument(
         "--apply",
         action="store_true",

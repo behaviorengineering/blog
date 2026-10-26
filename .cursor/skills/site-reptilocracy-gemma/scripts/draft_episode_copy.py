@@ -20,6 +20,7 @@ if str(_SKILLS) not in sys.path:
     sys.path.insert(0, str(_SKILLS))
 from site_local_eval_common.common import (  # noqa: E402
     DEFAULT_BASE,
+    openai_compatible_base_url,
     DEFAULT_MODEL,
     die,
 )
@@ -198,7 +199,7 @@ def main() -> None:
     parser.add_argument("--temperature", type=float, default=0.7)
     args = parser.parse_args()
 
-    base = args.base_url or os.environ.get("LOCAL_LLM_BASE_URL") or DEFAULT_BASE
+    base = args.base_url or openai_compatible_base_url()
     model = args.model or os.environ.get("LOCAL_LLM_MODEL") or DEFAULT_MODEL
     api_key = os.environ.get("LOCAL_LLM_API_KEY") or os.environ.get("OPENAI_API_KEY")
 

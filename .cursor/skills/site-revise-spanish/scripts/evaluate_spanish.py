@@ -21,6 +21,7 @@ if str(_SKILLS) not in sys.path:
 from site_local_eval_common.common import (  # noqa: E402
     DEFAULT_BASE,
     DEFAULT_MODEL,
+    openai_compatible_base_url,
     MAX_TOKENS_WHOLE,
     Unit,
     chat_complete,
@@ -398,7 +399,7 @@ def main() -> None:
     )
     p.add_argument(
         "--base-url",
-        default=os.environ.get("LOCAL_LLM_BASE_URL", DEFAULT_BASE),
+        default=openai_compatible_base_url(),
         help=f"OpenAI-compatible base URL (default: {DEFAULT_BASE})",
     )
     p.add_argument(
