@@ -58,7 +58,7 @@ Key: species choice is part of the argument (see **`characters-and-species.md`**
 
 **Gold energy (rhythm, not to copy):**
 
-- `content/cognitive-memetics/reptilocracy/2026-10-25-dont-make-eye-contact/` (psychotic break treated as a meeting that might run past 5:00)
+- `content/cognitive-memetics/reptilocracy/2026-11-02-dont-make-eye-contact/` (psychotic break treated as a meeting that might run past 5:00)
 - `content/cognitive-memetics/reptilocracy/2026-08-02-photo-op-readiness/` ("Have you done anything awful?" / "Probably.")
 - `content/cognitive-memetics/reptilocracy/2026-09-13-the-alarm-worked/` (remove the canary because it worked)
 

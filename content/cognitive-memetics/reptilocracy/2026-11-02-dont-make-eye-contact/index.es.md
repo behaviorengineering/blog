@@ -1,6 +1,6 @@
 ---
-translationKey: "2026-10-25-reptilocracy-dont-make-eye-contact"
-date: '2026-10-25T01:00:00+11:00'
+translationKey: "2026-11-02-reptilocracy-dont-make-eye-contact"
+date: '2026-11-02T01:00:00+11:00'
 heading_code: W26
 project: Reptilocracy 🦎🏛️
 title: "No cruces la mirada"
@@ -36,6 +36,7 @@ tags:
 categories: ["Cognitive-Memetics", "Reptilocracy"]
 aliases:
   - "/es/cognitive-memetics/reptilocracy/2026-10-25-dont-make-eye-contact/"
+  - "/es/cognitive-memetics/reptilocracy/2026-11-02-dont-make-eye-contact/"
 
 ---
 <!--more-->
