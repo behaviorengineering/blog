@@ -1,7 +1,7 @@
 ---
 translationKey: "2026-09-19-the-pain-that-looks-like-personality"
 date: '2026-09-19T01:00:00+11:00'
-title: "El dolor que parece personalidad"
+title: "💬 ¿Por qué un punto en un mensaje puede golpear como un puño?"
 type: video
 description: |
   - Un mensaje de texto es capaz de desencadenar una crisis física.
