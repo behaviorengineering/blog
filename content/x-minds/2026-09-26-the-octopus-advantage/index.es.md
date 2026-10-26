@@ -1,7 +1,7 @@
 ---
 translationKey: "2026-09-26-the-octopus-advantage"
 date: '2026-09-26T01:00:00+11:00'
-title: "🐙 ¿Por qué tus desvíos por fin cuentan cuando la IA hace lo aburrido?"
+title: "🐙 Tus desvíos por fin cuentan cuando la IA hace lo aburrido"
 type: video
 description: |
   - La **IA** no solo compensa la **disfunción ejecutiva**: puede convertirla en una ventaja diferencial frente al trabajo rutinario.

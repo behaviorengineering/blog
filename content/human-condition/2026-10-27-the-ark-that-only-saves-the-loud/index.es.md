@@ -1,7 +1,7 @@
 ---
 translationKey: "2026-10-27-the-ark-that-only-saves-the-loud"
 date: '2026-10-27T01:00:00+11:00'
-title: "🌊 ¿Por qué construimos arcas para los negacionistas más ruidosos?"
+title: "🌊 Construimos arcas para los negacionistas más ruidosos"
 type: opinion
 description: |
   Nuestra fe en el **excepcionalismo humano** esconde los límites biológicos que empujan nuestros fracasos. Construimos arcas para los negacionistas más ruidosos y tratamos la inundación como problema de otros.
