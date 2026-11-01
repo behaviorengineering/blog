@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-26T22:21:40Z",
+  "generatedAt": "2026-11-01T06:18:37Z",
   "channels": [
     "site-en",
     "site-es",
@@ -5805,7 +5805,7 @@
       }
     },
     {
-      "bundle": "cognitive-memetics/reptilocracy/2026-11-02-dont-make-eye-contact",
+      "bundle": "cognitive-memetics/reptilocracy/2026-11-01-dont-make-eye-contact",
       "section": "cognitive-memetics",
       "title": "Don't Make Eye Contact",
       "type": "sayings",
@@ -5813,11 +5813,11 @@
         "Cognitive-Memetics",
         "Reptilocracy"
       ],
-      "planned": "2026-11-02",
+      "planned": "2026-11-01",
       "draft": false,
       "channels": {
         "facebook": {
-          "status": "missing"
+          "status": "present"
         },
         "linkedin": {
           "status": "present"
