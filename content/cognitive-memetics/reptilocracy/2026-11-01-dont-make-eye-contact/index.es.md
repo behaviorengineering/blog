@@ -1,6 +1,6 @@
 ---
-translationKey: "2026-11-02-reptilocracy-dont-make-eye-contact"
-date: '2026-11-02T01:00:00+11:00'
+translationKey: "2026-11-01-reptilocracy-dont-make-eye-contact"
+date: '2026-11-01T01:00:00+11:00'
 heading_code: W26
 project: Reptilocracy 🦎🏛️
 title: "No cruces la mirada"
