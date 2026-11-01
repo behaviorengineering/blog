@@ -38,7 +38,7 @@ Read from the English `index.md`:
 
 | Site field | Maps to |
 |---|---|
-| `title` | Hook material; **line 1** SHOULD repeat the full English **`title`** string (including any leading emoji per **Optional leading emoji in `title`** in `.cursor/rules/site-content-markdown-writing.mdc` for `social-protocols`, `human-condition`, `mind-infrastructure`, `x-minds`). Add a blank line, then the opening hook paragraphs if they are not the same text. For **`type: video`** or plain titles without emoji, still use **line 1** = full **`title`** before the body. **Do not** use this line-one rule for **cognitive-memetics** bundles that use the [two-line series header](#cognitive-memetics-two-line-header-all-series). Strip emoji **only** if the author asks or the fold leaves no room (rare). |
+| `title` | Hook material; **line 1** MUST repeat the full English **`title`** string (including any leading emoji per **Optional leading emoji in `title`** in `.cursor/rules/site-content-markdown-writing.mdc` for `social-protocols`, `human-condition`, `mind-infrastructure`, `x-minds`). Add a blank line, then one concrete scene paragraph that does not restate that title. Worked fail pair: [Hook and ladder (default posts)](#hook-and-ladder-default-posts). For **`type: video`** or plain titles without emoji, still use **line 1** = full **`title`** before the body. **Do not** use this line-one rule for **cognitive-memetics** bundles that use the [two-line series header](#cognitive-memetics-two-line-header-all-series). Strip emoji **only** if the author asks or the fold leaves no room (rare). |
 | `description` | The Claim; strong hook candidate |
 | `grounding` | Citation line at the close |
 | Body `###` sections | The argument and examples to compress |
@@ -120,7 +120,7 @@ When the source `index.md` has a non-empty `tags` array:
 ## Structure
 
 ```text
-[Hook: line 1 often repeats site title with any leading emoji; then ≤ 2 more short lines if needed]
+[Hook: line 1 is the full English title, including any leading emoji; then one concrete scene paragraph that does not restate that title]
 
 [Blank line]
 
@@ -543,7 +543,8 @@ Shorter beats a mini article.
 ## Tone
 
 Same register as the site post. Informal-standard English. Short declarative
-sentences. Direct address ("you", "we") is fine for stakes.
+sentences. Direct address ("you", "we") is fine for stakes. Default posts MUST
+also pass [Hook and ladder (default posts)](#hook-and-ladder-default-posts).
 
 **Reptilocracy:** street-smart and conversational; **cooler and plainer** than
 the site. Rewrite analytic site lines for LinkedIn; do not copy them verbatim.
@@ -595,6 +596,170 @@ For **Reptilocracy**, same rule: `content/cognitive-memetics/reptilocracy/<bundl
 
 The file is plain text: no front matter, no Markdown, just the post exactly
 as it would be pasted into LinkedIn.
+
+## Hook and ladder (default posts)
+
+Applies to default posts (claims, video, `social-protocols`, `human-condition`, `mind-infrastructure`, `x-minds`). Cognitive-memetics fold-first layouts keep their own templates.
+
+Worked pair: `content/human-condition/2026-10-27-the-ark-that-only-saves-the-loud/`. English `title` is `🌊 We build arks for the loudest deniers`. The kept `linkedin.txt` is the pass. The fail quotes below are the draft that used the folder slug as line 1.
+
+**CONSTRAINT:** Line 1 MUST be the English `title` string, including its leading emoji when the title has one.
+
+- Enforcement: Compare line 1 to `title` in English `index.md`, character for character after the YAML quotes
+- Violation: STOP, replace line 1 with that title string
+
+CORRECT:
+
+```text
+🌊 We build arks for the loudest deniers
+```
+
+PROHIBITED (folder slug used as the title):
+
+```text
+The Ark That Only Saves the Loud
+```
+
+**CONSTRAINT:** The paragraph under the title MUST add a concrete scene from the essay. It MUST NOT restate the title with an abstract label.
+
+- Enforcement: Read that paragraph alone. It names a physical scene or mechanism the title did not already say
+- Violation: STOP, replace the abstract restatement with one scene from the essay
+
+CORRECT:
+
+```text
+We assume our intelligence makes us immune to natural limits. In reality, we are just apes with high-voltage tools, pretending the water isn't rising.
+```
+
+PROHIBITED (abstract label, then the title again):
+
+```text
+We treat human exceptionalism like gravity. Then we build arks for the loudest deniers and call the flood someone else's problem.
+```
+
+**CONSTRAINT:** Each claim MUST be stated as what is true. MUST NOT use a negation-first pair (`did not X`, then the real claim; `X, not Y`).
+
+- Enforcement: Scan the body for `did not` / `not a` contrasts that exist only to set up the next clause
+- Violation: STOP, rewrite that sentence as the positive claim
+
+CORRECT:
+
+```text
+the gods wiped out humanity because our noise ruined their sleep
+```
+
+PROHIBITED:
+
+```text
+the gods did not punish sin. They could not sleep because we were too noisy. We were a nuisance, not a chosen species.
+```
+
+**CONSTRAINT:** MUST NOT add a first-person singular reaction the English essay does not already say.
+
+- Enforcement: Search the LinkedIn body for `I` and `me`. Each hit must already appear in English `index.md`
+- Violation: STOP, delete the added reaction
+
+CORRECT:
+
+```text
+and that diagnosis still holds up today.
+```
+
+PROHIBITED:
+
+```text
+That version scares me more than Noah, because it still describes us.
+```
+
+**CONSTRAINT:** Each `✜` rung MUST carry one mechanism. A definition and the scene that illustrates that same mechanism MAY share a rung. A second mechanism MUST get its own `✜`. A rung MUST NOT end on a noun fragment.
+
+- Enforcement: Name the mechanism of each `✜` paragraph in one phrase. Two names means a split. A rung that ends without a finite verb fails
+- Violation: STOP, split the extra mechanism onto its own `✜`, and finish the fragment as a sentence
+
+CORRECT (denial mechanism, then its city scene, in one rung):
+
+```text
+✜ Biologist Ajit Varki names the mental shield we rely on: the Mind Over Reality Transition (MORT). Self-awareness required a biological reflex to deny unbearable truths so we could keep functioning, and modern cities now use that same reflex to ignore rising seas and keep business running.
+```
+
+CORRECT (the cortisol mismatch is the next mechanism, so it is the next rung):
+
+```text
+✜ Our biological hardware also clashes with our tools. A manager steering a global supply chain feels the same cortisol spike from a critical email that an ancestor felt when spotting a predator in the brush, which leaves planetary systems running on stone-age anxieties.
+```
+
+PROHIBITED (denial scene glued to the cortisol mismatch, then a fragment):
+
+```text
+✜ Now, cities use that same reflex to ignore rising seas so business can run. And a manager running a global supply chain feels the same cortisol spike from a sharp email that an ancestor felt facing a predator. Stone-age brains, planetary tools.
+```
+
+**CONSTRAINT:** IF the body opens a `✜` ladder, the payoff beat MUST keep `✜`. The unmarked lines after that beat are the close only.
+
+- Enforcement: Find the last argument beat before the close. If any earlier beat starts with `✜`, this beat starts with `✜` too
+- Violation: STOP, put `✜` on the payoff beat
+
+CORRECT:
+
+```text
+✜ We repeat that selection error in the modern lifeboats we build, from private bunkers to Mars plans and walled estates. Because entry goes to wealth and political influence, we are building ships for the people best at pretending the water is still calm.
+```
+
+PROHIBITED (marker dropped; four short sentences in a row):
+
+```text
+Look at the modern lifeboats. Bunkers, Mars plans, walled estates. Entry goes to wealth and influence. We are building ships for the people best at pretending the water is not rising.
+```
+
+**CONSTRAINT:** The close MUST be the hook reframe (one to three short sentences). MUST NOT append the site's reader exercise after that reframe.
+
+- Enforcement: The body ends on the reframe. No imperative exercise follows it before the hashtag line
+- Violation: STOP, delete the extra exercise
+
+CORRECT:
+
+```text
+Are we selecting for sanity or for noise? A vessel steered by skilled deniers is just the old world, floating.
+```
+
+PROHIBITED:
+
+```text
+Are we selecting for sanity or for noise? A vessel steered by skilled deniers is just the old world, floating.
+
+Name one risk you keep filing under business as usual, and the reflex that keeps it distant.
+```
+
+### Checklist
+
+- [ ] **Title string:** line 1 matches English `title`
+      Method: Compare line 1 to `title` in `index.md`
+      Pass: Same characters, including a leading emoji when the title has one
+      Fail: STOP, replace line 1
+- [ ] **Concrete scene:** the paragraph under the title adds a scene
+      Method: Read that paragraph with the title covered
+      Pass: It names a scene or mechanism the title did not already say
+      Fail: STOP, replace the abstract restatement
+- [ ] **Positive claim:** no negation-first pair
+      Method: Scan for `did not` and `not a` contrasts that only set up the next clause
+      Pass: None
+      Fail: STOP, rewrite as the positive claim
+- [ ] **No added "I":** first person singular is already in the essay
+      Method: Search the LinkedIn body for `I` and `me`
+      Pass: Each hit is already in English `index.md`, or there is no hit
+      Fail: STOP, delete the added reaction
+- [ ] **One mechanism per rung:** each `✜` has one mechanism and a finite verb
+      Method: Name each rung's mechanism in one phrase
+      Pass: One name per rung, and the rung is a sentence
+      Fail: STOP, split the extra mechanism and finish any fragment
+- [ ] **Payoff keeps the marker:** a `✜` ladder stays marked through the payoff
+      Method: If any beat starts with `✜`, check the last beat before the close
+      Pass: That beat starts with `✜`, or the post never used `✜`
+      Fail: STOP, add `✜` to the payoff beat
+- [ ] **One close:** the reframe is the last body text
+      Method: Read the lines between the payoff and the hashtag line
+      Pass: Those lines are the reframe only
+      Fail: STOP, delete the reader exercise
 
 ## Reference example
 
