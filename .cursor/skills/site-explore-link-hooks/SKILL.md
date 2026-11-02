@@ -19,9 +19,9 @@ description: >-
 - **Thread row:** Reader opens your completed Perplexity answer set (`type: perplexity_thread` + real `url`).
 - **Query row:** Reader opens a new search with the full question prefilled (`type: perplexity_query` + `query`).
 
-Load after explore targets exist (real thread URL and/or full pasteable query). MUST load only for **research-review-approved** candidates (see `site-explore-research-review`). MUST load before any patch to `reader_landing.explore`.
+Load after explore targets exist (real thread URL and/or full pasteable query). For **link-only** URL wiring with unchanged label/hook, see `.cursor/skills/site-essay-extend-explore/SKILL.md` → **Link-only mode**; do not load this skill. Full pipeline batch: load only for **research-review-approved** candidates (see `site-explore-research-review`). MUST load before any patch that adds or changes `label` or `hook`.
 
-**CONSTRAINT:** The agent MUST NOT write or edit `label` or `hook` strings without a Gemma thinking pass on Polypus. The agent MAY only paste Gemma-approved YAML into front matter, plus operator-supplied `url` and `query` text.
+**CONSTRAINT:** The agent MUST NOT write or edit `label` or `hook` without a Gemma thinking pass on Polypus, except link-only mode when copy is unchanged.
 
 - Enforcement: Every label/hook in the diff came from the latest Gemma response (or a Gemma revision pass)
 - Violation: STOP, run Gemma; delete agent-authored link copy

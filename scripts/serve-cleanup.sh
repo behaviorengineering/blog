@@ -6,7 +6,7 @@ root="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$root"
 
 SOCK="$root/tmp/process-compose.sock"
-ports=(3848 3849 3850)
+ports=(3848 3849 3850 3860)
 
 list_descendants() {
 	local pid="$1"
@@ -100,12 +100,14 @@ rm -f "$SOCK"
 # Substring needles hit both ./scripts/... and absolute script paths.
 kill_trees_matching "scripts/serve-process.sh"
 kill_trees_matching "scripts/serve-pipelines-api.sh"
+kill_trees_matching "scripts/serve-tenant-admin.sh"
 kill_trees_matching "scripts/serve-content-pipelines-mcp.sh"
 kill_trees_matching "scripts/serve-carousel-save.sh"
 # Orphaned wgo after the wrapper is SIGKILL'd (new process group, PPID 1).
 kill_trees_matching "-cd ${root}/providers/content-pipelines-mcp"
 kill_trees_matching "carousel-save -addr 127.0.0.1:3848"
 kill_trees_matching "${root}/tmp/pipelines-serve"
+kill_trees_matching "${root}/tmp/tenant-admin-serve"
 kill_trees_matching "${root}/tmp/content-pipelines-mcp"
 kill_trees_matching "${root}/tmp/carousel-save"
 
