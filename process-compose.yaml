@@ -3,6 +3,10 @@
 # Requires process-compose, hugo, and go on PATH.
 # User-level MCP config supplies PIPELINES_BIN / PIPELINES_DIR and credential refs.
 # All Go services are prebuilt by scripts/serve-up.sh (task serve); wgo rebuilds the same tmp/ binaries.
+# MCP stays on localhost :3849. Essay OpenAPI goes to tenant-admin HTTPS
+# (https://pipelines-admin.manticore-powan.ts.net). Pipelines stay loopback
+# binds; process tailscale-serve publishes them on 443 after both APIs are
+# healthy (scripts/serve-tailscale.sh).
 
 version: "0.5"
 
@@ -47,9 +51,9 @@ processes:
   pipelines-api:
     command: ./scripts/serve-process.sh ./scripts/serve-pipelines-api.sh
     environment:
-      - POLYPUS_URL=https://polypus.manticore-powan.ts.net
-      - POLYPUS_BASE_URL=https://polypus.manticore-powan.ts.net
-      - POLYPUS_OTLP_ENDPOINT=polypus.manticore-powan.ts.net:4317
+      - POLYPUS_URL=https://polypus-local.manticore-powan.ts.net
+      - POLYPUS_BASE_URL=https://polypus-local.manticore-powan.ts.net
+      - POLYPUS_OTLP_ENDPOINT=polypus-local.manticore-powan.ts.net:4317
     readiness_probe:
       exec:
         command: curl -sf http://127.0.0.1:3850/readyz
@@ -65,15 +69,61 @@ processes:
       signal: 15
       timeout_seconds: 35
 
+  tenant-admin:
+    command: ./scripts/serve-process.sh ./scripts/serve-tenant-admin.sh
+    environment:
+      - POLYPUS_URL=https://polypus-local.manticore-powan.ts.net
+      - POLYPUS_BASE_URL=https://polypus-local.manticore-powan.ts.net
+      - POLYPUS_OTLP_ENDPOINT=polypus-local.manticore-powan.ts.net:4317
+    depends_on:
+      pipelines-api:
+        condition: process_healthy
+    readiness_probe:
+      exec:
+        command: curl -sf http://127.0.0.1:3860/readyz
+      initial_delay_seconds: 2
+      period_seconds: 2
+      timeout_seconds: 5
+      success_threshold: 1
+      failure_threshold: 30
+    availability:
+      restart: on_failure
+      backoff_seconds: 2
+    shutdown:
+      signal: 15
+      timeout_seconds: 15
+
+  tailscale-serve:
+    command: ./scripts/serve-tailscale.sh
+    depends_on:
+      pipelines-api:
+        condition: process_healthy
+      tenant-admin:
+        condition: process_healthy
+    readiness_probe:
+      exec:
+        command: curl -4 -sf https://pipelines-admin.manticore-powan.ts.net/readyz
+      initial_delay_seconds: 2
+      period_seconds: 3
+      timeout_seconds: 8
+      success_threshold: 1
+      failure_threshold: 40
+    availability:
+      restart: on_failure
+      backoff_seconds: 3
+    shutdown:
+      signal: 15
+      timeout_seconds: 5
+
   content-pipelines-mcp:
     command: ./scripts/serve-process.sh ./scripts/serve-content-pipelines-mcp.sh
     environment:
-      - PIPELINES_API_URL=http://127.0.0.1:3850
-      - POLYPUS_URL=https://polypus.manticore-powan.ts.net
-      - POLYPUS_BASE_URL=https://polypus.manticore-powan.ts.net
-      - POLYPUS_OTLP_ENDPOINT=polypus.manticore-powan.ts.net:4317
+      - PIPELINES_API_URL=https://pipelines-admin.manticore-powan.ts.net
+      - POLYPUS_URL=https://polypus-local.manticore-powan.ts.net
+      - POLYPUS_BASE_URL=https://polypus-local.manticore-powan.ts.net
+      - POLYPUS_OTLP_ENDPOINT=polypus-local.manticore-powan.ts.net:4317
     depends_on:
-      pipelines-api:
+      tailscale-serve:
         condition: process_healthy
     readiness_probe:
       exec:

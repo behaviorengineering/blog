@@ -2,7 +2,8 @@
 name: site-extension-pipeline
 description: >-
   Blog-side workflow for essay extensions: Gemma research prompts, Perplexity
-  thread, Gemma explore hooks, optional companion draft. Use when formalizing
+  thread, Gemma explore hooks, optional companion draft. Link-only mode patches
+  thread URLs with existing label/hook (no export/proposal). Use when formalizing
   extension work before content-pipelines MCP owns it.
 ---
 
@@ -22,7 +23,13 @@ Human-driven loop on the Hugo host (future: content-pipelines MCP verbs).
 
 The on-page section title is **Explore further** (EN) / explore copy in ES. Template: `layouts/partials/reader-landing.html`.
 
-## Loop
+## Link-only mode
+
+When the operator says **just link**, **only link**, **no export**, or pastes Perplexity thread URLs to attach to existing explore rows, follow **Link-only mode** in `.cursor/skills/site-essay-extend-explore/SKILL.md`. Patch EN and ES front matter only. MUST NOT run export, proposal, apply, or share-manifest tasks in that turn unless the operator asks for the full batch.
+
+On **`type: video`** posts, explore MUST NOT repeat the page YouTube URL as `type: source`.
+
+## Loop (full pipeline batch)
 
 1. **Source:** Read English `index.md`; name settled thesis and one unpaid hinge.
 2. **Research packet:** Assemble essay path, 2 or 3 target hinges, Gemma PRIMARY/BACKUP prompts, existing explore excludes, and candidate rows (`id`, `url`, `hinge`, export or summary). See **Research packet** in `site-essay-extend-explore` and `site-explore-research-review`.

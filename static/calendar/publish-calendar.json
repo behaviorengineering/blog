@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T13:22:29Z",
+  "generatedAt": "2026-11-02T14:46:36Z",
   "channels": [
     "site-en",
     "site-es",
@@ -5818,6 +5818,34 @@
       "channels": {
         "facebook": {
           "status": "present"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "x-minds/2026-11-03-one-label-closes-the-file",
+      "section": "x-minds",
+      "title": "A single label is a ceiling rather than a map",
+      "type": "video",
+      "categories": [
+        "X-Minds"
+      ],
+      "planned": "2026-11-03",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
         },
         "linkedin": {
           "status": "present"

@@ -3,9 +3,9 @@ name: site-essay-extend-explore
 description: >-
   Ships extension research as Explore further links on a published post
   (reader_landing.explore: perplexity_thread, perplexity_query, Gemma hooks).
-  Gemma thinking drafts Perplexity research prompts from the essay when asked.
-  Use for follow-up searches, Perplexity threads, Dig deeper, or extension
-  research that should become clickable links, not a new page.
+  Link-only mode: operator pastes thread URLs; patch YAML with existing
+  label/hook, no export or proposal pipeline. Gemma drafts Perplexity prompts
+  when asked. Use for follow-up searches, Perplexity threads, Dig deeper.
 ---
 
 # Site essay extend explore
@@ -16,7 +16,8 @@ description: >-
 
 - **Section:** Reader landing panel on the post (i18n H3 **Explore further**), below **Go further** takeaways.
 - **Template:** `layouts/partials/reader-landing.html` renders `Params.reader_landing.explore`.
-- **Keep:** Existing `type: related` and `type: source` rows unless the operator asks to remove them.
+- **Keep:** Existing `type: related` rows unless the operator asks to remove them.
+- **Video picks (`type: video`):** MUST NOT add a `type: source` row in **Explore further** for the same YouTube watch URL or `youtube_id` already embedded on the page. The embed is the source; explore is for Perplexity threads and queries only.
 - **Add or replace:** `perplexity_thread` (completed research URL) and/or `perplexity_query` (prefilled new search). Each perplexity row MUST have `label`, `hook`, and `url` or `query`.
 
 MUST NOT create a sibling `content/` bundle for extension research unless the operator explicitly asked for a published companion page. MUST NOT dump research only in chat when the goal is to extend the article for readers.
@@ -54,6 +55,39 @@ Load when the operator wants follow-up searches, Perplexity queries, or Dig deep
 - User points at `index.md` `reader_landing.explore`
 
 MUST NOT load this skill to rewrite the essay body. MUST NOT treat a prefilled question as completed research.
+
+## Link-only mode (default when operator pastes URLs)
+
+**Moral:** Operator already ran Perplexity and only wants live thread links on the post. Wire URLs in front matter; do not run the batch pipeline.
+
+**Triggers (first match):** Operator says **just link**, **only link**, **no export**, or pastes one or more `https://www.perplexity.ai/search/...` URLs to attach to existing explore rows (for example Q1, Q2, Q3) without asking for proposal, review, or hooks.
+
+**CONSTRAINT:** In link-only mode the agent MUST patch `reader_landing.explore` directly on English `index.md` and Spanish `index.es.md` when present. MUST map each operator URL to the matching existing `perplexity_query` row (same order, same label, or operator Q-number). MUST set `type: perplexity_thread`, add `url`, remove `query`. MUST keep existing `label` and `hook` unchanged on both languages.
+
+**CONSTRAINT:** In link-only mode the agent MUST NOT run `go tool task explore-fetch-exports`, MCP **`perplexity_export`**, `explore-proposal`, `explore-apply`, `explore-share-*`, or write `tmp/explore-proposals/.../candidates.json` unless the operator later asks for the full batch pipeline.
+
+**CONSTRAINT:** In link-only mode the agent MUST NOT load `site-explore-research-review` or `site-explore-link-hooks` when label and hook already exist and the diff only adds or changes `url` and `type`.
+
+- Enforcement: Diff is URL and type only; no Polypus calls for copy
+- Violation: STOP, drop export or Gemma steps; apply link-only patch only
+
+CORRECT:
+```text
+Operator: Q1 https://www.perplexity.ai/search/... Q2 ... Q3 ... (just link)
+→ Match three existing perplexity_query rows
+→ perplexity_thread + url; drop query on EN and ES
+→ Remind: set each thread to Anyone with the link before deploy
+```
+
+PROHIBITED:
+```text
+Operator pasted three URLs
+→ explore-fetch-exports + Gemma review before YAML
+```
+
+**MAY:** Remind the operator to set Perplexity **Anyone with the link** before Hugo deploy. MUST NOT block the YAML patch on share manifest or incognito verify in link-only mode.
+
+Link-only does **not** apply when the operator adds a **new** explore row without `label`/`hook`, changes link copy, or asks for Gemma hooks or full pipeline ship. Then use **Steps (full pipeline batch)** below.
 
 ## Perplexity research prompt (Gemma)
 
@@ -93,7 +127,7 @@ Use one JSON or operator checklist per essay when running 2 or 3 Perplexity proj
 
 Example: [tmp/explore-proposals/2026-09-26-the-octopus-advantage/candidates.json](/Users/hector/Xynova/ai/behaviourengineering/site/tmp/explore-proposals/2026-09-26-the-octopus-advantage/candidates.json)
 
-**CONSTRAINT:** MUST NOT patch Hugo until the operator accepts a proposal from `scripts/explore_proposal.py` or explicitly says to apply. MUST NOT ship `perplexity_thread` URLs until the operator shared each thread in Perplexity as **Anyone with the link** and verified in incognito (`go tool task verify-explore-links`).
+**CONSTRAINT:** Full pipeline batch MUST NOT patch Hugo until the operator accepts a proposal from `scripts/explore_proposal.py` or explicitly says to apply with `explore-apply`. Link-only mode MAY patch immediately when **Link-only mode** triggers apply. Before deploy, every live `perplexity_thread` SHOULD be **Anyone with the link** (incognito verify optional in link-only; mandatory before production deploy when operator uses full pipeline share checklist).
 
 ## Core constraints
 
@@ -129,7 +163,7 @@ label: "Google effect on memory"
 query: "How does the Google effect impact long-term memory for offloaded facts?"
 ```
 
-**CONSTRAINT:** Each shipped `perplexity_thread` and `perplexity_query` MUST include Gemma-authored `label` and `hook` from `.cursor/skills/site-explore-link-hooks/SKILL.md` (Polypus Gemma 4, thinking). The agent MUST NOT draft link titles or sublines. MUST NOT patch explore YAML until Gemma Call B returns `approve: yes` (or the operator explicitly overrides).
+**CONSTRAINT:** Each **new or refreshed** `label` or `hook` MUST come from `.cursor/skills/site-explore-link-hooks/SKILL.md` (Polypus Gemma 4, Call A + Call B). The agent MUST NOT draft link titles or sublines. Link-only upgrades that keep existing label and hook are exempt. Full pipeline batch MUST NOT patch explore YAML until Gemma Call B returns `approve: yes` (or the operator explicitly overrides).
 
 - Enforcement: Diff shows Gemma-sourced label/hook only; review pass logged
 - Violation: STOP, load `site-explore-link-hooks`; delete agent copy
@@ -197,7 +231,16 @@ PROHIBITED:
 ¿Cómo interactúa el pensamiento divergente con workflows de IA?
 ```
 
-## Steps
+## Steps (link-only)
+
+1. **Inventory:** List existing `perplexity_query` rows on EN (and ES).
+2. **Map URLs:** Match operator URLs to rows (order, label, or Q1/Q2/Q3).
+3. **Patch:** `perplexity_thread` + `url`; remove `query`; keep `label` and `hook` on both languages. MUST NOT add or keep a `type: source` YouTube row on `type: video` posts (embed is enough).
+4. **Remind:** Public Perplexity share before deploy (no export or proposal tasks).
+
+## Steps (full pipeline batch)
+
+Use when the operator asks for proposal, research review, new link copy, or exports. Skip when **Link-only mode** applies.
 
 1. **Inventory:** List existing `explore` labels and queries on EN (and ES if present).
 2. **Thesis packet:** One short block: claim, examples, close, rows to exclude.
@@ -219,6 +262,10 @@ PROHIBITED:
 - Tooling that matches interest-based attention (named systems, not "use ChatGPT")
 
 ## Pre-completion checklist
+
+**Link-only:** URLs mapped; EN and ES patched; no export or proposal tasks; deploy reminder for public share only.
+
+**Full pipeline batch:**
 
 - [ ] **Gemma create + review:** Call A and Call B from `site-explore-link-hooks` completed; `approve: yes`
       Method: Confirm Polypus responses in turn log
