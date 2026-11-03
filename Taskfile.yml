@@ -45,6 +45,7 @@ tasks:
   test:
     desc: go test cmd and internal
     cmds:
+      - bash scripts/git-hooks/packs-hook-drift_test.sh
       - go test ./cmd/... ./internal/...
 
   build:
@@ -92,11 +93,20 @@ tasks:
       - task: calendar
 
   hooks-install:
-    desc: Set core.hooksPath to .githooks
+    desc: Install Lefthook git hooks for this clone
     cmds:
-      - git config core.hooksPath .githooks
-      - chmod +x .githooks/pre-commit
-      - echo "Installed core.hooksPath=.githooks"
+      - git config --unset-all core.hooksPath || true
+      - |
+        LEFTHOOK_BIN="$(command -v lefthook || true)"
+        if [[ -z "$LEFTHOOK_BIN" && -x /opt/homebrew/bin/lefthook ]]; then
+          LEFTHOOK_BIN=/opt/homebrew/bin/lefthook
+        fi
+        if [[ -z "$LEFTHOOK_BIN" ]]; then
+          echo "lefthook is required. Install with: brew install lefthook"
+          exit 1
+        fi
+        "$LEFTHOOK_BIN" install
+      - echo "Installed Lefthook git hooks"
 
   serve:
     desc: process-compose local stack (Hugo, MCP, carousel-save)

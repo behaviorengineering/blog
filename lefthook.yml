@@ -1,3 +1,18 @@
-# Fleet hooks from cursor-packs (see lefthook/README.md)
-extends:
-  - .cursor/packs/shared/lefthook/lefthook.yml
+# Copied pack jobs stay aligned with lefthook/lefthook-go-standalone.yml.
+# Host jobs: packs-hook-drift (inform only) and publish-calendar.
+pre-commit:
+  parallel: false
+  commands:
+    packs-hook-drift:
+      run: bash scripts/git-hooks/packs-hook-drift.sh
+      priority: 10
+    default-branch-refuse:
+      run: bash scripts/git-hooks/default-branch-refuse.sh
+    go-format:
+      glob: "*.go"
+      run: bash scripts/git-hooks/go-format-staged.sh {staged_files}
+      stage_fixed: true
+    publish-calendar:
+      glob: "content/**"
+      run: bash scripts/git-hooks/publish-calendar.sh
+      stage_fixed: true

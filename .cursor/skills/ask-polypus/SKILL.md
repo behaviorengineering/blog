@@ -11,7 +11,7 @@ description: >-
 
 **Moral:** This host already points editorial Gemma at Google AI Studio **paid** on Polypus. Pack `ask-polypus` still defaults to `cf_local/@cf/google/gemma-4-26b-a4b-it`. On this site, the pack discovery/health steps still apply; the **default model does not**.
 
-Generic pack skill: `.cursor/packs/shared/skills/ask-polypus/SKILL.md`.
+Generic pack skill: Cursor plugin `cursor-packs` skill `ask-polypus`.
 
 ## Defaults (this host)
 
