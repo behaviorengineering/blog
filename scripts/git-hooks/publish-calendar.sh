@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 # Regenerate the publish calendar when staged changes touch content/.
-# Install once per clone: go tool task hooks-install
 set -euo pipefail
 
 ROOT="$(git rev-parse --show-toplevel)"
@@ -10,6 +9,6 @@ if ! git diff --cached --name-only | grep -q '^content/'; then
   exit 0
 fi
 
-echo "pre-commit: regenerating publish calendar (content/ staged)"
+echo "lefthook: regenerating publish calendar (content/ staged)"
 go tool task -d "$ROOT" calendar
 git add -- "static/calendar/publish-calendar.json"

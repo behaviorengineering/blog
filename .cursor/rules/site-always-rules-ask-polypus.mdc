@@ -9,7 +9,7 @@ description: >-
 
 # Site Ask Polypus (always overlay)
 
-Generic pack rule: `.cursor/packs/shared/rules/ask-polypus.mdc` (default model there is Cloudflare `cf_local`).
+Generic pack rule: Cursor plugin `cursor-packs` rule `ask-polypus` (default model there is Cloudflare `cf_local`).
 
 Host skill: `.cursor/skills/ask-polypus/SKILL.md`.
 

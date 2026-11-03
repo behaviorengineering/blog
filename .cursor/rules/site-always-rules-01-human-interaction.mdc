@@ -10,7 +10,7 @@ description: >-
 
 # Site human interaction (always-rules-01 overlay)
 
-Generic human interaction: `.cursor/rules/always-rules-01-human-interaction.mdc`.
+Generic human interaction: Cursor plugin `cursor-packs` rule `always-rules-01-human-interaction`.
 
 - MUST NOT restyle files under `content/` unless the user asks.
 - Exception: `substack.md` / `substack.es.md` follow `.cursor/skills/site-substack-post/SKILL.md`.
