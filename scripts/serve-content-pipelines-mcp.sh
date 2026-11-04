@@ -19,7 +19,7 @@ if [[ ! -f "${cfg}" ]]; then
 fi
 
 # wgo's child can drop process-compose env; pass API and Polypus on argv.
-api_url="${PIPELINES_API_URL:-https://pipelines-admin.manticore-powan.ts.net}"
+api_url="${PIPELINES_API_URL:-http://127.0.0.1:3860}"
 polypus_base="${POLYPUS_URL:-${POLYPUS_BASE_URL:-https://polypus-local.manticore-powan.ts.net}}"
 polypus_otlp="${POLYPUS_OTLP_ENDPOINT:-polypus-local.manticore-powan.ts.net:4317}"
 
