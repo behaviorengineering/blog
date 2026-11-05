@@ -66,6 +66,8 @@ For **`type: claims`** (Claim / Thoughts / Grounding), use **`.cursor/skills/sit
 - Use direct address ("you", "your") to connect with the reader.
 - After the emotional hook, the **next clause** MUST name a situation, use, or who-does-what (see **Hybrid prose**). Emotion alone is not enough.
 
+**Body generate (pipeline):** When copy will go through **sayings_post** body generate, the contract matches this skill: **human-first** hook (emotion or one clarifying metaphor), then sourced **who/when** scenes. **MUST NOT require a couplet** (parallel two-beat `description`, semicolon aphorism, or mask/face fluff opener). Fence-paint metaphors are optional when coexistence needs them, not a default on every saying.
+
 ### Hybrid prose (emotion + claim)
 
 Cognitive-Memetics is **not** essay prose. Punch and street feeling are allowed. Empty polish is not.
@@ -147,7 +149,8 @@ For posts under **`content/cognitive-memetics/reptilocracy/`** (category **`Rept
 
 | Do (hybrid) | Don't (empty polish) |
 |-------------|----------------------|
-| "It is the **sigh** of someone who finally understands how broken systems work… You use it when someone **beat you to it**…" (`saying-19` fluff) | "extremely **clever**, **astute**, and **street-smart**… that kind of **street smarts**, that **practical intelligence**…" (`saying-01` fluff) |
+| "It is the **sigh** of someone who finally understands how broken systems work… You use it when someone **beat you to it**…" (`saying-19` fluff) | Couplet restack: "Style is a **mask**, character is the **face**" or silk/monkey two-beat in `description` |
+| One metaphor + uses: "warm, **polite fence paint**… You reach for it when proximity is real but **fusion** would cost trust." (`saying-21` shape) | "extremely **clever**, **astute**, and **street-smart**… that kind of **street smarts**, that **practical intelligence**…" (`saying-01` fluff) |
 | One metaphor + uses: "warm, **polite fence paint**… You reach for it when proximity is real but **fusion** would cost trust." (`saying-21` shape) | Metaphor stack with no uses: "fence paint… harmony with names still legible…" and stop |
 | Sully vignette → "**Psychological fitness checks** help maintain that capacity." (`psych-fitness` day-03) | Mandela vignette → "The long view matters." (`psych-fitness` day-24) |
 | "This week, management refreshes **Our Values**: **think big**… but don’t go overboard." (cube-cows) | "The connection is direct." / "The eve of decision." as standalone closers |
