@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-06T02:27:16Z",
+  "generatedAt": "2026-11-08T05:08:17Z",
   "channels": [
     "site-en",
     "site-es",
@@ -5900,6 +5900,35 @@
         "Por-Estas-Calles"
       ],
       "planned": "2026-11-06",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/reptilocracy/2026-11-08-bold-vision",
+      "section": "cognitive-memetics",
+      "title": "Bold Vision",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Reptilocracy"
+      ],
+      "planned": "2026-11-08",
       "draft": false,
       "channels": {
         "facebook": {
