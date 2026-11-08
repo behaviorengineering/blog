@@ -21,8 +21,8 @@ if str(_SKILLS) not in sys.path:
 from site_local_eval_common.common import (  # noqa: E402
     DEFAULT_BASE,
     openai_compatible_base_url,
-    DEFAULT_MODEL,
     die,
+    resolve_local_llm_model,
 )
 
 SCRIPT_DIR = Path(__file__).resolve().parent
@@ -57,7 +57,8 @@ def chat_complete_thinking(
     max_tokens: int = 4096,
     temperature: float = 0.7,
 ) -> tuple[str, str]:
-    """Return (content, reasoning). gemini_paid may attach reasoning_details without CF kwargs."""
+    """Return (content, reasoning). Gemma on gemini_paid is remapped to DeepInfra."""
+    model = resolve_local_llm_model(model)
     url = base_url.rstrip("/") + "/chat/completions"
     payload: dict = {
         "model": model,
@@ -204,7 +205,7 @@ def main() -> None:
     args = parser.parse_args()
 
     base = args.base_url or openai_compatible_base_url()
-    model = args.model or os.environ.get("LOCAL_LLM_MODEL") or DEFAULT_MODEL
+    model = resolve_local_llm_model(args.model)
     api_key = os.environ.get("LOCAL_LLM_API_KEY") or os.environ.get("OPENAI_API_KEY")
 
     system = load_pack_system()

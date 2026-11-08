@@ -22,6 +22,7 @@ from site_local_eval_common.common import (  # noqa: E402
     DEFAULT_MODEL,
     chat_complete,
     die,
+    resolve_local_llm_model,
 )
 
 SCRIPT_DIR = Path(__file__).resolve().parent
@@ -186,7 +187,7 @@ def main() -> None:
         "--out",
         help="Final caption path (default: bundle/linkedin-carousel.txt)",
     )
-    parser.add_argument("--model", default=os.environ.get("LOCAL_LLM_MODEL", DEFAULT_MODEL))
+    parser.add_argument("--model", default=resolve_local_llm_model())
     args = parser.parse_args()
 
     carousel_path = resolve_carousel_path(args.path)

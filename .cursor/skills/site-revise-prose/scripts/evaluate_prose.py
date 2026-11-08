@@ -27,6 +27,7 @@ from site_local_eval_common.common import (  # noqa: E402
     Unit,
     chat_complete,
     die,
+    resolve_local_llm_model,
     run_progressive,
     split_paragraphs,
 )
@@ -288,7 +289,7 @@ def main() -> None:
     )
     p.add_argument(
         "--model",
-        default=os.environ.get("LOCAL_LLM_MODEL", DEFAULT_MODEL),
+        default=resolve_local_llm_model(),
         help=f"Model id (default: {DEFAULT_MODEL})",
     )
     p.add_argument(

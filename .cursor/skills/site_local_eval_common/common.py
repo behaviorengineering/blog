@@ -36,11 +36,23 @@ def openai_compatible_base_url() -> str:
 
 
 DEFAULT_BASE = openai_compatible_base_url()
-DEFAULT_MODEL = "gemini_paid/gemma-4-26b-a4b-it"
+DEFAULT_MODEL = "deepinfra/google/gemma-4-26B-A4B-it"
 TEMPERATURE = 0.25
 MAX_TOKENS_UNIT = 1536
 MAX_TOKENS_WHOLE = 4096
 MAX_TOKENS_SYNTHESIS = 3072
+
+
+def resolve_local_llm_model(raw: str | None = None) -> str:
+    """Editorial Gemma id. Remap gemini_paid/gemma-* (empty content, finish_reason length)."""
+    if raw is None:
+        raw = os.environ.get("LOCAL_LLM_MODEL", "")
+    model = (raw or "").strip()
+    if not model:
+        return DEFAULT_MODEL
+    if model.lower().startswith("gemini_paid/gemma-"):
+        return DEFAULT_MODEL
+    return model
 
 
 def die(msg: str, code: int = 1) -> None:
@@ -57,6 +69,7 @@ def chat_complete(
     *,
     max_tokens: int = MAX_TOKENS_WHOLE,
 ) -> str:
+    model = resolve_local_llm_model(model)
     url = base_url.rstrip("/") + "/chat/completions"
     payload = {
         "model": model,

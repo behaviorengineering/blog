@@ -40,7 +40,7 @@ Prompt pack filled by the CLI: **`packs/evaluate.md`**.
 | Setting | Value |
 |---------|--------|
 | Base URL | `LOCAL_LLM_BASE_URL` or `${POLYPUS_URL}/v1` (`.envrc`; legacy `POLYPUS_BASE_URL`) |
-| Model | `LOCAL_LLM_MODEL` or `gemini_paid/gemma-4-26b-a4b-it` |
+| Model | `LOCAL_LLM_MODEL` or `deepinfra/google/gemma-4-26B-A4B-it` |
 | Second opinion | `--model @cf/zai-org/glm-4.7-flash` |
 | Scope | `full` (title + list fields + body) |
 | Mode | `progressive` (default): each list field / body paragraph judged alone with **prior units as context**, then overall synthesis. Use `--mode whole` for a single pass. |
