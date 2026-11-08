@@ -91,7 +91,7 @@ Link-only does **not** apply when the operator adds a **new** explore row withou
 
 ## Perplexity research prompt (Gemma)
 
-**CONSTRAINT:** When the operator asks for a new Perplexity research prompt (paste into Perplexity Computer or browser), the agent MUST NOT author that prompt. MUST run Polypus Gemma 4 on `gemini_paid/gemma-4-26b-a4b-it` after `GET /health` (see `.cursor/skills/ask-polypus/SKILL.md`). Do not send CF `enable_thinking`.
+**CONSTRAINT:** When the operator asks for a new Perplexity research prompt (paste into Perplexity Computer or browser), the agent MUST NOT author that prompt. MUST run Polypus Gemma 4 on `deepinfra/google/gemma-4-26B-A4B-it` after `GET /health` (see `.cursor/skills/ask-polypus/SKILL.md`). Do not send CF `enable_thinking`.
 
 - **Payload:** Full English `index.md` (front matter + body); list of existing `reader_landing.explore` labels, thread URLs, and queries to exclude; post-industrial / novelty filter from `tmp/essay-extension-skills/perplexity-computer/PROJECT-INSTRUCTIONS.md` (research mode, no essay).
 - **Ask Gemma:** One **PRIMARY_PROMPT** (2-4 sentences, hands off settled thesis, opens one unpaid hinge, requests bulleted cited research, plain US English) plus a **NO:** line (consensus clichés to reject). Optional **BACKUP_PROMPT** on a second hinge.

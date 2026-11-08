@@ -60,8 +60,8 @@ Find **`title`** lines that make a stranger think *I don't know why that happens
 
 | Setting | Value |
 |---------|--------|
-| Model | `gemini_paid/gemma-4-26b-a4b-it` |
-| Thinking | Do not send CF `enable_thinking`; gemini_paid may return `reasoning_details` |
+| Model | `LOCAL_LLM_MODEL` or `deepinfra/google/gemma-4-26B-A4B-it` |
+| Thinking | Do not send CF `enable_thinking`; named `gemini_paid` may return `reasoning_details` |
 | `max_tokens` | `8192` minimum on thinking calls (thinking can consume the budget) |
 
 **Skip without asking:** user says **`skip gemma`**, **`no gemma`**, or **`without gemma`**.

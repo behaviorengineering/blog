@@ -137,3 +137,5 @@ Use these as overlap quotes in the pitch gate. Add new titles when episodes ship
 | The Bridge Is Open | Reality failed to align with remarks |
 | Stable Enough to Remain Unpredictable | Rage inside an approved range |
 | Don't Make Eye Contact | Psychotic break vs 5:00 commute |
+| Bold Vision | Gravity optional; fonts over psychiatrist |
+| Grace Under Pressure | Lunch in the rubble of a sold bridge; remorse read as composure |

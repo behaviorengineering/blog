@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 import sys
 import urllib.error
@@ -33,9 +34,15 @@ _SKILLS = REPO_ROOT / ".cursor" / "skills"
 if str(_SKILLS) not in sys.path:
     sys.path.insert(0, str(_SKILLS))
 
-from site_local_eval_common.common import DEFAULT_BASE, die, openai_compatible_base_url  # noqa: E402
+from site_local_eval_common.common import (  # noqa: E402
+    DEFAULT_BASE,
+    DEFAULT_MODEL,
+    die,
+    openai_compatible_base_url,
+    resolve_local_llm_model,
+)
 
-MODEL = "gemini_paid/gemma-4-26b-a4b-it"
+MODEL = resolve_local_llm_model()
 MAX_TOKENS = 4096
 
 
