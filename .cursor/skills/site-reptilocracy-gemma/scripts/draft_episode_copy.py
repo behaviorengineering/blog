@@ -152,7 +152,11 @@ def build_user_message(title: str, brief: str, same_character: bool) -> str:
     parts.append(
         "Write three competing satirical card teasers (DESCRIPTION_1..3), plus TLDR and FLUFF. "
         "Knife in each teaser: mood talk is cheap; psychological fitness for leaders is not even discussed; "
-        "authority theater still covers both moods."
+        "authority theater still covers both moods. "
+        "If the brief marks a HUMAN-APPROVED JOKE SPINE or KEEP line, preserve "
+        "that concrete beat in every description candidate. Never replace a "
+        "named person, object, or action, such as a psychiatrist someone forgot "
+        "to call, with an abstract phrase such as sanity check."
     )
     return "\n".join(parts)
 

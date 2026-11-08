@@ -62,6 +62,28 @@ Agent writes clinical fluff about the stamp, pastes a Gemma teaser only for desc
 
 **CONSTRAINT:** MUST NOT brief Gemma as a policy memo, LinkedIn think-piece, MBA fog deck, or activist petition sermon. Petition CTA belongs in LinkedIn / footer i18n, not in episode `description` / `tldr` / `fluff`.
 
+### Joke clarity gate
+
+**CONSTRAINT:** Preserve the visible joke before expanding the institutional
+analysis. Reptilocracy copy should make the absurdity and the clerk's response
+clear before naming the clinical mechanism.
+
+- `DESCRIPTION_1` / `DESCRIPTION_2` / `DESCRIPTION_3` MUST each carry one
+  visible absurdity, one concrete response, and one turn.
+- Prefer a specific object, action, or person over an abstract label: a font
+  debate, a calendar check, a stamp, or a psychiatrist someone forgot to call.
+- Keep `tldr` to two or three short sentences. Name the mechanism once.
+- Keep `fluff` to the scene's concrete consequences. Do not add a second thesis
+  or explain the same image in several clinical terms.
+- A concrete clinical punchline MUST survive compression. Do not replace it
+  with a vague phrase such as "sanity check."
+- When the brief marks a **HUMAN-APPROVED JOKE SPINE** or a **KEEP** line,
+  preserve that concrete beat in every description candidate. A named person,
+  object, or action such as a psychiatrist someone forgot to call MUST NOT
+  become an abstract substitute.
+- When Dark Triad traits appear, describe the behavior shown. Do not diagnose a
+  real person or generalize a clinical disorder to an entire population.
+
 CORRECT:
 ```text
 Joke spine: same leader, smile and shout; clerk stamps emergency powers on both.

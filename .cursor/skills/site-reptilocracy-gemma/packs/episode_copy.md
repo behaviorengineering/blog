@@ -30,6 +30,24 @@ Mood gossip replaces a fitness gate.
 - No em dash (U+2014). Use comma, semicolon, colon, or parentheses.
 - US English.
 
+### Joke clarity gate
+
+- Center one visible absurdity, one concrete clerk or citizen response, and one
+  turn.
+- Let the response involve a specific object, action, or person: typography,
+  a calendar, a stamp, or a psychiatrist someone forgot to call.
+- Keep the description as the joke. Keep TLDR short and name the mechanism once.
+- Keep FLUFF on the scene and its consequence. Do not turn it into a second
+  essay about the theme.
+- Preserve a concrete clinical punchline when it makes the blind spot visible.
+  Do not flatten it into "sanity check" or another abstract substitute.
+- When the user brief marks a **HUMAN-APPROVED JOKE SPINE** or **KEEP** line,
+  preserve that concrete beat in every description candidate. Keep named
+  people, objects, and actions intact; a psychiatrist someone forgot to call
+  must not become an abstract sanity phrase.
+- Describe Dark Triad behavior shown in the scene. Do not diagnose real people
+  or claim that an entire population has a clinical disorder.
+
 ### Format rules (MUST)
 
 Thinking may run privately. After thinking, the **final answer** MUST begin with a line that is exactly:
