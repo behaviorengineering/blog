@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-08T05:08:17Z",
+  "generatedAt": "2026-11-08T13:26:38Z",
   "channels": [
     "site-en",
     "site-es",
@@ -5949,6 +5949,35 @@
       }
     },
     {
+      "bundle": "cognitive-memetics/sayings/2026-11-09-saying-44",
+      "section": "cognitive-memetics",
+      "title": "El que tapa la olla también se quema.",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-11-09",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
       "bundle": "cognitive-memetics/cows/2026-11-11-cow-w38",
       "section": "cognitive-memetics",
       "title": "The diagnosis never includes himself",
@@ -5958,6 +5987,64 @@
         "Cube-Cows"
       ],
       "planned": "2026-11-11",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/reptilocracy/2026-11-15-grace-under-pressure",
+      "section": "cognitive-memetics",
+      "title": "Grace Under Pressure",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Reptilocracy"
+      ],
+      "planned": "2026-11-15",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/sayings/2026-11-16-saying-45",
+      "section": "cognitive-memetics",
+      "title": "Tené buena memoria, sobre todo si eres mentiroso.",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-11-16",
       "draft": false,
       "channels": {
         "facebook": {

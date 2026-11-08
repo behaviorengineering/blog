@@ -58,6 +58,23 @@ const CHANNEL_BOX_ORDER = ['site-en', 'site-es', 'linkedin', 'facebook', 'substa
 const STORAGE_KEY = 'publish-calendar-view';
 
 /**
+ * Hugo page path on the same origin as the calendar (works on localhost and prod).
+ * @param {string} bundle e.g. cognitive-memetics/reptilocracy/2026-11-08-bold-vision
+ * @param {'en' | 'es'} lang
+ * @returns {string}
+ */
+function sitePathForBundle(bundle, lang) {
+  const prefix = lang === 'es' ? '/es/' : '/';
+  return `${prefix}${bundle}/`;
+}
+
+/** @param {HTMLAnchorElement} anchor */
+function openSiteLinkInNewTab(anchor) {
+  anchor.target = '_blank';
+  anchor.rel = 'noopener noreferrer';
+}
+
+/**
  * @param {string} dayKey
  * @returns {{ year: number, month: number, selectedDay: string } | null}
  */
@@ -455,8 +472,19 @@ function renderEntry(entry) {
   const meta = document.createElement('p');
   meta.className = 'calendar-entry-meta';
   const typePart = entry.type ? ` · ${entry.type}` : '';
-  meta.textContent = `${entry.section}${typePart}\n${entry.bundle}`;
+  meta.textContent = `${entry.section}${typePart}`;
   wrap.appendChild(meta);
+
+  const bundleLine = document.createElement('p');
+  bundleLine.className = 'calendar-entry-bundle';
+  const bundleLink = document.createElement('a');
+  bundleLink.className = 'calendar-entry-bundle-link';
+  bundleLink.href = sitePathForBundle(entry.bundle, 'en');
+  bundleLink.textContent = entry.bundle;
+  bundleLink.title = 'Open English post on this site (new tab)';
+  openSiteLinkInNewTab(bundleLink);
+  bundleLine.appendChild(bundleLink);
+  wrap.appendChild(bundleLine);
 
   const boxes = renderChannelBoxes(entry);
   boxes.classList.add('calendar-channel-boxes--detail');
@@ -499,10 +527,33 @@ function renderChannelBoxes(entry) {
   for (const id of CHANNEL_BOX_ORDER) {
     const ch = entry.channels[id];
     if (!ch) continue;
-    const box = document.createElement('span');
-    box.className = `calendar-channel-box calendar-channel-box--${ch.status}`;
-    box.textContent = CHANNEL_SHORT[id] || id.toUpperCase();
-    box.title = `${channelLegendLabel(id)}: ${humanStatus(ch.status)}`;
+    /** @type {HTMLElement} */
+    let box;
+    const short = CHANNEL_SHORT[id] || id.toUpperCase();
+    const title = `${channelLegendLabel(id)}: ${humanStatus(ch.status)}`;
+    if (
+      ch.status === 'present'
+      && (id === 'site-en' || id === 'site-es')
+    ) {
+      const lang = id === 'site-es' ? 'es' : 'en';
+      const link = document.createElement('a');
+      link.href = sitePathForBundle(entry.bundle, lang);
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      link.className = `calendar-channel-box calendar-channel-box--${ch.status}`;
+      link.textContent = short;
+      link.title = `${title}. Open on this site (new tab).`;
+      openSiteLinkInNewTab(link);
+      link.addEventListener('click', (event) => {
+        event.stopPropagation();
+      });
+      box = link;
+    } else {
+      box = document.createElement('span');
+      box.className = `calendar-channel-box calendar-channel-box--${ch.status}`;
+      box.textContent = short;
+      box.title = title;
+    }
     row.appendChild(box);
   }
 
