@@ -100,6 +100,24 @@ Essays / video / Substack use **Explanatory prose** in **`.cursor/rules/site-con
 - MAY keep a short staccato teaser on cube-cows or shirt lines when the claim is still legible ("**Dream big**, commute **bigger**.").
 - Project footers MAY stay manifesto-tinged; **episode** `tldr` / `fluff` / `description` MUST stay hybrid, not essay-oracle.
 
+### Joke clarity gate
+
+For cartoon satire under **`content/cognitive-memetics/`**, preserve the joke's
+visible action before explaining its theme. A reader should be able to name the
+absurdity and the character response in one breath.
+
+- MUST center one visible absurdity, one human or animal response, and one turn.
+- MUST give the response a concrete object, action, or person when possible: a
+  font debate, a calendar check, a stamp, or a psychiatrist someone forgot to call.
+- MUST let `description` carry the joke; `tldr` may name the mechanism once; and
+  `fluff` may add scene details without introducing a second thesis.
+- MUST cut abstract explanation when it repeats what the image already shows.
+- MUST keep one sharp clinical or institutional punch when it makes the blind
+  spot visible; clarity does not mean replacing it with a vague phrase such as
+  "sanity check."
+- When using Dark Triad language, MUST describe observed behavior rather than
+  diagnose a person or claim that a whole population has a disorder.
+
 #### Street Wisdom `fluff` (looser metaphor)
 
 For **`Por-Estas-Calles`** / Street Wisdom **`fluff` only**:
