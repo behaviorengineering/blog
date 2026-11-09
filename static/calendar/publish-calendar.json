@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-08T13:26:38Z",
+  "generatedAt": "2026-11-09T14:42:05Z",
   "channels": [
     "site-en",
     "site-es",
@@ -5958,6 +5958,34 @@
         "Por-Estas-Calles"
       ],
       "planned": "2026-11-09",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "social-protocols/2026-11-10-school-as-domestication",
+      "section": "social-protocols",
+      "title": "🚽 Would you ask permission in a meeting if you had to go to the toilet?",
+      "type": "claims",
+      "categories": [
+        "Social-Protocols"
+      ],
+      "planned": "2026-11-10",
       "draft": false,
       "channels": {
         "facebook": {
