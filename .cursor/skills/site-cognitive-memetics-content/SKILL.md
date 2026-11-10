@@ -395,7 +395,7 @@ For **`type: claims`** (Claim / Thoughts / Grounding), authoring rules stay in *
 
 Use one folder per post with **`index.md`** and assets beside it, for example:
 
-`content/cognitive-memetics/2006-04-02-cow-w06/index.md` + `agi.png`
+`content/cognitive-memetics/2006-04-02-cow-w06/index.md` + `agi.webp`
 
 ## Theme and style
 

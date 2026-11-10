@@ -15,15 +15,15 @@ aliases:
   - /human-condition/2026-05-15-deception-truth-bias-incentive-gaps/
   - /human-condition/2026-06-11-deception-truth-bias-incentive-gaps/
 
-featuredImage: "born-to-trust.jpg"
-featuredImagePreview: "born-to-trust.jpg"
+featuredImage: "born-to-trust.webp"
+featuredImagePreview: "born-to-trust.webp"
 
 images:
-  - born-to-trust.jpg
+  - born-to-trust.webp
   - lies-per-day.webp
 
 resources:
-  - src: born-to-trust.jpg
+  - src: born-to-trust.webp
     name: featured-image
 
 tags: ["TribeBeforeTruth", "EvolutionVsCulture", "RealityCheck", "EpistemicFog"]

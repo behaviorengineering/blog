@@ -16,14 +16,14 @@ fluff: |
   What hurts is the **calm** of it. Nobody needs to shout. Nobody needs to hide the charge. The machine already knows that **outrage** fades faster than **direct debit**, and that most people are left paying for the **opposite** of what they asked for.
 draft: false
 
-featuredImage: "democracy-annual-renewal.jpg"
-featuredImagePreview: "democracy-annual-renewal.jpg"
+featuredImage: "democracy-annual-renewal.webp"
+featuredImagePreview: "democracy-annual-renewal.webp"
 
 images:
-  - democracy-annual-renewal.jpg
+  - democracy-annual-renewal.webp
 
 resources:
-  - src: democracy-annual-renewal.jpg
+  - src: democracy-annual-renewal.webp
     name: featured-image
 
 

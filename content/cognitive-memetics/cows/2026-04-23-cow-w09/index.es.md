@@ -9,14 +9,14 @@ title: Más palo, menos explicación
 description: "Esta semana optimizamos la **IA** a la antigua: menos **guía**, más **evaluaciones de desempeño**."
 draft: false
 
-featuredImage: "harsher-feedback.png"
-featuredImagePreview: "harsher-feedback.png"
+featuredImage: "harsher-feedback.webp"
+featuredImagePreview: "harsher-feedback.webp"
 
 images:
-  - harsher-feedback.png
+  - harsher-feedback.webp
 
 resources:
-  - src: harsher-feedback.png
+  - src: harsher-feedback.webp
     name: featured-image
 
 

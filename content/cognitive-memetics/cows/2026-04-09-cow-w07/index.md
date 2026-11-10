@@ -9,14 +9,14 @@ title: Bell curve and cowbell
 description: This week, the **bell curve** decides who ‘**exceeds expectations**’ and who just needs more **cowbell**.
 draft: false
 
-featuredImage: "bell-curve.png"
-featuredImagePreview: "bell-curve.png"
+featuredImage: "bell-curve.webp"
+featuredImagePreview: "bell-curve.webp"
 
 images:
-  - bell-curve.png
+  - bell-curve.webp
 
 resources:
-  - src: bell-curve.png
+  - src: bell-curve.webp
     name: featured-image
 
 

@@ -15,14 +15,14 @@ fluff: |
   El **control narrativo** ayuda enmarcando trucos llamativos como **liderazgo fuerte** mientras etiqueta la reparación paciente como **ingenua**, lenta o políticamente imposible. "No nos faltan **ideas**, somos **adictos a los aplausos**." Sin filtros de **idoneidad psicológica** para honestidad, **enfoque** a largo plazo y valor para respaldar trabajo **poco glamoroso**, los sistemas siguen promoviendo a quienes financian **pirotecnia** y **coches payaso** en vez de soluciones reales.
 draft: false
 
-featuredImage: "overfunding-the-circus.jpg"
-featuredImagePreview: "overfunding-the-circus.jpg"
+featuredImage: "overfunding-the-circus.webp"
+featuredImagePreview: "overfunding-the-circus.webp"
 
 images:
-  - overfunding-the-circus.jpg
+  - overfunding-the-circus.webp
 
 resources:
-  - src: overfunding-the-circus.jpg
+  - src: overfunding-the-circus.webp
     name: featured-image
 
 

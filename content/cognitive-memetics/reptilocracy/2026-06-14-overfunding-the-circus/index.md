@@ -15,14 +15,14 @@ fluff: |
   **Narrative control** helps by framing attention-grabbing stunts as **strong leadership** while labelling patient repair as **naive**, slow, or politically impossible. "We're not out of **ideas**, just **addicted to applause**." Without **psychological fitness** filters for honesty, long-term **focus**, and courage to back **unglamorous** work, systems keep promoting people who fund **pyrotechnics** and **clown cars** instead of actual solutions.
 draft: false
 
-featuredImage: "overfunding-the-circus.jpg"
-featuredImagePreview: "overfunding-the-circus.jpg"
+featuredImage: "overfunding-the-circus.webp"
+featuredImagePreview: "overfunding-the-circus.webp"
 
 images:
-  - overfunding-the-circus.jpg
+  - overfunding-the-circus.webp
 
 resources:
-  - src: overfunding-the-circus.jpg
+  - src: overfunding-the-circus.webp
     name: featured-image
 
 
