@@ -16,14 +16,14 @@ fluff: |
   Lo que duele es la **calma** con la que ocurre. Nadie necesita gritar. Nadie necesita ocultar el cargo. La máquina ya sabe que la **indignación** se desvanece más rápido que un **débito directo**, y que a la mayoría le toca pagar lo **opuesto** a lo que pidió.
 draft: false
 
-featuredImage: "democracy-annual-renewal.jpg"
-featuredImagePreview: "democracy-annual-renewal.jpg"
+featuredImage: "democracy-annual-renewal.webp"
+featuredImagePreview: "democracy-annual-renewal.webp"
 
 images:
-  - democracy-annual-renewal.jpg
+  - democracy-annual-renewal.webp
 
 resources:
-  - src: democracy-annual-renewal.jpg
+  - src: democracy-annual-renewal.webp
     name: featured-image
 
 

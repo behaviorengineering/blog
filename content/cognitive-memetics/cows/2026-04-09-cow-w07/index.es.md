@@ -9,14 +9,14 @@ title: Curva de campana y cencerro
 description: "Esta semana, la **curva de campana** decide quién «**supera las expectativas**» y quién solo necesita más **cencerro**."
 draft: false
 
-featuredImage: "bell-curve.png"
-featuredImagePreview: "bell-curve.png"
+featuredImage: "bell-curve.webp"
+featuredImagePreview: "bell-curve.webp"
 
 images:
-  - bell-curve.png
+  - bell-curve.webp
 
 resources:
-  - src: bell-curve.png
+  - src: bell-curve.webp
     name: featured-image
 
 

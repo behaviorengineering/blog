@@ -15,14 +15,14 @@ fluff: |
   Los **horizontes temporales** se mantienen cortos, los líderes se enfocan en el siguiente ciclo noticioso o elección, no en el **efecto rebote** a largo plazo que estamos financiando. "Financiamos el juego y vivimos con el marcador." Sin filtros de **idoneidad psicológica** para honestidad sobre costos, restricción bajo presión de estatus y valor para decir no a movimientos atractivos pero **desestabilizadores**, las instituciones siguen promoviendo a quienes tratan la geopolítica como un **hobby de prestigio** comprado con la vida y el dinero de otros.
 draft: false
 
-featuredImage: "the-geopolitics-donation-box.jpg"
-featuredImagePreview: "the-geopolitics-donation-box.jpg"
+featuredImage: "the-geopolitics-donation-box.webp"
+featuredImagePreview: "the-geopolitics-donation-box.webp"
 
 images:
-  - the-geopolitics-donation-box.jpg
+  - the-geopolitics-donation-box.webp
 
 resources:
-  - src: the-geopolitics-donation-box.jpg
+  - src: the-geopolitics-donation-box.webp
     name: featured-image
 
 

@@ -9,14 +9,14 @@ title: Harsher feedback, not better prompts
 description: "This week, we optimize **AI** the old-fashioned way: less **guidance**, more **performance reviews**."
 draft: false
 
-featuredImage: "harsher-feedback.png"
-featuredImagePreview: "harsher-feedback.png"
+featuredImage: "harsher-feedback.webp"
+featuredImagePreview: "harsher-feedback.webp"
 
 images:
-  - harsher-feedback.png
+  - harsher-feedback.webp
 
 resources:
-  - src: harsher-feedback.png
+  - src: harsher-feedback.webp
     name: featured-image
 
 

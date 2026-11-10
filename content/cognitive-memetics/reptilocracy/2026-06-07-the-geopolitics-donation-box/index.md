@@ -15,14 +15,14 @@ fluff: |
   **Time horizons** stay short, leaders focus on the next news cycle or election, not on the long-term **blowback** we are underwriting. "We fund the game and live with the score." Without **psychological fitness** filters for honesty about costs, restraint under status pressure, and the courage to say no to attractive but **destabilising** moves, institutions keep promoting people who treat geopolitics as a **prestige hobby** bought with other people's lives and money.
 draft: false
 
-featuredImage: "the-geopolitics-donation-box.jpg"
-featuredImagePreview: "the-geopolitics-donation-box.jpg"
+featuredImage: "the-geopolitics-donation-box.webp"
+featuredImagePreview: "the-geopolitics-donation-box.webp"
 
 images:
-  - the-geopolitics-donation-box.jpg
+  - the-geopolitics-donation-box.webp
 
 resources:
-  - src: the-geopolitics-donation-box.jpg
+  - src: the-geopolitics-donation-box.webp
     name: featured-image
 
 

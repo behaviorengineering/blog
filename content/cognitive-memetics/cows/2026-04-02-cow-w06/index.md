@@ -9,14 +9,14 @@ title: Rubber duck carries the week
 description: This week, our cube‑cows are **freaking out about AGI**, while the only one actually up for any work is still the **rubber duck**.
 draft: false
 
-featuredImage: "agi.png"
-featuredImagePreview: "agi.png"
+featuredImage: "agi.webp"
+featuredImagePreview: "agi.webp"
 
 images:
-  - agi.png
+  - agi.webp
 
 resources:
-  - src: agi.png
+  - src: agi.webp
     name: featured-image
 
 

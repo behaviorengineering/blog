@@ -9,14 +9,14 @@ title: El patito de goma se lleva la semana
 description: "Esta semana, las vacas cubo **se obsesionan con la AGI**, y el único que de verdad está listo para trabajar sigue siendo el **patito de goma**."
 draft: false
 
-featuredImage: "agi.png"
-featuredImagePreview: "agi.png"
+featuredImage: "agi.webp"
+featuredImagePreview: "agi.webp"
 
 images:
-  - agi.png
+  - agi.webp
 
 resources:
-  - src: agi.png
+  - src: agi.webp
     name: featured-image
 
 
