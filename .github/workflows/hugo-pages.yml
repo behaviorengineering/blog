@@ -51,6 +51,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      pull-requests: read
     environment:
       name: github-pages
       url: https://behaviorengineering.ai/
@@ -66,12 +67,36 @@ jobs:
         with:
           hugo-version: ${{ env.HUGO_VERSION }}
 
+      # JamesIves clean deletes files not in public/. Keep only open PR preview
+      # dirs; a blanket pr-preview exclude left closed copies on gh-pages until
+      # Pages file-sync timed out (232 MB zip, 10-minute cap).
+      - name: List open PR preview paths to keep
+        id: preview-keep
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mapfile -t nums < <(gh pr list --state open --json number --jq '.[].number' | sort -n)
+          if [ "${#nums[@]}" -eq 0 ]; then
+            echo "No open PRs; production clean will drop pr-preview."
+            echo "exclude=" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          {
+            echo "exclude<<EOF"
+            for n in "${nums[@]}"; do
+              echo "pr-preview/pr-${n}"
+            done
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+          echo "Keeping preview dirs for open PRs: ${nums[*]}"
+
       - name: Deploy production to gh-pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
           folder: public
-          clean-exclude: pr-preview
+          clean-exclude: ${{ steps.preview-keep.outputs.exclude }}
           force: false
 
   preview:
@@ -134,3 +159,26 @@ jobs:
           # action's jq wait step fails with "Cannot index string with string \"commit\"".
           wait-for-pages-deployment: true
           comment: true
+
+      # pr-preview-action auto-remove on close has left CNAME stubs; wipe the
+      # slot if anything remains. Production deploy is the backstop.
+      - name: Remove leftover preview directory after close
+        if: github.event.action == 'closed'
+        env:
+          PREVIEW_DIR: pr-preview/pr-${{ github.event.number }}
+        run: |
+          set -euo pipefail
+          git fetch origin gh-pages --depth=1
+          if ! git ls-tree --name-only FETCH_HEAD -- "$PREVIEW_DIR" | grep -q .; then
+            exit 0
+          fi
+          worktree=$(mktemp -d)
+          git clone --depth=1 --branch gh-pages "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" "$worktree"
+          cd "$worktree"
+          rm -rf "$PREVIEW_DIR"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --staged --quiet && exit 0
+          git commit -m "Remove leftover Pages preview ($PREVIEW_DIR)"
+          git push
