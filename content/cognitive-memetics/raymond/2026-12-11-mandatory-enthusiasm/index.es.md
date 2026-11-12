@@ -6,7 +6,7 @@ heading_code: R11
 project: 'Everyone ❤️ Raymond 🐕📓'
 title: "Entusiasmo obligatorio"
 type: panel
-description: "Esta semana, la gerencia exige **entusiasmo espontáneo**, y **Raymond el perro** apunta que el **entusiasmo es obligatorio**."
+description: "Ante la exigencia de la gerencia de mostrar **entusiasmo espontáneo**, **Raymond el perro** señala que el **entusiasmo es obligatorio**."
 draft: false
 
 featuredImage: "mandatory-enthusiasm.webp"

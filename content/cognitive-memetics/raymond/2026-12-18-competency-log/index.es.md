@@ -6,7 +6,7 @@ heading_code: R14
 project: 'Everyone ❤️ Raymond 🐕📓'
 title: "Registro de competencias"
 type: panel
-description: "Esta semana, RR.HH. pide **cuarenta y siete competencias** en el portal, y **Raymond el perro** enseña la única con **prueba en mano**: **anotar lo que pasa**."
+description: "RR.HH. exige **cuarenta y siete competencias** en el portal; **Raymond el perro** solo muestra una con **pruebas reales**: **anotar lo que pasa**."
 draft: false
 
 featuredImage: "competency-log.webp"
