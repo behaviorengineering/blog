@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T09:51:28Z",
+  "generatedAt": "2026-11-12T03:35:35Z",
   "channels": [
     "site-en",
     "site-es",
@@ -6122,6 +6122,35 @@
       }
     },
     {
+      "bundle": "cognitive-memetics/raymond/2026-11-20-loose-ends-in-the-deck",
+      "section": "cognitive-memetics",
+      "title": "Loose ends in the deck",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Raymond"
+      ],
+      "planned": "2026-11-20",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
       "bundle": "cognitive-memetics/cows/2026-11-25-cow-w40",
       "section": "cognitive-memetics",
       "title": "The Title Inflation",
@@ -6131,6 +6160,35 @@
         "Cube-Cows"
       ],
       "planned": "2026-11-25",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/raymond/2026-11-27-the-synergy-map",
+      "section": "cognitive-memetics",
+      "title": "The synergy map",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Raymond"
+      ],
+      "planned": "2026-11-27",
       "draft": false,
       "channels": {
         "facebook": {
@@ -6180,6 +6238,35 @@
       }
     },
     {
+      "bundle": "cognitive-memetics/raymond/2026-12-04-calibration-crisis",
+      "section": "cognitive-memetics",
+      "title": "Calibration crisis",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Raymond"
+      ],
+      "planned": "2026-12-04",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
       "bundle": "cognitive-memetics/cows/2026-12-09-cow-w42",
       "section": "cognitive-memetics",
       "title": "The bragging manager",
@@ -6209,6 +6296,35 @@
       }
     },
     {
+      "bundle": "cognitive-memetics/raymond/2026-12-11-mandatory-enthusiasm",
+      "section": "cognitive-memetics",
+      "title": "Mandatory enthusiasm",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Raymond"
+      ],
+      "planned": "2026-12-11",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
       "bundle": "cognitive-memetics/cows/2026-12-16-cow-w43",
       "section": "cognitive-memetics",
       "title": "The early-warning system",
@@ -6231,6 +6347,35 @@
         },
         "site-es": {
           "status": "missing"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/raymond/2026-12-18-competency-log",
+      "section": "cognitive-memetics",
+      "title": "Competency log",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Raymond"
+      ],
+      "planned": "2026-12-18",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
         },
         "substack-en": {
           "status": "missing"
