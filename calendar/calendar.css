@@ -278,8 +278,15 @@ body {
 
 a.calendar-channel-box {
   text-decoration: none;
-  color: inherit;
   cursor: pointer;
+}
+
+a.calendar-channel-box--present {
+  color: #1f5c38;
+}
+
+a.calendar-channel-box--missing {
+  color: #5c6570;
 }
 
 a.calendar-channel-box:hover {
