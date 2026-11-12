@@ -6,7 +6,7 @@ heading_code: R10
 project: 'Everyone ❤️ Raymond 🐕📓'
 title: "Cabos sueltos en la presentación"
 type: panel
-description: "Esta semana, una hiena de oficina presenta **innovación con Claude Code** en la diapositiva cuarenta y siete, y **Raymond el perro** pregunta por qué nadie se la mandó a **leer de una vez**."
+description: "En la diapositiva cuarenta y siete, una hiena de oficina presenta la **innovación de Claude Code**. Ante eso, **Raymond el perro** pregunta por qué nadie usó Claude Code para **leer la presentación**."
 draft: false
 
 featuredImage: "loose-ends-in-the-deck.webp"

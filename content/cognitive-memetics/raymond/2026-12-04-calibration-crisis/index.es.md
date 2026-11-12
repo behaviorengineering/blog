@@ -6,7 +6,7 @@ heading_code: R13
 project: 'Everyone ❤️ Raymond 🐕📓'
 title: "Crisis de calibración"
 type: panel
-description: "Esta semana, la gerencia dice que la calibración está **totalmente alineada**; **Raymond el perro** **copia la única fila** que dice **En desarrollo**."
+description: "La gerencia califica la calibración como **totalmente alineada**; **Raymond el perro**, en cambio, copia la única fila que dice **En desarrollo**."
 draft: false
 
 featuredImage: "calibration-crisis.webp"

@@ -6,7 +6,7 @@ heading_code: R12
 project: 'Everyone ❤️ Raymond 🐕📓'
 title: "El mapa de sinergia"
 type: panel
-description: "Esta semana, el liderazgo enseña un **mapa de sinergia** que no conecta nada; **Raymond el perro** **sigue flechas** que no terminan en ninguna decisión."
+description: "Esta semana, el liderazgo presenta un **mapa de sinergia** que no conecta nada. **Raymond el perro** sigue un rastro de flechas que no desemboca en ninguna decisión."
 draft: false
 
 featuredImage: "the-synergy-map.webp"
