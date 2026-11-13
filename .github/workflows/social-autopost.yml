@@ -61,11 +61,10 @@ jobs:
             -page-id "$FACEBOOK_PAGE_ID" \
             -token "$FACEBOOK_PAGE_ACCESS_TOKEN"
 
-      # LinkedIn disables API read idempotency in CI; run it only after Facebook succeeds so a failed
-      # Facebook run does not leave LinkedIn posted while Facebook is still missing. Already-posted
-      # channels skip via social-published; one-sided leftovers are fixed by hand.
+      # LinkedIn runs only after Facebook posted at least one bundle this run (step output
+      # facebook_posted=true). Empty days, skip-all, and Facebook failures leave LinkedIn unrun.
       - name: LinkedIn autopost (by date)
-        if: ${{ steps.facebook.outcome == 'success' }}
+        if: ${{ steps.facebook.outcome == 'success' && steps.facebook.outputs.facebook_posted == 'true' }}
         env:
           LINKEDIN_AUTHOR_URN: ${{ secrets.LINKEDIN_AUTHOR_URN }}
           LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}

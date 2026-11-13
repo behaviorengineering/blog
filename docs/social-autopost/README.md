@@ -160,13 +160,13 @@ go run ./cmd/facebook-autopost -date "YYYY-MM-DD" -dry-run
 Notes:
 
 - Resolves every matching bundle under `content/<section>/<slug>/` and `content/<section>/<hub>/<slug>/` whose front matter **`date`** matches `YYYY-MM-DD` (sorted by path). Each bundle must have **`linkedin.txt`** with a **`behaviorengineering.ai`** URL.
-- **Empty day:** if no bundle matches the date, both tools **warn and exit 0** (scheduled CI stays green on quiet calendar days).
+- **Empty day:** if no bundle matches the date, Facebook **warns and exits 0** (scheduled CI stays green on quiet calendar days). LinkedIn does **not** run.
 - If more than one bundle shares that date, it posts **each** in order. Use **`-post section/slug`** (or **`SOCIAL_POST=...`** with `go tool task facebook-autopost`) to target a single bundle.
 - It extracts the canonical site URL from `linkedin.txt` for idempotency and for the Facebook link post.
 - **Image:** when **`featuredImage`** resolves to a file in the bundle, Facebook autopost uploads that file as a **published Page photo** and sets **`linkedin.txt`** as the photo **caption** (so the post card shows your art). If Graph rejects a format (rare for **`.webp`**), fix the raster or temporarily clear **`featuredImage`** to fall back to a link-only post.
 - **Caption limits:** link-only / text-only posts must be at most **3000 characters** (`facebook-autopost` fails before calling the API). Image captions are not hard-capped in bytes (LinkedIn UI may accept more than the API stored in some cases).
 - **Retries:** Graph idempotency reads and publish calls retry transient failures (HTTP 5xx, 429, timeouts) up to **3** times by default. Override with **`-http-retries`** or env **`FACEBOOK_HTTP_RETRIES`**. After a transient publish error, the tool re-scans the Page feed for the site URL before posting again (avoids duplicates when Meta accepts the post but returns an error). Failed bundles are skipped and the run continues; exit code is non-zero if any bundle failed. Invalid **`linkedin.txt`** or broken **`social-published`** files still stop the whole run.
-- **CI:** GitHub **Social autopost** runs Facebook first; the LinkedIn step runs only when the Facebook step **succeeds** (exit 0). A failed Facebook run skips LinkedIn. Each command still posts both unpublished channels for the date when Facebook succeeds (skipping a channel already in **`social-published`**). One-sided leftovers are fixed by hand. **`go tool task social-autopost`** uses the same order locally: Facebook, then LinkedIn only if Facebook exits 0.
+- **CI:** GitHub **Social autopost** runs Facebook first. LinkedIn runs only when Facebook **succeeds** (exit 0) **and** posted at least one bundle this run (`facebook_posted=true`). An empty day, skip-all (already in **`social-published`** or already on the Page feed), or a Facebook failure leaves LinkedIn unrun. One-sided leftovers are fixed by hand. **`go tool task social-autopost`** uses the same gate locally.
 
 LinkedIn:
 
