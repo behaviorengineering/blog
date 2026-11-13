@@ -61,12 +61,11 @@ jobs:
             -page-id "$FACEBOOK_PAGE_ID" \
             -token "$FACEBOOK_PAGE_ACCESS_TOKEN"
 
-      # LinkedIn idempotency scans recent posts (needs r_member_social or r_organization_social).
-      # Set LINKEDIN_DISABLE_IDEMPOTENCY on the workflow environment to skip the scan when read scopes are unavailable.
-      # Facebook always runs first; LinkedIn runs next unless the job was cancelled. Each tool
-      # skips bundles already marked in social-published; one-sided failures are fixed manually.
+      # LinkedIn disables API read idempotency in CI; run it only after Facebook succeeds so a failed
+      # Facebook run does not leave LinkedIn posted while Facebook is still missing. Already-posted
+      # channels skip via social-published; one-sided leftovers are fixed by hand.
       - name: LinkedIn autopost (by date)
-        if: ${{ always() && steps.facebook.outcome != 'cancelled' }}
+        if: ${{ steps.facebook.outcome == 'success' }}
         env:
           LINKEDIN_AUTHOR_URN: ${{ secrets.LINKEDIN_AUTHOR_URN }}
           LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}

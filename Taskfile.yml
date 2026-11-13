@@ -177,10 +177,9 @@ tasks:
         go run ./cmd/linkedin-autopost -root . -date "${DATE}" $post $idem $verify $ask $dry
 
   social-autopost:
-    desc: Run facebook-autopost then linkedin-autopost (each channel skips its own social-published markers)
+    desc: Run facebook-autopost then linkedin-autopost (LinkedIn only if Facebook exits 0)
     cmds:
       - task: facebook-autopost
-        ignore_error: true
       - task: linkedin-autopost
 
   carousel-pdf:
