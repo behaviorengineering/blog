@@ -61,10 +61,10 @@ jobs:
             -page-id "$FACEBOOK_PAGE_ID" \
             -token "$FACEBOOK_PAGE_ACCESS_TOKEN"
 
-      # LinkedIn idempotency scans recent posts (needs r_member_social or r_organization_social).
-      # Set LINKEDIN_DISABLE_IDEMPOTENCY on the workflow environment to skip the scan when read scopes are unavailable.
+      # LinkedIn runs only after Facebook posted at least one bundle this run (step output
+      # facebook_posted=true). Empty days, skip-all, and Facebook failures leave LinkedIn unrun.
       - name: LinkedIn autopost (by date)
-        if: ${{ always() && steps.facebook.outcome != 'cancelled' }}
+        if: ${{ steps.facebook.outcome == 'success' && steps.facebook.outputs.facebook_posted == 'true' }}
         env:
           LINKEDIN_AUTHOR_URN: ${{ secrets.LINKEDIN_AUTHOR_URN }}
           LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}

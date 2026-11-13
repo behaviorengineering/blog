@@ -39,6 +39,8 @@ func main() {
 	promptEach := socialautopost.PromptEnabled(*askEach, *noAsk)
 	noMark := *noMarkPublished || envNoMarkPublished()
 	publishTarget := substackpublishstate.TargetFacebook
+	var posted bool
+	defer func() { writeFacebookPostedOutput(posted) }()
 	if promptEach {
 		log.Printf("interactive: will ask publish or skip for each bundle (stdin is a TTY; use -no-ask to disable)")
 	}
@@ -143,6 +145,7 @@ func main() {
 
 		if *dryRun {
 			socialbundle.PrintDryRunItem(os.Stdout, i, len(bundles), socialbundle.FacebookPostMode, b.PostURL, b.FeaturedImagePath, b.Message)
+			posted = true
 			continue
 		}
 
@@ -178,11 +181,24 @@ func main() {
 		}
 		cliout.PrintSocialPosted(os.Stdout, "Facebook", b.PostURL)
 		recordPublished(b.BundleDir, publishTarget, *dryRun, noMark, "posted")
+		posted = true
 	}
 
 	if bundleFailures > 0 {
 		cliout.PrintSocialFailures(os.Stderr, "Facebook", bundleFailures)
+		writeFacebookPostedOutput(posted)
 		os.Exit(1)
+	}
+}
+
+func writeFacebookPostedOutput(posted bool) {
+	val := "false"
+	if posted {
+		val = "true"
+	}
+	log.Printf("facebook-autopost: facebook_posted=%s", val)
+	if err := socialautopost.WriteGitHubOutput("facebook_posted", val); err != nil {
+		log.Fatalf("facebook-autopost: %v", err)
 	}
 }
 

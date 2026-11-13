@@ -177,10 +177,19 @@ tasks:
         go run ./cmd/linkedin-autopost -root . -date "${DATE}" $post $idem $verify $ask $dry
 
   social-autopost:
-    desc: Run facebook-autopost then linkedin-autopost
-    deps:
-      - facebook-autopost
-      - linkedin-autopost
+    desc: Run facebook-autopost then linkedin-autopost only if Facebook posted
+    cmds:
+      - |
+        set -euo pipefail
+        result="$(mktemp)"
+        trap 'rm -f "$result"' EXIT
+        export GITHUB_OUTPUT="$result"
+        go tool task facebook-autopost
+        if grep -q '^facebook_posted=true$' "$result"; then
+          go tool task linkedin-autopost
+        else
+          echo "facebook-autopost: nothing posted; skip LinkedIn"
+        fi
 
   carousel-pdf:
     desc: LinkedIn PDF from studio WebPs (DIR= required)
