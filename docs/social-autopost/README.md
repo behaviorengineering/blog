@@ -166,7 +166,7 @@ Notes:
 - **Image:** when **`featuredImage`** resolves to a file in the bundle, Facebook autopost uploads that file as a **published Page photo** and sets **`linkedin.txt`** as the photo **caption** (so the post card shows your art). If Graph rejects a format (rare for **`.webp`**), fix the raster or temporarily clear **`featuredImage`** to fall back to a link-only post.
 - **Caption limits:** link-only / text-only posts must be at most **3000 characters** (`facebook-autopost` fails before calling the API). Image captions are not hard-capped in bytes (LinkedIn UI may accept more than the API stored in some cases).
 - **Retries:** Graph idempotency reads and publish calls retry transient failures (HTTP 5xx, 429, timeouts) up to **3** times by default. Override with **`-http-retries`** or env **`FACEBOOK_HTTP_RETRIES`**. After a transient publish error, the tool re-scans the Page feed for the site URL before posting again (avoids duplicates when Meta accepts the post but returns an error). Failed bundles are skipped and the run continues; exit code is non-zero if any bundle failed. Invalid **`linkedin.txt`** or broken **`social-published`** files still stop the whole run.
-- **CI:** GitHub **Social autopost** runs Facebook first, then LinkedIn even when Facebook exits non-zero (LinkedIn step uses `if: always()`).
+- **CI:** GitHub **Social autopost** runs Facebook first; the LinkedIn step runs only when the Facebook step **succeeds** (exit 0). A failed Facebook run skips LinkedIn so CI can retry without double-posting on LinkedIn (read idempotency is off there). **`go tool task social-autopost`** uses the same order locally: Facebook, then LinkedIn only if Facebook exits 0.
 
 LinkedIn:
 
