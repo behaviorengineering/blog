@@ -1,12 +1,12 @@
 ---
 
-translationKey: "2026-11-20-loose-ends-in-the-deck"
-date: '2026-11-20T01:00:00+11:00'
+translationKey: "2026-11-13-loose-ends-in-the-deck"
+date: '2026-11-13T01:00:00+11:00'
 heading_code: R10
 project: 'Everyone ❤️ Raymond 🐕📓'
-title: "Cabos sueltos en la presentación"
+title: "Loose ends in the deck"
 type: panel
-description: "En la diapositiva cuarenta y siete, una hiena de oficina presenta la **innovación de Claude Code**. Ante eso, **Raymond el perro** pregunta por qué nadie usó Claude Code para **leer la presentación**."
+description: "This week, an office hyena presents **Claude Code innovation** on slide forty-seven, so **Dawg Raymond** asks why nobody used it to **read the presentation**."
 draft: false
 
 featuredImage: "loose-ends-in-the-deck.webp"

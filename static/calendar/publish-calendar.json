@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-12T04:52:24Z",
+  "generatedAt": "2026-11-13T02:39:07Z",
   "channels": [
     "site-en",
     "site-es",
@@ -6035,6 +6035,35 @@
       }
     },
     {
+      "bundle": "cognitive-memetics/raymond/2026-11-13-loose-ends-in-the-deck",
+      "section": "cognitive-memetics",
+      "title": "Loose ends in the deck",
+      "type": "panel",
+      "categories": [
+        "Cognitive-Memetics",
+        "Raymond"
+      ],
+      "planned": "2026-11-13",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
       "bundle": "cognitive-memetics/reptilocracy/2026-11-15-grace-under-pressure",
       "section": "cognitive-memetics",
       "title": "Grace Under Pressure",
@@ -6102,35 +6131,6 @@
         "Cube-Cows"
       ],
       "planned": "2026-11-18",
-      "draft": false,
-      "channels": {
-        "facebook": {
-          "status": "missing"
-        },
-        "linkedin": {
-          "status": "present"
-        },
-        "site-en": {
-          "status": "present"
-        },
-        "site-es": {
-          "status": "present"
-        },
-        "substack-en": {
-          "status": "missing"
-        }
-      }
-    },
-    {
-      "bundle": "cognitive-memetics/raymond/2026-11-20-loose-ends-in-the-deck",
-      "section": "cognitive-memetics",
-      "title": "Loose ends in the deck",
-      "type": "panel",
-      "categories": [
-        "Cognitive-Memetics",
-        "Raymond"
-      ],
-      "planned": "2026-11-20",
       "draft": false,
       "channels": {
         "facebook": {
