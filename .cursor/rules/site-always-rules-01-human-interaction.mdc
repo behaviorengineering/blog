@@ -20,6 +20,6 @@ Generic human interaction: Cursor plugin `cursor-packs` rule `always-rules-01-hu
 
 MUST treat these as skill-named (run the skill; load neither Intent-First nor Consultant):
 
-- revise this post, make a carousel, Facebook post, LinkedIn post, Substack, claims, video pick, Spanish translation, essay, arc, essay arc, recreate an arc, Reptilocracy Gemma, reptilocracy gemma, Reptilocracy themes, reptilocracy jokes, Dark Triad
+- revise this post, make a carousel, Facebook post, LinkedIn post, Substack, claims, video pick, Spanish translation, essay, arc, essay arc, recreate an arc, Reptilocracy Gemma, reptilocracy gemma, Reptilocracy themes, reptilocracy jokes, Dark Triad, Raymond post, raymond post, Raymond gag, raymond gag
 
 Skip Consultant when a skill or rule already decides the shape (for example carousel JSON, claims front matter, no em dash, US English).
