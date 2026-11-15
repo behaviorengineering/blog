@@ -1,0 +1,40 @@
+🔮 The prediction business sells obedience as foresight
+
+Ever notice how a "prediction" from a bank, a boss, or a platform feels like a weather report, but it still changes what happens to you?
+
+Carissa Véliz (Oxford) on a long Tea interview: today's democracies collect more signals per person than East Germany could afford for a third of the population. Hiring scores, loan scores, health scores look neutral. They are bets institutions act on.
+
+"Nothing to hide" is not about guilt. It is about limiting what power can infer. When a model says you will fail, or a CEO says you will all use AI tomorrow, that line is often a push dressed up as foresight.
+
+The doom headlines about superintelligence distract from the stuff hitting now: privacy, who is accountable, whether you can protest without a file following you. Medical AI flops and chatbots (remember Air Canada blaming the grief-fee bot) show how "prediction" becomes a shield when someone wants out of responsibility.
+
+Spot the prescription. Skepticism, privacy tools, and time offline still matter.
+
+📑 What's in the talk
+
+• Intro · AI surveillance and democracy
+• Origin · Véliz's path into privacy ethics
+• Scale · Mass surveillance vs East Germany
+• Fallacy · "Nothing to hide"
+• Power · Data collection beyond profit
+• Democracy · Privacy for law, press, protest
+• Oracle · AI as future-shaping prophecy
+• Speech acts · Predictions as commands
+• Turkey · Past data and systemic risk
+• Panic · Existential hype vs real threats
+• Medicine · COVID AI and overdiagnosis
+• Accountability · Air Canada chatbot case
+• Bullshit · Frankfurt and plausible AI text
+• Warfare · Responsibility diffusion
+• Sentience · Flattery, harm, human bonds
+• Resistance · Analog life and privacy tools
+
+#Democracy #Accountability #AGIHype #PredictiveControl #SpeechActs
+
+If you want to read more:
+
+- EN: https://behaviorengineering.ai/social-protocols/2026-06-09-the-prediction-business/
+
+- ES: https://behaviorengineering.ai/es/protocolos-sociales/el-negocio-de-la-predicci%C3%B3n-vende-obediencia-disfrazada-de-clarividencia/
+
+Video: https://www.youtube.com/watch?v=dYDAbZpVuUU
