@@ -2,7 +2,7 @@
 
 Filled overlay for this Hugo site. Pack skill load order: this file first; pack `reference/project-persona.md` only if this path is missing.
 
-**MCP how-to:** `.cursor/skills/perplexity-browser-research/SKILL.md`
+**MCP how-to:** install the **perplexity-browser** plugin (skills `perplexity-browser-research` / `perplexity-browser-ops`); host overlay stays under `.cursor/perplexity/`.
 
 ## Who we are
 
