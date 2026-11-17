@@ -1,6 +1,6 @@
 # Pack — Deep Research (behaviorengineering.ai content)
 
-Workflow: `perplexity-browser-research` overlay `.cursor/perplexity/`. Mode: **deep** (use `search` only for a quick single-fact lookup).
+Workflow: `perplexity-browser-research` overlay `.cursor/perplexity/`. Mode: **deep**. Use only after a Search pass, or when the user asked for Deep Research. Do not treat this pack as the default first submit.
 
 Fill every `[bracket]` section from the target post and repo files before submit. Copy the **whole** block into `perplexity_research` `prompt`.
 

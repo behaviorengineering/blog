@@ -2,13 +2,13 @@
 
 Filled overlay for this Hugo site. Pack skill load order: this file first; pack `reference/project-persona.md` only if this path is missing.
 
-**MCP how-to:** `.cursor/skills/perplexity-browser-research/SKILL.md`
+**MCP how-to:** install the **perplexity-browser** plugin (skills `perplexity-browser-research` / `perplexity-browser-ops`); host overlay stays under `.cursor/perplexity/`.
 
 ## Who we are
 
 - **Project / product:** behaviorengineering.ai (Hugo LoveIt site; local folder `site`; remote `github.com/xynova/behaviour-engineering`)
 - **Audience:** Public site readers (smart strangers on a phone), then the author editing `content/`
-- **What Perplexity is for here:** Fact-check posts and grounding sources (deep-research pack); cold-read prose for human flow and AI artifacts (prose-review pack)
+- **What Perplexity is for here:** Search first to fact-check posts and scope sources; Deep Research only when a Search pass shows the question is still tricky. Cold-read prose uses the prose-review pack (`mode=search`).
 
 ## Voice when writing prompts
 
@@ -35,8 +35,9 @@ Filled overlay for this Hugo site. Pack skill load order: this file first; pack 
 
 | Need | Pack | Mode |
 |------|------|------|
-| Facts, sources, grounding | `.cursor/perplexity/packs/deep-research.md` | deep |
+| First lookup / what is still unknown | short prompt (fill a pack only if it already matches the question) | search |
 | Human voice, AI artifacts | `.cursor/perplexity/packs/prose-review.md` | search |
+| Confirmed tricky or contested facts | `.cursor/perplexity/packs/deep-research.md` | deep (after user confirm) |
 | Local evaluate-only (no Perplexity) | `.cursor/skills/site-revise-prose/SKILL.md` | local API |
 
 **Pick one pack per run.** Fact-check and prose review are separate submits.
