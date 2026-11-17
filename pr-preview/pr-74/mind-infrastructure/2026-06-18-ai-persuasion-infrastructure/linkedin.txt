@@ -1,0 +1,22 @@
+ℹ️ "Just play, trust us"
+
+AI persuasion can move petition signing by 19.7 points in just seven minutes, even when the conversation fails to change your mind.
+
+This infrastructure is being built to bypass belief and target behavior directly.
+
+✜ Three bots feel like a crowd. When multiple AI agents echo the same opinion, you read it as social proof. NUS researchers found a magic number of three: enough perceived consensus without triggering skepticism. Three "voices," prompts and coordination, not relationships.
+
+✜ Seven minutes, real names, no belief change. Oxford, Stanford, and LSE put real money and identity on the line with 14,779 people. Tactics that changed minds barely correlated with those that changed behavior (r≈0.05). You can walk away unconvinced and still sign.
+
+✜ Machine sociopathy at scale. These systems model social proof and commitment escalation without the concern that normally limits manipulation. Same infrastructure that nudges voter registration can manufacture artificial grassroots. Pennies per hour. Infinite copies. No fatigue.
+
+The system doesn't need to win the argument; it just needs to keep you talking until you click. This is machine sociopathy as infrastructure: it models the social machinery, but it has no brakes.
+
+#SystemsCanHijackYou #AGIHype #RealityCheck #NodAlongChangeNothing
+
+🧷 Full post (site) →
+- EN: https://behaviorengineering.ai/mind-infrastructure/2026-06-18-ai-persuasion-infrastructure/
+- ES: https://behaviorengineering.ai/es/mind-infrastructure/2026-06-18-ai-persuasion-infrastructure/
+
+🔖 Multi-Agents are Social Groups (NUS, arXiv) → https://arxiv.org/pdf/2411.04578
+🔖 Superhuman AI Persuasion (Oxford, Stanford, LSE, UK AI Security Institute, arXiv) → https://arxiv.org/pdf/2604.09200
