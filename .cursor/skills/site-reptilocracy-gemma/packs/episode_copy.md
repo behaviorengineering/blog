@@ -36,9 +36,12 @@ Mood gossip replaces a fitness gate.
   turn.
 - Let the response involve a specific object, action, or person: typography,
   a calendar, a stamp, or a psychiatrist someone forgot to call.
-- Keep the description as the joke. Keep TLDR short and name the mechanism once.
-- Keep FLUFF on the scene and its consequence. Do not turn it into a second
-  essay about the theme.
+- Keep the description as the cartoon joke. Keep TLDR short and name the mechanism once.
+- FLUFF is not a second description of the drawing. FLUFF is one human occasion
+  that cartoon is about, said the way a person would say it, facetious and
+  comical. One joke. One or two spoken sentences. Do not retell the description
+  or the TLDR in different words. Do not stack short sentences of similar length.
+  Do not pile statue, speech, calendar, and moral into the same paragraph.
 - Preserve a concrete clinical punchline when it makes the blind spot visible.
   Do not flatten it into "sanity check" or another abstract substitute.
 - When the user brief marks a **HUMAN-APPROVED JOKE SPINE** or **KEEP** line,
@@ -68,7 +71,8 @@ Labels MUST start at column 0 (no leading spaces before the label name).
   Each is 1-2 sentences and must stand alone as the whole teaser.
   Do NOT write three panels of one comic. Do NOT split smile / shout / stamp across the three descriptions.
 - TLDR: 2-3 short sentences. Satirical claim. Name mood theater vs psychological fitness.
-- FLUFF: 2-3 short paragraphs. Keep the joke; name that psychological fitness is simply not discussed for leaders; end on the institutional move (stamp / continuity), not a petition CTA.
+- FLUFF: one or two spoken sentences. One human occasion, facetious. Not a cartoon narration. Not a petition CTA.
+  Rhythm, do not copy the nouns: "He keeps the week and hands you Tuesday, and you are meant to thank him for it. Say anything about the other days and you have ruined the occasion."
 
 ### Gold energy (match rhythm, never copy topic)
 

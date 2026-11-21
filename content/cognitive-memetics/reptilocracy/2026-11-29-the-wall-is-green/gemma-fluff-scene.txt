@@ -1,0 +1,19 @@
+# Reptilocracy Gemma candidates (thinking_chars=0)
+# GATE: REPROMPT used. Both FLUFF drafts failed (nod-at-a-triumph; packing the desk / paying attention).
+# OPERATOR scene applied, not Gemma:
+# Everyone can see the color, and you are meant to name the other one. Name the one in front of you and you have ruined the interview.
+
+DESCRIPTION_1:
+The form's only question is THE WALL IS GREEN. The wall is red. Say so and you get the exit form. The coffee is for people who can ignore their eyes.
+
+DESCRIPTION_2:
+A clerk stares at a crimson wall while filling out a document that insists the color is green.
+
+DESCRIPTION_3:
+The candidate is handed a pen and a question about the emerald hue of a bright red wall.
+
+TLDR:
+They skip psychological fitness and run a loyalty test. Defend the obvious lie and you stay. Integrity gets you fired.
+
+FLUFF:
+Just call it red and you can start packing your desk. It is a very simple way to find out who is actually paying attention.

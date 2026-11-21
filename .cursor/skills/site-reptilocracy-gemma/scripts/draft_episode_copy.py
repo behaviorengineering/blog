@@ -152,7 +152,10 @@ def build_user_message(title: str, brief: str, same_character: bool) -> str:
         parts.append("")
     parts.append(
         "Write three competing satirical card teasers (DESCRIPTION_1..3), plus TLDR and FLUFF. "
-        "Knife in each teaser: mood talk is cheap; psychological fitness for leaders is not even discussed; "
+        "DESCRIPTION is the cartoon. TLDR names the knife once. "
+        "FLUFF is one human occasion that cartoon is about, facetious, one or two spoken sentences. "
+        "Do not retell the cartoon. Do not stack short sentences. Do not add a second picture. "
+        "Knife: mood talk is cheap; psychological fitness for leaders is not even discussed; "
         "authority theater still covers both moods. "
         "If the brief marks a HUMAN-APPROVED JOKE SPINE or KEEP line, preserve "
         "that concrete beat in every description candidate. Never replace a "

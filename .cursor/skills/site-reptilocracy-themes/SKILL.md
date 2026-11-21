@@ -28,7 +28,7 @@ This skill owns **theme catalog + species casting + joke pitches** only. Episode
 
 | File | Role |
 |------|------|
-| **`reference.md`** | Dark Triad theme ids `T1`…`T10`, pathology + herd misread, shipped overlap table |
+| **`reference.md`** | Dark Triad theme ids `T1`…`T11`, pathology + herd misread, shipped overlap table |
 | **`characters-and-species.md`** | Species symbolism, character roles, power patterns, visual behavior |
 
 ## When to load
@@ -97,7 +97,7 @@ Cow clerk worries about Reply-All while a generic lizard leader rants.
 
 **CONSTRAINT:** MUST NOT draft or apply Reptilocracy **`description`**, **`tldr`**, or **`fluff`** in this skill. MUST hand the picked pitch to **`site-reptilocracy-gemma`**. MUST NOT claim Gemma wrote agent-invented episode fields.
 
-**CONSTRAINT:** MUST read **`reference.md`** and **`characters-and-species.md`** before pitching. MUST NOT invent a theme id outside `T1`…`T10` unless the user asks to extend **`reference.md`**.
+**CONSTRAINT:** MUST read **`reference.md`** and **`characters-and-species.md`** before pitching. MUST NOT invent a theme id outside `T1`…`T11` unless the user asks to extend **`reference.md`**.
 
 ## Steps
 

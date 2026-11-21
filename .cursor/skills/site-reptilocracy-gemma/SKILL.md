@@ -1,11 +1,12 @@
 ---
 name: site-reptilocracy-gemma
 description: >-
-  Drafts Reptilocracy episode description, tldr, and fluff via local Gemma 4
-  with thinking mode, satire-first briefs, and a psychological-fitness knife.
-  Use when creating or rewriting Reptilocracy copy, Gemma Reptilocracy text,
-  good-day/bad-day emergency-powers satire, or when the user asks Gemma to
-  write Reptilocracy fields (not LinkedIn; not full bundle layout).
+  Drafts Reptilocracy episode description, tldr, and the human-reality scene
+  (fluff) via local Gemma 4 with thinking mode, satire-first briefs, and a
+  psychological-fitness knife. Use when creating or rewriting Reptilocracy
+  copy, a Reptilocracy scene, Gemma Reptilocracy text, good-day/bad-day
+  emergency-powers satire, or when the user asks Gemma to write Reptilocracy
+  fields (not LinkedIn; not full bundle layout; not the theme-catalog pitch).
 ---
 
 # Reptilocracy episode copy (Gemma 4 + thinking)
@@ -73,8 +74,8 @@ clear before naming the clinical mechanism.
 - Prefer a specific object, action, or person over an abstract label: a font
   debate, a calendar check, a stamp, or a psychiatrist someone forgot to call.
 - Keep `tldr` to two or three short sentences. Name the mechanism once.
-- Keep `fluff` to the scene's concrete consequences. Do not add a second thesis
-  or explain the same image in several clinical terms.
+- `description` is the cartoon. `fluff` is the human occasion that cartoon is
+  about, said once, out loud, as a joke. See **Scene (`fluff`)**.
 - A concrete clinical punchline MUST survive compression. Do not replace it
   with a vague phrase such as "sanity check."
 - When the brief marks a **HUMAN-APPROVED JOKE SPINE** or a **KEEP** line,
@@ -99,6 +100,42 @@ with board-deck vocabulary and no satire beat.
 **CONSTRAINT:** When the art shows **one** character on a good day and a bad day, MUST tell Gemma it is the **same** person twice. MUST NOT allow two-lizard readings.
 
 **CONSTRAINT:** `DESCRIPTION_1` / `DESCRIPTION_2` / `DESCRIPTION_3` MUST be three **complete alternative card teasers** (each 1–2 sentences, standalone). MUST NOT split smile / shout / stamp across three panel captions.
+
+### Scene (`fluff`)
+
+**CONSTRAINT:** `fluff` MUST be one human situation a person would recognize, said facetiously, in one or two spoken sentences. The cartoon stays in `description`. `fluff` says what that cartoon is like when people do it.
+
+- Enforcement: before apply, run the scene gate below on the Gemma `fluff`
+- Violation: STOP, do not apply that `fluff`; re-brief once; if the second draft still fails the gate, write the one spoken joke yourself and label it operator, not Gemma
+
+CORRECT (`2026-11-22-the-generous-leaf`, rhythm, do not copy the Tuesday into other episodes):
+```text
+He keeps the week and hands you Tuesday, and you are meant to thank him for it. Say anything about the other days and you have ruined the occasion.
+```
+
+PROHIBITED:
+```text
+The stores are empty. The clerk asks how much gold the statue needs. The ants queue to file the thank-you.
+You have met him. He eats the year and gives back a Tuesday, and the Tuesday gets the statue. The speech is very moved by the Tuesday. Nobody is rude enough to mention the other six days, or to ask whether a man who is still chewing should be handed next year. So the appetite gets the holiday, and the pile stays out of the remarks.
+```
+
+The first prohibited block is a stack of short sentences that retell the drawing. The second is the right idea broken into a mess: statue, speech, six days, chewing, next year, holiday, and pile.
+
+**CONSTRAINT:** Before applying `fluff`, MUST complete this gate. Only `APPLY` may be written into `index.md`.
+
+```text
+Candidate: [fluff text]
+Retells description or tldr in different words: YES: [quote] / NO
+Stack of short sentences of similar length: YES: [quote] / NO
+More than one joke or picture: YES: [quote the extras] / NO
+A person would say it out loud, and it is facetious: YES: [quote] / NO
+Decision: APPLY | REPROMPT
+```
+
+- Enforcement: the gate is in the chat or the candidates file before the `fluff` edit
+- Violation: STOP, leave the previous `fluff` in place, re-brief or write the one spoken joke
+
+REPROMPT brief MUST say: one human occasion, one or two spoken sentences, facetious, do not narrate the cartoon, do not add a second picture. One reprompt. A second failure is an operator rewrite, labeled as such.
 
 ## Procedure
 
