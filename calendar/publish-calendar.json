@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-15T03:13:45Z",
+  "generatedAt": "2026-11-21T21:56:50Z",
   "channels": [
     "site-en",
     "site-es",
@@ -6180,6 +6180,35 @@
       }
     },
     {
+      "bundle": "cognitive-memetics/reptilocracy/2026-11-22-the-generous-leaf",
+      "section": "cognitive-memetics",
+      "title": "The Generous Leaf",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Reptilocracy"
+      ],
+      "planned": "2026-11-22",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
       "bundle": "cognitive-memetics/cows/2026-11-25-cow-w40",
       "section": "cognitive-memetics",
       "title": "The Title Inflation",
@@ -6218,6 +6247,35 @@
         "Raymond"
       ],
       "planned": "2026-11-27",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/reptilocracy/2026-11-29-the-wall-is-green",
+      "section": "cognitive-memetics",
+      "title": "The Wall Is Green",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Reptilocracy"
+      ],
+      "planned": "2026-11-29",
       "draft": false,
       "channels": {
         "facebook": {
