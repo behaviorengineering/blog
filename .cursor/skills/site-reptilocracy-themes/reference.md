@@ -121,6 +121,14 @@ Gold: `content/cognitive-memetics/reptilocracy/2026-09-27-the-bridge-is-open/`
 
 **Rules:** MUST show the working system before he breaks it. NEVER credit strategy for a boredom fidget.
 
+### T11 Breadcrumbs after the taking
+
+- **Pathology:** Takes almost everything, returns a crumb, and demands gratitude for the pause
+- **Herd misread:** "He gave something back; that is generosity"
+- **Satire engine:** Crocodile eats the harvest, tosses one half-chewed leaf, and expects a statue
+
+**Rules:** MUST show the taking and the crumb in the same frame. NEVER let the leaf read as a real gift. Ants are the public. The frog schedules the thanks. Psychological fitness is not on the agenda.
+
 ## Shipped mechanisms (do not re-pitch)
 
 Use these as overlap quotes in the pitch gate. Add new titles when episodes ship.
@@ -139,3 +147,5 @@ Use these as overlap quotes in the pitch gate. Add new titles when episodes ship
 | Don't Make Eye Contact | Psychotic break vs 5:00 commute |
 | Bold Vision | Gravity optional; fonts over psychiatrist |
 | Grace Under Pressure | Lunch in the rubble of a sold bridge; remorse read as composure |
+| The Generous Leaf | Half-chewed leaf after a stolen harvest; crumb read as a gift |
+| The Wall Is Green | Red wall, green affidavit; honesty leaves as other opportunities |

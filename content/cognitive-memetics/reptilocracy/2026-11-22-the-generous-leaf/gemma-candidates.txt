@@ -1,0 +1,22 @@
+# Reptilocracy Gemma candidates (thinking_chars=0)
+
+DESCRIPTION_1:
+The Crocodile returns a half-chewed leaf after devouring the entire harvest, and the Frog clerk immediately stamps the paperwork for a commemorative statue. The office calendar focuses on the unveiling ceremony instead of the fact that the granary is empty.
+
+DESCRIPTION_2:
+The ants begin carving a monument to honor the Crocodile for the singular, soggy leaf he tossed back after the raid. In the bureau, the clerk schedules the gratitude parade while the actual fitness of a leader who eats the village is never once mentioned.
+
+DESCRIPTION_3:
+After the theft, the Crocodile expects a salute for the one crumb he deigned to return. The Frog clerk manages the etiquette of the thank-you ceremony, ensuring the mood of the celebration ignores the total absence of impulse control or empathy.
+
+TLDR:
+The institution mistakes a pause in theft for a gesture of grace. It replaces psychological fitness with mood theater, turning a predator's leftovers into a reason for a public holiday.
+
+FLUFF:
+The granary is hollow, but the plaza is filling up with marble. The ants have mistaken the Crocodile's indigestion for an act of charity, and they are working overtime to ensure the statue reflects his perceived benevolence.
+
+The Frog clerk does not look at the empty stores or the missing harvest. He only looks at the calendar, ensuring the thank-you etiquette is perfectly timed for the unveiling. The agenda remains focused on the ceremony, because discussing the leader's lack of empathy would be an unseemly distraction from the festivities.
+
+The bureaucratic machine does not ask if the leader is fit to hold the harvest; it only asks if the gratitude is properly stamped. The continuity of the statue is more important than the reality of the hunger.
+
+PICK: DESCRIPTION_1
