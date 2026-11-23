@@ -5,11 +5,11 @@ heading_code: W46
 project: Street-Wisdom 💬🇻🇪
 title: Tanto nadar para morir en la orilla.
 type: sayings
-description: "Casi puedes **saborear el triunfo**, y te lo **sacan de las manos**."
+description: "**Saboreas el triunfo** y, de pronto, te lo **arrebatan de las manos**."
 tldr: |
-  **Meses de trabajo constante se van al traste justo al llegar**. Imagínate un equipo que le mete seis meses a una propuesta, trabaja de noche y manda el deck la mañana de la reunión, para enterarse de que el **cliente había retirado el presupuesto** el día anterior a firmar.
+  **Se van al traste meses de trabajo constante en la recta final**. Imagínate un equipo que le mete seis meses a una propuesta, trabaja de noche y envía la presentación la mañana de la reunión, para enterarse de que el **cliente había retirado el presupuesto** el día antes de la firma.
 fluff: |
-  Tu tío pregunta, entre el arroz, cómo te cayó la noticia. Antes de que contestes, tu primo pide que pasen el ají. **Nadie vuelve al tema**, así que sigues comiendo sin tener que explicarte. Después tu tía te pone el **último plátano** en el plato, sin decir nada, que es lo más parecido a un abrazo que da esta mesa.
+  Tu tío pregunta, con el arroz en la mesa, cómo te cayó la noticia. Antes de que contestes, tu primo pide que pasen el ají. **Nadie vuelve al tema**, así que sigues comiendo sin tener que explicarte. Después tu tía te pone el **último plátano** en el plato, sin decir nada, que es lo más parecido a un abrazo que da esta mesa.
 draft: false
 
 featuredImage: "tanto-nadar-para-morir-en-la-orilla.jpg"
@@ -48,6 +48,6 @@ aliases:
 
 ### La mañana de la reunión
 
-El equipo manda el deck cuando la oficina todavía está a media luz. Alguien abre el correo: el **cliente había retirado el presupuesto** ayer. La reunión sigue en el calendario, pero el **sí se esfumó**.
+El equipo envía la presentación cuando la oficina todavía está a media luz. Alguien abre el correo: el **cliente había retirado el presupuesto** ayer. La reunión sigue en el calendario, pero **el trato ya no existía**.
 
-Te sale el dicho cuando un amigo cuenta que estuvo a un paso de conseguirlo, y la otra parte ya había decidido.
+El dicho aparece cuando un amigo cuenta que estuvo a un paso de conseguirlo, y la otra parte ya había decidido.
