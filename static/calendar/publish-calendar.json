@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-21T21:56:50Z",
+  "generatedAt": "2026-11-23T12:54:05Z",
   "channels": [
     "site-en",
     "site-es",
@@ -6189,6 +6189,35 @@
         "Reptilocracy"
       ],
       "planned": "2026-11-22",
+      "draft": false,
+      "channels": {
+        "facebook": {
+          "status": "missing"
+        },
+        "linkedin": {
+          "status": "present"
+        },
+        "site-en": {
+          "status": "present"
+        },
+        "site-es": {
+          "status": "present"
+        },
+        "substack-en": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "bundle": "cognitive-memetics/sayings/2026-11-24-saying-46",
+      "section": "cognitive-memetics",
+      "title": "Tanto nadar para morir en la orilla.",
+      "type": "sayings",
+      "categories": [
+        "Cognitive-Memetics",
+        "Por-Estas-Calles"
+      ],
+      "planned": "2026-11-24",
       "draft": false,
       "channels": {
         "facebook": {
